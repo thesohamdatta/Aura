@@ -37,7 +37,7 @@ Detect which tests to run based on changed files:
   - Run widget tests if UI files changed
   - Run integration tests if backend integration changed
   
-- **Firmware changes** (`omi/**/*.c`, `omiGlass/**/*.c`):
+- **Firmware changes** (`aura/**/*.c`, `aura-pendant/**/*.c`):
   - Run firmware test suite if available
   - Validate compilation
 
@@ -120,7 +120,7 @@ Report test results with:
 - `.cursor/rules/git-workflow.mdc` - Always run tests before committing
 
 ### Skills
-- `.cursor/skills/omi-backend-patterns/SKILL.md` - Backend patterns including testing
+- `.cursor/skills/aura-backend-patterns/SKILL.md` - Backend patterns including testing
 
 ### Commands
 - `/run-tests-and-fix` - Run tests and fix failures

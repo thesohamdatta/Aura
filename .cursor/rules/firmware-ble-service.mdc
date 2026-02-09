@@ -1,10 +1,10 @@
 ---
 description: "BLE Bluetooth Low Energy service characteristics GATT notifications audio streaming packet fragmentation MTU battery device info"
 globs:
-  - "omi/**/*.c"
-  - "omi/**/*.h"
-  - "omiGlass/**/*.c"
-  - "omiGlass/**/*.h"
+  - "aura/**/*.c"
+  - "aura/**/*.h"
+  - "aura-pendant/**/*.c"
+  - "aura-pendant/**/*.h"
 alwaysApply: false
 references:
   - docs/doc/developer/Protocol.mdx
@@ -144,7 +144,7 @@ BT_GATT_SERVICE_DEFINE(device_info_svc,
 static uint8_t read_manufacturer(struct bt_conn *conn,
                                  struct bt_gatt_attr *attr,
                                  void *buf, uint16_t len, uint16_t offset) {
-    const char *name = "Based Hardware";
+    const char *name = "Soham Datta";
     return bt_gatt_attr_read(conn, attr, buf, len, offset, name, strlen(name));
 }
 
@@ -215,11 +215,11 @@ BT_GATT_CB_DEFINE(gatt_callbacks) = {
 
 ## Related Documentation
 
-**The `docs/` folder is the single source of truth for all user-facing documentation, deployed at [docs.omi.me](https://docs.omi.me/).**
+**The `docs/` folder is the single source of truth for all user-facing documentation, deployed at [docs.aura.me](https://docs.aura.me/).**
 
-- **BLE Protocol**: `docs/doc/developer/Protocol.mdx` - [View online](https://docs.omi.me/doc/developer/Protocol)
-- **Firmware Compilation**: `docs/doc/developer/firmware/Compile_firmware.mdx` - [View online](https://docs.omi.me/doc/developer/firmware/Compile_firmware)
-- **Hardware Docs**: `docs/doc/hardware/` - [View online](https://docs.omi.me/doc/hardware/)
+- **BLE Protocol**: `docs/doc/developer/Protocol.mdx` - [View online](https://docs.aura.me/doc/developer/Protocol)
+- **Firmware Compilation**: `docs/doc/developer/firmware/Compile_firmware.mdx` - [View online](https://docs.aura.me/doc/developer/firmware/Compile_firmware)
+- **Hardware Docs**: `docs/doc/hardware/` - [View online](https://docs.aura.me/doc/hardware/)
 - **Firmware Architecture**: `.cursor/rules/firmware-architecture.mdc`
 
 ## Related Cursor Resources
@@ -230,8 +230,8 @@ BT_GATT_CB_DEFINE(gatt_callbacks) = {
 - `.cursor/rules/flutter-ble-protocol.mdc` - Flutter BLE integration
 
 ### Skills
-- `.cursor/skills/omi-firmware-patterns/` - Firmware patterns including BLE
-- `.cursor/skills/omi-flutter-patterns/` - Flutter BLE patterns
+- `.cursor/skills/aura-firmware-patterns/` - Firmware patterns including BLE
+- `.cursor/skills/aura-flutter-patterns/` - Flutter BLE patterns
 
 ### Subagents
 - `.cursor/agents/firmware-engineer/` - Firmware BLE specialist

@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'package:omi/pages/settings/webview.dart';
-import 'package:omi/ui/atoms/omi_icon_button.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/other/temp.dart';
-import 'package:omi/utils/responsive/responsive_helper.dart';
+import 'package:aura/pages/settings/webview.dart';
+import 'package:aura/ui/atoms/aura_icon_button.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/other/temp.dart';
+import 'package:aura/utils/responsive/responsive_helper.dart';
 
 class DesktopAboutOmiPage extends StatefulWidget {
   const DesktopAboutOmiPage({super.key});
@@ -96,7 +96,7 @@ class _DesktopAboutOmiPageState extends State<DesktopAboutOmiPage> {
               ),
               onTap: () {
                 MixpanelManager().pageOpened('About Privacy Policy');
-                launchUrl(Uri.parse('https://www.omi.me/pages/privacy'));
+                launchUrl(Uri.parse('https://www.aura.me/pages/privacy'));
               },
             ),
           ),
@@ -123,7 +123,7 @@ class _DesktopAboutOmiPageState extends State<DesktopAboutOmiPage> {
                 ),
               ),
               subtitle: Text(
-                'https://omi.me',
+                'https://aura.me',
                 style: responsive.bodyMedium.copyWith(
                   color: ResponsiveHelper.textSecondary,
                 ),
@@ -135,7 +135,7 @@ class _DesktopAboutOmiPageState extends State<DesktopAboutOmiPage> {
               ),
               onTap: () {
                 MixpanelManager().pageOpened('About Visit Website');
-                launchUrl(Uri.parse('https://www.omi.me/'));
+                launchUrl(Uri.parse('https://www.aura.me/'));
               },
             ),
           ),
@@ -219,7 +219,7 @@ class _DesktopAboutOmiPageState extends State<DesktopAboutOmiPage> {
               ),
               onTap: () {
                 MixpanelManager().pageOpened('About Join Discord');
-                launchUrl(Uri.parse('http://discord.omi.me'));
+                launchUrl(Uri.parse('http://discord.aura.me'));
               },
             ),
           ),

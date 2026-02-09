@@ -48,7 +48,7 @@ case "$EXT" in
         ;;
     c|cpp|cc|cxx|h|hpp)
         # C/C++ files in firmware directories
-        if [[ "$FILE_PATH" == omi/* ]] || [[ "$FILE_PATH" == omiGlass/* ]]; then
+        if [[ "$FILE_PATH" == aura/* ]] || [[ "$FILE_PATH" == aura-pendant/* ]]; then
             if command -v clang-format &> /dev/null; then
                 echo "Formatting C/C++: $FILE_PATH"
                 clang-format -i "$FILE_PATH" 2>/dev/null || true

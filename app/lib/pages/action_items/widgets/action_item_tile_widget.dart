@@ -6,21 +6,21 @@ import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 
-import 'package:omi/backend/http/api/action_items.dart';
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/backend/schema/schema.dart';
-import 'package:omi/pages/settings/task_integrations_page.dart';
-import 'package:omi/pages/settings/usage_page.dart';
-import 'package:omi/providers/task_integration_provider.dart';
-import 'package:omi/services/apple_reminders_service.dart';
-import 'package:omi/services/asana_service.dart';
-import 'package:omi/services/clickup_service.dart';
-import 'package:omi/services/google_tasks_service.dart';
-import 'package:omi/services/todoist_service.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/other/temp.dart';
-import 'package:omi/utils/platform/platform_service.dart';
+import 'package:aura/backend/http/api/action_items.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/backend/schema/schema.dart';
+import 'package:aura/pages/settings/task_integrations_page.dart';
+import 'package:aura/pages/settings/usage_page.dart';
+import 'package:aura/providers/task_integration_provider.dart';
+import 'package:aura/services/apple_reminders_service.dart';
+import 'package:aura/services/asana_service.dart';
+import 'package:aura/services/clickup_service.dart';
+import 'package:aura/services/google_tasks_service.dart';
+import 'package:aura/services/todoist_service.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/other/temp.dart';
+import 'package:aura/utils/platform/platform_service.dart';
 import 'action_item_form_sheet.dart';
 
 class ActionItemTileWidget extends StatefulWidget {
@@ -328,7 +328,7 @@ class _ActionItemTileWidgetState extends State<ActionItemTileWidget> {
     } else if (taskApp == TaskIntegrationApp.clickup) {
       await _handleClickUpExport(context);
     } else {
-      // Show coming soon message for other integrations
+      // Show caurang soon message for other integrations
       if (context.mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
@@ -336,7 +336,7 @@ class _ActionItemTileWidgetState extends State<ActionItemTileWidget> {
               children: [
                 const Icon(Icons.info, color: Colors.white, size: 20),
                 const SizedBox(width: 8),
-                Text(context.l10n.serviceIntegrationComingSoon(taskApp.displayName)),
+                Text(context.l10n.serviceIntegrationCaurangSoon(taskApp.displayName)),
               ],
             ),
             backgroundColor: Colors.orange,

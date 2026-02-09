@@ -2,12 +2,12 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:typed_data';
 
-import 'package:omi/models/stt_result.dart';
-import 'package:omi/services/custom_stt_log_service.dart';
-import 'package:omi/services/sockets/pure_socket.dart';
-import 'package:omi/utils/audio/audio_transcoder.dart';
-import 'package:omi/utils/debug_log_manager.dart';
-import 'package:omi/utils/logger.dart';
+import 'package:aura/models/stt_result.dart';
+import 'package:aura/services/custom_stt_log_service.dart';
+import 'package:aura/services/sockets/pure_socket.dart';
+import 'package:aura/utils/audio/audio_transcoder.dart';
+import 'package:aura/utils/debug_log_manager.dart';
+import 'package:aura/utils/logger.dart';
 
 enum PurePollingStatus { notConnected, connecting, connected, disconnected }
 

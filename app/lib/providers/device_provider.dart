@@ -3,23 +3,23 @@ import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-import 'package:omi/backend/http/api/device.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/backend/schema/bt_device/bt_device.dart';
-import 'package:omi/main.dart';
-import 'package:omi/pages/home/firmware_update.dart';
-import 'package:omi/pages/home/omiglass_ota_update.dart';
-import 'package:omi/providers/capture_provider.dart';
-import 'package:omi/services/devices.dart';
-import 'package:omi/services/notifications.dart';
-import 'package:omi/services/services.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/device.dart';
-import 'package:omi/utils/logger.dart';
-import 'package:omi/utils/other/debouncer.dart';
-import 'package:omi/utils/platform/platform_manager.dart';
-import 'package:omi/widgets/confirmation_dialog.dart';
+import 'package:aura/backend/http/api/device.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/backend/schema/bt_device/bt_device.dart';
+import 'package:aura/main.dart';
+import 'package:aura/pages/home/firmware_update.dart';
+import 'package:aura/pages/home/auraglass_ota_update.dart';
+import 'package:aura/providers/capture_provider.dart';
+import 'package:aura/services/devices.dart';
+import 'package:aura/services/notifications.dart';
+import 'package:aura/services/services.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/device.dart';
+import 'package:aura/utils/logger.dart';
+import 'package:aura/utils/other/debouncer.dart';
+import 'package:aura/utils/platform/platform_manager.dart';
+import 'package:aura/widgets/confirmation_dialog.dart';
 
 class DeviceProvider extends ChangeNotifier implements IDeviceServiceSubsciption {
   CaptureProvider? captureProvider;
@@ -363,7 +363,7 @@ class DeviceProvider extends ChangeNotifier implements IDeviceServiceSubsciption
 
     // Retired 1s to prevent the race condition made by standby power of ble device
     Future.delayed(const Duration(seconds: 1), () {
-      periodicConnect('coming from onDisconnect');
+      periodicConnect('caurang from onDisconnect');
     });
   }
 
@@ -458,7 +458,7 @@ class DeviceProvider extends ChangeNotifier implements IDeviceServiceSubsciption
     if (pairedDevice == null) return false;
     if (pairedDevice!.type == DeviceType.openglass) return true;
     final name = pairedDevice!.name.toLowerCase();
-    return name.contains('openglass') || name.contains('omiglass') || name.contains('glass');
+    return name.contains('openglass') || name.contains('auraglass') || name.contains('glass');
   }
 
   Future checkFirmwareUpdates() async {

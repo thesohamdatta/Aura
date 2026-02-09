@@ -8,7 +8,7 @@
 #   ./measure_cpu_android.sh [duration_seconds] [output_name]
 #
 # Examples:
-#   ./measure_cpu_android.sh -p com.friend.ios.dev -n 15 -d 2 -o /tmp/omi_cpu.csv
+#   ./measure_cpu_android.sh -p com.friend.ios.dev -n 15 -d 2 -o /tmp/aura_cpu.csv
 #   ./measure_cpu_android.sh 60 "baseline"
 
 set -euo pipefail
@@ -67,7 +67,7 @@ if ! $PACKAGE_SET && [[ $# -le 2 ]]; then
   fi
 
   if [[ -z "$OUTFILE" ]]; then
-    OUTPUT_DIR="/tmp/omi_cpu_profiling"
+    OUTPUT_DIR="/tmp/aura_cpu_profiling"
     TIMESTAMP=$(date +%Y%m%d_%H%M%S)
     mkdir -p "$OUTPUT_DIR"
     OUTFILE="$OUTPUT_DIR/${OUTPUT_NAME}_${TIMESTAMP}.csv"

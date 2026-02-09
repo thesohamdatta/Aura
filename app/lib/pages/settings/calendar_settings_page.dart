@@ -5,11 +5,11 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/providers/calendar_provider.dart';
-import 'package:omi/services/calendar_service.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/responsive/responsive_helper.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/providers/calendar_provider.dart';
+import 'package:aura/services/calendar_service.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/responsive/responsive_helper.dart';
 
 class CalendarSettingsPage extends StatefulWidget {
   const CalendarSettingsPage({super.key});
@@ -108,7 +108,7 @@ class _CalendarSettingsPageState extends State<CalendarSettingsPage> {
                 description: context.l10n.syncGoogleAccount,
                 isEnabled: false,
                 onToggle: (value) {
-                  _showComingSoonToast(context);
+                  _showCaurangSoonToast(context);
                 },
               ),
 
@@ -153,7 +153,7 @@ class _CalendarSettingsPageState extends State<CalendarSettingsPage> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     _buildSectionHeader(context.l10n.yourMeetings),
-                    if (provider.upcomingMeetings.isNotEmpty)
+                    if (provider.upcaurangMeetings.isNotEmpty)
                       TextButton(
                         onPressed: () => provider.refreshMeetings(),
                         style: TextButton.styleFrom(
@@ -420,7 +420,7 @@ class _CalendarSettingsPageState extends State<CalendarSettingsPage> {
   }
 
   Widget _buildMeetingsList(CalendarProvider provider) {
-    if (provider.upcomingMeetings.isEmpty) {
+    if (provider.upcaurangMeetings.isEmpty) {
       return Container(
         padding: const EdgeInsets.all(32),
         decoration: BoxDecoration(
@@ -440,7 +440,7 @@ class _CalendarSettingsPageState extends State<CalendarSettingsPage> {
             ),
             const SizedBox(height: 12),
             Text(
-              context.l10n.noUpcomingMeetings,
+              context.l10n.noUpcaurangMeetings,
               style: const TextStyle(
                 color: ResponsiveHelper.textSecondary,
                 fontSize: 14,
@@ -461,7 +461,7 @@ class _CalendarSettingsPageState extends State<CalendarSettingsPage> {
     }
 
     // Sort meetings by start time
-    final sortedMeetings = List<CalendarMeeting>.from(provider.upcomingMeetings)
+    final sortedMeetings = List<CalendarMeeting>.from(provider.upcaurangMeetings)
       ..sort((a, b) => a.startTime.compareTo(b.startTime));
 
     // Group meetings by date
@@ -623,11 +623,11 @@ class _CalendarSettingsPageState extends State<CalendarSettingsPage> {
     }
   }
 
-  void _showComingSoonToast(BuildContext context) {
+  void _showCaurangSoonToast(BuildContext context) {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         content: Text(
-          context.l10n.googleCalendarComingSoon,
+          context.l10n.googleCalendarCaurangSoon,
           style: const TextStyle(color: ResponsiveHelper.textPrimary),
         ),
         backgroundColor: ResponsiveHelper.backgroundTertiary,

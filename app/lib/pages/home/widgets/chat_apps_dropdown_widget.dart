@@ -4,14 +4,14 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:collection/collection.dart';
 import 'package:provider/provider.dart';
 
-import 'package:omi/backend/schema/app.dart';
-import 'package:omi/gen/assets.gen.dart';
-import 'package:omi/providers/app_provider.dart';
-import 'package:omi/providers/home_provider.dart';
-import 'package:omi/providers/message_provider.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/widgets/dialog.dart';
+import 'package:aura/backend/schema/app.dart';
+import 'package:aura/gen/assets.gen.dart';
+import 'package:aura/providers/app_provider.dart';
+import 'package:aura/providers/home_provider.dart';
+import 'package:aura/providers/message_provider.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/widgets/dialog.dart';
 
 enum ChatMode { chat, chat_clone }
 
@@ -55,7 +55,7 @@ class ChatAppsDropdownWidget extends StatelessWidget {
                       maxWidth: 100,
                     ),
                     child: Text(
-                      selectedApp != null ? selectedApp.getName() : context.l10n.omiAppName,
+                      selectedApp != null ? selectedApp.getName() : context.l10n.auraAppName,
                       style: const TextStyle(color: Colors.white, fontSize: 16),
                       overflow: TextOverflow.fade,
                     ),
@@ -223,7 +223,7 @@ class ChatAppsDropdownWidget extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      context.l10n.omiAppName,
+                      context.l10n.auraAppName,
                       style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 16),
                     ),
                     selectedApp == null
@@ -351,7 +351,7 @@ class ChatAppsDropdownWidget extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      context.l10n.omiAppName,
+                      context.l10n.auraAppName,
                       style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 16),
                     ),
                     selectedApp == null

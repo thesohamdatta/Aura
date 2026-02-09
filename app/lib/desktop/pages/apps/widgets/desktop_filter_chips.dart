@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 
 import 'package:provider/provider.dart';
 
-import 'package:omi/providers/app_provider.dart';
-import 'package:omi/ui/atoms/omi_choice_chip.dart';
-import 'package:omi/utils/app_localizations_helper.dart';
-import 'package:omi/ui/molecules/omi_popup_menu.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/responsive/responsive_helper.dart';
+import 'package:aura/providers/app_provider.dart';
+import 'package:aura/ui/atoms/aura_choice_chip.dart';
+import 'package:aura/utils/app_localizations_helper.dart';
+import 'package:aura/ui/molecules/aura_popup_menu.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/responsive/responsive_helper.dart';
 
 class DesktopFilterChips extends StatelessWidget {
   final VoidCallback onFilterChanged;

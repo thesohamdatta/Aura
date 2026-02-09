@@ -1,4 +1,4 @@
-import 'package:omi/env/dev_env.dart';
+import 'package:aura/env/dev_env.dart';
 
 abstract class Env {
   static late final EnvFields _instance;
@@ -11,7 +11,7 @@ abstract class Env {
 
   static String? get mixpanelProjectToken => _instance.mixpanelProjectToken;
 
-  // static String? get apiBaseUrl => 'https://omi-backend.ngrok.app/';
+  // static String? get apiBaseUrl => 'https://aura-backend.ngrok.app/';
   static String? get apiBaseUrl => _instance.apiBaseUrl;
 
   static String? get growthbookApiKey => _instance.growthbookApiKey;

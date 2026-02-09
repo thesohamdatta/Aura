@@ -26,7 +26,7 @@ Use this subagent proactively when:
 
 ### 1. API Documentation
 
-**The `docs/` folder is the single source of truth for all user-facing documentation, deployed at [docs.omi.me](https://docs.omi.me/).**
+**The `docs/` folder is the single source of truth for all user-facing documentation, deployed at [docs.aura.me](https://docs.aura.me/).**
 
 When API endpoints change:
 - Detect changes in `backend/routers/**/*.py`
@@ -38,7 +38,7 @@ When API endpoints change:
 
 ### 2. Architecture Documentation
 
-**The `docs/` folder is the single source of truth for all user-facing documentation, deployed at [docs.omi.me](https://docs.omi.me/).**
+**The `docs/` folder is the single source of truth for all user-facing documentation, deployed at [docs.aura.me](https://docs.aura.me/).**
 
 When architecture changes:
 - Detect changes in core modules (`backend/utils/`, `backend/database/`, etc.)
@@ -57,11 +57,11 @@ When functions/classes change:
 
 ### 4. Documentation Sync
 
-**The `docs/` folder is the single source of truth for all user-facing documentation, deployed at [docs.omi.me](https://docs.omi.me/).**
+**The `docs/` folder is the single source of truth for all user-facing documentation, deployed at [docs.aura.me](https://docs.aura.me/).**
 
 - All updates should target `docs/` folder files directly
 - Ensure consistency across documentation locations
-- Update cross-references and links to match docs.omi.me URLs
+- Update cross-references and links to match docs.aura.me URLs
 - Validate documentation structure matches deployed site
 
 ## Workflow

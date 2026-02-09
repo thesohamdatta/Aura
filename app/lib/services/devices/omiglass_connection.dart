@@ -1,11 +1,11 @@
 import 'dart:async';
 import 'dart:typed_data';
 
-import 'package:omi/backend/schema/bt_device/bt_device.dart';
-import 'package:omi/services/devices.dart';
-import 'package:omi/services/devices/device_connection.dart';
-import 'package:omi/services/devices/models.dart';
-import 'package:omi/utils/logger.dart';
+import 'package:aura/backend/schema/bt_device/bt_device.dart';
+import 'package:aura/services/devices.dart';
+import 'package:aura/services/devices/device_connection.dart';
+import 'package:aura/services/devices/models.dart';
+import 'package:aura/utils/logger.dart';
 import 'package:version/version.dart';
 
 /// OTA Update Status for OmiGlass
@@ -124,7 +124,7 @@ class OmiGlassConnection extends DeviceConnection {
   }) async {
     try {
       final stream = transport.getCharacteristicStream(
-        omiServiceUuid,
+        auraServiceUuid,
         audioDataStreamCharacteristicUuid,
       );
 
@@ -145,7 +145,7 @@ class OmiGlassConnection extends DeviceConnection {
   Future<BleAudioCodec> performGetAudioCodec() async {
     try {
       final codecData = await transport.readCharacteristic(
-        omiServiceUuid,
+        auraServiceUuid,
         audioCodecCharacteristicUuid,
       );
       if (codecData.isNotEmpty) {
@@ -237,8 +237,8 @@ class OmiGlassConnection extends DeviceConnection {
       Logger.debug('OmiGlassConnection: Error getting device info: $e');
     }
 
-    deviceInfo['modelNumber'] ??= 'OMI Glass';
-    deviceInfo['manufacturerName'] ??= 'Based Hardware';
+    deviceInfo['modelNumber'] ??= 'AURA Glass';
+    deviceInfo['manufacturerName'] ??= 'Soham Datta';
 
     return deviceInfo;
   }
@@ -252,8 +252,8 @@ class OmiGlassConnection extends DeviceConnection {
     try {
       // Try to read from OTA control characteristic
       await transport.readCharacteristic(
-        omiGlassOtaServiceUuid,
-        omiGlassOtaControlCharacteristicUuid,
+        aura-pendantOtaServiceUuid,
+        aura-pendantOtaControlCharacteristicUuid,
       );
       return true;
     } catch (e) {
@@ -288,8 +288,8 @@ class OmiGlassConnection extends DeviceConnection {
       command.addAll(passwordBytes);
 
       await transport.writeCharacteristic(
-        omiGlassOtaServiceUuid,
-        omiGlassOtaControlCharacteristicUuid,
+        aura-pendantOtaServiceUuid,
+        aura-pendantOtaControlCharacteristicUuid,
         command,
       );
 
@@ -319,8 +319,8 @@ class OmiGlassConnection extends DeviceConnection {
       command.addAll(urlBytes);
 
       await transport.writeCharacteristic(
-        omiGlassOtaServiceUuid,
-        omiGlassOtaControlCharacteristicUuid,
+        aura-pendantOtaServiceUuid,
+        aura-pendantOtaControlCharacteristicUuid,
         command,
       );
 
@@ -336,8 +336,8 @@ class OmiGlassConnection extends DeviceConnection {
   Future<bool> startOtaUpdate() async {
     try {
       await transport.writeCharacteristic(
-        omiGlassOtaServiceUuid,
-        omiGlassOtaControlCharacteristicUuid,
+        aura-pendantOtaServiceUuid,
+        aura-pendantOtaControlCharacteristicUuid,
         [otaCmdStartOta],
       );
 
@@ -353,8 +353,8 @@ class OmiGlassConnection extends DeviceConnection {
   Future<bool> cancelOtaUpdate() async {
     try {
       await transport.writeCharacteristic(
-        omiGlassOtaServiceUuid,
-        omiGlassOtaControlCharacteristicUuid,
+        aura-pendantOtaServiceUuid,
+        aura-pendantOtaControlCharacteristicUuid,
         [otaCmdCancelOta],
       );
 
@@ -370,8 +370,8 @@ class OmiGlassConnection extends DeviceConnection {
   Future<OmiGlassOtaStatus?> getOtaStatus() async {
     try {
       final data = await transport.readCharacteristic(
-        omiGlassOtaServiceUuid,
-        omiGlassOtaControlCharacteristicUuid,
+        aura-pendantOtaServiceUuid,
+        aura-pendantOtaControlCharacteristicUuid,
       );
 
       if (data.length >= 2) {
@@ -394,8 +394,8 @@ class OmiGlassConnection extends DeviceConnection {
   }) async {
     try {
       final stream = transport.getCharacteristicStream(
-        omiGlassOtaServiceUuid,
-        omiGlassOtaDataCharacteristicUuid,
+        aura-pendantOtaServiceUuid,
+        aura-pendantOtaDataCharacteristicUuid,
       );
 
       _otaStatusSubscription = stream.listen(
@@ -492,7 +492,7 @@ class OmiGlassConnection extends DeviceConnection {
   }) async {
     try {
       final stream = transport.getCharacteristicStream(
-        omiServiceUuid,
+        auraServiceUuid,
         imageDataStreamCharacteristicUuid,
       );
 
@@ -538,7 +538,7 @@ class OmiGlassConnection extends DeviceConnection {
     // OmiGlass camera control - could be implemented if needed
     try {
       await transport.writeCharacteristic(
-        omiServiceUuid,
+        auraServiceUuid,
         imageCaptureControlCharacteristicUuid,
         [0x05], // Start interval capture (5 = minimum accepted by firmware, range 5-300)
       );
@@ -552,7 +552,7 @@ class OmiGlassConnection extends DeviceConnection {
     // OmiGlass camera control - could be implemented if needed
     try {
       await transport.writeCharacteristic(
-        omiServiceUuid,
+        auraServiceUuid,
         imageCaptureControlCharacteristicUuid,
         [0x00], // Stop capture command
       );
@@ -566,7 +566,7 @@ class OmiGlassConnection extends DeviceConnection {
     // OmiGlass has camera capability
     try {
       await transport.readCharacteristic(
-        omiServiceUuid,
+        auraServiceUuid,
         imageDataStreamCharacteristicUuid,
       );
       return true;
@@ -581,7 +581,7 @@ class OmiGlassConnection extends DeviceConnection {
   }) async {
     try {
       final stream = transport.getCharacteristicStream(
-        omiServiceUuid,
+        auraServiceUuid,
         imageDataStreamCharacteristicUuid,
       );
 

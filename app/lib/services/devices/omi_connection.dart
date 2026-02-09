@@ -6,13 +6,13 @@ import 'package:flutter/foundation.dart';
 
 import 'package:version/version.dart';
 
-import 'package:omi/backend/schema/bt_device/bt_device.dart';
-import 'package:omi/services/devices.dart';
-import 'package:omi/services/devices/device_connection.dart';
-import 'package:omi/services/devices/models.dart';
-import 'package:omi/services/devices/wifi_sync_error.dart';
-import 'package:omi/services/notifications.dart';
-import 'package:omi/utils/logger.dart';
+import 'package:aura/backend/schema/bt_device/bt_device.dart';
+import 'package:aura/services/devices.dart';
+import 'package:aura/services/devices/device_connection.dart';
+import 'package:aura/services/devices/models.dart';
+import 'package:aura/services/devices/wifi_sync_error.dart';
+import 'package:aura/services/notifications.dart';
+import 'package:aura/utils/logger.dart';
 
 class OmiDeviceConnection extends DeviceConnection {
   static const String settingsServiceUuid = '19b10010-e8f2-537e-4f6c-d104768a1214';
@@ -119,7 +119,7 @@ class OmiDeviceConnection extends DeviceConnection {
     required void Function(List<int>) onAudioBytesReceived,
   }) async {
     try {
-      final stream = transport.getCharacteristicStream(omiServiceUuid, audioDataStreamCharacteristicUuid);
+      final stream = transport.getCharacteristicStream(auraServiceUuid, audioDataStreamCharacteristicUuid);
 
       Logger.debug('Subscribed to audioBytes stream from Omi Device');
       final subscription = stream.listen((value) {
@@ -136,7 +136,7 @@ class OmiDeviceConnection extends DeviceConnection {
   @override
   Future<BleAudioCodec> performGetAudioCodec() async {
     try {
-      final codecValue = await transport.readCharacteristic(omiServiceUuid, audioCodecCharacteristicUuid);
+      final codecValue = await transport.readCharacteristic(auraServiceUuid, audioCodecCharacteristicUuid);
 
       var codecId = 1;
       if (codecValue.isNotEmpty) {
@@ -265,7 +265,7 @@ class OmiDeviceConnection extends DeviceConnection {
   Future performCameraStartPhotoController() async {
     try {
       // Capture photo once every 5s
-      await transport.writeCharacteristic(omiServiceUuid, imageCaptureControlCharacteristicUuid, [0x05]);
+      await transport.writeCharacteristic(auraServiceUuid, imageCaptureControlCharacteristicUuid, [0x05]);
       print('cameraStartPhotoController');
     } catch (e) {
       Logger.debug('OmiDeviceConnection: Error starting photo capture: $e');
@@ -275,7 +275,7 @@ class OmiDeviceConnection extends DeviceConnection {
   @override
   Future performCameraStopPhotoController() async {
     try {
-      await transport.writeCharacteristic(omiServiceUuid, imageCaptureControlCharacteristicUuid, [0x00]);
+      await transport.writeCharacteristic(auraServiceUuid, imageCaptureControlCharacteristicUuid, [0x00]);
       print('cameraStopPhotoController');
     } catch (e) {
       Logger.debug('OmiDeviceConnection: Error stopping photo capture: $e');
@@ -285,7 +285,7 @@ class OmiDeviceConnection extends DeviceConnection {
   Future performCameraTakePhoto() async {
     try {
       // -1 tells the firmware to take a single photo
-      await transport.writeCharacteristic(omiServiceUuid, imageCaptureControlCharacteristicUuid, [-1]);
+      await transport.writeCharacteristic(auraServiceUuid, imageCaptureControlCharacteristicUuid, [-1]);
       print('cameraTakePhoto');
     } catch (e) {
       Logger.debug('OmiDeviceConnection: Error taking photo: $e');
@@ -296,7 +296,7 @@ class OmiDeviceConnection extends DeviceConnection {
   Future<bool> performHasPhotoStreamingCharacteristic() async {
     try {
       // Try to read from the image data stream characteristic to see if it exists
-      await transport.readCharacteristic(omiServiceUuid, imageDataStreamCharacteristicUuid);
+      await transport.readCharacteristic(auraServiceUuid, imageDataStreamCharacteristicUuid);
       return true;
     } catch (e) {
       Logger.debug('OmiDeviceConnection: Photo streaming characteristic not available: $e');
@@ -308,7 +308,7 @@ class OmiDeviceConnection extends DeviceConnection {
     required void Function(List<int>) onImageBytesReceived,
   }) async {
     try {
-      final stream = transport.getCharacteristicStream(omiServiceUuid, imageDataStreamCharacteristicUuid);
+      final stream = transport.getCharacteristicStream(auraServiceUuid, imageDataStreamCharacteristicUuid);
 
       Logger.debug('Subscribed to imageBytes stream from Omi Device');
       final subscription = stream.listen((value) {
@@ -612,7 +612,7 @@ class OmiDeviceConnection extends DeviceConnection {
 
       // Check if device has image streaming capability (for OpenGlass/OmiGlass detection)
       try {
-        final chars = await transport.readCharacteristic(omiServiceUuid, imageDataStreamCharacteristicUuid);
+        final chars = await transport.readCharacteristic(auraServiceUuid, imageDataStreamCharacteristicUuid);
         if (chars.isNotEmpty) {
           deviceInfo['hasImageStream'] = 'true';
         }
@@ -627,7 +627,7 @@ class OmiDeviceConnection extends DeviceConnection {
     deviceInfo['modelNumber'] ??= 'Omi Device';
     deviceInfo['firmwareRevision'] ??= '1.0.2';
     deviceInfo['hardwareRevision'] ??= 'Seeed Xiao BLE Sense';
-    deviceInfo['manufacturerName'] ??= 'Based Hardware';
+    deviceInfo['manufacturerName'] ??= 'Soham Datta';
     deviceInfo['hasImageStream'] ??= 'false';
 
     return deviceInfo;

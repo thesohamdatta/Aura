@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 
 import 'package:provider/provider.dart';
 
-import 'package:omi/pages/apps/add_app.dart';
-import 'package:omi/pages/apps/add_mcp_server_page.dart';
-import 'package:omi/pages/persona/persona_profile.dart';
-import 'package:omi/pages/persona/persona_provider.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/other/temp.dart';
+import 'package:aura/pages/apps/add_app.dart';
+import 'package:aura/pages/apps/add_mcp_server_page.dart';
+import 'package:aura/pages/persona/persona_profile.dart';
+import 'package:aura/pages/persona/persona_provider.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/other/temp.dart';
 
 class CreateOptionsSheet extends StatelessWidget {
   const CreateOptionsSheet({super.key});

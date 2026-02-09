@@ -23,7 +23,7 @@ Test Omi plugin webhooks and integrations to ensure they work correctly.
 
 3. **Test webhook**
    - Start speaking in Omi app
-   - Watch webhook.site for incoming requests
+   - Watch webhook.site for incaurang requests
    - Verify payload structure
 
 ### Testing Locally

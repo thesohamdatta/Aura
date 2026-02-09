@@ -6,26 +6,26 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 
-import 'package:omi/backend/http/api/users.dart';
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/gen/assets.gen.dart';
-import 'package:omi/pages/home/page.dart';
-import 'package:omi/pages/onboarding/auth.dart';
-import 'package:omi/pages/onboarding/found_omi/found_omi_widget.dart';
-import 'package:omi/pages/onboarding/name/name_widget.dart';
-import 'package:omi/pages/onboarding/permissions/permissions_widget.dart';
-import 'package:omi/pages/onboarding/primary_language/primary_language_widget.dart';
-import 'package:omi/pages/onboarding/speech_profile_widget.dart';
-import 'package:omi/pages/onboarding/user_review_page.dart';
-import 'package:omi/providers/home_provider.dart';
-import 'package:omi/providers/onboarding_provider.dart';
-import 'package:omi/providers/speech_profile_provider.dart';
-import 'package:omi/services/auth_service.dart';
-import 'package:omi/utils/analytics/intercom.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/other/temp.dart';
-import 'package:omi/widgets/device_widget.dart';
+import 'package:aura/backend/http/api/users.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/gen/assets.gen.dart';
+import 'package:aura/pages/home/page.dart';
+import 'package:aura/pages/onboarding/auth.dart';
+import 'package:aura/pages/onboarding/found_aura/found_aura_widget.dart';
+import 'package:aura/pages/onboarding/name/name_widget.dart';
+import 'package:aura/pages/onboarding/permissions/permissions_widget.dart';
+import 'package:aura/pages/onboarding/primary_language/primary_language_widget.dart';
+import 'package:aura/pages/onboarding/speech_profile_widget.dart';
+import 'package:aura/pages/onboarding/user_review_page.dart';
+import 'package:aura/providers/home_provider.dart';
+import 'package:aura/providers/onboarding_provider.dart';
+import 'package:aura/providers/speech_profile_provider.dart';
+import 'package:aura/services/auth_service.dart';
+import 'package:aura/utils/analytics/intercom.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/other/temp.dart';
+import 'package:aura/widgets/device_widget.dart';
 
 class OnboardingWrapper extends StatefulWidget {
   const OnboardingWrapper({super.key});
@@ -39,9 +39,9 @@ class _OnboardingWrapperState extends State<OnboardingWrapper> with TickerProvid
   static const int kAuthPage = 0;
   static const int kNamePage = 1;
   static const int kPrimaryLanguagePage = 2;
-  static const int kFoundOmiPage = 3;
+  static const int kFoundAuraPage = 3;
   static const int kPermissionsPage = 4;
-  static const int kUserReviewPage = 5; // "Loving Omi?" screen
+  static const int kUserReviewPage = 5; // "Loving Aura?" screen
   static const int kWelcomePage = 6;
   static const int kFindDevicesPage = 7;
   static const int kSpeechProfilePage = 8; // Speech profile with questions (requires device)
@@ -135,7 +135,7 @@ class _OnboardingWrapperState extends State<OnboardingWrapper> with TickerProvid
       case kPrimaryLanguagePage:
         newImage = Assets.images.onboardingBg4.path;
         break;
-      case kFoundOmiPage:
+      case kFoundAuraPage:
         newImage = Assets.images.onboardingBg1.path;
         break;
       case kPermissionsPage:
@@ -182,7 +182,7 @@ class _OnboardingWrapperState extends State<OnboardingWrapper> with TickerProvid
         return Assets.images.onboardingBg1.path;
       case kPrimaryLanguagePage:
         return Assets.images.onboardingBg4.path;
-      case kFoundOmiPage:
+      case kFoundAuraPage:
         return Assets.images.onboardingBg1.path;
       case kPermissionsPage:
         return Assets.images.onboardingBg3.path;
@@ -198,7 +198,7 @@ class _OnboardingWrapperState extends State<OnboardingWrapper> with TickerProvid
     List<Widget> pages = [
       AuthComponent(
         onSignIn: () {
-          SharedPreferencesUtil().hasOmiDevice = true;
+          SharedPreferencesUtil().hasAuraDevice = true;
           SharedPreferencesUtil().verifiedPersonaId = null;
           MixpanelManager().onboardingStepCompleted('Auth');
           context.read<HomeProvider>().setupHasSpeakerProfile();
@@ -220,10 +220,10 @@ class _OnboardingWrapperState extends State<OnboardingWrapper> with TickerProvid
         MixpanelManager().onboardingStepCompleted('Name');
       }),
       PrimaryLanguageWidget(goNext: () {
-        _goNext(); // Go to Found Omi page
+        _goNext(); // Go to Found Aura page
         MixpanelManager().onboardingStepCompleted('Primary Language');
       }),
-      FoundOmiWidget(goNext: () {
+      FoundAuraWidget(goNext: () {
         _goNext(); // Go to Permissions page
         MixpanelManager().onboardingStepCompleted('Acquisition Source');
       }),
@@ -298,7 +298,7 @@ class _OnboardingWrapperState extends State<OnboardingWrapper> with TickerProvid
               )
             : _controller!.index == kNamePage ||
                     _controller!.index == kPrimaryLanguagePage ||
-                    _controller!.index == kFoundOmiPage ||
+                    _controller!.index == kFoundAuraPage ||
                     _controller!.index == kPermissionsPage ||
                     _controller!.index == kUserReviewPage ||
                     _controller!.index == kWelcomePage

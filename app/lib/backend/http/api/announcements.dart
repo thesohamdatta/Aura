@@ -1,8 +1,8 @@
 import 'dart:convert';
 
-import 'package:omi/backend/http/shared.dart';
-import 'package:omi/env/env.dart';
-import 'package:omi/models/announcement.dart';
+import 'package:aura/backend/http/shared.dart';
+import 'package:aura/env/env.dart';
+import 'package:aura/models/announcement.dart';
 
 /// Get app changelogs.
 ///

@@ -4,13 +4,13 @@ import 'dart:typed_data';
 
 import 'package:flutter/foundation.dart';
 
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/backend/schema/bt_device/bt_device.dart';
-import 'package:omi/backend/schema/conversation.dart';
-import 'package:omi/services/wals/wal.dart';
-import 'package:omi/services/wals/wal_interfaces.dart';
-import 'package:omi/utils/logger.dart';
-import 'package:omi/utils/wal_file_manager.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/backend/schema/bt_device/bt_device.dart';
+import 'package:aura/backend/schema/conversation.dart';
+import 'package:aura/services/wals/wal.dart';
+import 'package:aura/services/wals/wal_interfaces.dart';
+import 'package:aura/utils/logger.dart';
+import 'package:aura/utils/wal_file_manager.dart';
 
 class LocalWalSyncImpl implements LocalWalSync {
   List<Wal> _wals = const [];
@@ -161,7 +161,7 @@ class LocalWalSyncImpl implements LocalWalSync {
 
       Wal wal;
       var walIdx =
-          _wals.indexWhere((w) => w.timerStart == timerStart && w.device == (_deviceId ?? "omi") && w.codec == _codec);
+          _wals.indexWhere((w) => w.timerStart == timerStart && w.device == (_deviceId ?? "aura") && w.codec == _codec);
       if (walIdx < 0) {
         wal = Wal(
           codec: _codec,
@@ -169,7 +169,7 @@ class LocalWalSyncImpl implements LocalWalSync {
           data: chunk,
           storage: WalStorage.mem,
           status: syncedOffset == chunkFrameCount ? WalStatus.synced : WalStatus.miss,
-          device: _deviceId ?? "omi",
+          device: _deviceId ?? "aura",
           deviceModel: _deviceModel ?? "Omi",
           seconds: chunkFrameCount ~/ _framesPerSecond,
           totalFrames: chunkFrameCount,

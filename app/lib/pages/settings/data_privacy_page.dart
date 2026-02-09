@@ -4,14 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'package:omi/backend/schema/app.dart';
-import 'package:omi/pages/apps/app_detail/app_detail.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/pages/settings/widgets/data_protection_section.dart';
-import 'package:omi/providers/app_provider.dart';
-import 'package:omi/providers/user_provider.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/other/temp.dart';
+import 'package:aura/backend/schema/app.dart';
+import 'package:aura/pages/apps/app_detail/app_detail.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/pages/settings/widgets/data_protection_section.dart';
+import 'package:aura/providers/app_provider.dart';
+import 'package:aura/providers/user_provider.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/other/temp.dart';
 
 class DataPrivacyPage extends StatefulWidget {
   const DataPrivacyPage({super.key});
@@ -66,7 +66,7 @@ class _DataPrivacyPageState extends State<DataPrivacyPage> {
                     ),
                     recognizer: TapGestureRecognizer()
                       ..onTap = () async {
-                        final url = Uri.parse('https://www.omi.me/pages/privacy');
+                        final url = Uri.parse('https://www.aura.me/pages/privacy');
                         if (await canLaunchUrl(url)) {
                           await launchUrl(url, mode: LaunchMode.externalApplication);
                         }

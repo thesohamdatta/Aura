@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/platform/platform_service.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/platform/platform_service.dart';
 
 getDialog(
   BuildContext context,

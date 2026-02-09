@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 import 'package:provider/provider.dart';
 
-import 'package:omi/providers/home_provider.dart';
-import 'package:omi/ui/atoms/omi_button.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/responsive/responsive_helper.dart';
+import 'package:aura/providers/home_provider.dart';
+import 'package:aura/ui/atoms/aura_button.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/responsive/responsive_helper.dart';
 
 class DesktopLanguageScreen extends StatefulWidget {
   final VoidCallback onNext;

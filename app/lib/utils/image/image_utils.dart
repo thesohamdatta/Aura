@@ -2,8 +2,8 @@ import 'dart:typed_data';
 
 import 'package:image/image.dart' as img;
 
-import 'package:omi/backend/schema/bt_device/bt_device.dart';
-import 'package:omi/services/devices/models.dart';
+import 'package:aura/backend/schema/bt_device/bt_device.dart';
+import 'package:aura/services/devices/models.dart';
 
 /// Rotates an image based on its orientation metadata.
 ///

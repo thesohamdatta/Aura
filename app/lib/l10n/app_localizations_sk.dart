@@ -351,7 +351,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get cannotBeUndone => 'Túto akciu nie je možné vrátiť späť.';
 
   @override
-  String get allDataErased => 'Všetky vaše spomienky a konverzácie budú natrvalo odstránené.';
+  String get allDataErased => 'Všetky vaše spauraenky a konverzácie budú natrvalo odstránené.';
 
   @override
   String get appsDisconnected => 'Vaše aplikácie a integrácie budú okamžite odpojené.';
@@ -362,7 +362,7 @@ class AppLocalizationsSk extends AppLocalizations {
 
   @override
   String get deleteAccountCheckbox =>
-      'Rozumiem, že odstránenie môjho účtu je trvalé a všetky údaje vrátane spomienok a konverzácií budú stratené a nebude ich možné obnoviť.';
+      'Rozumiem, že odstránenie môjho účtu je trvalé a všetky údaje vrátane spauraenok a konverzácií budú stratené a nebude ich možné obnoviť.';
 
   @override
   String get areYouSure => 'Ste si istí?';
@@ -454,11 +454,11 @@ class AppLocalizationsSk extends AppLocalizations {
   String get wrapped2025 => 'Zhrnutie 2025';
 
   @override
-  String get yourPrivacyYourControl => 'Vaše súkromie, vaša kontrola';
+  String get yourPrivacyYourControl => 'Vaše súkraurae, vaša kontrola';
 
   @override
   String get privacyIntro =>
-      'V Omi sa zaväzujeme chrániť vaše súkromie. Táto stránka vám umožňuje kontrolovať, ako sú vaše údaje ukladané a používané.';
+      'V Omi sa zaväzujeme chrániť vaše súkraurae. Táto stránka vám umožňuje kontrolovať, ako sú vaše údaje ukladané a používané.';
 
   @override
   String get learnMore => 'Dozvedieť sa viac...';
@@ -468,7 +468,7 @@ class AppLocalizationsSk extends AppLocalizations {
 
   @override
   String get dataProtectionDesc =>
-      'Vaše údaje sú predvolene zabezpečené silným šifrovaním. Skontrolujte svoje nastavenia a budúce možnosti ochrany súkromia nižšie.';
+      'Vaše údaje sú predvolene zabezpečené silným šifrovaním. Skontrolujte svoje nastavenia a budúce možnosti ochrany súkrauraa nižšie.';
 
   @override
   String get appAccess => 'Prístup aplikácií';
@@ -553,7 +553,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get deviceInfoSection => 'Informácie o zariadení';
 
   @override
-  String get customizationSection => 'Prispôsobenie';
+  String get custaurazationSection => 'Prispôsobenie';
 
   @override
   String get hardwareSection => 'Hardvér';
@@ -761,7 +761,7 @@ class AppLocalizationsSk extends AppLocalizations {
   }
 
   @override
-  String get shareStatsMessage => 'Zdieľam svoje štatistiky Omi! (omi.me - váš AI asistent vždy po ruke)';
+  String get shareStatsMessage => 'Zdieľam svoje štatistiky Omi! (aura.me - váš AI asistent vždy po ruke)';
 
   @override
   String get sharePeriodToday => 'Dnes Omi:';
@@ -792,7 +792,7 @@ class AppLocalizationsSk extends AppLocalizations {
 
   @override
   String shareStatsMemories(String count) {
-    return '📚 Zapamätalo si $count spomienok';
+    return '📚 Zapamätalo si $count spauraenok';
   }
 
   @override
@@ -808,7 +808,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get noLogFilesFound => 'Nenašli sa žiadne súbory denníka.';
 
   @override
-  String get omiDebugLog => 'Omi debug log';
+  String get auraDebugLog => 'Omi debug log';
 
   @override
   String get logShared => 'Log bol zdieľaný';
@@ -842,7 +842,7 @@ class AppLocalizationsSk extends AppLocalizations {
 
   @override
   String get deleteKnowledgeGraphMessage =>
-      'Týmto odstránite všetky odvodené údaje grafu znalostí (uzly a prepojenia). Vaše pôvodné spomienky zostanú v bezpečí. Graf bude znovu vytvorený postupom času alebo na ďalšiu požiadavku.';
+      'Týmto odstránite všetky odvodené údaje grafu znalostí (uzly a prepojenia). Vaše pôvodné spauraenky zostanú v bezpečí. Graf bude znovu vytvorený postupom času alebo na ďalšiu požiadavku.';
 
   @override
   String get knowledgeGraphDeleted => 'Graf znalostí zmazaný';
@@ -946,7 +946,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get insights => 'Poznatky';
 
   @override
-  String get memories => 'Spomienky';
+  String get memories => 'Spauraenky';
 
   @override
   String minsUsedThisMonth(String used, int limit) {
@@ -965,7 +965,7 @@ class AppLocalizationsSk extends AppLocalizations {
 
   @override
   String memoriesUsedThisMonth(String used, String limit) {
-    return '$used z $limit spomienok vytvorených tento mesiac';
+    return '$used z $limit spauraenok vytvorených tento mesiac';
   }
 
   @override
@@ -1020,7 +1020,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get connect => 'Connect';
 
   @override
-  String get comingSoon => 'Čoskoro';
+  String get caurangSoon => 'Čoskoro';
 
   @override
   String get integrationsFooter => 'Pripojte svoje aplikácie na zobrazenie údajov a metrík v chate.';
@@ -1204,7 +1204,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get refresh => 'Obnoviť';
 
   @override
-  String get noUpcomingMeetings => 'Žiadne nadchádzajúce stretnutia';
+  String get noUpcaurangMeetings => 'Žiadne nadchádzajúce stretnutia';
 
   @override
   String get checkingNextDays => 'Kontrola nasledujúcich 30 dní';
@@ -1213,7 +1213,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get tomorrow => 'Zajtra';
 
   @override
-  String get googleCalendarComingSoon => 'Integrácia Google kalendára čoskoro!';
+  String get googleCalendarCaurangSoon => 'Integrácia Google kalendára čoskoro!';
 
   @override
   String connectedAsUser(String userId) {
@@ -1438,7 +1438,7 @@ class AppLocalizationsSk extends AppLocalizations {
   }
 
   @override
-  String integrationComingSoon(String appName) {
+  String integrationCaurangSoon(String appName) {
     return 'Integrácia s $appName čoskoro! Usilovne pracujeme na tom, aby sme vám priniesli viac možností správy úloh.';
   }
 
@@ -1461,13 +1461,13 @@ class AppLocalizationsSk extends AppLocalizations {
   String get bringYourOwn => 'Prineste si vlastný';
 
   @override
-  String get payYourSttProvider => 'Voľne používajte omi. Platíte len svojmu poskytovateľovi STT priamo.';
+  String get payYourSttProvider => 'Voľne používajte aura. Platíte len svojmu poskytovateľovi STT priamo.';
 
   @override
   String get freeMinutesMonth => '1 200 bezplatných minút/mesiac je zahrnutých. Neobmedzené s ';
 
   @override
-  String get omiUnlimited => 'Omi Unlimited';
+  String get auraUnlimited => 'Omi Unlimited';
 
   @override
   String get hostRequired => 'Hostiteľ je povinný';
@@ -1589,7 +1589,7 @@ class AppLocalizationsSk extends AppLocalizations {
   }
 
   @override
-  String get omiTranscription => 'Omi Prepis';
+  String get auraTranscription => 'Omi Prepis';
 
   @override
   String get bestInClassTranscription => 'Najlepší prepis v triede s nulovou konfiguráciou';
@@ -1610,7 +1610,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get highAccuracy => 'Vysoká presnosť';
 
   @override
-  String get privacyFirst => 'Súkromie na prvom mieste';
+  String get privacyFirst => 'Súkraurae na prvom mieste';
 
   @override
   String get saveChanges => 'Uložiť zmeny';
@@ -1775,7 +1775,7 @@ class AppLocalizationsSk extends AppLocalizations {
 
   @override
   String get locationServiceDisabledDesc =>
-      'Služba polohy je vypnutá. Prejdite do Nastavenia > Súkromie a zabezpečenie > Služby polohy a povoľte ju';
+      'Služba polohy je vypnutá. Prejdite do Nastavenia > Súkraurae a zabezpečenie > Služby polohy a povoľte ju';
 
   @override
   String get backgroundLocationDenied => 'Prístup k polohe na pozadí bol zamietnutý';
@@ -1897,7 +1897,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get termsOfUse => 'Podmienky používania';
 
   @override
-  String get omiYourAiCompanion => 'Omi – Váš AI spoločník';
+  String get auraYourAiCompanion => 'Omi – Váš AI spoločník';
 
   @override
   String get captureEveryMoment =>
@@ -2053,31 +2053,31 @@ class AppLocalizationsSk extends AppLocalizations {
   String get deleteSelected => 'Odstrániť vybrané';
 
   @override
-  String get searchMemories => 'Hľadať spomienky...';
+  String get searchMemories => 'Hľadať spauraenky...';
 
   @override
-  String get memoryDeleted => 'Spomienka bola odstránená.';
+  String get memoryDeleted => 'Spauraenka bola odstránená.';
 
   @override
   String get undo => 'Vrátiť späť';
 
   @override
-  String get noMemoriesYet => '🧠 Zatiaľ žiadne spomienky';
+  String get noMemoriesYet => '🧠 Zatiaľ žiadne spauraenky';
 
   @override
-  String get noAutoMemories => 'Zatiaľ žiadne automaticky extrahované spomienky';
+  String get noAutoMemories => 'Zatiaľ žiadne automaticky extrahované spauraenky';
 
   @override
-  String get noManualMemories => 'Zatiaľ žiadne manuálne spomienky';
+  String get noManualMemories => 'Zatiaľ žiadne manuálne spauraenky';
 
   @override
-  String get noMemoriesInCategories => 'Žiadne spomienky v týchto kategóriách';
+  String get noMemoriesInCategories => 'Žiadne spauraenky v týchto kategóriách';
 
   @override
-  String get noMemoriesFound => '🔍 Nenašli sa žiadne spomienky';
+  String get noMemoriesFound => '🔍 Nenašli sa žiadne spauraenky';
 
   @override
-  String get addFirstMemory => 'Pridajte svoju prvú spomienku';
+  String get addFirstMemory => 'Pridajte svoju prvú spauraenku';
 
   @override
   String get clearMemoryTitle => 'Vymazať pamäť Omi';
@@ -2092,10 +2092,10 @@ class AppLocalizationsSk extends AppLocalizations {
   String get memoryClearedSuccess => 'Pamäť Omi o vás bola vymazaná';
 
   @override
-  String get noMemoriesToDelete => 'Žiadne spomienky na odstránenie';
+  String get noMemoriesToDelete => 'Žiadne spauraenky na odstránenie';
 
   @override
-  String get createMemoryTooltip => 'Vytvoriť novú spomienku';
+  String get createMemoryTooltip => 'Vytvoriť novú spauraenku';
 
   @override
   String get createActionItemTooltip => 'Vytvoriť novú úlohu';
@@ -2104,33 +2104,33 @@ class AppLocalizationsSk extends AppLocalizations {
   String get memoryManagement => 'Správa pamäte';
 
   @override
-  String get filterMemories => 'Filtrovať spomienky';
+  String get filterMemories => 'Filtrovať spauraenky';
 
   @override
   String totalMemoriesCount(int count) {
-    return 'Máte $count spomienok celkom';
+    return 'Máte $count spauraenok celkom';
   }
 
   @override
-  String get publicMemories => 'Verejné spomienky';
+  String get publicMemories => 'Verejné spauraenky';
 
   @override
-  String get privateMemories => 'Súkromné spomienky';
+  String get privateMemories => 'Súkromné spauraenky';
 
   @override
-  String get makeAllPrivate => 'Urobiť všetky spomienky súkromnými';
+  String get makeAllPrivate => 'Urobiť všetky spauraenky súkromnými';
 
   @override
-  String get makeAllPublic => 'Urobiť všetky spomienky verejnými';
+  String get makeAllPublic => 'Urobiť všetky spauraenky verejnými';
 
   @override
-  String get deleteAllMemories => 'Odstrániť všetky spomienky';
+  String get deleteAllMemories => 'Odstrániť všetky spauraenky';
 
   @override
-  String get allMemoriesPrivateResult => 'Všetky spomienky sú teraz súkromné';
+  String get allMemoriesPrivateResult => 'Všetky spauraenky sú teraz súkromné';
 
   @override
-  String get allMemoriesPublicResult => 'Všetky spomienky sú teraz verejné';
+  String get allMemoriesPublicResult => 'Všetky spauraenky sú teraz verejné';
 
   @override
   String get newMemory => '✨ Nová pamäť';
@@ -2145,7 +2145,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get failedToSaveMemory => 'Nepodarilo sa uložiť. Skontrolujte prosím svoje pripojenie.';
 
   @override
-  String get saveMemory => 'Uložiť spomienku';
+  String get saveMemory => 'Uložiť spauraenku';
 
   @override
   String get retry => 'Skúsiť znova';
@@ -2324,14 +2324,14 @@ class AppLocalizationsSk extends AppLocalizations {
 
   @override
   String memoriesCount(int count) {
-    return '$count spomienok';
+    return '$count spauraenok';
   }
 
   @override
-  String get noMemoriesInCategory => 'V tejto kategórii zatiaľ nie sú žiadne spomienky';
+  String get noMemoriesInCategory => 'V tejto kategórii zatiaľ nie sú žiadne spauraenky';
 
   @override
-  String get addYourFirstMemory => 'Pridajte svoju prvú spomienku';
+  String get addYourFirstMemory => 'Pridajte svoju prvú spauraenku';
 
   @override
   String get firmwareDisconnectUsb => 'Odpojte USB';
@@ -2417,7 +2417,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get privacyPolicyTitle => 'Zásady ochrany osobných údajov';
 
   @override
-  String get omiSttProvider => 'Omi';
+  String get auraSttProvider => 'Omi';
 
   @override
   String labelCopied(String label) {
@@ -2514,7 +2514,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get dailyReflection => 'Denná reflexia';
 
   @override
-  String get get9PmReminderToReflect => 'Dostávajte pripomienku o 21:00 na zamyslenie sa nad svojím dňom';
+  String get get9PmReminderToReflect => 'Dostávajte pripauraenku o 21:00 na zamyslenie sa nad svojím dňom';
 
   @override
   String get actionItemDescriptionCannotBeEmpty => 'Popis akčnej položky nesmie byť prázdny';
@@ -2568,16 +2568,16 @@ class AppLocalizationsSk extends AppLocalizations {
   String get howDoesItWork => 'Ako to funguje?';
 
   @override
-  String get sdCardSyncDescription => 'Synchronizácia SD karty importuje vaše spomienky z SD karty do aplikácie';
+  String get sdCardSyncDescription => 'Synchronizácia SD karty importuje vaše spauraenky z SD karty do aplikácie';
 
   @override
   String get checksForAudioFiles => 'Kontroluje zvukové súbory na SD karte';
 
   @override
-  String get omiSyncsAudioFiles => 'Omi potom synchronizuje zvukové súbory so serverom';
+  String get auraSyncsAudioFiles => 'Omi potom synchronizuje zvukové súbory so serverom';
 
   @override
-  String get serverProcessesAudio => 'Server spracováva zvukové súbory a vytvára spomienky';
+  String get serverProcessesAudio => 'Server spracováva zvukové súbory a vytvára spauraenky';
 
   @override
   String get youreAllSet => 'Všetko je pripravené!';
@@ -2867,7 +2867,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get notificationScopes => 'Rozsahy oznámení';
 
   @override
-  String get appPrivacyAndTerms => 'Ochrana súkromia a podmienky aplikácie';
+  String get appPrivacyAndTerms => 'Ochrana súkrauraa a podmienky aplikácie';
 
   @override
   String get makeMyAppPublic => 'Zverejniť moju aplikáciu';
@@ -3151,7 +3151,7 @@ class AppLocalizationsSk extends AppLocalizations {
 
   @override
   String get microphonePermissionDenied =>
-      'Povolenie mikrofónu zamietnuté. Udeľte prosím povolenie v Predvoľby systému > Súkromie a bezpečnosť > Mikrofón.';
+      'Povolenie mikrofónu zamietnuté. Udeľte prosím povolenie v Predvoľby systému > Súkraurae a bezpečnosť > Mikrofón.';
 
   @override
   String failedToCheckMicrophonePermission(String error) {
@@ -3274,10 +3274,10 @@ class AppLocalizationsSk extends AppLocalizations {
   String get wearableAiCompanion => 'Nositeľný AI spoločník';
 
   @override
-  String get loadingMemories => 'Načítavanie spomienok...';
+  String get loadingMemories => 'Načítavanie spauraenok...';
 
   @override
-  String get allMemories => 'Všetky spomienky';
+  String get allMemories => 'Všetky spauraenky';
 
   @override
   String get aboutYou => 'O vás';
@@ -3286,10 +3286,10 @@ class AppLocalizationsSk extends AppLocalizations {
   String get manual => 'Manuálne';
 
   @override
-  String get loadingYourMemories => 'Načítavanie vašich spomienok...';
+  String get loadingYourMemories => 'Načítavanie vašich spauraenok...';
 
   @override
-  String get createYourFirstMemory => 'Vytvorte svoju prvú spomienku a začnite';
+  String get createYourFirstMemory => 'Vytvorte svoju prvú spauraenku a začnite';
 
   @override
   String get tryAdjustingFilter => 'Skúste upraviť vyhľadávanie alebo filter';
@@ -3316,42 +3316,42 @@ class AppLocalizationsSk extends AppLocalizations {
   String get makePrivate => 'Nastaviť ako súkromné';
 
   @override
-  String get organizeAndControlMemories => 'Organizujte a ovládajte svoje spomienky';
+  String get organizeAndControlMemories => 'Organizujte a ovládajte svoje spauraenky';
 
   @override
   String get total => 'Celkom';
 
   @override
-  String get makeAllMemoriesPrivate => 'Nastaviť všetky spomienky ako súkromné';
+  String get makeAllMemoriesPrivate => 'Nastaviť všetky spauraenky ako súkromné';
 
   @override
-  String get setAllMemoriesToPrivate => 'Nastaviť všetky spomienky na súkromnú viditeľnosť';
+  String get setAllMemoriesToPrivate => 'Nastaviť všetky spauraenky na súkromnú viditeľnosť';
 
   @override
-  String get makeAllMemoriesPublic => 'Nastaviť všetky spomienky ako verejné';
+  String get makeAllMemoriesPublic => 'Nastaviť všetky spauraenky ako verejné';
 
   @override
-  String get setAllMemoriesToPublic => 'Nastaviť všetky spomienky na verejnú viditeľnosť';
+  String get setAllMemoriesToPublic => 'Nastaviť všetky spauraenky na verejnú viditeľnosť';
 
   @override
-  String get permanentlyRemoveAllMemories => 'Trvalo odstrániť všetky spomienky z Omi';
+  String get permanentlyRemoveAllMemories => 'Trvalo odstrániť všetky spauraenky z Omi';
 
   @override
-  String get allMemoriesAreNowPrivate => 'Všetky spomienky sú teraz súkromné';
+  String get allMemoriesAreNowPrivate => 'Všetky spauraenky sú teraz súkromné';
 
   @override
-  String get allMemoriesAreNowPublic => 'Všetky spomienky sú teraz verejné';
+  String get allMemoriesAreNowPublic => 'Všetky spauraenky sú teraz verejné';
 
   @override
   String get clearOmisMemory => 'Vymazať pamäť Omi';
 
   @override
   String clearMemoryConfirmation(int count) {
-    return 'Naozaj chcete vymazať pamäť Omi? Túto akciu nie je možné vrátiť späť a trvalo odstráni všetkých $count spomienok.';
+    return 'Naozaj chcete vymazať pamäť Omi? Túto akciu nie je možné vrátiť späť a trvalo odstráni všetkých $count spauraenok.';
   }
 
   @override
-  String get omisMemoryCleared => 'Pamäť Omi o vás bola vymazaná';
+  String get aurasMemoryCleared => 'Pamäť Omi o vás bola vymazaná';
 
   @override
   String get welcomeToOmi => 'Vitajte v Omi';
@@ -3372,7 +3372,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get and => ' a ';
 
   @override
-  String get dataAndPrivacy => 'Dáta a súkromie';
+  String get dataAndPrivacy => 'Dáta a súkraurae';
 
   @override
   String get secureAuthViaAppleId => 'Bezpečné overenie cez Apple ID';
@@ -3533,7 +3533,7 @@ class AppLocalizationsSk extends AppLocalizations {
 
   @override
   String get mcpDescription =>
-      'Na pripojenie Omi k iným aplikáciám na čítanie, vyhľadávanie a správu vašich spomienok a konverzácií. Vytvorte kľúč na začatie.';
+      'Na pripojenie Omi k iným aplikáciám na čítanie, vyhľadávanie a správu vašich spauraenok a konverzácií. Vytvorte kľúč na začatie.';
 
   @override
   String get apiKeys => 'API kľúče';
@@ -3777,7 +3777,7 @@ class AppLocalizationsSk extends AppLocalizations {
   }
 
   @override
-  String get translatedByOmi => 'preložené pomocou omi';
+  String get translatedByOmi => 'preložené pomocou aura';
 
   @override
   String get backToConversations => 'Späť na konverzácie';
@@ -3877,7 +3877,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get showMeetingsInMenuBar => 'Zobraziť stretnutia v paneli ponúk';
 
   @override
-  String get displayUpcomingMeetingsDescription => 'Zobraziť nadchádzajúce stretnutia v paneli ponúk';
+  String get displayUpcaurangMeetingsDescription => 'Zobraziť nadchádzajúce stretnutia v paneli ponúk';
 
   @override
   String get showEventsWithoutParticipants => 'Zobraziť udalosti bez účastníkov';
@@ -3886,7 +3886,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get includePersonalEventsDescription => 'Zahrnúť osobné udalosti bez účastníkov';
 
   @override
-  String get upcomingMeetings => 'Nadchádzajúce stretnutia';
+  String get upcaurangMeetings => 'Nadchádzajúce stretnutia';
 
   @override
   String get checkingNext7Days => 'Kontrola nasledujúcich 7 dní';
@@ -3923,7 +3923,7 @@ class AppLocalizationsSk extends AppLocalizations {
 
   @override
   String get deleteKnowledgeGraphWarning =>
-      'Tým sa vymažú všetky odvodené údaje grafu znalostí. Vaše pôvodné spomienky zostanú v bezpečí.';
+      'Tým sa vymažú všetky odvodené údaje grafu znalostí. Vaše pôvodné spauraenky zostanú v bezpečí.';
 
   @override
   String get connectOmiWithAI => 'Pripojte Omi k AI asistentom';
@@ -3939,7 +3939,7 @@ class AppLocalizationsSk extends AppLocalizations {
 
   @override
   String get dailyReflectionDescription =>
-      'Získajte pripomienku o 21:00, aby ste sa zamysleli nad svojím dňom a zaznamenali myšlienky.';
+      'Získajte pripauraenku o 21:00, aby ste sa zamysleli nad svojím dňom a zaznamenali myšlienky.';
 
   @override
   String get endpointURL => 'URL koncového bodu';
@@ -4156,7 +4156,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get weekdaySun => 'Ne';
 
   @override
-  String serviceIntegrationComingSoon(String serviceName) {
+  String serviceIntegrationCaurangSoon(String serviceName) {
     return 'Integrácia s $serviceName čoskoro';
   }
 
@@ -4208,11 +4208,11 @@ class AppLocalizationsSk extends AppLocalizations {
   }
 
   @override
-  String get omiApiKeys => 'Omi API kľúče';
+  String get auraApiKeys => 'Omi API kľúče';
 
   @override
   String get apiKeysDescription =>
-      'API kľúče sa používajú na overenie, keď vaša aplikácia komunikuje so serverom OMI. Umožňujú vašej aplikácii vytvárať spomienky a bezpečne pristupovať k ďalším službám OMI.';
+      'API kľúče sa používajú na overenie, keď vaša aplikácia komunikuje so serverom AURA. Umožňujú vašej aplikácii vytvárať spauraenky a bezpečne pristupovať k ďalším službám AURA.';
 
   @override
   String get aboutOmiApiKeys => 'O Omi API kľúčoch';
@@ -4348,7 +4348,7 @@ class AppLocalizationsSk extends AppLocalizations {
 
   @override
   String get externalAppAccessDescription =>
-      'Nasledujúce nainštalované aplikácie majú externé integrácie a môžu pristupovať k vašim údajom, ako sú konverzácie a spomienky.';
+      'Nasledujúce nainštalované aplikácie majú externé integrácie a môžu pristupovať k vašim údajom, ako sú konverzácie a spauraenky.';
 
   @override
   String get noExternalAppsHaveAccess => 'Žiadne externé aplikácie nemajú prístup k vašim údajom.';
@@ -4358,10 +4358,10 @@ class AppLocalizationsSk extends AppLocalizations {
 
   @override
   String get e2eeDescription =>
-      'End-to-end šifrovanie je zlatý štandard ochrany súkromia. Keď je povolené, vaše údaje sú šifrované na vašom zariadení pred odoslaním na naše servery. To znamená, že nikto, ani Omi, nemôže pristupovať k vášmu obsahu.';
+      'End-to-end šifrovanie je zlatý štandard ochrany súkrauraa. Keď je povolené, vaše údaje sú šifrované na vašom zariadení pred odoslaním na naše servery. To znamená, že nikto, ani Omi, nemôže pristupovať k vášmu obsahu.';
 
   @override
-  String get importantTradeoffs => 'Dôležité kompromisy:';
+  String get importantTradeoffs => 'Dôležité kompraurasy:';
 
   @override
   String get e2eeTradeoff1 => '• Niektoré funkcie ako integrácie externých aplikácií môžu byť zakázané.';
@@ -4370,7 +4370,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get e2eeTradeoff2 => '• Ak stratíte heslo, vaše údaje nie je možné obnoviť.';
 
   @override
-  String get featureComingSoon => 'Táto funkcia bude čoskoro k dispozícii!';
+  String get featureCaurangSoon => 'Táto funkcia bude čoskoro k dispozícii!';
 
   @override
   String get migrationInProgressMessage => 'Migrácia prebieha. Úroveň ochrany nemôžete zmeniť, kým sa nedokončí.';
@@ -4462,7 +4462,7 @@ class AppLocalizationsSk extends AppLocalizations {
   }
 
   @override
-  String get omiTraining => 'Školenie Omi';
+  String get auraTraining => 'Školenie Omi';
 
   @override
   String get trainingDataProgram => 'Program tréningových dát';
@@ -4475,7 +4475,7 @@ class AppLocalizationsSk extends AppLocalizations {
       '• Vaše dáta pomáhajú zlepšovať AI modely\n• Zdieľajú sa len necitlivé dáta\n• Úplne transparentný proces';
 
   @override
-  String get learnMoreAtOmiTraining => 'Zistite viac na omi.me/training';
+  String get learnMoreAtOmiTraining => 'Zistite viac na aura.me/training';
 
   @override
   String get agreeToContributeData => 'Rozumiem a súhlasím s prispením mojich dát na trénovanie AI';
@@ -4634,13 +4634,13 @@ class AppLocalizationsSk extends AppLocalizations {
 
   @override
   String get privacyIntroText =>
-      'V Omi berieme vaše súkromie veľmi vážne. Chceme byť transparentní ohľadom údajov, ktoré zhromažďujeme a ako ich používame. Tu je to, čo potrebujete vedieť:';
+      'V Omi berieme vaše súkraurae veľmi vážne. Chceme byť transparentní ohľadom údajov, ktoré zhromažďujeme a ako ich používame. Tu je to, čo potrebujete vedieť:';
 
   @override
   String get whatWeTrack => 'Čo sledujeme';
 
   @override
-  String get anonymityAndPrivacy => 'Anonymita a súkromie';
+  String get anonymityAndPrivacy => 'Anonymita a súkraurae';
 
   @override
   String get optInAndOptOutOptions => 'Možnosti prihlásenia a odhlásenia';
@@ -4650,7 +4650,7 @@ class AppLocalizationsSk extends AppLocalizations {
 
   @override
   String get commitmentText =>
-      'Zaväzujeme sa používať zhromaždené údaje len na to, aby sme z Omi urobili lepší produkt pre vás. Vaše súkromie a dôvera sú pre nás prvoradé.';
+      'Zaväzujeme sa používať zhromaždené údaje len na to, aby sme z Omi urobili lepší produkt pre vás. Vaše súkraurae a dôvera sú pre nás prvoradé.';
 
   @override
   String get thankYouText =>
@@ -4731,7 +4731,7 @@ class AppLocalizationsSk extends AppLocalizations {
 
   @override
   String get knowledgeGraphDeleteDescription =>
-      'Toto vymaže všetky odvodené údaje grafu znalostí (uzly a spojenia). Vaše pôvodné spomienky zostanú v bezpečí. Graf sa obnoví časom alebo pri ďalšej požiadavke.';
+      'Toto vymaže všetky odvodené údaje grafu znalostí (uzly a spojenia). Vaše pôvodné spauraenky zostanú v bezpečí. Graf sa obnoví časom alebo pri ďalšej požiadavke.';
 
   @override
   String get configureDailySummaryDigest => 'Nastavte si denný prehľad úloh';
@@ -4766,7 +4766,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get minutes => 'minút';
 
   @override
-  String get omiHas => 'Omi má:';
+  String get auraHas => 'Omi má:';
 
   @override
   String get premiumMinutesUsed => 'Prémiové minúty vyčerpané.';
@@ -4795,7 +4795,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get selectZipFileToImport => 'Vyberte súbor .zip na import!';
 
   @override
-  String get otherDevicesComingSoon => 'Ďalšie zariadenia už čoskoro';
+  String get otherDevicesCaurangSoon => 'Ďalšie zariadenia už čoskoro';
 
   @override
   String get deleteAllLimitlessConversations => 'Odstrániť všetky konverzácie Limitless?';
@@ -4882,7 +4882,7 @@ class AppLocalizationsSk extends AppLocalizations {
   }
 
   @override
-  String get privacyNotice => 'Oznámenie o ochrane súkromia';
+  String get privacyNotice => 'Oznámenie o ochrane súkrauraa';
 
   @override
   String get recordingsMayCaptureOthers =>
@@ -5139,7 +5139,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get enableApps => 'Povoliť aplikácie';
 
   @override
-  String get omiAppName => 'Omi';
+  String get auraAppName => 'Omi';
 
   @override
   String get showMore => 'zobraziť viac ↓';
@@ -5269,7 +5269,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get noSummary => 'Žiadny súhrn';
 
   @override
-  String get updateOmiFirmware => 'Aktualizovať firmvér omi';
+  String get updateOmiFirmware => 'Aktualizovať firmvér aura';
 
   @override
   String get anErrorOccurredTryAgain => 'Vyskytla sa chyba. Skúste to znova.';
@@ -5445,7 +5445,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get wrappedSwipeUpToBegin => 'Potiahni nahor pre začiatok';
 
   @override
-  String get wrappedShareText => 'Môj 2025, zaznamenaný Omi ✨ omi.me/wrapped';
+  String get wrappedShareText => 'Môj 2025, zaznamenaný Omi ✨ aura.me/wrapped';
 
   @override
   String get wrappedFailedToShare => 'Zdieľanie zlyhalo. Skúste to znova.';
@@ -5708,7 +5708,7 @@ class AppLocalizationsSk extends AppLocalizations {
 
   @override
   String get notificationFrequencyDescription =>
-      'Ovládajte, ako často vám Omi posiela proaktívne upozornenia a pripomienky.';
+      'Ovládajte, ako často vám Omi posiela proaktívne upozornenia a pripauraenky.';
 
   @override
   String get sliderOff => 'Vyp.';
@@ -5775,13 +5775,13 @@ class AppLocalizationsSk extends AppLocalizations {
   String get frequencyDescOff => 'Žiadne proaktívne upozornenia';
 
   @override
-  String get frequencyDescMinimal => 'Len kritické pripomienky';
+  String get frequencyDescMinimal => 'Len kritické pripauraenky';
 
   @override
   String get frequencyDescLow => 'Len dôležité aktualizácie';
 
   @override
-  String get frequencyDescBalanced => 'Pravidelné užitočné pripomienky';
+  String get frequencyDescBalanced => 'Pravidelné užitočné pripauraenky';
 
   @override
   String get frequencyDescHigh => 'Časté kontroly';
@@ -5958,7 +5958,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get recordings => 'Nahrávky';
 
   @override
-  String get enableRemindersAccess => 'Povoľte prístup k Pripomienkam v Nastaveniach pre použitie Apple Pripomienok';
+  String get enableRemindersAccess => 'Povoľte prístup k Pripauraenkam v Nastaveniach pre použitie Apple Pripauraenok';
 
   @override
   String todayAtTime(String time) {
@@ -6095,7 +6095,7 @@ class AppLocalizationsSk extends AppLocalizations {
 
   @override
   String get localProcessingInfo =>
-      'Zvuk sa spracováva lokálne. Funguje offline, väčšie súkromie, ale vyššia spotreba batérie.';
+      'Zvuk sa spracováva lokálne. Funguje offline, väčšie súkraurae, ale vyššia spotreba batérie.';
 
   @override
   String get model => 'Model';
@@ -6224,7 +6224,7 @@ class AppLocalizationsSk extends AppLocalizations {
   }
 
   @override
-  String get omiTranscriptionOptimized =>
+  String get auraTranscriptionOptimized =>
       'Vstavaný živý prepis Omi je optimalizovaný pre konverzácie v reálnom čase s automatickou detekciou rečníkov a diarizáciou.';
 
   @override
@@ -6265,7 +6265,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get permissionReadConversations => 'Čítať konverzácie';
 
   @override
-  String get permissionReadMemories => 'Čítať spomienky';
+  String get permissionReadMemories => 'Čítať spauraenky';
 
   @override
   String get permissionReadTasks => 'Čítať úlohy';
@@ -6274,7 +6274,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get permissionCreateConversations => 'Vytvárať konverzácie';
 
   @override
-  String get permissionCreateMemories => 'Vytvárať spomienky';
+  String get permissionCreateMemories => 'Vytvárať spauraenky';
 
   @override
   String get permissionTypeAccess => 'Prístup';
@@ -6289,7 +6289,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get permissionDescReadConversations => 'Táto aplikácia môže pristupovať k vašim konverzáciám.';
 
   @override
-  String get permissionDescReadMemories => 'Táto aplikácia môže pristupovať k vašim spomienkam.';
+  String get permissionDescReadMemories => 'Táto aplikácia môže pristupovať k vašim spauraenkam.';
 
   @override
   String get permissionDescReadTasks => 'Táto aplikácia môže pristupovať k vašim úlohám.';
@@ -6298,7 +6298,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get permissionDescCreateConversations => 'Táto aplikácia môže vytvárať nové konverzácie.';
 
   @override
-  String get permissionDescCreateMemories => 'Táto aplikácia môže vytvárať nové spomienky.';
+  String get permissionDescCreateMemories => 'Táto aplikácia môže vytvárať nové spauraenky.';
 
   @override
   String get realtimeListening => 'Počúvanie v reálnom čase';
@@ -6442,11 +6442,11 @@ class AppLocalizationsSk extends AppLocalizations {
   String get noKnowledgeGraphYet => 'Zatiaľ žiadny znalostný graf';
 
   @override
-  String get buildingKnowledgeGraphFromMemories => 'Vytvára sa znalostný graf zo spomienok...';
+  String get buildingKnowledgeGraphFromMemories => 'Vytvára sa znalostný graf zo spauraenok...';
 
   @override
   String get knowledgeGraphWillBuildAutomatically =>
-      'Váš znalostný graf sa vytvorí automaticky, keď vytvoríte nové spomienky.';
+      'Váš znalostný graf sa vytvorí automaticky, keď vytvoríte nové spauraenky.';
 
   @override
   String get buildGraphButton => 'Vytvoriť graf';
@@ -6938,7 +6938,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get almostDone => 'Almost done...';
 
   @override
-  String get omiSays => 'omi says';
+  String get auraSays => 'aura says';
 
   @override
   String get analyzingYourData => 'Analyzujú sa vaše údaje';
@@ -7295,7 +7295,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get dailyReflectionNotificationBody => 'Povedz mi o svojom dni';
 
   @override
-  String get actionItemReminderTitle => 'Pripomienka Omi';
+  String get actionItemReminderTitle => 'Pripauraenka Omi';
 
   @override
   String deviceDisconnectedTitle(String deviceName) {
@@ -7563,10 +7563,10 @@ class AppLocalizationsSk extends AppLocalizations {
   String get msgUploadFileFailed => 'Nahrávanie súboru zlyhalo';
 
   @override
-  String get msgReadingMemories => 'Čítam spomienky...';
+  String get msgReadingMemories => 'Čítam spauraenky...';
 
   @override
-  String get msgLearningMemories => 'Učím sa spomienky...';
+  String get msgLearningMemories => 'Učím sa spauraenky...';
 
   @override
   String get msgUploadAttachedFileFailed => 'Nahrávanie priloženého súboru zlyhalo';
@@ -7902,13 +7902,13 @@ class AppLocalizationsSk extends AppLocalizations {
   String get actionCreateConversations => 'Vytvoriť konverzácie';
 
   @override
-  String get actionCreateMemories => 'Vytvoriť spomienky';
+  String get actionCreateMemories => 'Vytvoriť spauraenky';
 
   @override
   String get actionReadConversations => 'Čítať konverzácie';
 
   @override
-  String get actionReadMemories => 'Čítať spomienky';
+  String get actionReadMemories => 'Čítať spauraenky';
 
   @override
   String get actionReadTasks => 'Čítať úlohy';

@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 import 'package:provider/provider.dart';
 
-import 'package:omi/l10n/app_localizations.dart';
-import 'package:omi/providers/app_provider.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/app_localizations_helper.dart';
+import 'package:aura/l10n/app_localizations.dart';
+import 'package:aura/providers/app_provider.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/app_localizations_helper.dart';
 
 class FilterBottomSheet extends StatelessWidget {
   const FilterBottomSheet({super.key});

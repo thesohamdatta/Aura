@@ -5,11 +5,11 @@ import 'package:flutter/material.dart';
 
 import 'package:intl/intl.dart';
 
-import 'package:omi/backend/http/api/action_items.dart';
-import 'package:omi/backend/http/api/conversations.dart' hide getActionItems;
-import 'package:omi/backend/http/api/memories.dart';
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/utils/logger.dart';
+import 'package:aura/backend/http/api/action_items.dart';
+import 'package:aura/backend/http/api/conversations.dart' hide getActionItems;
+import 'package:aura/backend/http/api/memories.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/utils/logger.dart';
 
 /// Daily grade record for history tracking
 class DailyGrade {

@@ -45,7 +45,7 @@ Get resource description.
 **Example**:
 ```bash
 curl -H "Authorization: Bearer token" \
-  https://api.omi.me/v1/resource?limit=10
+  https://api.aura.me/v1/resource?limit=10
 ```
 ```
 

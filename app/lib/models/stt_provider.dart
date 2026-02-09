@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import 'package:omi/models/stt_response_schema.dart';
+import 'package:aura/models/stt_response_schema.dart';
 
 enum SttProvider {
-  omi,
+  aura,
   openai,
   openaiDiarize,
   deepgram,
@@ -21,7 +21,7 @@ enum SttProvider {
   static SttProvider fromString(String value) {
     return SttProvider.values.firstWhere(
       (e) => e.name == value,
-      orElse: () => SttProvider.omi,
+      orElse: () => SttProvider.aura,
     );
   }
 }
@@ -140,8 +140,8 @@ class SttProviderConfig {
   bool get isPolling => SttRequestType.isPolling(requestType);
 
   static final _configs = <SttProvider, SttProviderConfig>{
-    SttProvider.omi: SttProviderConfig(
-      provider: SttProvider.omi,
+    SttProvider.aura: SttProviderConfig(
+      provider: SttProvider.aura,
       displayName: 'Omi',
       description: 'Omi\'s optimized transcription service',
       icon: FontAwesomeIcons.robot,

@@ -8,22 +8,22 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:share_plus/share_plus.dart';
 
-import 'package:omi/backend/http/api/conversations.dart';
-import 'package:omi/backend/schema/conversation.dart';
-import 'package:omi/pages/conversation_detail/conversation_detail_provider.dart';
-import 'package:omi/providers/conversation_provider.dart';
-import 'package:omi/providers/people_provider.dart';
-import 'package:omi/ui/atoms/omi_avatar.dart';
-import 'package:omi/ui/atoms/omi_button.dart';
-import 'package:omi/ui/atoms/omi_icon_button.dart';
-import 'package:omi/ui/molecules/omi_empty_state.dart';
-import 'package:omi/ui/molecules/omi_panel_header.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/other/temp.dart';
-import 'package:omi/utils/responsive/responsive_helper.dart';
-import 'package:omi/widgets/extensions/string.dart';
-import 'package:omi/widgets/transcript.dart';
+import 'package:aura/backend/http/api/conversations.dart';
+import 'package:aura/backend/schema/conversation.dart';
+import 'package:aura/pages/conversation_detail/conversation_detail_provider.dart';
+import 'package:aura/providers/conversation_provider.dart';
+import 'package:aura/providers/people_provider.dart';
+import 'package:aura/ui/atoms/aura_avatar.dart';
+import 'package:aura/ui/atoms/aura_button.dart';
+import 'package:aura/ui/atoms/aura_icon_button.dart';
+import 'package:aura/ui/molecules/aura_empty_state.dart';
+import 'package:aura/ui/molecules/aura_panel_header.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/other/temp.dart';
+import 'package:aura/utils/responsive/responsive_helper.dart';
+import 'package:aura/widgets/extensions/string.dart';
+import 'package:aura/widgets/transcript.dart';
 import 'widgets/desktop_action_items_section.dart';
 import 'widgets/desktop_conversation_summary.dart';
 import 'widgets/desktop_name_speaker_dialog.dart';
@@ -534,7 +534,7 @@ class _DesktopConversationDetailPageState extends State<DesktopConversationDetai
         return;
       }
 
-      String content = 'https://h.omi.me/conversations/${widget.conversation.id}';
+      String content = 'https://h.aura.me/conversations/${widget.conversation.id}';
       await Clipboard.setData(ClipboardData(text: content));
     } catch (e) {
       _showSnackBar(context.l10n.failedToGenerateConversationLink);
@@ -555,7 +555,7 @@ class _DesktopConversationDetailPageState extends State<DesktopConversationDetai
         return;
       }
 
-      String content = 'https://h.omi.me/conversations/${widget.conversation.id}';
+      String content = 'https://h.aura.me/conversations/${widget.conversation.id}';
       await Share.share(content);
     } catch (e) {
       _showSnackBar(context.l10n.failedToGenerateShareLink);

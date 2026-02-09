@@ -21,7 +21,7 @@ black --line-length 120 <files>
 ```
 **Note**: String normalization settings come from `backend/pyproject.toml` (skip-string-normalization = true).
 
-### C/C++ (firmware: omi/, omiGlass/)
+### C/C++ (firmware: aura/, aura-pendant/)
 ```bash
 clang-format -i <files>
 ```

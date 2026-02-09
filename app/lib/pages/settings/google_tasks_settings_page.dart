@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:omi/pages/settings/integration_settings_page.dart';
-import 'package:omi/services/google_tasks_service.dart';
+import 'package:aura/pages/settings/integration_settings_page.dart';
+import 'package:aura/services/google_tasks_service.dart';
 
 class GoogleTasksSettingsPage extends StatefulWidget {
   const GoogleTasksSettingsPage({super.key});

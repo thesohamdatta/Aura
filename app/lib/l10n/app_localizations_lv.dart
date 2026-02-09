@@ -551,7 +551,7 @@ class AppLocalizationsLv extends AppLocalizations {
   String get deviceInfoSection => 'Ierīces informācija';
 
   @override
-  String get customizationSection => 'Pielāgošana';
+  String get custaurazationSection => 'Pielāgošana';
 
   @override
   String get hardwareSection => 'Aparatūra';
@@ -758,19 +758,19 @@ class AppLocalizationsLv extends AppLocalizations {
   }
 
   @override
-  String get shareStatsMessage => 'Dalījums ar manu Omi statistiku! (omi.me - jūsu vienmēr ieslēgtais AI asistents)';
+  String get shareStatsMessage => 'Dalījums ar manu Omi statistiku! (aura.me - jūsu vienmēr ieslēgtais AI asistents)';
 
   @override
-  String get sharePeriodToday => 'Šodien omi ir:';
+  String get sharePeriodToday => 'Šodien aura ir:';
 
   @override
-  String get sharePeriodMonth => 'Šomēnes omi ir:';
+  String get sharePeriodMonth => 'Šomēnes aura ir:';
 
   @override
-  String get sharePeriodYear => 'Šogad omi ir:';
+  String get sharePeriodYear => 'Šogad aura ir:';
 
   @override
-  String get sharePeriodAllTime => 'Līdz šim omi ir:';
+  String get sharePeriodAllTime => 'Līdz šim aura ir:';
 
   @override
   String shareStatsListened(String minutes) {
@@ -805,7 +805,7 @@ class AppLocalizationsLv extends AppLocalizations {
   String get noLogFilesFound => 'Nav atrasts neviens žurnāla fails.';
 
   @override
-  String get omiDebugLog => 'Omi atkļūdošanas žurnāls';
+  String get auraDebugLog => 'Omi atkļūdošanas žurnāls';
 
   @override
   String get logShared => 'Žurnāls kopīgots';
@@ -1017,7 +1017,7 @@ class AppLocalizationsLv extends AppLocalizations {
   String get connect => 'Connect';
 
   @override
-  String get comingSoon => 'Drīzumā';
+  String get caurangSoon => 'Drīzumā';
 
   @override
   String get integrationsFooter => 'Savienojiet savas lietotnes, lai skatītu datus un metriku tērzēšanā.';
@@ -1192,7 +1192,7 @@ class AppLocalizationsLv extends AppLocalizations {
 
   @override
   String get showEventsNoParticipantsDesc =>
-      'Ja iespējots, Coming Up rāda notikumus bez dalībniekiem vai video saites.';
+      'Ja iespējots, Caurang Up rāda notikumus bez dalībniekiem vai video saites.';
 
   @override
   String get yourMeetings => 'Jūsu sanāksmes';
@@ -1201,7 +1201,7 @@ class AppLocalizationsLv extends AppLocalizations {
   String get refresh => 'Atsvaidzināt';
 
   @override
-  String get noUpcomingMeetings => 'Nav gaidāmu tikšanos';
+  String get noUpcaurangMeetings => 'Nav gaidāmu tikšanos';
 
   @override
   String get checkingNextDays => 'Pārbauda nākamās 30 dienas';
@@ -1210,7 +1210,7 @@ class AppLocalizationsLv extends AppLocalizations {
   String get tomorrow => 'Rīt';
 
   @override
-  String get googleCalendarComingSoon => 'Google Calendar integrācija drīzumā!';
+  String get googleCalendarCaurangSoon => 'Google Calendar integrācija drīzumā!';
 
   @override
   String connectedAsUser(String userId) {
@@ -1436,7 +1436,7 @@ class AppLocalizationsLv extends AppLocalizations {
   }
 
   @override
-  String integrationComingSoon(String appName) {
+  String integrationCaurangSoon(String appName) {
     return 'Integrācija ar $appName drīzumā! Mēs cītīgi strādājam, lai jums piedāvātu vairāk uzdevumu pārvaldības iespēju.';
   }
 
@@ -1459,13 +1459,13 @@ class AppLocalizationsLv extends AppLocalizations {
   String get bringYourOwn => 'Atnesiet savu';
 
   @override
-  String get payYourSttProvider => 'Brīvi izmantojiet omi. Jūs maksājat tikai savam STT pakalpojumu sniedzējam tieši.';
+  String get payYourSttProvider => 'Brīvi izmantojiet aura. Jūs maksājat tikai savam STT pakalpojumu sniedzējam tieši.';
 
   @override
   String get freeMinutesMonth => '1200 bezmaksas minūtes/mēnesī iekļautas. Neierobežots ar ';
 
   @override
-  String get omiUnlimited => 'Omi Neierobežots';
+  String get auraUnlimited => 'Omi Neierobežots';
 
   @override
   String get hostRequired => 'Resursdators ir nepieciešams';
@@ -1587,7 +1587,7 @@ class AppLocalizationsLv extends AppLocalizations {
   }
 
   @override
-  String get omiTranscription => 'Omi transkripcija';
+  String get auraTranscription => 'Omi transkripcija';
 
   @override
   String get bestInClassTranscription => 'Labākā klases transkripcija ar nulli iestatījumiem';
@@ -1895,7 +1895,7 @@ class AppLocalizationsLv extends AppLocalizations {
   String get termsOfUse => 'Lietošanas noteikumi';
 
   @override
-  String get omiYourAiCompanion => 'Omi – jūsu AI pavadonis';
+  String get auraYourAiCompanion => 'Omi – jūsu AI pavadonis';
 
   @override
   String get captureEveryMoment =>
@@ -2416,7 +2416,7 @@ class AppLocalizationsLv extends AppLocalizations {
   String get privacyPolicyTitle => 'Privātuma politika';
 
   @override
-  String get omiSttProvider => 'Omi';
+  String get auraSttProvider => 'Omi';
 
   @override
   String labelCopied(String label) {
@@ -2573,7 +2573,7 @@ class AppLocalizationsLv extends AppLocalizations {
   String get checksForAudioFiles => 'Pārbauda audio failus SD kartē';
 
   @override
-  String get omiSyncsAudioFiles => 'Omi pēc tam sinhronizē audio failus ar serveri';
+  String get auraSyncsAudioFiles => 'Omi pēc tam sinhronizē audio failus ar serveri';
 
   @override
   String get serverProcessesAudio => 'Serveris apstrādā audio failus un izveido atmiņas';
@@ -3353,7 +3353,7 @@ class AppLocalizationsLv extends AppLocalizations {
   }
 
   @override
-  String get omisMemoryCleared => 'Omi atmiņa par jums ir notīrīta';
+  String get aurasMemoryCleared => 'Omi atmiņa par jums ir notīrīta';
 
   @override
   String get welcomeToOmi => 'Laipni lūdzam Omi';
@@ -3780,7 +3780,7 @@ class AppLocalizationsLv extends AppLocalizations {
   }
 
   @override
-  String get translatedByOmi => 'tulkojis omi';
+  String get translatedByOmi => 'tulkojis aura';
 
   @override
   String get backToConversations => 'Atpakaļ uz sarunām';
@@ -3880,7 +3880,7 @@ class AppLocalizationsLv extends AppLocalizations {
   String get showMeetingsInMenuBar => 'Rādīt sapulces izvēlnes joslā';
 
   @override
-  String get displayUpcomingMeetingsDescription => 'Rādīt gaidāmās sapulces izvēlnes joslā';
+  String get displayUpcaurangMeetingsDescription => 'Rādīt gaidāmās sapulces izvēlnes joslā';
 
   @override
   String get showEventsWithoutParticipants => 'Rādīt notikumus bez dalībniekiem';
@@ -3889,7 +3889,7 @@ class AppLocalizationsLv extends AppLocalizations {
   String get includePersonalEventsDescription => 'Iekļaut personīgos notikumus bez dalībniekiem';
 
   @override
-  String get upcomingMeetings => 'Gaidāmās tikšanās';
+  String get upcaurangMeetings => 'Gaidāmās tikšanās';
 
   @override
   String get checkingNext7Days => 'Pārbaudām nākamās 7 dienas';
@@ -4162,7 +4162,7 @@ class AppLocalizationsLv extends AppLocalizations {
   String get weekdaySun => 'Sv';
 
   @override
-  String serviceIntegrationComingSoon(String serviceName) {
+  String serviceIntegrationCaurangSoon(String serviceName) {
     return '$serviceName integrācija drīzumā';
   }
 
@@ -4214,11 +4214,11 @@ class AppLocalizationsLv extends AppLocalizations {
   }
 
   @override
-  String get omiApiKeys => 'Omi API atslēgas';
+  String get auraApiKeys => 'Omi API atslēgas';
 
   @override
   String get apiKeysDescription =>
-      'API atslēgas izmanto autentifikācijai, kad jūsu lietotne sazinās ar OMI serveri. Tās ļauj jūsu lietojumprogrammai droši izveidot atmiņas un piekļūt citiem OMI pakalpojumiem.';
+      'API atslēgas izmanto autentifikācijai, kad jūsu lietotne sazinās ar AURA serveri. Tās ļauj jūsu lietojumprogrammai droši izveidot atmiņas un piekļūt citiem AURA pakalpojumiem.';
 
   @override
   String get aboutOmiApiKeys => 'Par Omi API atslēgām';
@@ -4368,7 +4368,7 @@ class AppLocalizationsLv extends AppLocalizations {
       'Pilnīga šifrēšana ir privātuma zelta standarts. Kad tā ir iespējota, jūsu dati tiek šifrēti jūsu ierīcē pirms nosūtīšanas uz mūsu serveriem. Tas nozīmē, ka neviens, pat ne Omi, nevar piekļūt jūsu saturam.';
 
   @override
-  String get importantTradeoffs => 'Svarīgi kompromisi:';
+  String get importantTradeoffs => 'Svarīgi kompraurasi:';
 
   @override
   String get e2eeTradeoff1 => '• Dažas funkcijas, piemēram, ārējo lietotņu integrācijas, var tikt atspējotas.';
@@ -4377,7 +4377,7 @@ class AppLocalizationsLv extends AppLocalizations {
   String get e2eeTradeoff2 => '• Ja zaudējat paroli, jūsu datus nevar atgūt.';
 
   @override
-  String get featureComingSoon => 'Šī funkcija drīzumā būs pieejama!';
+  String get featureCaurangSoon => 'Šī funkcija drīzumā būs pieejama!';
 
   @override
   String get migrationInProgressMessage =>
@@ -4471,7 +4471,7 @@ class AppLocalizationsLv extends AppLocalizations {
   }
 
   @override
-  String get omiTraining => 'Omi Apmācība';
+  String get auraTraining => 'Omi Apmācība';
 
   @override
   String get trainingDataProgram => 'Apmācības datu programma';
@@ -4484,7 +4484,7 @@ class AppLocalizationsLv extends AppLocalizations {
       '• Jūsu dati palīdz uzlabot AI modeļus\n• Tiek kopīgoti tikai nejutīgi dati\n• Pilnībā pārredzams process';
 
   @override
-  String get learnMoreAtOmiTraining => 'Uzziniet vairāk vietnē omi.me/training';
+  String get learnMoreAtOmiTraining => 'Uzziniet vairāk vietnē aura.me/training';
 
   @override
   String get agreeToContributeData => 'Es saprotu un piekrītu sniegt savus datus AI apmācībai';
@@ -4776,7 +4776,7 @@ class AppLocalizationsLv extends AppLocalizations {
   String get minutes => 'minūtes';
 
   @override
-  String get omiHas => 'Omi ir:';
+  String get auraHas => 'Omi ir:';
 
   @override
   String get premiumMinutesUsed => 'Premium minūtes izmantotas.';
@@ -4805,7 +4805,7 @@ class AppLocalizationsLv extends AppLocalizations {
   String get selectZipFileToImport => 'Izvēlieties importēšanai .zip failu!';
 
   @override
-  String get otherDevicesComingSoon => 'Citas ierīces drīzumā';
+  String get otherDevicesCaurangSoon => 'Citas ierīces drīzumā';
 
   @override
   String get deleteAllLimitlessConversations => 'Dzēst visas Limitless sarunas?';
@@ -5149,7 +5149,7 @@ class AppLocalizationsLv extends AppLocalizations {
   String get enableApps => 'Iespējot lietotnes';
 
   @override
-  String get omiAppName => 'Omi';
+  String get auraAppName => 'Omi';
 
   @override
   String get showMore => 'rādīt vairāk ↓';
@@ -5239,7 +5239,7 @@ class AppLocalizationsLv extends AppLocalizations {
 
   @override
   String hints(String text) {
-    return 'Padomi: $text';
+    return 'Padaura: $text';
   }
 
   @override
@@ -5279,7 +5279,7 @@ class AppLocalizationsLv extends AppLocalizations {
   String get noSummary => 'Nav kopsavilkuma';
 
   @override
-  String get updateOmiFirmware => 'Atjaunināt omi programmaparatūru';
+  String get updateOmiFirmware => 'Atjaunināt aura programmaparatūru';
 
   @override
   String get anErrorOccurredTryAgain => 'Radās kļūda. Lūdzu, mēģiniet vēlreiz.';
@@ -5455,7 +5455,7 @@ class AppLocalizationsLv extends AppLocalizations {
   String get wrappedSwipeUpToBegin => 'Velciet uz augšu, lai sāktu';
 
   @override
-  String get wrappedShareText => 'Mans 2025, atcerējies Omi ✨ omi.me/wrapped';
+  String get wrappedShareText => 'Mans 2025, atcerējies Omi ✨ aura.me/wrapped';
 
   @override
   String get wrappedFailedToShare => 'Kopīgošana neizdevās. Lūdzu, mēģiniet vēlreiz.';
@@ -6237,7 +6237,7 @@ class AppLocalizationsLv extends AppLocalizations {
   }
 
   @override
-  String get omiTranscriptionOptimized =>
+  String get auraTranscriptionOptimized =>
       'Omi iebūvētā tiešraides transkripcija ir optimizēta reāllaika sarunām ar automātisku runātāju noteikšanu un diarizāciju.';
 
   @override
@@ -6952,7 +6952,7 @@ class AppLocalizationsLv extends AppLocalizations {
   String get almostDone => 'Gandrīz pabeigts...';
 
   @override
-  String get omiSays => 'omi saka';
+  String get auraSays => 'aura saka';
 
   @override
   String get analyzingYourData => 'Analizējam jūsu datus...';

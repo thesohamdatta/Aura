@@ -91,26 +91,26 @@ Skills are organized in `skills/{skill-name}/` folders, each containing:
 
 #### Domain Skills
 
-**omi-backend-patterns** (`skills/omi-backend-patterns/`)
+**aura-backend-patterns** (`skills/aura-backend-patterns/`)
 - Backend-specific patterns (conversation processing, memory extraction, chat system)
 - Commands: `/backend-setup`, `/backend-test`, `/backend-deploy`
 - Agents: `backend-api-developer`, `backend-llm-engineer`, `backend-database-engineer`
 
-**omi-flutter-patterns** (`skills/omi-flutter-patterns/`)
+**aura-flutter-patterns** (`skills/aura-flutter-patterns/`)
 - Flutter-specific patterns (BLE, audio streaming, state management)
 - Commands: `/flutter-setup`, `/flutter-test`, `/flutter-build`
 - Agents: `flutter-developer`
 
-**omi-firmware-patterns** (`skills/omi-firmware-patterns/`)
+**aura-firmware-patterns** (`skills/aura-firmware-patterns/`)
 - Firmware patterns (BLE services, audio codecs)
 - Agents: `firmware-engineer`
 
-**omi-api-integration** (`skills/omi-api-integration/`)
+**aura-api-integration** (`skills/aura-api-integration/`)
 - API integration patterns (Developer API, MCP, webhooks)
 - Commands: `/update-api-docs`
 - Agents: `web-developer`, `sdk-developer`
 
-**omi-plugin-development** (`skills/omi-plugin-development/`)
+**aura-plugin-development** (`skills/aura-plugin-development/`)
 - Plugin development workflow
 - Commands: `/create-plugin`, `/create-app`, `/test-integration`
 - Agents: `plugin-developer`
@@ -172,8 +172,8 @@ Skills are organized in `skills/{skill-name}/` folders, each containing:
 
 Skills activate automatically when you work in relevant parts of the codebase. For example:
 
-- Working on `backend/routers/` → `omi-backend-patterns` skill activates
-- Working on `app/lib/` → `omi-flutter-patterns` skill activates
+- Working on `backend/routers/` → `aura-backend-patterns` skill activates
+- Working on `app/lib/` → `aura-flutter-patterns` skill activates
 - Creating a PR → `pr-automation` skill activates
 
 You don't need to manually activate skills - they work automatically based on context.
@@ -321,21 +321,21 @@ Agents are organized within skill folders at `skills/{skill}/agents/{agent}.md`.
 
 #### Domain Agents
 
-**Backend Agents** (`skills/omi-backend-patterns/agents/`):
+**Backend Agents** (`skills/aura-backend-patterns/agents/`):
 - `backend-api-developer.md` - FastAPI router development, endpoint patterns
 - `backend-llm-engineer.md` - LLM integration, prompt engineering, LangGraph
 - `backend-database-engineer.md` - Firestore, Pinecone, Redis optimization
 
 **Frontend Agents**:
-- `flutter-developer.md` (`skills/omi-flutter-patterns/agents/`) - Flutter app development, BLE integration
-- `web-developer.md` (`skills/omi-api-integration/agents/`) - Next.js frontend development
+- `flutter-developer.md` (`skills/aura-flutter-patterns/agents/`) - Flutter app development, BLE integration
+- `web-developer.md` (`skills/aura-api-integration/agents/`) - Next.js frontend development
 
 **Firmware Agents**:
-- `firmware-engineer.md` (`skills/omi-firmware-patterns/agents/`) - C/C++ firmware development, BLE services
+- `firmware-engineer.md` (`skills/aura-firmware-patterns/agents/`) - C/C++ firmware development, BLE services
 
 **Integration Agents**:
-- `plugin-developer.md` (`skills/omi-plugin-development/agents/`) - Plugin/app development, webhook integration
-- `sdk-developer.md` (`skills/omi-api-integration/agents/`) - SDK development (Python, Swift, React Native)
+- `plugin-developer.md` (`skills/aura-plugin-development/agents/`) - Plugin/app development, webhook integration
+- `sdk-developer.md` (`skills/aura-api-integration/agents/`) - SDK development (Python, Swift, React Native)
 
 #### Automation Agents
 
@@ -406,7 +406,7 @@ The AI automatically applies:
 ### Workflow 1: Adding a New API Endpoint
 
 1. **Rules activate automatically** when editing `backend/routers/`
-2. **Skill activates**: `omi-backend-patterns` provides patterns
+2. **Skill activates**: `aura-backend-patterns` provides patterns
 3. **Agent activates**: `backend-api-developer` provides guidance
 4. **AI generates code** following all patterns
 5. **Use commands**:
@@ -417,7 +417,7 @@ The AI automatically applies:
 ### Workflow 2: Creating a Flutter Feature
 
 1. **Rules activate**: Flutter architecture, localization, BLE protocol
-2. **Skill activates**: `omi-flutter-patterns` provides patterns
+2. **Skill activates**: `aura-flutter-patterns` provides patterns
 3. **Agent activates**: `flutter-developer` provides guidance
 4. **AI generates code** following Flutter patterns
 5. **Use commands**:

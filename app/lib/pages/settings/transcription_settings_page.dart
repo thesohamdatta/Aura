@@ -13,18 +13,18 @@ import 'package:path_provider/path_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/backend/schema/bt_device/bt_device.dart';
-import 'package:omi/models/custom_stt_config.dart';
-import 'package:omi/models/stt_provider.dart';
-import 'package:omi/pages/settings/usage_page.dart';
-import 'package:omi/providers/capture_provider.dart';
-import 'package:omi/services/custom_stt_log_service.dart';
-import 'package:omi/services/services.dart';
-import 'package:omi/services/sockets/transcription_service.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/logger.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/backend/schema/bt_device/bt_device.dart';
+import 'package:aura/models/custom_stt_config.dart';
+import 'package:aura/models/stt_provider.dart';
+import 'package:aura/pages/settings/usage_page.dart';
+import 'package:aura/providers/capture_provider.dart';
+import 'package:aura/services/custom_stt_log_service.dart';
+import 'package:aura/services/services.dart';
+import 'package:aura/services/sockets/transcription_service.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/logger.dart';
 
 class TranscriptionSettingsPage extends StatefulWidget {
   const TranscriptionSettingsPage({super.key});
@@ -64,7 +64,7 @@ class _TranscriptionSettingsPageState extends State<TranscriptionSettingsPage> {
   // Store JSON configs per provider (for editing UI)
   final Map<SttProvider, String> _requestJsonPerProvider = {};
   final Map<SttProvider, String> _schemaJsonPerProvider = {};
-  final Map<SttProvider, bool> _requestJsonCustomized = {};
+  final Map<SttProvider, bool> _requestJsonCustaurazed = {};
 
   // Version counter to force autocomplete rebuild after JSON edits
   int _configSyncVersion = 0;
@@ -145,7 +145,7 @@ class _TranscriptionSettingsPageState extends State<TranscriptionSettingsPage> {
     final activeConfig = SharedPreferencesUtil().customSttConfig;
     setState(() {
       _useCustomStt = activeConfig.isEnabled;
-      _selectedProvider = activeConfig.provider == SttProvider.omi ? SttProvider.openai : activeConfig.provider;
+      _selectedProvider = activeConfig.provider == SttProvider.aura ? SttProvider.openai : activeConfig.provider;
 
       // Load all provider configs from preferences
       _loadAllProviderConfigs();
@@ -162,7 +162,7 @@ class _TranscriptionSettingsPageState extends State<TranscriptionSettingsPage> {
       _initializeJsonConfigs();
 
       // Auto-expand advanced if current provider has modified configs
-      if (_requestJsonCustomized[_selectedProvider] == true) {
+      if (_requestJsonCustaurazed[_selectedProvider] == true) {
         _showAdvanced = true;
       }
     });
@@ -170,7 +170,7 @@ class _TranscriptionSettingsPageState extends State<TranscriptionSettingsPage> {
 
   void _loadAllProviderConfigs() {
     for (final provider in SttProvider.values) {
-      if (provider != SttProvider.omi) {
+      if (provider != SttProvider.aura) {
         final savedConfig = SharedPreferencesUtil().getConfigForProvider(provider);
         if (savedConfig != null) {
           _configsPerProvider[provider] = savedConfig;
@@ -244,7 +244,7 @@ class _TranscriptionSettingsPageState extends State<TranscriptionSettingsPage> {
       });
     }
 
-    // Restore JSON configs if customized
+    // Restore JSON configs if custaurazed
     if (config != null) {
       final hasCustomRequest = config.requestType != null ||
           config.headers != null ||
@@ -268,7 +268,7 @@ class _TranscriptionSettingsPageState extends State<TranscriptionSettingsPage> {
         }
 
         _requestJsonPerProvider[_selectedProvider] = const JsonEncoder.withIndent('  ').convert(requestConfig);
-        _requestJsonCustomized[_selectedProvider] = true;
+        _requestJsonCustaurazed[_selectedProvider] = true;
       }
 
       if (config.schemaJson != null) {
@@ -315,10 +315,10 @@ class _TranscriptionSettingsPageState extends State<TranscriptionSettingsPage> {
   void _initializeJsonConfigs() {
     // Initialize JSON configs for all providers
     for (final config in SttProviderConfig.allProviders) {
-      // Skip if already loaded as customized (from _populateUIFromConfig)
-      if (_requestJsonCustomized[config.provider] != true) {
+      // Skip if already loaded as custaurazed (from _populateUIFromConfig)
+      if (_requestJsonCustaurazed[config.provider] != true) {
         _regenerateRequestJson(config.provider);
-        _requestJsonCustomized[config.provider] = false;
+        _requestJsonCustaurazed[config.provider] = false;
       }
       // Only set schema if not already set
       if (_schemaJsonPerProvider[config.provider] == null) {
@@ -353,8 +353,8 @@ class _TranscriptionSettingsPageState extends State<TranscriptionSettingsPage> {
     // Update the stored config with new language/model
     _updateCurrentProviderConfig(language: newLanguage, model: newModel);
 
-    // Only regenerate JSON if user hasn't customized it
-    if (_requestJsonCustomized[_selectedProvider] != true) {
+    // Only regenerate JSON if user hasn't custaurazed it
+    if (_requestJsonCustaurazed[_selectedProvider] != true) {
       _regenerateRequestJson(_selectedProvider);
     }
 
@@ -412,14 +412,14 @@ class _TranscriptionSettingsPageState extends State<TranscriptionSettingsPage> {
       } catch (_) {}
     }
 
-    // Extract values from request JSON if customized
+    // Extract values from request JSON if custaurazed
     String? url;
     String? requestType;
     Map<String, String>? headers;
     Map<String, String>? params;
     String? audioFieldName;
 
-    if (requestJson != null && _requestJsonCustomized[_selectedProvider] == true) {
+    if (requestJson != null && _requestJsonCustaurazed[_selectedProvider] == true) {
       url = requestJson['url'];
       requestType = requestJson['request_type'];
       headers = requestJson['headers'] != null ? Map<String, String>.from(requestJson['headers']) : null;
@@ -554,7 +554,7 @@ class _TranscriptionSettingsPageState extends State<TranscriptionSettingsPage> {
 
       // Build the active config (with correct provider based on _useCustomStt)
       final currentConfig = _buildCurrentConfig();
-      final activeConfig = _useCustomStt ? currentConfig : CustomSttConfig(provider: SttProvider.omi);
+      final activeConfig = _useCustomStt ? currentConfig : CustomSttConfig(provider: SttProvider.aura);
 
       final previousConfig = SharedPreferencesUtil().customSttConfig;
       final configChanged = previousConfig.sttConfigId != activeConfig.sttConfigId;
@@ -715,7 +715,7 @@ class _TranscriptionSettingsPageState extends State<TranscriptionSettingsPage> {
       final config = CustomSttConfig.fromJson(json);
 
       // Validate provider
-      if (config.provider == SttProvider.omi) {
+      if (config.provider == SttProvider.aura) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             content: Text(context.l10n.invalidProviderInConfig),
@@ -745,10 +745,10 @@ class _TranscriptionSettingsPageState extends State<TranscriptionSettingsPage> {
           if (config.audioFieldName != null) requestConfig['audio_field_name'] = config.audioFieldName;
 
           _requestJsonPerProvider[_selectedProvider] = const JsonEncoder.withIndent('  ').convert(requestConfig);
-          _requestJsonCustomized[_selectedProvider] = true;
+          _requestJsonCustaurazed[_selectedProvider] = true;
         } else {
           _regenerateRequestJson(_selectedProvider);
-          _requestJsonCustomized[_selectedProvider] = false;
+          _requestJsonCustaurazed[_selectedProvider] = false;
         }
 
         if (config.schemaJson != null) {
@@ -1080,7 +1080,7 @@ class _TranscriptionSettingsPageState extends State<TranscriptionSettingsPage> {
                 onTap: () {
                   setState(() {
                     _useCustomStt = false;
-                    MixpanelManager().transcriptionSourceSelected(source: 'omi');
+                    MixpanelManager().transcriptionSourceSelected(source: 'aura');
                   });
                 },
               ),
@@ -1289,13 +1289,13 @@ class _TranscriptionSettingsPageState extends State<TranscriptionSettingsPage> {
                     // Load saved config for new provider
                     _populateUIFromConfig(_configsPerProvider[provider]);
 
-                    // Regenerate JSON if not customized
-                    if (_requestJsonCustomized[provider] != true) {
+                    // Regenerate JSON if not custaurazed
+                    if (_requestJsonCustaurazed[provider] != true) {
                       _regenerateRequestJson(provider);
                     }
 
                     // Auto-expand advanced if provider has custom config or is custom type
-                    if (provider == SttProvider.custom || _requestJsonCustomized[provider] == true) {
+                    if (provider == SttProvider.custom || _requestJsonCustaurazed[provider] == true) {
                       _showAdvanced = true;
                     }
                   });
@@ -2004,7 +2004,7 @@ class _TranscriptionSettingsPageState extends State<TranscriptionSettingsPage> {
 
   Widget _buildAdvancedSection() {
     // Show advanced section for all providers except Omi
-    if (_selectedProvider == SttProvider.omi) return const SizedBox.shrink();
+    if (_selectedProvider == SttProvider.aura) return const SizedBox.shrink();
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -2039,7 +2039,7 @@ class _TranscriptionSettingsPageState extends State<TranscriptionSettingsPage> {
             const SizedBox(height: 16),
           ],
           _buildJsonEditors(),
-          if (_requestJsonCustomized[_selectedProvider] == true) ...[
+          if (_requestJsonCustaurazed[_selectedProvider] == true) ...[
             const SizedBox(height: 12),
             _buildResetToDefaultButton(),
           ],
@@ -2060,7 +2060,7 @@ class _TranscriptionSettingsPageState extends State<TranscriptionSettingsPage> {
         _buildJsonEditorButton(
           title: context.l10n.requestConfiguration,
           jsonContent: _currentRequestJson,
-          isCustomized: _requestJsonCustomized[_selectedProvider] == true,
+          isCustaurazed: _requestJsonCustaurazed[_selectedProvider] == true,
           onTap: () => _openJsonEditor(
             title: context.l10n.requestConfiguration,
             jsonContent: _currentRequestJson,
@@ -2085,8 +2085,8 @@ class _TranscriptionSettingsPageState extends State<TranscriptionSettingsPage> {
     return GestureDetector(
       onTap: () {
         setState(() {
-          _requestJsonCustomized[_selectedProvider] = false;
-          // Clear customized request fields from stored config
+          _requestJsonCustaurazed[_selectedProvider] = false;
+          // Clear custaurazed request fields from stored config
           final current = _configsPerProvider[_selectedProvider];
           if (current != null) {
             _configsPerProvider[_selectedProvider] = CustomSttConfig(
@@ -2097,7 +2097,7 @@ class _TranscriptionSettingsPageState extends State<TranscriptionSettingsPage> {
               url: current.url,
               host: current.host,
               port: current.port,
-              // Clear the customized fields
+              // Clear the custaurazed fields
               requestType: null,
               headers: null,
               params: null,
@@ -2125,7 +2125,7 @@ class _TranscriptionSettingsPageState extends State<TranscriptionSettingsPage> {
     required String title,
     required String jsonContent,
     required VoidCallback onTap,
-    bool isCustomized = false,
+    bool isCustaurazed = false,
   }) {
     String preview = '';
     try {
@@ -2145,7 +2145,7 @@ class _TranscriptionSettingsPageState extends State<TranscriptionSettingsPage> {
         decoration: BoxDecoration(
           color: const Color(0xFF1A1A1A),
           borderRadius: BorderRadius.circular(10),
-          border: Border.all(color: isCustomized ? Colors.white : Colors.grey.shade800),
+          border: Border.all(color: isCustaurazed ? Colors.white : Colors.grey.shade800),
         ),
         child: Row(
           children: [
@@ -2159,7 +2159,7 @@ class _TranscriptionSettingsPageState extends State<TranscriptionSettingsPage> {
                         title,
                         style: const TextStyle(color: Colors.white, fontSize: 15, fontWeight: FontWeight.w500),
                       ),
-                      if (isCustomized) ...[
+                      if (isCustaurazed) ...[
                         const SizedBox(width: 8),
                         Container(
                           padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
@@ -2245,7 +2245,7 @@ class _TranscriptionSettingsPageState extends State<TranscriptionSettingsPage> {
             _configSyncVersion++;
           }
 
-          // Mark as customized if it differs from auto-generated
+          // Mark as custaurazed if it differs from auto-generated
           final providerDefaults = SttProviderConfig.get(_selectedProvider);
           final savedConfig = _configsPerProvider[_selectedProvider];
           final autoGenerated = providerDefaults.buildRequestConfig(
@@ -2254,7 +2254,7 @@ class _TranscriptionSettingsPageState extends State<TranscriptionSettingsPage> {
             model: savedConfig?.model ?? providerDefaults.defaultModel,
           );
           final autoGeneratedJson = const JsonEncoder.withIndent('  ').convert(autoGenerated);
-          _requestJsonCustomized[_selectedProvider] = result != autoGeneratedJson;
+          _requestJsonCustaurazed[_selectedProvider] = result != autoGeneratedJson;
         } else {
           _schemaJsonPerProvider[_selectedProvider] = result;
           // Update stored config with schema
@@ -2408,7 +2408,7 @@ class _TranscriptionSettingsPageState extends State<TranscriptionSettingsPage> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          context.l10n.omiTranscriptionOptimized,
+          context.l10n.auraTranscriptionOptimized,
           style: TextStyle(color: Colors.grey.shade500, fontSize: 14, height: 1.5),
         ),
       ],

@@ -10,30 +10,30 @@ import 'package:provider/provider.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:tuple/tuple.dart';
 
-import 'package:omi/backend/http/api/conversations.dart';
-import 'package:omi/backend/http/webhooks.dart';
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/backend/schema/app.dart';
-import 'package:omi/backend/schema/conversation.dart';
-import 'package:omi/backend/schema/folder.dart';
-import 'package:omi/backend/schema/geolocation.dart';
-import 'package:omi/backend/schema/structured.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/gen/assets.gen.dart';
-import 'package:omi/pages/apps/app_detail/app_detail.dart';
-import 'package:omi/pages/conversation_detail/conversation_detail_provider.dart';
-import 'package:omi/pages/conversation_detail/test_prompts.dart';
-import 'package:omi/pages/conversation_detail/widgets/conversation_markdown_widget.dart';
-import 'package:omi/pages/conversation_detail/widgets/summarized_apps_sheet.dart';
-import 'package:omi/pages/conversations/widgets/move_to_folder_sheet.dart';
-import 'package:omi/pages/settings/developer.dart';
-import 'package:omi/providers/folder_provider.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/folders/folder_icon_mapper.dart';
-import 'package:omi/utils/other/temp.dart';
-import 'package:omi/utils/other/time_utils.dart';
-import 'package:omi/widgets/dialog.dart';
-import 'package:omi/widgets/extensions/string.dart';
+import 'package:aura/backend/http/api/conversations.dart';
+import 'package:aura/backend/http/webhooks.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/backend/schema/app.dart';
+import 'package:aura/backend/schema/conversation.dart';
+import 'package:aura/backend/schema/folder.dart';
+import 'package:aura/backend/schema/geolocation.dart';
+import 'package:aura/backend/schema/structured.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/gen/assets.gen.dart';
+import 'package:aura/pages/apps/app_detail/app_detail.dart';
+import 'package:aura/pages/conversation_detail/conversation_detail_provider.dart';
+import 'package:aura/pages/conversation_detail/test_prompts.dart';
+import 'package:aura/pages/conversation_detail/widgets/conversation_markdown_widget.dart';
+import 'package:aura/pages/conversation_detail/widgets/summarized_apps_sheet.dart';
+import 'package:aura/pages/conversations/widgets/move_to_folder_sheet.dart';
+import 'package:aura/pages/settings/developer.dart';
+import 'package:aura/providers/folder_provider.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/folders/folder_icon_mapper.dart';
+import 'package:aura/utils/other/temp.dart';
+import 'package:aura/utils/other/time_utils.dart';
+import 'package:aura/widgets/dialog.dart';
+import 'package:aura/widgets/extensions/string.dart';
 import 'maps_util.dart';
 
 // Highlight search matches with current result highlighting
@@ -1140,7 +1140,7 @@ class _GetShareOptionsState extends State<GetShareOptions> {
                 return;
               }
               String content =
-                  '''https://h.omi.me/conversations/${widget.conversation.id}'''.replaceAll('  ', '').trim();
+                  '''https://h.aura.me/conversations/${widget.conversation.id}'''.replaceAll('  ', '').trim();
               print(content);
               final RenderBox? box = _shareUrlKey.currentContext?.findRenderObject() as RenderBox?;
               if (box != null) {

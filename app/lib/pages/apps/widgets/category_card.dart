@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:omi/backend/schema/app.dart';
-import 'package:omi/utils/app_localizations_helper.dart';
+import 'package:aura/backend/schema/app.dart';
+import 'package:aura/utils/app_localizations_helper.dart';
 
 class CategoryCard extends StatelessWidget {
   final Category category;

@@ -21,7 +21,7 @@
 Set-StrictMode -Version Latest
 $ErrorActionPreference = "Stop"
 
-Write-Host "👋 Yo folks! Welcome to the OMI Mobile Project - We're hiring! Join us on Discord: http://discord.omi.me"
+Write-Host "👋 Yo folks! Welcome to the AURA Mobile Project - We're hiring! Join us on Discord: http://discord.aura.me"
 Write-Host "Prerequisites (stable versions, use these or higher):"
 Write-Host ""
 Write-Host "Common for all developers:"
@@ -96,15 +96,15 @@ function SetupProvisioningProfile {
         brew install fastlane
     }
     
-    $env:MATCH_PASSWORD = "omi"
+    $env:MATCH_PASSWORD = "aura"
     fastlane match development --readonly `
         --app_identifier "com.friend-app-with-wearable.ios12.development" `
-        --git_url "git@github.com:BasedHardware/omi-community-certs.git"
+        --git_url "git@github.com:BasedHardware/aura-community-certs.git"
 }
 
 
 function SetupAppEnv {
-    $API_BASE_URL = "https://api.omiapi.com/"
+    $API_BASE_URL = "https://api.auraapi.com/"
     # Using Set-Content with UTF8 encoding
     $content = "API_BASE_URL=$API_BASE_URL"
     [System.IO.File]::WriteAllText((Join-Path (Get-Location) ".dev.env"), $content, [System.Text.Encoding]::UTF8)

@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:omi/backend/schema/app.dart';
-import 'package:omi/l10n/app_localizations.dart';
-import 'package:omi/utils/app_localizations_helper.dart';
+import 'package:aura/backend/schema/app.dart';
+import 'package:aura/l10n/app_localizations.dart';
+import 'package:aura/utils/app_localizations_helper.dart';
 
 void main() {
   group('AppLocalizationsHelper', () {

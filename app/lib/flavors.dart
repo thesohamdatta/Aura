@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import 'package:omi/utils/logger.dart';
+import 'package:aura/utils/logger.dart';
 
 enum Environment {
   prod,

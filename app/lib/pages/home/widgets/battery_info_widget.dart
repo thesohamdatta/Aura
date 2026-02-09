@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 
 import 'package:provider/provider.dart';
 
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/backend/schema/bt_device/bt_device.dart';
-import 'package:omi/gen/assets.gen.dart';
-import 'package:omi/pages/capture/connect.dart';
-import 'package:omi/pages/home/device.dart';
-import 'package:omi/providers/device_provider.dart';
-import 'package:omi/providers/home_provider.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/device.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/other/temp.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/backend/schema/bt_device/bt_device.dart';
+import 'package:aura/gen/assets.gen.dart';
+import 'package:aura/pages/capture/connect.dart';
+import 'package:aura/pages/home/device.dart';
+import 'package:aura/providers/device_provider.dart';
+import 'package:aura/providers/home_provider.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/device.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/other/temp.dart';
 
 class BatteryInfoWidget extends StatelessWidget {
   const BatteryInfoWidget({super.key});

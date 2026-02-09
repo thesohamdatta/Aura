@@ -553,7 +553,7 @@ class AppLocalizationsCa extends AppLocalizations {
   String get deviceInfoSection => 'Informació del dispositiu';
 
   @override
-  String get customizationSection => 'Personalització';
+  String get custaurazationSection => 'Personalització';
 
   @override
   String get hardwareSection => 'Maquinari';
@@ -762,19 +762,19 @@ class AppLocalizationsCa extends AppLocalizations {
 
   @override
   String get shareStatsMessage =>
-      'Compartint les meves estadístiques d\'Omi! (omi.me - el vostre assistent d\'IA sempre actiu)';
+      'Compartint les meves estadístiques d\'Omi! (aura.me - el vostre assistent d\'IA sempre actiu)';
 
   @override
-  String get sharePeriodToday => 'Avui, omi ha:';
+  String get sharePeriodToday => 'Avui, aura ha:';
 
   @override
-  String get sharePeriodMonth => 'Aquest mes, omi ha:';
+  String get sharePeriodMonth => 'Aquest mes, aura ha:';
 
   @override
-  String get sharePeriodYear => 'Enguany, omi ha:';
+  String get sharePeriodYear => 'Enguany, aura ha:';
 
   @override
-  String get sharePeriodAllTime => 'Fins ara, omi ha:';
+  String get sharePeriodAllTime => 'Fins ara, aura ha:';
 
   @override
   String shareStatsListened(String minutes) {
@@ -809,7 +809,7 @@ class AppLocalizationsCa extends AppLocalizations {
   String get noLogFilesFound => 'No s\'han trobat fitxers de registre.';
 
   @override
-  String get omiDebugLog => 'Registre de depuració d\'Omi';
+  String get auraDebugLog => 'Registre de depuració d\'Omi';
 
   @override
   String get logShared => 'Registre compartit';
@@ -1021,7 +1021,7 @@ class AppLocalizationsCa extends AppLocalizations {
   String get connect => 'Connect';
 
   @override
-  String get comingSoon => 'Properament';
+  String get caurangSoon => 'Properament';
 
   @override
   String get integrationsFooter => 'Connecteu les vostres aplicacions per veure dades i estadístiques al xat.';
@@ -1207,7 +1207,7 @@ class AppLocalizationsCa extends AppLocalizations {
   String get refresh => 'Actualitza';
 
   @override
-  String get noUpcomingMeetings => 'No hi ha reunions properes';
+  String get noUpcaurangMeetings => 'No hi ha reunions properes';
 
   @override
   String get checkingNextDays => 'Comprovant els propers 30 dies';
@@ -1216,7 +1216,7 @@ class AppLocalizationsCa extends AppLocalizations {
   String get tomorrow => 'Demà';
 
   @override
-  String get googleCalendarComingSoon => 'Integració de Google Calendar properament!';
+  String get googleCalendarCaurangSoon => 'Integració de Google Calendar properament!';
 
   @override
   String connectedAsUser(String userId) {
@@ -1443,7 +1443,7 @@ class AppLocalizationsCa extends AppLocalizations {
   }
 
   @override
-  String integrationComingSoon(String appName) {
+  String integrationCaurangSoon(String appName) {
     return 'La integració amb $appName arribarà aviat! Estem treballant dur per oferir-vos més opcions de gestió de tasques.';
   }
 
@@ -1466,13 +1466,13 @@ class AppLocalizationsCa extends AppLocalizations {
   String get bringYourOwn => 'Utilitzeu el vostre propi';
 
   @override
-  String get payYourSttProvider => 'Utilitzeu omi lliurement. Només pagueu directament al vostre proveïdor STT.';
+  String get payYourSttProvider => 'Utilitzeu aura lliurement. Només pagueu directament al vostre proveïdor STT.';
 
   @override
   String get freeMinutesMonth => '1.200 minuts gratuïts/mes inclosos. Il·limitat amb ';
 
   @override
-  String get omiUnlimited => 'Omi Il·limitat';
+  String get auraUnlimited => 'Omi Il·limitat';
 
   @override
   String get hostRequired => 'Cal un amfitrió';
@@ -1595,7 +1595,7 @@ class AppLocalizationsCa extends AppLocalizations {
   }
 
   @override
-  String get omiTranscription => 'Transcripció d\'Omi';
+  String get auraTranscription => 'Transcripció d\'Omi';
 
   @override
   String get bestInClassTranscription => 'Transcripció de millor qualitat sense configuració';
@@ -1904,7 +1904,7 @@ class AppLocalizationsCa extends AppLocalizations {
   String get termsOfUse => 'Condicions d\'ús';
 
   @override
-  String get omiYourAiCompanion => 'Omi – El vostre company d\'IA';
+  String get auraYourAiCompanion => 'Omi – El vostre company d\'IA';
 
   @override
   String get captureEveryMoment => 'Captureu cada moment. Obteniu resums\nimpulsats per IA. No prengueu més notes.';
@@ -2424,7 +2424,7 @@ class AppLocalizationsCa extends AppLocalizations {
   String get privacyPolicyTitle => 'Política de privadesa';
 
   @override
-  String get omiSttProvider => 'Omi';
+  String get auraSttProvider => 'Omi';
 
   @override
   String labelCopied(String label) {
@@ -2581,7 +2581,7 @@ class AppLocalizationsCa extends AppLocalizations {
   String get checksForAudioFiles => 'Comprova els fitxers d\'àudio a la targeta SD';
 
   @override
-  String get omiSyncsAudioFiles => 'Omi després sincronitza els fitxers d\'àudio amb el servidor';
+  String get auraSyncsAudioFiles => 'Omi després sincronitza els fitxers d\'àudio amb el servidor';
 
   @override
   String get serverProcessesAudio => 'El servidor processa els fitxers d\'àudio i crea records';
@@ -3365,7 +3365,7 @@ class AppLocalizationsCa extends AppLocalizations {
   }
 
   @override
-  String get omisMemoryCleared => 'S\'ha esborrat la memòria d\'Omi sobre tu';
+  String get aurasMemoryCleared => 'S\'ha esborrat la memòria d\'Omi sobre tu';
 
   @override
   String get welcomeToOmi => 'Benvingut a Omi';
@@ -3795,7 +3795,7 @@ class AppLocalizationsCa extends AppLocalizations {
   }
 
   @override
-  String get translatedByOmi => 'traduït per omi';
+  String get translatedByOmi => 'traduït per aura';
 
   @override
   String get backToConversations => 'Tornar a Converses';
@@ -3895,7 +3895,7 @@ class AppLocalizationsCa extends AppLocalizations {
   String get showMeetingsInMenuBar => 'Mostra Reunions a la Barra de Menú';
 
   @override
-  String get displayUpcomingMeetingsDescription => 'Mostra les reunions properes a la barra de menú';
+  String get displayUpcaurangMeetingsDescription => 'Mostra les reunions properes a la barra de menú';
 
   @override
   String get showEventsWithoutParticipants => 'Mostra Esdeveniments Sense Participants';
@@ -3904,7 +3904,7 @@ class AppLocalizationsCa extends AppLocalizations {
   String get includePersonalEventsDescription => 'Inclou esdeveniments personals sense assistents';
 
   @override
-  String get upcomingMeetings => 'Reunions properes';
+  String get upcaurangMeetings => 'Reunions properes';
 
   @override
   String get checkingNext7Days => 'Comprovant els propers 7 dies';
@@ -4178,7 +4178,7 @@ class AppLocalizationsCa extends AppLocalizations {
   String get weekdaySun => 'Dg';
 
   @override
-  String serviceIntegrationComingSoon(String serviceName) {
+  String serviceIntegrationCaurangSoon(String serviceName) {
     return 'Integració amb $serviceName properament';
   }
 
@@ -4230,11 +4230,11 @@ class AppLocalizationsCa extends AppLocalizations {
   }
 
   @override
-  String get omiApiKeys => 'Claus API d\'Omi';
+  String get auraApiKeys => 'Claus API d\'Omi';
 
   @override
   String get apiKeysDescription =>
-      'Les claus API s\'utilitzen per a l\'autenticació quan la teva aplicació es comunica amb el servidor OMI. Permeten que la teva aplicació creï records i accedeixi a altres serveis d\'OMI de manera segura.';
+      'Les claus API s\'utilitzen per a l\'autenticació quan la teva aplicació es comunica amb el servidor AURA. Permeten que la teva aplicació creï records i accedeixi a altres serveis d\'AURA de manera segura.';
 
   @override
   String get aboutOmiApiKeys => 'Sobre les claus API d\'Omi';
@@ -4394,7 +4394,7 @@ class AppLocalizationsCa extends AppLocalizations {
   String get e2eeTradeoff2 => '• Si perds la teva contrasenya, les teves dades no es poden recuperar.';
 
   @override
-  String get featureComingSoon => 'Aquesta funció arribarà aviat!';
+  String get featureCaurangSoon => 'Aquesta funció arribarà aviat!';
 
   @override
   String get migrationInProgressMessage =>
@@ -4488,7 +4488,7 @@ class AppLocalizationsCa extends AppLocalizations {
   }
 
   @override
-  String get omiTraining => 'Entrenament Omi';
+  String get auraTraining => 'Entrenament Omi';
 
   @override
   String get trainingDataProgram => 'Programa de dades d\'entrenament';
@@ -4502,7 +4502,7 @@ class AppLocalizationsCa extends AppLocalizations {
       '• Les teves dades ajuden a millorar els models d\'IA\n• Només es comparteixen dades no sensibles\n• Procés totalment transparent';
 
   @override
-  String get learnMoreAtOmiTraining => 'Aprèn més a omi.me/training';
+  String get learnMoreAtOmiTraining => 'Aprèn més a aura.me/training';
 
   @override
   String get agreeToContributeData => 'Entenc i accepto contribuir amb les meves dades per a l\'entrenament d\'IA';
@@ -4797,7 +4797,7 @@ class AppLocalizationsCa extends AppLocalizations {
   String get minutes => 'minuts';
 
   @override
-  String get omiHas => 'Omi té:';
+  String get auraHas => 'Omi té:';
 
   @override
   String get premiumMinutesUsed => 'Minuts premium utilitzats.';
@@ -4826,7 +4826,7 @@ class AppLocalizationsCa extends AppLocalizations {
   String get selectZipFileToImport => 'Selecciona el fitxer .zip per importar!';
 
   @override
-  String get otherDevicesComingSoon => 'Altres dispositius properament';
+  String get otherDevicesCaurangSoon => 'Altres dispositius properament';
 
   @override
   String get deleteAllLimitlessConversations => 'Eliminar totes les converses de Limitless?';
@@ -5174,7 +5174,7 @@ class AppLocalizationsCa extends AppLocalizations {
   String get enableApps => 'Activar aplicacions';
 
   @override
-  String get omiAppName => 'Omi';
+  String get auraAppName => 'Omi';
 
   @override
   String get showMore => 'mostra més ↓';
@@ -5304,7 +5304,7 @@ class AppLocalizationsCa extends AppLocalizations {
   String get noSummary => 'Sense resum';
 
   @override
-  String get updateOmiFirmware => 'Actualitza el firmware d\'omi';
+  String get updateOmiFirmware => 'Actualitza el firmware d\'aura';
 
   @override
   String get anErrorOccurredTryAgain => 'S\'ha produït un error. Si us plau, torna-ho a provar.';
@@ -5480,7 +5480,7 @@ class AppLocalizationsCa extends AppLocalizations {
   String get wrappedSwipeUpToBegin => 'Llisca amunt per començar';
 
   @override
-  String get wrappedShareText => 'El meu 2025, recordat per Omi ✨ omi.me/wrapped';
+  String get wrappedShareText => 'El meu 2025, recordat per Omi ✨ aura.me/wrapped';
 
   @override
   String get wrappedFailedToShare => 'No s\'ha pogut compartir. Torna a provar.';
@@ -6261,7 +6261,7 @@ class AppLocalizationsCa extends AppLocalizations {
   }
 
   @override
-  String get omiTranscriptionOptimized =>
+  String get auraTranscriptionOptimized =>
       'La transcripció en directe integrada dOmi està optimitzada per a converses en temps real amb detecció automàtica de parlants i diarització.';
 
   @override
@@ -6978,7 +6978,7 @@ class AppLocalizationsCa extends AppLocalizations {
   String get almostDone => 'Gairebé acabat...';
 
   @override
-  String get omiSays => 'omi diu';
+  String get auraSays => 'aura diu';
 
   @override
   String get analyzingYourData => 'Analitzant les teves dades...';

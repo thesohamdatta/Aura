@@ -8,14 +8,14 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:provider/provider.dart';
 
-import 'package:omi/backend/http/api/audio.dart';
-import 'package:omi/backend/schema/app.dart';
-import 'package:omi/backend/schema/conversation.dart';
-import 'package:omi/gen/assets.gen.dart';
-import 'package:omi/pages/conversation_detail/conversation_detail_provider.dart';
-import 'package:omi/pages/conversation_detail/widgets/summarized_apps_sheet.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/logger.dart';
+import 'package:aura/backend/http/api/audio.dart';
+import 'package:aura/backend/schema/app.dart';
+import 'package:aura/backend/schema/conversation.dart';
+import 'package:aura/gen/assets.gen.dart';
+import 'package:aura/pages/conversation_detail/conversation_detail_provider.dart';
+import 'package:aura/pages/conversation_detail/widgets/summarized_apps_sheet.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/logger.dart';
 
 enum ConversationBottomBarMode {
   recording, // During active recording (no summary icon)

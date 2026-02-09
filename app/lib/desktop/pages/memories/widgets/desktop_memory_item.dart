@@ -2,16 +2,16 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
-import 'package:omi/backend/schema/memory.dart';
-import 'package:omi/pages/settings/usage_page.dart';
-import 'package:omi/providers/memories_provider.dart';
-import 'package:omi/ui/atoms/omi_icon_badge.dart';
-import 'package:omi/ui/molecules/omi_confirm_dialog.dart';
-import 'package:omi/ui/molecules/omi_popup_menu.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/responsive/responsive_helper.dart';
-import 'package:omi/widgets/extensions/string.dart';
+import 'package:aura/backend/schema/memory.dart';
+import 'package:aura/pages/settings/usage_page.dart';
+import 'package:aura/providers/memories_provider.dart';
+import 'package:aura/ui/atoms/aura_icon_badge.dart';
+import 'package:aura/ui/molecules/aura_confirm_dialog.dart';
+import 'package:aura/ui/molecules/aura_popup_menu.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/responsive/responsive_helper.dart';
+import 'package:aura/widgets/extensions/string.dart';
 
 class DesktopMemoryItem extends StatelessWidget {
   final Memory memory;

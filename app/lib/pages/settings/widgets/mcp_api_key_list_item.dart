@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 
-import 'package:omi/backend/schema/mcp_api_key.dart';
-import 'package:omi/providers/mcp_provider.dart';
-import 'package:omi/utils/l10n_extensions.dart';
+import 'package:aura/backend/schema/mcp_api_key.dart';
+import 'package:aura/providers/mcp_provider.dart';
+import 'package:aura/utils/l10n_extensions.dart';
 
 class McpApiKeyListItem extends StatelessWidget {
   final McpApiKey apiKey;

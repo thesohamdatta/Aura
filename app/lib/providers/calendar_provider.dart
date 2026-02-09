@@ -4,12 +4,12 @@ import 'package:flutter/material.dart';
 
 import 'package:collection/collection.dart';
 
-import 'package:omi/backend/http/api/calendar_meetings.dart' as calendar_api;
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/backend/schema/calendar_meeting_context.dart';
-import 'package:omi/services/calendar_service.dart';
-import 'package:omi/utils/logger.dart';
-import 'package:omi/utils/platform/platform_service.dart';
+import 'package:aura/backend/http/api/calendar_meetings.dart' as calendar_api;
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/backend/schema/calendar_meeting_context.dart';
+import 'package:aura/services/calendar_service.dart';
+import 'package:aura/utils/logger.dart';
+import 'package:aura/utils/platform/platform_service.dart';
 
 class CalendarProvider extends ChangeNotifier {
   final CalendarService _service = CalendarService();
@@ -17,7 +17,7 @@ class CalendarProvider extends ChangeNotifier {
   // State
   CalendarPermissionStatus _permissionStatus = CalendarPermissionStatus.notDetermined;
   bool _isMonitoring = false;
-  List<CalendarMeeting> _upcomingMeetings = [];
+  List<CalendarMeeting> _upcaurangMeetings = [];
   List<SystemCalendar> _systemCalendars = [];
   bool _isLoading = false;
   bool _isSyncing = false;
@@ -26,14 +26,14 @@ class CalendarProvider extends ChangeNotifier {
   CalendarPermissionStatus get permissionStatus => _permissionStatus;
   bool get isMonitoring => _isMonitoring;
 
-  List<CalendarMeeting> get upcomingMeetings => _upcomingMeetings;
+  List<CalendarMeeting> get upcaurangMeetings => _upcaurangMeetings;
   List<SystemCalendar> get systemCalendars => _systemCalendars;
   bool get isLoading => _isLoading;
   bool get isAuthorized => _permissionStatus == CalendarPermissionStatus.authorized;
 
   /// Returns meetings in the immediate window (next 60 minutes or currently in progress)
   List<CalendarMeeting> get immediateMeetings {
-    return _upcomingMeetings.where((meeting) {
+    return _upcaurangMeetings.where((meeting) {
       final minutesUntilStart = meeting.minutesUntilStart;
       final hasEnded = meeting.hasEnded;
       // Include if starting in next 60 minutes or currently in progress
@@ -43,7 +43,7 @@ class CalendarProvider extends ChangeNotifier {
 
   /// Returns the currently active meeting (started within last 5 min or starting in next 5 min)
   CalendarMeeting? get activeMeeting {
-    return _upcomingMeetings.firstWhereOrNull((meeting) {
+    return _upcaurangMeetings.firstWhereOrNull((meeting) {
       final minutesUntilStart = meeting.minutesUntilStart;
       final hasStarted = meeting.hasStarted;
       final hasEnded = meeting.hasEnded;
@@ -155,16 +155,16 @@ class CalendarProvider extends ChangeNotifier {
     if (!isAuthorized) return;
 
     // Get fresh meetings from calendar
-    final freshMeetings = await _service.getUpcomingMeetings();
+    final freshMeetings = await _service.getUpcaurangMeetings();
 
     // Preserve meetingId from previous syncs
     final meetingIdMap = {
-      for (var m in _upcomingMeetings)
+      for (var m in _upcaurangMeetings)
         if (m.meetingId != null) m.id: m.meetingId
     };
 
     // Update meetings list, preserving meetingIds
-    _upcomingMeetings = freshMeetings.map((meeting) {
+    _upcaurangMeetings = freshMeetings.map((meeting) {
       final existingMeetingId = meetingIdMap[meeting.id];
       if (existingMeetingId != null) {
         return meeting.copyWith(meetingId: existingMeetingId);
@@ -188,12 +188,12 @@ class CalendarProvider extends ChangeNotifier {
     _isSyncing = true;
     try {
       // Build a map of already synced event IDs to avoid re-syncing on every refresh
-      final alreadySyncedIds = _upcomingMeetings.where((m) => m.meetingId != null).map((m) => m.id).toSet();
+      final alreadySyncedIds = _upcaurangMeetings.where((m) => m.meetingId != null).map((m) => m.id).toSet();
 
       Logger.debug(
-          'CalendarProvider: Syncing ${_upcomingMeetings.length} meetings (${alreadySyncedIds.length} already synced)');
+          'CalendarProvider: Syncing ${_upcaurangMeetings.length} meetings (${alreadySyncedIds.length} already synced)');
 
-      for (final meeting in _upcomingMeetings) {
+      for (final meeting in _upcaurangMeetings) {
         // Skip if we've already synced this calendar event in this session
         if (alreadySyncedIds.contains(meeting.id)) {
           continue;
@@ -223,9 +223,9 @@ class CalendarProvider extends ChangeNotifier {
 
           if (response != null) {
             // Update local meeting with backend meeting_id to mark as synced
-            final index = _upcomingMeetings.indexWhere((m) => m.id == meeting.id);
+            final index = _upcaurangMeetings.indexWhere((m) => m.id == meeting.id);
             if (index != -1) {
-              _upcomingMeetings[index] = meeting.copyWith(meetingId: response.meetingId);
+              _upcaurangMeetings[index] = meeting.copyWith(meetingId: response.meetingId);
             }
           }
         } catch (e) {

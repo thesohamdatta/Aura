@@ -3,9 +3,9 @@ import 'dart:typed_data';
 
 import 'package:flutter/foundation.dart';
 
-import 'package:omi/gen/flutter_communicator.g.dart';
-import 'package:omi/services/bridges/apple_watch_bridge.dart';
-import 'package:omi/utils/logger.dart';
+import 'package:aura/gen/flutter_communicator.g.dart';
+import 'package:aura/services/bridges/apple_watch_bridge.dart';
+import 'package:aura/utils/logger.dart';
 import 'device_transport.dart';
 
 class WatchTransport extends DeviceTransport {

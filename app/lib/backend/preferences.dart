@@ -3,15 +3,15 @@ import 'dart:convert';
 import 'package:collection/collection.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'package:omi/backend/schema/app.dart';
-import 'package:omi/backend/schema/bt_device/bt_device.dart';
-import 'package:omi/backend/schema/conversation.dart';
-import 'package:omi/backend/schema/memory.dart';
-import 'package:omi/backend/schema/message.dart';
-import 'package:omi/backend/schema/person.dart';
-import 'package:omi/models/custom_stt_config.dart';
-import 'package:omi/models/stt_provider.dart';
-import 'package:omi/utils/logger.dart';
+import 'package:aura/backend/schema/app.dart';
+import 'package:aura/backend/schema/bt_device/bt_device.dart';
+import 'package:aura/backend/schema/conversation.dart';
+import 'package:aura/backend/schema/memory.dart';
+import 'package:aura/backend/schema/message.dart';
+import 'package:aura/backend/schema/person.dart';
+import 'package:aura/models/custom_stt_config.dart';
+import 'package:aura/models/stt_provider.dart';
+import 'package:aura/utils/logger.dart';
 
 class SharedPreferencesUtil {
   static final SharedPreferencesUtil _instance = SharedPreferencesUtil._internal();
@@ -36,13 +36,13 @@ class SharedPreferencesUtil {
 
   //-------------------------------- Device ----------------------------------//
 
-  bool? get hasOmiDevice => _preferences?.getBool('hasOmiDevice');
+  bool? get hasAuraDevice => _preferences?.getBool('hasAuraDevice');
 
-  set hasOmiDevice(bool? value) {
+  set hasAuraDevice(bool? value) {
     if (value != null) {
-      _preferences?.setBool('hasOmiDevice', value);
+      _preferences?.setBool('hasAuraDevice', value);
     } else {
-      _preferences?.remove('hasOmiDevice');
+      _preferences?.remove('hasAuraDevice');
     }
   }
 
@@ -70,7 +70,7 @@ class SharedPreferencesUtil {
 
   BtDevice get btDevice {
     final String device = getString('btDevice') ?? '';
-    if (device.isEmpty) return BtDevice(id: '', name: '', type: DeviceType.omi, rssi: 0);
+    if (device.isEmpty) return BtDevice(id: '', name: '', type: DeviceType.aura, rssi: 0);
     return BtDevice.fromJson(jsonDecode(device));
   }
 
@@ -379,9 +379,9 @@ class SharedPreferencesUtil {
 
   set showActionItemDeleteConfirmation(bool value) => saveBool('showActionItemDeleteConfirmation', value);
 
-  bool get showGetOmiCard => getBool('showGetOmiCard', defaultValue: true);
+  bool get showGetAuraCard => getBool('showGetAuraCard', defaultValue: true);
 
-  set showGetOmiCard(bool value) => saveBool('showGetOmiCard', value);
+  set showGetAuraCard(bool value) => saveBool('showGetAuraCard', value);
 
   List<App> get appsList {
     final apps = getStringList('appsList');
@@ -584,9 +584,9 @@ class SharedPreferencesUtil {
 
   String get fullName => '$givenName $familyName'.trim();
 
-  String get foundOmiSource => getString('foundOmiSource');
+  String get foundAuraSource => getString('foundAuraSource');
 
-  set foundOmiSource(String value) => saveString('foundOmiSource', value);
+  set foundAuraSource(String value) => saveString('foundAuraSource', value);
 
   set locationPermissionRequested(bool value) => saveBool('locationPermissionRequested', value);
 

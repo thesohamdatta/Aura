@@ -60,8 +60,8 @@ You are a plugin developer specializing in creating Omi plugins/apps, implementi
 - `.cursor/rules/backend-architecture.mdc` - Backend architecture
 
 ### Skills
-- `.cursor/skills/omi-plugin-development/` - Plugin development workflows
-- `.cursor/skills/omi-api-integration/` - API integration patterns
+- `.cursor/skills/aura-plugin-development/` - Plugin development workflows
+- `.cursor/skills/aura-api-integration/` - API integration patterns
 
 ### Commands
 - `/create-plugin` - Scaffold new plugin structure
@@ -69,10 +69,10 @@ You are a plugin developer specializing in creating Omi plugins/apps, implementi
 
 ### Documentation
 
-**The `docs/` folder is the single source of truth for all user-facing documentation, deployed at [docs.omi.me](https://docs.omi.me/).**
+**The `docs/` folder is the single source of truth for all user-facing documentation, deployed at [docs.aura.me](https://docs.aura.me/).**
 
-- **Plugin Introduction**: `docs/doc/developer/apps/Introduction.mdx` - [View online](https://docs.omi.me/doc/developer/apps/Introduction)
-- **Integrations**: `docs/doc/developer/apps/Integrations.mdx` - [View online](https://docs.omi.me/doc/developer/apps/Integrations)
-- **Chat Tools**: `docs/doc/developer/apps/ChatTools.mdx` - [View online](https://docs.omi.me/doc/developer/apps/ChatTools)
-- **OAuth**: `docs/doc/developer/apps/Oauth.mdx` - [View online](https://docs.omi.me/doc/developer/apps/Oauth)
-- **Prompt-Based Apps**: `docs/doc/developer/apps/PromptBased.mdx` - [View online](https://docs.omi.me/doc/developer/apps/PromptBased)
+- **Plugin Introduction**: `docs/doc/developer/apps/Introduction.mdx` - [View online](https://docs.aura.me/doc/developer/apps/Introduction)
+- **Integrations**: `docs/doc/developer/apps/Integrations.mdx` - [View online](https://docs.aura.me/doc/developer/apps/Integrations)
+- **Chat Tools**: `docs/doc/developer/apps/ChatTools.mdx` - [View online](https://docs.aura.me/doc/developer/apps/ChatTools)
+- **OAuth**: `docs/doc/developer/apps/Oauth.mdx` - [View online](https://docs.aura.me/doc/developer/apps/Oauth)
+- **Prompt-Based Apps**: `docs/doc/developer/apps/PromptBased.mdx` - [View online](https://docs.aura.me/doc/developer/apps/PromptBased)

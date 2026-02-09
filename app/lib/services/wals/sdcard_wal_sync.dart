@@ -3,19 +3,19 @@ import 'dart:io';
 import 'dart:typed_data';
 
 import 'package:flutter/foundation.dart';
-import 'package:omi/utils/logger.dart';
+import 'package:aura/utils/logger.dart';
 
 import 'package:path_provider/path_provider.dart';
 
-import 'package:omi/backend/schema/bt_device/bt_device.dart';
-import 'package:omi/backend/schema/conversation.dart';
-import 'package:omi/services/devices/device_connection.dart';
-import 'package:omi/services/devices/transports/tcp_transport.dart';
-import 'package:omi/services/devices/wifi_sync_error.dart';
-import 'package:omi/services/services.dart';
-import 'package:omi/services/wals/wal.dart';
-import 'package:omi/services/wals/wal_interfaces.dart';
-import 'package:omi/services/wifi/wifi_network_service.dart';
+import 'package:aura/backend/schema/bt_device/bt_device.dart';
+import 'package:aura/backend/schema/conversation.dart';
+import 'package:aura/services/devices/device_connection.dart';
+import 'package:aura/services/devices/transports/tcp_transport.dart';
+import 'package:aura/services/devices/wifi_sync_error.dart';
+import 'package:aura/services/services.dart';
+import 'package:aura/services/wals/wal.dart';
+import 'package:aura/services/wals/wal_interfaces.dart';
+import 'package:aura/services/wifi/wifi_network_service.dart';
 
 class SDCardWalSyncImpl implements SDCardWalSync {
   List<Wal> _wals = const [];

@@ -2,11 +2,11 @@ import 'package:flutter/cupertino.dart';
 
 import 'package:just_audio/just_audio.dart';
 
-import 'package:omi/backend/http/api/users.dart';
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/backend/schema/person.dart';
-import 'package:omi/providers/base_provider.dart';
-import 'package:omi/utils/logger.dart';
+import 'package:aura/backend/http/api/users.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/backend/schema/person.dart';
+import 'package:aura/providers/base_provider.dart';
+import 'package:aura/utils/logger.dart';
 
 class PeopleProvider extends BaseProvider {
   List<Person> people = SharedPreferencesUtil().cachedPeople;

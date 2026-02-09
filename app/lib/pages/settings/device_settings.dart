@@ -7,20 +7,20 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/backend/schema/bt_device/bt_device.dart';
-import 'package:omi/pages/conversations/sync_page.dart';
-import 'package:omi/pages/home/firmware_update.dart';
-import 'package:omi/providers/device_provider.dart';
-import 'package:omi/services/devices.dart';
-import 'package:omi/services/services.dart';
-import 'package:omi/utils/analytics/intercom.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/logger.dart';
-import 'package:omi/utils/other/temp.dart';
-import 'package:omi/utils/platform/platform_service.dart';
-import 'package:omi/widgets/dialog.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/backend/schema/bt_device/bt_device.dart';
+import 'package:aura/pages/conversations/sync_page.dart';
+import 'package:aura/pages/home/firmware_update.dart';
+import 'package:aura/providers/device_provider.dart';
+import 'package:aura/services/devices.dart';
+import 'package:aura/services/services.dart';
+import 'package:aura/utils/analytics/intercom.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/logger.dart';
+import 'package:aura/utils/other/temp.dart';
+import 'package:aura/utils/platform/platform_service.dart';
+import 'package:aura/widgets/dialog.dart';
 
 class DeviceSettings extends StatefulWidget {
   const DeviceSettings({super.key});
@@ -297,7 +297,7 @@ class _DeviceSettingsState extends State<DeviceSettings> {
   Widget _buildHardwareInfoSection(BtDevice? device) {
     final hardwareRevision = device?.hardwareRevision ?? 'XIAO';
     final modelNumber = device?.modelNumber ?? 'Omi DevKit';
-    final manufacturer = device?.manufacturerName ?? 'Based Hardware';
+    final manufacturer = device?.manufacturerName ?? 'Soham Datta';
 
     return Container(
       decoration: BoxDecoration(color: const Color(0xFF1C1C1E), borderRadius: BorderRadius.circular(20)),
@@ -664,7 +664,7 @@ class _DeviceSettingsState extends State<DeviceSettings> {
     return level >= 0 && level < labels.length ? labels[level] : '';
   }
 
-  Widget _buildCustomizationSection() {
+  Widget _buildCustaurazationSection() {
     final doubleTapAction = SharedPreferencesUtil().doubleTapAction;
 
     return Container(
@@ -728,11 +728,11 @@ class _DeviceSettingsState extends State<DeviceSettings> {
                 final deviceName = provider.pairedDevice?.name ?? 'DevKit1';
                 String url;
                 if (deviceName == 'Omi DevKit 2') {
-                  url = 'https://www.omi.me/pages/charging-devkit2';
+                  url = 'https://www.aura.me/pages/charging-devkit2';
                 } else if (deviceName == 'Omi') {
-                  url = 'https://www.omi.me/pages/charging-omi';
+                  url = 'https://www.aura.me/pages/charging-aura';
                 } else {
-                  url = 'https://www.omi.me/pages/charging';
+                  url = 'https://www.aura.me/pages/charging';
                 }
                 final uri = Uri.parse(url);
                 if (await canLaunchUrl(uri)) {
@@ -766,7 +766,7 @@ class _DeviceSettingsState extends State<DeviceSettings> {
             // Disconnect
             GestureDetector(
               onTap: () async {
-                await SharedPreferencesUtil().btDeviceSet(BtDevice(id: '', name: '', type: DeviceType.omi, rssi: 0));
+                await SharedPreferencesUtil().btDeviceSet(BtDevice(id: '', name: '', type: DeviceType.aura, rssi: 0));
                 SharedPreferencesUtil().deviceName = '';
                 if (provider.connectedDevice != null) {
                   await _bleDisconnectDevice(provider.connectedDevice!);
@@ -814,7 +814,7 @@ class _DeviceSettingsState extends State<DeviceSettings> {
                     () async {
                       Navigator.of(context).pop();
                       await SharedPreferencesUtil().btDeviceSet(
-                        BtDevice(id: '', name: '', type: DeviceType.omi, rssi: 0),
+                        BtDevice(id: '', name: '', type: DeviceType.aura, rssi: 0),
                       );
                       SharedPreferencesUtil().deviceName = '';
                       if (provider.connectedDevice != null) {
@@ -924,8 +924,8 @@ class _DeviceSettingsState extends State<DeviceSettings> {
                 ],
                 if (provider.isConnected) ...[
                   const SizedBox(height: 16),
-                  _buildSectionHeader(context.l10n.customizationSection),
-                  _buildCustomizationSection(),
+                  _buildSectionHeader(context.l10n.custaurazationSection),
+                  _buildCustaurazationSection(),
                   const SizedBox(height: 32),
                   _buildSectionHeader(context.l10n.deviceInfoSection),
                   _buildDeviceInfoSection(provider.pairedDevice, provider),

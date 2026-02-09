@@ -6,10 +6,10 @@ import 'package:flutter/services.dart';
 
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'package:omi/backend/http/api/goals.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/pages/chat/page.dart';
-import 'package:omi/utils/logger.dart';
+import 'package:aura/backend/http/api/goals.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/pages/chat/page.dart';
+import 'package:aura/utils/logger.dart';
 
 /// Goal tracker widget with semicircle gauge
 class GoalTrackerWidget extends StatefulWidget {

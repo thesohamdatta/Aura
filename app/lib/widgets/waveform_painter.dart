@@ -83,7 +83,7 @@ class WaveformPainter extends CustomPainter {
       );
     }
 
-    // Draw progress indicator dot - more prominent like in ss1.jpeg
+    // Draw progress indicator dot - more prauranent like in ss1.jpeg
     if (isPlaying && playbackProgress > 0) {
       final progressX = (barCount * playbackProgress) * (barWidth + spacing);
       final dotPaint = Paint()

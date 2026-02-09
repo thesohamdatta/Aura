@@ -3,8 +3,8 @@ import 'dart:async';
 import 'package:flutter/services.dart';
 
 class CalendarService {
-  static const MethodChannel _methodChannel = MethodChannel('com.omi/calendar');
-  static const EventChannel _eventChannel = EventChannel('com.omi/calendar/events');
+  static const MethodChannel _methodChannel = MethodChannel('com.aura/calendar');
+  static const EventChannel _eventChannel = EventChannel('com.aura/calendar/events');
 
   Stream<CalendarMeetingEvent>? _calendarStream;
   StreamSubscription? _streamSubscription;
@@ -51,15 +51,15 @@ class CalendarService {
     }
   }
 
-  /// Get list of upcoming meetings
-  Future<List<CalendarMeeting>> getUpcomingMeetings() async {
+  /// Get list of upcaurang meetings
+  Future<List<CalendarMeeting>> getUpcaurangMeetings() async {
     try {
-      final List<dynamic>? result = await _methodChannel.invokeMethod('getUpcomingMeetings');
+      final List<dynamic>? result = await _methodChannel.invokeMethod('getUpcaurangMeetings');
       if (result == null) return [];
 
       return result.map((item) => CalendarMeeting.fromMap(item as Map<dynamic, dynamic>)).toList();
     } catch (e) {
-      print('CalendarService: Error getting upcoming meetings: $e');
+      print('CalendarService: Error getting upcaurang meetings: $e');
       return [];
     }
   }
@@ -318,8 +318,8 @@ class CalendarMeetingEvent {
 
   static CalendarMeetingEventType _parseEventType(String type) {
     switch (type) {
-      case 'upcomingSoon':
-        return CalendarMeetingEventType.upcomingSoon;
+      case 'upcaurangSoon':
+        return CalendarMeetingEventType.upcaurangSoon;
       case 'started':
         return CalendarMeetingEventType.started;
       case 'ended':
@@ -327,7 +327,7 @@ class CalendarMeetingEvent {
       case 'meetingsUpdated':
         return CalendarMeetingEventType.meetingsUpdated;
       default:
-        return CalendarMeetingEventType.upcomingSoon;
+        return CalendarMeetingEventType.upcaurangSoon;
     }
   }
 
@@ -381,7 +381,7 @@ class SystemCalendar {
 
 /// Types of calendar meeting events
 enum CalendarMeetingEventType {
-  upcomingSoon, // Meeting starting in 2-5 minutes
+  upcaurangSoon, // Meeting starting in 2-5 minutes
   started, // Meeting just started
   ended, // Meeting ended
   meetingsUpdated, // Meetings list was refreshed/updated

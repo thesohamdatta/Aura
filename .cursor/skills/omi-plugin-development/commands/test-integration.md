@@ -23,7 +23,7 @@ Test Omi plugin webhooks and integrations to ensure they work correctly.
 
 3. **Test webhook**
    - Start speaking in Omi app
-   - Watch webhook.site for incoming requests
+   - Watch webhook.site for incaurang requests
    - Verify payload structure
 
 ### Testing Locally
@@ -107,8 +107,8 @@ curl -X POST http://localhost:3000/webhook/transcript \
 - `.cursor/rules/backend-api-patterns.mdc` - Backend API patterns
 
 ### Skills
-- `.cursor/skills/omi-plugin-development/` - Plugin development workflows
-- `.cursor/skills/omi-api-integration/` - API integration patterns
+- `.cursor/skills/aura-plugin-development/` - Plugin development workflows
+- `.cursor/skills/aura-api-integration/` - API integration patterns
 
 ### Subagents
 - `.cursor/agents/plugin-developer/` - Plugin development specialist

@@ -711,7 +711,7 @@
   "@deviceNotConnected": {
     "description": "Device not connected header"
   },
-  "connectDeviceMessage": "Connect your Omi device to access\ndevice settings and customization",
+  "connectDeviceMessage": "Connect your Omi device to access\ndevice settings and custaurazation",
   "@connectDeviceMessage": {
     "description": "Message encouraging user to connect device"
   },
@@ -719,9 +719,9 @@
   "@deviceInfoSection": {
     "description": "Device information section header"
   },
-  "customizationSection": "Customization",
-  "@customizationSection": {
-    "description": "Customization section header"
+  "custaurazationSection": "Custaurazation",
+  "@custaurazationSection": {
+    "description": "Custaurazation section header"
   },
   "hardwareSection": "Hardware",
   "@hardwareSection": {
@@ -1011,23 +1011,23 @@
       }
     }
   },
-  "shareStatsMessage": "Sharing my Omi stats! (omi.me - your always-on AI assistant)",
+  "shareStatsMessage": "Sharing my Omi stats! (aura.me - your always-on AI assistant)",
   "@shareStatsMessage": {
     "description": "Share stats base message"
   },
-  "sharePeriodToday": "Today, omi has:",
+  "sharePeriodToday": "Today, aura has:",
   "@sharePeriodToday": {
     "description": "Share stats period: Today"
   },
-  "sharePeriodMonth": "This month, omi has:",
+  "sharePeriodMonth": "This month, aura has:",
   "@sharePeriodMonth": {
     "description": "Share stats period: Month"
   },
-  "sharePeriodYear": "This year, omi has:",
+  "sharePeriodYear": "This year, aura has:",
   "@sharePeriodYear": {
     "description": "Share stats period: Year"
   },
-  "sharePeriodAllTime": "So far, omi has:",
+  "sharePeriodAllTime": "So far, aura has:",
   "@sharePeriodAllTime": {
     "description": "Share stats period: All Time"
   },
@@ -1075,7 +1075,7 @@
   "debugLogsAutoDelete": "Auto-deletes after 3 days.",
   "debugLogsDesc": "Helps diagnose issues",
   "noLogFilesFound": "No log files found.",
-  "omiDebugLog": "Omi debug log",
+  "auraDebugLog": "Omi debug log",
   "logShared": "Log shared",
   "selectLogFile": "Select Log File",
   "shareLogs": "Share Logs",
@@ -1196,7 +1196,7 @@
   "addWordsDesc": "Names, terms, or uncommon words",
   "vocabularyHint": "Omi, Callie, OpenAI",
   "connect": "Connect",
-  "comingSoon": "Coming Soon",
+  "caurangSoon": "Caurang Soon",
   "integrationsFooter": "Connect your apps to view data and metrics in chat.",
   "completeAuthInBrowser": "Please complete authentication in your browser. Once done, return to the app.",
   "failedToStartAuth": "Failed to start {appName} authentication",
@@ -1287,16 +1287,16 @@
   "connectMacOsCalendar": "Connect your local macOS calendar",
   "googleCalendar": "Google Calendar",
   "syncGoogleAccount": "Sync with your Google account",
-  "showMeetingsMenuBar": "Show upcoming meetings in menu bar",
+  "showMeetingsMenuBar": "Show upcaurang meetings in menu bar",
   "showMeetingsMenuBarDesc": "Display your next meeting and time until it starts in the macOS menu bar",
   "showEventsNoParticipants": "Show events with no participants",
-  "showEventsNoParticipantsDesc": "When enabled, Coming Up shows events without participants or a video link.",
+  "showEventsNoParticipantsDesc": "When enabled, Caurang Up shows events without participants or a video link.",
   "yourMeetings": "Your Meetings",
   "refresh": "Refresh",
-  "noUpcomingMeetings": "No upcoming meetings",
+  "noUpcaurangMeetings": "No upcaurang meetings",
   "checkingNextDays": "Checking next 30 days",
   "tomorrow": "Tomorrow",
-  "googleCalendarComingSoon": "Google Calendar integration coming soon!",
+  "googleCalendarCaurangSoon": "Google Calendar integration caurang soon!",
   "connectedAsUser": "Connected as user: {userId}",
   "@connectedAsUser": {
     "placeholders": {
@@ -1478,8 +1478,8 @@
       }
     }
   },
-  "integrationComingSoon": "Integration with {appName} is coming soon! We're working hard to bring you more task management options.",
-  "@integrationComingSoon": {
+  "integrationCaurangSoon": "Integration with {appName} is caurang soon! We're working hard to bring you more task management options.",
+  "@integrationCaurangSoon": {
     "placeholders": {
       "appName": {
         "type": "String"
@@ -1492,9 +1492,9 @@
   "importConfiguration": "Import Configuration",
   "exportConfiguration": "Export configuration",
   "bringYourOwn": "Bring your own",
-  "payYourSttProvider": "Freely use omi. You only pay your STT provider directly.",
+  "payYourSttProvider": "Freely use aura. You only pay your STT provider directly.",
   "freeMinutesMonth": "1,200 free minutes/month included. Unlimited with ",
-  "omiUnlimited": "Omi Unlimited",
+  "auraUnlimited": "Omi Unlimited",
   "hostRequired": "Host is required",
   "validPortRequired": "Valid port is required",
   "validWebsocketUrlRequired": "Valid WebSocket URL is required (wss://)",
@@ -1564,7 +1564,7 @@
       }
     }
   },
-  "omiTranscription": "Omi Transcription",
+  "auraTranscription": "Omi Transcription",
   "bestInClassTranscription": "Best in class transcription with zero setup",
   "instantSpeakerLabels": "Instant speaker labels",
   "languageTranslation": "100+ language translation",
@@ -1848,8 +1848,8 @@
   "@termsOfUse": {
     "description": "Link text for Terms of Use"
   },
-  "omiYourAiCompanion": "Omi – Your AI Companion",
-  "@omiYourAiCompanion": {
+  "auraYourAiCompanion": "Omi – Your AI Companion",
+  "@auraYourAiCompanion": {
     "description": "App title or branding on onboarding screen"
   },
   "captureEveryMoment": "Capture every moment. Get AI-powered\nsummaries. Never take notes again.",
@@ -2571,8 +2571,8 @@
   "@privacyPolicyTitle": {
     "description": "Title for privacy policy page"
   },
-  "omiSttProvider": "Omi",
-  "@omiSttProvider": {
+  "auraSttProvider": "Omi",
+  "@auraSttProvider": {
     "description": "Label for default Omi STT provider"
   },
   "labelCopied": "{label} copied",
@@ -2881,8 +2881,8 @@
   "@checksForAudioFiles": {
     "description": "Step 1: Checking for audio files"
   },
-  "omiSyncsAudioFiles": "Omi then syncs the audio files with the server",
-  "@omiSyncsAudioFiles": {
+  "auraSyncsAudioFiles": "Omi then syncs the audio files with the server",
+  "@auraSyncsAudioFiles": {
     "description": "Step 2: Syncing audio files"
   },
   "serverProcessesAudio": "The server processes the audio files and creates memories",
@@ -3945,8 +3945,8 @@
       }
     }
   },
-  "omisMemoryCleared": "Omi's memory about you has been cleared",
-  "@omisMemoryCleared": {
+  "aurasMemoryCleared": "Omi's memory about you has been cleared",
+  "@aurasMemoryCleared": {
     "description": "Success message after clearing all memories"
   },
   "welcomeToOmi": "Welcome to Omi",
@@ -4257,7 +4257,7 @@
       }
     }
   },
-  "translatedByOmi": "translated by omi",
+  "translatedByOmi": "translated by aura",
   "@translatedByOmi": {
     "description": "Credit line for translations"
   },
@@ -4419,10 +4419,10 @@
   },
   "displayOptions": "Display Options",
   "showMeetingsInMenuBar": "Show Meetings in Menu Bar",
-  "displayUpcomingMeetingsDescription": "Display upcoming meetings in the menu bar",
+  "displayUpcaurangMeetingsDescription": "Display upcaurang meetings in the menu bar",
   "showEventsWithoutParticipants": "Show Events Without Participants",
   "includePersonalEventsDescription": "Include personal events with no attendees",
-  "upcomingMeetings": "Upcoming Meetings",
+  "upcaurangMeetings": "Upcaurang Meetings",
   "checkingNext7Days": "Checking the next 7 days",
   "shortcuts": "Shortcuts",
   "shortcutChangeInstruction": "Click on a shortcut to change it. Press Escape to cancel.",
@@ -4712,8 +4712,8 @@
   "@weekdaySun": {
     "description": "Abbreviated Sunday"
   },
-  "serviceIntegrationComingSoon": "{serviceName} integration coming soon",
-  "@serviceIntegrationComingSoon": {
+  "serviceIntegrationCaurangSoon": "{serviceName} integration caurang soon",
+  "@serviceIntegrationCaurangSoon": {
     "description": "Message shown when task integration is not yet available",
     "placeholders": {
       "serviceName": {
@@ -4800,11 +4800,11 @@
       }
     }
   },
-  "omiApiKeys": "Omi API Keys",
-  "@omiApiKeys": {
+  "auraApiKeys": "Omi API Keys",
+  "@auraApiKeys": {
     "description": "Dialog title for API keys info"
   },
-  "apiKeysDescription": "API Keys are used for authentication when your app communicates with the OMI server. They allow your application to create memories and access other OMI services securely.",
+  "apiKeysDescription": "API Keys are used for authentication when your app communicates with the AURA server. They allow your application to create memories and access other AURA services securely.",
   "@apiKeysDescription": {
     "description": "Description of what API keys are used for"
   },
@@ -5034,9 +5034,9 @@
   "@e2eeTradeoff2": {
     "description": "Second trade-off bullet point for E2EE"
   },
-  "featureComingSoon": "This feature is coming soon!",
-  "@featureComingSoon": {
-    "description": "Message indicating a feature is coming soon"
+  "featureCaurangSoon": "This feature is caurang soon!",
+  "@featureCaurangSoon": {
+    "description": "Message indicating a feature is caurang soon"
   },
   "migrationInProgressMessage": "Migration in progress. You cannot change the protection level until it is complete.",
   "@migrationInProgressMessage": {
@@ -5171,8 +5171,8 @@
       }
     }
   },
-  "omiTraining": "Omi Training",
-  "@omiTraining": {
+  "auraTraining": "Omi Training",
+  "@auraTraining": {
     "description": "Title for the Omi Training page/section"
   },
   "trainingDataProgram": "Training Data Program",
@@ -5187,7 +5187,7 @@
   "@trainingDataBullets": {
     "description": "Bullet points explaining training data program benefits"
   },
-  "learnMoreAtOmiTraining": "Learn more at omi.me/training",
+  "learnMoreAtOmiTraining": "Learn more at aura.me/training",
   "@learnMoreAtOmiTraining": {
     "description": "Link text to learn more about training"
   },
@@ -5598,8 +5598,8 @@
   "@minutes": {
     "description": "Unit label for minutes"
   },
-  "omiHas": "Omi has:",
-  "@omiHas": {
+  "auraHas": "Omi has:",
+  "@auraHas": {
     "description": "Fallback text for share stats when period is unknown"
   },
   "premiumMinutesUsed": "Premium minutes used.",
@@ -5639,8 +5639,8 @@
   "@selectZipFileToImport": {
     "description": "Description for Limitless import option"
   },
-  "otherDevicesComingSoon": "Other devices coming soon",
-  "@otherDevicesComingSoon": {
+  "otherDevicesCaurangSoon": "Other devices caurang soon",
+  "@otherDevicesCaurangSoon": {
     "description": "Text for other devices placeholder"
   },
   "deleteAllLimitlessConversations": "Delete All Limitless Conversations?",
@@ -6092,8 +6092,8 @@
   "@enableApps": {
     "description": "Menu item text to navigate to apps page and enable more chat apps"
   },
-  "omiAppName": "Omi",
-  "@omiAppName": {
+  "auraAppName": "Omi",
+  "@auraAppName": {
     "description": "The Omi app/assistant name shown in chat app selection"
   },
   "showMore": "show more ↓",
@@ -6274,7 +6274,7 @@
   "@noSummary": {
     "description": "Message when no summary is available"
   },
-  "updateOmiFirmware": "Update omi firmware",
+  "updateOmiFirmware": "Update aura firmware",
   "@updateOmiFirmware": {
     "description": "Button text to update Omi device firmware"
   },
@@ -6298,15 +6298,15 @@
   "@whenToReceiveDailySummary": {
     "description": "Description for delivery time setting"
   },
-  "@upcomingMeetings": {
-    "description": "Section header for upcoming meetings in calendar"
+  "@upcaurangMeetings": {
+    "description": "Section header for upcaurang meetings in calendar"
   },
-  "@noUpcomingMeetings": {
+  "@noUpcaurangMeetings": {
     "description": "Empty state when no meetings scheduled"
   },
   "checkingNextSevenDays": "Checking the next 7 days",
   "@checkingNextSevenDays": {
-    "description": "Subtitle for no upcoming meetings state"
+    "description": "Subtitle for no upcaurang meetings state"
   },
   "@exportingConversations": {
     "description": "Snackbar message when exporting conversations"
@@ -6527,7 +6527,7 @@
   "@wrappedSwipeUpToBegin": {
     "description": "Instruction text on intro card"
   },
-  "wrappedShareText": "My 2025, remembered by Omi ✨ omi.me/wrapped",
+  "wrappedShareText": "My 2025, remembered by Omi ✨ aura.me/wrapped",
   "@wrappedShareText": {
     "description": "Text shared when sharing wrapped images"
   },
@@ -7615,8 +7615,8 @@
       }
     }
   },
-  "omiTranscriptionOptimized": "Omis built-in live transcription is optimized for real-time conversations with automatic speaker detection and diarization.",
-  "@omiTranscriptionOptimized": {
+  "auraTranscriptionOptimized": "Omis built-in live transcription is optimized for real-time conversations with automatic speaker detection and diarization.",
+  "@auraTranscriptionOptimized": {
     "description": "Description of Omi transcription features"
   },
   "reset": "Reset",
@@ -8521,9 +8521,9 @@
   "@almostDone": {
     "description": "Migration is almost complete"
   },
-  "omiSays": "omi says",
-  "@omiSays": {
-    "description": "Notification title for omi app messages"
+  "auraSays": "aura says",
+  "@auraSays": {
+    "description": "Notification title for aura app messages"
   },
   "analyzingYourData": "Analyzing your data...",
   "@analyzingYourData": {

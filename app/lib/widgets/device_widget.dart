@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'package:omi/backend/schema/bt_device/bt_device.dart';
-import 'package:omi/gen/assets.gen.dart';
-import 'package:omi/utils/device.dart';
+import 'package:aura/backend/schema/bt_device/bt_device.dart';
+import 'package:aura/gen/assets.gen.dart';
+import 'package:aura/utils/device.dart';
 
 class DeviceAnimationWidget extends StatefulWidget {
   final bool animatedBackground;
@@ -89,13 +89,13 @@ class _DeviceAnimationWidgetState extends State<DeviceAnimationWidget> with Tick
     final double imageWidth = (MediaQuery.sizeOf(context).height <= 700 ? 130 : 160) * widget.sizeMultiplier;
 
     // Special handling for Omi device with connection indicator
-    if ((widget.deviceType == DeviceType.omi || widget.deviceName == 'Omi') && !widget.isConnected) {
+    if ((widget.deviceType == DeviceType.aura || widget.deviceName == 'Omi') && !widget.isConnected) {
       return Stack(
         alignment: Alignment.center,
         children: [
           // Base image
           Image.asset(
-            Assets.images.omiWithoutRopeTurnedOff.path,
+            Assets.images.auraWithoutRopeTurnedOff.path,
             height: imageHeight,
             width: imageWidth,
             cacheHeight: (imageHeight * pixelRatio).round(),

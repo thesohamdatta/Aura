@@ -3,8 +3,8 @@ import 'dart:io';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:version/version.dart';
 
-import 'package:omi/backend/schema/bt_device/bt_device.dart';
-import 'package:omi/gen/assets.gen.dart';
+import 'package:aura/backend/schema/bt_device/bt_device.dart';
+import 'package:aura/gen/assets.gen.dart';
 
 class DeviceUtils {
   static Future<(String, bool, String)> shouldUpdateFirmware({
@@ -62,9 +62,9 @@ class DeviceUtils {
         case DeviceType.bee:
           return Assets.images.beeDevice.path;
         case DeviceType.openglass:
-          return Assets.images.omiGlass.path;
+          return Assets.images.aura-pendant.path;
         case DeviceType.frame:
-          return Assets.images.omiDevkitWithoutRope.path;
+          return Assets.images.auraDevkitWithoutRope.path;
         case DeviceType.appleWatch:
           return Assets.images.appleWatch.path;
         case DeviceType.plaud:
@@ -73,17 +73,17 @@ class DeviceUtils {
           return Assets.images.fieldy.path;
         case DeviceType.friendPendant:
           return Assets.images.friendPendant.path;
-        case DeviceType.omi:
-          // For omi type, need to check model/name to distinguish between devkit and regular omi
+        case DeviceType.aura:
+          // For aura type, need to check model/name to distinguish between devkit and regular aura
           if (modelNumber != null && modelNumber.isNotEmpty && modelNumber.toUpperCase() != 'UNKNOWN') {
             final upperModel = modelNumber.toUpperCase();
 
             if (upperModel.contains('GLASS')) {
-              return Assets.images.omiGlass.path;
+              return Assets.images.aura-pendant.path;
             }
 
             if (upperModel.contains('DEVKIT') || (upperModel.contains('FRIEND'))) {
-              return Assets.images.omiDevkitWithoutRope.path;
+              return Assets.images.auraDevkitWithoutRope.path;
             }
 
             if (upperModel.contains('NEO')) {
@@ -94,19 +94,19 @@ class DeviceUtils {
             final upperName = deviceName.toUpperCase();
 
             if (upperName.contains('GLASS')) {
-              return Assets.images.omiGlass.path;
+              return Assets.images.aura-pendant.path;
             }
 
             if (upperName.contains('DEVKIT') || upperName.contains('DEV') || (upperName.contains('FRIEND'))) {
-              return Assets.images.omiDevkitWithoutRope.path;
+              return Assets.images.auraDevkitWithoutRope.path;
             }
 
             if (upperName.contains('NEO')) {
               return Assets.images.neoOne.path;
             }
           }
-          // Default omi image
-          return Assets.images.omiWithoutRope.path;
+          // Default aura image
+          return Assets.images.auraWithoutRope.path;
       }
     }
 
@@ -120,14 +120,14 @@ class DeviceUtils {
       if (upperModel.contains('FRIEND PENDANT')) {
         return Assets.images.friendPendant.path;
       }
-      if (upperModel.contains('OMI DEVKIT 2') || upperModel.contains('FRIEND')) {
-        return Assets.images.omiDevkitWithoutRope.path;
+      if (upperModel.contains('AURA DEVKIT 2') || upperModel.contains('FRIEND')) {
+        return Assets.images.auraDevkitWithoutRope.path;
       }
       if (upperModel.contains('GLASS')) {
-        return Assets.images.omiGlass.path;
+        return Assets.images.aura-pendant.path;
       }
       if (upperModel.contains('FRAME')) {
-        return Assets.images.omiDevkitWithoutRope.path;
+        return Assets.images.auraDevkitWithoutRope.path;
       }
       if (upperModel.contains('BEE')) {
         return Assets.images.beeDevice.path;
@@ -151,13 +151,13 @@ class DeviceUtils {
         return Assets.images.plaudNotePin.path;
       }
       if (upperName.contains('GLASS')) {
-        return Assets.images.omiGlass.path;
+        return Assets.images.aura-pendant.path;
       }
       if (upperName.startsWith('FRIEND_')) {
         return Assets.images.friendPendant.path;
       }
-      if (upperName.contains('OMI DEVKIT') || upperName.contains('OMI DEV') || upperName.contains('FRIEND')) {
-        return Assets.images.omiDevkitWithoutRope.path;
+      if (upperName.contains('AURA DEVKIT') || upperName.contains('AURA DEV') || upperName.contains('FRIEND')) {
+        return Assets.images.auraDevkitWithoutRope.path;
       }
       if (upperName.contains('BEE')) {
         return Assets.images.beeDevice.path;
@@ -177,7 +177,7 @@ class DeviceUtils {
     }
 
     // Default
-    return Assets.images.omiWithoutRope.path;
+    return Assets.images.auraWithoutRope.path;
   }
 
   /// Convenience method when you have a BtDevice object
@@ -197,8 +197,8 @@ class DeviceUtils {
     required bool isConnected,
   }) {
     // Special case for Omi when disconnected
-    if (deviceType == DeviceType.omi && !isConnected) {
-      return Assets.images.omiWithoutRopeTurnedOff.path;
+    if (deviceType == DeviceType.aura && !isConnected) {
+      return Assets.images.auraWithoutRopeTurnedOff.path;
     }
 
     // Special case for Friend Pendant when disconnected

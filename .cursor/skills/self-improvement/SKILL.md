@@ -125,7 +125,7 @@ Track which rules are most effective:
 1. **Fetch PR data**:
    ```python
    # Use mcp_web_fetch or GitHub API
-   pr_url = f"https://github.com/BasedHardware/omi/pull/{pr_number}"
+   pr_url = f"https://github.com/BasedHardware/aura/pull/{pr_number}"
    ```
 
 2. **Extract key information**:

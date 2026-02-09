@@ -23,7 +23,7 @@ class ShortcutInfo {
 }
 
 class ShortcutService {
-  static const _channel = MethodChannel('com.omi/shortcuts');
+  static const _channel = MethodChannel('com.aura/shortcuts');
 
   static bool get isSupported => Platform.isMacOS;
 

@@ -11,35 +11,35 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:pasteboard/pasteboard.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:provider/provider.dart';
-import 'package:omi/widgets/shimmer_with_timeout.dart';
+import 'package:aura/widgets/shimmer_with_timeout.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/backend/schema/app.dart';
-import 'package:omi/backend/schema/conversation.dart';
-import 'package:omi/backend/schema/message.dart';
-import 'package:omi/desktop/pages/chat/widgets/desktop_voice_recorder_widget.dart';
-import 'package:omi/gen/assets.gen.dart';
-import 'package:omi/pages/chat/widgets/ai_message.dart';
-import 'package:omi/pages/chat/widgets/markdown_message_widget.dart';
-import 'package:omi/providers/app_provider.dart';
-import 'package:omi/providers/connectivity_provider.dart';
-import 'package:omi/providers/conversation_provider.dart';
-import 'package:omi/providers/home_provider.dart';
-import 'package:omi/providers/message_provider.dart';
-import 'package:omi/ui/atoms/omi_avatar.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/ui/atoms/omi_icon_button.dart';
-import 'package:omi/ui/atoms/omi_message_input.dart';
-import 'package:omi/ui/atoms/omi_send_button.dart';
-import 'package:omi/ui/atoms/omi_typing_indicator.dart';
-import 'package:omi/ui/molecules/omi_chat_bubble.dart';
-import 'package:omi/ui/molecules/omi_section_header.dart';
-import 'package:omi/utils/other/temp.dart';
-import 'package:omi/utils/platform/platform_service.dart';
-import 'package:omi/utils/responsive/responsive_helper.dart';
-import 'package:omi/widgets/dialog.dart';
-import 'package:omi/widgets/extensions/string.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/backend/schema/app.dart';
+import 'package:aura/backend/schema/conversation.dart';
+import 'package:aura/backend/schema/message.dart';
+import 'package:aura/desktop/pages/chat/widgets/desktop_voice_recorder_widget.dart';
+import 'package:aura/gen/assets.gen.dart';
+import 'package:aura/pages/chat/widgets/ai_message.dart';
+import 'package:aura/pages/chat/widgets/markdown_message_widget.dart';
+import 'package:aura/providers/app_provider.dart';
+import 'package:aura/providers/connectivity_provider.dart';
+import 'package:aura/providers/conversation_provider.dart';
+import 'package:aura/providers/home_provider.dart';
+import 'package:aura/providers/message_provider.dart';
+import 'package:aura/ui/atoms/aura_avatar.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/ui/atoms/aura_icon_button.dart';
+import 'package:aura/ui/atoms/aura_message_input.dart';
+import 'package:aura/ui/atoms/aura_send_button.dart';
+import 'package:aura/ui/atoms/aura_typing_indicator.dart';
+import 'package:aura/ui/molecules/aura_chat_bubble.dart';
+import 'package:aura/ui/molecules/aura_section_header.dart';
+import 'package:aura/utils/other/temp.dart';
+import 'package:aura/utils/platform/platform_service.dart';
+import 'package:aura/utils/responsive/responsive_helper.dart';
+import 'package:aura/widgets/dialog.dart';
+import 'package:aura/widgets/extensions/string.dart';
 
 class DesktopChatPage extends StatefulWidget {
   const DesktopChatPage({super.key});
@@ -841,7 +841,7 @@ class DesktopChatPageState extends State<DesktopChatPage> with AutomaticKeepAliv
                       // AI message bubble
                       Expanded(
                         child: OmiChatBubble(
-                          type: OmiChatBubbleType.incoming,
+                          type: OmiChatBubbleType.incaurang,
                           child: _buildAIMessageContent(message, provider, chatIndex),
                         ),
                       ),

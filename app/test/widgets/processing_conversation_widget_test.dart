@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shimmer/shimmer.dart';
 
-import 'package:omi/pages/conversations/widgets/processing_capture.dart';
+import 'package:aura/pages/conversations/widgets/processing_capture.dart';
 
 void main() {
   group('ProcessingConversationWidget shimmer optimization', () {

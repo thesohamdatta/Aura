@@ -8,10 +8,10 @@ Update API reference documentation when endpoints change or new endpoints are ad
 
 ## API Documentation Location
 
-**The `docs/` folder is the single source of truth for all user-facing documentation, deployed at [docs.omi.me](https://docs.omi.me/).**
+**The `docs/` folder is the single source of truth for all user-facing documentation, deployed at [docs.aura.me](https://docs.aura.me/).**
 
-- **Developer API**: `docs/doc/developer/api/` - [View online](https://docs.omi.me/doc/developer/api/)
-- **API Reference**: `docs/api-reference/` - [View online](https://docs.omi.me/api-reference/)
+- **Developer API**: `docs/doc/developer/api/` - [View online](https://docs.aura.me/doc/developer/api/)
+- **API Reference**: `docs/api-reference/` - [View online](https://docs.aura.me/api-reference/)
 - **OpenAPI Schema**: `docs/api-reference/openapi.json`
 
 ## Updating Endpoint Documentation
@@ -48,7 +48,7 @@ Get resource description.
 **Example**:
 ```bash
 curl -H "Authorization: Bearer token" \
-  https://api.omi.me/v1/resource?limit=10
+  https://api.aura.me/v1/resource?limit=10
 ```
 ```
 
@@ -63,8 +63,8 @@ curl -H "Authorization: Bearer token" \
 ## Related Documentation
 
 - Documentation Standards: `.cursor/rules/documentation-standards.mdc`
-- API Overview: `docs/doc/developer/api/overview.mdx` - [View online](https://docs.omi.me/doc/developer/api/overview)
-- API Endpoints: `docs/api-reference/` - [View online](https://docs.omi.me/api-reference/)
+- API Overview: `docs/doc/developer/api/overview.mdx` - [View online](https://docs.aura.me/doc/developer/api/overview)
+- API Endpoints: `docs/api-reference/` - [View online](https://docs.aura.me/api-reference/)
 
 ## Related Cursor Resources
 
@@ -73,7 +73,7 @@ curl -H "Authorization: Bearer token" \
 - `.cursor/rules/backend-api-patterns.mdc` - API patterns
 
 ### Skills
-- `.cursor/skills/omi-api-integration/` - API integration patterns
+- `.cursor/skills/aura-api-integration/` - API integration patterns
 
 ### Subagents
 - `.cursor/agents/backend-api-developer/` - Can help with API documentation

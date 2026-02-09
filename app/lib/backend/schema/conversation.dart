@@ -6,10 +6,10 @@ import 'package:flutter/material.dart';
 import 'package:collection/collection.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'package:omi/backend/schema/geolocation.dart';
-import 'package:omi/backend/schema/message.dart';
-import 'package:omi/backend/schema/structured.dart';
-import 'package:omi/backend/schema/transcript_segment.dart';
+import 'package:aura/backend/schema/geolocation.dart';
+import 'package:aura/backend/schema/message.dart';
+import 'package:aura/backend/schema/structured.dart';
+import 'package:aura/backend/schema/transcript_segment.dart';
 
 class CreateConversationResponse {
   final List<ServerMessage> messages;
@@ -29,7 +29,7 @@ class CreateConversationResponse {
 
 enum ConversationSource {
   friend,
-  omi,
+  aura,
   workflow,
   openglass,
   screenpipe,
@@ -185,7 +185,7 @@ class ServerConversation {
   final List<AppResponse> appResults;
   final List<String> suggestedSummarizationApps;
   final ConversationSource? source;
-  final String? language; // applies to friend/omi only
+  final String? language; // applies to friend/aura only
 
   final ConversationExternalData? externalIntegration;
 
@@ -242,7 +242,7 @@ class ServerConversation {
           : [],
       audioFiles: ((json['audio_files'] ?? []) as List<dynamic>).map((af) => AudioFile.fromJson(af)).toList(),
       discarded: json['discarded'] ?? false,
-      source: json['source'] != null ? ConversationSource.values.asNameMap()[json['source']] : ConversationSource.omi,
+      source: json['source'] != null ? ConversationSource.values.asNameMap()[json['source']] : ConversationSource.aura,
       language: json['language'],
       deleted: json['deleted'] ?? false,
       externalIntegration:

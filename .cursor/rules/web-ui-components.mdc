@@ -174,7 +174,7 @@ function ConversationCard({ conversation }) {
 - `.cursor/rules/web-nextjs-patterns.mdc` - Next.js App Router patterns
 
 ### Skills
-- `.cursor/skills/omi-api-integration/` - API integration patterns
+- `.cursor/skills/aura-api-integration/` - API integration patterns
 
 ### Subagents
 - `.cursor/agents/web-developer/` - Web UI development specialist

@@ -6,13 +6,13 @@ import 'package:flutter/material.dart';
 
 import 'package:path_provider/path_provider.dart';
 
-import 'package:omi/backend/http/api/apps.dart';
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/main.dart';
-import 'package:omi/providers/app_provider.dart';
-import 'package:omi/utils/alerts/app_snackbar.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/logger.dart';
+import 'package:aura/backend/http/api/apps.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/main.dart';
+import 'package:aura/providers/app_provider.dart';
+import 'package:aura/utils/alerts/app_snackbar.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/logger.dart';
 
 /// State enum for the AI app generation process
 enum GenerationState {

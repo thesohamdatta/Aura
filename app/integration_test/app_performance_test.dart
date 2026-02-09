@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
 
-import 'package:omi/main.dart' as app;
+import 'package:aura/main.dart' as app;
 
 /// Real App Animation Performance Profiling Test
 ///
@@ -28,7 +28,7 @@ void main() {
     testWidgets('Profile all animation screens', (WidgetTester tester) async {
       debugPrint('');
       debugPrint('╔══════════════════════════════════════════════════════════════╗');
-      debugPrint('║         OMI APP ANIMATION PERFORMANCE TEST                   ║');
+      debugPrint('║         AURA APP ANIMATION PERFORMANCE TEST                   ║');
       debugPrint('╚══════════════════════════════════════════════════════════════╝');
       debugPrint('');
 
@@ -584,7 +584,7 @@ void _printFinalSummary(Map<String, List<FrameTiming>> allTimings) {
 void _writeResultsToFile(Map<String, List<FrameTiming>> allTimings) {
   try {
     final timestamp = DateTime.now().toIso8601String().replaceAll(':', '-');
-    final file = File('/tmp/omi_perf_$timestamp.csv');
+    final file = File('/tmp/aura_perf_$timestamp.csv');
 
     final buffer = StringBuffer();
     buffer.writeln('screen,frame_index,build_us,raster_us,total_us');

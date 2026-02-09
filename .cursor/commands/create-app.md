@@ -36,8 +36,8 @@ Requires server endpoint for webhooks.
 
 1. **Set up FastAPI server**
    ```bash
-   mkdir my-omi-app
-   cd my-omi-app
+   mkdir my-aura-app
+   cd my-aura-app
    python -m venv venv
    source venv/bin/activate
    pip install fastapi uvicorn
@@ -70,8 +70,8 @@ Requires server endpoint for webhooks.
 
 1. **Set up Express server**
    ```bash
-   mkdir my-omi-app
-   cd my-omi-app
+   mkdir my-aura-app
+   cd my-aura-app
    npm init -y
    npm install express
    ```
@@ -98,7 +98,7 @@ Requires server endpoint for webhooks.
 - **Real-time transcript**: Live transcript processing
 - **Chat tools**: Custom tools for LangGraph
 - **Audio streaming**: Raw audio processing
-- **Prompts**: Customize AI behavior
+- **Prompts**: Custauraze AI behavior
 
 ## Related Documentation
 

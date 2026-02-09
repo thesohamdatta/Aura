@@ -3,19 +3,19 @@ import 'package:flutter/services.dart';
 
 import 'package:flutter_blue_plus/flutter_blue_plus.dart';
 
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/services/devices/apple_watch_connection.dart';
-import 'package:omi/services/devices/device_connection.dart';
-import 'package:omi/services/devices/discovery/device_locator.dart';
-import 'package:omi/services/devices/fieldy_connection.dart';
-import 'package:omi/services/devices/frame_connection.dart';
-import 'package:omi/services/devices/friend_pendant_connection.dart';
-import 'package:omi/services/devices/limitless_connection.dart';
-import 'package:omi/services/devices/models.dart';
-import 'package:omi/services/devices/omi_connection.dart';
-import 'package:omi/services/devices/omiglass_connection.dart';
-import 'package:omi/services/devices/plaud_connection.dart';
-import 'package:omi/utils/logger.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/services/devices/apple_watch_connection.dart';
+import 'package:aura/services/devices/device_connection.dart';
+import 'package:aura/services/devices/discovery/device_locator.dart';
+import 'package:aura/services/devices/fieldy_connection.dart';
+import 'package:aura/services/devices/frame_connection.dart';
+import 'package:aura/services/devices/friend_pendant_connection.dart';
+import 'package:aura/services/devices/limitless_connection.dart';
+import 'package:aura/services/devices/models.dart';
+import 'package:aura/services/devices/aura_connection.dart';
+import 'package:aura/services/devices/auraglass_connection.dart';
+import 'package:aura/services/devices/plaud_connection.dart';
+import 'package:aura/utils/logger.dart';
 
 enum ImageOrientation {
   orientation0, // 0 degrees
@@ -209,13 +209,13 @@ Future<DeviceType?> getTypeOfBluetoothDevice(BluetoothDevice device) async {
   } else if (BtDevice.isOmiDeviceFromDevice(device)) {
     // Check if the device has the image data stream characteristic
     final hasImageStream = device.servicesList
-        .where((s) => s.uuid == Guid.fromString(omiServiceUuid))
+        .where((s) => s.uuid == Guid.fromString(auraServiceUuid))
         .expand((s) => s.characteristics)
         .any((c) => c.uuid.toString().toLowerCase() == imageDataStreamCharacteristicUuid.toLowerCase());
     // Also check device name for OpenGlass/OmiGlass detection
     final isOpenGlassByName =
         device.platformName.toLowerCase().contains('openglass') || device.platformName.toLowerCase().contains('glass');
-    deviceType = (hasImageStream || isOpenGlassByName) ? DeviceType.openglass : DeviceType.omi;
+    deviceType = (hasImageStream || isOpenGlassByName) ? DeviceType.openglass : DeviceType.aura;
   } else if (BtDevice.isFrameDeviceFromDevice(device)) {
     deviceType = DeviceType.frame;
   }
@@ -226,7 +226,7 @@ Future<DeviceType?> getTypeOfBluetoothDevice(BluetoothDevice device) async {
 }
 
 enum DeviceType {
-  omi,
+  aura,
   openglass,
   frame,
   appleWatch,
@@ -274,7 +274,7 @@ class BtDevice {
   BtDevice.empty()
       : name = '',
         id = '',
-        type = DeviceType.omi,
+        type = DeviceType.aura,
         rssi = 0,
         locator = null,
         _modelNumber = '',
@@ -371,7 +371,7 @@ class BtDevice {
       return await _getDeviceInfoFromFriendPendant(conn);
     } else if (type == DeviceType.limitless) {
       return await _getDeviceInfoFromLimitless(conn as LimitlessDeviceConnection);
-    } else if (type == DeviceType.omi) {
+    } else if (type == DeviceType.aura) {
       return await _getDeviceInfoFromOmi(conn);
     } else if (type == DeviceType.openglass) {
       return await _getDeviceInfoFromOmi(conn);
@@ -388,9 +388,9 @@ class BtDevice {
     var modelNumber = 'Omi';
     var firmwareRevision = '1.0.2';
     var hardwareRevision = 'Seeed Xiao BLE Sense';
-    var manufacturerName = 'Based Hardware';
+    var manufacturerName = 'Soham Datta';
     String? serialNumber;
-    var t = DeviceType.omi;
+    var t = DeviceType.aura;
 
     try {
       Map<String, dynamic>? deviceInfo;
@@ -620,7 +620,7 @@ class BtDevice {
       case DeviceType.friendPendant:
       case DeviceType.limitless:
         return 'Compatibility Note';
-      case DeviceType.omi:
+      case DeviceType.aura:
       case DeviceType.openglass:
       case DeviceType.frame:
       case DeviceType.appleWatch:
@@ -653,7 +653,7 @@ class BtDevice {
         return 'Your $name\'s current firmware works great with Omi.\n\n'
             'We recommend keeping your current firmware and not updating through the Limitless app, as newer versions may affect compatibility.';
 
-      case DeviceType.omi:
+      case DeviceType.aura:
       case DeviceType.openglass:
       case DeviceType.frame:
       case DeviceType.appleWatch:
@@ -667,7 +667,7 @@ class BtDevice {
     return BtDevice(
       name: device.platformName,
       id: device.remoteId.str,
-      type: DeviceType.omi,
+      type: DeviceType.aura,
       rssi: rssi,
     );
   }
@@ -770,11 +770,11 @@ class BtDevice {
   }
 
   static bool isOmiDevice(ScanResult result) {
-    return result.advertisementData.serviceUuids.contains(Guid(omiServiceUuid));
+    return result.advertisementData.serviceUuids.contains(Guid(auraServiceUuid));
   }
 
   static bool isOmiDeviceFromDevice(BluetoothDevice device) {
-    return device.servicesList.any((s) => s.uuid == Guid(omiServiceUuid));
+    return device.servicesList.any((s) => s.uuid == Guid(auraServiceUuid));
   }
 
   static bool isFrameDevice(ScanResult result) {
@@ -800,7 +800,7 @@ class BtDevice {
     } else if (isLimitlessDevice(result)) {
       deviceType = DeviceType.limitless;
     } else if (isOmiDevice(result)) {
-      deviceType = DeviceType.omi;
+      deviceType = DeviceType.aura;
     } else if (isFrameDevice(result)) {
       deviceType = DeviceType.frame;
     }
@@ -812,7 +812,7 @@ class BtDevice {
     return BtDevice(
       name: result.device.platformName,
       id: result.device.remoteId.str,
-      type: deviceType ?? DeviceType.omi,
+      type: deviceType ?? DeviceType.aura,
       rssi: result.rssi,
       locator: DeviceLocator.bluetooth(deviceId: result.device.remoteId.str),
     );

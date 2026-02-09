@@ -54,7 +54,7 @@ You are a web developer specializing in Next.js App Router, TypeScript, Firebase
 - `.cursor/rules/backend-api-patterns.mdc` - Backend API integration
 
 ### Skills
-- `.cursor/skills/omi-api-integration/` - API integration patterns
+- `.cursor/skills/aura-api-integration/` - API integration patterns
 
 ### Commands
 - `/backend-setup` - Setup backend for web integration

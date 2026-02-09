@@ -1,6 +1,6 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
-import 'package:omi/backend/schema/message.dart';
+import 'package:aura/backend/schema/message.dart';
 
 class ChartMessageWidget extends StatelessWidget {
   final ChartData chartData;

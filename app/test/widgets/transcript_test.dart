@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/backend/schema/message_event.dart';
-import 'package:omi/backend/schema/transcript_segment.dart';
-import 'package:omi/widgets/transcript.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/backend/schema/message_event.dart';
+import 'package:aura/backend/schema/transcript_segment.dart';
+import 'package:aura/widgets/transcript.dart';
 
 void main() {
   setUpAll(() async {

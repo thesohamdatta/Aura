@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 import 'package:provider/provider.dart';
 
-import 'package:omi/providers/conversation_provider.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/other/debouncer.dart';
-import 'package:omi/utils/responsive/responsive_helper.dart';
+import 'package:aura/providers/conversation_provider.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/other/debouncer.dart';
+import 'package:aura/utils/responsive/responsive_helper.dart';
 
 class DesktopSearchWidget extends StatefulWidget {
   const DesktopSearchWidget({super.key});

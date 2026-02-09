@@ -552,7 +552,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get deviceInfoSection => 'Thông tin thiết bị';
 
   @override
-  String get customizationSection => 'Tùy chỉnh';
+  String get custaurazationSection => 'Tùy chỉnh';
 
   @override
   String get hardwareSection => 'Phần cứng';
@@ -760,19 +760,19 @@ class AppLocalizationsVi extends AppLocalizations {
   }
 
   @override
-  String get shareStatsMessage => 'Chia sẻ thống kê Omi của tôi! (omi.me - trợ lý AI luôn bên bạn)';
+  String get shareStatsMessage => 'Chia sẻ thống kê Omi của tôi! (aura.me - trợ lý AI luôn bên bạn)';
 
   @override
-  String get sharePeriodToday => 'Hôm nay, omi đã:';
+  String get sharePeriodToday => 'Hôm nay, aura đã:';
 
   @override
-  String get sharePeriodMonth => 'Tháng này, omi đã:';
+  String get sharePeriodMonth => 'Tháng này, aura đã:';
 
   @override
-  String get sharePeriodYear => 'Năm nay, omi đã:';
+  String get sharePeriodYear => 'Năm nay, aura đã:';
 
   @override
-  String get sharePeriodAllTime => 'Cho đến nay, omi đã:';
+  String get sharePeriodAllTime => 'Cho đến nay, aura đã:';
 
   @override
   String shareStatsListened(String minutes) {
@@ -807,7 +807,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get noLogFilesFound => 'Không tìm thấy tệp nhật ký.';
 
   @override
-  String get omiDebugLog => 'Nhật ký gỡ lỗi Omi';
+  String get auraDebugLog => 'Nhật ký gỡ lỗi Omi';
 
   @override
   String get logShared => 'Đã chia sẻ nhật ký';
@@ -1018,7 +1018,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get connect => 'Connect';
 
   @override
-  String get comingSoon => 'Sắp ra mắt';
+  String get caurangSoon => 'Sắp ra mắt';
 
   @override
   String get integrationsFooter => 'Kết nối ứng dụng của bạn để xem dữ liệu và số liệu trong trò chuyện.';
@@ -1194,7 +1194,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get showEventsNoParticipantsDesc =>
-      'Khi được bật, Coming Up hiển thị các sự kiện không có người tham gia hoặc liên kết video.';
+      'Khi được bật, Caurang Up hiển thị các sự kiện không có người tham gia hoặc liên kết video.';
 
   @override
   String get yourMeetings => 'Cuộc họp của bạn';
@@ -1203,7 +1203,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get refresh => 'Làm mới';
 
   @override
-  String get noUpcomingMeetings => 'Không có cuộc họp sắp tới';
+  String get noUpcaurangMeetings => 'Không có cuộc họp sắp tới';
 
   @override
   String get checkingNextDays => 'Kiểm tra 30 ngày tiếp theo';
@@ -1212,7 +1212,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get tomorrow => 'Ngày mai';
 
   @override
-  String get googleCalendarComingSoon => 'Tích hợp Google Calendar sắp ra mắt!';
+  String get googleCalendarCaurangSoon => 'Tích hợp Google Calendar sắp ra mắt!';
 
   @override
   String connectedAsUser(String userId) {
@@ -1439,7 +1439,7 @@ class AppLocalizationsVi extends AppLocalizations {
   }
 
   @override
-  String integrationComingSoon(String appName) {
+  String integrationCaurangSoon(String appName) {
     return 'Tích hợp với $appName sắp ra mắt! Chúng tôi đang nỗ lực để mang đến cho bạn nhiều tùy chọn quản lý nhiệm vụ hơn.';
   }
 
@@ -1462,13 +1462,13 @@ class AppLocalizationsVi extends AppLocalizations {
   String get bringYourOwn => 'Mang của riêng bạn';
 
   @override
-  String get payYourSttProvider => 'Sử dụng omi tự do. Bạn chỉ trả tiền cho nhà cung cấp STT trực tiếp.';
+  String get payYourSttProvider => 'Sử dụng aura tự do. Bạn chỉ trả tiền cho nhà cung cấp STT trực tiếp.';
 
   @override
   String get freeMinutesMonth => '1.200 phút miễn phí/tháng được bao gồm. Không giới hạn với ';
 
   @override
-  String get omiUnlimited => 'Omi Unlimited';
+  String get auraUnlimited => 'Omi Unlimited';
 
   @override
   String get hostRequired => 'Bắt buộc có host';
@@ -1590,7 +1590,7 @@ class AppLocalizationsVi extends AppLocalizations {
   }
 
   @override
-  String get omiTranscription => 'Phiên âm Omi';
+  String get auraTranscription => 'Phiên âm Omi';
 
   @override
   String get bestInClassTranscription => 'Phiên âm tốt nhất với cài đặt bằng không';
@@ -1896,7 +1896,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get termsOfUse => 'Điều khoản sử dụng';
 
   @override
-  String get omiYourAiCompanion => 'Omi – Trợ lý AI của bạn';
+  String get auraYourAiCompanion => 'Omi – Trợ lý AI của bạn';
 
   @override
   String get captureEveryMoment => 'Ghi lại mọi khoảnh khắc. Nhận tóm tắt\nbằng AI. Không bao giờ phải ghi chú lại.';
@@ -2415,7 +2415,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get privacyPolicyTitle => 'Chính sách bảo mật';
 
   @override
-  String get omiSttProvider => 'Omi';
+  String get auraSttProvider => 'Omi';
 
   @override
   String labelCopied(String label) {
@@ -2572,7 +2572,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get checksForAudioFiles => 'Kiểm tra các tệp âm thanh trên thẻ SD';
 
   @override
-  String get omiSyncsAudioFiles => 'Omi sau đó đồng bộ hóa các tệp âm thanh với máy chủ';
+  String get auraSyncsAudioFiles => 'Omi sau đó đồng bộ hóa các tệp âm thanh với máy chủ';
 
   @override
   String get serverProcessesAudio => 'Máy chủ xử lý các tệp âm thanh và tạo ký ức';
@@ -3354,7 +3354,7 @@ class AppLocalizationsVi extends AppLocalizations {
   }
 
   @override
-  String get omisMemoryCleared => 'Bộ nhớ của Omi về bạn đã được xóa';
+  String get aurasMemoryCleared => 'Bộ nhớ của Omi về bạn đã được xóa';
 
   @override
   String get welcomeToOmi => 'Chào mừng đến với Omi';
@@ -3781,7 +3781,7 @@ class AppLocalizationsVi extends AppLocalizations {
   }
 
   @override
-  String get translatedByOmi => 'dịch bởi omi';
+  String get translatedByOmi => 'dịch bởi aura';
 
   @override
   String get backToConversations => 'Quay lại cuộc trò chuyện';
@@ -3882,7 +3882,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get showMeetingsInMenuBar => 'Hiển thị Cuộc họp trong Thanh Menu';
 
   @override
-  String get displayUpcomingMeetingsDescription => 'Hiển thị các cuộc họp sắp tới trong thanh menu';
+  String get displayUpcaurangMeetingsDescription => 'Hiển thị các cuộc họp sắp tới trong thanh menu';
 
   @override
   String get showEventsWithoutParticipants => 'Hiển thị Sự kiện Không có Người tham gia';
@@ -3891,7 +3891,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get includePersonalEventsDescription => 'Bao gồm các sự kiện cá nhân không có người tham dự';
 
   @override
-  String get upcomingMeetings => 'Cuộc họp sắp tới';
+  String get upcaurangMeetings => 'Cuộc họp sắp tới';
 
   @override
   String get checkingNext7Days => 'Kiểm tra 7 ngày tiếp theo';
@@ -4163,7 +4163,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get weekdaySun => 'CN';
 
   @override
-  String serviceIntegrationComingSoon(String serviceName) {
+  String serviceIntegrationCaurangSoon(String serviceName) {
     return 'Tích hợp $serviceName sắp ra mắt';
   }
 
@@ -4215,11 +4215,11 @@ class AppLocalizationsVi extends AppLocalizations {
   }
 
   @override
-  String get omiApiKeys => 'Khóa API Omi';
+  String get auraApiKeys => 'Khóa API Omi';
 
   @override
   String get apiKeysDescription =>
-      'Khóa API được sử dụng để xác thực khi ứng dụng của bạn giao tiếp với máy chủ OMI. Chúng cho phép ứng dụng của bạn tạo kỷ niệm và truy cập an toàn vào các dịch vụ OMI khác.';
+      'Khóa API được sử dụng để xác thực khi ứng dụng của bạn giao tiếp với máy chủ AURA. Chúng cho phép ứng dụng của bạn tạo kỷ niệm và truy cập an toàn vào các dịch vụ AURA khác.';
 
   @override
   String get aboutOmiApiKeys => 'Về khóa API Omi';
@@ -4378,7 +4378,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get e2eeTradeoff2 => '• Nếu bạn mất mật khẩu, dữ liệu của bạn không thể được khôi phục.';
 
   @override
-  String get featureComingSoon => 'Tính năng này sắp ra mắt!';
+  String get featureCaurangSoon => 'Tính năng này sắp ra mắt!';
 
   @override
   String get migrationInProgressMessage => 'Đang di chuyển. Bạn không thể thay đổi mức bảo vệ cho đến khi hoàn tất.';
@@ -4470,7 +4470,7 @@ class AppLocalizationsVi extends AppLocalizations {
   }
 
   @override
-  String get omiTraining => 'Huấn luyện Omi';
+  String get auraTraining => 'Huấn luyện Omi';
 
   @override
   String get trainingDataProgram => 'Chương trình dữ liệu huấn luyện';
@@ -4484,7 +4484,7 @@ class AppLocalizationsVi extends AppLocalizations {
       '• Dữ liệu của bạn giúp cải thiện các mô hình AI\n• Chỉ chia sẻ dữ liệu không nhạy cảm\n• Quy trình hoàn toàn minh bạch';
 
   @override
-  String get learnMoreAtOmiTraining => 'Tìm hiểu thêm tại omi.me/training';
+  String get learnMoreAtOmiTraining => 'Tìm hiểu thêm tại aura.me/training';
 
   @override
   String get agreeToContributeData => 'Tôi hiểu và đồng ý đóng góp dữ liệu của mình để huấn luyện AI';
@@ -4777,7 +4777,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get minutes => 'phút';
 
   @override
-  String get omiHas => 'Omi có:';
+  String get auraHas => 'Omi có:';
 
   @override
   String get premiumMinutesUsed => 'Đã sử dụng phút cao cấp.';
@@ -4806,7 +4806,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get selectZipFileToImport => 'Chọn tệp .zip để nhập!';
 
   @override
-  String get otherDevicesComingSoon => 'Các thiết bị khác sắp ra mắt';
+  String get otherDevicesCaurangSoon => 'Các thiết bị khác sắp ra mắt';
 
   @override
   String get deleteAllLimitlessConversations => 'Xóa tất cả cuộc hội thoại Limitless?';
@@ -5151,7 +5151,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get enableApps => 'Kích hoạt ứng dụng';
 
   @override
-  String get omiAppName => 'Omi';
+  String get auraAppName => 'Omi';
 
   @override
   String get showMore => 'xem thêm ↓';
@@ -5281,7 +5281,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get noSummary => 'Không có tóm tắt';
 
   @override
-  String get updateOmiFirmware => 'Cập nhật phần mềm omi';
+  String get updateOmiFirmware => 'Cập nhật phần mềm aura';
 
   @override
   String get anErrorOccurredTryAgain => 'Đã xảy ra lỗi. Vui lòng thử lại.';
@@ -5457,7 +5457,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get wrappedSwipeUpToBegin => 'Vuốt lên để bắt đầu';
 
   @override
-  String get wrappedShareText => 'Năm 2025 của tôi, được Omi ghi nhớ ✨ omi.me/wrapped';
+  String get wrappedShareText => 'Năm 2025 của tôi, được Omi ghi nhớ ✨ aura.me/wrapped';
 
   @override
   String get wrappedFailedToShare => 'Chia sẻ thất bại. Vui lòng thử lại.';
@@ -6230,7 +6230,7 @@ class AppLocalizationsVi extends AppLocalizations {
   }
 
   @override
-  String get omiTranscriptionOptimized =>
+  String get auraTranscriptionOptimized =>
       'Phiên âm trực tiếp tích hợp của Omi được tối ưu hóa cho các cuộc hội thoại thời gian thực với phát hiện người nói tự động và phân tách người nói.';
 
   @override
@@ -6946,7 +6946,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get almostDone => 'Gần xong...';
 
   @override
-  String get omiSays => 'Omi nói';
+  String get auraSays => 'Omi nói';
 
   @override
   String get analyzingYourData => 'Đang phân tích dữ liệu của bạn...';

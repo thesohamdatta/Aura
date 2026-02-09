@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 
 import 'package:growthbook_sdk_flutter/growthbook_sdk_flutter.dart';
 
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/env/env.dart';
-import 'package:omi/utils/logger.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/env/env.dart';
+import 'package:aura/utils/logger.dart';
 
 class GrowthbookUtil {
   static final GrowthbookUtil _instance = GrowthbookUtil._internal();
@@ -40,7 +40,7 @@ class GrowthbookUtil {
   }
 
   bool displayOmiFeedback() {
-    return (_gb?.feature('omi-feedback').on) ?? false;
+    return (_gb?.feature('aura-feedback').on) ?? false;
   }
 
   bool displayMemoriesSearchBar() {
@@ -49,7 +49,7 @@ class GrowthbookUtil {
 
   bool isOmiFeedbackEnabled() {
     if (_gb == null) return false;
-    if (_gb!.feature('omi-feedback').off) return false;
+    if (_gb!.feature('aura-feedback').off) return false;
     return SharedPreferencesUtil().optInEmotionalFeedback;
   }
 }

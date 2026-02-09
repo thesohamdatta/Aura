@@ -52,7 +52,7 @@ You are an SDK developer specializing in creating SDKs for Omi integrations, sup
 - `.cursor/rules/backend-architecture.mdc` - Backend architecture
 
 ### Skills
-- `.cursor/skills/omi-api-integration/` - API integration patterns
+- `.cursor/skills/aura-api-integration/` - API integration patterns
 
 ### Commands
 - `/backend-setup` - Setup backend for SDK testing
@@ -60,11 +60,11 @@ You are an SDK developer specializing in creating SDKs for Omi integrations, sup
 
 ### Documentation
 
-**The `docs/` folder is the single source of truth for all user-facing documentation, deployed at [docs.omi.me](https://docs.omi.me/).**
+**The `docs/` folder is the single source of truth for all user-facing documentation, deployed at [docs.aura.me](https://docs.aura.me/).**
 
 - **SDKs**: `sdks/`
-- **API Overview**: `docs/doc/developer/api/overview.mdx` - [View online](https://docs.omi.me/doc/developer/api/overview)
-- **API Endpoints**: `docs/api-reference/` - [View online](https://docs.omi.me/api-reference/)
-- **Python SDK**: `docs/doc/developer/sdk/python.mdx` - [View online](https://docs.omi.me/doc/developer/sdk/python)
-- **Swift SDK**: `docs/doc/developer/sdk/swift.mdx` - [View online](https://docs.omi.me/doc/developer/sdk/swift)
-- **React Native SDK**: `docs/doc/developer/sdk/ReactNative.mdx` - [View online](https://docs.omi.me/doc/developer/sdk/ReactNative)
+- **API Overview**: `docs/doc/developer/api/overview.mdx` - [View online](https://docs.aura.me/doc/developer/api/overview)
+- **API Endpoints**: `docs/api-reference/` - [View online](https://docs.aura.me/api-reference/)
+- **Python SDK**: `docs/doc/developer/sdk/python.mdx` - [View online](https://docs.aura.me/doc/developer/sdk/python)
+- **Swift SDK**: `docs/doc/developer/sdk/swift.mdx` - [View online](https://docs.aura.me/doc/developer/sdk/swift)
+- **React Native SDK**: `docs/doc/developer/sdk/ReactNative.mdx` - [View online](https://docs.aura.me/doc/developer/sdk/ReactNative)

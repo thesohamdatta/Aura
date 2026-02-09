@@ -1,4 +1,4 @@
-# Android CPU Profiling Guide for Omi App
+# Android CPU Profiling Guide for Aura App
 
 ## Overview
 
@@ -32,7 +32,7 @@ flutter run --profile --flavor dev
 ### 3. Measure CPU
 
 ```bash
-./scripts/measure_cpu_android.sh -p com.friend.ios.dev -n 15 -d 2 -o /tmp/omi_cpu_baseline.csv
+./scripts/measure_cpu_android.sh -p com.friend.ios.dev -n 15 -d 2 -o /tmp/aura_cpu_baseline.csv
 ```
 
 ## Measurement Methods
@@ -44,7 +44,7 @@ flutter run --profile --flavor dev
 
 # Examples:
 ./scripts/measure_cpu_android.sh -p com.friend.ios.dev -n 15 -d 2
-./scripts/measure_cpu_android.sh -p com.friend.ios.dev -n 20 -d 1 -o /tmp/omi_cpu_idle.csv
+./scripts/measure_cpu_android.sh -p com.friend.ios.dev -n 20 -d 1 -o /tmp/aura_cpu_idle.csv
 ```
 
 ### Method 2: Compare Two Builds

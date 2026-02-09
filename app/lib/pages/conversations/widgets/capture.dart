@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 
 import 'package:provider/provider.dart';
 
-import 'package:omi/backend/schema/bt_device/bt_device.dart';
-import 'package:omi/backend/schema/conversation.dart';
-import 'package:omi/backend/schema/transcript_segment.dart';
-import 'package:omi/pages/capture/widgets/widgets.dart';
-import 'package:omi/providers/capture_provider.dart';
-import 'package:omi/providers/device_provider.dart';
-import 'package:omi/utils/audio/wav_bytes.dart';
+import 'package:aura/backend/schema/bt_device/bt_device.dart';
+import 'package:aura/backend/schema/conversation.dart';
+import 'package:aura/backend/schema/transcript_segment.dart';
+import 'package:aura/pages/capture/widgets/widgets.dart';
+import 'package:aura/providers/capture_provider.dart';
+import 'package:aura/providers/device_provider.dart';
+import 'package:aura/utils/audio/wav_bytes.dart';
 
 class LiteCaptureWidget extends StatefulWidget {
   const LiteCaptureWidget({super.key});

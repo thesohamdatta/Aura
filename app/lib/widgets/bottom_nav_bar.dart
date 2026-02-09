@@ -4,13 +4,13 @@ import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 
-import 'package:omi/pages/conversation_capturing/page.dart';
-import 'package:omi/providers/capture_provider.dart';
-import 'package:omi/providers/device_provider.dart';
-import 'package:omi/providers/home_provider.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/enums.dart';
-import 'package:omi/utils/logger.dart';
+import 'package:aura/pages/conversation_capturing/page.dart';
+import 'package:aura/providers/capture_provider.dart';
+import 'package:aura/providers/device_provider.dart';
+import 'package:aura/providers/home_provider.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/enums.dart';
+import 'package:aura/utils/logger.dart';
 
 class BottomNavBar extends StatelessWidget {
   const BottomNavBar({
@@ -92,7 +92,7 @@ class BottomNavBar extends StatelessWidget {
                         ),
                       ),
                     ),
-                    // Center space for record button - only when no OMI device is connected
+                    // Center space for record button - only when no AURA device is connected
                     if (showCenterButton && !isOmiDeviceConnected) const SizedBox(width: 80),
                     // Memories tab
                     Expanded(
@@ -140,7 +140,7 @@ class BottomNavBar extends StatelessWidget {
                 ),
               ),
             ),
-            // Central Record Button - Only show when no OMI device is connected
+            // Central Record Button - Only show when no AURA device is connected
             if (!isOmiDeviceConnected)
               Positioned(
                 left: MediaQuery.of(context).size.width / 2 - 40,

@@ -5,13 +5,13 @@ import 'package:flutter/services.dart';
 
 import 'package:path_provider/path_provider.dart';
 
-import 'package:omi/models/stt_result.dart';
-import 'package:omi/services/custom_stt_log_service.dart';
-import 'package:omi/services/sockets/pure_polling.dart';
+import 'package:aura/models/stt_result.dart';
+import 'package:aura/services/custom_stt_log_service.dart';
+import 'package:aura/services/sockets/pure_polling.dart';
 
 class OnDeviceAppleProvider implements ISttProvider {
   final String language;
-  static const MethodChannel _channel = MethodChannel('com.omi.ios/speech');
+  static const MethodChannel _channel = MethodChannel('com.aura.ios/speech');
 
   OnDeviceAppleProvider({
     this.language = 'en',

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-import 'package:omi/backend/http/api/speech_profile.dart';
-import 'package:omi/backend/http/api/users.dart';
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/main.dart';
-import 'package:omi/pages/settings/language_selection_dialog.dart';
-import 'package:omi/utils/analytics/analytics_manager.dart';
-import 'package:omi/utils/logger.dart';
+import 'package:aura/backend/http/api/speech_profile.dart';
+import 'package:aura/backend/http/api/users.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/main.dart';
+import 'package:aura/pages/settings/language_selection_dialog.dart';
+import 'package:aura/utils/analytics/analytics_manager.dart';
+import 'package:aura/utils/logger.dart';
 
 class HomeProvider extends ChangeNotifier {
   int selectedIndex = 0;

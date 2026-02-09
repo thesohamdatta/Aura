@@ -6,8 +6,8 @@ import 'package:flutter/foundation.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter_blue_plus/flutter_blue_plus.dart';
 
-import 'package:omi/utils/bluetooth/bluetooth_adapter.dart';
-import 'package:omi/utils/logger.dart';
+import 'package:aura/utils/bluetooth/bluetooth_adapter.dart';
+import 'package:aura/utils/logger.dart';
 import 'device_transport.dart';
 
 class BleTransport extends DeviceTransport {

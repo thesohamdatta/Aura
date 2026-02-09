@@ -10,7 +10,7 @@ Analyze a specific pull request to extract lessons learned and update rules acco
 
 Examples:
 - `/learn-from-pr 3567`
-- `/learn-from-pr https://github.com/BasedHardware/omi/pull/3567`
+- `/learn-from-pr https://github.com/BasedHardware/aura/pull/3567`
 
 ## Process
 

@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 import 'package:provider/provider.dart';
 
-import 'package:omi/pages/settings/integration_settings_page.dart';
-import 'package:omi/providers/task_integration_provider.dart';
-import 'package:omi/services/clickup_service.dart';
-import 'package:omi/utils/l10n_extensions.dart';
+import 'package:aura/pages/settings/integration_settings_page.dart';
+import 'package:aura/providers/task_integration_provider.dart';
+import 'package:aura/services/clickup_service.dart';
+import 'package:aura/utils/l10n_extensions.dart';
 
 class ClickUpSettingsPage extends StatefulWidget {
   const ClickUpSettingsPage({super.key});

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'package:omi/backend/schema/memory.dart';
-import 'package:omi/providers/memories_provider.dart';
-import 'package:omi/utils/logger.dart';
-import 'package:omi/widgets/extensions/string.dart';
+import 'package:aura/backend/schema/memory.dart';
+import 'package:aura/providers/memories_provider.dart';
+import 'package:aura/utils/logger.dart';
+import 'package:aura/widgets/extensions/string.dart';
 import 'delete_confirmation.dart';
 
 class MemoryEditSheet extends StatefulWidget {

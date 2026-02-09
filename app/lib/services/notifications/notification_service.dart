@@ -4,9 +4,9 @@
 
 import 'dart:io' show Platform;
 
-import 'package:omi/services/notifications/notification_interface.dart';
-import 'package:omi/services/notifications/notification_service_basic.dart' as basic;
-import 'package:omi/services/notifications/notification_service_fcm.dart' as fcm;
+import 'package:aura/services/notifications/notification_interface.dart';
+import 'package:aura/services/notifications/notification_service_basic.dart' as basic;
+import 'package:aura/services/notifications/notification_service_fcm.dart' as fcm;
 
 /// Factory function to create the appropriate notification service based on platform capabilities
 NotificationInterface _createPlatformNotificationService() {

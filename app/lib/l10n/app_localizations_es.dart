@@ -550,7 +550,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get deviceInfoSection => 'Información del dispositivo';
 
   @override
-  String get customizationSection => 'Personalización';
+  String get custaurazationSection => 'Personalización';
 
   @override
   String get hardwareSection => 'Hardware';
@@ -757,7 +757,7 @@ class AppLocalizationsEs extends AppLocalizations {
   }
 
   @override
-  String get shareStatsMessage => '¡Compartiendo mis estadísticas de Omi! (omi.me - mi asistente IA siempre activo)';
+  String get shareStatsMessage => '¡Compartiendo mis estadísticas de Omi! (aura.me - mi asistente IA siempre activo)';
 
   @override
   String get sharePeriodToday => 'Hoy Omi:';
@@ -804,7 +804,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get noLogFilesFound => 'No se encontraron archivos de registro.';
 
   @override
-  String get omiDebugLog => 'Registro de depuración Omi';
+  String get auraDebugLog => 'Registro de depuración Omi';
 
   @override
   String get logShared => 'Registro compartido';
@@ -1016,7 +1016,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get connect => 'Connect';
 
   @override
-  String get comingSoon => 'Próximamente';
+  String get caurangSoon => 'Próximamente';
 
   @override
   String get integrationsFooter => 'Conecta tus apps para ver datos y métricas en el chat.';
@@ -1197,7 +1197,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get refresh => 'Actualizar';
 
   @override
-  String get noUpcomingMeetings => 'No hay reuniones próximas';
+  String get noUpcaurangMeetings => 'No hay reuniones próximas';
 
   @override
   String get checkingNextDays => 'Revisando los próximos 30 días';
@@ -1206,7 +1206,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get tomorrow => 'Mañana';
 
   @override
-  String get googleCalendarComingSoon => '¡Integración con Google Calendar pronto!';
+  String get googleCalendarCaurangSoon => '¡Integración con Google Calendar pronto!';
 
   @override
   String connectedAsUser(String userId) {
@@ -1430,7 +1430,7 @@ class AppLocalizationsEs extends AppLocalizations {
   }
 
   @override
-  String integrationComingSoon(String appName) {
+  String integrationCaurangSoon(String appName) {
     return '¡Integración con $appName pronto!';
   }
 
@@ -1459,7 +1459,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get freeMinutesMonth => '1.200 minutos gratis/mes incluidos.';
 
   @override
-  String get omiUnlimited => 'Omi Ilimitado';
+  String get auraUnlimited => 'Omi Ilimitado';
 
   @override
   String get hostRequired => 'Host es requerido';
@@ -1581,7 +1581,7 @@ class AppLocalizationsEs extends AppLocalizations {
   }
 
   @override
-  String get omiTranscription => 'Transcripción Omi';
+  String get auraTranscription => 'Transcripción Omi';
 
   @override
   String get bestInClassTranscription => 'Transcripción de primera clase';
@@ -1879,7 +1879,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get termsOfUse => 'Términos de uso';
 
   @override
-  String get omiYourAiCompanion => 'Omi – Tu compañero IA';
+  String get auraYourAiCompanion => 'Omi – Tu compañero IA';
 
   @override
   String get captureEveryMoment => 'Captura cada momento. Obtén resúmenes IA.';
@@ -2394,7 +2394,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get privacyPolicyTitle => 'Política de privacidad';
 
   @override
-  String get omiSttProvider => 'Omi';
+  String get auraSttProvider => 'Omi';
 
   @override
   String labelCopied(String label) {
@@ -2552,7 +2552,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get checksForAudioFiles => 'Comprueba archivos de audio en la tarjeta SD';
 
   @override
-  String get omiSyncsAudioFiles => 'Omi luego sincroniza los archivos de audio con el servidor';
+  String get auraSyncsAudioFiles => 'Omi luego sincroniza los archivos de audio con el servidor';
 
   @override
   String get serverProcessesAudio => 'El servidor procesa los archivos de audio y crea recuerdos';
@@ -2642,7 +2642,7 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get startCapturingConversations =>
-      'Comienza a capturar conversaciones con tu dispositivo Omi para verlas aquí.';
+      'Cauraenza a capturar conversaciones con tu dispositivo Omi para verlas aquí.';
 
   @override
   String get useMobileAppToCapture => 'Usa tu aplicación móvil para capturar audio';
@@ -2878,7 +2878,7 @@ class AppLocalizationsEs extends AppLocalizations {
       'Tu aplicación será revisada y estará disponible para ti de forma privada. Puedes comenzar a usarla inmediatamente, ¡incluso durante la revisión!';
 
   @override
-  String get startEarning => '¡Comienza a ganar! 💰';
+  String get startEarning => '¡Cauraenza a ganar! 💰';
 
   @override
   String get connectStripeOrPayPal => 'Conecta Stripe o PayPal para recibir pagos por tu aplicación.';
@@ -3062,7 +3062,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get connectionNeeded => '🌐 Conexión necesaria';
 
   @override
-  String get startConversation => 'Comienza una conversación y deja que la magia comience';
+  String get startConversation => 'Cauraenza una conversación y deja que la magia cauraence';
 
   @override
   String get checkInternetConnection => 'Por favor, verifica tu conexión a Internet';
@@ -3336,7 +3336,7 @@ class AppLocalizationsEs extends AppLocalizations {
   }
 
   @override
-  String get omisMemoryCleared => 'La memoria de Omi sobre ti ha sido borrada';
+  String get aurasMemoryCleared => 'La memoria de Omi sobre ti ha sido borrada';
 
   @override
   String get welcomeToOmi => 'Bienvenido a Omi';
@@ -3673,7 +3673,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get settingUp => 'Configurando...';
 
   @override
-  String get startYourFirstRecording => 'Comienza tu primera grabación';
+  String get startYourFirstRecording => 'Cauraenza tu primera grabación';
 
   @override
   String get preparingSystemAudioCapture => 'Preparando captura de audio del sistema';
@@ -3765,7 +3765,7 @@ class AppLocalizationsEs extends AppLocalizations {
   }
 
   @override
-  String get translatedByOmi => 'traducido por omi';
+  String get translatedByOmi => 'traducido por aura';
 
   @override
   String get backToConversations => 'Volver a conversaciones';
@@ -3866,7 +3866,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get showMeetingsInMenuBar => 'Mostrar Reuniones en la Barra de Menú';
 
   @override
-  String get displayUpcomingMeetingsDescription => 'Mostrar las próximas reuniones en la barra de menú';
+  String get displayUpcaurangMeetingsDescription => 'Mostrar las próximas reuniones en la barra de menú';
 
   @override
   String get showEventsWithoutParticipants => 'Mostrar Eventos sin Participantes';
@@ -3875,7 +3875,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get includePersonalEventsDescription => 'Incluir eventos personales sin asistentes';
 
   @override
-  String get upcomingMeetings => 'Reuniones próximas';
+  String get upcaurangMeetings => 'Reuniones próximas';
 
   @override
   String get checkingNext7Days => 'Verificando los próximos 7 días';
@@ -4149,7 +4149,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get weekdaySun => 'Dom';
 
   @override
-  String serviceIntegrationComingSoon(String serviceName) {
+  String serviceIntegrationCaurangSoon(String serviceName) {
     return 'Integración con $serviceName próximamente';
   }
 
@@ -4201,11 +4201,11 @@ class AppLocalizationsEs extends AppLocalizations {
   }
 
   @override
-  String get omiApiKeys => 'Claves API de Omi';
+  String get auraApiKeys => 'Claves API de Omi';
 
   @override
   String get apiKeysDescription =>
-      'Las claves API se utilizan para la autenticación cuando tu aplicación se comunica con el servidor de OMI. Permiten que tu aplicación cree recuerdos y acceda a otros servicios de OMI de forma segura.';
+      'Las claves API se utilizan para la autenticación cuando tu aplicación se comunica con el servidor de AURA. Permiten que tu aplicación cree recuerdos y acceda a otros servicios de AURA de forma segura.';
 
   @override
   String get aboutOmiApiKeys => 'Acerca de las claves API de Omi';
@@ -4364,7 +4364,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get e2eeTradeoff2 => '• Si pierdes tu contraseña, tus datos no se pueden recuperar.';
 
   @override
-  String get featureComingSoon => '¡Esta función estará disponible pronto!';
+  String get featureCaurangSoon => '¡Esta función estará disponible pronto!';
 
   @override
   String get migrationInProgressMessage =>
@@ -4458,7 +4458,7 @@ class AppLocalizationsEs extends AppLocalizations {
   }
 
   @override
-  String get omiTraining => 'Entrenamiento Omi';
+  String get auraTraining => 'Entrenamiento Omi';
 
   @override
   String get trainingDataProgram => 'Programa de datos de entrenamiento';
@@ -4471,7 +4471,7 @@ class AppLocalizationsEs extends AppLocalizations {
       '• Tus datos ayudan a mejorar los modelos de IA\n• Solo se comparten datos no sensibles\n• Proceso completamente transparente';
 
   @override
-  String get learnMoreAtOmiTraining => 'Aprende más en omi.me/training';
+  String get learnMoreAtOmiTraining => 'Aprende más en aura.me/training';
 
   @override
   String get agreeToContributeData => 'Entiendo y acepto contribuir mis datos para el entrenamiento de IA';
@@ -4643,7 +4643,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get optInAndOptOutOptions => 'Opciones de aceptación y rechazo';
 
   @override
-  String get ourCommitment => 'Nuestro compromiso';
+  String get ourCommitment => 'Nuestro comprauraso';
 
   @override
   String get commitmentText =>
@@ -4763,7 +4763,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get minutes => 'minutos';
 
   @override
-  String get omiHas => 'Omi tiene:';
+  String get auraHas => 'Omi tiene:';
 
   @override
   String get premiumMinutesUsed => 'Minutos premium utilizados.';
@@ -4792,7 +4792,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get selectZipFileToImport => '¡Selecciona el archivo .zip para importar!';
 
   @override
-  String get otherDevicesComingSoon => 'Otros dispositivos próximamente';
+  String get otherDevicesCaurangSoon => 'Otros dispositivos próximamente';
 
   @override
   String get deleteAllLimitlessConversations => '¿Eliminar todas las conversaciones de Limitless?';
@@ -5140,7 +5140,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get enableApps => 'Habilitar apps';
 
   @override
-  String get omiAppName => 'Omi';
+  String get auraAppName => 'Omi';
 
   @override
   String get showMore => 'mostrar más ↓';
@@ -5271,7 +5271,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get noSummary => 'Sin resumen';
 
   @override
-  String get updateOmiFirmware => 'Actualizar firmware de omi';
+  String get updateOmiFirmware => 'Actualizar firmware de aura';
 
   @override
   String get anErrorOccurredTryAgain => 'Ocurrió un error. Por favor, inténtalo de nuevo.';
@@ -5369,7 +5369,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get wrappedCelebrity => 'CELEBRIDAD';
 
   @override
-  String get wrappedFood => 'COMIDA';
+  String get wrappedFood => 'CAURADA';
 
   @override
   String get wrappedMovieRecs => 'Recomendaciones de películas';
@@ -5447,7 +5447,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get wrappedSwipeUpToBegin => 'Desliza hacia arriba para comenzar';
 
   @override
-  String get wrappedShareText => 'Mi 2025, recordado por Omi ✨ omi.me/wrapped';
+  String get wrappedShareText => 'Mi 2025, recordado por Omi ✨ aura.me/wrapped';
 
   @override
   String get wrappedFailedToShare => 'Error al compartir. Por favor, inténtalo de nuevo.';
@@ -6107,7 +6107,7 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get largeModelWarning =>
-      'Este modelo es grande y puede bloquear la aplicación o funcionar muy lento en dispositivos móviles.\n\nSe recomienda \"small\" o \"base\".';
+      'Este modelo es grande y puede bloquear la aplicación o funcionar muy lento en dispositivos móviles.\n\nSe recauraenda \"small\" o \"base\".';
 
   @override
   String get usingNativeIosSpeech => 'Usando reconocimiento de voz nativo de iOS';
@@ -6188,7 +6188,7 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get modelTooLargeWarning =>
-      'Este modelo es grande y puede causar que la aplicación se bloquee o funcione muy lentamente en dispositivos móviles.\n\nSe recomienda small o base.';
+      'Este modelo es grande y puede causar que la aplicación se bloquee o funcione muy lentamente en dispositivos móviles.\n\nSe recauraenda small o base.';
 
   @override
   String get nativeEngineNoDownload =>
@@ -6228,7 +6228,7 @@ class AppLocalizationsEs extends AppLocalizations {
   }
 
   @override
-  String get omiTranscriptionOptimized =>
+  String get auraTranscriptionOptimized =>
       'La transcripción en vivo integrada de Omi está optimizada para conversaciones en tiempo real con detección automática de hablantes y diarización.';
 
   @override
@@ -6945,7 +6945,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get almostDone => 'Almost done...';
 
   @override
-  String get omiSays => 'omi says';
+  String get auraSays => 'aura says';
 
   @override
   String get analyzingYourData => 'Analizando tus datos...';

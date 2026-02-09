@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/services/wals/wal_interfaces.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/services/wals/wal_interfaces.dart';
 
 /// Represents the current step of WiFi connection process
 enum WifiConnectionStep {

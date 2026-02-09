@@ -42,12 +42,12 @@ modal deploy
 
 1. **Build Docker image**
    ```bash
-   docker build -t omi-backend .
+   docker build -t aura-backend .
    ```
 
 2. **Run container**
    ```bash
-   docker run -p 8000:8000 --env-file .env omi-backend
+   docker run -p 8000:8000 --env-file .env aura-backend
    ```
 
 ## Environment Variables
@@ -95,7 +95,7 @@ Ensure all required environment variables are set:
 - `.cursor/rules/memory-management.mdc` - Memory management
 
 ### Skills
-- `.cursor/skills/omi-backend-patterns/` - Backend patterns
+- `.cursor/skills/aura-backend-patterns/` - Backend patterns
 
 ### Commands
 - `/backend-setup` - Setup backend environment

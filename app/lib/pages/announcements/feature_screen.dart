@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 
-import 'package:omi/models/announcement.dart';
-import 'package:omi/utils/responsive/responsive_helper.dart';
+import 'package:aura/models/announcement.dart';
+import 'package:aura/utils/responsive/responsive_helper.dart';
 
 class FeatureScreen extends StatefulWidget {
   final Announcement feature;

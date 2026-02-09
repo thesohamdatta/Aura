@@ -4,28 +4,28 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/backend/schema/bt_device/bt_device.dart';
-import 'package:omi/backend/schema/message_event.dart';
-import 'package:omi/backend/schema/transcript_segment.dart';
-import 'package:omi/env/env.dart';
-import 'package:omi/models/custom_stt_config.dart';
-import 'package:omi/models/stt_provider.dart';
-import 'package:omi/services/notifications.dart';
-import 'package:omi/services/sockets/on_device_apple_provider.dart';
-import 'package:omi/services/sockets/on_device_whisper_provider.dart';
-import 'package:omi/services/sockets/pure_socket.dart';
-import 'package:omi/services/sockets/transcription_service.dart';
-import 'package:omi/utils/debug_log_manager.dart';
-import 'package:omi/utils/logger.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/backend/schema/bt_device/bt_device.dart';
+import 'package:aura/backend/schema/message_event.dart';
+import 'package:aura/backend/schema/transcript_segment.dart';
+import 'package:aura/env/env.dart';
+import 'package:aura/models/custom_stt_config.dart';
+import 'package:aura/models/stt_provider.dart';
+import 'package:aura/services/notifications.dart';
+import 'package:aura/services/sockets/on_device_apple_provider.dart';
+import 'package:aura/services/sockets/on_device_whisper_provider.dart';
+import 'package:aura/services/sockets/pure_socket.dart';
+import 'package:aura/services/sockets/transcription_service.dart';
+import 'package:aura/utils/debug_log_manager.dart';
+import 'package:aura/utils/logger.dart';
 
-export 'package:omi/utils/audio/audio_transcoder.dart';
-export 'package:omi/services/sockets/composite_transcription_socket.dart';
-export 'package:omi/services/sockets/pure_polling.dart';
-export 'package:omi/services/sockets/pure_streaming_stt.dart';
-export 'package:omi/models/stt_response_schema.dart';
-export 'package:omi/models/stt_result.dart';
-export 'package:omi/services/sockets/transcription_polling_service.dart';
+export 'package:aura/utils/audio/audio_transcoder.dart';
+export 'package:aura/services/sockets/composite_transcription_socket.dart';
+export 'package:aura/services/sockets/pure_polling.dart';
+export 'package:aura/services/sockets/pure_streaming_stt.dart';
+export 'package:aura/models/stt_response_schema.dart';
+export 'package:aura/models/stt_result.dart';
+export 'package:aura/services/sockets/transcription_polling_service.dart';
 
 abstract interface class ITransctiptSegmentSocketServiceListener {
   void onMessageEventReceived(MessageEvent event);
@@ -277,7 +277,7 @@ class TranscriptSocketServiceFactory {
       language,
       includeSpeechProfile: includeSpeechProfile,
       source: source,
-      sttConfigId: sttConfigId ?? 'omi:default',
+      sttConfigId: sttConfigId ?? 'aura:default',
     );
   }
 

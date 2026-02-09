@@ -13,12 +13,12 @@ import 'package:path_provider/path_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:share_plus/share_plus.dart';
 
-import 'package:omi/models/subscription.dart';
-import 'package:omi/models/user_usage.dart';
-import 'package:omi/pages/settings/transcription_settings_page.dart';
-import 'package:omi/pages/settings/widgets/plans_sheet.dart';
-import 'package:omi/providers/usage_provider.dart';
-import 'package:omi/utils/l10n_extensions.dart';
+import 'package:aura/models/subscription.dart';
+import 'package:aura/models/user_usage.dart';
+import 'package:aura/pages/settings/transcription_settings_page.dart';
+import 'package:aura/pages/settings/widgets/plans_sheet.dart';
+import 'package:aura/providers/usage_provider.dart';
+import 'package:aura/utils/l10n_extensions.dart';
 
 class UsagePage extends StatefulWidget {
   final bool showUpgradeDialog;
@@ -72,7 +72,7 @@ class _UsagePageState extends State<UsagePage> with TickerProviderStateMixin {
     // Prepare the watermark text
     final textPainter = TextPainter(
       text: TextSpan(
-        text: 'omi.me',
+        text: 'aura.me',
         style: TextStyle(
           color: Colors.white.withValues(alpha: 0.8),
           fontSize: 14 * 3.0, // Scale font size with pixelRatio
@@ -109,7 +109,7 @@ class _UsagePageState extends State<UsagePage> with TickerProviderStateMixin {
     final Uint8List pngBytes = byteData!.buffer.asUint8List();
 
     final tempDir = await getTemporaryDirectory();
-    final file = await File('${tempDir.path}/omi_usage.png').create();
+    final file = await File('${tempDir.path}/aura_usage.png').create();
     await file.writeAsBytes(pngBytes);
 
     final period = _getPeriodForIndex(_tabController.index);
@@ -167,7 +167,7 @@ class _UsagePageState extends State<UsagePage> with TickerProviderStateMixin {
         } else if (periodTitle == l10n.allTime) {
           periodText = l10n.sharePeriodAllTime;
         } else {
-          periodText = l10n.omiHas;
+          periodText = l10n.auraHas;
         }
         shareText = '$baseText\n\n$periodText\n${funStats.join('\n')}';
       } else {

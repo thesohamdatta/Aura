@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/pages/payments/payments_page.dart';
-import 'package:omi/pages/settings/change_name_widget.dart';
-import 'package:omi/pages/settings/language_settings_page.dart';
-import 'package:omi/pages/settings/custom_vocabulary_page.dart';
-import 'package:omi/pages/settings/people.dart';
-import 'package:omi/pages/settings/data_privacy_page.dart';
-import 'package:omi/pages/speech_profile/page.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/pages/payments/payments_page.dart';
+import 'package:aura/pages/settings/change_name_widget.dart';
+import 'package:aura/pages/settings/language_settings_page.dart';
+import 'package:aura/pages/settings/custom_vocabulary_page.dart';
+import 'package:aura/pages/settings/people.dart';
+import 'package:aura/pages/settings/data_privacy_page.dart';
+import 'package:aura/pages/speech_profile/page.dart';
 
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/other/temp.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/other/temp.dart';
 
 
-import 'package:omi/pages/settings/conversation_display_settings.dart';
+import 'package:aura/pages/settings/conversation_display_settings.dart';
 
 import 'delete_account.dart';
 

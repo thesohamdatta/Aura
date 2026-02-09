@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 
 import 'package:provider/provider.dart';
 
-import 'package:omi/pages/home/page.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/pages/onboarding/find_device/page.dart';
-import 'package:omi/pages/settings/device_settings.dart';
-import 'package:omi/providers/onboarding_provider.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/logger.dart';
-import 'package:omi/utils/other/temp.dart';
-import 'package:omi/widgets/device_widget.dart';
+import 'package:aura/pages/home/page.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/pages/onboarding/find_device/page.dart';
+import 'package:aura/pages/settings/device_settings.dart';
+import 'package:aura/providers/onboarding_provider.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/logger.dart';
+import 'package:aura/utils/other/temp.dart';
+import 'package:aura/widgets/device_widget.dart';
 
 class ConnectDevicePage extends StatefulWidget {
   const ConnectDevicePage({super.key});

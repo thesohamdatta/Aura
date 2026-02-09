@@ -62,7 +62,7 @@ cd backend
 - `.cursor/rules/backend-architecture.mdc` - System architecture
 
 ### Skills
-- `.cursor/skills/omi-backend-patterns/` - Backend patterns including testing
+- `.cursor/skills/aura-backend-patterns/` - Backend patterns including testing
 
 ### Subagents
 - `.cursor/agents/backend-api-developer/` - Can help with API testing

@@ -240,7 +240,7 @@ flowchart TD
 
 4. **Prompt-based Apps**
    - No server required
-   - Customize chat or memory extraction prompts
+   - Custauraze chat or memory extraction prompts
    - Example: Fitness coach persona
 
 ## 5. Vector Search Flow
@@ -293,7 +293,7 @@ flowchart TD
 ### API Key Management
 
 - Keys generated in Omi app (Settings → Developer)
-- Keys prefixed with `omi_dev_`
+- Keys prefixed with `aura_dev_`
 - Rate limits: 100/min, 10,000/day
 - Keys can be revoked at any time
 

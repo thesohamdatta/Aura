@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:provider/provider.dart';
 
-import 'package:omi/providers/conversation_provider.dart';
-import 'package:omi/providers/device_provider.dart';
+import 'package:aura/providers/conversation_provider.dart';
+import 'package:aura/providers/device_provider.dart';
 import 'desktop_home_page.dart';
 
 class DesktopHomePageWrapper extends StatefulWidget {
@@ -21,7 +21,7 @@ class _DesktopHomePageWrapperState extends State<DesktopHomePageWrapper> {
   void initState() {
     WidgetsBinding.instance.addPostFrameCallback((_) async {
       if (mounted) {
-        context.read<DeviceProvider>().periodicConnect('coming from DesktopHomePageWrapper', boundDeviceOnly: true);
+        context.read<DeviceProvider>().periodicConnect('caurang from DesktopHomePageWrapper', boundDeviceOnly: true);
       }
       if (mounted) {
         await context.read<ConversationProvider>().getInitialConversations();

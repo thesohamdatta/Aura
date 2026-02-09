@@ -12,13 +12,13 @@ import 'package:path_provider/path_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:uuid/uuid.dart';
 
-import 'package:omi/backend/http/api/device.dart';
-import 'package:omi/backend/http/shared.dart';
-import 'package:omi/backend/schema/bt_device/bt_device.dart';
-import 'package:omi/providers/device_provider.dart';
-import 'package:omi/utils/device.dart';
-import 'package:omi/utils/logger.dart';
-import 'package:omi/utils/manifest/manifest.dart';
+import 'package:aura/backend/http/api/device.dart';
+import 'package:aura/backend/http/shared.dart';
+import 'package:aura/backend/schema/bt_device/bt_device.dart';
+import 'package:aura/providers/device_provider.dart';
+import 'package:aura/utils/device.dart';
+import 'package:aura/utils/logger.dart';
+import 'package:aura/utils/manifest/manifest.dart';
 
 mixin FirmwareMixin<T extends StatefulWidget> on State<T> {
   Map latestFirmwareDetails = {};

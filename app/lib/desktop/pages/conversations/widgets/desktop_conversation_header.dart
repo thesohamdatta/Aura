@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/responsive/responsive_helper.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/responsive/responsive_helper.dart';
 
 class DesktopConversationHeader extends StatefulWidget {
   const DesktopConversationHeader({super.key});

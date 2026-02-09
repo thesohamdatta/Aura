@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 
 import 'package:opus_dart/opus_dart.dart';
 
-import 'package:omi/backend/schema/bt_device/bt_device.dart';
-import 'package:omi/utils/audio/wav_bytes.dart';
-import 'package:omi/utils/logger.dart';
+import 'package:aura/backend/schema/bt_device/bt_device.dart';
+import 'package:aura/utils/audio/wav_bytes.dart';
+import 'package:aura/utils/logger.dart';
 
 abstract class IAudioTranscoder {
   Uint8List transcode(Uint8List audioData);

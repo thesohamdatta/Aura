@@ -2,15 +2,15 @@ import 'dart:async';
 
 import 'package:flutter/foundation.dart';
 
-import 'package:omi/backend/schema/conversation.dart';
-import 'package:omi/services/services.dart';
-import 'package:omi/services/wals.dart';
-import 'package:omi/utils/logger.dart';
-import 'package:omi/utils/other/time_utils.dart';
-import 'package:omi/models/sync_state.dart';
-import 'package:omi/utils/audio_player_utils.dart';
-import 'package:omi/utils/conversation_sync_utils.dart';
-import 'package:omi/utils/waveform_utils.dart';
+import 'package:aura/backend/schema/conversation.dart';
+import 'package:aura/services/services.dart';
+import 'package:aura/services/wals.dart';
+import 'package:aura/utils/logger.dart';
+import 'package:aura/utils/other/time_utils.dart';
+import 'package:aura/models/sync_state.dart';
+import 'package:aura/utils/audio_player_utils.dart';
+import 'package:aura/utils/conversation_sync_utils.dart';
+import 'package:aura/utils/waveform_utils.dart';
 
 class SyncProvider extends ChangeNotifier implements IWalServiceListener, IWalSyncProgressListener {
   // Services

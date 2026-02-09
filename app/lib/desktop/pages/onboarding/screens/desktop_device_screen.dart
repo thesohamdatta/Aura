@@ -1,6 +1,6 @@
 // import 'package:flutter/material.dart';
-// import 'package:omi/backend/schema/bt_device/bt_device.dart';
-// import 'package:omi/providers/onboarding_provider.dart';
+// import 'package:aura/backend/schema/bt_device/bt_device.dart';
+// import 'package:aura/providers/onboarding_provider.dart';
 // import 'package:provider/provider.dart';
 
 // class DesktopDeviceScreen extends StatefulWidget {

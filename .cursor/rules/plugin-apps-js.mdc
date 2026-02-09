@@ -81,7 +81,7 @@ app.post('/webhook/transcript', async (req, res) => {
     const { text, timestamp, conversation_id, user_id } = req.body;
     
     // Process transcript segment in real-time
-    if (text.toLowerCase().includes('hey omi')) {
+    if (text.toLowerCase().includes('hey aura')) {
       await triggerAction();
     }
     
@@ -107,7 +107,7 @@ const axios = require('axios');
 async function createMemory(apiKey, content, category) {
   try {
     const response = await axios.post(
-      'https://api.omi.me/v1/dev/user/memories',
+      'https://api.aura.me/v1/dev/user/memories',
       {
         content,
         category,
@@ -134,7 +134,7 @@ async function createMemory(apiKey, content, category) {
 async function createMemoriesBatch(apiKey, memories) {
   try {
     const response = await axios.post(
-      'https://api.omi.me/v1/dev/user/memories/batch',
+      'https://api.aura.me/v1/dev/user/memories/batch',
       { memories },
       {
         headers: {
@@ -195,7 +195,7 @@ function verifyWebhookSignature(payload, signature, secret) {
 }
 
 app.post('/webhook/memory-created', express.raw({ type: 'application/json' }), (req, res) => {
-  const signature = req.headers['x-omi-signature'];
+  const signature = req.headers['x-aura-signature'];
   
   if (!verifyWebhookSignature(req.body, signature, process.env.WEBHOOK_SECRET)) {
     return res.status(401).json({ error: 'Invalid signature' });
@@ -223,8 +223,8 @@ app.post('/webhook/memory-created', express.raw({ type: 'application/json' }), (
 - `.cursor/rules/backend-api-patterns.mdc` - Backend API patterns
 
 ### Skills
-- `.cursor/skills/omi-plugin-development/` - Plugin development workflows
-- `.cursor/skills/omi-api-integration/` - API integration patterns
+- `.cursor/skills/aura-plugin-development/` - Plugin development workflows
+- `.cursor/skills/aura-api-integration/` - API integration patterns
 
 ### Subagents
 - `.cursor/agents/plugin-developer/` - Plugin development specialist

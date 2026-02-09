@@ -7,12 +7,12 @@ import 'package:flutter/services.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:pull_down_button/pull_down_button.dart';
-import 'package:omi/widgets/shimmer_with_timeout.dart';
+import 'package:aura/widgets/shimmer_with_timeout.dart';
 
-import 'package:omi/backend/http/api/imports.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/logger.dart';
+import 'package:aura/backend/http/api/imports.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/logger.dart';
 
 class ImportHistoryPage extends StatefulWidget {
   const ImportHistoryPage({super.key});
@@ -354,7 +354,7 @@ class _ImportHistoryPageState extends State<ImportHistoryPage> {
                             borderRadius: BorderRadius.circular(4),
                           ),
                           child: Text(
-                            context.l10n.comingSoon,
+                            context.l10n.caurangSoon,
                             style: TextStyle(
                               color: Colors.grey.shade400,
                               fontSize: 10,
@@ -425,7 +425,7 @@ class _ImportHistoryPageState extends State<ImportHistoryPage> {
           isAvailable: true,
           onTap: _isUploading ? () {} : _startLimitlessImport,
         ),
-        // Coming soon placeholder
+        // Caurang soon placeholder
         Container(
           margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
           padding: const EdgeInsets.all(16),
@@ -447,7 +447,7 @@ class _ImportHistoryPageState extends State<ImportHistoryPage> {
               const SizedBox(width: 16),
               Expanded(
                 child: Text(
-                  context.l10n.otherDevicesComingSoon,
+                  context.l10n.otherDevicesCaurangSoon,
                   style: TextStyle(
                     color: Colors.grey.shade500,
                     fontSize: 14,

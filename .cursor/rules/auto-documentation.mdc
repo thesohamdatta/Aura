@@ -53,11 +53,11 @@ When functions or classes are significantly changed:
 
 ## Documentation Sync
 
-**The `docs/` folder is the single source of truth for all user-facing documentation, deployed at [docs.omi.me](https://docs.omi.me/).**
+**The `docs/` folder is the single source of truth for all user-facing documentation, deployed at [docs.aura.me](https://docs.aura.me/).**
 
 - All updates should target `docs/` folder files directly
 - Ensure consistency across documentation locations
-- Update cross-references and links to match docs.omi.me URLs
+- Update cross-references and links to match docs.aura.me URLs
 - Validate documentation structure matches deployed site
 
 ## Workflow

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:webview_flutter/webview_flutter.dart';
 
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/l10n_extensions.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/l10n_extensions.dart';
 
 class ReferralPage extends StatefulWidget {
   const ReferralPage({super.key});
@@ -39,7 +39,7 @@ class _ReferralPageState extends State<ReferralPage> {
             },
           ),
         )
-        ..loadRequest(Uri.parse('https://affiliate.omi.me/'));
+        ..loadRequest(Uri.parse('https://affiliate.aura.me/'));
 
       setState(() {
         _controller = controller;

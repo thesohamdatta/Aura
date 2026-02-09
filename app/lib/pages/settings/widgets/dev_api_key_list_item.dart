@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 
-import 'package:omi/backend/schema/dev_api_key.dart';
-import 'package:omi/providers/dev_api_key_provider.dart';
-import 'package:omi/utils/l10n_extensions.dart';
+import 'package:aura/backend/schema/dev_api_key.dart';
+import 'package:aura/providers/dev_api_key_provider.dart';
+import 'package:aura/utils/l10n_extensions.dart';
 
 class DevApiKeyListItem extends StatelessWidget {
   final DevApiKey apiKey;

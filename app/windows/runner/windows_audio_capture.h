@@ -9,7 +9,7 @@
 #include <vector>
 #include <memory>
 #include <thread>
-#include <atomic>
+#include <ataurac>
 #include <flutter/method_channel.h>
 #include <flutter/plugin_registrar_windows.h>
 #include <flutter/standard_method_codec.h>
@@ -61,8 +61,8 @@ private:
 
     // Threading
     std::thread capture_thread_;
-    std::atomic<bool> is_capturing_;
-    std::atomic<bool> should_stop_;
+    std::ataurac<bool> is_capturing_;
+    std::ataurac<bool> should_stop_;
 
     // Method channel for communication with Flutter
     std::shared_ptr<flutter::MethodChannel<flutter::EncodableValue>> method_channel_;
@@ -76,7 +76,7 @@ private:
     static const int TARGET_PACKET_INTERVAL_MS = 100; // Send packets every 100ms
     
     // Device change detection and recovery
-    std::atomic<bool> device_invalidated_;
+    std::ataurac<bool> device_invalidated_;
     std::chrono::steady_clock::time_point last_device_check_;
     static const int DEVICE_CHECK_INTERVAL_MS = 4000; // Check device health every 4 seconds
 

@@ -4,23 +4,23 @@ import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
-import 'package:omi/widgets/shimmer_with_timeout.dart';
+import 'package:aura/widgets/shimmer_with_timeout.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/gen/assets.gen.dart';
-import 'package:omi/models/subscription.dart';
-import 'package:omi/pages/settings/transcription_settings_page.dart';
-import 'package:omi/providers/capture_provider.dart';
-import 'package:omi/providers/usage_provider.dart';
-import 'package:omi/providers/user_provider.dart';
-import 'package:omi/services/freemium_transcription_service.dart';
-import 'package:omi/utils/alerts/app_snackbar.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/logger.dart';
-import 'package:omi/widgets/confirmation_dialog.dart';
-import 'package:omi/pages/settings/payment_webview_page.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/gen/assets.gen.dart';
+import 'package:aura/models/subscription.dart';
+import 'package:aura/pages/settings/transcription_settings_page.dart';
+import 'package:aura/providers/capture_provider.dart';
+import 'package:aura/providers/usage_provider.dart';
+import 'package:aura/providers/user_provider.dart';
+import 'package:aura/services/freemium_transcription_service.dart';
+import 'package:aura/utils/alerts/app_snackbar.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/logger.dart';
+import 'package:aura/widgets/confirmation_dialog.dart';
+import 'package:aura/pages/settings/payment_webview_page.dart';
 
 class PlansSheet extends StatefulWidget {
   final AnimationController waveController;
@@ -88,7 +88,7 @@ class _PlansSheetState extends State<PlansSheet> {
           backgroundColor: const Color(0xFF1F1F25),
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
           title: Text(
-            context.l10n.omiTraining,
+            context.l10n.auraTraining,
             style: const TextStyle(
               color: Colors.white,
               fontSize: 18,
@@ -130,7 +130,7 @@ class _PlansSheetState extends State<PlansSheet> {
                           body: WebViewWidget(
                             controller: WebViewController()
                               ..setJavaScriptMode(JavaScriptMode.unrestricted)
-                              ..loadRequest(Uri.parse('https://omi.me/training')),
+                              ..loadRequest(Uri.parse('https://aura.me/training')),
                           ),
                         ),
                       ),
@@ -978,7 +978,7 @@ class _PlansSheetState extends State<PlansSheet> {
                           ),
                           child: ClipOval(
                             child: Image.asset(
-                              Assets.images.omiWithoutRope.path,
+                              Assets.images.auraWithoutRope.path,
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -2106,13 +2106,13 @@ class _PlansSheetState extends State<PlansSheet> {
             MaterialPageRoute(
               builder: (context) => Scaffold(
                 appBar: AppBar(
-                  title: Text(context.l10n.omiTraining),
+                  title: Text(context.l10n.auraTraining),
                   backgroundColor: Colors.black,
                 ),
                 body: WebViewWidget(
                   controller: WebViewController()
                     ..setJavaScriptMode(JavaScriptMode.unrestricted)
-                    ..loadRequest(Uri.parse('https://omi.me/training')),
+                    ..loadRequest(Uri.parse('https://aura.me/training')),
                 ),
               ),
             ),
@@ -2195,13 +2195,13 @@ class _PlansSheetState extends State<PlansSheet> {
             MaterialPageRoute(
               builder: (context) => Scaffold(
                 appBar: AppBar(
-                  title: Text(context.l10n.omiTraining),
+                  title: Text(context.l10n.auraTraining),
                   backgroundColor: Colors.black,
                 ),
                 body: WebViewWidget(
                   controller: WebViewController()
                     ..setJavaScriptMode(JavaScriptMode.unrestricted)
-                    ..loadRequest(Uri.parse('https://omi.me/training')),
+                    ..loadRequest(Uri.parse('https://aura.me/training')),
                 ),
               ),
             ),

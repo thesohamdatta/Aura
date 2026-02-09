@@ -2,24 +2,24 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:omi/utils/l10n_extensions.dart';
+import 'package:aura/utils/l10n_extensions.dart';
 import 'package:provider/provider.dart';
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/backend/schema/bt_device/bt_device.dart';
-import 'package:omi/models/playback_state.dart';
-import 'package:omi/pages/conversations/sync_widgets/fast_transfer_suggestion_dialog.dart';
-import 'package:omi/pages/conversations/sync_widgets/location_permission_dialog.dart';
-import 'package:omi/providers/sync_provider.dart';
-import 'package:omi/services/devices/wifi_sync_error.dart';
-import 'package:omi/services/services.dart';
-import 'package:omi/services/wals.dart';
-import 'package:omi/services/wifi/wifi_network_service.dart';
-import 'package:omi/ui/molecules/omi_confirm_dialog.dart';
-import 'package:omi/pages/conversations/sync_widgets/wifi_connection_sheet.dart';
-import 'package:omi/utils/device.dart';
-import 'package:omi/utils/other/temp.dart';
-import 'package:omi/utils/other/time_utils.dart';
-import 'package:omi/widgets/waveform_section.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/backend/schema/bt_device/bt_device.dart';
+import 'package:aura/models/playback_state.dart';
+import 'package:aura/pages/conversations/sync_widgets/fast_transfer_suggestion_dialog.dart';
+import 'package:aura/pages/conversations/sync_widgets/location_permission_dialog.dart';
+import 'package:aura/providers/sync_provider.dart';
+import 'package:aura/services/devices/wifi_sync_error.dart';
+import 'package:aura/services/services.dart';
+import 'package:aura/services/wals.dart';
+import 'package:aura/services/wifi/wifi_network_service.dart';
+import 'package:aura/ui/molecules/aura_confirm_dialog.dart';
+import 'package:aura/pages/conversations/sync_widgets/wifi_connection_sheet.dart';
+import 'package:aura/utils/device.dart';
+import 'package:aura/utils/other/temp.dart';
+import 'package:aura/utils/other/time_utils.dart';
+import 'package:aura/widgets/waveform_section.dart';
 
 class WalItemDetailPage extends StatefulWidget {
   final Wal wal;
@@ -426,7 +426,7 @@ class _WalItemDetailPageState extends State<WalItemDetailPage> {
               ),
             ),
 
-            // Waveform section - dominant space
+            // Waveform section - dauranant space
             Expanded(
               flex: 6,
               child: Padding(

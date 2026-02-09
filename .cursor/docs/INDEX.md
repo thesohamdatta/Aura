@@ -13,7 +13,7 @@ The `.cursor` folder is organized by skills, with related commands and agents gr
 ```
 .cursor/
 ├── skills/                    # Skills organized by domain/automation
-│   ├── omi-backend-patterns/
+│   ├── aura-backend-patterns/
 │   │   ├── SKILL.md          # Skill definition
 │   │   ├── commands/          # Related commands
 │   │   │   ├── backend-setup.md
@@ -23,8 +23,8 @@ The `.cursor` folder is organized by skills, with related commands and agents gr
 │   │       ├── backend-api-developer.md
 │   │       ├── backend-llm-engineer.md
 │   │       └── backend-database-engineer.md
-│   ├── omi-flutter-patterns/
-│   ├── omi-api-integration/
+│   ├── aura-flutter-patterns/
+│   ├── aura-api-integration/
 │   ├── docs-automation/
 │   ├── pr-automation/
 │   └── [other skills...]
@@ -61,7 +61,7 @@ The `.cursor` folder is organized by skills, with related commands and agents gr
    - **Description**: System architecture, module hierarchy, data flow patterns
    - **Globs**: `backend/**/*.py`
    - **Related Rules**: backend-imports, backend-api-patterns, backend-database-patterns, backend-llm-patterns, backend-testing, memory-management
-   - **Related Skills**: omi-backend-patterns
+   - **Related Skills**: aura-backend-patterns
    - **Related Subagents**: backend-api-developer, backend-llm-engineer, backend-database-engineer
    - **Related Commands**: /backend-setup, /backend-test, /backend-deploy
 
@@ -69,7 +69,7 @@ The `.cursor` folder is organized by skills, with related commands and agents gr
    - **Description**: FastAPI router patterns, endpoint conventions, error handling
    - **Globs**: `backend/routers/**/*.py`
    - **Related Rules**: backend-architecture, backend-database-patterns, backend-llm-patterns, backend-testing, backend-imports
-   - **Related Skills**: omi-backend-patterns, omi-api-integration
+   - **Related Skills**: aura-backend-patterns, aura-api-integration
    - **Related Subagents**: backend-api-developer
    - **Related Commands**: /backend-setup, /backend-test, /update-api-docs
 
@@ -77,7 +77,7 @@ The `.cursor` folder is organized by skills, with related commands and agents gr
    - **Description**: Firestore, Pinecone, Redis usage patterns
    - **Globs**: `backend/database/**/*.py`
    - **Related Rules**: backend-architecture, backend-api-patterns, backend-llm-patterns, backend-imports
-   - **Related Skills**: omi-backend-patterns
+   - **Related Skills**: aura-backend-patterns
    - **Related Subagents**: backend-database-engineer
    - **Related Commands**: /backend-setup, /backend-test
 
@@ -85,7 +85,7 @@ The `.cursor` folder is organized by skills, with related commands and agents gr
    - **Description**: LLM client usage, prompt engineering, LangGraph
    - **Globs**: `backend/utils/llm/**/*.py`, `backend/utils/retrieval/**/*.py`
    - **Related Rules**: backend-architecture, backend-api-patterns, backend-database-patterns, backend-imports
-   - **Related Skills**: omi-backend-patterns
+   - **Related Skills**: aura-backend-patterns
    - **Related Subagents**: backend-llm-engineer
    - **Related Commands**: /backend-setup, /backend-test
 
@@ -93,7 +93,7 @@ The `.cursor` folder is organized by skills, with related commands and agents gr
    - **Description**: Test structure, mocking patterns
    - **Globs**: `backend/tests/**/*.py`, `backend/**/*test*.py`
    - **Related Rules**: testing, backend-architecture, backend-api-patterns, backend-database-patterns
-   - **Related Skills**: omi-backend-patterns
+   - **Related Skills**: aura-backend-patterns
    - **Related Subagents**: backend-api-developer, backend-database-engineer
    - **Related Commands**: /backend-test, /run-tests-and-fix, /test-integration
 
@@ -101,7 +101,7 @@ The `.cursor` folder is organized by skills, with related commands and agents gr
    - **Description**: Python import rules (no in-function imports, module hierarchy)
    - **Globs**: `backend/**/*.py`
    - **Related Rules**: backend-architecture
-   - **Related Skills**: omi-backend-patterns
+   - **Related Skills**: aura-backend-patterns
    - **Related Subagents**: backend-api-developer, backend-llm-engineer, backend-database-engineer
    - **Related Commands**: /backend-setup, /lint-and-fix
 
@@ -111,7 +111,7 @@ The `.cursor` folder is organized by skills, with related commands and agents gr
    - **Description**: App structure, state management, providers
    - **Globs**: `app/**/*.dart`
    - **Related Rules**: flutter-backend-integration, flutter-ble-protocol, flutter-localization, flutter-platform-specific
-   - **Related Skills**: omi-flutter-patterns
+   - **Related Skills**: aura-flutter-patterns
    - **Related Subagents**: flutter-developer
    - **Related Commands**: /flutter-setup, /flutter-test, /flutter-build
 
@@ -119,7 +119,7 @@ The `.cursor` folder is organized by skills, with related commands and agents gr
    - **Description**: API client patterns, WebSocket handling
    - **Globs**: `app/lib/backend/**/*.dart`
    - **Related Rules**: flutter-architecture, backend-api-patterns, backend-architecture
-   - **Related Skills**: omi-flutter-patterns, omi-api-integration
+   - **Related Skills**: aura-flutter-patterns, aura-api-integration
    - **Related Subagents**: flutter-developer
    - **Related Commands**: /flutter-setup, /flutter-test
 
@@ -127,7 +127,7 @@ The `.cursor` folder is organized by skills, with related commands and agents gr
    - **Description**: Bluetooth Low Energy device communication
    - **Globs**: `app/lib/utils/bluetooth/**/*.dart`, `app/lib/services/**/*ble*.dart`
    - **Related Rules**: flutter-architecture, firmware-ble-service, firmware-audio-codecs
-   - **Related Skills**: omi-flutter-patterns, omi-firmware-patterns
+   - **Related Skills**: aura-flutter-patterns, aura-firmware-patterns
    - **Related Subagents**: flutter-developer, firmware-engineer
    - **Related Commands**: /flutter-setup, /flutter-test
 
@@ -135,7 +135,7 @@ The `.cursor` folder is organized by skills, with related commands and agents gr
     - **Description**: Flutter l10n requirements
     - **Globs**: `app/**/*.dart`
     - **Related Rules**: flutter-architecture
-    - **Related Skills**: omi-flutter-patterns
+    - **Related Skills**: aura-flutter-patterns
     - **Related Subagents**: flutter-developer
     - **Related Commands**: /flutter-setup
 
@@ -143,7 +143,7 @@ The `.cursor` folder is organized by skills, with related commands and agents gr
     - **Description**: Platform-specific code (iOS, Android, macOS, Windows)
     - **Globs**: `app/**/*.dart`
     - **Related Rules**: flutter-architecture, flutter-localization
-    - **Related Skills**: omi-flutter-patterns
+    - **Related Skills**: aura-flutter-patterns
     - **Related Subagents**: flutter-developer
     - **Related Commands**: /flutter-setup, /flutter-build
 
@@ -151,25 +151,25 @@ The `.cursor` folder is organized by skills, with related commands and agents gr
 
 12. **firmware-architecture.mdc**
     - **Description**: nRF/ESP32 structure, Zephyr patterns
-    - **Globs**: `omi/**/*.{c,h}`, `omiGlass/**/*.{c,h}`
+    - **Globs**: `aura/**/*.{c,h}`, `aura-pendant/**/*.{c,h}`
     - **Related Rules**: firmware-ble-service, firmware-audio-codecs, flutter-ble-protocol
-    - **Related Skills**: omi-firmware-patterns
+    - **Related Skills**: aura-firmware-patterns
     - **Related Subagents**: firmware-engineer
     - **Related Commands**: /flutter-setup
 
 13. **firmware-audio-codecs.mdc**
     - **Description**: Audio codec implementation (Opus, PCM, Mu-law)
-    - **Globs**: `omi/**/*.{c,h}`, `omiGlass/**/*.{c,h}`
+    - **Globs**: `aura/**/*.{c,h}`, `aura-pendant/**/*.{c,h}`
     - **Related Rules**: firmware-architecture, firmware-ble-service, flutter-ble-protocol
-    - **Related Skills**: omi-firmware-patterns
+    - **Related Skills**: aura-firmware-patterns
     - **Related Subagents**: firmware-engineer
     - **Related Commands**: /flutter-setup
 
 14. **firmware-ble-service.mdc**
     - **Description**: BLE service implementation, audio streaming
-    - **Globs**: `omi/**/*.{c,h}`, `omiGlass/**/*.{c,h}`
+    - **Globs**: `aura/**/*.{c,h}`, `aura-pendant/**/*.{c,h}`
     - **Related Rules**: firmware-architecture, firmware-audio-codecs, flutter-ble-protocol
-    - **Related Skills**: omi-firmware-patterns, omi-flutter-patterns
+    - **Related Skills**: aura-firmware-patterns, aura-flutter-patterns
     - **Related Subagents**: firmware-engineer, flutter-developer
     - **Related Commands**: /flutter-setup
 
@@ -179,7 +179,7 @@ The `.cursor` folder is organized by skills, with related commands and agents gr
     - **Description**: Next.js App Router, API routes, Firebase integration
     - **Globs**: `web/**/*.{tsx,ts}`
     - **Related Rules**: web-ui-components, backend-api-patterns
-    - **Related Skills**: omi-api-integration
+    - **Related Skills**: aura-api-integration
     - **Related Subagents**: web-developer
     - **Related Commands**: /backend-setup
 
@@ -187,7 +187,7 @@ The `.cursor` folder is organized by skills, with related commands and agents gr
     - **Description**: Radix UI, Shadcn/ui component patterns
     - **Globs**: `web/**/*.{tsx,ts}`
     - **Related Rules**: web-nextjs-patterns
-    - **Related Skills**: omi-api-integration
+    - **Related Skills**: aura-api-integration
     - **Related Subagents**: web-developer
     - **Related Commands**: /backend-setup
 
@@ -197,7 +197,7 @@ The `.cursor` folder is organized by skills, with related commands and agents gr
     - **Description**: Plugin structure, webhook patterns, OAuth flows
     - **Globs**: `plugins/**/*.{py,js}`
     - **Related Rules**: plugin-apps-js, backend-api-patterns, backend-architecture
-    - **Related Skills**: omi-plugin-development, omi-api-integration
+    - **Related Skills**: aura-plugin-development, aura-api-integration
     - **Related Subagents**: plugin-developer
     - **Related Commands**: /create-plugin, /create-app
 
@@ -205,7 +205,7 @@ The `.cursor` folder is organized by skills, with related commands and agents gr
     - **Description**: JavaScript plugin patterns
     - **Globs**: `plugins/apps-js/**/*.js`
     - **Related Rules**: plugin-development, backend-api-patterns
-    - **Related Skills**: omi-plugin-development, omi-api-integration
+    - **Related Skills**: aura-plugin-development, aura-api-integration
     - **Related Subagents**: plugin-developer
     - **Related Commands**: /create-plugin
 
@@ -239,7 +239,7 @@ The `.cursor` folder is organized by skills, with related commands and agents gr
     - **Description**: Memory management best practices
     - **Globs**: `backend/**/*.py`
     - **Related Rules**: backend-architecture
-    - **Related Skills**: omi-backend-patterns
+    - **Related Skills**: aura-backend-patterns
     - **Related Subagents**: backend-api-developer, backend-llm-engineer, backend-database-engineer
 
 24. **testing.mdc** (alwaysApply: true)
@@ -309,37 +309,37 @@ The `.cursor` folder is organized by skills, with related commands and agents gr
 
 1. **/backend-setup**
    - **Related Rules**: backend-architecture, backend-imports, formatting
-   - **Related Skills**: omi-backend-patterns
+   - **Related Skills**: aura-backend-patterns
    - **Related Subagents**: backend-api-developer, backend-llm-engineer, backend-database-engineer
 
 2. **/backend-test**
    - **Related Rules**: backend-testing, testing, backend-architecture
-   - **Related Skills**: omi-backend-patterns
+   - **Related Skills**: aura-backend-patterns
    - **Related Subagents**: backend-api-developer, backend-database-engineer
    - **Related Commands**: /run-tests-and-fix, /test-integration
 
 3. **/backend-deploy**
    - **Related Rules**: backend-architecture, backend-testing, memory-management
-   - **Related Skills**: omi-backend-patterns
+   - **Related Skills**: aura-backend-patterns
    - **Related Commands**: /backend-setup, /backend-test, /code-review
 
 ### Flutter Commands (3)
 
 4. **/flutter-setup**
    - **Related Rules**: flutter-architecture, flutter-platform-specific, flutter-localization
-   - **Related Skills**: omi-flutter-patterns, omi-firmware-patterns
+   - **Related Skills**: aura-flutter-patterns, aura-firmware-patterns
    - **Related Subagents**: flutter-developer, firmware-engineer
    - **Related Commands**: /flutter-test, /flutter-build
 
 5. **/flutter-test**
    - **Related Rules**: testing, flutter-architecture
-   - **Related Skills**: omi-flutter-patterns
+   - **Related Skills**: aura-flutter-patterns
    - **Related Subagents**: flutter-developer
    - **Related Commands**: /run-tests-and-fix, /flutter-setup
 
 6. **/flutter-build**
    - **Related Rules**: flutter-architecture, flutter-platform-specific, formatting
-   - **Related Skills**: omi-flutter-patterns
+   - **Related Skills**: aura-flutter-patterns
    - **Related Subagents**: flutter-developer
    - **Related Commands**: /flutter-setup, /flutter-test, /format
 
@@ -347,13 +347,13 @@ The `.cursor` folder is organized by skills, with related commands and agents gr
 
 7. **/create-plugin**
    - **Related Rules**: plugin-development, plugin-apps-js, backend-api-patterns
-   - **Related Skills**: omi-plugin-development, omi-api-integration
+   - **Related Skills**: aura-plugin-development, aura-api-integration
    - **Related Subagents**: plugin-developer
    - **Related Commands**: /test-integration
 
 8. **/create-app**
    - **Related Rules**: plugin-development, backend-api-patterns
-   - **Related Skills**: omi-plugin-development, omi-api-integration
+   - **Related Skills**: aura-plugin-development, aura-api-integration
    - **Related Subagents**: plugin-developer
    - **Related Commands**: /create-plugin, /test-integration
 
@@ -393,7 +393,7 @@ The `.cursor` folder is organized by skills, with related commands and agents gr
 
 17. **/update-api-docs**
     - **Related Rules**: documentation-standards, backend-api-patterns
-    - **Related Skills**: omi-api-integration
+    - **Related Skills**: aura-api-integration
     - **Related Subagents**: backend-api-developer
     - **Related Commands**: /docs, /validate-docs
 
@@ -403,7 +403,7 @@ The `.cursor` folder is organized by skills, with related commands and agents gr
 
 19. **/test-integration**
     - **Related Rules**: plugin-development, backend-api-patterns
-    - **Related Skills**: omi-plugin-development, omi-api-integration
+    - **Related Skills**: aura-plugin-development, aura-api-integration
     - **Related Subagents**: plugin-developer
     - **Related Commands**: /create-plugin, /create-app
 
@@ -432,7 +432,7 @@ The `.cursor` folder is organized by skills, with related commands and agents gr
 
 23. **/auto-triage**
     - **Description**: Automatically triage GitHub issues using triage guide
-    - **Related Rules**: omi-specific-patterns
+    - **Related Rules**: aura-specific-patterns
     - **Related Skills**: issue-triage
     - **Related Documentation**: ISSUE_TRIAGE_GUIDE.MD
 
@@ -504,22 +504,22 @@ Resources are organized by skill. Each skill folder contains:
 
 ### Domain Skills
 
-**omi-backend-patterns/** (`skills/omi-backend-patterns/`)
+**aura-backend-patterns/** (`skills/aura-backend-patterns/`)
 - **Commands**: `commands/backend-setup.md`, `commands/backend-test.md`, `commands/backend-deploy.md`
 - **Agents**: `agents/backend-api-developer.md`, `agents/backend-llm-engineer.md`, `agents/backend-database-engineer.md`
 
-**omi-flutter-patterns/** (`skills/omi-flutter-patterns/`)
+**aura-flutter-patterns/** (`skills/aura-flutter-patterns/`)
 - **Commands**: `commands/flutter-setup.md`, `commands/flutter-test.md`, `commands/flutter-build.md`
 - **Agents**: `agents/flutter-developer.md`
 
-**omi-firmware-patterns/** (`skills/omi-firmware-patterns/`)
+**aura-firmware-patterns/** (`skills/aura-firmware-patterns/`)
 - **Agents**: `agents/firmware-engineer.md`
 
-**omi-api-integration/** (`skills/omi-api-integration/`)
+**aura-api-integration/** (`skills/aura-api-integration/`)
 - **Commands**: `commands/update-api-docs.md` (symlink from docs-automation)
 - **Agents**: `agents/web-developer.md`, `agents/sdk-developer.md`, `agents/backend-api-developer.md` (symlink), `agents/plugin-developer.md` (symlink)
 
-**omi-plugin-development/** (`skills/omi-plugin-development/`)
+**aura-plugin-development/** (`skills/aura-plugin-development/`)
 - **Commands**: `commands/create-plugin.md`, `commands/create-app.md`, `commands/test-integration.md`
 - **Agents**: `agents/plugin-developer.md`
 
@@ -574,32 +574,32 @@ Resources are organized by skill. Each skill folder contains:
 
 ## Skills (16)
 
-1. **omi-backend-patterns/** (`skills/omi-backend-patterns/`)
+1. **aura-backend-patterns/** (`skills/aura-backend-patterns/`)
    - **Description**: Backend patterns (conversation processing, memory extraction, chat system)
-   - **Location**: `skills/omi-backend-patterns/`
+   - **Location**: `skills/aura-backend-patterns/`
    - **Related Rules**: backend-architecture, backend-api-patterns, backend-database-patterns, backend-llm-patterns, backend-testing, backend-imports, memory-management
    - **Related Subagents**: `agents/backend-api-developer.md`, `agents/backend-llm-engineer.md`, `agents/backend-database-engineer.md`
    - **Related Commands**: `commands/backend-setup.md`, `commands/backend-test.md`, `commands/backend-deploy.md`
 
-2. **omi-flutter-patterns/**
+2. **aura-flutter-patterns/**
    - **Description**: Flutter patterns (BLE, audio streaming, state management)
    - **Related Rules**: flutter-architecture, flutter-backend-integration, flutter-ble-protocol, flutter-localization, flutter-platform-specific
    - **Related Subagents**: flutter-developer
    - **Related Commands**: /flutter-setup, /flutter-test, /flutter-build
 
-3. **omi-firmware-patterns/**
+3. **aura-firmware-patterns/**
    - **Description**: Firmware patterns (BLE services, audio codecs)
    - **Related Rules**: firmware-architecture, firmware-ble-service, firmware-audio-codecs, flutter-ble-protocol
    - **Related Subagents**: firmware-engineer, flutter-developer
    - **Related Commands**: /flutter-setup
 
-4. **omi-api-integration/**
+4. **aura-api-integration/**
    - **Description**: API integration patterns (Developer API, MCP, webhooks)
    - **Related Rules**: backend-api-patterns, backend-architecture, plugin-development, web-nextjs-patterns
    - **Related Subagents**: backend-api-developer, plugin-developer, web-developer, sdk-developer
    - **Related Commands**: /backend-setup, /create-plugin, /update-api-docs
 
-5. **omi-plugin-development/**
+5. **aura-plugin-development/**
     - **Description**: Plugin development workflow
     - **Related Rules**: plugin-development, plugin-apps-js, backend-api-patterns, backend-architecture
     - **Related Subagents**: plugin-developer
@@ -627,7 +627,7 @@ Resources are organized by skill. Each skill folder contains:
 
 9. **issue-triage/**
     - **Description**: Automate GitHub issue triage using triage guide
-    - **Related Rules**: omi-specific-patterns
+    - **Related Rules**: aura-specific-patterns
     - **Related Documentation**: ISSUE_TRIAGE_GUIDE.MD
     - **Related Commands**: /auto-triage
 
@@ -636,49 +636,49 @@ Resources are organized by skill. Each skill folder contains:
 1. **backend-api-developer/**
    - **Description**: FastAPI router development, endpoint patterns
    - **Related Rules**: backend-api-patterns, backend-architecture, backend-imports, backend-testing
-   - **Related Skills**: omi-backend-patterns, omi-api-integration
+   - **Related Skills**: aura-backend-patterns, aura-api-integration
    - **Related Commands**: /backend-setup, /backend-test, /update-api-docs
 
 2. **backend-llm-engineer/**
    - **Description**: LLM integration, prompt engineering, LangGraph
    - **Related Rules**: backend-llm-patterns, backend-architecture, backend-database-patterns, backend-api-patterns
-   - **Related Skills**: omi-backend-patterns
+   - **Related Skills**: aura-backend-patterns
    - **Related Commands**: /backend-setup, /backend-test
 
 3. **backend-database-engineer/**
    - **Description**: Firestore, Pinecone, Redis optimization
    - **Related Rules**: backend-database-patterns, backend-architecture, backend-api-patterns, memory-management
-   - **Related Skills**: omi-backend-patterns
+   - **Related Skills**: aura-backend-patterns
    - **Related Commands**: /backend-setup, /backend-test
 
 4. **flutter-developer/**
    - **Description**: Flutter app development, BLE integration
    - **Related Rules**: flutter-architecture, flutter-backend-integration, flutter-ble-protocol, flutter-localization, flutter-platform-specific
-   - **Related Skills**: omi-flutter-patterns
+   - **Related Skills**: aura-flutter-patterns
    - **Related Commands**: /flutter-setup, /flutter-test, /flutter-build
 
 5. **web-developer/**
    - **Description**: Next.js frontend development
    - **Related Rules**: web-nextjs-patterns, web-ui-components, backend-api-patterns
-   - **Related Skills**: omi-api-integration
+   - **Related Skills**: aura-api-integration
    - **Related Commands**: /backend-setup
 
 6. **firmware-engineer/**
    - **Description**: C/C++ firmware development, BLE services
    - **Related Rules**: firmware-architecture, firmware-ble-service, firmware-audio-codecs, flutter-ble-protocol
-   - **Related Skills**: omi-firmware-patterns
+   - **Related Skills**: aura-firmware-patterns
    - **Related Commands**: /flutter-setup
 
 7. **plugin-developer/**
    - **Description**: Plugin/app development, webhook integration
    - **Related Rules**: plugin-development, plugin-apps-js, backend-api-patterns, backend-architecture
-   - **Related Skills**: omi-plugin-development, omi-api-integration
+   - **Related Skills**: aura-plugin-development, aura-api-integration
    - **Related Commands**: /create-plugin, /create-app
 
 8. **sdk-developer/**
     - **Description**: SDK development (Python, Swift, React Native)
     - **Related Rules**: backend-api-patterns, backend-architecture
-    - **Related Skills**: omi-api-integration
+    - **Related Skills**: aura-api-integration
     - **Related Commands**: /backend-setup, /update-api-docs
 
 ### Automation Subagents (6)
@@ -707,7 +707,7 @@ Resources are organized by skill. Each skill folder contains:
 12. **code-reviewer/**
     - **Description**: Automated code review before PR
     - **Related Rules**: common-mistakes, backend-architecture, backend-imports, verification
-    - **Related Skills**: pr-automation, omi-backend-patterns, omi-flutter-patterns
+    - **Related Skills**: pr-automation, aura-backend-patterns, aura-flutter-patterns
     - **Related Subagents**: pr-manager, test-runner
     - **Related Commands**: /code-review, /security-audit, /auto-pr
 
@@ -757,17 +757,17 @@ Resources are organized by skill. Each skill folder contains:
 Rules (24)
 ├── Backend Rules (6)
 │   ├── backend-architecture.mdc
-│   │   ├── → Skills: omi-backend-patterns
+│   │   ├── → Skills: aura-backend-patterns
 │   │   ├── → Subagents: backend-api-developer, backend-llm-engineer, backend-database-engineer
 │   │   └── → Commands: /backend-setup, /backend-test, /backend-deploy
 │   ├── backend-api-patterns.mdc
-│   │   ├── → Skills: omi-backend-patterns, omi-api-integration
+│   │   ├── → Skills: aura-backend-patterns, aura-api-integration
 │   │   ├── → Subagents: backend-api-developer
 │   │   └── → Commands: /backend-setup, /backend-test, /update-api-docs
 │   └── ...
 ├── Flutter Rules (5)
 │   ├── flutter-architecture.mdc
-│   │   ├── → Skills: omi-flutter-patterns
+│   │   ├── → Skills: aura-flutter-patterns
 │   │   ├── → Subagents: flutter-developer
 │   │   └── → Commands: /flutter-setup, /flutter-test, /flutter-build
 │   └── ...
@@ -777,19 +777,19 @@ Rules (24)
 └── General Rules (6)
 
 Skills (9)
-├── omi-backend-patterns/
+├── aura-backend-patterns/
 │   ├── → Rules: backend-architecture, backend-api-patterns, ...
 │   ├── → Subagents: backend-api-developer, backend-llm-engineer, backend-database-engineer
 │   └── → Commands: /backend-setup, /backend-test, /backend-deploy
-├── omi-flutter-patterns/
-├── omi-firmware-patterns/
-├── omi-api-integration/
-└── omi-plugin-development/
+├── aura-flutter-patterns/
+├── aura-firmware-patterns/
+├── aura-api-integration/
+└── aura-plugin-development/
 
 Subagents (14)
 ├── backend-api-developer/
 │   ├── → Rules: backend-api-patterns, backend-architecture, ...
-│   ├── → Skills: omi-backend-patterns, omi-api-integration
+│   ├── → Skills: aura-backend-patterns, aura-api-integration
 │   └── → Commands: /backend-setup, /backend-test, /update-api-docs
 ├── backend-llm-engineer/
 ├── backend-database-engineer/
@@ -802,7 +802,7 @@ Subagents (14)
 Commands (22)
 ├── /backend-setup
 │   ├── → Rules: backend-architecture, backend-imports, formatting
-│   ├── → Skills: omi-backend-patterns
+│   ├── → Skills: aura-backend-patterns
 │   └── → Subagents: backend-api-developer, backend-llm-engineer, backend-database-engineer
 ├── /backend-test
 ├── /flutter-setup
@@ -815,43 +815,43 @@ Commands (22)
 
 **Backend Development**:
 - Rules: backend-architecture, backend-api-patterns, backend-database-patterns, backend-llm-patterns, backend-testing, backend-imports
-- Skills: omi-backend-patterns
+- Skills: aura-backend-patterns
 - Subagents: backend-api-developer, backend-llm-engineer, backend-database-engineer
 - Commands: /backend-setup, /backend-test, /backend-deploy
 
 **Flutter Development**:
 - Rules: flutter-architecture, flutter-backend-integration, flutter-ble-protocol, flutter-localization, flutter-platform-specific
-- Skills: omi-flutter-patterns
+- Skills: aura-flutter-patterns
 - Subagents: flutter-developer
 - Commands: /flutter-setup, /flutter-test, /flutter-build
 
 **Firmware Development**:
 - Rules: firmware-architecture, firmware-ble-service, firmware-audio-codecs
-- Skills: omi-firmware-patterns
+- Skills: aura-firmware-patterns
 - Subagents: firmware-engineer
 - Commands: /flutter-setup
 
 **Plugin Development**:
 - Rules: plugin-development, plugin-apps-js
-- Skills: omi-plugin-development, omi-api-integration
+- Skills: aura-plugin-development, aura-api-integration
 - Subagents: plugin-developer
 - Commands: /create-plugin, /create-app, /test-integration
 
 **Web Development**:
 - Rules: web-nextjs-patterns, web-ui-components
-- Skills: omi-api-integration
+- Skills: aura-api-integration
 - Subagents: web-developer
 - Commands: /backend-setup
 
 ### By Task
 
 **Setting Up Environment**:
-- /backend-setup → Uses: backend-architecture, omi-backend-patterns, backend-api-developer
-- /flutter-setup → Uses: flutter-architecture, omi-flutter-patterns, flutter-developer
+- /backend-setup → Uses: backend-architecture, aura-backend-patterns, backend-api-developer
+- /flutter-setup → Uses: flutter-architecture, aura-flutter-patterns, flutter-developer
 
 **Testing**:
-- /backend-test → Uses: backend-testing, omi-backend-patterns
-- /flutter-test → Uses: testing, omi-flutter-patterns
+- /backend-test → Uses: backend-testing, aura-backend-patterns
+- /flutter-test → Uses: testing, aura-flutter-patterns
 - /run-tests-and-fix → Uses: testing, backend-testing
 
 **Code Quality**:
@@ -866,9 +866,9 @@ Commands (22)
 - /validate-docs → Uses: documentation-standards
 
 **Plugin Development**:
-- /create-plugin → Uses: plugin-development, omi-plugin-development, plugin-developer
-- /create-app → Uses: plugin-development, omi-plugin-development
-- /test-integration → Uses: plugin-development, omi-plugin-development
+- /create-plugin → Uses: plugin-development, aura-plugin-development, plugin-developer
+- /create-app → Uses: plugin-development, aura-plugin-development
+- /test-integration → Uses: plugin-development, aura-plugin-development
 
 ## Cross-Reference Patterns
 
@@ -940,17 +940,17 @@ This interconnected structure provides:
 
 ### Public Documentation (Source of Truth)
 
-**The `docs/` folder is the single source of truth for all user-facing documentation, deployed at [docs.omi.me](https://docs.omi.me/).**
+**The `docs/` folder is the single source of truth for all user-facing documentation, deployed at [docs.aura.me](https://docs.aura.me/).**
 
-- **Documentation Index**: `docs/INDEX.md` - [View online](https://docs.omi.me/llms.txt)
-- **Backend Architecture**: `docs/doc/developer/backend/backend_deepdive.mdx` - [View online](https://docs.omi.me/doc/developer/backend/backend_deepdive)
-- **Chat System**: `docs/doc/developer/backend/chat_system.mdx` - [View online](https://docs.omi.me/doc/developer/backend/chat_system)
-- **Data Storage**: `docs/doc/developer/backend/StoringConversations.mdx` - [View online](https://docs.omi.me/doc/developer/backend/StoringConversations)
-- **API Overview**: `docs/doc/developer/api/overview.mdx` - [View online](https://docs.omi.me/doc/developer/api/overview)
-- **API Endpoints**: `docs/api-reference/` - [View online](https://docs.omi.me/api-reference/)
-- **App Setup**: `docs/doc/developer/AppSetup.mdx` - [View online](https://docs.omi.me/doc/developer/AppSetup)
-- **BLE Protocol**: `docs/doc/developer/Protocol.mdx` - [View online](https://docs.omi.me/doc/developer/Protocol)
-- **Plugin Development**: `docs/doc/developer/apps/Introduction.mdx` - [View online](https://docs.omi.me/doc/developer/apps/Introduction)
+- **Documentation Index**: `docs/INDEX.md` - [View online](https://docs.aura.me/llms.txt)
+- **Backend Architecture**: `docs/doc/developer/backend/backend_deepdive.mdx` - [View online](https://docs.aura.me/doc/developer/backend/backend_deepdive)
+- **Chat System**: `docs/doc/developer/backend/chat_system.mdx` - [View online](https://docs.aura.me/doc/developer/backend/chat_system)
+- **Data Storage**: `docs/doc/developer/backend/StoringConversations.mdx` - [View online](https://docs.aura.me/doc/developer/backend/StoringConversations)
+- **API Overview**: `docs/doc/developer/api/overview.mdx` - [View online](https://docs.aura.me/doc/developer/api/overview)
+- **API Endpoints**: `docs/api-reference/` - [View online](https://docs.aura.me/api-reference/)
+- **App Setup**: `docs/doc/developer/AppSetup.mdx` - [View online](https://docs.aura.me/doc/developer/AppSetup)
+- **BLE Protocol**: `docs/doc/developer/Protocol.mdx` - [View online](https://docs.aura.me/doc/developer/Protocol)
+- **Plugin Development**: `docs/doc/developer/apps/Introduction.mdx` - [View online](https://docs.aura.me/doc/developer/apps/Introduction)
 
 **Note**: All `.cursor/` resources should reference `docs/` paths for user-facing documentation. The `.cursor/docs/` files are for internal Cursor agent use only.
 

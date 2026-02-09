@@ -13,39 +13,39 @@ import 'package:geolocator/geolocator.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
 
-import 'package:omi/backend/http/api/conversations.dart';
-import 'package:omi/backend/http/api/users.dart';
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/backend/schema/bt_device/bt_device.dart';
-import 'package:omi/backend/schema/conversation.dart';
-import 'package:omi/backend/schema/geolocation.dart';
-import 'package:omi/backend/schema/message.dart';
-import 'package:omi/backend/schema/person.dart';
-import 'package:omi/backend/schema/structured.dart';
-import 'package:omi/backend/schema/transcript_segment.dart';
-import 'package:omi/models/custom_stt_config.dart';
-import 'package:omi/models/stt_provider.dart';
-import 'package:omi/providers/calendar_provider.dart';
-import 'package:omi/providers/conversation_provider.dart';
-import 'package:omi/providers/message_provider.dart';
-import 'package:omi/providers/people_provider.dart';
-import 'package:omi/providers/usage_provider.dart';
-import 'package:omi/services/connectivity_service.dart';
-import 'package:omi/services/services.dart';
-import 'package:omi/services/sockets/transcription_service.dart';
-import 'package:omi/services/wals.dart';
-import 'package:omi/utils/alerts/app_snackbar.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/debug_log_manager.dart';
-import 'package:omi/utils/enums.dart';
-import 'package:omi/utils/image/image_utils.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/logger.dart';
-import 'package:omi/utils/logger.dart';
-import 'package:omi/utils/platform/platform_service.dart';
-import 'package:omi/main.dart';
+import 'package:aura/backend/http/api/conversations.dart';
+import 'package:aura/backend/http/api/users.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/backend/schema/bt_device/bt_device.dart';
+import 'package:aura/backend/schema/conversation.dart';
+import 'package:aura/backend/schema/geolocation.dart';
+import 'package:aura/backend/schema/message.dart';
+import 'package:aura/backend/schema/person.dart';
+import 'package:aura/backend/schema/structured.dart';
+import 'package:aura/backend/schema/transcript_segment.dart';
+import 'package:aura/models/custom_stt_config.dart';
+import 'package:aura/models/stt_provider.dart';
+import 'package:aura/providers/calendar_provider.dart';
+import 'package:aura/providers/conversation_provider.dart';
+import 'package:aura/providers/message_provider.dart';
+import 'package:aura/providers/people_provider.dart';
+import 'package:aura/providers/usage_provider.dart';
+import 'package:aura/services/connectivity_service.dart';
+import 'package:aura/services/services.dart';
+import 'package:aura/services/sockets/transcription_service.dart';
+import 'package:aura/services/wals.dart';
+import 'package:aura/utils/alerts/app_snackbar.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/debug_log_manager.dart';
+import 'package:aura/utils/enums.dart';
+import 'package:aura/utils/image/image_utils.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/logger.dart';
+import 'package:aura/utils/logger.dart';
+import 'package:aura/utils/platform/platform_service.dart';
+import 'package:aura/main.dart';
 
-import 'package:omi/backend/schema/message_event.dart'
+import 'package:aura/backend/schema/message_event.dart'
     show
         MessageEvent,
         MessageServiceStatusEvent,
@@ -175,7 +175,7 @@ class CaptureProvider extends ChangeNotifier
 
     if (PlatformService.isDesktop) {
       _screenCaptureChannel = const MethodChannel('screenCapturePlatform');
-      _controlBarChannel = const MethodChannel('com.omi/floating_control_bar');
+      _controlBarChannel = const MethodChannel('com.aura/floating_control_bar');
 
       _initializeAppLifecycleListener();
 
@@ -245,8 +245,8 @@ class CaptureProvider extends ChangeNotifier
     switch (_recordingDevice!.type) {
       case DeviceType.friendPendant:
         return 'friend_com';
-      case DeviceType.omi:
-        return 'omi';
+      case DeviceType.aura:
+        return 'aura';
       case DeviceType.openglass:
         return 'openglass';
       case DeviceType.fieldy:
@@ -540,7 +540,7 @@ class CaptureProvider extends ChangeNotifier
           Logger.debug("Double tap: toggling pause/mute");
           _isProcessingButtonEvent = true;
           if (_isPaused) {
-            MixpanelManager().omiDoubleTap(feature: 'unmute');
+            MixpanelManager().auraDoubleTap(feature: 'unmute');
             resumeDeviceRecording().then((_) {
               _isProcessingButtonEvent = false;
             }).catchError((e) {
@@ -548,7 +548,7 @@ class CaptureProvider extends ChangeNotifier
               _isProcessingButtonEvent = false;
             });
           } else {
-            MixpanelManager().omiDoubleTap(feature: 'mute');
+            MixpanelManager().auraDoubleTap(feature: 'mute');
             pauseDeviceRecording().then((_) {
               _isProcessingButtonEvent = false;
             }).catchError((e) {
@@ -561,19 +561,19 @@ class CaptureProvider extends ChangeNotifier
           Logger.debug("Double tap: marking conversation for starring");
           if (!_starOngoingConversation) {
             markConversationForStarring();
-            MixpanelManager().omiDoubleTap(feature: 'star_conversation');
+            MixpanelManager().auraDoubleTap(feature: 'star_conversation');
             // Haptic feedback to confirm
             HapticFeedback.mediumImpact();
           } else {
             // Toggle off if already marked
             unmarkConversationForStarring();
-            MixpanelManager().omiDoubleTap(feature: 'unstar_conversation');
+            MixpanelManager().auraDoubleTap(feature: 'unstar_conversation');
             HapticFeedback.lightImpact();
           }
         } else {
           // End conversation and process (default)
           Logger.debug("Double tap: processing conversation");
-          MixpanelManager().omiDoubleTap(feature: 'process_conversation');
+          MixpanelManager().auraDoubleTap(feature: 'process_conversation');
           forceProcessingCurrentConversation();
         }
         return;
@@ -631,7 +631,7 @@ class CaptureProvider extends ChangeNotifier
 
       // Command button triggered
       bool voiceCommandSupported = _recordingDevice != null
-          ? (_recordingDevice?.type == DeviceType.omi || _recordingDevice?.type == DeviceType.openglass)
+          ? (_recordingDevice?.type == DeviceType.aura || _recordingDevice?.type == DeviceType.openglass)
           : false;
       if (_voiceCommandSession != null && voiceCommandSupported) {
         _commandBytes.add(snapshot.sublist(3));
@@ -639,7 +639,7 @@ class CaptureProvider extends ChangeNotifier
 
       // Local storage syncs
       var checkWalSupported =
-          (_recordingDevice?.type == DeviceType.omi || _recordingDevice?.type == DeviceType.openglass) &&
+          (_recordingDevice?.type == DeviceType.aura || _recordingDevice?.type == DeviceType.openglass) &&
               codec.isOpusSupported() &&
               (_socket?.state != SocketServiceState.connected || SharedPreferencesUtil().unlimitedLocalStorageEnabled);
       if (checkWalSupported != _isWalSupported) {
@@ -652,7 +652,7 @@ class CaptureProvider extends ChangeNotifier
       // Send WS
       if (_socket?.state == SocketServiceState.connected) {
         final paddingLeft =
-            (_recordingDevice?.type == DeviceType.omi || _recordingDevice?.type == DeviceType.openglass) ? 3 : 0;
+            (_recordingDevice?.type == DeviceType.aura || _recordingDevice?.type == DeviceType.openglass) ? 3 : 0;
         final trimmedValue = paddingLeft > 0 ? value.sublist(paddingLeft) : value;
         _socket?.send(trimmedValue);
 

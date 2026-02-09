@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 
 import 'package:provider/provider.dart';
 
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/desktop/pages/desktop_home_wrapper.dart';
-import 'package:omi/desktop/pages/onboarding/desktop_onboarding_wrapper.dart';
-import 'package:omi/pages/persona/persona_profile.dart';
-import 'package:omi/providers/auth_provider.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/desktop/pages/desktop_home_wrapper.dart';
+import 'package:aura/desktop/pages/onboarding/desktop_onboarding_wrapper.dart';
+import 'package:aura/pages/persona/persona_profile.dart';
+import 'package:aura/providers/auth_provider.dart';
 
 class DesktopApp extends StatelessWidget {
   const DesktopApp({super.key});

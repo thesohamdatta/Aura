@@ -2,13 +2,13 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 
-import 'package:omi/backend/schema/bt_device/bt_device.dart';
-import 'package:omi/models/custom_stt_config.dart';
-import 'package:omi/services/sockets/transcription_service.dart';
-import 'package:omi/utils/logger.dart';
-import 'package:omi/utils/mutex.dart';
+import 'package:aura/backend/schema/bt_device/bt_device.dart';
+import 'package:aura/models/custom_stt_config.dart';
+import 'package:aura/services/sockets/transcription_service.dart';
+import 'package:aura/utils/logger.dart';
+import 'package:aura/utils/mutex.dart';
 
-export 'package:omi/services/freemium_transcription_service.dart';
+export 'package:aura/services/freemium_transcription_service.dart';
 
 abstract class ISocketService {
   void start();
@@ -61,7 +61,7 @@ class SocketServicePool extends ISocketService {
   }) async {
     await _mutex.acquire();
     try {
-      final sttConfigId = customSttConfig?.sttConfigId ?? 'omi:default';
+      final sttConfigId = customSttConfig?.sttConfigId ?? 'aura:default';
 
       // Check if we can reuse existing socket (same codec, sample rate, config, and connected)
       if (!force &&

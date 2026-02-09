@@ -33,7 +33,7 @@ Always format code after making changes. The pre-commit hook handles this automa
 - **Dart (app/)**: `dart format --line-length 120 <files>`
   - Files ending in `.gen.dart` or `.g.dart` are auto-generated and should not be formatted manually.
 - **Python (backend/)**: `black --line-length 120 --skip-string-normalization <files>`
-- **C/C++ (firmware: omi/, omiGlass/)**: `clang-format -i <files>`
+- **C/C++ (firmware: aura-pendant/)**: `clang-format -i <files>`
 
 ## Testing
 

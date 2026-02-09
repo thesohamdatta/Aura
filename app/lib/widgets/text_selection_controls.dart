@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import 'package:omi/utils/l10n_extensions.dart';
+import 'package:aura/utils/l10n_extensions.dart';
 
 class OmiTextSelectionToolbar extends StatelessWidget {
   final Offset anchorAbove;
@@ -64,7 +64,7 @@ class OmiToolbarDivider extends StatelessWidget {
   }
 }
 
-Widget omiSelectionMenuBuilder(
+Widget auraSelectionMenuBuilder(
   BuildContext context,
   dynamic delegate,
   Function(String) onAskOmi, {

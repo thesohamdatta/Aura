@@ -1194,7 +1194,7 @@ abstract class AppLocalizations {
   /// Message encouraging user to connect device
   ///
   /// In en, this message translates to:
-  /// **'Connect your Omi device to access\ndevice settings and customization'**
+  /// **'Connect your Omi device to access\ndevice settings and custaurazation'**
   String get connectDeviceMessage;
 
   /// Device information section header
@@ -1203,11 +1203,11 @@ abstract class AppLocalizations {
   /// **'Device Information'**
   String get deviceInfoSection;
 
-  /// Customization section header
+  /// Custaurazation section header
   ///
   /// In en, this message translates to:
-  /// **'Customization'**
-  String get customizationSection;
+  /// **'Custaurazation'**
+  String get custaurazationSection;
 
   /// Hardware section header
   ///
@@ -1602,31 +1602,31 @@ abstract class AppLocalizations {
   /// Share stats base message
   ///
   /// In en, this message translates to:
-  /// **'Sharing my Omi stats! (omi.me - your always-on AI assistant)'**
+  /// **'Sharing my Omi stats! (aura.me - your always-on AI assistant)'**
   String get shareStatsMessage;
 
   /// Share stats period: Today
   ///
   /// In en, this message translates to:
-  /// **'Today, omi has:'**
+  /// **'Today, aura has:'**
   String get sharePeriodToday;
 
   /// Share stats period: Month
   ///
   /// In en, this message translates to:
-  /// **'This month, omi has:'**
+  /// **'This month, aura has:'**
   String get sharePeriodMonth;
 
   /// Share stats period: Year
   ///
   /// In en, this message translates to:
-  /// **'This year, omi has:'**
+  /// **'This year, aura has:'**
   String get sharePeriodYear;
 
   /// Share stats period: All Time
   ///
   /// In en, this message translates to:
-  /// **'So far, omi has:'**
+  /// **'So far, aura has:'**
   String get sharePeriodAllTime;
 
   /// Share stats: listened
@@ -1677,11 +1677,11 @@ abstract class AppLocalizations {
   /// **'No log files found.'**
   String get noLogFilesFound;
 
-  /// No description provided for @omiDebugLog.
+  /// No description provided for @auraDebugLog.
   ///
   /// In en, this message translates to:
   /// **'Omi debug log'**
-  String get omiDebugLog;
+  String get auraDebugLog;
 
   /// No description provided for @logShared.
   ///
@@ -2073,11 +2073,11 @@ abstract class AppLocalizations {
   /// **'Connect'**
   String get connect;
 
-  /// No description provided for @comingSoon.
+  /// No description provided for @caurangSoon.
   ///
   /// In en, this message translates to:
-  /// **'Coming Soon'**
-  String get comingSoon;
+  /// **'Caurang Soon'**
+  String get caurangSoon;
 
   /// No description provided for @integrationsFooter.
   ///
@@ -2370,7 +2370,7 @@ abstract class AppLocalizations {
   /// No description provided for @showMeetingsMenuBar.
   ///
   /// In en, this message translates to:
-  /// **'Show upcoming meetings in menu bar'**
+  /// **'Show upcaurang meetings in menu bar'**
   String get showMeetingsMenuBar;
 
   /// No description provided for @showMeetingsMenuBarDesc.
@@ -2388,7 +2388,7 @@ abstract class AppLocalizations {
   /// No description provided for @showEventsNoParticipantsDesc.
   ///
   /// In en, this message translates to:
-  /// **'When enabled, Coming Up shows events without participants or a video link.'**
+  /// **'When enabled, Caurang Up shows events without participants or a video link.'**
   String get showEventsNoParticipantsDesc;
 
   /// No description provided for @yourMeetings.
@@ -2406,8 +2406,8 @@ abstract class AppLocalizations {
   /// Empty state when no meetings scheduled
   ///
   /// In en, this message translates to:
-  /// **'No upcoming meetings'**
-  String get noUpcomingMeetings;
+  /// **'No upcaurang meetings'**
+  String get noUpcaurangMeetings;
 
   /// No description provided for @checkingNextDays.
   ///
@@ -2421,11 +2421,11 @@ abstract class AppLocalizations {
   /// **'Tomorrow'**
   String get tomorrow;
 
-  /// No description provided for @googleCalendarComingSoon.
+  /// No description provided for @googleCalendarCaurangSoon.
   ///
   /// In en, this message translates to:
-  /// **'Google Calendar integration coming soon!'**
-  String get googleCalendarComingSoon;
+  /// **'Google Calendar integration caurang soon!'**
+  String get googleCalendarCaurangSoon;
 
   /// No description provided for @connectedAsUser.
   ///
@@ -2799,11 +2799,11 @@ abstract class AppLocalizations {
   /// **'{appName} Integration'**
   String appIntegration(String appName);
 
-  /// No description provided for @integrationComingSoon.
+  /// No description provided for @integrationCaurangSoon.
   ///
   /// In en, this message translates to:
-  /// **'Integration with {appName} is coming soon! We\'re working hard to bring you more task management options.'**
-  String integrationComingSoon(String appName);
+  /// **'Integration with {appName} is caurang soon! We\'re working hard to bring you more task management options.'**
+  String integrationCaurangSoon(String appName);
 
   /// Button to dismiss explanation
   ///
@@ -2844,7 +2844,7 @@ abstract class AppLocalizations {
   /// No description provided for @payYourSttProvider.
   ///
   /// In en, this message translates to:
-  /// **'Freely use omi. You only pay your STT provider directly.'**
+  /// **'Freely use aura. You only pay your STT provider directly.'**
   String get payYourSttProvider;
 
   /// No description provided for @freeMinutesMonth.
@@ -2853,11 +2853,11 @@ abstract class AppLocalizations {
   /// **'1,200 free minutes/month included. Unlimited with '**
   String get freeMinutesMonth;
 
-  /// No description provided for @omiUnlimited.
+  /// No description provided for @auraUnlimited.
   ///
   /// In en, this message translates to:
   /// **'Omi Unlimited'**
-  String get omiUnlimited;
+  String get auraUnlimited;
 
   /// No description provided for @hostRequired.
   ///
@@ -3081,11 +3081,11 @@ abstract class AppLocalizations {
   /// **'{device} uses {reason}. Omi will be used.'**
   String deviceUsesCodec(String device, String reason);
 
-  /// No description provided for @omiTranscription.
+  /// No description provided for @auraTranscription.
   ///
   /// In en, this message translates to:
   /// **'Omi Transcription'**
-  String get omiTranscription;
+  String get auraTranscription;
 
   /// No description provided for @bestInClassTranscription.
   ///
@@ -3661,7 +3661,7 @@ abstract class AppLocalizations {
   ///
   /// In en, this message translates to:
   /// **'Omi – Your AI Companion'**
-  String get omiYourAiCompanion;
+  String get auraYourAiCompanion;
 
   /// App value proposition or description
   ///
@@ -4639,7 +4639,7 @@ abstract class AppLocalizations {
   ///
   /// In en, this message translates to:
   /// **'Omi'**
-  String get omiSttProvider;
+  String get auraSttProvider;
 
   /// Message shown when a value is copied
   ///
@@ -4945,7 +4945,7 @@ abstract class AppLocalizations {
   ///
   /// In en, this message translates to:
   /// **'Omi then syncs the audio files with the server'**
-  String get omiSyncsAudioFiles;
+  String get auraSyncsAudioFiles;
 
   /// Step 3: Server processing
   ///
@@ -6445,7 +6445,7 @@ abstract class AppLocalizations {
   ///
   /// In en, this message translates to:
   /// **'Omi\'s memory about you has been cleared'**
-  String get omisMemoryCleared;
+  String get aurasMemoryCleared;
 
   /// Welcome message on auth screen
   ///
@@ -7242,7 +7242,7 @@ abstract class AppLocalizations {
   /// Credit line for translations
   ///
   /// In en, this message translates to:
-  /// **'translated by omi'**
+  /// **'translated by aura'**
   String get translatedByOmi;
 
   /// Back button text
@@ -7431,11 +7431,11 @@ abstract class AppLocalizations {
   /// **'Show Meetings in Menu Bar'**
   String get showMeetingsInMenuBar;
 
-  /// No description provided for @displayUpcomingMeetingsDescription.
+  /// No description provided for @displayUpcaurangMeetingsDescription.
   ///
   /// In en, this message translates to:
-  /// **'Display upcoming meetings in the menu bar'**
-  String get displayUpcomingMeetingsDescription;
+  /// **'Display upcaurang meetings in the menu bar'**
+  String get displayUpcaurangMeetingsDescription;
 
   /// No description provided for @showEventsWithoutParticipants.
   ///
@@ -7449,11 +7449,11 @@ abstract class AppLocalizations {
   /// **'Include personal events with no attendees'**
   String get includePersonalEventsDescription;
 
-  /// Section header for upcoming meetings in calendar
+  /// Section header for upcaurang meetings in calendar
   ///
   /// In en, this message translates to:
-  /// **'Upcoming Meetings'**
-  String get upcomingMeetings;
+  /// **'Upcaurang Meetings'**
+  String get upcaurangMeetings;
 
   /// No description provided for @checkingNext7Days.
   ///
@@ -7968,8 +7968,8 @@ abstract class AppLocalizations {
   /// Message shown when task integration is not yet available
   ///
   /// In en, this message translates to:
-  /// **'{serviceName} integration coming soon'**
-  String serviceIntegrationComingSoon(String serviceName);
+  /// **'{serviceName} integration caurang soon'**
+  String serviceIntegrationCaurangSoon(String serviceName);
 
   /// Message shown when task was already exported to a platform
   ///
@@ -8041,12 +8041,12 @@ abstract class AppLocalizations {
   ///
   /// In en, this message translates to:
   /// **'Omi API Keys'**
-  String get omiApiKeys;
+  String get auraApiKeys;
 
   /// Description of what API keys are used for
   ///
   /// In en, this message translates to:
-  /// **'API Keys are used for authentication when your app communicates with the OMI server. They allow your application to create memories and access other OMI services securely.'**
+  /// **'API Keys are used for authentication when your app communicates with the AURA server. They allow your application to create memories and access other AURA services securely.'**
   String get apiKeysDescription;
 
   /// Tooltip for API keys info button
@@ -8313,11 +8313,11 @@ abstract class AppLocalizations {
   /// **'• If you lose your password, your data cannot be recovered.'**
   String get e2eeTradeoff2;
 
-  /// Message indicating a feature is coming soon
+  /// Message indicating a feature is caurang soon
   ///
   /// In en, this message translates to:
-  /// **'This feature is coming soon!'**
-  String get featureComingSoon;
+  /// **'This feature is caurang soon!'**
+  String get featureCaurangSoon;
 
   /// Message shown when data migration is in progress
   ///
@@ -8485,7 +8485,7 @@ abstract class AppLocalizations {
   ///
   /// In en, this message translates to:
   /// **'Omi Training'**
-  String get omiTraining;
+  String get auraTraining;
 
   /// Label for training data program
   ///
@@ -8508,7 +8508,7 @@ abstract class AppLocalizations {
   /// Link text to learn more about training
   ///
   /// In en, this message translates to:
-  /// **'Learn more at omi.me/training'**
+  /// **'Learn more at aura.me/training'**
   String get learnMoreAtOmiTraining;
 
   /// Checkbox label for agreeing to contribute data
@@ -9037,7 +9037,7 @@ abstract class AppLocalizations {
   ///
   /// In en, this message translates to:
   /// **'Omi has:'**
-  String get omiHas;
+  String get auraHas;
 
   /// Message shown when all premium minutes are used
   ///
@@ -9090,8 +9090,8 @@ abstract class AppLocalizations {
   /// Text for other devices placeholder
   ///
   /// In en, this message translates to:
-  /// **'Other devices coming soon'**
-  String get otherDevicesComingSoon;
+  /// **'Other devices caurang soon'**
+  String get otherDevicesCaurangSoon;
 
   /// Dialog title for deleting Limitless data
   ///
@@ -9721,7 +9721,7 @@ abstract class AppLocalizations {
   ///
   /// In en, this message translates to:
   /// **'Omi'**
-  String get omiAppName;
+  String get auraAppName;
 
   /// Text shown to expand collapsed content, with down arrow
   ///
@@ -9960,7 +9960,7 @@ abstract class AppLocalizations {
   /// Button text to update Omi device firmware
   ///
   /// In en, this message translates to:
-  /// **'Update omi firmware'**
+  /// **'Update aura firmware'**
   String get updateOmiFirmware;
 
   /// Generic error message asking user to try again
@@ -9993,7 +9993,7 @@ abstract class AppLocalizations {
   /// **'When to receive your daily summary'**
   String get whenToReceiveDailySummary;
 
-  /// Subtitle for no upcoming meetings state
+  /// Subtitle for no upcaurang meetings state
   ///
   /// In en, this message translates to:
   /// **'Checking the next 7 days'**
@@ -10296,7 +10296,7 @@ abstract class AppLocalizations {
   /// Text shared when sharing wrapped images
   ///
   /// In en, this message translates to:
-  /// **'My 2025, remembered by Omi ✨ omi.me/wrapped'**
+  /// **'My 2025, remembered by Omi ✨ aura.me/wrapped'**
   String get wrappedShareText;
 
   /// Error message when sharing fails
@@ -11737,7 +11737,7 @@ abstract class AppLocalizations {
   ///
   /// In en, this message translates to:
   /// **'Omis built-in live transcription is optimized for real-time conversations with automatic speaker detection and diarization.'**
-  String get omiTranscriptionOptimized;
+  String get auraTranscriptionOptimized;
 
   /// Reset button label
   ///
@@ -13047,11 +13047,11 @@ abstract class AppLocalizations {
   /// **'Almost done...'**
   String get almostDone;
 
-  /// Notification title for omi app messages
+  /// Notification title for aura app messages
   ///
   /// In en, this message translates to:
-  /// **'omi says'**
-  String get omiSays;
+  /// **'aura says'**
+  String get auraSays;
 
   /// Migration start message when analyzing data
   ///

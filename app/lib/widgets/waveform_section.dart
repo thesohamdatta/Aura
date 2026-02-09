@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 
 import 'package:provider/provider.dart';
 
-import 'package:omi/models/playback_state.dart';
-import 'package:omi/providers/sync_provider.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/widgets/waveform_painter.dart';
+import 'package:aura/models/playback_state.dart';
+import 'package:aura/providers/sync_provider.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/widgets/waveform_painter.dart';
 
 class WaveformSection extends StatefulWidget {
   final int seconds;

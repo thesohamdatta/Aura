@@ -4,12 +4,12 @@ import 'package:connectivity_plus_platform_interface/connectivity_plus_platform_
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'package:omi/backend/schema/conversation.dart';
-import 'package:omi/backend/schema/message_event.dart';
-import 'package:omi/backend/schema/transcript_segment.dart';
-import 'package:omi/providers/capture_provider.dart';
-import 'package:omi/providers/people_provider.dart';
-import 'package:omi/services/services.dart';
+import 'package:aura/backend/schema/conversation.dart';
+import 'package:aura/backend/schema/message_event.dart';
+import 'package:aura/backend/schema/transcript_segment.dart';
+import 'package:aura/providers/capture_provider.dart';
+import 'package:aura/providers/people_provider.dart';
+import 'package:aura/services/services.dart';
 
 /// Mock PeopleProvider that tracks setPeople calls
 class MockPeopleProvider extends PeopleProvider {

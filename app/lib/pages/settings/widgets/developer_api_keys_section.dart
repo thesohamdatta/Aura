@@ -4,11 +4,11 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'package:omi/pages/settings/widgets/create_dev_api_key_sheet.dart';
-import 'package:omi/pages/settings/widgets/dev_api_key_list_item.dart';
-import 'package:omi/providers/dev_api_key_provider.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/l10n_extensions.dart';
+import 'package:aura/pages/settings/widgets/create_dev_api_key_sheet.dart';
+import 'package:aura/pages/settings/widgets/dev_api_key_list_item.dart';
+import 'package:aura/providers/dev_api_key_provider.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/l10n_extensions.dart';
 
 class DeveloperApiKeysSection extends StatelessWidget {
   const DeveloperApiKeysSection({super.key});
@@ -91,7 +91,7 @@ class DeveloperApiKeysSection extends StatelessWidget {
                     ),
                   ),
                   const Spacer(),
-                  _buildDocsButton(context, 'https://docs.omi.me/doc/developer/api', 'Developer API'),
+                  _buildDocsButton(context, 'https://docs.aura.me/doc/developer/api', 'Developer API'),
                   const SizedBox(width: 8),
                   _buildCreateKeyButton(context),
                 ],

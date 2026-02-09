@@ -6,16 +6,16 @@ import 'package:flutter_provider_utilities/flutter_provider_utilities.dart';
 import 'package:gradient_borders/box_borders/gradient_box_border.dart';
 import 'package:provider/provider.dart';
 
-import 'package:omi/backend/http/api/users.dart';
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/pages/settings/language_selection_dialog.dart';
-import 'package:omi/pages/speech_profile/percentage_bar_progress.dart';
-import 'package:omi/providers/capture_provider.dart';
-import 'package:omi/providers/home_provider.dart';
-import 'package:omi/providers/speech_profile_provider.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/logger.dart';
-import 'package:omi/widgets/dialog.dart';
+import 'package:aura/backend/http/api/users.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/pages/settings/language_selection_dialog.dart';
+import 'package:aura/pages/speech_profile/percentage_bar_progress.dart';
+import 'package:aura/providers/capture_provider.dart';
+import 'package:aura/providers/home_provider.dart';
+import 'package:aura/providers/speech_profile_provider.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/logger.dart';
+import 'package:aura/widgets/dialog.dart';
 
 class SpeechProfileWidget extends StatefulWidget {
   final VoidCallback goNext;

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-import 'package:omi/backend/http/api/payments.dart';
-import 'package:omi/main.dart';
-import 'package:omi/utils/alerts/app_snackbar.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/widgets/extensions/string.dart';
+import 'package:aura/backend/http/api/payments.dart';
+import 'package:aura/main.dart';
+import 'package:aura/utils/alerts/app_snackbar.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/widgets/extensions/string.dart';
 import 'models/payment_method_config.dart';
 
 enum PaymentMethodType {

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'package:omi/ui/adaptive_widget.dart';
-import 'package:omi/utils/responsive/responsive_helper.dart';
+import 'package:aura/ui/adaptive_widget.dart';
+import 'package:aura/utils/responsive/responsive_helper.dart';
 
-enum OmiChatBubbleType { incoming, outgoing }
+enum OmiChatBubbleType { incaurang, outgoing }
 
 class OmiChatBubble extends AdaptiveWidget {
   final OmiChatBubbleType type;
@@ -24,10 +24,10 @@ class OmiChatBubble extends AdaptiveWidget {
   Widget buildMobile(BuildContext context) => _base();
 
   Widget _base() {
-    final isIncoming = type == OmiChatBubbleType.incoming;
+    final isIncaurang = type == OmiChatBubbleType.incaurang;
     return Container(
       decoration: BoxDecoration(
-        color: isIncoming
+        color: isIncaurang
             ? const Color.fromARGB(255, 255, 255, 255).withOpacity(0.05)
             : ResponsiveHelper.purplePrimary.withOpacity(0.15),
         borderRadius: BorderRadius.circular(16),

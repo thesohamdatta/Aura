@@ -4,7 +4,7 @@ Quick reference for API endpoints in the Omi backend. **Two distinct APIs** use 
 
 ## Base URLs
 
-- **Production**: `https://api.omi.me`
+- **Production**: `https://api.aura.me`
 - **Development**: Use ngrok or local backend URL
 
 ---
@@ -23,7 +23,7 @@ Used by the Omi app. Most endpoints require Firebase authentication via `uid` (f
 Used for programmatic access to a user’s data (memories, conversations, action items). Create keys in **Settings → Developer → Create Key** in the Omi app.
 
 ```
-Authorization: Bearer omi_dev_your_api_key_here
+Authorization: Bearer aura_dev_your_api_key_here
 ```
 
 - **Typical use**: Integrations, scripts, third-party apps
@@ -34,7 +34,7 @@ Authorization: Bearer omi_dev_your_api_key_here
 For MCP (Model Context Protocol) consumers.
 
 ```
-Authorization: Bearer omi_mcp_your_api_key_here
+Authorization: Bearer aura_mcp_your_api_key_here
 ```
 
 - **Full docs**: `docs/doc/developer/MCP.mdx`
@@ -164,7 +164,7 @@ Real-time audio streaming and transcription.
 
 ## Developer API (`/v1/dev/*`)
 
-**Auth**: `Authorization: Bearer omi_dev_<key>`
+**Auth**: `Authorization: Bearer aura_dev_<key>`
 
 | Method | Path | Description |
 |--------|------|-------------|
@@ -195,7 +195,7 @@ Real-time audio streaming and transcription.
 
 ## MCP Server (`/v1/mcp/*`)
 
-**Auth**: `Authorization: Bearer omi_mcp_<key>`
+**Auth**: `Authorization: Bearer aura_mcp_<key>`
 
 ### SSE Endpoints (MCP Protocol)
 

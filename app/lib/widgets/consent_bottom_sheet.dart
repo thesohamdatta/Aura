@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 
-import 'package:omi/providers/auth_provider.dart';
-import 'package:omi/utils/l10n_extensions.dart';
+import 'package:aura/providers/auth_provider.dart';
+import 'package:aura/utils/l10n_extensions.dart';
 
 class ConsentBottomSheet extends StatelessWidget {
   final String authMethod; // 'google' or 'apple'

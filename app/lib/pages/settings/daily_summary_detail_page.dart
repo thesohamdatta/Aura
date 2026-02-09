@@ -4,13 +4,13 @@ import 'package:flutter_map/flutter_map.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:latlong2/latlong.dart';
 
-import 'package:omi/backend/http/api/conversations.dart' as conversations_api;
-import 'package:omi/backend/http/api/users.dart';
-import 'package:omi/backend/schema/daily_summary.dart';
-import 'package:omi/pages/conversation_detail/maps_util.dart';
-import 'package:omi/pages/conversation_detail/page.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/l10n_extensions.dart';
+import 'package:aura/backend/http/api/conversations.dart' as conversations_api;
+import 'package:aura/backend/http/api/users.dart';
+import 'package:aura/backend/schema/daily_summary.dart';
+import 'package:aura/pages/conversation_detail/maps_util.dart';
+import 'package:aura/pages/conversation_detail/page.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/l10n_extensions.dart';
 
 class DailySummaryDetailPage extends StatefulWidget {
   final String summaryId;
@@ -492,7 +492,7 @@ class _DailySummaryDetailPageState extends State<DailySummaryDetailPage> with Si
                     TileLayer(
                       urlTemplate: 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
                       subdomains: const ['a', 'b', 'c', 'd'],
-                      userAgentPackageName: 'me.omi.app',
+                      userAgentPackageName: 'me.aura.app',
                       retinaMode: true,
                     ),
                     MarkerLayer(markers: markers),

@@ -19,8 +19,8 @@ references:
 ### 1. Prompt-Based Apps
 **No server required** - Just define prompts
 
-- Chat prompts: Customize AI personality
-- Memory prompts: Customize memory extraction
+- Chat prompts: Custauraze AI personality
+- Memory prompts: Custauraze memory extraction
 
 ### 2. Integration Apps
 **Requires server endpoint** - Webhook-based
@@ -70,7 +70,7 @@ async def transcript_segment(segment: dict):
     timestamp = segment.get("timestamp")
     
     # Process in real-time
-    if "hey omi" in text.lower():
+    if "hey aura" in text.lower():
         # Trigger action
         await trigger_action()
     
@@ -227,8 +227,8 @@ def verify_webhook_signature(payload: bytes, signature: str, secret: str) -> boo
 - `.cursor/rules/backend-architecture.mdc` - Backend architecture
 
 ### Skills
-- `.cursor/skills/omi-plugin-development/` - Plugin development workflows
-- `.cursor/skills/omi-api-integration/` - API integration patterns
+- `.cursor/skills/aura-plugin-development/` - Plugin development workflows
+- `.cursor/skills/aura-api-integration/` - API integration patterns
 
 ### Subagents
 - `.cursor/agents/plugin-developer/` - Plugin development specialist

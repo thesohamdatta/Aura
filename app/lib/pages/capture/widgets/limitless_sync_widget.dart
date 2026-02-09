@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 import 'package:provider/provider.dart';
 
-import 'package:omi/backend/schema/bt_device/bt_device.dart';
-import 'package:omi/providers/device_provider.dart';
-import 'package:omi/providers/sync_provider.dart';
-import 'package:omi/services/wals.dart';
-import 'package:omi/utils/l10n_extensions.dart';
+import 'package:aura/backend/schema/bt_device/bt_device.dart';
+import 'package:aura/providers/device_provider.dart';
+import 'package:aura/providers/sync_provider.dart';
+import 'package:aura/services/wals.dart';
+import 'package:aura/utils/l10n_extensions.dart';
 
 class LimitlessSyncCardWidget extends StatelessWidget {
   const LimitlessSyncCardWidget({super.key});

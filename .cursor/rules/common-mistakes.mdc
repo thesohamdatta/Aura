@@ -42,8 +42,8 @@ grep -r "function_name" backend/
 
 **How to avoid**:
 - Read architecture documentation first:
-  - `docs/doc/developer/backend/backend_deepdive.mdx` - [Backend architecture](https://docs.omi.me/doc/developer/backend/backend_deepdive)
-  - `docs/INDEX.md` - [Complete documentation index](https://docs.omi.me/llms.txt)
+  - `docs/doc/developer/backend/backend_deepdive.mdx` - [Backend architecture](https://docs.aura.me/doc/developer/backend/backend_deepdive)
+  - `docs/INDEX.md` - [Complete documentation index](https://docs.aura.me/llms.txt)
   - `ISSUE_TRIAGE_GUIDE.MD` - Omi layers and priorities
 - Study relevant code paths before implementing
 - Understand the data flow (Capture → Understand → Remember → Retrieve → Act)
@@ -164,7 +164,7 @@ grep -r "function_name" backend/
 **Problem**: Features that require the app to be in foreground.
 
 **Examples from issues**:
-- #4355: "Click to talk to omi cv1 works only with open app and in chat screen"
+- #4355: "Click to talk to aura cv1 works only with open app and in chat screen"
 
 **How to avoid**:
 - Design features to work in background
@@ -208,14 +208,14 @@ Before implementing:
 - `.cursor/rules/pre-implementation-checklist.mdc` - Checklist before implementing
 - `.cursor/rules/verification.mdc` - Self-checking guidelines
 - `.cursor/rules/context-communication.mdc` - Communication best practices
-- `.cursor/rules/omi-specific-patterns.mdc` - Omi architecture patterns
+- `.cursor/rules/aura-specific-patterns.mdc` - Omi architecture patterns
 - `.cursor/rules/backend-architecture.mdc` - Backend architecture details
 
 ## Related Cursor Resources
 
 ### Skills
 - `.cursor/skills/self-improvement/SKILL.md` - Learn from PRs and issues
-- `.cursor/skills/omi-backend-patterns/SKILL.md` - Backend patterns
+- `.cursor/skills/aura-backend-patterns/SKILL.md` - Backend patterns
 
 ### Commands
 - `/learn-from-pr` - Analyze a PR for lessons

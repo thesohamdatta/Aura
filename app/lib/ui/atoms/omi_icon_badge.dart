@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:omi/ui/adaptive_widget.dart';
+import 'package:aura/ui/adaptive_widget.dart';
 
 class OmiIconBadge extends AdaptiveWidget {
   final IconData icon;

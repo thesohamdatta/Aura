@@ -10,39 +10,39 @@ import 'package:pull_down_button/pull_down_button.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:tuple/tuple.dart';
 
-import 'package:omi/backend/http/api/conversations.dart';
-import 'package:omi/backend/schema/conversation.dart';
-import 'package:omi/backend/schema/person.dart';
-import 'package:omi/backend/schema/structured.dart';
-import 'package:omi/backend/schema/transcript_segment.dart';
-import 'package:omi/pages/capture/widgets/widgets.dart';
-import 'package:omi/pages/conversation_detail/widgets.dart';
-import 'package:omi/pages/home/page.dart';
-import 'package:omi/providers/connectivity_provider.dart';
-import 'package:omi/providers/conversation_provider.dart';
-import 'package:omi/providers/people_provider.dart';
-import 'package:omi/services/app_review_service.dart';
-import 'package:omi/services/audio_download_service.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/logger.dart';
-import 'package:omi/utils/other/temp.dart';
-import 'package:omi/utils/platform/platform_service.dart';
-import 'package:omi/widgets/conversation_bottom_bar.dart';
-import 'package:omi/widgets/dialog.dart';
-import 'package:omi/widgets/expandable_text.dart';
-import 'package:omi/widgets/extensions/string.dart';
+import 'package:aura/backend/http/api/conversations.dart';
+import 'package:aura/backend/schema/conversation.dart';
+import 'package:aura/backend/schema/person.dart';
+import 'package:aura/backend/schema/structured.dart';
+import 'package:aura/backend/schema/transcript_segment.dart';
+import 'package:aura/pages/capture/widgets/widgets.dart';
+import 'package:aura/pages/conversation_detail/widgets.dart';
+import 'package:aura/pages/home/page.dart';
+import 'package:aura/providers/connectivity_provider.dart';
+import 'package:aura/providers/conversation_provider.dart';
+import 'package:aura/providers/people_provider.dart';
+import 'package:aura/services/app_review_service.dart';
+import 'package:aura/services/audio_download_service.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/logger.dart';
+import 'package:aura/utils/other/temp.dart';
+import 'package:aura/utils/platform/platform_service.dart';
+import 'package:aura/widgets/conversation_bottom_bar.dart';
+import 'package:aura/widgets/dialog.dart';
+import 'package:aura/widgets/expandable_text.dart';
+import 'package:aura/widgets/extensions/string.dart';
 import 'conversation_detail_provider.dart';
 import 'test_prompts.dart';
 import 'widgets/audio_download_progress_sheet.dart';
 import 'widgets/name_speaker_sheet.dart';
 import 'widgets/share_to_contacts_sheet.dart';
 
-// import 'package:omi/backend/preferences.dart';
+// import 'package:aura/backend/preferences.dart';
 
 // import 'share.dart';
-// import 'package:omi/pages/settings/developer.dart';
-// import 'package:omi/backend/http/webhooks.dart';
+// import 'package:aura/pages/settings/developer.dart';
+// import 'package:aura/backend/http/webhooks.dart';
 
 class ConversationDetailPage extends StatefulWidget {
   final ServerConversation conversation;
@@ -748,7 +748,7 @@ class _ConversationDetailPageState extends State<ConversationDetailPage> with Ti
                                       });
                                       return;
                                     }
-                                    String content = 'https://h.omi.me/memories/${provider.conversation.id}';
+                                    String content = 'https://h.aura.me/memories/${provider.conversation.id}';
                                     // Track share event
                                     MixpanelManager().conversationShared(
                                       conversation: provider.conversation,

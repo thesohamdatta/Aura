@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 import 'package:url_launcher/url_launcher.dart';
 
-import 'package:omi/pages/settings/webview.dart';
-import 'package:omi/utils/analytics/intercom.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/other/temp.dart';
+import 'package:aura/pages/settings/webview.dart';
+import 'package:aura/utils/analytics/intercom.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/other/temp.dart';
 
 class AboutOmiPage extends StatefulWidget {
   const AboutOmiPage({super.key});
@@ -36,19 +36,19 @@ class _AboutOmiPageState extends State<AboutOmiPage> {
                 MixpanelManager().pageOpened('About Privacy Policy');
                 routeToPage(
                   context,
-                  PageWebView(url: 'https://www.omi.me/pages/privacy', title: context.l10n.privacyPolicyTitle),
+                  PageWebView(url: 'https://www.aura.me/pages/privacy', title: context.l10n.privacyPolicyTitle),
                 );
               },
             ),
             ListTile(
               contentPadding: const EdgeInsets.fromLTRB(4, 0, 24, 0),
               title: Text(context.l10n.visitWebsite, style: const TextStyle(color: Colors.white)),
-              subtitle: const Text('https://omi.me'),
+              subtitle: const Text('https://aura.me'),
               trailing: const Icon(Icons.language_outlined, size: 20),
               onTap: () {
                 MixpanelManager().pageOpened('About Visit Website');
-                // routeToPage(context, const PageWebView(url: 'https://www.omi.me/', title: 'omi'));
-                launchUrl(Uri.parse('https://www.omi.me/'));
+                // routeToPage(context, const PageWebView(url: 'https://www.aura.me/', title: 'aura'));
+                launchUrl(Uri.parse('https://www.aura.me/'));
               },
             ),
             ListTile(
@@ -67,7 +67,7 @@ class _AboutOmiPageState extends State<AboutOmiPage> {
               trailing: const Icon(Icons.discord, color: Colors.purple, size: 20),
               onTap: () {
                 MixpanelManager().pageOpened('About Join Discord');
-                launchUrl(Uri.parse('http://discord.omi.me'));
+                launchUrl(Uri.parse('http://discord.aura.me'));
               },
             ),
           ],

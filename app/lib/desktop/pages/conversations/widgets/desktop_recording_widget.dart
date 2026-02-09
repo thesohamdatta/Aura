@@ -8,20 +8,20 @@ import 'package:collection/collection.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'package:omi/backend/schema/transcript_segment.dart';
-import 'package:omi/backend/schema/message_event.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
+import 'package:aura/backend/schema/transcript_segment.dart';
+import 'package:aura/backend/schema/message_event.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
 import 'desktop_name_speaker_dialog.dart';
-import 'package:omi/providers/capture_provider.dart';
-import 'package:omi/providers/connectivity_provider.dart';
-import 'package:omi/providers/device_provider.dart';
-import 'package:omi/providers/onboarding_provider.dart';
-import 'package:omi/providers/people_provider.dart';
-import 'package:omi/ui/atoms/omi_icon_button.dart';
-import 'package:omi/utils/enums.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/platform/platform_service.dart';
-import 'package:omi/utils/responsive/responsive_helper.dart';
+import 'package:aura/providers/capture_provider.dart';
+import 'package:aura/providers/connectivity_provider.dart';
+import 'package:aura/providers/device_provider.dart';
+import 'package:aura/providers/onboarding_provider.dart';
+import 'package:aura/providers/people_provider.dart';
+import 'package:aura/ui/atoms/aura_icon_button.dart';
+import 'package:aura/utils/enums.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/platform/platform_service.dart';
+import 'package:aura/utils/responsive/responsive_helper.dart';
 
 class DesktopRecordingWidget extends StatefulWidget {
   final VoidCallback? onBack;
@@ -108,14 +108,14 @@ class _DesktopRecordingWidgetState extends State<DesktopRecordingWidget> {
     }
   }
 
-  Widget _buildProminentStartButton(
+  Widget _buildPrauranentStartButton(
       bool isInitializing, RecordingState recordingState, CaptureProvider captureProvider) {
     return SizedBox(
       width: double.infinity,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          // Main prominent record button
+          // Main prauranent record button
           MouseRegion(
             onEnter: (_) => setState(() => _isHovered = true),
             onExit: (_) => setState(() => _isHovered = false),
@@ -1154,7 +1154,7 @@ class _DesktopRecordingWidgetState extends State<DesktopRecordingWidget> {
       padding: EdgeInsets.all(widget.hasConversations ? 0 : 20),
       child: widget.hasConversations
           ? _buildImprovedCompactRecording(isInitializing, recordingState, captureProvider)
-          : _buildProminentStartButton(isInitializing, recordingState, captureProvider),
+          : _buildPrauranentStartButton(isInitializing, recordingState, captureProvider),
     );
   }
 

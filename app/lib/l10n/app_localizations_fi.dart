@@ -266,7 +266,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get messageCopied => '✨ Viesti kopioitu leikepöydälle';
 
   @override
-  String get cannotReportOwnMessage => 'Et voi ilmoittaa omista viesteistäsi.';
+  String get cannotReportOwnMessage => 'Et voi ilmoittaa aurasta viesteistäsi.';
 
   @override
   String get reportMessage => 'Raportoi viesti';
@@ -548,7 +548,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get deviceInfoSection => 'Laitteen tiedot';
 
   @override
-  String get customizationSection => 'Mukautus';
+  String get custaurazationSection => 'Mukautus';
 
   @override
   String get hardwareSection => 'Laitteisto';
@@ -755,19 +755,19 @@ class AppLocalizationsFi extends AppLocalizations {
   }
 
   @override
-  String get shareStatsMessage => 'Jaan Omi-tilastoni! (omi.me - aina päällä oleva tekoälyavustajasi)';
+  String get shareStatsMessage => 'Jaan Omi-tilastoni! (aura.me - aina päällä oleva tekoälyavustajasi)';
 
   @override
-  String get sharePeriodToday => 'Tänään omi on:';
+  String get sharePeriodToday => 'Tänään aura on:';
 
   @override
-  String get sharePeriodMonth => 'Tässä kuussa omi on:';
+  String get sharePeriodMonth => 'Tässä kuussa aura on:';
 
   @override
-  String get sharePeriodYear => 'Tänä vuonna omi on:';
+  String get sharePeriodYear => 'Tänä vuonna aura on:';
 
   @override
-  String get sharePeriodAllTime => 'Tähän mennessä omi on:';
+  String get sharePeriodAllTime => 'Tähän mennessä aura on:';
 
   @override
   String shareStatsListened(String minutes) {
@@ -802,7 +802,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get noLogFilesFound => 'Lokitiedostoja ei löytynyt.';
 
   @override
-  String get omiDebugLog => 'Omin vianjäljitysloki';
+  String get auraDebugLog => 'Omin vianjäljitysloki';
 
   @override
   String get logShared => 'Loki jaettu';
@@ -1014,7 +1014,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get connect => 'Connect';
 
   @override
-  String get comingSoon => 'Tulossa pian';
+  String get caurangSoon => 'Tulossa pian';
 
   @override
   String get integrationsFooter => 'Yhdistä sovelluksesi nähdäksesi tiedot ja mittarit chatissa.';
@@ -1109,7 +1109,7 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String get legalNotice =>
-      'Oikeudellinen huomautus: Äänidatan nauhoittamisen ja tallentamisen laillisuus voi vaihdella sijaintisi ja tämän ominaisuuden käyttötavan mukaan. Vastaat paikallisten lakien ja määräysten noudattamisesta.';
+      'Oikeudellinen huomautus: Äänidatan nauhoittamisen ja tallentamisen laillisuus voi vaihdella sijaintisi ja tämän auranaisuuden käyttötavan mukaan. Vastaat paikallisten lakien ja määräysten noudattamisesta.';
 
   @override
   String get alreadyAuthorized => 'Jo valtuutettu';
@@ -1197,7 +1197,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get refresh => 'Päivitä';
 
   @override
-  String get noUpcomingMeetings => 'Ei tulevia tapaamisia';
+  String get noUpcaurangMeetings => 'Ei tulevia tapaamisia';
 
   @override
   String get checkingNextDays => 'Tarkistetaan seuraavat 30 päivää';
@@ -1206,7 +1206,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get tomorrow => 'Huomenna';
 
   @override
-  String get googleCalendarComingSoon => 'Google Kalenteri -integraatio tulossa pian!';
+  String get googleCalendarCaurangSoon => 'Google Kalenteri -integraatio tulossa pian!';
 
   @override
   String connectedAsUser(String userId) {
@@ -1359,7 +1359,7 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String get selectDefaultRepoDesc =>
-      'Valitse oletusrepositorio ongelmien luomiseen. Voit silti määrittää eri repositorion ongelmia luodessa.';
+      'Valitse oletusrepositorio ongelmien luauraseen. Voit silti määrittää eri repositorion ongelmia luodessa.';
 
   @override
   String get noReposFound => 'Repositorioita ei löytynyt';
@@ -1432,7 +1432,7 @@ class AppLocalizationsFi extends AppLocalizations {
   }
 
   @override
-  String integrationComingSoon(String appName) {
+  String integrationCaurangSoon(String appName) {
     return 'Integraatio palvelun $appName kanssa tulossa pian! Työskentelemme ahkerasti tuodaksemme sinulle lisää tehtävänhallinnan vaihtoehtoja.';
   }
 
@@ -1455,13 +1455,13 @@ class AppLocalizationsFi extends AppLocalizations {
   String get bringYourOwn => 'Tuo omasi';
 
   @override
-  String get payYourSttProvider => 'Käytä omia vapaasti. Maksat vain STT-palveluntarjoajallesi suoraan.';
+  String get payYourSttProvider => 'Käytä auraa vapaasti. Maksat vain STT-palveluntarjoajallesi suoraan.';
 
   @override
   String get freeMinutesMonth => '1 200 ilmaisminuuttia kuukaudessa mukana. Rajoittamaton ';
 
   @override
-  String get omiUnlimited => 'Omi Unlimited';
+  String get auraUnlimited => 'Omi Unlimited';
 
   @override
   String get hostRequired => 'Isäntä vaaditaan';
@@ -1583,7 +1583,7 @@ class AppLocalizationsFi extends AppLocalizations {
   }
 
   @override
-  String get omiTranscription => 'Omi-litterointi';
+  String get auraTranscription => 'Omi-litterointi';
 
   @override
   String get bestInClassTranscription => 'Paras litterointi ilman asennusta';
@@ -1889,7 +1889,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get termsOfUse => 'Käyttöehdot';
 
   @override
-  String get omiYourAiCompanion => 'Omi – tekoälykumppanisi';
+  String get auraYourAiCompanion => 'Omi – tekoälykumppanisi';
 
   @override
   String get captureEveryMoment =>
@@ -2255,7 +2255,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get pleaseEnterFolderName => 'Anna kansion nimi';
 
   @override
-  String get failedToCreateFolder => 'Kansion luominen epäonnistui';
+  String get failedToCreateFolder => 'Kansion luauranen epäonnistui';
 
   @override
   String get failedToUpdateFolder => 'Kansion päivittäminen epäonnistui';
@@ -2409,7 +2409,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get privacyPolicyTitle => 'Tietosuojakäytäntö';
 
   @override
-  String get omiSttProvider => 'Omi';
+  String get auraSttProvider => 'Omi';
 
   @override
   String labelCopied(String label) {
@@ -2566,7 +2566,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get checksForAudioFiles => 'Tarkistaa äänitiedostot SD-kortilla';
 
   @override
-  String get omiSyncsAudioFiles => 'Omi synkronoi sitten äänitiedostot palvelimen kanssa';
+  String get auraSyncsAudioFiles => 'Omi synkronoi sitten äänitiedostot palvelimen kanssa';
 
   @override
   String get serverProcessesAudio => 'Palvelin käsittelee äänitiedostot ja luo muistoja';
@@ -2836,7 +2836,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get previewAndScreenshots => 'Esikatselu ja kuvakaappaukset';
 
   @override
-  String get appCapabilities => 'Sovelluksen ominaisuudet';
+  String get appCapabilities => 'Sovelluksen auranaisuudet';
 
   @override
   String get aiPrompts => 'Tekoälykehotukset';
@@ -3016,7 +3016,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get pricingPaid => 'Maksullinen';
 
   @override
-  String get loadingCapabilities => 'Ladataan ominaisuuksia...';
+  String get loadingCapabilities => 'Ladataan auranaisuuksia...';
 
   @override
   String get filterInstalled => 'Asennettu';
@@ -3108,7 +3108,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get chooseAnyFileType => 'Valitse mikä tahansa tiedostotyyppi';
 
   @override
-  String get cannotReportOwnMessages => 'Et voi raportoida omia viestejäsi';
+  String get cannotReportOwnMessages => 'Et voi raportoida auraa viestejäsi';
 
   @override
   String get messageReportedSuccessfully => '✅ Viesti raportoitu onnistuneesti';
@@ -3203,10 +3203,10 @@ class AppLocalizationsFi extends AppLocalizations {
   String get conversationUrlCouldNotBeGenerated => 'Keskustelun URL-osoitetta ei voitu luoda.';
 
   @override
-  String get failedToGenerateConversationLink => 'Keskustelulinkin luominen epäonnistui';
+  String get failedToGenerateConversationLink => 'Keskustelulinkin luauranen epäonnistui';
 
   @override
-  String get failedToGenerateShareLink => 'Jakamislinkin luominen epäonnistui';
+  String get failedToGenerateShareLink => 'Jakamislinkin luauranen epäonnistui';
 
   @override
   String get reloadingConversations => 'Ladataan keskusteluja uudelleen...';
@@ -3345,7 +3345,7 @@ class AppLocalizationsFi extends AppLocalizations {
   }
 
   @override
-  String get omisMemoryCleared => 'Omin muisti sinusta on tyhjennetty';
+  String get aurasMemoryCleared => 'Omin muisti sinusta on tyhjennetty';
 
   @override
   String get welcomeToOmi => 'Tervetuloa Omi';
@@ -3379,7 +3379,7 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String get dataCollectionMessage =>
-      'Jatkamalla keskustelusi, tallenteet ja henkilötiedot tallennetaan turvallisesti palvelimillemme tarjotaksemme tekoälyavusteisia näkemyksiä ja mahdollistaaksemme kaikki sovelluksen ominaisuudet.';
+      'Jatkamalla keskustelusi, tallenteet ja henkilötiedot tallennetaan turvallisesti palvelimillemme tarjotaksemme tekoälyavusteisia näkemyksiä ja mahdollistaaksemme kaikki sovelluksen auranaisuudet.';
 
   @override
   String get dataProtection => 'Tietosuoja';
@@ -3422,7 +3422,7 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String get enableFeaturesForBestExperience =>
-      'Ota käyttöön ominaisuudet parhaan Omi-kokemuksen saamiseksi laitteellasi.';
+      'Ota käyttöön auranaisuudet parhaan Omi-kokemuksen saamiseksi laitteellasi.';
 
   @override
   String get microphoneAccess => 'Mikrofonin käyttöoikeus';
@@ -3563,7 +3563,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get triggersWhenDaySummaryGenerated => 'Käynnistyy, kun päivän yhteenveto luodaan.';
 
   @override
-  String get tryLatestExperimentalFeatures => 'Kokeile Omi-tiimin uusimpia kokeellisia ominaisuuksia.';
+  String get tryLatestExperimentalFeatures => 'Kokeile Omi-tiimin uusimpia kokeellisia auranaisuuksia.';
 
   @override
   String get transcriptionServiceDiagnosticStatus => 'Litterointipalvelun diagnostiikkatila';
@@ -3579,10 +3579,10 @@ class AppLocalizationsFi extends AppLocalizations {
   String get automaticallyCreateNewPerson => 'Luo automaattisesti uusi henkilö, kun litterointiin havaitaan nimi.';
 
   @override
-  String get pilotFeatures => 'Pilottiominaisuudet';
+  String get pilotFeatures => 'Pilottiauranaisuudet';
 
   @override
-  String get pilotFeaturesDescription => 'Nämä ominaisuudet ovat testejä, eikä tukea taata.';
+  String get pilotFeaturesDescription => 'Nämä auranaisuudet ovat testejä, eikä tukea taata.';
 
   @override
   String get suggestFollowUpQuestion => 'Ehdota jatkokysymystä';
@@ -3773,7 +3773,7 @@ class AppLocalizationsFi extends AppLocalizations {
   }
 
   @override
-  String get translatedByOmi => 'kääntänyt omi';
+  String get translatedByOmi => 'kääntänyt aura';
 
   @override
   String get backToConversations => 'Takaisin keskusteluihin';
@@ -3873,7 +3873,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get showMeetingsInMenuBar => 'Näytä kokoukset valikkorivissä';
 
   @override
-  String get displayUpcomingMeetingsDescription => 'Näytä tulevat kokoukset valikkorivissä';
+  String get displayUpcaurangMeetingsDescription => 'Näytä tulevat kokoukset valikkorivissä';
 
   @override
   String get showEventsWithoutParticipants => 'Näytä tapahtumat ilman osallistujia';
@@ -3882,7 +3882,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get includePersonalEventsDescription => 'Sisällytä henkilökohtaiset tapahtumat ilman osallistujia';
 
   @override
-  String get upcomingMeetings => 'Tulevat tapaamiset';
+  String get upcaurangMeetings => 'Tulevat tapaamiset';
 
   @override
   String get checkingNext7Days => 'Tarkistetaan seuraavat 7 päivää';
@@ -4025,7 +4025,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get permissionsAndTriggers => 'Käyttöoikeudet ja laukaisimet';
 
   @override
-  String get chatFeatures => 'Chat-ominaisuudet';
+  String get chatFeatures => 'Chat-auranaisuudet';
 
   @override
   String get uninstall => 'Poista asennus';
@@ -4155,7 +4155,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get weekdaySun => 'Su';
 
   @override
-  String serviceIntegrationComingSoon(String serviceName) {
+  String serviceIntegrationCaurangSoon(String serviceName) {
     return '$serviceName-integraatio tulossa pian';
   }
 
@@ -4192,7 +4192,7 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String failedToCreateApiKey(String error) {
-    return 'Palveluntarjoajan API-avaimen luominen epäonnistui: $error';
+    return 'Palveluntarjoajan API-avaimen luauranen epäonnistui: $error';
   }
 
   @override
@@ -4207,11 +4207,11 @@ class AppLocalizationsFi extends AppLocalizations {
   }
 
   @override
-  String get omiApiKeys => 'Omi API-avaimet';
+  String get auraApiKeys => 'Omi API-avaimet';
 
   @override
   String get apiKeysDescription =>
-      'API-avaimia käytetään todentamiseen, kun sovelluksesi kommunikoi OMI-palvelimen kanssa. Ne mahdollistavat sovelluksesi luoda muistoja ja käyttää muita OMI-palveluita turvallisesti.';
+      'API-avaimia käytetään todentamiseen, kun sovelluksesi kommunikoi AURA-palvelimen kanssa. Ne mahdollistavat sovelluksesi luoda muistoja ja käyttää muita AURA-palveluita turvallisesti.';
 
   @override
   String get aboutOmiApiKeys => 'Tietoja Omi API-avaimista';
@@ -4327,11 +4327,11 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String failedToCreateKeyWithError(String error) {
-    return 'Avaimen luominen epäonnistui: $error';
+    return 'Avaimen luauranen epäonnistui: $error';
   }
 
   @override
-  String get failedToCreateKeyTryAgain => 'Avaimen luominen epäonnistui. Yritä uudelleen.';
+  String get failedToCreateKeyTryAgain => 'Avaimen luauranen epäonnistui. Yritä uudelleen.';
 
   @override
   String get keyCreated => 'Avain luotu';
@@ -4360,17 +4360,17 @@ class AppLocalizationsFi extends AppLocalizations {
       'Päästä päähän -salaus on yksityisyyden kultastandardi. Kun se on käytössä, tietosi salataan laitteellasi ennen kuin ne lähetetään palvelimillemme. Tämä tarkoittaa, että kukaan, ei edes Omi, pääse käsiksi sisältöösi.';
 
   @override
-  String get importantTradeoffs => 'Tärkeät kompromissit:';
+  String get importantTradeoffs => 'Tärkeät kompraurassit:';
 
   @override
   String get e2eeTradeoff1 =>
-      '• Jotkin ominaisuudet, kuten ulkoisten sovellusten integraatiot, voivat olla pois käytöstä.';
+      '• Jotkin auranaisuudet, kuten ulkoisten sovellusten integraatiot, voivat olla pois käytöstä.';
 
   @override
   String get e2eeTradeoff2 => '• Jos kadotat salasanasi, tietojasi ei voi palauttaa.';
 
   @override
-  String get featureComingSoon => 'Tämä ominaisuus on tulossa pian!';
+  String get featureCaurangSoon => 'Tämä auranaisuus on tulossa pian!';
 
   @override
   String get migrationInProgressMessage => 'Siirto käynnissä. Et voi muuttaa suojaustasoa ennen kuin se on valmis.';
@@ -4462,7 +4462,7 @@ class AppLocalizationsFi extends AppLocalizations {
   }
 
   @override
-  String get omiTraining => 'Omi-koulutus';
+  String get auraTraining => 'Omi-koulutus';
 
   @override
   String get trainingDataProgram => 'Koulutustietojen ohjelma';
@@ -4476,7 +4476,7 @@ class AppLocalizationsFi extends AppLocalizations {
       '• Tietosi auttavat parantamaan AI-malleja\n• Vain ei-arkaluonteiset tiedot jaetaan\n• Täysin läpinäkyvä prosessi';
 
   @override
-  String get learnMoreAtOmiTraining => 'Lue lisää osoitteessa omi.me/training';
+  String get learnMoreAtOmiTraining => 'Lue lisää osoitteessa aura.me/training';
 
   @override
   String get agreeToContributeData => 'Ymmärrän ja suostun antamaan tietoni AI:n kouluttamiseen';
@@ -4490,7 +4490,7 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String planRemainsActiveUntil(String date) {
-    return 'Tilauksesi pysyy aktiivisena $date asti. Sen jälkeen menetät pääsyn rajoittamattomiin ominaisuuksiin. Oletko varma?';
+    return 'Tilauksesi pysyy aktiivisena $date asti. Sen jälkeen menetät pääsyn rajoittamattaurain auranaisuuksiin. Oletko varma?';
   }
 
   @override
@@ -4555,7 +4555,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get youAreOnUnlimitedPlan => 'Sinulla on Rajoittamaton tilaus.';
 
   @override
-  String get yourOmiUnleashed => 'Omi vapaana. Siirry rajoittamattomaan loputtomien mahdollisuuksien saavuttamiseksi.';
+  String get yourOmiUnleashed => 'Omi vapaana. Siirry rajoittamattomaan loputtauraen mahdollisuuksien saavuttamiseksi.';
 
   @override
   String planEndedOn(String date) {
@@ -4702,7 +4702,7 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String get failedToGenerateSummaryCheckConversations =>
-      'Yhteenvedon luominen epäonnistui. Varmista, että sinulla on keskusteluja kyseiseltä päivältä.';
+      'Yhteenvedon luauranen epäonnistui. Varmista, että sinulla on keskusteluja kyseiseltä päivältä.';
 
   @override
   String get summaryNotFound => 'Yhteenvetoa ei löytynyt';
@@ -4768,7 +4768,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get minutes => 'minuuttia';
 
   @override
-  String get omiHas => 'Omilla on:';
+  String get auraHas => 'Omilla on:';
 
   @override
   String get premiumMinutesUsed => 'Premium-minuutit käytetty.';
@@ -4797,7 +4797,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get selectZipFileToImport => 'Valitse tuotava .zip-tiedosto!';
 
   @override
-  String get otherDevicesComingSoon => 'Muut laitteet tulossa pian';
+  String get otherDevicesCaurangSoon => 'Muut laitteet tulossa pian';
 
   @override
   String get deleteAllLimitlessConversations => 'Poista kaikki Limitless-keskustelut?';
@@ -5128,7 +5128,7 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String get consentDataMessage =>
-      'Jatkamalla kaikki tämän sovelluksen kanssa jakamasi tiedot (mukaan lukien keskustelusi, tallenteet ja henkilökohtaiset tietosi) tallennetaan turvallisesti palvelimillemme tarjotaksemme sinulle tekoälypohjaisia oivalluksia ja mahdollistaaksemme kaikki sovelluksen ominaisuudet.';
+      'Jatkamalla kaikki tämän sovelluksen kanssa jakamasi tiedot (mukaan lukien keskustelusi, tallenteet ja henkilökohtaiset tietosi) tallennetaan turvallisesti palvelimillemme tarjotaksemme sinulle tekoälypohjaisia oivalluksia ja mahdollistaaksemme kaikki sovelluksen auranaisuudet.';
 
   @override
   String get tasksEmptyStateMessage =>
@@ -5141,7 +5141,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get enableApps => 'Ota sovellukset käyttöön';
 
   @override
-  String get omiAppName => 'Omi';
+  String get auraAppName => 'Omi';
 
   @override
   String get showMore => 'näytä lisää ↓';
@@ -5272,7 +5272,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get noSummary => 'Ei yhteenvetoa';
 
   @override
-  String get updateOmiFirmware => 'Päivitä omin laiteohjelmisto';
+  String get updateOmiFirmware => 'Päivitä auran laiteohjelmisto';
 
   @override
   String get anErrorOccurredTryAgain => 'Tapahtui virhe. Yritä uudelleen.';
@@ -5406,7 +5406,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get wrappedMyBuddiesLabel => 'YSTÄVÄNI';
 
   @override
-  String get wrappedObsessionsLabel => 'PAKKOMIELTEENI';
+  String get wrappedObsessionsLabel => 'PAKKAURAELTEENI';
 
   @override
   String get wrappedStruggleLabel => 'HAASTE';
@@ -5448,7 +5448,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get wrappedSwipeUpToBegin => 'Pyyhkäise ylös aloittaaksesi';
 
   @override
-  String get wrappedShareText => 'Vuoteni 2025, tallentanut Omi ✨ omi.me/wrapped';
+  String get wrappedShareText => 'Vuoteni 2025, tallentanut Omi ✨ aura.me/wrapped';
 
   @override
   String get wrappedFailedToShare => 'Jakaminen epäonnistui. Yritä uudelleen.';
@@ -5568,7 +5568,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get wrappedBuddiesLabel => 'KAVERIT';
 
   @override
-  String get wrappedObsessionsLabelUpper => 'PAKKOMIELTET';
+  String get wrappedObsessionsLabelUpper => 'PAKKAURAELTET';
 
   @override
   String get wrappedStruggleLabelUpper => 'KAMPPAILU';
@@ -5725,7 +5725,7 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String get failedToGenerateSummary =>
-      'Yhteenvedon luominen epäonnistui. Varmista, että sinulla on keskusteluja kyseiseltä päivältä.';
+      'Yhteenvedon luauranen epäonnistui. Varmista, että sinulla on keskusteluja kyseiseltä päivältä.';
 
   @override
   String get recap => 'Kertaus';
@@ -6015,7 +6015,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get webhookUrlNotSet => 'Webhook-URL-osoitetta ei ole asetettu';
 
   @override
-  String get setWebhookUrlInSettings => 'Aseta webhook-URL kehittäjäasetuksissa käyttääksesi tätä ominaisuutta.';
+  String get setWebhookUrlInSettings => 'Aseta webhook-URL kehittäjäasetuksissa käyttääksesi tätä auranaisuutta.';
 
   @override
   String get sendWebUrl => 'Lähetä web-URL';
@@ -6225,7 +6225,7 @@ class AppLocalizationsFi extends AppLocalizations {
   }
 
   @override
-  String get omiTranscriptionOptimized =>
+  String get auraTranscriptionOptimized =>
       'Omin sisäänrakennettu live-transkriptio on optimoitu reaaliaikaisiin keskusteluihin automaattisella puhujan tunnistuksella ja diarisaatiolla.';
 
   @override
@@ -6941,7 +6941,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get almostDone => 'Almost done...';
 
   @override
-  String get omiSays => 'omi says';
+  String get auraSays => 'aura says';
 
   @override
   String get analyzingYourData => 'Analyzing your data...';
@@ -7205,16 +7205,16 @@ class AppLocalizationsFi extends AppLocalizations {
   String get aiGenAppCreatedSuccessfully => 'Sovellus luotu onnistuneesti!';
 
   @override
-  String get aiGenFailedToCreateApp => 'Sovelluksen luominen epäonnistui';
+  String get aiGenFailedToCreateApp => 'Sovelluksen luauranen epäonnistui';
 
   @override
-  String get aiGenErrorWhileCreatingApp => 'Sovelluksen luomisessa tapahtui virhe';
+  String get aiGenErrorWhileCreatingApp => 'Sovelluksen luaurasessa tapahtui virhe';
 
   @override
-  String get aiGenFailedToGenerateApp => 'Sovelluksen luominen epäonnistui. Yritä uudelleen.';
+  String get aiGenFailedToGenerateApp => 'Sovelluksen luauranen epäonnistui. Yritä uudelleen.';
 
   @override
-  String get aiGenFailedToRegenerateIcon => 'Kuvakkeen uudelleenluominen epäonnistui';
+  String get aiGenFailedToRegenerateIcon => 'Kuvakkeen uudelleenluauranen epäonnistui';
 
   @override
   String get aiGenPleaseGenerateAppFirst => 'Luo ensin sovellus';
@@ -7901,7 +7901,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get triggerAudioBytes => 'Äänitavut';
 
   @override
-  String get triggerConversationCreation => 'Keskustelun luominen';
+  String get triggerConversationCreation => 'Keskustelun luauranen';
 
   @override
   String get triggerTranscriptProcessed => 'Litterointi käsitelty';

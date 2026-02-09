@@ -6,11 +6,11 @@ import 'package:flutter/scheduler.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'package:omi/providers/home_provider.dart';
-import 'package:omi/providers/onboarding_provider.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/widgets/dialog.dart';
+import 'package:aura/providers/home_provider.dart';
+import 'package:aura/providers/onboarding_provider.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/widgets/dialog.dart';
 import 'found_devices.dart';
 
 class FindDevicesPage extends StatefulWidget {

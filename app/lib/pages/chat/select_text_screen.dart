@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:omi/backend/schema/message.dart';
-import 'package:omi/utils/l10n_extensions.dart';
+import 'package:aura/backend/schema/message.dart';
+import 'package:aura/utils/l10n_extensions.dart';
 import 'widgets/markdown_message_widget.dart';
 
 class SelectTextScreen extends StatelessWidget {

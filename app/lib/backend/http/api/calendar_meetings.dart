@@ -2,10 +2,10 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 
-import 'package:omi/backend/http/shared.dart';
-import 'package:omi/backend/schema/calendar_meeting_context.dart';
-import 'package:omi/env/env.dart';
-import 'package:omi/utils/logger.dart';
+import 'package:aura/backend/http/shared.dart';
+import 'package:aura/backend/schema/calendar_meeting_context.dart';
+import 'package:aura/env/env.dart';
+import 'package:aura/utils/logger.dart';
 
 /// Response from storing a meeting
 class StoreMeetingResponse {

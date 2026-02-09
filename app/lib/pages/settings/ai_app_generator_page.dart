@@ -3,15 +3,15 @@ import 'package:flutter/services.dart';
 
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
-import 'package:omi/widgets/shimmer_with_timeout.dart';
+import 'package:aura/widgets/shimmer_with_timeout.dart';
 
-import 'package:omi/backend/schema/app.dart';
-import 'package:omi/pages/apps/app_detail/app_detail.dart';
-import 'package:omi/pages/settings/ai_app_generator_provider.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/providers/app_provider.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/other/temp.dart';
+import 'package:aura/backend/schema/app.dart';
+import 'package:aura/pages/apps/app_detail/app_detail.dart';
+import 'package:aura/pages/settings/ai_app_generator_provider.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/providers/app_provider.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/other/temp.dart';
 
 class AiAppGeneratorPage extends StatefulWidget {
   const AiAppGeneratorPage({super.key});

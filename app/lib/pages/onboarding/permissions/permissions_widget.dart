@@ -5,9 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:provider/provider.dart';
 
-import 'package:omi/providers/onboarding_provider.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/widgets/dialog.dart';
+import 'package:aura/providers/onboarding_provider.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/widgets/dialog.dart';
 
 class PermissionsWidget extends StatefulWidget {
   final VoidCallback goNext;

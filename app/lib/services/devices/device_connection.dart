@@ -4,28 +4,28 @@ import 'package:flutter/foundation.dart';
 
 import 'package:flutter_blue_plus/flutter_blue_plus.dart';
 
-import 'package:omi/backend/schema/bt_device/bt_device.dart';
-import 'package:omi/services/devices.dart';
-import 'package:omi/services/devices/apple_watch_connection.dart';
-import 'package:omi/services/devices/bee_connection.dart';
-import 'package:omi/services/devices/discovery/device_locator.dart';
-import 'package:omi/services/devices/fieldy_connection.dart';
-import 'package:omi/services/devices/frame_connection.dart';
-import 'package:omi/services/devices/friend_pendant_connection.dart';
-import 'package:omi/services/devices/limitless_connection.dart';
-import 'package:omi/services/devices/models.dart';
-import 'package:omi/services/devices/omi_connection.dart';
-import 'package:omi/services/devices/omiglass_connection.dart';
-import 'package:omi/services/devices/plaud_connection.dart';
-import 'package:omi/services/devices/wifi_sync_error.dart';
-import 'package:omi/main.dart';
-import 'package:omi/services/notifications.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/services/devices/transports/device_transport.dart';
-import 'package:omi/services/devices/transports/ble_transport.dart';
-import 'package:omi/services/devices/transports/frame_transport.dart';
-import 'package:omi/services/devices/transports/watch_transport.dart';
-import 'package:omi/utils/logger.dart';
+import 'package:aura/backend/schema/bt_device/bt_device.dart';
+import 'package:aura/services/devices.dart';
+import 'package:aura/services/devices/apple_watch_connection.dart';
+import 'package:aura/services/devices/bee_connection.dart';
+import 'package:aura/services/devices/discovery/device_locator.dart';
+import 'package:aura/services/devices/fieldy_connection.dart';
+import 'package:aura/services/devices/frame_connection.dart';
+import 'package:aura/services/devices/friend_pendant_connection.dart';
+import 'package:aura/services/devices/limitless_connection.dart';
+import 'package:aura/services/devices/models.dart';
+import 'package:aura/services/devices/aura_connection.dart';
+import 'package:aura/services/devices/auraglass_connection.dart';
+import 'package:aura/services/devices/plaud_connection.dart';
+import 'package:aura/services/devices/wifi_sync_error.dart';
+import 'package:aura/main.dart';
+import 'package:aura/services/notifications.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/services/devices/transports/device_transport.dart';
+import 'package:aura/services/devices/transports/ble_transport.dart';
+import 'package:aura/services/devices/transports/frame_transport.dart';
+import 'package:aura/services/devices/transports/watch_transport.dart';
+import 'package:aura/utils/logger.dart';
 
 class DeviceConnectionFactory {
   static DeviceConnection? create(BtDevice device) {
@@ -56,11 +56,11 @@ class DeviceConnectionFactory {
     final deviceName = device.name.toLowerCase();
     final isOmiGlass = device.type == DeviceType.openglass ||
         deviceName.contains('openglass') ||
-        deviceName.contains('omiglass') ||
+        deviceName.contains('auraglass') ||
         deviceName.contains('glass');
 
     switch (device.type) {
-      case DeviceType.omi:
+      case DeviceType.aura:
         // Check if this is actually an OmiGlass device by name
         if (isOmiGlass) {
           Logger.debug('DeviceConnectionFactory: Device name suggests OmiGlass, creating OmiGlassConnection');
@@ -266,7 +266,7 @@ abstract class DeviceConnection {
   Future<StreamSubscription?> performGetBleAudioBytesListener({
     required void Function(List<int>) onAudioBytesReceived,
   }) async {
-    final stream = transport.getCharacteristicStream(omiServiceUuid, audioDataStreamCharacteristicUuid);
+    final stream = transport.getCharacteristicStream(auraServiceUuid, audioDataStreamCharacteristicUuid);
     return stream.listen(onAudioBytesReceived);
   }
 
@@ -286,7 +286,7 @@ abstract class DeviceConnection {
   }
 
   Future<BleAudioCodec> performGetAudioCodec() async {
-    final data = await transport.readCharacteristic(omiServiceUuid, audioCodecCharacteristicUuid);
+    final data = await transport.readCharacteristic(auraServiceUuid, audioCodecCharacteristicUuid);
     if (data.isNotEmpty) {
       final codecId = data[0];
       switch (codecId) {

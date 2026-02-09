@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 import 'package:awesome_notifications/awesome_notifications.dart';
 
-import 'package:omi/main.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/logger.dart';
+import 'package:aura/main.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/logger.dart';
 
 /// Handler for daily reflection notifications
 /// Schedules a notification every day at 9 PM local time
@@ -44,7 +44,7 @@ class DailyReflectionNotification {
           body: ctx?.l10n.dailyReflectionNotificationBody ?? 'Tell me about your day',
           badge: 0,
           payload: {
-            'navigate_to': '/chat/omi',
+            'navigate_to': '/chat/aura',
             'auto_message': 'daily_reflection',
           },
           notificationLayout: NotificationLayout.Default,

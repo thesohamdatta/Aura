@@ -6,19 +6,19 @@ import 'package:provider/provider.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/backend/schema/app.dart';
-import 'package:omi/core/app_shell.dart';
-import 'package:omi/gen/assets.gen.dart';
-import 'package:omi/pages/onboarding/wrapper.dart';
-import 'package:omi/pages/persona/persona_provider.dart';
-import 'package:omi/pages/persona/twitter/social_profile.dart';
-import 'package:omi/providers/auth_provider.dart';
-import 'package:omi/providers/home_provider.dart';
-import 'package:omi/services/auth_service.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/other/temp.dart';
-import 'package:omi/utils/l10n_extensions.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/backend/schema/app.dart';
+import 'package:aura/core/app_shell.dart';
+import 'package:aura/gen/assets.gen.dart';
+import 'package:aura/pages/onboarding/wrapper.dart';
+import 'package:aura/pages/persona/persona_provider.dart';
+import 'package:aura/pages/persona/twitter/social_profile.dart';
+import 'package:aura/providers/auth_provider.dart';
+import 'package:aura/providers/home_provider.dart';
+import 'package:aura/services/auth_service.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/other/temp.dart';
+import 'package:aura/utils/l10n_extensions.dart';
 
 class PersonaProfilePage extends StatefulWidget {
   final double? bottomMargin;
@@ -269,7 +269,7 @@ class _PersonaProfilePageState extends State<PersonaProfilePage> {
                                   MixpanelManager()
                                       .personaShared(personaId: persona.id, personaUsername: persona.username);
                                   Share.share(
-                                    'https://personas.omi.me/u/${persona.username}',
+                                    'https://personas.aura.me/u/${persona.username}',
                                     subject: '${persona.getName()} Persona',
                                   );
                                 },
@@ -363,7 +363,7 @@ class _PersonaProfilePageState extends State<PersonaProfilePage> {
                                     },
                                     child: _buildSocialLink(
                                       icon: Assets.images.logoTransparent.path,
-                                      text: provider.hasOmiConnection ? (persona.username ?? 'username') : 'omi',
+                                      text: provider.hasOmiConnection ? (persona.username ?? 'username') : 'aura',
                                       isConnected: provider.hasOmiConnection,
                                       showConnect: !provider.hasOmiConnection,
                                     ),
@@ -392,49 +392,49 @@ class _PersonaProfilePageState extends State<PersonaProfilePage> {
                                   _buildSocialLink(
                                     icon: Assets.images.notionLogo.path,
                                     text: 'notion.so/username',
-                                    isComingSoon: true,
+                                    isCaurangSoon: true,
                                   ),
                                   const SizedBox(height: 12),
                                   _buildSocialLink(
                                     icon: Assets.images.emailLogo.path,
                                     text: 'user@example.com',
-                                    isComingSoon: true,
+                                    isCaurangSoon: true,
                                   ),
                                   const SizedBox(height: 12),
                                   _buildSocialLink(
                                     icon: Assets.images.telegramLogo.path,
                                     text: '@username',
-                                    isComingSoon: true,
+                                    isCaurangSoon: true,
                                   ),
                                   const SizedBox(height: 12),
                                   _buildSocialLink(
                                     icon: Assets.images.whatsappLogo.path,
                                     text: '+1234567890',
-                                    isComingSoon: true,
+                                    isCaurangSoon: true,
                                   ),
                                   const SizedBox(height: 12),
                                   _buildSocialLink(
                                     icon: Assets.images.facebookLogo.path,
                                     text: 'facebook.com/username',
-                                    isComingSoon: true,
+                                    isCaurangSoon: true,
                                   ),
                                   const SizedBox(height: 12),
                                   _buildSocialLink(
                                     icon: Assets.images.instagramLogo.path,
                                     text: '@username',
-                                    isComingSoon: true,
+                                    isCaurangSoon: true,
                                   ),
                                   const SizedBox(height: 12),
                                   _buildSocialLink(
                                     icon: Assets.images.youtubeLogo.path,
                                     text: 'youtube.com/@username',
-                                    isComingSoon: true,
+                                    isCaurangSoon: true,
                                   ),
                                   const SizedBox(height: 12),
                                   _buildSocialLink(
                                     icon: Assets.images.slackLogo.path,
                                     text: 'workspace.slack.com',
-                                    isComingSoon: true,
+                                    isCaurangSoon: true,
                                   ),
                                 ],
                               ),
@@ -629,7 +629,7 @@ class _PersonaProfilePageState extends State<PersonaProfilePage> {
                     children: [
                       ElevatedButton(
                         onPressed: () async {
-                          await launchUrl(Uri.parse('https://www.omi.me/?_ref=omi_persona_flow'));
+                          await launchUrl(Uri.parse('https://www.aura.me/?_ref=aura_persona_flow'));
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.transparent,
@@ -682,7 +682,7 @@ class _PersonaProfilePageState extends State<PersonaProfilePage> {
     required String icon,
     required String text,
     bool isConnected = false,
-    bool isComingSoon = false,
+    bool isCaurangSoon = false,
     bool showConnect = false,
   }) {
     final Color grayedOutColor = Colors.grey[600]!;
@@ -708,12 +708,12 @@ class _PersonaProfilePageState extends State<PersonaProfilePage> {
           Text(
             text,
             style: TextStyle(
-              color: isComingSoon ? grayedOutColor : Colors.white,
+              color: isCaurangSoon ? grayedOutColor : Colors.white,
               fontSize: 16,
             ),
           ),
           const Spacer(),
-          if (isComingSoon)
+          if (isCaurangSoon)
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
               decoration: BoxDecoration(
@@ -721,7 +721,7 @@ class _PersonaProfilePageState extends State<PersonaProfilePage> {
                 borderRadius: BorderRadius.circular(16),
               ),
               child: Text(
-                context.l10n.comingSoon,
+                context.l10n.caurangSoon,
                 style: TextStyle(
                   color: grayedOutColor,
                   fontSize: 12,

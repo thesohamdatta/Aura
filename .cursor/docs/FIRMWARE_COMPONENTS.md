@@ -5,16 +5,16 @@ Quick reference guide to firmware architecture for Omi devices.
 ## Device Types
 
 ### Omi Device
-**Location**: `omi/`
+**Location**: `aura/`
 **Platform**: nRF chips (nRF52840, nRF5340)
 **RTOS**: Zephyr
 
-### Omi Glass
-**Location**: `omiGlass/`
+### Aura Pendant
+**Location**: `aura-pendant/`
 **Platform**: ESP32-S3
 **Framework**: Arduino/ESP-IDF
 
-## Omi Device Firmware (`omi/`)
+## Omi Device Firmware (`aura/`)
 
 ### Architecture
 
@@ -51,7 +51,7 @@ Quick reference guide to firmware architecture for Omi devices.
 **UUID**: `0x180A` (standard BLE Device Information Service)
 
 **Characteristics**:
-- **Manufacturer Name** (`0x2A29`): "Based Hardware"
+- **Manufacturer Name** (`0x2A29`): "Soham Datta"
 - **Model Number** (`0x2A24`): "Omi"
 - **Hardware Revision** (`0x2A27`): "Seeed Xiao BLE Sense"
 - **Firmware Revision** (`0x2A26`): Firmware version (e.g., "1.0.3")
@@ -98,10 +98,10 @@ Hardware design files:
 - Kconfig options
 
 **Build Commands**:
-- See `omi/firmware/BUILD_AND_OTA_FLASH.md`
+- See `aura/firmware/BUILD_AND_OTA_FLASH.md`
 - OTA (Over-The-Air) update support
 
-## Omi Glass Firmware (`omiGlass/`)
+## Aura Pendant Firmware (`aura-pendant/`)
 
 ### Architecture
 

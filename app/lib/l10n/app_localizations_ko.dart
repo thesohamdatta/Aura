@@ -539,7 +539,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get deviceInfoSection => '기기 정보';
 
   @override
-  String get customizationSection => '사용자 지정';
+  String get custaurazationSection => '사용자 지정';
 
   @override
   String get hardwareSection => '하드웨어';
@@ -745,7 +745,7 @@ class AppLocalizationsKo extends AppLocalizations {
   }
 
   @override
-  String get shareStatsMessage => '내 Omi 통계를 공유합니다! (omi.me - 항상 켜져 있는 AI 어시스턴트)';
+  String get shareStatsMessage => '내 Omi 통계를 공유합니다! (aura.me - 항상 켜져 있는 AI 어시스턴트)';
 
   @override
   String get sharePeriodToday => '오늘 Omi는:';
@@ -792,7 +792,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get noLogFilesFound => '로그 파일을 찾을 수 없습니다.';
 
   @override
-  String get omiDebugLog => 'Omi 디버그 로그';
+  String get auraDebugLog => 'Omi 디버그 로그';
 
   @override
   String get logShared => '로그가 공유되었습니다';
@@ -1003,7 +1003,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get connect => 'Connect';
 
   @override
-  String get comingSoon => '곧 출시';
+  String get caurangSoon => '곧 출시';
 
   @override
   String get integrationsFooter => '채팅에서 데이터 및 지표를 보려면 앱을 연결하세요.';
@@ -1172,7 +1172,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get showEventsNoParticipants => '참가자가 없는 이벤트 표시';
 
   @override
-  String get showEventsNoParticipantsDesc => '활성화하면 참가자나 비디오 링크가 없는 이벤트가 Coming Up에 표시됩니다.';
+  String get showEventsNoParticipantsDesc => '활성화하면 참가자나 비디오 링크가 없는 이벤트가 Caurang Up에 표시됩니다.';
 
   @override
   String get yourMeetings => '내 회의';
@@ -1181,7 +1181,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get refresh => '새로고침';
 
   @override
-  String get noUpcomingMeetings => '예정된 회의 없음';
+  String get noUpcaurangMeetings => '예정된 회의 없음';
 
   @override
   String get checkingNextDays => '향후 30일 확인';
@@ -1190,7 +1190,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get tomorrow => '내일';
 
   @override
-  String get googleCalendarComingSoon => 'Google 캘린더 통합이 곧 출시됩니다!';
+  String get googleCalendarCaurangSoon => 'Google 캘린더 통합이 곧 출시됩니다!';
 
   @override
   String connectedAsUser(String userId) {
@@ -1413,7 +1413,7 @@ class AppLocalizationsKo extends AppLocalizations {
   }
 
   @override
-  String integrationComingSoon(String appName) {
+  String integrationCaurangSoon(String appName) {
     return '$appName과의 통합이 곧 출시됩니다! 더 많은 작업 관리 옵션을 제공하기 위해 열심히 노력하고 있습니다.';
   }
 
@@ -1442,7 +1442,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get freeMinutesMonth => '월 1,200분 무료 포함. ';
 
   @override
-  String get omiUnlimited => 'Omi Unlimited';
+  String get auraUnlimited => 'Omi Unlimited';
 
   @override
   String get hostRequired => '호스트가 필요합니다';
@@ -1564,7 +1564,7 @@ class AppLocalizationsKo extends AppLocalizations {
   }
 
   @override
-  String get omiTranscription => 'Omi 음성 변환';
+  String get auraTranscription => 'Omi 음성 변환';
 
   @override
   String get bestInClassTranscription => '설정이 필요 없는 최고 수준의 음성 변환';
@@ -1856,7 +1856,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get termsOfUse => '이용약관';
 
   @override
-  String get omiYourAiCompanion => 'Omi – 당신의 AI 동반자';
+  String get auraYourAiCompanion => 'Omi – 당신의 AI 동반자';
 
   @override
   String get captureEveryMoment => '모든 순간을 기록하세요. AI 기반\n요약을 받으세요. 더 이상 메모할 필요가 없습니다.';
@@ -2370,7 +2370,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get privacyPolicyTitle => '개인정보 보호정책';
 
   @override
-  String get omiSttProvider => 'Omi';
+  String get auraSttProvider => 'Omi';
 
   @override
   String labelCopied(String label) {
@@ -2527,7 +2527,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get checksForAudioFiles => 'SD 카드에서 오디오 파일 확인';
 
   @override
-  String get omiSyncsAudioFiles => 'Omi는 그런 다음 오디오 파일을 서버와 동기화합니다';
+  String get auraSyncsAudioFiles => 'Omi는 그런 다음 오디오 파일을 서버와 동기화합니다';
 
   @override
   String get serverProcessesAudio => '서버가 오디오 파일을 처리하고 추억을 만듭니다';
@@ -3293,7 +3293,7 @@ class AppLocalizationsKo extends AppLocalizations {
   }
 
   @override
-  String get omisMemoryCleared => '당신에 대한 Omi의 메모리가 지워졌습니다';
+  String get aurasMemoryCleared => '당신에 대한 Omi의 메모리가 지워졌습니다';
 
   @override
   String get welcomeToOmi => 'Omi에 오신 것을 환영합니다';
@@ -3710,7 +3710,7 @@ class AppLocalizationsKo extends AppLocalizations {
   }
 
   @override
-  String get translatedByOmi => 'omi가 번역함';
+  String get translatedByOmi => 'aura가 번역함';
 
   @override
   String get backToConversations => '대화로 돌아가기';
@@ -3810,7 +3810,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get showMeetingsInMenuBar => '메뉴 바에 회의 표시';
 
   @override
-  String get displayUpcomingMeetingsDescription => '메뉴 바에 예정된 회의 표시';
+  String get displayUpcaurangMeetingsDescription => '메뉴 바에 예정된 회의 표시';
 
   @override
   String get showEventsWithoutParticipants => '참가자가 없는 이벤트 표시';
@@ -3819,7 +3819,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get includePersonalEventsDescription => '참석자가 없는 개인 이벤트 포함';
 
   @override
-  String get upcomingMeetings => '예정된 회의';
+  String get upcaurangMeetings => '예정된 회의';
 
   @override
   String get checkingNext7Days => '다음 7일 확인 중';
@@ -4083,7 +4083,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get weekdaySun => '일';
 
   @override
-  String serviceIntegrationComingSoon(String serviceName) {
+  String serviceIntegrationCaurangSoon(String serviceName) {
     return '$serviceName 연동 곧 출시 예정';
   }
 
@@ -4135,11 +4135,11 @@ class AppLocalizationsKo extends AppLocalizations {
   }
 
   @override
-  String get omiApiKeys => 'Omi API 키';
+  String get auraApiKeys => 'Omi API 키';
 
   @override
   String get apiKeysDescription =>
-      'API 키는 앱이 OMI 서버와 통신할 때 인증에 사용됩니다. 애플리케이션이 메모리를 생성하고 다른 OMI 서비스에 안전하게 접근할 수 있게 합니다.';
+      'API 키는 앱이 AURA 서버와 통신할 때 인증에 사용됩니다. 애플리케이션이 메모리를 생성하고 다른 AURA 서비스에 안전하게 접근할 수 있게 합니다.';
 
   @override
   String get aboutOmiApiKeys => 'Omi API 키 정보';
@@ -4295,7 +4295,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get e2eeTradeoff2 => '• 비밀번호를 분실하면 데이터를 복구할 수 없습니다.';
 
   @override
-  String get featureComingSoon => '이 기능은 곧 제공됩니다!';
+  String get featureCaurangSoon => '이 기능은 곧 제공됩니다!';
 
   @override
   String get migrationInProgressMessage => '마이그레이션이 진행 중입니다. 완료될 때까지 보호 수준을 변경할 수 없습니다.';
@@ -4386,7 +4386,7 @@ class AppLocalizationsKo extends AppLocalizations {
   }
 
   @override
-  String get omiTraining => 'Omi 훈련';
+  String get auraTraining => 'Omi 훈련';
 
   @override
   String get trainingDataProgram => '훈련 데이터 프로그램';
@@ -4398,7 +4398,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get trainingDataBullets => '• 귀하의 데이터가 AI 모델 개선에 도움이 됩니다\n• 민감하지 않은 데이터만 공유됩니다\n• 완전히 투명한 프로세스';
 
   @override
-  String get learnMoreAtOmiTraining => 'omi.me/training에서 자세히 알아보기';
+  String get learnMoreAtOmiTraining => 'aura.me/training에서 자세히 알아보기';
 
   @override
   String get agreeToContributeData => 'AI 훈련을 위해 데이터를 제공하는 것에 대해 이해하고 동의합니다';
@@ -4684,7 +4684,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get minutes => '분';
 
   @override
-  String get omiHas => 'Omi:';
+  String get auraHas => 'Omi:';
 
   @override
   String get premiumMinutesUsed => '프리미엄 분 사용됨.';
@@ -4713,7 +4713,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get selectZipFileToImport => '가져올 .zip 파일을 선택하세요!';
 
   @override
-  String get otherDevicesComingSoon => '다른 기기 곧 지원 예정';
+  String get otherDevicesCaurangSoon => '다른 기기 곧 지원 예정';
 
   @override
   String get deleteAllLimitlessConversations => '모든 Limitless 대화를 삭제하시겠습니까?';
@@ -5045,7 +5045,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get enableApps => '앱 활성화';
 
   @override
-  String get omiAppName => 'Omi';
+  String get auraAppName => 'Omi';
 
   @override
   String get showMore => '더 보기 ↓';
@@ -5172,7 +5172,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get noSummary => '요약 없음';
 
   @override
-  String get updateOmiFirmware => 'omi 펌웨어 업데이트';
+  String get updateOmiFirmware => 'aura 펌웨어 업데이트';
 
   @override
   String get anErrorOccurredTryAgain => '오류가 발생했습니다. 다시 시도해 주세요.';
@@ -5348,7 +5348,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get wrappedSwipeUpToBegin => '위로 스와이프하여 시작';
 
   @override
-  String get wrappedShareText => '나의 2025, Omi가 기억해요 ✨ omi.me/wrapped';
+  String get wrappedShareText => '나의 2025, Omi가 기억해요 ✨ aura.me/wrapped';
 
   @override
   String get wrappedFailedToShare => '공유에 실패했습니다. 다시 시도해주세요.';
@@ -6113,7 +6113,7 @@ class AppLocalizationsKo extends AppLocalizations {
   }
 
   @override
-  String get omiTranscriptionOptimized => 'Omi의 내장 라이브 전사는 자동 화자 감지 및 화자 분리로 실시간 대화에 최적화되어 있습니다.';
+  String get auraTranscriptionOptimized => 'Omi의 내장 라이브 전사는 자동 화자 감지 및 화자 분리로 실시간 대화에 최적화되어 있습니다.';
 
   @override
   String get reset => '초기화';
@@ -6818,7 +6818,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get almostDone => '거의 완료되었습니다...';
 
   @override
-  String get omiSays => 'omi가 말합니다';
+  String get auraSays => 'aura가 말합니다';
 
   @override
   String get analyzingYourData => '데이터 분석 중...';

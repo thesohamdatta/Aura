@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 
 import 'package:provider/provider.dart';
 
-import 'package:omi/providers/action_items_provider.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/responsive/responsive_helper.dart';
+import 'package:aura/providers/action_items_provider.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/responsive/responsive_helper.dart';
 
 /// Desktop Daily Score Widget - Shows task completion rate as a 0-5 score
 class DesktopDailyScoreWidget extends StatelessWidget {

@@ -4,9 +4,9 @@ import 'dart:typed_data';
 import 'package:collection/collection.dart';
 import 'package:flutter_blue_plus/flutter_blue_plus.dart';
 
-import 'package:omi/backend/schema/bt_device/bt_device.dart';
-import 'package:omi/services/devices/errors.dart';
-import 'package:omi/utils/logger.dart';
+import 'package:aura/backend/schema/bt_device/bt_device.dart';
+import 'package:aura/services/devices/errors.dart';
+import 'package:aura/utils/logger.dart';
 
 class OrientedImage {
   final Uint8List imageBytes;
@@ -15,7 +15,7 @@ class OrientedImage {
   OrientedImage({required this.imageBytes, required this.orientation});
 }
 
-const String omiServiceUuid = '19b10000-e8f2-537e-4f6c-d104768a1214';
+const String auraServiceUuid = '19b10000-e8f2-537e-4f6c-d104768a1214';
 
 const String audioDataStreamCharacteristicUuid = '19b10001-e8f2-537e-4f6c-d104768a1214';
 const String audioCodecCharacteristicUuid = '19b10002-e8f2-537e-4f6c-d104768a1214';
@@ -69,9 +69,9 @@ const String limitlessTxCharUuid = "632de002-604c-446b-a80f-7963e950f3fb";
 const String limitlessRxCharUuid = "632de003-604c-446b-a80f-7963e950f3fb";
 
 // OmiGlass OTA Service UUIDs
-const String omiGlassOtaServiceUuid = "19b10010-e8f2-537e-4f6c-d104768a1214";
-const String omiGlassOtaControlCharacteristicUuid = "19b10011-e8f2-537e-4f6c-d104768a1214";
-const String omiGlassOtaDataCharacteristicUuid = "19b10012-e8f2-537e-4f6c-d104768a1214";
+const String aura-pendantOtaServiceUuid = "19b10010-e8f2-537e-4f6c-d104768a1214";
+const String aura-pendantOtaControlCharacteristicUuid = "19b10011-e8f2-537e-4f6c-d104768a1214";
+const String aura-pendantOtaDataCharacteristicUuid = "19b10012-e8f2-537e-4f6c-d104768a1214";
 
 // OmiGlass OTA Commands
 const int otaCmdSetWifi = 0x01;

@@ -86,7 +86,7 @@ Examples:
 **When to update**:
 - New examples of existing mistakes
 - More specific guidance needed
-- Patterns becoming more common
+- Patterns becaurang more common
 - Clarification needed
 
 **How to update**:

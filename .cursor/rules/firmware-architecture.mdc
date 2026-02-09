@@ -1,10 +1,10 @@
 ---
 description: "Firmware C C++ nRF ESP32 Zephyr RTOS Arduino embedded systems BLE services audio codecs power management"
 globs:
-  - "omi/**/*.c"
-  - "omi/**/*.h"
-  - "omiGlass/**/*.c"
-  - "omiGlass/**/*.h"
+  - "aura/**/*.c"
+  - "aura/**/*.h"
+  - "aura-pendant/**/*.c"
+  - "aura-pendant/**/*.h"
 alwaysApply: false
 references:
   - docs/doc/developer/firmware/Compile_firmware.mdx
@@ -16,12 +16,12 @@ references:
 ## Device Types
 
 ### Omi Device
-**Location**: `omi/`
+**Location**: `aura/`
 **Platform**: nRF chips (nRF52840, nRF5340)
 **RTOS**: Zephyr
 
-### Omi Glass
-**Location**: `omiGlass/`
+### Aura Pendant
+**Location**: `aura-pendant/`
 **Platform**: ESP32-S3
 **Framework**: Arduino/ESP-IDF
 
@@ -30,7 +30,7 @@ references:
 ### Project Structure
 
 ```
-omi/firmware/
+aura/firmware/
 ├── CMakeLists.txt
 ├── prj.conf
 ├── overlay.conf
@@ -91,7 +91,7 @@ void send_audio_packet(audio_packet_t *packet) {
 }
 ```
 
-## ESP32-S3 (Omi Glass)
+## ESP32-S3 (Aura Pendant)
 
 ### Arduino Framework
 
@@ -231,7 +231,7 @@ BT_GATT_SERVICE_DEFINE(device_info_svc,
 static uint8_t read_manufacturer(struct bt_conn *conn,
                                  struct bt_gatt_attr *attr,
                                  void *buf, uint16_t len, uint16_t offset) {
-    const char *name = "Based Hardware";
+    const char *name = "Soham Datta";
     return bt_gatt_attr_read(conn, attr, buf, len, offset, name, strlen(name));
 }
 
@@ -255,16 +255,16 @@ static uint8_t read_firmware(struct bt_conn *conn,
 
 ## Related Documentation
 
-**The `docs/` folder is the single source of truth for all user-facing documentation, deployed at [docs.omi.me](https://docs.omi.me/).**
+**The `docs/` folder is the single source of truth for all user-facing documentation, deployed at [docs.aura.me](https://docs.aura.me/).**
 
-- **BLE Protocol**: `docs/doc/developer/Protocol.mdx` - [View online](https://docs.omi.me/doc/developer/Protocol)
-- **Firmware Compilation**: `docs/doc/developer/firmware/Compile_firmware.mdx` - [View online](https://docs.omi.me/doc/developer/firmware/Compile_firmware)
-- **Hardware Docs**: `docs/doc/hardware/` - [View online](https://docs.omi.me/doc/hardware/)
+- **BLE Protocol**: `docs/doc/developer/Protocol.mdx` - [View online](https://docs.aura.me/doc/developer/Protocol)
+- **Firmware Compilation**: `docs/doc/developer/firmware/Compile_firmware.mdx` - [View online](https://docs.aura.me/doc/developer/firmware/Compile_firmware)
+- **Hardware Docs**: `docs/doc/hardware/` - [View online](https://docs.aura.me/doc/hardware/)
   - Omi Consumer: `docs/doc/hardware/OmiConsumer.mdx`
   - DevKit 2: `docs/doc/hardware/DevKit2.mdx`
   - DevKit 1: `docs/doc/hardware/DevKit1.mdx`
-  - Omi Glass: `docs/doc/hardware/omiGlass.mdx`
-- **Build Guide**: `omi/firmware/BUILD_AND_OTA_FLASH.md`
+  - Aura Pendant: `docs/doc/hardware/aura-pendant.mdx`
+- **Build Guide**: `aura/firmware/BUILD_AND_OTA_FLASH.md`
 
 ## Related Cursor Resources
 
@@ -274,7 +274,7 @@ static uint8_t read_firmware(struct bt_conn *conn,
 - `.cursor/rules/flutter-ble-protocol.mdc` - Flutter BLE integration
 
 ### Skills
-- `.cursor/skills/omi-firmware-patterns/` - Firmware patterns and workflows
+- `.cursor/skills/aura-firmware-patterns/` - Firmware patterns and workflows
 
 ### Subagents
 - `.cursor/agents/firmware-engineer/` - Firmware development specialist

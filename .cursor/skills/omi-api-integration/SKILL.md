@@ -1,5 +1,5 @@
 ---
-name: omi-api-integration
+name: aura-api-integration
 description: "Omi API integration Developer API MCP server webhook OAuth authentication rate limiting API keys"
 ---
 
@@ -20,9 +20,9 @@ Use this skill when:
 
 ### Developer API
 
-**Base URL**: `https://api.omi.me/v1/dev`
+**Base URL**: `https://api.aura.me/v1/dev`
 
-**Authentication**: Bearer token with `omi_dev_` prefix
+**Authentication**: Bearer token with `aura_dev_` prefix
 
 #### Getting API Key
 
@@ -36,12 +36,12 @@ Use this skill when:
 import requests
 
 headers = {
-    "Authorization": "Bearer omi_dev_your_key_here"
+    "Authorization": "Bearer aura_dev_your_key_here"
 }
 
 # Get memories
 response = requests.get(
-    "https://api.omi.me/v1/dev/user/memories",
+    "https://api.aura.me/v1/dev/user/memories",
     headers=headers,
     params={"limit": 10}
 )
@@ -65,9 +65,9 @@ memories = response.json()
 
 #### Hosted MCP Server (SSE)
 
-**URL**: `https://api.omi.me/v1/mcp/sse`
+**URL**: `https://api.aura.me/v1/mcp/sse`
 
-**Authentication**: Bearer token with `omi_mcp_` prefix
+**Authentication**: Bearer token with `aura_mcp_` prefix
 
 #### Available Tools
 
@@ -82,9 +82,9 @@ memories = response.json()
 ```json
 {
   "mcpServers": {
-    "omi": {
-      "url": "https://api.omi.me/v1/mcp/sse",
-      "apiKey": "omi_mcp_your_key_here"
+    "aura": {
+      "url": "https://api.aura.me/v1/mcp/sse",
+      "apiKey": "aura_mcp_your_key_here"
     }
   }
 }
@@ -164,16 +164,16 @@ memories = response.json()
 
 ## Related Documentation
 
-**The `docs/` folder is the single source of truth for all user-facing documentation, deployed at [docs.omi.me](https://docs.omi.me/).**
+**The `docs/` folder is the single source of truth for all user-facing documentation, deployed at [docs.aura.me](https://docs.aura.me/).**
 
-- **API Overview**: `docs/doc/developer/api/overview.mdx` - [View online](https://docs.omi.me/doc/developer/api/overview)
-- **API Endpoints**: `docs/api-reference/` - [View online](https://docs.omi.me/api-reference/)
-- **Memories API**: `docs/doc/developer/api/memories.mdx` - [View online](https://docs.omi.me/doc/developer/api/memories)
-- **Conversations API**: `docs/doc/developer/api/conversations.mdx` - [View online](https://docs.omi.me/doc/developer/api/conversations)
-- **Action Items API**: `docs/doc/developer/api/action-items.mdx` - [View online](https://docs.omi.me/doc/developer/api/action-items)
-- **MCP**: `docs/doc/developer/MCP.mdx` - [View online](https://docs.omi.me/doc/developer/MCP)
-- **Plugin Development**: `docs/doc/developer/apps/Introduction.mdx` - [View online](https://docs.omi.me/doc/developer/apps/Introduction)
-- **OAuth**: `docs/doc/developer/apps/Oauth.mdx` - [View online](https://docs.omi.me/doc/developer/apps/Oauth)
+- **API Overview**: `docs/doc/developer/api/overview.mdx` - [View online](https://docs.aura.me/doc/developer/api/overview)
+- **API Endpoints**: `docs/api-reference/` - [View online](https://docs.aura.me/api-reference/)
+- **Memories API**: `docs/doc/developer/api/memories.mdx` - [View online](https://docs.aura.me/doc/developer/api/memories)
+- **Conversations API**: `docs/doc/developer/api/conversations.mdx` - [View online](https://docs.aura.me/doc/developer/api/conversations)
+- **Action Items API**: `docs/doc/developer/api/action-items.mdx` - [View online](https://docs.aura.me/doc/developer/api/action-items)
+- **MCP**: `docs/doc/developer/MCP.mdx` - [View online](https://docs.aura.me/doc/developer/MCP)
+- **Plugin Development**: `docs/doc/developer/apps/Introduction.mdx` - [View online](https://docs.aura.me/doc/developer/apps/Introduction)
+- **OAuth**: `docs/doc/developer/apps/Oauth.mdx` - [View online](https://docs.aura.me/doc/developer/apps/Oauth)
 
 ## Related Cursor Resources
 

@@ -1,5 +1,5 @@
 ---
-name: omi-firmware-patterns
+name: aura-firmware-patterns
 description: "Firmware C C++ BLE services audio codecs Opus PCM Mu-law nRF ESP32 Zephyr Arduino embedded systems"
 ---
 
@@ -10,7 +10,7 @@ This skill provides guidance for working with Omi firmware, including BLE servic
 ## When to Use
 
 Use this skill when:
-- Working on firmware code in `omi/` or `omiGlass/`
+- Working on firmware code in `aura/` or `aura-pendant/`
 - Implementing BLE services
 - Working with audio codecs (Opus, PCM, Mu-law)
 - Debugging device communication issues
@@ -85,7 +85,7 @@ void send_audio_packet(audio_packet_t *packet) {
 }
 ```
 
-### ESP32-S3 (Omi Glass)
+### ESP32-S3 (Aura Pendant)
 
 #### Arduino Framework
 
@@ -122,11 +122,11 @@ BLECharacteristic *pChar = pService->createCharacteristic(
 
 ## Related Documentation
 
-**The `docs/` folder is the single source of truth for all user-facing documentation, deployed at [docs.omi.me](https://docs.omi.me/).**
+**The `docs/` folder is the single source of truth for all user-facing documentation, deployed at [docs.aura.me](https://docs.aura.me/).**
 
-- **BLE Protocol**: `docs/doc/developer/Protocol.mdx` - [View online](https://docs.omi.me/doc/developer/Protocol)
-- **Firmware Compilation**: `docs/doc/developer/firmware/Compile_firmware.mdx` - [View online](https://docs.omi.me/doc/developer/firmware/Compile_firmware)
-- **Hardware Docs**: `docs/doc/hardware/` - [View online](https://docs.omi.me/doc/hardware/)
+- **BLE Protocol**: `docs/doc/developer/Protocol.mdx` - [View online](https://docs.aura.me/doc/developer/Protocol)
+- **Firmware Compilation**: `docs/doc/developer/firmware/Compile_firmware.mdx` - [View online](https://docs.aura.me/doc/developer/firmware/Compile_firmware)
+- **Hardware Docs**: `docs/doc/hardware/` - [View online](https://docs.aura.me/doc/hardware/)
 - **Firmware Architecture**: `.cursor/rules/firmware-architecture.mdc`
 
 ## Related Cursor Resources

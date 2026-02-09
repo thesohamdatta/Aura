@@ -5,16 +5,16 @@ import 'package:flutter/material.dart';
 
 import 'package:awesome_notifications/awesome_notifications.dart';
 
-import 'package:omi/main.dart';
-import 'package:omi/pages/home/page.dart';
-import 'package:omi/services/notifications/daily_reflection_notification.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/logger.dart';
+import 'package:aura/main.dart';
+import 'package:aura/pages/home/page.dart';
+import 'package:aura/services/notifications/daily_reflection_notification.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/logger.dart';
 
 // Re-export the main notification service for backward compatibility
 // All notification functionality is now handled by the platform-aware service
 
-export 'package:omi/services/notifications/notification_service.dart';
+export 'package:aura/services/notifications/notification_service.dart';
 
 class NotificationUtil {
   static ReceivePort? receivePort;

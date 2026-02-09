@@ -4,8 +4,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'package:omi/pages/apps/providers/add_app_provider.dart';
-import 'package:omi/utils/app_localizations_helper.dart';
+import 'package:aura/pages/apps/providers/add_app_provider.dart';
+import 'package:aura/utils/app_localizations_helper.dart';
 
 class ActionFieldsWidget extends StatelessWidget {
   const ActionFieldsWidget({super.key});
@@ -36,7 +36,7 @@ class ActionFieldsWidget extends StatelessWidget {
                       ),
                       GestureDetector(
                         onTap: () {
-                          launchUrl(Uri.parse('https://docs.omi.me/doc/developer/apps/Integrations'));
+                          launchUrl(Uri.parse('https://docs.aura.me/doc/developer/apps/Integrations'));
                         },
                         child: FaIcon(
                           FontAwesomeIcons.solidCircleQuestion,

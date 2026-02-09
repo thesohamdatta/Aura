@@ -235,29 +235,29 @@ class $AssetsImagesGen {
   AssetGenImage get notionLogo =>
       const AssetGenImage('assets/images/notion_logo.png');
 
-  /// File path: assets/images/omi-devkit-without-rope.png
-  AssetGenImage get omiDevkitWithoutRope =>
-      const AssetGenImage('assets/images/omi-devkit-without-rope.png');
+  /// File path: assets/images/aura-devkit-without-rope.png
+  AssetGenImage get auraDevkitWithoutRope =>
+      const AssetGenImage('assets/images/aura-devkit-without-rope.png');
 
-  /// File path: assets/images/omi-glass.png
-  AssetGenImage get omiGlass =>
-      const AssetGenImage('assets/images/omi-glass.png');
+  /// File path: assets/images/aura-glass.png
+  AssetGenImage get aura-pendant =>
+      const AssetGenImage('assets/images/aura-glass.png');
 
-  /// File path: assets/images/omi-with-rope-no-padding.webp
-  AssetGenImage get omiWithRopeNoPadding =>
-      const AssetGenImage('assets/images/omi-with-rope-no-padding.webp');
+  /// File path: assets/images/aura-with-rope-no-padding.webp
+  AssetGenImage get auraWithRopeNoPadding =>
+      const AssetGenImage('assets/images/aura-with-rope-no-padding.webp');
 
-  /// File path: assets/images/omi-with-rope.webp
-  AssetGenImage get omiWithRope =>
-      const AssetGenImage('assets/images/omi-with-rope.webp');
+  /// File path: assets/images/aura-with-rope.webp
+  AssetGenImage get auraWithRope =>
+      const AssetGenImage('assets/images/aura-with-rope.webp');
 
-  /// File path: assets/images/omi-without-rope-turned-off.webp
-  AssetGenImage get omiWithoutRopeTurnedOff =>
-      const AssetGenImage('assets/images/omi-without-rope-turned-off.webp');
+  /// File path: assets/images/aura-without-rope-turned-off.webp
+  AssetGenImage get auraWithoutRopeTurnedOff =>
+      const AssetGenImage('assets/images/aura-without-rope-turned-off.webp');
 
-  /// File path: assets/images/omi-without-rope.webp
-  AssetGenImage get omiWithoutRope =>
-      const AssetGenImage('assets/images/omi-without-rope.webp');
+  /// File path: assets/images/aura-without-rope.webp
+  AssetGenImage get auraWithoutRope =>
+      const AssetGenImage('assets/images/aura-without-rope.webp');
 
   /// File path: assets/images/onboarding-bg-1.webp
   AssetGenImage get onboardingBg1 =>
@@ -388,12 +388,12 @@ class $AssetsImagesGen {
     neoOne,
     newBackground,
     notionLogo,
-    omiDevkitWithoutRope,
-    omiGlass,
-    omiWithRopeNoPadding,
-    omiWithRope,
-    omiWithoutRopeTurnedOff,
-    omiWithoutRope,
+    auraDevkitWithoutRope,
+    aura-pendant,
+    auraWithRopeNoPadding,
+    auraWithRope,
+    auraWithoutRopeTurnedOff,
+    auraWithoutRope,
     onboardingBg1,
     onboardingBg2,
     onboardingBg3,

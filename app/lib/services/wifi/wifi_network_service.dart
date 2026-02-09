@@ -2,7 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class WifiNetworkService {
-  static const _channel = MethodChannel('com.omi.wifi_network');
+  static const _channel = MethodChannel('com.aura.wifi_network');
 
   static WifiNetworkService? _instance;
   static WifiNetworkService get instance {
@@ -14,19 +14,19 @@ class WifiNetworkService {
 
   factory WifiNetworkService() => instance;
 
-  /// Format: omi_{last4chars} e.g., "omi_a1b2"
+  /// Format: aura_{last4chars} e.g., "aura_a1b2"
   static String generateSsid(String deviceId) {
     final cleanId = deviceId.replaceAll(':', '').replaceAll('-', '');
     final suffix = cleanId.length >= 4 ? cleanId.substring(cleanId.length - 4).toLowerCase() : cleanId.toLowerCase();
-    return 'omi_$suffix';
+    return 'aura_$suffix';
   }
 
   /// Generates a password from device ID
-  /// Format: omi_{last8chars} e.g., "omi_a1b2c3d4"
+  /// Format: aura_{last8chars} e.g., "aura_a1b2c3d4"
   static String generatePassword(String deviceId) {
     final cleanId = deviceId.replaceAll(':', '').replaceAll('-', '');
     final suffix = cleanId.length >= 8 ? cleanId.substring(cleanId.length - 8).toLowerCase() : cleanId.toLowerCase();
-    return 'omi_$suffix';
+    return 'aura_$suffix';
   }
 
   Future<WifiConnectionResult> connectToAp(String ssid, {String? password}) async {

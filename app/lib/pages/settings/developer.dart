@@ -10,26 +10,26 @@ import 'package:provider/provider.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'package:omi/backend/http/api/conversations.dart';
-import 'package:omi/backend/http/api/knowledge_graph_api.dart';
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/backend/schema/conversation.dart';
-import 'package:omi/env/env.dart';
-import 'package:omi/models/stt_provider.dart';
-import 'package:omi/pages/persona/persona_profile.dart';
-import 'package:omi/pages/settings/conversation_timeout_dialog.dart';
-import 'package:omi/pages/settings/import_history_page.dart';
-import 'package:omi/pages/settings/transcription_settings_page.dart';
-import 'package:omi/pages/settings/widgets/create_mcp_api_key_dialog.dart';
-import 'package:omi/pages/settings/widgets/developer_api_keys_section.dart';
-import 'package:omi/pages/settings/widgets/mcp_api_key_list_item.dart';
-import 'package:omi/providers/developer_mode_provider.dart';
-import 'package:omi/providers/mcp_provider.dart';
-import 'package:omi/utils/alerts/app_snackbar.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/debug_log_manager.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/logger.dart';
+import 'package:aura/backend/http/api/conversations.dart';
+import 'package:aura/backend/http/api/knowledge_graph_api.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/backend/schema/conversation.dart';
+import 'package:aura/env/env.dart';
+import 'package:aura/models/stt_provider.dart';
+import 'package:aura/pages/persona/persona_profile.dart';
+import 'package:aura/pages/settings/conversation_timeout_dialog.dart';
+import 'package:aura/pages/settings/import_history_page.dart';
+import 'package:aura/pages/settings/transcription_settings_page.dart';
+import 'package:aura/pages/settings/widgets/create_mcp_api_key_dialog.dart';
+import 'package:aura/pages/settings/widgets/developer_api_keys_section.dart';
+import 'package:aura/pages/settings/widgets/mcp_api_key_list_item.dart';
+import 'package:aura/providers/developer_mode_provider.dart';
+import 'package:aura/providers/mcp_provider.dart';
+import 'package:aura/utils/alerts/app_snackbar.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/debug_log_manager.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/logger.dart';
 
 class DeveloperSettingsPage extends StatefulWidget {
   const DeveloperSettingsPage({super.key});
@@ -1187,7 +1187,7 @@ class _DeveloperSettingsPageState extends State<DeveloperSettingsPage> {
                           ),
                         ),
                         const Spacer(),
-                        _buildDocsButton('https://docs.omi.me/doc/developer/MCP', 'MCP'),
+                        _buildDocsButton('https://docs.aura.me/doc/developer/MCP', 'MCP'),
                         const SizedBox(width: 8),
                         _buildCreateKeyButton(() => showDialog(
                               context: context,
@@ -1272,7 +1272,7 @@ class _DeveloperSettingsPageState extends State<DeveloperSettingsPage> {
                                 TextSpan(text: '"mcpServers"', style: TextStyle(color: Colors.cyan.shade300)),
                                 const TextSpan(text: ': {\n', style: TextStyle(color: Colors.white)),
                                 const TextSpan(text: '    ', style: TextStyle(color: Colors.white)),
-                                TextSpan(text: '"omi"', style: TextStyle(color: Colors.cyan.shade300)),
+                                TextSpan(text: '"aura"', style: TextStyle(color: Colors.cyan.shade300)),
                                 const TextSpan(text: ': {\n', style: TextStyle(color: Colors.white)),
                                 const TextSpan(text: '      ', style: TextStyle(color: Colors.white)),
                                 TextSpan(text: '"command"', style: TextStyle(color: Colors.cyan.shade300)),
@@ -1293,11 +1293,11 @@ class _DeveloperSettingsPageState extends State<DeveloperSettingsPage> {
                                 const TextSpan(text: ',\n', style: TextStyle(color: Colors.white)),
                                 const TextSpan(text: '        ', style: TextStyle(color: Colors.white)),
                                 TextSpan(
-                                    text: '"OMI_API_KEY=<your_key>"', style: TextStyle(color: Colors.orange.shade300)),
+                                    text: '"AURA_API_KEY=<your_key>"', style: TextStyle(color: Colors.orange.shade300)),
                                 const TextSpan(text: ',\n', style: TextStyle(color: Colors.white)),
                                 const TextSpan(text: '        ', style: TextStyle(color: Colors.white)),
                                 TextSpan(
-                                    text: '"omiai/mcp-server:latest"', style: TextStyle(color: Colors.orange.shade300)),
+                                    text: '"auraai/mcp-server:latest"', style: TextStyle(color: Colors.orange.shade300)),
                                 const TextSpan(text: '\n      ]\n    }\n  }\n}', style: TextStyle(color: Colors.white)),
                               ],
                             ),
@@ -1308,9 +1308,9 @@ class _DeveloperSettingsPageState extends State<DeveloperSettingsPage> {
                           onTap: () {
                             const config = '''{
   "mcpServers": {
-    "omi": {
+    "aura": {
       "command": "docker",
-      "args": ["run", "--rm", "-i", "-e", "OMI_API_KEY=your_api_key_here", "omiai/mcp-server:latest"]
+      "args": ["run", "--rm", "-i", "-e", "AURA_API_KEY=your_api_key_here", "auraai/mcp-server:latest"]
     }
   }
 }''';
@@ -1486,7 +1486,7 @@ class _DeveloperSettingsPageState extends State<DeveloperSettingsPage> {
                         const SizedBox(height: 12),
 
                         // Client ID
-                        _buildMcpConfigRow(context.l10n.clientId, 'omi'),
+                        _buildMcpConfigRow(context.l10n.clientId, 'aura'),
                         const SizedBox(height: 8),
 
                         // Client Secret hint
@@ -1532,7 +1532,7 @@ class _DeveloperSettingsPageState extends State<DeveloperSettingsPage> {
                             fontWeight: FontWeight.w600,
                           ),
                         ),
-                        _buildDocsButton('https://docs.omi.me/doc/developer/apps/Introduction', 'Webhooks'),
+                        _buildDocsButton('https://docs.aura.me/doc/developer/apps/Introduction', 'Webhooks'),
                       ],
                     ),
                   ),

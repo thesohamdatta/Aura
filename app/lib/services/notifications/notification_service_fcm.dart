@@ -11,15 +11,15 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter_timezone/flutter_timezone.dart';
 
-import 'package:omi/backend/http/api/notifications.dart';
-import 'package:omi/backend/schema/message.dart';
-import 'package:omi/services/notifications/action_item_notification_handler.dart';
-import 'package:omi/services/notifications/important_conversation_notification_handler.dart';
-import 'package:omi/services/notifications/merge_notification_handler.dart';
-import 'package:omi/services/notifications/notification_interface.dart';
-import 'package:omi/utils/analytics/intercom.dart';
-import 'package:omi/utils/logger.dart';
-import 'package:omi/utils/platform/platform_service.dart';
+import 'package:aura/backend/http/api/notifications.dart';
+import 'package:aura/backend/schema/message.dart';
+import 'package:aura/services/notifications/action_item_notification_handler.dart';
+import 'package:aura/services/notifications/important_conversation_notification_handler.dart';
+import 'package:aura/services/notifications/merge_notification_handler.dart';
+import 'package:aura/services/notifications/notification_interface.dart';
+import 'package:aura/utils/analytics/intercom.dart';
+import 'package:aura/utils/logger.dart';
+import 'package:aura/utils/platform/platform_service.dart';
 
 /// Firebase Cloud Messaging enabled notification service
 /// Supports iOS, Android, macOS, web, and Linux with full FCM functionality

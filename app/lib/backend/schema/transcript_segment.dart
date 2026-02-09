@@ -1,4 +1,4 @@
-import 'package:omi/backend/preferences.dart';
+import 'package:aura/backend/preferences.dart';
 
 class Translation {
   String lang;

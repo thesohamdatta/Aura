@@ -64,4 +64,4 @@ Follow these principles:
 - `ISSUE_TRIAGE_GUIDE.MD` - Complete triage guide and formula
 
 ### Rules
-- `.cursor/rules/omi-specific-patterns.mdc` - Omi architecture and priorities
+- `.cursor/rules/aura-specific-patterns.mdc` - Omi architecture and priorities

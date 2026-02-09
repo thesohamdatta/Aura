@@ -11,13 +11,13 @@ import 'package:path_provider/path_provider.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:vector_math/vector_math_64.dart' as v;
 
-import 'package:omi/backend/http/api/knowledge_graph_api.dart';
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/logger.dart';
-import 'package:omi/ui/atoms/omi_icon_button.dart';
-import 'package:omi/utils/responsive/responsive_helper.dart';
+import 'package:aura/backend/http/api/knowledge_graph_api.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/logger.dart';
+import 'package:aura/ui/atoms/aura_icon_button.dart';
+import 'package:aura/utils/responsive/responsive_helper.dart';
 
 class GraphNode3D {
   final String id;
@@ -485,9 +485,9 @@ class DesktopMemoryGraphWidgetState extends State<DesktopMemoryGraphWidget>
       // Draw graph image
       canvas.drawImage(image, Offset.zero, paint);
 
-      // Draw minimal branding "omi.me" at top center
+      // Draw minimal branding "aura.me" at top center
       const textSpan = TextSpan(
-        text: 'omi.me',
+        text: 'aura.me',
         style: TextStyle(
           color: Colors.white,
           fontSize: 72,
@@ -544,7 +544,7 @@ class DesktopMemoryGraphWidgetState extends State<DesktopMemoryGraphWidget>
                   ),
                 const SizedBox(width: 16),
                 Text(
-                  'omi.me',
+                  'aura.me',
                   style: ResponsiveHelper(context).bodyLarge.copyWith(
                         fontWeight: FontWeight.w600,
                         color: ResponsiveHelper.textPrimary,

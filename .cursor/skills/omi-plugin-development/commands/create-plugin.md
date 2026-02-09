@@ -13,8 +13,8 @@ Create a new Omi plugin/app with proper structure and configuration.
 Just define prompts - no server required.
 
 **Capabilities**:
-- Chat prompts: Customize AI personality
-- Memory prompts: Customize memory extraction
+- Chat prompts: Custauraze AI personality
+- Memory prompts: Custauraze memory extraction
 
 ### 2. Integration App (Requires Server)
 
@@ -121,8 +121,8 @@ Requires a server endpoint for webhooks.
 - `.cursor/rules/backend-api-patterns.mdc` - Backend API patterns
 
 ### Skills
-- `.cursor/skills/omi-plugin-development/` - Plugin development workflows
-- `.cursor/skills/omi-api-integration/` - API integration patterns
+- `.cursor/skills/aura-plugin-development/` - Plugin development workflows
+- `.cursor/skills/aura-api-integration/` - API integration patterns
 
 ### Subagents
 - `.cursor/agents/plugin-developer/` - Plugin development specialist

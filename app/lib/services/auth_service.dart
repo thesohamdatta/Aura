@@ -13,12 +13,12 @@ import 'package:http/http.dart' as http;
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'package:omi/backend/http/api/users.dart';
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/env/env.dart';
-import 'package:omi/utils/logger.dart';
-import 'package:omi/utils/logger.dart';
-import 'package:omi/utils/platform/platform_service.dart';
+import 'package:aura/backend/http/api/users.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/env/env.dart';
+import 'package:aura/utils/logger.dart';
+import 'package:aura/utils/logger.dart';
+import 'package:aura/utils/platform/platform_service.dart';
 
 class AuthService {
   static final AuthService _instance = AuthService._internal();
@@ -202,12 +202,12 @@ class AuthService {
   }
 
   // Method channel for direct deep link delivery (fallback for app_links)
-  static const _deepLinkChannel = MethodChannel('com.omi/deep_links');
+  static const _deepLinkChannel = MethodChannel('com.aura/deep_links');
 
   Future<UserCredential?> authenticateWithProvider(String provider) async {
     try {
       final state = _generateState();
-      const redirectUri = 'omi://auth/callback';
+      const redirectUri = 'aura://auth/callback';
 
       Logger.debug('Starting OAuth flow for provider: $provider');
 
@@ -227,7 +227,7 @@ class AuthService {
       linkSubscription = appLinks.uriLinkStream.listen(
         (Uri uri) {
           Logger.debug('Received callback URI via app_links: $uri');
-          if (uri.scheme == 'omi' && uri.host == 'auth' && uri.path == '/callback') {
+          if (uri.scheme == 'aura' && uri.host == 'auth' && uri.path == '/callback') {
             if (!completer.isCompleted) {
               linkSubscription.cancel();
               completer.complete(uri.toString());
@@ -249,7 +249,7 @@ class AuthService {
           final urlString = call.arguments as String;
           Logger.debug('Received callback URI via method channel: $urlString');
           final uri = Uri.parse(urlString);
-          if (uri.scheme == 'omi' && uri.host == 'auth' && uri.path == '/callback') {
+          if (uri.scheme == 'aura' && uri.host == 'auth' && uri.path == '/callback') {
             if (!completer.isCompleted) {
               linkSubscription.cancel();
               _deepLinkChannel.setMethodCallHandler(null);
@@ -563,7 +563,7 @@ class AuthService {
       }
 
       final state = _generateState();
-      const redirectUri = 'omi://auth/callback';
+      const redirectUri = 'aura://auth/callback';
 
       Logger.debug('Starting OAuth linking flow for provider: $provider');
 
@@ -591,7 +591,7 @@ class AuthService {
       linkSubscription = appLinks.uriLinkStream.listen(
         (Uri uri) {
           Logger.debug('Received callback URI: $uri');
-          if (uri.scheme == 'omi' && uri.host == 'auth' && uri.path == '/callback') {
+          if (uri.scheme == 'aura' && uri.host == 'auth' && uri.path == '/callback') {
             linkSubscription.cancel();
             completer.complete(uri.toString());
           }

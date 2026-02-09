@@ -4,14 +4,14 @@ import 'package:flutter/material.dart';
 
 import 'package:image_picker/image_picker.dart';
 
-import 'package:omi/backend/http/api/apps.dart';
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/main.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/backend/schema/app.dart';
-import 'package:omi/utils/alerts/app_snackbar.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/logger.dart';
+import 'package:aura/backend/http/api/apps.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/main.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/backend/schema/app.dart';
+import 'package:aura/utils/alerts/app_snackbar.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/logger.dart';
 
 typedef ShowSuccessDialogCallback = void Function(String url);
 
@@ -185,7 +185,7 @@ class PersonaProvider extends ChangeNotifier {
     makePersonaPublic = !app.private;
     selectedImageUrl = app.image;
     _userPersona = app;
-    hasOmiConnection = app.connectedAccounts.contains('omi');
+    hasOmiConnection = app.connectedAccounts.contains('aura');
     hasTwitterConnection = app.connectedAccounts.contains('twitter');
     if (hasTwitterConnection && app.twitter != null) {
       _twitterProfile = app.twitter!;
@@ -249,7 +249,7 @@ class PersonaProvider extends ChangeNotifier {
   void toggleOmiConnection(bool value) {
     hasOmiConnection = value;
     if (_userPersona != null) {
-      MixpanelManager().personaOmiConnectionToggled(personaId: _userPersona!.id, omiConnected: value);
+      MixpanelManager().personaOmiConnectionToggled(personaId: _userPersona!.id, auraConnected: value);
     }
     notifyListeners();
   }
@@ -285,7 +285,7 @@ class PersonaProvider extends ChangeNotifier {
     if (_isEditablePersona()) {
       updatePersona();
       if (_userPersona != null) {
-        MixpanelManager().personaOmiConnectionToggled(personaId: _userPersona!.id, omiConnected: false);
+        MixpanelManager().personaOmiConnectionToggled(personaId: _userPersona!.id, auraConnected: false);
       }
     }
     notifyListeners();
@@ -316,11 +316,11 @@ class PersonaProvider extends ChangeNotifier {
         hasOmiConnection = true;
       }
 
-      if (hasOmiConnection && !_userPersona!.connectedAccounts.contains('omi')) {
-        personaData['connected_accounts'] = [..._userPersona!.connectedAccounts, 'omi'];
-      } else if (!hasOmiConnection && _userPersona!.connectedAccounts.contains('omi')) {
+      if (hasOmiConnection && !_userPersona!.connectedAccounts.contains('aura')) {
+        personaData['connected_accounts'] = [..._userPersona!.connectedAccounts, 'aura'];
+      } else if (!hasOmiConnection && _userPersona!.connectedAccounts.contains('aura')) {
         personaData['connected_accounts'] =
-            _userPersona!.connectedAccounts.where((element) => element != 'omi').toList();
+            _userPersona!.connectedAccounts.where((element) => element != 'aura').toList();
       }
 
       if (hasTwitterConnection && !_userPersona!.connectedAccounts.contains('twitter')) {
@@ -350,7 +350,7 @@ class PersonaProvider extends ChangeNotifier {
             isPublic: !(personaData['private'] as bool? ?? true),
             updatedFields: updatedFields,
             connectedAccounts: personaData['connected_accounts'] as List<String>?,
-            hasOmiConnection: (personaData['connected_accounts'] as List<String>?)?.contains('omi'),
+            hasOmiConnection: (personaData['connected_accounts'] as List<String>?)?.contains('aura'),
             hasTwitterConnection: (personaData['connected_accounts'] as List<String>?)?.contains('twitter'));
         await getVerifiedUserPersona();
         notifyListeners();
@@ -393,7 +393,7 @@ class PersonaProvider extends ChangeNotifier {
       };
 
       if (hasOmiConnection) {
-        (personaData['connected_accounts'] as List<String>).add('omi');
+        (personaData['connected_accounts'] as List<String>).add('aura');
       }
 
       if (_twitterProfile.isNotEmpty) {
@@ -407,13 +407,13 @@ class PersonaProvider extends ChangeNotifier {
       var res = await createPersonaApp(selectedImage!, personaData);
 
       if (res.isNotEmpty) {
-        String personaUrl = 'personas.omi.me/u/${res['username']}';
+        String personaUrl = 'personas.aura.me/u/${res['username']}';
         Logger.debug('Persona URL: $personaUrl');
         MixpanelManager().personaCreated(
             personaId: res['id'],
             isPublic: !(personaData['private'] as bool? ?? true),
             connectedAccounts: personaData['connected_accounts'] as List<String>?,
-            hasOmiConnection: (personaData['connected_accounts'] as List<String>?)?.contains('omi'),
+            hasOmiConnection: (personaData['connected_accounts'] as List<String>?)?.contains('aura'),
             hasTwitterConnection: (personaData['connected_accounts'] as List<String>?)?.contains('twitter'));
         if (onShowSuccessDialog != null) {
           onShowSuccessDialog!(personaUrl);

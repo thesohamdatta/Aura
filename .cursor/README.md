@@ -70,17 +70,17 @@ Project-specific rules that guide AI behavior based on file context:
 
 Commands are organized within skill folders at `skills/{skill}/commands/`. Type `/` in Cursor chat to see all available commands.
 
-**Backend Commands** (`skills/omi-backend-patterns/commands/`):
+**Backend Commands** (`skills/aura-backend-patterns/commands/`):
 - `/backend-setup` - Guide for setting up backend environment
 - `/backend-test` - Run backend tests with proper environment
 - `/backend-deploy` - Deploy backend to production
 
-**Flutter Commands** (`skills/omi-flutter-patterns/commands/`):
+**Flutter Commands** (`skills/aura-flutter-patterns/commands/`):
 - `/flutter-setup` - Flutter environment setup
 - `/flutter-test` - Run Flutter tests
 - `/flutter-build` - Build Flutter app
 
-**Plugin Commands** (`skills/omi-plugin-development/commands/`):
+**Plugin Commands** (`skills/aura-plugin-development/commands/`):
 - `/create-plugin` - Scaffold new plugin structure
 - `/create-app` - Scaffold new Omi app
 - `/test-integration` - Run integration tests
@@ -116,18 +116,18 @@ Skills are organized in `skills/{skill-name}/` folders. Each skill folder contai
 - `agents/` - Related specialized agents
 
 **Domain Skills**:
-- `omi-backend-patterns/` - Backend-specific patterns (conversation processing, memory extraction, chat system)
+- `aura-backend-patterns/` - Backend-specific patterns (conversation processing, memory extraction, chat system)
   - Commands: `/backend-setup`, `/backend-test`, `/backend-deploy`
   - Agents: `backend-api-developer`, `backend-llm-engineer`, `backend-database-engineer`
-- `omi-flutter-patterns/` - Flutter-specific patterns (BLE, audio streaming, state management)
+- `aura-flutter-patterns/` - Flutter-specific patterns (BLE, audio streaming, state management)
   - Commands: `/flutter-setup`, `/flutter-test`, `/flutter-build`
   - Agents: `flutter-developer`
-- `omi-firmware-patterns/` - Firmware patterns (BLE services, audio codecs)
+- `aura-firmware-patterns/` - Firmware patterns (BLE services, audio codecs)
   - Agents: `firmware-engineer`
-- `omi-api-integration/` - API integration patterns (Developer API, MCP, webhooks)
+- `aura-api-integration/` - API integration patterns (Developer API, MCP, webhooks)
   - Commands: `/update-api-docs`
   - Agents: `web-developer`, `sdk-developer`
-- `omi-plugin-development/` - Plugin development workflow
+- `aura-plugin-development/` - Plugin development workflow
   - Commands: `/create-plugin`, `/create-app`, `/test-integration`
   - Agents: `plugin-developer`
 
@@ -169,21 +169,21 @@ Skills are organized in `skills/{skill-name}/` folders. Each skill folder contai
 
 Agents are organized within skill folders at `skills/{skill}/agents/`. Each agent is a `.md` file with YAML frontmatter (name, description, model, is_background) followed by the prompt.
 
-**Backend Agents** (`skills/omi-backend-patterns/agents/`):
+**Backend Agents** (`skills/aura-backend-patterns/agents/`):
 - `backend-api-developer.md` - FastAPI router development, endpoint patterns
 - `backend-llm-engineer.md` - LLM integration, prompt engineering, LangGraph
 - `backend-database-engineer.md` - Firestore, Pinecone, Redis optimization
 
 **Frontend Agents**:
-- `flutter-developer.md` (`skills/omi-flutter-patterns/agents/`) - Flutter app development, BLE integration
-- `web-developer.md` (`skills/omi-api-integration/agents/`) - Next.js frontend development
+- `flutter-developer.md` (`skills/aura-flutter-patterns/agents/`) - Flutter app development, BLE integration
+- `web-developer.md` (`skills/aura-api-integration/agents/`) - Next.js frontend development
 
 **Firmware Agents**:
-- `firmware-engineer.md` (`skills/omi-firmware-patterns/agents/`) - C/C++ firmware development, BLE services
+- `firmware-engineer.md` (`skills/aura-firmware-patterns/agents/`) - C/C++ firmware development, BLE services
 
 **Integration Agents**:
-- `plugin-developer.md` (`skills/omi-plugin-development/agents/`) - Plugin/app development, webhook integration
-- `sdk-developer.md` (`skills/omi-api-integration/agents/`) - SDK development (Python, Swift, React Native)
+- `plugin-developer.md` (`skills/aura-plugin-development/agents/`) - Plugin/app development, webhook integration
+- `sdk-developer.md` (`skills/aura-api-integration/agents/`) - SDK development (Python, Swift, React Native)
 
 **Automation Agents**:
 - `docs-generator.md` (`skills/docs-automation/agents/`) - Automatically generate/update documentation when code changes
@@ -410,32 +410,32 @@ See `.cursor/docs/ARCHITECTURE.md` for detailed architecture documentation.
 
 ## Documentation References
 
-**The `docs/` folder is the single source of truth for all user-facing documentation, deployed at [docs.omi.me](https://docs.omi.me/).**
+**The `docs/` folder is the single source of truth for all user-facing documentation, deployed at [docs.aura.me](https://docs.aura.me/).**
 
-All documentation is available locally in the `docs/` folder and deployed at [docs.omi.me](https://docs.omi.me/).
+All documentation is available locally in the `docs/` folder and deployed at [docs.aura.me](https://docs.aura.me/).
 
 ### Key Documentation Files
 
 **Backend**:
-- `docs/doc/developer/backend/backend_deepdive.mdx` - [Backend architecture](https://docs.omi.me/doc/developer/backend/backend_deepdive)
-- `docs/doc/developer/backend/chat_system.mdx` - [Chat system](https://docs.omi.me/doc/developer/backend/chat_system)
-- `docs/doc/developer/backend/StoringConversations.mdx` - [Data storage](https://docs.omi.me/doc/developer/backend/StoringConversations)
-- `docs/doc/developer/backend/transcription.mdx` - [Transcription](https://docs.omi.me/doc/developer/backend/transcription)
-- `docs/doc/developer/backend/Backend_Setup.mdx` - [Backend setup](https://docs.omi.me/doc/developer/backend/Backend_Setup)
+- `docs/doc/developer/backend/backend_deepdive.mdx` - [Backend architecture](https://docs.aura.me/doc/developer/backend/backend_deepdive)
+- `docs/doc/developer/backend/chat_system.mdx` - [Chat system](https://docs.aura.me/doc/developer/backend/chat_system)
+- `docs/doc/developer/backend/StoringConversations.mdx` - [Data storage](https://docs.aura.me/doc/developer/backend/StoringConversations)
+- `docs/doc/developer/backend/transcription.mdx` - [Transcription](https://docs.aura.me/doc/developer/backend/transcription)
+- `docs/doc/developer/backend/Backend_Setup.mdx` - [Backend setup](https://docs.aura.me/doc/developer/backend/Backend_Setup)
 
 **App & Protocol**:
-- `docs/doc/developer/AppSetup.mdx` - [App setup](https://docs.omi.me/doc/developer/AppSetup)
-- `docs/doc/developer/Protocol.mdx` - [BLE protocol](https://docs.omi.me/doc/developer/Protocol)
+- `docs/doc/developer/AppSetup.mdx` - [App setup](https://docs.aura.me/doc/developer/AppSetup)
+- `docs/doc/developer/Protocol.mdx` - [BLE protocol](https://docs.aura.me/doc/developer/Protocol)
 
 **API**:
-- `docs/doc/developer/api/overview.mdx` - [API overview](https://docs.omi.me/doc/developer/api/overview)
-- `docs/api-reference/` - [API endpoints](https://docs.omi.me/api-reference/)
+- `docs/doc/developer/api/overview.mdx` - [API overview](https://docs.aura.me/doc/developer/api/overview)
+- `docs/api-reference/` - [API endpoints](https://docs.aura.me/api-reference/)
 
 **App Development**:
-- `docs/doc/developer/apps/Introduction.mdx` - [Plugin development](https://docs.omi.me/doc/developer/apps/Introduction)
-- `docs/doc/developer/MCP.mdx` - [MCP server](https://docs.omi.me/doc/developer/MCP)
+- `docs/doc/developer/apps/Introduction.mdx` - [Plugin development](https://docs.aura.me/doc/developer/apps/Introduction)
+- `docs/doc/developer/MCP.mdx` - [MCP server](https://docs.aura.me/doc/developer/MCP)
 
-**Complete Index**: `docs/INDEX.md` - [View online](https://docs.omi.me/llms.txt)
+**Complete Index**: `docs/INDEX.md` - [View online](https://docs.aura.me/llms.txt)
 
 ### Internal Cursor Documentation
 
@@ -444,7 +444,7 @@ All documentation is available locally in the `docs/` folder and deployed at [do
 
 ### External Resources
 
-- [docs.omi.me](https://docs.omi.me/) - Complete online documentation
+- [docs.aura.me](https://docs.aura.me/) - Complete online documentation
 - [Cursor Docs](https://cursor.com/docs) - Cursor documentation
 
 ## Getting Help

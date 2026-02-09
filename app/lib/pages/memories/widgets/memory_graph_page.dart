@@ -13,11 +13,11 @@ import 'package:path_provider/path_provider.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:vector_math/vector_math_64.dart' as v;
 
-import 'package:omi/backend/http/api/knowledge_graph_api.dart';
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/logger.dart';
+import 'package:aura/backend/http/api/knowledge_graph_api.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/logger.dart';
 
 class GraphNode3D {
   final String id;
@@ -482,9 +482,9 @@ class _MemoryGraphPageState extends State<MemoryGraphPage> with SingleTickerProv
       // Draw graph image
       canvas.drawImage(image, Offset.zero, paint);
 
-      // Draw minimal branding "omi.me" at top center
+      // Draw minimal branding "aura.me" at top center
       final textSpan = TextSpan(
-        text: 'omi.me',
+        text: 'aura.me',
         style: const TextStyle(
           color: Colors.white,
           fontSize: 72,
@@ -525,7 +525,7 @@ class _MemoryGraphPageState extends State<MemoryGraphPage> with SingleTickerProv
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         title: const Text(
-          'omi.me',
+          'aura.me',
           style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
         ),
         centerTitle: true,

@@ -10,7 +10,7 @@ Omi is a multimodal AI wearable platform that captures conversations, extracts m
 flowchart TB
     subgraph Device["📱 Hardware Layer"]
         OmiDevice[Omi Wearable Device<br/>nRF/ESP32-S3]
-        OmiGlass[Omi Glass<br/>ESP32-S3]
+        OmiGlass[Aura Pendant<br/>ESP32-S3]
     end
     
     subgraph App["📱 Application Layer"]
@@ -128,11 +128,11 @@ The backend is organized into clear layers following a strict module hierarchy:
 
 ### 3. Firmware (C/C++)
 
-**Location**: `omi/`, `omiGlass/`
+**Location**: `aura/`, `aura-pendant/`
 
 **Platforms**:
 - **Omi Device**: nRF chips with Zephyr RTOS
-- **Omi Glass**: ESP32-S3
+- **Aura Pendant**: ESP32-S3
 
 **Key Features**:
 - BLE services for audio streaming

@@ -1,8 +1,8 @@
 import 'dart:convert';
 
-import 'package:omi/backend/http/shared.dart';
-import 'package:omi/backend/schema/dev_api_key.dart';
-import 'package:omi/env/env.dart';
+import 'package:aura/backend/http/shared.dart';
+import 'package:aura/backend/schema/dev_api_key.dart';
+import 'package:aura/env/env.dart';
 
 class DevApi {
   static final String _baseUrl = '${Env.apiBaseUrl}v1/dev';

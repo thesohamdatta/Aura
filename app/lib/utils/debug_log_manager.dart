@@ -5,7 +5,7 @@ import 'dart:io';
 import 'package:intl/intl.dart';
 import 'package:path_provider/path_provider.dart';
 
-import 'package:omi/backend/preferences.dart';
+import 'package:aura/backend/preferences.dart';
 
 /// Lightweight debug log manager to persist important diagnostics when
 /// developer debug logging is enabled.
@@ -17,7 +17,7 @@ class DebugLogManager {
     final y = d.year.toString().padLeft(4, '0');
     final m = d.month.toString().padLeft(2, '0');
     final day = d.day.toString().padLeft(2, '0');
-    return 'omi_debug_$y$m$day.log';
+    return 'aura_debug_$y$m$day.log';
   }
 
   static const int _maxFileBytes = 5 * 1024 * 1024; // 5MB cap
@@ -108,7 +108,7 @@ class DebugLogManager {
       await for (final entity in Directory(dir.path).list(followLinks: false)) {
         if (entity is! File) continue;
         final name = entity.uri.pathSegments.isNotEmpty ? entity.uri.pathSegments.last : '';
-        if (!name.startsWith('omi_debug_') || !name.endsWith('.log')) continue;
+        if (!name.startsWith('aura_debug_') || !name.endsWith('.log')) continue;
         files.add(entity);
       }
       // Sort by filename descending (YYYYMMDD ensures lexical order = chronological),
@@ -133,9 +133,9 @@ class DebugLogManager {
       await for (final entity in stream) {
         if (entity is! File) continue;
         final name = entity.uri.pathSegments.isNotEmpty ? entity.uri.pathSegments.last : '';
-        if (!name.startsWith('omi_debug_') || !name.endsWith('.log')) continue;
-        // Expect format omi_debug_YYYYMMDD.log
-        final datePart = name.replaceAll('omi_debug_', '').replaceAll('.log', '');
+        if (!name.startsWith('aura_debug_') || !name.endsWith('.log')) continue;
+        // Expect format aura_debug_YYYYMMDD.log
+        final datePart = name.replaceAll('aura_debug_', '').replaceAll('.log', '');
         if (datePart.length != 8) continue;
         final y = int.tryParse(datePart.substring(0, 4));
         final m = int.tryParse(datePart.substring(4, 6));

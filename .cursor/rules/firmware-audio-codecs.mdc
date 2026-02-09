@@ -1,10 +1,10 @@
 ---
 description: "Audio codec Opus PCM Mu-law encoding decoding 16kHz 8kHz sample rate bit depth little-endian packet structure"
 globs:
-  - "omi/**/*.c"
-  - "omi/**/*.h"
-  - "omiGlass/**/*.c"
-  - "omiGlass/**/*.h"
+  - "aura/**/*.c"
+  - "aura/**/*.h"
+  - "aura-pendant/**/*.c"
+  - "aura-pendant/**/*.h"
 alwaysApply: false
 references:
   - docs/doc/developer/Protocol.mdx
@@ -243,7 +243,7 @@ typedef struct {
 - `.cursor/rules/flutter-ble-protocol.mdc` - Flutter codec handling
 
 ### Skills
-- `.cursor/skills/omi-firmware-patterns/` - Firmware patterns including codecs
+- `.cursor/skills/aura-firmware-patterns/` - Firmware patterns including codecs
 
 ### Subagents
 - `.cursor/agents/firmware-engineer/` - Firmware codec specialist

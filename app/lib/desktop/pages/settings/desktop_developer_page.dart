@@ -10,21 +10,21 @@ import 'package:provider/provider.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'package:omi/backend/http/api/conversations.dart';
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/backend/schema/conversation.dart';
-import 'package:omi/pages/settings/widgets/create_mcp_api_key_dialog.dart';
-import 'package:omi/pages/settings/widgets/mcp_api_key_list_item.dart';
-import 'package:omi/pages/settings/widgets/toggle_section_widget.dart';
-import 'package:omi/providers/developer_mode_provider.dart';
-import 'package:omi/providers/mcp_provider.dart';
-import 'package:omi/ui/atoms/omi_icon_button.dart';
-import 'package:omi/utils/alerts/app_snackbar.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/debug_log_manager.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/logger.dart';
-import 'package:omi/utils/responsive/responsive_helper.dart';
+import 'package:aura/backend/http/api/conversations.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/backend/schema/conversation.dart';
+import 'package:aura/pages/settings/widgets/create_mcp_api_key_dialog.dart';
+import 'package:aura/pages/settings/widgets/mcp_api_key_list_item.dart';
+import 'package:aura/pages/settings/widgets/toggle_section_widget.dart';
+import 'package:aura/providers/developer_mode_provider.dart';
+import 'package:aura/providers/mcp_provider.dart';
+import 'package:aura/ui/atoms/aura_icon_button.dart';
+import 'package:aura/utils/alerts/app_snackbar.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/debug_log_manager.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/logger.dart';
+import 'package:aura/utils/responsive/responsive_helper.dart';
 
 class DesktopDeveloperSettingsPage extends StatefulWidget {
   const DesktopDeveloperSettingsPage({super.key});
@@ -402,7 +402,7 @@ class _DesktopDeveloperSettingsPageState extends State<DesktopDeveloperSettingsP
                                               ),
                                               GestureDetector(
                                                 onTap: () {
-                                                  launchUrl(Uri.parse('https://docs.omi.me/doc/developer/MCP'));
+                                                  launchUrl(Uri.parse('https://docs.aura.me/doc/developer/MCP'));
                                                   MixpanelManager().pageOpened('MCP Docs');
                                                 },
                                                 child: Padding(
@@ -540,7 +540,7 @@ class _DesktopDeveloperSettingsPageState extends State<DesktopDeveloperSettingsP
                                               GestureDetector(
                                                 onTap: () {
                                                   launchUrl(
-                                                      Uri.parse('https://docs.omi.me/doc/developer/apps/Introduction'));
+                                                      Uri.parse('https://docs.aura.me/doc/developer/apps/Introduction'));
                                                   MixpanelManager().pageOpened('Advanced Mode Docs');
                                                 },
                                                 child: Padding(

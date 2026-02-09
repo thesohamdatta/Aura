@@ -3,11 +3,11 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'package:omi/l10n/app_localizations.dart';
-import 'package:omi/models/playback_state.dart';
-import 'package:omi/providers/sync_provider.dart';
-import 'package:omi/services/services.dart';
-import 'package:omi/widgets/waveform_section.dart';
+import 'package:aura/l10n/app_localizations.dart';
+import 'package:aura/models/playback_state.dart';
+import 'package:aura/providers/sync_provider.dart';
+import 'package:aura/services/services.dart';
+import 'package:aura/widgets/waveform_section.dart';
 
 // Mock SyncProvider for testing
 class MockSyncProvider extends SyncProvider {

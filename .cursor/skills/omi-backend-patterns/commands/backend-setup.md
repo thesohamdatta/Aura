@@ -81,10 +81,10 @@ Set up the Omi backend for local development with all required services and depe
 
 ## Related Documentation
 
-**The `docs/` folder is the single source of truth for all user-facing documentation, deployed at [docs.omi.me](https://docs.omi.me/).**
+**The `docs/` folder is the single source of truth for all user-facing documentation, deployed at [docs.aura.me](https://docs.aura.me/).**
 
-- **Backend Setup**: `docs/doc/developer/backend/Backend_Setup.mdx` - [View online](https://docs.omi.me/doc/developer/backend/Backend_Setup)
-- **Backend Deep Dive**: `docs/doc/developer/backend/backend_deepdive.mdx` - [View online](https://docs.omi.me/doc/developer/backend/backend_deepdive)
+- **Backend Setup**: `docs/doc/developer/backend/Backend_Setup.mdx` - [View online](https://docs.aura.me/doc/developer/backend/Backend_Setup)
+- **Backend Deep Dive**: `docs/doc/developer/backend/backend_deepdive.mdx` - [View online](https://docs.aura.me/doc/developer/backend/backend_deepdive)
 
 ## Related Cursor Resources
 
@@ -94,7 +94,7 @@ Set up the Omi backend for local development with all required services and depe
 - `.cursor/rules/formatting.mdc` - Code formatting
 
 ### Skills
-- `.cursor/skills/omi-backend-patterns/` - Backend patterns
+- `.cursor/skills/aura-backend-patterns/` - Backend patterns
 
 ### Subagents
 - `.cursor/agents/backend-api-developer/` - Can help with setup

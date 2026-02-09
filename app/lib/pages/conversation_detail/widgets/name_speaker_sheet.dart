@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:collection/collection.dart';
 import 'package:provider/provider.dart';
 
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/backend/schema/message_event.dart';
-import 'package:omi/backend/schema/person.dart';
-import 'package:omi/backend/schema/transcript_segment.dart';
-import 'package:omi/pages/settings/people.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/providers/people_provider.dart';
-import 'package:omi/widgets/person_chip.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/backend/schema/message_event.dart';
+import 'package:aura/backend/schema/person.dart';
+import 'package:aura/backend/schema/transcript_segment.dart';
+import 'package:aura/pages/settings/people.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/providers/people_provider.dart';
+import 'package:aura/widgets/person_chip.dart';
 
 class NameSpeakerBottomSheet extends StatefulWidget {
   final int speakerId;

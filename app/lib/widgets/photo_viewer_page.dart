@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:photo_view/photo_view.dart';
 import 'package:photo_view/photo_view_gallery.dart';
 
-import 'package:omi/backend/schema/conversation.dart';
-import 'package:omi/utils/l10n_extensions.dart';
+import 'package:aura/backend/schema/conversation.dart';
+import 'package:aura/utils/l10n_extensions.dart';
 
 class PhotoViewerPage extends StatefulWidget {
   final List<ConversationPhoto> photos;

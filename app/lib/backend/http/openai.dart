@@ -6,12 +6,12 @@ import 'package:flutter/material.dart';
 
 import 'package:tuple/tuple.dart';
 
-import 'package:omi/backend/http/shared.dart';
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/backend/schema/app.dart';
-import 'package:omi/backend/schema/structured.dart';
-import 'package:omi/env/env.dart';
-import 'package:omi/utils/logger.dart';
+import 'package:aura/backend/http/shared.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/backend/schema/app.dart';
+import 'package:aura/backend/schema/structured.dart';
+import 'package:aura/env/env.dart';
+import 'package:aura/utils/logger.dart';
 
 class SummaryResult {
   final Structured structured;

@@ -110,7 +110,7 @@ Tested on 4-minute Omi recording (3 speakers):
 - `backend/utils/stt/diarization_service.py::trigger_diarization_refinement()` - Triggers refinement
 - `backend/routers/diarization.py::webhook_callback()` - Webhook endpoint
 - Related issue: #2806
-- Architecture: `docs/doc/developer/backend/backend_deepdive.mdx` - [View online](https://docs.omi.me/doc/developer/backend/backend_deepdive)
+- Architecture: `docs/doc/developer/backend/backend_deepdive.mdx` - [View online](https://docs.aura.me/doc/developer/backend/backend_deepdive)
 ```
 
 ### 5. Assumptions

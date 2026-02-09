@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'package:omi/ui/atoms/omi_icon_button.dart';
-import 'package:omi/ui/molecules/omi_empty_state.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/responsive/responsive_helper.dart';
+import 'package:aura/ui/atoms/aura_icon_button.dart';
+import 'package:aura/ui/molecules/aura_empty_state.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/responsive/responsive_helper.dart';
 
 class DesktopEmptyConversations extends StatelessWidget {
   const DesktopEmptyConversations({super.key});

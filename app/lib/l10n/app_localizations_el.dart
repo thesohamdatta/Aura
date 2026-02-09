@@ -555,7 +555,7 @@ class AppLocalizationsEl extends AppLocalizations {
   String get deviceInfoSection => 'Πληροφορίες Συσκευής';
 
   @override
-  String get customizationSection => 'Προσαρμογή';
+  String get custaurazationSection => 'Προσαρμογή';
 
   @override
   String get hardwareSection => 'Υλικό';
@@ -763,19 +763,19 @@ class AppLocalizationsEl extends AppLocalizations {
   }
 
   @override
-  String get shareStatsMessage => 'Μοιράζομαι τα στατιστικά μου στο Omi! (omi.me - ο πάντα ενεργός βοηθός AI σας)';
+  String get shareStatsMessage => 'Μοιράζομαι τα στατιστικά μου στο Omi! (aura.me - ο πάντα ενεργός βοηθός AI σας)';
 
   @override
-  String get sharePeriodToday => 'Σήμερα, το omi:';
+  String get sharePeriodToday => 'Σήμερα, το aura:';
 
   @override
-  String get sharePeriodMonth => 'Αυτόν τον μήνα, το omi:';
+  String get sharePeriodMonth => 'Αυτόν τον μήνα, το aura:';
 
   @override
-  String get sharePeriodYear => 'Φέτος, το omi:';
+  String get sharePeriodYear => 'Φέτος, το aura:';
 
   @override
-  String get sharePeriodAllTime => 'Μέχρι τώρα, το omi:';
+  String get sharePeriodAllTime => 'Μέχρι τώρα, το aura:';
 
   @override
   String shareStatsListened(String minutes) {
@@ -810,7 +810,7 @@ class AppLocalizationsEl extends AppLocalizations {
   String get noLogFilesFound => 'Δεν βρέθηκαν αρχεία καταγραφής.';
 
   @override
-  String get omiDebugLog => 'Αρχείο εντοπισμού σφαλμάτων Omi';
+  String get auraDebugLog => 'Αρχείο εντοπισμού σφαλμάτων Omi';
 
   @override
   String get logShared => 'Το αρχείο καταγραφής κοινοποιήθηκε';
@@ -1022,7 +1022,7 @@ class AppLocalizationsEl extends AppLocalizations {
   String get connect => 'Connect';
 
   @override
-  String get comingSoon => 'Σύντομα Διαθέσιμο';
+  String get caurangSoon => 'Σύντομα Διαθέσιμο';
 
   @override
   String get integrationsFooter => 'Συνδέστε τις εφαρμογές σας για να δείτε δεδομένα και μετρήσεις στη συνομιλία.';
@@ -1199,7 +1199,7 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get showEventsNoParticipantsDesc =>
-      'Όταν είναι ενεργοποιημένο, το Coming Up εμφανίζει συμβάντα χωρίς συμμετέχοντες ή σύνδεσμο βίντεο.';
+      'Όταν είναι ενεργοποιημένο, το Caurang Up εμφανίζει συμβάντα χωρίς συμμετέχοντες ή σύνδεσμο βίντεο.';
 
   @override
   String get yourMeetings => 'Οι Συναντήσεις σας';
@@ -1208,7 +1208,7 @@ class AppLocalizationsEl extends AppLocalizations {
   String get refresh => 'Ανανέωση';
 
   @override
-  String get noUpcomingMeetings => 'Δεν υπάρχουν επερχόμενες συναντήσεις';
+  String get noUpcaurangMeetings => 'Δεν υπάρχουν επερχόμενες συναντήσεις';
 
   @override
   String get checkingNextDays => 'Έλεγχος επόμενων 30 ημερών';
@@ -1217,7 +1217,7 @@ class AppLocalizationsEl extends AppLocalizations {
   String get tomorrow => 'Αύριο';
 
   @override
-  String get googleCalendarComingSoon => 'Η ενσωμάτωση με το Ημερολόγιο Google έρχεται σύντομα!';
+  String get googleCalendarCaurangSoon => 'Η ενσωμάτωση με το Ημερολόγιο Google έρχεται σύντομα!';
 
   @override
   String connectedAsUser(String userId) {
@@ -1445,7 +1445,7 @@ class AppLocalizationsEl extends AppLocalizations {
   }
 
   @override
-  String integrationComingSoon(String appName) {
+  String integrationCaurangSoon(String appName) {
     return 'Η ενσωμάτωση με το $appName έρχεται σύντομα! Εργαζόμαστε σκληρά για να σας φέρουμε περισσότερες επιλογές διαχείρισης εργασιών.';
   }
 
@@ -1468,13 +1468,13 @@ class AppLocalizationsEl extends AppLocalizations {
   String get bringYourOwn => 'Φέρτε το δικό σας';
 
   @override
-  String get payYourSttProvider => 'Χρησιμοποιήστε ελεύθερα το omi. Πληρώνετε μόνο τον πάροχο STT σας απευθείας.';
+  String get payYourSttProvider => 'Χρησιμοποιήστε ελεύθερα το aura. Πληρώνετε μόνο τον πάροχο STT σας απευθείας.';
 
   @override
   String get freeMinutesMonth => '1.200 δωρεάν λεπτά/μήνα συμπεριλαμβάνονται. Απεριόριστο με ';
 
   @override
-  String get omiUnlimited => 'Omi Απεριόριστο';
+  String get auraUnlimited => 'Omi Απεριόριστο';
 
   @override
   String get hostRequired => 'Απαιτείται διακομιστής';
@@ -1597,7 +1597,7 @@ class AppLocalizationsEl extends AppLocalizations {
   }
 
   @override
-  String get omiTranscription => 'Απομαγνητοφώνηση Omi';
+  String get auraTranscription => 'Απομαγνητοφώνηση Omi';
 
   @override
   String get bestInClassTranscription => 'Κορυφαία απομαγνητοφώνηση χωρίς καμία ρύθμιση';
@@ -1907,7 +1907,7 @@ class AppLocalizationsEl extends AppLocalizations {
   String get termsOfUse => 'Όροι Χρήσης';
 
   @override
-  String get omiYourAiCompanion => 'Omi – Ο Βοηθός AI σας';
+  String get auraYourAiCompanion => 'Omi – Ο Βοηθός AI σας';
 
   @override
   String get captureEveryMoment =>
@@ -2430,7 +2430,7 @@ class AppLocalizationsEl extends AppLocalizations {
   String get privacyPolicyTitle => 'Πολιτική Απορρήτου';
 
   @override
-  String get omiSttProvider => 'Omi';
+  String get auraSttProvider => 'Omi';
 
   @override
   String labelCopied(String label) {
@@ -2588,7 +2588,7 @@ class AppLocalizationsEl extends AppLocalizations {
   String get checksForAudioFiles => 'Ελέγχει για αρχεία ήχου στην κάρτα SD';
 
   @override
-  String get omiSyncsAudioFiles => 'Το Omi στη συνέχεια συγχρονίζει τα αρχεία ήχου με τον διακομιστή';
+  String get auraSyncsAudioFiles => 'Το Omi στη συνέχεια συγχρονίζει τα αρχεία ήχου με τον διακομιστή';
 
   @override
   String get serverProcessesAudio => 'Ο διακομιστής επεξεργάζεται τα αρχεία ήχου και δημιουργεί αναμνήσεις';
@@ -3373,7 +3373,7 @@ class AppLocalizationsEl extends AppLocalizations {
   }
 
   @override
-  String get omisMemoryCleared => 'Η μνήμη του Omi για εσάς έχει διαγραφεί';
+  String get aurasMemoryCleared => 'Η μνήμη του Omi για εσάς έχει διαγραφεί';
 
   @override
   String get welcomeToOmi => 'Καλώς ήρθατε στο Omi';
@@ -3803,7 +3803,7 @@ class AppLocalizationsEl extends AppLocalizations {
   }
 
   @override
-  String get translatedByOmi => 'μεταφρασμένο από omi';
+  String get translatedByOmi => 'μεταφρασμένο από aura';
 
   @override
   String get backToConversations => 'Επιστροφή στις συνομιλίες';
@@ -3903,7 +3903,7 @@ class AppLocalizationsEl extends AppLocalizations {
   String get showMeetingsInMenuBar => 'Εμφάνιση συναντήσεων στη γραμμή μενού';
 
   @override
-  String get displayUpcomingMeetingsDescription => 'Εμφάνιση επερχόμενων συναντήσεων στη γραμμή μενού';
+  String get displayUpcaurangMeetingsDescription => 'Εμφάνιση επερχόμενων συναντήσεων στη γραμμή μενού';
 
   @override
   String get showEventsWithoutParticipants => 'Εμφάνιση γεγονότων χωρίς συμμετέχοντες';
@@ -3912,7 +3912,7 @@ class AppLocalizationsEl extends AppLocalizations {
   String get includePersonalEventsDescription => 'Συμπερίληψη προσωπικών γεγονότων χωρίς συμμετέχοντες';
 
   @override
-  String get upcomingMeetings => 'Επερχόμενες συναντήσεις';
+  String get upcaurangMeetings => 'Επερχόμενες συναντήσεις';
 
   @override
   String get checkingNext7Days => 'Έλεγχος των επόμενων 7 ημερών';
@@ -4188,7 +4188,7 @@ class AppLocalizationsEl extends AppLocalizations {
   String get weekdaySun => 'Κυρ';
 
   @override
-  String serviceIntegrationComingSoon(String serviceName) {
+  String serviceIntegrationCaurangSoon(String serviceName) {
     return 'Ενσωμάτωση $serviceName σύντομα';
   }
 
@@ -4240,11 +4240,11 @@ class AppLocalizationsEl extends AppLocalizations {
   }
 
   @override
-  String get omiApiKeys => 'Κλειδιά API Omi';
+  String get auraApiKeys => 'Κλειδιά API Omi';
 
   @override
   String get apiKeysDescription =>
-      'Τα κλειδιά API χρησιμοποιούνται για έλεγχο ταυτότητας όταν η εφαρμογή σας επικοινωνεί με τον διακομιστή OMI. Επιτρέπουν στην εφαρμογή σας να δημιουργεί αναμνήσεις και να έχει ασφαλή πρόσβαση σε άλλες υπηρεσίες OMI.';
+      'Τα κλειδιά API χρησιμοποιούνται για έλεγχο ταυτότητας όταν η εφαρμογή σας επικοινωνεί με τον διακομιστή AURA. Επιτρέπουν στην εφαρμογή σας να δημιουργεί αναμνήσεις και να έχει ασφαλή πρόσβαση σε άλλες υπηρεσίες AURA.';
 
   @override
   String get aboutOmiApiKeys => 'Σχετικά με τα κλειδιά API Omi';
@@ -4404,7 +4404,7 @@ class AppLocalizationsEl extends AppLocalizations {
   String get e2eeTradeoff2 => '• Εάν χάσετε τον κωδικό πρόσβασής σας, τα δεδομένα σας δεν μπορούν να ανακτηθούν.';
 
   @override
-  String get featureComingSoon => 'Αυτή η λειτουργία έρχεται σύντομα!';
+  String get featureCaurangSoon => 'Αυτή η λειτουργία έρχεται σύντομα!';
 
   @override
   String get migrationInProgressMessage =>
@@ -4498,7 +4498,7 @@ class AppLocalizationsEl extends AppLocalizations {
   }
 
   @override
-  String get omiTraining => 'Εκπαίδευση Omi';
+  String get auraTraining => 'Εκπαίδευση Omi';
 
   @override
   String get trainingDataProgram => 'Πρόγραμμα δεδομένων εκπαίδευσης';
@@ -4512,7 +4512,7 @@ class AppLocalizationsEl extends AppLocalizations {
       '• Τα δεδομένα σας βοηθούν στη βελτίωση των μοντέλων AI\n• Μοιράζονται μόνο μη ευαίσθητα δεδομένα\n• Πλήρως διαφανής διαδικασία';
 
   @override
-  String get learnMoreAtOmiTraining => 'Μάθετε περισσότερα στο omi.me/training';
+  String get learnMoreAtOmiTraining => 'Μάθετε περισσότερα στο aura.me/training';
 
   @override
   String get agreeToContributeData => 'Κατανοώ και συμφωνώ να συνεισφέρω τα δεδομένα μου για εκπαίδευση AI';
@@ -4807,7 +4807,7 @@ class AppLocalizationsEl extends AppLocalizations {
   String get minutes => 'λεπτά';
 
   @override
-  String get omiHas => 'Το Omi έχει:';
+  String get auraHas => 'Το Omi έχει:';
 
   @override
   String get premiumMinutesUsed => 'Χρησιμοποιήθηκαν τα premium λεπτά.';
@@ -4836,7 +4836,7 @@ class AppLocalizationsEl extends AppLocalizations {
   String get selectZipFileToImport => 'Επιλέξτε το αρχείο .zip για εισαγωγή!';
 
   @override
-  String get otherDevicesComingSoon => 'Άλλες συσκευές έρχονται σύντομα';
+  String get otherDevicesCaurangSoon => 'Άλλες συσκευές έρχονται σύντομα';
 
   @override
   String get deleteAllLimitlessConversations => 'Διαγραφή όλων των συνομιλιών Limitless;';
@@ -5183,7 +5183,7 @@ class AppLocalizationsEl extends AppLocalizations {
   String get enableApps => 'Ενεργοποίηση εφαρμογών';
 
   @override
-  String get omiAppName => 'Omi';
+  String get auraAppName => 'Omi';
 
   @override
   String get showMore => 'περισσότερα ↓';
@@ -5314,7 +5314,7 @@ class AppLocalizationsEl extends AppLocalizations {
   String get noSummary => 'Χωρίς σύνοψη';
 
   @override
-  String get updateOmiFirmware => 'Ενημέρωση firmware omi';
+  String get updateOmiFirmware => 'Ενημέρωση firmware aura';
 
   @override
   String get anErrorOccurredTryAgain => 'Παρουσιάστηκε σφάλμα. Παρακαλώ δοκιμάστε ξανά.';
@@ -5490,7 +5490,7 @@ class AppLocalizationsEl extends AppLocalizations {
   String get wrappedSwipeUpToBegin => 'Σύρε προς τα πάνω για να ξεκινήσεις';
 
   @override
-  String get wrappedShareText => 'Το 2025 μου, αποτυπωμένο από το Omi ✨ omi.me/wrapped';
+  String get wrappedShareText => 'Το 2025 μου, αποτυπωμένο από το Omi ✨ aura.me/wrapped';
 
   @override
   String get wrappedFailedToShare => 'Η κοινοποίηση απέτυχε. Δοκιμάστε ξανά.';
@@ -6271,7 +6271,7 @@ class AppLocalizationsEl extends AppLocalizations {
   }
 
   @override
-  String get omiTranscriptionOptimized =>
+  String get auraTranscriptionOptimized =>
       'Η ενσωματωμένη ζωντανή μεταγραφή του Omi είναι βελτιστοποιημένη για συνομιλίες σε πραγματικό χρόνο με αυτόματη ανίχνευση και διαχωρισμό ομιλητών.';
 
   @override
@@ -6989,7 +6989,7 @@ class AppLocalizationsEl extends AppLocalizations {
   String get almostDone => 'Σχεδόν έτοιμο...';
 
   @override
-  String get omiSays => 'το omi λέει';
+  String get auraSays => 'το aura λέει';
 
   @override
   String get analyzingYourData => 'Ανάλυση των δεδομένων σας...';

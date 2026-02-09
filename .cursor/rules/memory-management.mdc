@@ -41,7 +41,7 @@ def process_dict():
 - `.cursor/rules/backend-architecture.mdc` - Backend architecture patterns
 
 ### Skills
-- `.cursor/skills/omi-backend-patterns/` - Backend patterns including memory management
+- `.cursor/skills/aura-backend-patterns/` - Backend patterns including memory management
 
 ### Subagents
 - `.cursor/agents/backend-api-developer/` - Follows memory management practices

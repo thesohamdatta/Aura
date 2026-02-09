@@ -11,26 +11,26 @@ import 'package:collection/collection.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:share_plus/share_plus.dart';
-import 'package:omi/widgets/shimmer_with_timeout.dart';
+import 'package:aura/widgets/shimmer_with_timeout.dart';
 
-import 'package:omi/backend/http/api/conversations.dart';
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/backend/schema/app.dart';
-import 'package:omi/backend/schema/conversation.dart';
-import 'package:omi/backend/schema/message.dart';
-import 'package:omi/pages/chat/widgets/files_handler_widget.dart';
-import 'package:omi/pages/chat/widgets/typing_indicator.dart';
-import 'package:omi/pages/conversation_detail/conversation_detail_provider.dart';
-import 'package:omi/pages/conversation_detail/page.dart';
-import 'package:omi/providers/app_provider.dart';
-import 'package:omi/providers/connectivity_provider.dart';
-import 'package:omi/providers/conversation_provider.dart';
-import 'package:omi/providers/message_provider.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/other/temp.dart';
-import 'package:omi/widgets/extensions/string.dart';
-import 'package:omi/widgets/text_selection_controls.dart';
+import 'package:aura/backend/http/api/conversations.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/backend/schema/app.dart';
+import 'package:aura/backend/schema/conversation.dart';
+import 'package:aura/backend/schema/message.dart';
+import 'package:aura/pages/chat/widgets/files_handler_widget.dart';
+import 'package:aura/pages/chat/widgets/typing_indicator.dart';
+import 'package:aura/pages/conversation_detail/conversation_detail_provider.dart';
+import 'package:aura/pages/conversation_detail/page.dart';
+import 'package:aura/providers/app_provider.dart';
+import 'package:aura/providers/connectivity_provider.dart';
+import 'package:aura/providers/conversation_provider.dart';
+import 'package:aura/providers/message_provider.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/other/temp.dart';
+import 'package:aura/widgets/extensions/string.dart';
+import 'package:aura/widgets/text_selection_controls.dart';
 import 'chart_message_widget.dart';
 import 'markdown_message_widget.dart';
 
@@ -222,7 +222,7 @@ class _AIMessageState extends State<AIMessage> {
       children: [
         SelectionArea(
           contextMenuBuilder: (context, selectableRegionState) {
-            return omiSelectionMenuBuilder(context, selectableRegionState, widget.onAskOmi ?? (text) {});
+            return auraSelectionMenuBuilder(context, selectableRegionState, widget.onAskOmi ?? (text) {});
           },
           child: buildMessageWidget(
             widget.message,
@@ -577,7 +577,7 @@ class _NormalMessageWidgetState extends State<NormalMessageWidget> {
                         selectedText = selectedContent?.plainText;
                       },
                       contextMenuBuilder: (context, selectableRegionState) {
-                        return omiSelectionMenuBuilder(
+                        return auraSelectionMenuBuilder(
                           context,
                           selectableRegionState,
                           (text) {
@@ -770,7 +770,7 @@ class _MemoriesMessageWidgetState extends State<MemoriesMessageWidget> {
                           selectedText = selectedContent?.plainText;
                         },
                         contextMenuBuilder: (context, selectableRegionState) {
-                          return omiSelectionMenuBuilder(
+                          return auraSelectionMenuBuilder(
                             context,
                             selectableRegionState,
                             (text) {

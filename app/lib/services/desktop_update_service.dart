@@ -2,9 +2,9 @@ import 'dart:io';
 
 import 'package:auto_updater/auto_updater.dart';
 
-import 'package:omi/env/env.dart';
-import 'package:omi/utils/logger.dart';
-import 'package:omi/utils/platform/platform_service.dart';
+import 'package:aura/env/env.dart';
+import 'package:aura/utils/logger.dart';
+import 'package:aura/utils/platform/platform_service.dart';
 
 /// Service to manage desktop application updates using auto_updater
 class DesktopUpdateService {

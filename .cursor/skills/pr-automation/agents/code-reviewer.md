@@ -140,8 +140,8 @@ Provide structured review report:
 - `.cursor/rules/verification.mdc` - Verification guidelines
 
 ### Skills
-- `.cursor/skills/omi-backend-patterns/SKILL.md` - Backend patterns
-- `.cursor/skills/omi-flutter-patterns/SKILL.md` - Flutter patterns
+- `.cursor/skills/aura-backend-patterns/SKILL.md` - Backend patterns
+- `.cursor/skills/aura-flutter-patterns/SKILL.md` - Flutter patterns
 
 ### Commands
 - `/code-review` - Review code for correctness, security, quality

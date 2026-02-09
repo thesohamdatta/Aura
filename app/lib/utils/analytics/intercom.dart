@@ -2,9 +2,9 @@ import 'dart:async';
 
 import 'package:intercom_flutter/intercom_flutter.dart';
 
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/env/env.dart';
-import 'package:omi/utils/platform/platform_service.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/env/env.dart';
+import 'package:aura/utils/platform/platform_service.dart';
 
 class IntercomManager {
   static final IntercomManager _instance = IntercomManager._internal();
@@ -40,7 +40,7 @@ class IntercomManager {
         if (device == 'Omi DevKit 2') {
           return await intercom.displayArticle('10003257-how-to-charge-devkit2');
         } else if (device == 'Omi') {
-          return await intercom.displayArticle('12123047-how-to-charge-omi');
+          return await intercom.displayArticle('12123047-how-to-charge-aura');
         } else {
           return await intercom.displayArticle('9907475-how-to-charge-the-device');
         }
@@ -65,7 +65,7 @@ class IntercomManager {
   Future displayEarnMoneyArticle() async {
     return PlatformService.executeIfSupportedAsync(
       _isIntercomEnabled,
-      () => intercom.displayArticle('10401566-build-publish-and-earn-with-omi-apps'),
+      () => intercom.displayArticle('10401566-build-publish-and-earn-with-aura-apps'),
     );
   }
 

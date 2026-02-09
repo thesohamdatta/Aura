@@ -4,17 +4,17 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
 
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/backend/schema/app.dart';
-import 'package:omi/gen/assets.gen.dart';
-import 'package:omi/pages/chat/page.dart';
-import 'package:omi/pages/home/widgets/chat_apps_dropdown_widget.dart';
-import 'package:omi/pages/persona/persona_profile.dart';
-import 'package:omi/pages/persona/persona_provider.dart';
-import 'package:omi/providers/app_provider.dart';
-import 'package:omi/providers/connectivity_provider.dart';
-import 'package:omi/providers/message_provider.dart';
-import 'package:omi/utils/other/temp.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/backend/schema/app.dart';
+import 'package:aura/gen/assets.gen.dart';
+import 'package:aura/pages/chat/page.dart';
+import 'package:aura/pages/home/widgets/chat_apps_dropdown_widget.dart';
+import 'package:aura/pages/persona/persona_profile.dart';
+import 'package:aura/pages/persona/persona_provider.dart';
+import 'package:aura/providers/app_provider.dart';
+import 'package:aura/providers/connectivity_provider.dart';
+import 'package:aura/providers/message_provider.dart';
+import 'package:aura/utils/other/temp.dart';
 
 class CloneChatPage extends StatefulWidget {
   const CloneChatPage({

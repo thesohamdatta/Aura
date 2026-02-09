@@ -10,35 +10,35 @@ import 'package:upgrader/upgrader.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:window_manager/window_manager.dart';
 
-import 'package:omi/backend/http/api/users.dart';
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/backend/schema/app.dart';
-import 'package:omi/desktop/pages/settings/desktop_settings_modal.dart';
-import 'package:omi/desktop/pages/settings/desktop_shortcuts_page.dart';
-import 'package:omi/gen/assets.gen.dart';
-import 'package:omi/models/subscription.dart';
-import 'package:omi/pages/settings/usage_page.dart';
-import 'package:omi/providers/app_provider.dart';
-import 'package:omi/providers/capture_provider.dart';
-import 'package:omi/providers/connectivity_provider.dart';
-import 'package:omi/providers/conversation_provider.dart';
-import 'package:omi/providers/device_provider.dart';
-import 'package:omi/providers/home_provider.dart';
-import 'package:omi/providers/message_provider.dart';
-import 'package:omi/providers/sync_provider.dart';
-import 'package:omi/providers/usage_provider.dart';
-import 'package:omi/services/notifications.dart';
-import 'package:omi/services/shortcut_service.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/audio/foreground.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/logger.dart';
-import 'package:omi/utils/other/temp.dart';
-import 'package:omi/utils/platform/platform_manager.dart';
-import 'package:omi/utils/platform/platform_service.dart';
-import 'package:omi/utils/responsive/responsive_helper.dart';
-import 'package:omi/widgets/upgrade_alert.dart';
-import 'package:omi/pages/conversations/sync_page.dart';
+import 'package:aura/backend/http/api/users.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/backend/schema/app.dart';
+import 'package:aura/desktop/pages/settings/desktop_settings_modal.dart';
+import 'package:aura/desktop/pages/settings/desktop_shortcuts_page.dart';
+import 'package:aura/gen/assets.gen.dart';
+import 'package:aura/models/subscription.dart';
+import 'package:aura/pages/settings/usage_page.dart';
+import 'package:aura/providers/app_provider.dart';
+import 'package:aura/providers/capture_provider.dart';
+import 'package:aura/providers/connectivity_provider.dart';
+import 'package:aura/providers/conversation_provider.dart';
+import 'package:aura/providers/device_provider.dart';
+import 'package:aura/providers/home_provider.dart';
+import 'package:aura/providers/message_provider.dart';
+import 'package:aura/providers/sync_provider.dart';
+import 'package:aura/providers/usage_provider.dart';
+import 'package:aura/services/notifications.dart';
+import 'package:aura/services/shortcut_service.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/audio/foreground.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/logger.dart';
+import 'package:aura/utils/other/temp.dart';
+import 'package:aura/utils/platform/platform_manager.dart';
+import 'package:aura/utils/platform/platform_service.dart';
+import 'package:aura/utils/responsive/responsive_helper.dart';
+import 'package:aura/widgets/upgrade_alert.dart';
+import 'package:aura/pages/conversations/sync_page.dart';
 import 'actions/desktop_actions_page.dart';
 import 'apps/desktop_add_app_page.dart';
 import 'apps/desktop_apps_page.dart';
@@ -246,7 +246,7 @@ class _DesktopHomePageState extends State<DesktopHomePage> with WidgetsBindingOb
       switch (pageAlias) {
         case "chat":
           if (detailPageId != null && detailPageId.isNotEmpty) {
-            var appId = detailPageId != "omi" ? detailPageId : '';
+            var appId = detailPageId != "aura" ? detailPageId : '';
             if (mounted) {
               var appProvider = Provider.of<AppProvider>(context, listen: false);
               var messageProvider = Provider.of<MessageProvider>(context, listen: false);
@@ -571,7 +571,7 @@ class _DesktopHomePageState extends State<DesktopHomePage> with WidgetsBindingOb
                             label: context.l10n.referAFriend,
                             onTap: () {
                               MixpanelManager().pageOpened('Refer a Friend');
-                              launchUrl(Uri.parse('https://affiliate.omi.me'));
+                              launchUrl(Uri.parse('https://affiliate.aura.me'));
                             },
                           ),
                           _buildBottomNavItem(
@@ -1043,7 +1043,7 @@ class _DesktopHomePageState extends State<DesktopHomePage> with WidgetsBindingOb
             child: InkWell(
               onTap: () async {
                 MixpanelManager().track('Get Omi Device Clicked');
-                final url = Uri.parse('https://www.omi.me');
+                final url = Uri.parse('https://www.aura.me');
                 if (await canLaunchUrl(url)) {
                   await launchUrl(url, mode: LaunchMode.externalApplication);
                 }
@@ -1064,7 +1064,7 @@ class _DesktopHomePageState extends State<DesktopHomePage> with WidgetsBindingOb
                     SizedBox(
                       width: 40,
                       height: 40,
-                      child: Assets.images.omiWithRopeNoPadding.image(
+                      child: Assets.images.auraWithRopeNoPadding.image(
                         fit: BoxFit.contain,
                       ),
                     ),

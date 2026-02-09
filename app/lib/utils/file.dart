@@ -5,8 +5,8 @@ import 'package:flutter/foundation.dart';
 
 import 'package:path_provider/path_provider.dart';
 
-import 'package:omi/utils/audio/wav_bytes.dart';
-import 'package:omi/utils/logger.dart';
+import 'package:aura/utils/audio/wav_bytes.dart';
+import 'package:aura/utils/logger.dart';
 
 class FileUtils {
   static Future<File> saveAudioBytesToTempFile(List<List<int>> chunk, int timerStart, int frameSize) async {

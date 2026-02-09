@@ -6,20 +6,20 @@ import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 
-import 'package:omi/backend/http/api/conversations.dart';
-import 'package:omi/backend/schema/memory.dart';
-import 'package:omi/pages/conversation_detail/conversation_detail_provider.dart';
-import 'package:omi/pages/conversation_detail/page.dart';
-import 'package:omi/pages/memories/page.dart';
-import 'package:omi/pages/settings/usage_page.dart';
-import 'package:omi/providers/app_provider.dart';
-import 'package:omi/providers/conversation_provider.dart';
-import 'package:omi/providers/memories_provider.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/other/temp.dart';
-import 'package:omi/utils/ui_guidelines.dart';
-import 'package:omi/widgets/extensions/string.dart';
+import 'package:aura/backend/http/api/conversations.dart';
+import 'package:aura/backend/schema/memory.dart';
+import 'package:aura/pages/conversation_detail/conversation_detail_provider.dart';
+import 'package:aura/pages/conversation_detail/page.dart';
+import 'package:aura/pages/memories/page.dart';
+import 'package:aura/pages/settings/usage_page.dart';
+import 'package:aura/providers/app_provider.dart';
+import 'package:aura/providers/conversation_provider.dart';
+import 'package:aura/providers/memories_provider.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/other/temp.dart';
+import 'package:aura/utils/ui_guidelines.dart';
+import 'package:aura/widgets/extensions/string.dart';
 import 'delete_confirmation.dart';
 
 class MemoryItem extends StatelessWidget {

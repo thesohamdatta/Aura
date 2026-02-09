@@ -10,10 +10,10 @@ import 'package:opus_dart/opus_dart.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:tuple/tuple.dart';
 
-import 'package:omi/backend/schema/bt_device/bt_device.dart';
-import 'package:omi/utils/logger.dart';
-import 'package:omi/utils/logger.dart';
-import 'package:omi/utils/platform/platform_manager.dart';
+import 'package:aura/backend/schema/bt_device/bt_device.dart';
+import 'package:aura/utils/logger.dart';
+import 'package:aura/utils/logger.dart';
+import 'package:aura/utils/platform/platform_manager.dart';
 
 /// A class to handle WAV file format conversion
 class WavBytes {
@@ -317,7 +317,7 @@ class WavBytesUtil {
 
   static Uint8List getUInt8ListBytes(List<int> audioBytes, int sampleRate) {
     // https://discord.com/channels/1192313062041067520/1231903583717425153/1256187110554341386
-    // https://github.com/BasedHardware/omi/blob/main/docs/_developer/Protocol.md
+    // https://github.com/BasedHardware/aura/blob/main/docs/_developer/Protocol.md
     Uint8List wavHeader = getWavHeader(audioBytes.length * 2, sampleRate);
     return Uint8List.fromList(wavHeader + WavBytesUtil.convertToLittleEndianBytes(audioBytes));
   }

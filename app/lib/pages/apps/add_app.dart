@@ -4,25 +4,25 @@ import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
-import 'package:omi/widgets/shimmer_with_timeout.dart';
+import 'package:aura/widgets/shimmer_with_timeout.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/backend/schema/app.dart';
-import 'package:omi/pages/apps/app_detail/app_detail.dart';
-import 'package:omi/pages/apps/providers/add_app_provider.dart';
-import 'package:omi/pages/apps/widgets/ai_app_generator_banner.dart';
-import 'package:omi/pages/apps/widgets/app_metadata_widget.dart';
-import 'package:omi/pages/apps/widgets/external_trigger_fields_widget.dart';
-import 'package:omi/pages/apps/widgets/full_screen_image_viewer.dart';
-import 'package:omi/pages/apps/widgets/notification_scopes_chips_widget.dart';
-import 'package:omi/pages/payments/payment_method_provider.dart';
-import 'package:omi/pages/payments/payments_page.dart';
-import 'package:omi/providers/app_provider.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/other/temp.dart';
-import 'package:omi/widgets/confirmation_dialog.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/backend/schema/app.dart';
+import 'package:aura/pages/apps/app_detail/app_detail.dart';
+import 'package:aura/pages/apps/providers/add_app_provider.dart';
+import 'package:aura/pages/apps/widgets/ai_app_generator_banner.dart';
+import 'package:aura/pages/apps/widgets/app_metadata_widget.dart';
+import 'package:aura/pages/apps/widgets/external_trigger_fields_widget.dart';
+import 'package:aura/pages/apps/widgets/full_screen_image_viewer.dart';
+import 'package:aura/pages/apps/widgets/notification_scopes_chips_widget.dart';
+import 'package:aura/pages/payments/payment_method_provider.dart';
+import 'package:aura/pages/payments/payments_page.dart';
+import 'package:aura/providers/app_provider.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/other/temp.dart';
+import 'package:aura/widgets/confirmation_dialog.dart';
 import 'widgets/capabilities_chips_widget.dart';
 import 'widgets/prompt_text_field.dart';
 
@@ -73,7 +73,7 @@ class _AddAppPageState extends State<AddAppPage> {
                   child: InkWell(
                     onTap: () {
                       MixpanelManager().pageOpened('App Submission Help');
-                      launchUrl(Uri.parse('https://docs.omi.me/doc/developer/apps/Introduction'));
+                      launchUrl(Uri.parse('https://docs.aura.me/doc/developer/apps/Introduction'));
                     },
                     borderRadius: BorderRadius.circular(20),
                     child: Padding(
@@ -353,7 +353,7 @@ class _AddAppPageState extends State<AddAppPage> {
                                       ),
                                       GestureDetector(
                                         onTap: () {
-                                          launchUrl(Uri.parse('https://docs.omi.me/doc/developer/apps/Introduction'));
+                                          launchUrl(Uri.parse('https://docs.aura.me/doc/developer/apps/Introduction'));
                                         },
                                         child: FaIcon(
                                           FontAwesomeIcons.solidCircleQuestion,
@@ -817,7 +817,7 @@ class _AddAppPageState extends State<AddAppPage> {
                     const SizedBox(height: 10),
                     GestureDetector(
                       onTap: () {
-                        launchUrl(Uri.parse('https://omi.me/pages/privacy'));
+                        launchUrl(Uri.parse('https://aura.me/pages/privacy'));
                       },
                       child: Text.rich(
                         TextSpan(

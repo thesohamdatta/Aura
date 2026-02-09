@@ -3,21 +3,21 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:provider/provider.dart';
 
-import 'package:omi/backend/http/api/users.dart';
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/l10n/app_localizations.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/desktop/pages/desktop_home_page.dart';
-import 'package:omi/desktop/pages/onboarding/screens/desktop_auth_screen.dart';
-import 'package:omi/desktop/pages/onboarding/screens/desktop_complete_screen.dart';
-import 'package:omi/desktop/pages/onboarding/screens/desktop_language_screen.dart';
-import 'package:omi/desktop/pages/onboarding/screens/desktop_name_screen.dart';
-import 'package:omi/desktop/pages/onboarding/screens/desktop_permissions_screen.dart';
-import 'package:omi/providers/home_provider.dart';
-import 'package:omi/utils/analytics/intercom.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/other/temp.dart';
-import 'package:omi/utils/responsive/responsive_helper.dart';
+import 'package:aura/backend/http/api/users.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/l10n/app_localizations.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/desktop/pages/desktop_home_page.dart';
+import 'package:aura/desktop/pages/onboarding/screens/desktop_auth_screen.dart';
+import 'package:aura/desktop/pages/onboarding/screens/desktop_complete_screen.dart';
+import 'package:aura/desktop/pages/onboarding/screens/desktop_language_screen.dart';
+import 'package:aura/desktop/pages/onboarding/screens/desktop_name_screen.dart';
+import 'package:aura/desktop/pages/onboarding/screens/desktop_permissions_screen.dart';
+import 'package:aura/providers/home_provider.dart';
+import 'package:aura/utils/analytics/intercom.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/other/temp.dart';
+import 'package:aura/utils/responsive/responsive_helper.dart';
 
 class DesktopOnboardingWrapper extends StatefulWidget {
   const DesktopOnboardingWrapper({super.key});

@@ -7,8 +7,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/logger.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/logger.dart';
 
 class AppReviewService {
   static final AppReviewService _instance = AppReviewService._internal();

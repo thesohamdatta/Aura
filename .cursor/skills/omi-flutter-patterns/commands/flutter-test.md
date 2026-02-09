@@ -56,7 +56,7 @@ cd app
 - `.cursor/rules/flutter-architecture.mdc` - App structure
 
 ### Skills
-- `.cursor/skills/omi-flutter-patterns/` - Flutter patterns including testing
+- `.cursor/skills/aura-flutter-patterns/` - Flutter patterns including testing
 
 ### Subagents
 - `.cursor/agents/flutter-developer/` - Can help with testing

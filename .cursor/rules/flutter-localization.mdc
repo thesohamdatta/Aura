@@ -36,7 +36,7 @@ Text(context.l10n.helloWorld)
 - `.cursor/rules/flutter-architecture.mdc` - App structure and patterns
 
 ### Skills
-- `.cursor/skills/omi-flutter-patterns/` - Flutter patterns including localization
+- `.cursor/skills/aura-flutter-patterns/` - Flutter patterns including localization
 
 ### Subagents
 - `.cursor/agents/flutter-developer/` - Flutter development specialist

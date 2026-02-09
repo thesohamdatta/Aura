@@ -4,19 +4,19 @@ import 'package:collection/collection.dart';
 import 'package:flutter_provider_utilities/flutter_provider_utilities.dart';
 import 'package:provider/provider.dart';
 
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/backend/schema/bt_device/bt_device.dart';
-import 'package:omi/gen/flutter_communicator.g.dart';
-import 'package:omi/pages/onboarding/apple_watch_permission_page.dart';
-import 'package:omi/providers/device_provider.dart';
-import 'package:omi/providers/onboarding_provider.dart';
-import 'package:omi/services/devices/apple_watch_connection.dart';
-import 'package:omi/services/services.dart';
-import 'package:omi/utils/device.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/logger.dart';
-import 'package:omi/widgets/apple_watch_setup_bottom_sheet.dart';
-import 'package:omi/widgets/confirmation_dialog.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/backend/schema/bt_device/bt_device.dart';
+import 'package:aura/gen/flutter_communicator.g.dart';
+import 'package:aura/pages/onboarding/apple_watch_permission_page.dart';
+import 'package:aura/providers/device_provider.dart';
+import 'package:aura/providers/onboarding_provider.dart';
+import 'package:aura/services/devices/apple_watch_connection.dart';
+import 'package:aura/services/services.dart';
+import 'package:aura/utils/device.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/logger.dart';
+import 'package:aura/widgets/apple_watch_setup_bottom_sheet.dart';
+import 'package:aura/widgets/confirmation_dialog.dart';
 
 class FoundDevices extends StatefulWidget {
   final bool isFromOnboarding;
@@ -38,7 +38,7 @@ class _FoundDevicesState extends State<FoundDevices> {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) async {
       if (mounted) {
-        context.read<DeviceProvider>().periodicConnect('coming from FoundDevices');
+        context.read<DeviceProvider>().periodicConnect('caurang from FoundDevices');
       }
     });
   }

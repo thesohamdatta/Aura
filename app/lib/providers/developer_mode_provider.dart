@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-import 'package:omi/backend/http/api/users.dart';
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/main.dart';
-import 'package:omi/providers/base_provider.dart';
-import 'package:omi/services/notifications/daily_reflection_notification.dart';
-import 'package:omi/utils/alerts/app_snackbar.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/logger.dart';
-import 'package:omi/utils/other/validators.dart';
+import 'package:aura/backend/http/api/users.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/main.dart';
+import 'package:aura/providers/base_provider.dart';
+import 'package:aura/services/notifications/daily_reflection_notification.dart';
+import 'package:aura/utils/alerts/app_snackbar.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/logger.dart';
+import 'package:aura/utils/other/validators.dart';
 
 class DeveloperModeProvider extends BaseProvider {
   final TextEditingController webhookOnConversationCreated = TextEditingController();

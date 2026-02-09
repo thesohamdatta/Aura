@@ -5,12 +5,12 @@ import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:provider/provider.dart';
 
-import 'package:omi/backend/schema/app.dart';
-import 'package:omi/pages/apps/app_detail/app_detail.dart';
-import 'package:omi/providers/app_provider.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/other/temp.dart';
-import 'package:omi/widgets/extensions/string.dart';
+import 'package:aura/backend/schema/app.dart';
+import 'package:aura/pages/apps/app_detail/app_detail.dart';
+import 'package:aura/providers/app_provider.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/other/temp.dart';
+import 'package:aura/widgets/extensions/string.dart';
 
 class AppSectionCard extends StatelessWidget {
   final String title;

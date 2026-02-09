@@ -3,18 +3,18 @@ import 'package:flutter/services.dart';
 
 import 'package:provider/provider.dart';
 
-import 'package:omi/backend/http/api/goals.dart';
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/backend/schema/schema.dart';
-import 'package:omi/providers/action_items_provider.dart';
-import 'package:omi/providers/goals_provider.dart';
-import 'package:omi/services/app_review_service.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/l10n_extensions.dart';
+import 'package:aura/backend/http/api/goals.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/backend/schema/schema.dart';
+import 'package:aura/providers/action_items_provider.dart';
+import 'package:aura/providers/goals_provider.dart';
+import 'package:aura/services/app_review_service.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/l10n_extensions.dart';
 import 'widgets/action_item_form_sheet.dart';
 
 // Re-export Goal from goals.dart for use in this file
-export 'package:omi/backend/http/api/goals.dart' show Goal;
+export 'package:aura/backend/http/api/goals.dart' show Goal;
 
 enum TaskCategory { today, tomorrow, noDeadline, later }
 

@@ -550,7 +550,7 @@ class AppLocalizationsCs extends AppLocalizations {
   String get deviceInfoSection => 'Informace o zařízení';
 
   @override
-  String get customizationSection => 'Přizpůsobení';
+  String get custaurazationSection => 'Přizpůsobení';
 
   @override
   String get hardwareSection => 'Hardware';
@@ -757,7 +757,7 @@ class AppLocalizationsCs extends AppLocalizations {
   }
 
   @override
-  String get shareStatsMessage => 'Sdílím své statistiky Omi! (omi.me - váš AI asistent, který je vždy online)';
+  String get shareStatsMessage => 'Sdílím své statistiky Omi! (aura.me - váš AI asistent, který je vždy online)';
 
   @override
   String get sharePeriodToday => 'Dnes Omi:';
@@ -804,7 +804,7 @@ class AppLocalizationsCs extends AppLocalizations {
   String get noLogFilesFound => 'Nebyly nalezeny žádné soubory protokolu.';
 
   @override
-  String get omiDebugLog => 'Protokol ladění Omi';
+  String get auraDebugLog => 'Protokol ladění Omi';
 
   @override
   String get logShared => 'Protokol sdílen';
@@ -1016,7 +1016,7 @@ class AppLocalizationsCs extends AppLocalizations {
   String get connect => 'Connect';
 
   @override
-  String get comingSoon => 'Již brzy';
+  String get caurangSoon => 'Již brzy';
 
   @override
   String get integrationsFooter => 'Připojte své aplikace k zobrazení dat a metrik v chatu.';
@@ -1200,7 +1200,7 @@ class AppLocalizationsCs extends AppLocalizations {
   String get refresh => 'Obnovit';
 
   @override
-  String get noUpcomingMeetings => 'Žádné nadcházející schůzky';
+  String get noUpcaurangMeetings => 'Žádné nadcházející schůzky';
 
   @override
   String get checkingNextDays => 'Kontrola dalších 30 dnů';
@@ -1209,7 +1209,7 @@ class AppLocalizationsCs extends AppLocalizations {
   String get tomorrow => 'Zítra';
 
   @override
-  String get googleCalendarComingSoon => 'Integrace s Kalendářem Google již brzy!';
+  String get googleCalendarCaurangSoon => 'Integrace s Kalendářem Google již brzy!';
 
   @override
   String connectedAsUser(String userId) {
@@ -1434,7 +1434,7 @@ class AppLocalizationsCs extends AppLocalizations {
   }
 
   @override
-  String integrationComingSoon(String appName) {
+  String integrationCaurangSoon(String appName) {
     return 'Integrace s $appName již brzy! Usilovně pracujeme na tom, abychom vám přinesli více možností správy úkolů.';
   }
 
@@ -1463,7 +1463,7 @@ class AppLocalizationsCs extends AppLocalizations {
   String get freeMinutesMonth => '1 200 bezplatných minut měsíčně. Neomezené s ';
 
   @override
-  String get omiUnlimited => 'Omi Unlimited';
+  String get auraUnlimited => 'Omi Unlimited';
 
   @override
   String get hostRequired => 'Host je povinný';
@@ -1585,7 +1585,7 @@ class AppLocalizationsCs extends AppLocalizations {
   }
 
   @override
-  String get omiTranscription => 'Přepis Omi';
+  String get auraTranscription => 'Přepis Omi';
 
   @override
   String get bestInClassTranscription => 'Nejlepší přepis ve své třídě bez nutnosti nastavení';
@@ -1893,7 +1893,7 @@ class AppLocalizationsCs extends AppLocalizations {
   String get termsOfUse => 'Podmínkami použití';
 
   @override
-  String get omiYourAiCompanion => 'Omi – Váš AI společník';
+  String get auraYourAiCompanion => 'Omi – Váš AI společník';
 
   @override
   String get captureEveryMoment =>
@@ -2413,7 +2413,7 @@ class AppLocalizationsCs extends AppLocalizations {
   String get privacyPolicyTitle => 'Zásady ochrany osobních údajů';
 
   @override
-  String get omiSttProvider => 'Omi';
+  String get auraSttProvider => 'Omi';
 
   @override
   String labelCopied(String label) {
@@ -2570,7 +2570,7 @@ class AppLocalizationsCs extends AppLocalizations {
   String get checksForAudioFiles => 'Kontroluje zvukové soubory na SD kartě';
 
   @override
-  String get omiSyncsAudioFiles => 'Omi poté synchronizuje zvukové soubory se serverem';
+  String get auraSyncsAudioFiles => 'Omi poté synchronizuje zvukové soubory se serverem';
 
   @override
   String get serverProcessesAudio => 'Server zpracovává zvukové soubory a vytváří vzpomínky';
@@ -3348,7 +3348,7 @@ class AppLocalizationsCs extends AppLocalizations {
   }
 
   @override
-  String get omisMemoryCleared => 'Paměť Omi o vás byla vymazána';
+  String get aurasMemoryCleared => 'Paměť Omi o vás byla vymazána';
 
   @override
   String get welcomeToOmi => 'Vítejte v Omi';
@@ -3772,7 +3772,7 @@ class AppLocalizationsCs extends AppLocalizations {
   }
 
   @override
-  String get translatedByOmi => 'přeloženo pomocí omi';
+  String get translatedByOmi => 'přeloženo pomocí aura';
 
   @override
   String get backToConversations => 'Zpět na Konverzace';
@@ -3872,7 +3872,7 @@ class AppLocalizationsCs extends AppLocalizations {
   String get showMeetingsInMenuBar => 'Zobrazit schůzky v řádku nabídek';
 
   @override
-  String get displayUpcomingMeetingsDescription => 'Zobrazit nadcházející schůzky v řádku nabídek';
+  String get displayUpcaurangMeetingsDescription => 'Zobrazit nadcházející schůzky v řádku nabídek';
 
   @override
   String get showEventsWithoutParticipants => 'Zobrazit události bez účastníků';
@@ -3881,7 +3881,7 @@ class AppLocalizationsCs extends AppLocalizations {
   String get includePersonalEventsDescription => 'Zahrnout osobní události bez účastníků';
 
   @override
-  String get upcomingMeetings => 'Nadcházející schůzky';
+  String get upcaurangMeetings => 'Nadcházející schůzky';
 
   @override
   String get checkingNext7Days => 'Kontrola následujících 7 dní';
@@ -4152,7 +4152,7 @@ class AppLocalizationsCs extends AppLocalizations {
   String get weekdaySun => 'Ne';
 
   @override
-  String serviceIntegrationComingSoon(String serviceName) {
+  String serviceIntegrationCaurangSoon(String serviceName) {
     return 'Integrace s $serviceName již brzy';
   }
 
@@ -4204,11 +4204,11 @@ class AppLocalizationsCs extends AppLocalizations {
   }
 
   @override
-  String get omiApiKeys => 'Omi API klíče';
+  String get auraApiKeys => 'Omi API klíče';
 
   @override
   String get apiKeysDescription =>
-      'API klíče se používají pro ověření, když vaše aplikace komunikuje se serverem OMI. Umožňují vaší aplikaci vytvářet vzpomínky a bezpečně přistupovat k dalším službám OMI.';
+      'API klíče se používají pro ověření, když vaše aplikace komunikuje se serverem AURA. Umožňují vaší aplikaci vytvářet vzpomínky a bezpečně přistupovat k dalším službám AURA.';
 
   @override
   String get aboutOmiApiKeys => 'O Omi API klíčích';
@@ -4357,7 +4357,7 @@ class AppLocalizationsCs extends AppLocalizations {
       'End-to-end šifrování je zlatý standard ochrany soukromí. Když je povoleno, vaše data jsou šifrována na vašem zařízení před odesláním na naše servery. To znamená, že nikdo, ani Omi, nemůže přistupovat k vašemu obsahu.';
 
   @override
-  String get importantTradeoffs => 'Důležité kompromisy:';
+  String get importantTradeoffs => 'Důležité kompraurasy:';
 
   @override
   String get e2eeTradeoff1 => '• Některé funkce jako integrace externích aplikací mohou být zakázány.';
@@ -4366,7 +4366,7 @@ class AppLocalizationsCs extends AppLocalizations {
   String get e2eeTradeoff2 => '• Pokud ztratíte heslo, vaše data nelze obnovit.';
 
   @override
-  String get featureComingSoon => 'Tato funkce bude brzy k dispozici!';
+  String get featureCaurangSoon => 'Tato funkce bude brzy k dispozici!';
 
   @override
   String get migrationInProgressMessage => 'Migrace probíhá. Úroveň ochrany nelze změnit, dokud nebude dokončena.';
@@ -4458,7 +4458,7 @@ class AppLocalizationsCs extends AppLocalizations {
   }
 
   @override
-  String get omiTraining => 'Omi Trénink';
+  String get auraTraining => 'Omi Trénink';
 
   @override
   String get trainingDataProgram => 'Program trénovacích dat';
@@ -4471,7 +4471,7 @@ class AppLocalizationsCs extends AppLocalizations {
       '• Vaše data pomáhají vylepšovat AI modely\n• Sdílena jsou pouze necitlivá data\n• Plně transparentní proces';
 
   @override
-  String get learnMoreAtOmiTraining => 'Zjistěte více na omi.me/training';
+  String get learnMoreAtOmiTraining => 'Zjistěte více na aura.me/training';
 
   @override
   String get agreeToContributeData => 'Rozumím a souhlasím s přispěním mých dat pro trénování AI';
@@ -4762,7 +4762,7 @@ class AppLocalizationsCs extends AppLocalizations {
   String get minutes => 'minut';
 
   @override
-  String get omiHas => 'Omi má:';
+  String get auraHas => 'Omi má:';
 
   @override
   String get premiumMinutesUsed => 'Prémiové minuty vyčerpány.';
@@ -4791,7 +4791,7 @@ class AppLocalizationsCs extends AppLocalizations {
   String get selectZipFileToImport => 'Vyberte soubor .zip pro import!';
 
   @override
-  String get otherDevicesComingSoon => 'Další zařízení již brzy';
+  String get otherDevicesCaurangSoon => 'Další zařízení již brzy';
 
   @override
   String get deleteAllLimitlessConversations => 'Smazat všechny konverzace z Limitless?';
@@ -5133,7 +5133,7 @@ class AppLocalizationsCs extends AppLocalizations {
   String get enableApps => 'Povolit aplikace';
 
   @override
-  String get omiAppName => 'Omi';
+  String get auraAppName => 'Omi';
 
   @override
   String get showMore => 'zobrazit více ↓';
@@ -5263,7 +5263,7 @@ class AppLocalizationsCs extends AppLocalizations {
   String get noSummary => 'Žádný souhrn';
 
   @override
-  String get updateOmiFirmware => 'Aktualizovat firmware omi';
+  String get updateOmiFirmware => 'Aktualizovat firmware aura';
 
   @override
   String get anErrorOccurredTryAgain => 'Došlo k chybě. Zkuste to prosím znovu.';
@@ -5439,7 +5439,7 @@ class AppLocalizationsCs extends AppLocalizations {
   String get wrappedSwipeUpToBegin => 'Přejeď nahoru pro začátek';
 
   @override
-  String get wrappedShareText => 'Můj rok 2025, zachycený Omi ✨ omi.me/wrapped';
+  String get wrappedShareText => 'Můj rok 2025, zachycený Omi ✨ aura.me/wrapped';
 
   @override
   String get wrappedFailedToShare => 'Sdílení se nezdařilo. Zkuste to prosím znovu.';
@@ -6214,7 +6214,7 @@ class AppLocalizationsCs extends AppLocalizations {
   }
 
   @override
-  String get omiTranscriptionOptimized =>
+  String get auraTranscriptionOptimized =>
       'Vestavěný živý přepis Omi je optimalizován pro konverzace v reálném čase s automatickou detekcí mluvčích a diarizací.';
 
   @override
@@ -6930,7 +6930,7 @@ class AppLocalizationsCs extends AppLocalizations {
   String get almostDone => 'Téměř hotovo...';
 
   @override
-  String get omiSays => 'Omi říká';
+  String get auraSays => 'Omi říká';
 
   @override
   String get analyzingYourData => 'Analyzuji vaše data...';

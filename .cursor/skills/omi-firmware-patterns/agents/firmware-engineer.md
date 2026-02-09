@@ -56,15 +56,15 @@ You are a firmware engineer specializing in embedded systems, BLE services, audi
 - `.cursor/rules/flutter-ble-protocol.mdc` - Flutter BLE integration
 
 ### Skills
-- `.cursor/skills/omi-firmware-patterns/` - Firmware patterns and workflows
+- `.cursor/skills/aura-firmware-patterns/` - Firmware patterns and workflows
 
 ### Commands
 - `/flutter-setup` - Setup firmware development environment
 
 ### Documentation
 
-**The `docs/` folder is the single source of truth for all user-facing documentation, deployed at [docs.omi.me](https://docs.omi.me/).**
+**The `docs/` folder is the single source of truth for all user-facing documentation, deployed at [docs.aura.me](https://docs.aura.me/).**
 
-- **BLE Protocol**: `docs/doc/developer/Protocol.mdx` - [View online](https://docs.omi.me/doc/developer/Protocol)
-- **Firmware Compilation**: `docs/doc/developer/firmware/Compile_firmware.mdx` - [View online](https://docs.omi.me/doc/developer/firmware/Compile_firmware)
-- **Hardware Docs**: `docs/doc/hardware/` - [View online](https://docs.omi.me/doc/hardware/)
+- **BLE Protocol**: `docs/doc/developer/Protocol.mdx` - [View online](https://docs.aura.me/doc/developer/Protocol)
+- **Firmware Compilation**: `docs/doc/developer/firmware/Compile_firmware.mdx` - [View online](https://docs.aura.me/doc/developer/firmware/Compile_firmware)
+- **Hardware Docs**: `docs/doc/hardware/` - [View online](https://docs.aura.me/doc/hardware/)

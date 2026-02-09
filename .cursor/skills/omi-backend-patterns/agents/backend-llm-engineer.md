@@ -60,7 +60,7 @@ You are an LLM engineer specializing in OpenAI integration, prompt engineering, 
 - `.cursor/rules/backend-api-patterns.mdc` - API patterns for chat endpoints
 
 ### Skills
-- `.cursor/skills/omi-backend-patterns/` - Backend patterns including LLM integration
+- `.cursor/skills/aura-backend-patterns/` - Backend patterns including LLM integration
 
 ### Commands
 - `/backend-setup` - Setup LLM API keys
@@ -68,8 +68,8 @@ You are an LLM engineer specializing in OpenAI integration, prompt engineering, 
 
 ### Documentation
 
-**The `docs/` folder is the single source of truth for all user-facing documentation, deployed at [docs.omi.me](https://docs.omi.me/).**
+**The `docs/` folder is the single source of truth for all user-facing documentation, deployed at [docs.aura.me](https://docs.aura.me/).**
 
-- **Chat System**: `docs/doc/developer/backend/chat_system.mdx` - [View online](https://docs.omi.me/doc/developer/backend/chat_system)
-- **Backend Deep Dive**: `docs/doc/developer/backend/backend_deepdive.mdx` - [View online](https://docs.omi.me/doc/developer/backend/backend_deepdive)
-- **Data Storage**: `docs/doc/developer/backend/StoringConversations.mdx` - [View online](https://docs.omi.me/doc/developer/backend/StoringConversations)
+- **Chat System**: `docs/doc/developer/backend/chat_system.mdx` - [View online](https://docs.aura.me/doc/developer/backend/chat_system)
+- **Backend Deep Dive**: `docs/doc/developer/backend/backend_deepdive.mdx` - [View online](https://docs.aura.me/doc/developer/backend/backend_deepdive)
+- **Data Storage**: `docs/doc/developer/backend/StoringConversations.mdx` - [View online](https://docs.aura.me/doc/developer/backend/StoringConversations)

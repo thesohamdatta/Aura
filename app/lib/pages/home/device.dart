@@ -5,22 +5,22 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/backend/schema/bt_device/bt_device.dart';
-import 'package:omi/providers/capture_provider.dart';
-import 'package:omi/providers/device_provider.dart';
-import 'package:omi/providers/sync_provider.dart';
-import 'package:omi/services/services.dart';
-import 'package:omi/utils/analytics/intercom.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/other/time_utils.dart';
-import 'package:omi/utils/platform/platform_service.dart';
-import 'package:omi/widgets/device_widget.dart';
-import 'package:omi/widgets/dialog.dart';
-import 'package:omi/pages/conversations/sync_page.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/backend/schema/bt_device/bt_device.dart';
+import 'package:aura/providers/capture_provider.dart';
+import 'package:aura/providers/device_provider.dart';
+import 'package:aura/providers/sync_provider.dart';
+import 'package:aura/services/services.dart';
+import 'package:aura/utils/analytics/intercom.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/other/time_utils.dart';
+import 'package:aura/utils/platform/platform_service.dart';
+import 'package:aura/widgets/device_widget.dart';
+import 'package:aura/widgets/dialog.dart';
+import 'package:aura/pages/conversations/sync_page.dart';
 import 'firmware_update.dart';
-import 'omiglass_ota_update.dart';
+import 'auraglass_ota_update.dart';
 
 class ConnectedDevice extends StatefulWidget {
   const ConnectedDevice({super.key});
@@ -254,7 +254,7 @@ class _ConnectedDeviceState extends State<ConnectedDevice> {
                     final deviceName = provider.connectedDevice?.name?.toLowerCase() ?? '';
                     final isOpenGlass = provider.connectedDevice?.type == DeviceType.openglass ||
                         deviceName.contains('openglass') ||
-                        deviceName.contains('omiglass') ||
+                        deviceName.contains('auraglass') ||
                         deviceName.contains('glass');
                     debugPrint('ProductUpdate: connectedDevice type: ${provider.connectedDevice?.type}');
                     debugPrint('ProductUpdate: connectedDevice name: "${provider.connectedDevice?.name}"');
@@ -310,11 +310,11 @@ class _ConnectedDeviceState extends State<ConnectedDevice> {
                 final deviceName = provider.pairedDevice?.name ?? 'DevKit1';
                 String url;
                 if (deviceName == 'Omi DevKit 2') {
-                  url = 'https://www.omi.me/pages/charging-devkit2';
+                  url = 'https://www.aura.me/pages/charging-devkit2';
                 } else if (deviceName == 'Omi') {
-                  url = 'https://www.omi.me/pages/charging-omi';
+                  url = 'https://www.aura.me/pages/charging-aura';
                 } else {
-                  url = 'https://www.omi.me/pages/charging';
+                  url = 'https://www.aura.me/pages/charging';
                 }
                 final uri = Uri.parse(url);
                 if (await canLaunchUrl(uri)) {
@@ -358,7 +358,7 @@ class _ConnectedDeviceState extends State<ConnectedDevice> {
           const Divider(height: 1, color: Color(0xFF3C3C43)),
           GestureDetector(
             onTap: () async {
-              await SharedPreferencesUtil().btDeviceSet(BtDevice(id: '', name: '', type: DeviceType.omi, rssi: 0));
+              await SharedPreferencesUtil().btDeviceSet(BtDevice(id: '', name: '', type: DeviceType.aura, rssi: 0));
               SharedPreferencesUtil().deviceName = '';
               if (provider.connectedDevice != null) {
                 await _bleDisconnectDevice(provider.connectedDevice!);
@@ -409,7 +409,7 @@ class _ConnectedDeviceState extends State<ConnectedDevice> {
                     () async {
                       Navigator.of(context).pop();
                       await SharedPreferencesUtil()
-                          .btDeviceSet(BtDevice(id: '', name: '', type: DeviceType.omi, rssi: 0));
+                          .btDeviceSet(BtDevice(id: '', name: '', type: DeviceType.aura, rssi: 0));
                       SharedPreferencesUtil().deviceName = '';
                       if (provider.connectedDevice != null) {
                         await _bleUnpairDevice(provider.connectedDevice!);

@@ -3,15 +3,15 @@ import 'package:flutter/material.dart';
 import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:geolocator/geolocator.dart';
 
-import 'package:omi/backend/http/api/privacy.dart';
-import 'package:omi/backend/http/api/users.dart' as users_api;
-import 'package:omi/backend/http/api/users.dart';
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/backend/schema/geolocation.dart';
-import 'package:omi/main.dart';
-import 'package:omi/services/notifications.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/logger.dart';
+import 'package:aura/backend/http/api/privacy.dart';
+import 'package:aura/backend/http/api/users.dart' as users_api;
+import 'package:aura/backend/http/api/users.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/backend/schema/geolocation.dart';
+import 'package:aura/main.dart';
+import 'package:aura/services/notifications.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/logger.dart';
 
 class UserProvider with ChangeNotifier {
   static const int _migrationNotificationId = 1337;
@@ -335,7 +335,7 @@ class UserProvider with ChangeNotifier {
 
       NotificationService.instance.showNotification(
         id: _migrationNotificationId,
-        title: ctx?.l10n.omiSays ?? 'omi says',
+        title: ctx?.l10n.auraSays ?? 'aura says',
         body: ctx?.l10n.migratingToProtection(targetLevel) ?? 'Migrating to $targetLevel protection...',
         layout: NotificationLayout.Default,
         payload: {'navigate_to': '/settings/data-privacy'},
@@ -378,7 +378,7 @@ class UserProvider with ChangeNotifier {
 
       NotificationService.instance.showNotification(
         id: _migrationNotificationId,
-        title: ctx?.l10n.omiSays ?? 'omi says',
+        title: ctx?.l10n.auraSays ?? 'aura says',
         body: ctx?.l10n.migrationErrorOccurred ?? 'An error occurred during data migration. Please try again.',
         layout: NotificationLayout.Default,
         payload: {'navigate_to': '/settings/data-privacy'},
@@ -402,7 +402,7 @@ class UserProvider with ChangeNotifier {
 
     NotificationService.instance.showNotification(
       id: _migrationNotificationId,
-      title: ctx?.l10n.omiSays ?? 'omi says',
+      title: ctx?.l10n.auraSays ?? 'aura says',
       body: ctx?.l10n.dataProtectedWithSettings(targetLevel) ??
           'Your data is now protected with the new $targetLevel settings.',
       layout: NotificationLayout.Default,

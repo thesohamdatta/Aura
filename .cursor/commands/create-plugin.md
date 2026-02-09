@@ -13,8 +13,8 @@ Create a new Omi plugin/app with proper structure and configuration.
 Just define prompts - no server required.
 
 **Capabilities**:
-- Chat prompts: Customize AI personality
-- Memory prompts: Customize memory extraction
+- Chat prompts: Custauraze AI personality
+- Memory prompts: Custauraze memory extraction
 
 ### 2. Integration App (Requires Server)
 

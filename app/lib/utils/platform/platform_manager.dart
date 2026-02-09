@@ -5,12 +5,12 @@ import 'package:crypto/crypto.dart';
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/utils/analytics/intercom.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/debugging/crash_reporter.dart';
-import 'package:omi/utils/debugging/crashlytics_manager.dart';
-import 'package:omi/utils/platform/platform_service.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/utils/analytics/intercom.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/debugging/crash_reporter.dart';
+import 'package:aura/utils/debugging/crashlytics_manager.dart';
+import 'package:aura/utils/platform/platform_service.dart';
 
 /// Centralized platform manager for all platform-specific services
 /// This provides a single point of access for all platform services

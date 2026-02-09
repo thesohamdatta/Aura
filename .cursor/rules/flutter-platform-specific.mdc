@@ -15,7 +15,7 @@ references:
 ### Using Platform Manager
 
 ```dart
-import 'package:omi/utils/platform/platform_manager.dart';
+import 'package:aura/utils/platform/platform_manager.dart';
 
 if (PlatformManager.isIOS) {
   // iOS-specific code
@@ -84,7 +84,7 @@ CupertinoButton(
 
 ### WatchOS Support
 
-**Location**: `app/ios/omiWatchApp/`
+**Location**: `app/ios/auraWatchApp/`
 
 - Apple Watch companion app
 - Battery monitoring
@@ -181,7 +181,7 @@ cmake .
 
 ```dart
 // Native Windows audio capture
-import 'package:omi/utils/platform/platform_service.dart';
+import 'package:aura/utils/platform/platform_service.dart';
 
 // Use platform service for Windows-specific features
 ```
@@ -198,7 +198,7 @@ import 'package:omi/utils/platform/platform_service.dart';
 ### Base Adaptive Widget
 
 ```dart
-import 'package:omi/widgets/base/base_adaptive_widget.dart';
+import 'package:aura/widgets/base/base_adaptive_widget.dart';
 
 class AdaptiveButton extends BaseAdaptiveWidget {
   @override
@@ -284,9 +284,9 @@ class AdaptiveButton extends BaseAdaptiveWidget {
 
 ## Related Documentation
 
-**The `docs/` folder is the single source of truth for all user-facing documentation, deployed at [docs.omi.me](https://docs.omi.me/).**
+**The `docs/` folder is the single source of truth for all user-facing documentation, deployed at [docs.aura.me](https://docs.aura.me/).**
 
-- **App Setup**: `docs/doc/developer/AppSetup.mdx` - [View online](https://docs.omi.me/doc/developer/AppSetup)
+- **App Setup**: `docs/doc/developer/AppSetup.mdx` - [View online](https://docs.aura.me/doc/developer/AppSetup)
 - **Flutter Architecture**: `.cursor/rules/flutter-architecture.mdc`
 
 ## Related Cursor Resources
@@ -296,7 +296,7 @@ class AdaptiveButton extends BaseAdaptiveWidget {
 - `.cursor/rules/flutter-localization.mdc` - Localization requirements
 
 ### Skills
-- `.cursor/skills/omi-flutter-patterns/` - Flutter patterns including platform-specific code
+- `.cursor/skills/aura-flutter-patterns/` - Flutter patterns including platform-specific code
 
 ### Subagents
 - `.cursor/agents/flutter-developer/` - Flutter development specialist

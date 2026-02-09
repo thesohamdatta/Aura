@@ -5,20 +5,20 @@ import 'package:flutter/material.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter_provider_utilities/flutter_provider_utilities.dart';
 
-import 'package:omi/backend/http/api/apps.dart';
-import 'package:omi/backend/http/api/audio.dart';
-import 'package:omi/backend/http/api/conversations.dart';
-import 'package:omi/backend/http/api/users.dart';
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/backend/schema/app.dart';
-import 'package:omi/backend/schema/conversation.dart';
-import 'package:omi/backend/schema/structured.dart';
-import 'package:omi/backend/schema/transcript_segment.dart';
-import 'package:omi/providers/app_provider.dart';
-import 'package:omi/providers/conversation_provider.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/logger.dart';
-import 'package:omi/utils/platform/platform_manager.dart';
+import 'package:aura/backend/http/api/apps.dart';
+import 'package:aura/backend/http/api/audio.dart';
+import 'package:aura/backend/http/api/conversations.dart';
+import 'package:aura/backend/http/api/users.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/backend/schema/app.dart';
+import 'package:aura/backend/schema/conversation.dart';
+import 'package:aura/backend/schema/structured.dart';
+import 'package:aura/backend/schema/transcript_segment.dart';
+import 'package:aura/providers/app_provider.dart';
+import 'package:aura/providers/conversation_provider.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/logger.dart';
+import 'package:aura/utils/platform/platform_manager.dart';
 
 class ConversationDetailProvider extends ChangeNotifier with MessageNotifierMixin {
   AppProvider? appProvider;

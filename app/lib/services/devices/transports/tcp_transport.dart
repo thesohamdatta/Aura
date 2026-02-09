@@ -30,7 +30,7 @@ class TcpTransport extends DeviceTransport {
   @override
   Stream<DeviceTransportState> get connectionStateStream => _connectionStateController.stream;
 
-  /// Stream of incoming data from the connected device.
+  /// Stream of incaurang data from the connected device.
   Stream<List<int>> get dataStream => _dataStreamController?.stream ?? const Stream.empty();
 
   /// Write data to the connected device.
@@ -77,7 +77,7 @@ class TcpTransport extends DeviceTransport {
       _clientSocket = await clientFuture;
       _updateState(DeviceTransportState.connected);
 
-      // Listen for incoming data from the device
+      // Listen for incaurang data from the device
       _clientSubscription = _clientSocket!.listen(
         (List<int> data) {
           _dataStreamController?.add(data);

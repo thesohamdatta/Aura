@@ -1,8 +1,8 @@
 import 'dart:convert';
 
-import 'package:omi/backend/http/shared.dart';
-import 'package:omi/env/env.dart';
-import 'package:omi/utils/logger.dart';
+import 'package:aura/backend/http/shared.dart';
+import 'package:aura/env/env.dart';
+import 'package:aura/utils/logger.dart';
 
 Future<void> saveFcmTokenServer({required String token, required String timeZone}) async {
   var response = await makeApiCall(

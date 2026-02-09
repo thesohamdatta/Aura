@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'package:omi/backend/http/api/apps.dart';
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/gen/assets.gen.dart';
-import 'package:omi/pages/persona/persona_provider.dart';
-import 'package:omi/pages/persona/twitter/clone_success_sceen.dart';
-import 'package:omi/utils/other/string_utils.dart';
-import 'package:omi/utils/other/temp.dart';
+import 'package:aura/backend/http/api/apps.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/gen/assets.gen.dart';
+import 'package:aura/pages/persona/persona_provider.dart';
+import 'package:aura/pages/persona/twitter/clone_success_sceen.dart';
+import 'package:aura/utils/other/string_utils.dart';
+import 'package:aura/utils/other/temp.dart';
 
 class VerifyIdentityScreen extends StatefulWidget {
   final PersonaProfileRouting routing;
@@ -59,7 +59,7 @@ class _VerifyIdentityScreenState extends State<VerifyIdentityScreen> {
     }
     provider.updateUsername(username);
 
-    final tweetText = Uri.encodeComponent('Verifying my clone($username): https://personas.omi.me/u/$username');
+    final tweetText = Uri.encodeComponent('Verifying my clone($username): https://personas.aura.me/u/$username');
     final twitterUrl = 'https://twitter.com/intent/tweet?text=$tweetText';
     setPostTweetClicked(true);
     setState(() {

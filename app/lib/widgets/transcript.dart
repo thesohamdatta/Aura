@@ -4,16 +4,16 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/backend/schema/message_event.dart';
-import 'package:omi/backend/schema/person.dart';
-import 'package:omi/backend/schema/transcript_segment.dart';
-import 'package:omi/gen/assets.gen.dart';
-import 'package:omi/models/stt_provider.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/constants.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/other/temp.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/backend/schema/message_event.dart';
+import 'package:aura/backend/schema/person.dart';
+import 'package:aura/backend/schema/transcript_segment.dart';
+import 'package:aura/gen/assets.gen.dart';
+import 'package:aura/models/stt_provider.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/constants.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/other/temp.dart';
 
 // Use speaker colors from person.dart for bubble colors
 final List<Color> _speakerColors = speakerColors;
@@ -94,7 +94,7 @@ class _TranscriptWidgetState extends State<TranscriptWidget> {
     if (isUser) {
       return const Color(0xFF8B5CF6).withValues(alpha: 0.3);
     }
-    if (speakerId == omiSpeakerId) {
+    if (speakerId == auraSpeakerId) {
       return Colors.purple.withValues(alpha: 0.3);
     }
     final colorIndex = (person?.colorIdx ?? speakerId) % _speakerColors.length;
@@ -102,7 +102,7 @@ class _TranscriptWidgetState extends State<TranscriptWidget> {
   }
 
   Widget _getSpeakerAvatar(int speakerId, bool isUser, Person? person) {
-    if (speakerId == omiSpeakerId) {
+    if (speakerId == auraSpeakerId) {
       return Image.asset(
         Assets.images.herologo.path,
         height: 16,
@@ -487,7 +487,7 @@ class _TranscriptWidgetState extends State<TranscriptWidget> {
               if (!isUser) ...[
                 // Avatar for other speakers (left side)
                 GestureDetector(
-                  onTap: data.speakerId == omiSpeakerId
+                  onTap: data.speakerId == auraSpeakerId
                       ? null
                       : () {
                           widget.editSegment?.call(data.id, data.speakerId);
@@ -519,16 +519,16 @@ class _TranscriptWidgetState extends State<TranscriptWidget> {
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             GestureDetector(
-                              onTap: data.speakerId == omiSpeakerId
+                              onTap: data.speakerId == auraSpeakerId
                                   ? null
                                   : () {
                                       widget.editSegment?.call(data.id, data.speakerId);
                                       MixpanelManager().tagSheetOpened();
                                     },
                               child: Text(
-                                data.speakerId == omiSpeakerId ? 'omi' : (person?.name ?? 'Speaker ${data.speakerId}'),
+                                data.speakerId == auraSpeakerId ? 'aura' : (person?.name ?? 'Speaker ${data.speakerId}'),
                                 style: TextStyle(
-                                  color: data.speakerId == omiSpeakerId || person != null
+                                  color: data.speakerId == auraSpeakerId || person != null
                                       ? Colors.grey.shade300
                                       : Colors.grey.shade400,
                                   fontSize: 13,
@@ -759,7 +759,7 @@ class _TranscriptWidgetState extends State<TranscriptWidget> {
             ),
             SizedBox(width: 4),
             Text(
-              'translated by omi',
+              'translated by aura',
               style: TextStyle(
                 fontSize: 12,
                 color: Colors.grey,

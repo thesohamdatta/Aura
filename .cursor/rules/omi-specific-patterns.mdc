@@ -309,17 +309,17 @@ The chat system uses LangGraph for routing:
 ## Related Cursor Resources
 
 ### Skills
-- `.cursor/skills/omi-backend-patterns/SKILL.md` - Backend patterns
-- `.cursor/skills/omi-flutter-patterns/SKILL.md` - Flutter patterns
+- `.cursor/skills/aura-backend-patterns/SKILL.md` - Backend patterns
+- `.cursor/skills/aura-flutter-patterns/SKILL.md` - Flutter patterns
 - `.cursor/skills/self-improvement/SKILL.md` - Learn from PRs and issues
 
 ### Documentation
 
-**The `docs/` folder is the single source of truth for all user-facing documentation, deployed at [docs.omi.me](https://docs.omi.me/).**
+**The `docs/` folder is the single source of truth for all user-facing documentation, deployed at [docs.aura.me](https://docs.aura.me/).**
 
 - `ISSUE_TRIAGE_GUIDE.MD` - Issue prioritization guide
-- `docs/doc/developer/backend/backend_deepdive.mdx` - [Backend architecture](https://docs.omi.me/doc/developer/backend/backend_deepdive)
-- `docs/doc/developer/backend/chat_system.mdx` - [Chat system architecture](https://docs.omi.me/doc/developer/backend/chat_system)
-- `docs/doc/developer/backend/StoringConversations.mdx` - [Data storage and flow](https://docs.omi.me/doc/developer/backend/StoringConversations)
-- `docs/doc/developer/backend/transcription.mdx` - [Transcription pipeline](https://docs.omi.me/doc/developer/backend/transcription)
-- `docs/INDEX.md` - [Complete documentation index](https://docs.omi.me/llms.txt)
+- `docs/doc/developer/backend/backend_deepdive.mdx` - [Backend architecture](https://docs.aura.me/doc/developer/backend/backend_deepdive)
+- `docs/doc/developer/backend/chat_system.mdx` - [Chat system architecture](https://docs.aura.me/doc/developer/backend/chat_system)
+- `docs/doc/developer/backend/StoringConversations.mdx` - [Data storage and flow](https://docs.aura.me/doc/developer/backend/StoringConversations)
+- `docs/doc/developer/backend/transcription.mdx` - [Transcription pipeline](https://docs.aura.me/doc/developer/backend/transcription)
+- `docs/INDEX.md` - [Complete documentation index](https://docs.aura.me/llms.txt)

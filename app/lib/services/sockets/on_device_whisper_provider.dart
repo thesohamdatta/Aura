@@ -7,9 +7,9 @@ import 'package:path/path.dart' as p;
 import 'package:path_provider/path_provider.dart';
 import 'package:whisper_flutter_new/whisper_flutter_new.dart';
 
-import 'package:omi/models/stt_result.dart';
-import 'package:omi/services/custom_stt_log_service.dart';
-import 'package:omi/services/sockets/pure_polling.dart';
+import 'package:aura/models/stt_result.dart';
+import 'package:aura/services/custom_stt_log_service.dart';
+import 'package:aura/services/sockets/pure_polling.dart';
 
 class OnDeviceWhisperProvider implements ISttProvider {
   final String modelPath;

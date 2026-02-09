@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
 import 'package:provider/provider.dart';
-import 'package:omi/widgets/shimmer_with_timeout.dart';
+import 'package:aura/widgets/shimmer_with_timeout.dart';
 
-import 'package:omi/pages/apps/add_app.dart';
-import 'package:omi/providers/integration_provider.dart';
-import 'package:omi/services/apple_health_service.dart';
-import 'package:omi/services/google_calendar_service.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/logger.dart';
-import 'package:omi/utils/other/temp.dart';
+import 'package:aura/pages/apps/add_app.dart';
+import 'package:aura/providers/integration_provider.dart';
+import 'package:aura/services/apple_health_service.dart';
+import 'package:aura/services/google_calendar_service.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/logger.dart';
+import 'package:aura/utils/other/temp.dart';
 
 enum IntegrationApp {
   appleHealth,
@@ -86,8 +86,8 @@ extension IntegrationAppExtension on IntegrationApp {
     return true;
   }
 
-  // String get comingSoonText {
-  //   return 'Coming Soon';
+  // String get caurangSoonText {
+  //   return 'Caurang Soon';
   // }
 }
 
@@ -495,7 +495,7 @@ class _IntegrationsPageState extends State<IntegrationsPage> with WidgetsBinding
                   borderRadius: BorderRadius.circular(16),
                 ),
                 child: Text(
-                  !isAvailable ? context.l10n.comingSoon : context.l10n.connect,
+                  !isAvailable ? context.l10n.caurangSoon : context.l10n.connect,
                   style: TextStyle(
                     color: !isAvailable ? Colors.grey : Colors.black,
                     fontSize: 12,

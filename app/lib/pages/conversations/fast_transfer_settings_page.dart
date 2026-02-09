@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/utils/l10n_extensions.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/utils/l10n_extensions.dart';
 
 class FastTransferSettingsPage extends StatefulWidget {
   const FastTransferSettingsPage({super.key});

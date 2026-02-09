@@ -11,12 +11,12 @@ import 'package:intl/intl.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:share_plus/share_plus.dart';
 
-import 'package:omi/backend/http/api/wrapped.dart';
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/pages/settings/wrapped_2025_share_templates.dart' as templates;
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/logger.dart';
+import 'package:aura/backend/http/api/wrapped.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/pages/settings/wrapped_2025_share_templates.dart' as templates;
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/logger.dart';
 
 // Bold color palette inspired by LinkedIn Wrapped
 class WrappedColors {
@@ -195,18 +195,18 @@ class _Wrapped2025PageState extends State<Wrapped2025Page> {
   Future<void> _shareTemplate(Widget template, String filename) async {
     // Map filename to card name and index
     final Map<String, Map<String, dynamic>> filenameToCard = {
-      'omi_wrapped_stats': {'name': 'Year in Numbers', 'index': 1},
-      'omi_wrapped_categories': {'name': 'Top Categories', 'index': 2},
-      'omi_wrapped_actions': {'name': 'Actions', 'index': 3},
-      'omi_wrapped_days': {'name': 'Memorable Days', 'index': 4},
-      'omi_wrapped_moments': {'name': 'Best Moments', 'index': 5},
-      'omi_wrapped_buddies': {'name': 'My Buddies', 'index': 6},
-      'omi_wrapped_obsessions': {'name': 'Obsessions', 'index': 7},
-      'omi_wrapped_movies': {'name': 'Movie Recommendations', 'index': 8},
-      'omi_wrapped_struggle': {'name': 'Biggest Struggle', 'index': 9},
-      'omi_wrapped_win': {'name': 'Biggest Win', 'index': 10},
-      'omi_wrapped_phrases': {'name': 'Top Phrases', 'index': 11},
-      'omi_wrapped_2025': {'name': 'Summary Collage', 'index': 12},
+      'aura_wrapped_stats': {'name': 'Year in Numbers', 'index': 1},
+      'aura_wrapped_categories': {'name': 'Top Categories', 'index': 2},
+      'aura_wrapped_actions': {'name': 'Actions', 'index': 3},
+      'aura_wrapped_days': {'name': 'Memorable Days', 'index': 4},
+      'aura_wrapped_moments': {'name': 'Best Moments', 'index': 5},
+      'aura_wrapped_buddies': {'name': 'My Buddies', 'index': 6},
+      'aura_wrapped_obsessions': {'name': 'Obsessions', 'index': 7},
+      'aura_wrapped_movies': {'name': 'Movie Recommendations', 'index': 8},
+      'aura_wrapped_struggle': {'name': 'Biggest Struggle', 'index': 9},
+      'aura_wrapped_win': {'name': 'Biggest Win', 'index': 10},
+      'aura_wrapped_phrases': {'name': 'Top Phrases', 'index': 11},
+      'aura_wrapped_2025': {'name': 'Summary Collage', 'index': 12},
     };
 
     final cardInfo = filenameToCard[filename];
@@ -316,7 +316,7 @@ class _Wrapped2025PageState extends State<Wrapped2025Page> {
         daysActive: daysActive,
         percentile: percentile,
       ),
-      'omi_wrapped_stats',
+      'aura_wrapped_stats',
     );
   }
 
@@ -354,7 +354,7 @@ class _Wrapped2025PageState extends State<Wrapped2025Page> {
 
     _shareTemplate(
       templates.TopCategoryShareTemplate(categories: categories),
-      'omi_wrapped_categories',
+      'aura_wrapped_categories',
     );
   }
 
@@ -369,7 +369,7 @@ class _Wrapped2025PageState extends State<Wrapped2025Page> {
         completedTasks: completed,
         completionRate: rate,
       ),
-      'omi_wrapped_actions',
+      'aura_wrapped_actions',
     );
   }
 
@@ -410,7 +410,7 @@ class _Wrapped2025PageState extends State<Wrapped2025Page> {
 
     _shareTemplate(
       templates.MemorableDaysShareTemplate(days: memorableDays),
-      'omi_wrapped_days',
+      'aura_wrapped_days',
     );
   }
 
@@ -437,7 +437,7 @@ class _Wrapped2025PageState extends State<Wrapped2025Page> {
 
     _shareTemplate(
       templates.BestMomentsShareTemplate(moments: moments),
-      'omi_wrapped_moments',
+      'aura_wrapped_moments',
     );
   }
 
@@ -455,7 +455,7 @@ class _Wrapped2025PageState extends State<Wrapped2025Page> {
 
     _shareTemplate(
       templates.MyBuddiesShareTemplate(buddies: buddyList),
-      'omi_wrapped_buddies',
+      'aura_wrapped_buddies',
     );
   }
 
@@ -470,7 +470,7 @@ class _Wrapped2025PageState extends State<Wrapped2025Page> {
         celebrity: _capitalizeWords(obsessions?['celebrity'] ?? notMentioned),
         food: _capitalizeWords(obsessions?['food'] ?? notMentioned),
       ),
-      'omi_wrapped_obsessions',
+      'aura_wrapped_obsessions',
     );
   }
 
@@ -480,7 +480,7 @@ class _Wrapped2025PageState extends State<Wrapped2025Page> {
       templates.MovieRecsShareTemplate(
         movies: movies.map((m) => _capitalizeWords(m)).toList(),
       ),
-      'omi_wrapped_movies',
+      'aura_wrapped_movies',
     );
   }
 
@@ -490,7 +490,7 @@ class _Wrapped2025PageState extends State<Wrapped2025Page> {
       templates.StruggleShareTemplate(
         title: struggle?['title'] ?? context.l10n.wrappedTheHardPart,
       ),
-      'omi_wrapped_struggle',
+      'aura_wrapped_struggle',
     );
   }
 
@@ -500,7 +500,7 @@ class _Wrapped2025PageState extends State<Wrapped2025Page> {
       templates.BiggestWinShareTemplate(
         title: win?['title'] ?? context.l10n.wrappedPersonalGrowth,
       ),
-      'omi_wrapped_win',
+      'aura_wrapped_win',
     );
   }
 
@@ -513,7 +513,7 @@ class _Wrapped2025PageState extends State<Wrapped2025Page> {
 
     _shareTemplate(
       templates.TopPhrasesShareTemplate(phrases: phraseList),
-      'omi_wrapped_phrases',
+      'aura_wrapped_phrases',
     );
   }
 
@@ -613,7 +613,7 @@ class _Wrapped2025PageState extends State<Wrapped2025Page> {
         struggle: struggle,
         biggestWin: biggestWin,
       ),
-      'omi_wrapped_2025',
+      'aura_wrapped_2025',
     );
   }
 
@@ -1436,7 +1436,7 @@ class _Wrapped2025PageState extends State<Wrapped2025Page> {
                 borderRadius: BorderRadius.circular(40),
               ),
               child: const Text(
-                'omi.me/wrapped',
+                'aura.me/wrapped',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 32,
@@ -4815,7 +4815,7 @@ class _SummaryCollageAnimatedState extends State<_SummaryCollageAnimated> with T
 
             const Spacer(),
 
-            // Share button row with omi branding
+            // Share button row with aura branding
             Row(
               children: [
                 _AnimatedShareButton(
@@ -4827,7 +4827,7 @@ class _SummaryCollageAnimatedState extends State<_SummaryCollageAnimated> with T
                 Opacity(
                   opacity: tilesProgress.clamp(0.0, 1.0),
                   child: const Text(
-                    'omi',
+                    'aura',
                     style: TextStyle(
                       color: Colors.white54,
                       fontSize: 18,
@@ -5252,7 +5252,7 @@ class _ThatsAWrapAnimatedState extends State<_ThatsAWrapAnimated> with TickerPro
                   opacity: buttonOpacity * 0.7,
                   child: Center(
                     child: Text(
-                      'omi.me/wrapped',
+                      'aura.me/wrapped',
                       style: TextStyle(
                         color: Colors.white.withOpacity(0.5),
                         fontSize: 14,

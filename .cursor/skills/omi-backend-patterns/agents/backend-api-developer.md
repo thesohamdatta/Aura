@@ -59,8 +59,8 @@ You are a backend API developer specializing in FastAPI router development, endp
 - `.cursor/rules/backend-testing.mdc` - Testing patterns
 
 ### Skills
-- `.cursor/skills/omi-backend-patterns/` - Backend patterns and workflows
-- `.cursor/skills/omi-api-integration/` - API integration patterns
+- `.cursor/skills/aura-backend-patterns/` - Backend patterns and workflows
+- `.cursor/skills/aura-api-integration/` - API integration patterns
 
 ### Commands
 - `/backend-setup` - Setup backend environment
@@ -69,10 +69,10 @@ You are a backend API developer specializing in FastAPI router development, endp
 
 ### Documentation
 
-**The `docs/` folder is the single source of truth for all user-facing documentation, deployed at [docs.omi.me](https://docs.omi.me/).**
+**The `docs/` folder is the single source of truth for all user-facing documentation, deployed at [docs.aura.me](https://docs.aura.me/).**
 
-- **API Overview**: `docs/doc/developer/api/overview.mdx` - [View online](https://docs.omi.me/doc/developer/api/overview)
-- **API Endpoints**: `docs/api-reference/` - [View online](https://docs.omi.me/api-reference/)
-- **Memories API**: `docs/doc/developer/api/memories.mdx` - [View online](https://docs.omi.me/doc/developer/api/memories)
-- **Conversations API**: `docs/doc/developer/api/conversations.mdx` - [View online](https://docs.omi.me/doc/developer/api/conversations)
-- **Action Items API**: `docs/doc/developer/api/action-items.mdx` - [View online](https://docs.omi.me/doc/developer/api/action-items)
+- **API Overview**: `docs/doc/developer/api/overview.mdx` - [View online](https://docs.aura.me/doc/developer/api/overview)
+- **API Endpoints**: `docs/api-reference/` - [View online](https://docs.aura.me/api-reference/)
+- **Memories API**: `docs/doc/developer/api/memories.mdx` - [View online](https://docs.aura.me/doc/developer/api/memories)
+- **Conversations API**: `docs/doc/developer/api/conversations.mdx` - [View online](https://docs.aura.me/doc/developer/api/conversations)
+- **Action Items API**: `docs/doc/developer/api/action-items.mdx` - [View online](https://docs.aura.me/doc/developer/api/action-items)

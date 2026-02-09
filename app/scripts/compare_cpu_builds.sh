@@ -79,7 +79,7 @@ run_measure() {
   echo "$output" | sed -n 's/Median CPU: \([0-9.]*\)%.*/\1/p'
 }
 
-OUTPUT_DIR="/tmp/omi_cpu_profiling"
+OUTPUT_DIR="/tmp/aura_cpu_profiling"
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
 mkdir -p "$OUTPUT_DIR"
 

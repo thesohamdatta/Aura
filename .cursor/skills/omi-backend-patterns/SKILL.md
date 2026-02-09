@@ -1,5 +1,5 @@
 ---
-name: omi-backend-patterns
+name: aura-backend-patterns
 description: "Omi backend patterns conversation processing memory extraction chat system LangGraph FastAPI Firestore Pinecone Redis"
 ---
 
@@ -112,13 +112,13 @@ The chat system uses LangGraph for routing:
 
 ## Related Documentation
 
-**The `docs/` folder is the single source of truth for all user-facing documentation, deployed at [docs.omi.me](https://docs.omi.me/).**
+**The `docs/` folder is the single source of truth for all user-facing documentation, deployed at [docs.aura.me](https://docs.aura.me/).**
 
-- **Backend Deep Dive**: `docs/doc/developer/backend/backend_deepdive.mdx` - [View online](https://docs.omi.me/doc/developer/backend/backend_deepdive)
-- **Chat System**: `docs/doc/developer/backend/chat_system.mdx` - [View online](https://docs.omi.me/doc/developer/backend/chat_system)
-- **Data Storage**: `docs/doc/developer/backend/StoringConversations.mdx` - [View online](https://docs.omi.me/doc/developer/backend/StoringConversations)
-- **Transcription**: `docs/doc/developer/backend/transcription.mdx` - [View online](https://docs.omi.me/doc/developer/backend/transcription)
-- **Backend Setup**: `docs/doc/developer/backend/Backend_Setup.mdx` - [View online](https://docs.omi.me/doc/developer/backend/Backend_Setup)
+- **Backend Deep Dive**: `docs/doc/developer/backend/backend_deepdive.mdx` - [View online](https://docs.aura.me/doc/developer/backend/backend_deepdive)
+- **Chat System**: `docs/doc/developer/backend/chat_system.mdx` - [View online](https://docs.aura.me/doc/developer/backend/chat_system)
+- **Data Storage**: `docs/doc/developer/backend/StoringConversations.mdx` - [View online](https://docs.aura.me/doc/developer/backend/StoringConversations)
+- **Transcription**: `docs/doc/developer/backend/transcription.mdx` - [View online](https://docs.aura.me/doc/developer/backend/transcription)
+- **Backend Setup**: `docs/doc/developer/backend/Backend_Setup.mdx` - [View online](https://docs.aura.me/doc/developer/backend/Backend_Setup)
 - **Backend Architecture**: `.cursor/rules/backend-architecture.mdc`
 
 ## Related Cursor Resources

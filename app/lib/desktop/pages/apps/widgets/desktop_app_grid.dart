@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 import 'package:cached_network_image/cached_network_image.dart';
 
-import 'package:omi/backend/schema/app.dart';
-import 'package:omi/ui/atoms/omi_badge.dart';
-import 'package:omi/ui/atoms/omi_load_more_button.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/responsive/responsive_helper.dart';
-import 'package:omi/widgets/extensions/string.dart';
+import 'package:aura/backend/schema/app.dart';
+import 'package:aura/ui/atoms/aura_badge.dart';
+import 'package:aura/ui/atoms/aura_load_more_button.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/responsive/responsive_helper.dart';
+import 'package:aura/widgets/extensions/string.dart';
 
 class DesktopAppGrid extends StatefulWidget {
   final List<App> apps;

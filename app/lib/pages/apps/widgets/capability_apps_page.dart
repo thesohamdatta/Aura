@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import 'package:omi/widgets/shimmer_with_timeout.dart';
+import 'package:aura/widgets/shimmer_with_timeout.dart';
 
-import 'package:omi/backend/http/api/apps.dart';
-import 'package:omi/backend/schema/app.dart';
-import 'package:omi/pages/apps/widgets/capability_category_section.dart';
-import 'package:omi/utils/app_localizations_helper.dart';
-import 'package:omi/utils/logger.dart';
-import 'package:omi/utils/ui_guidelines.dart';
+import 'package:aura/backend/http/api/apps.dart';
+import 'package:aura/backend/schema/app.dart';
+import 'package:aura/pages/apps/widgets/capability_category_section.dart';
+import 'package:aura/utils/app_localizations_helper.dart';
+import 'package:aura/utils/logger.dart';
+import 'package:aura/utils/ui_guidelines.dart';
 
 class CapabilityAppsPage extends StatefulWidget {
   final AppCapability capability;

@@ -10,12 +10,12 @@ import 'package:opus_dart/opus_dart.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:share_plus/share_plus.dart';
 
-import 'package:omi/backend/schema/bt_device/bt_device.dart';
-import 'package:omi/main.dart';
-import 'package:omi/services/wals.dart';
-import 'package:omi/utils/alerts/app_snackbar.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/logger.dart';
+import 'package:aura/backend/schema/bt_device/bt_device.dart';
+import 'package:aura/main.dart';
+import 'package:aura/services/wals.dart';
+import 'package:aura/utils/alerts/app_snackbar.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/logger.dart';
 
 class AudioPlayerUtils extends ChangeNotifier {
   // Singleton pattern

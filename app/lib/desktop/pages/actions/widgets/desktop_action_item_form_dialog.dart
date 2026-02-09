@@ -4,17 +4,17 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/backend/schema/schema.dart';
-import 'package:omi/providers/action_items_provider.dart';
-import 'package:omi/ui/atoms/omi_button.dart';
-import 'package:omi/ui/atoms/omi_checkbox.dart';
-import 'package:omi/ui/atoms/omi_icon_button.dart';
-import 'package:omi/ui/molecules/omi_confirm_dialog.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/logger.dart';
-import 'package:omi/utils/responsive/responsive_helper.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/backend/schema/schema.dart';
+import 'package:aura/providers/action_items_provider.dart';
+import 'package:aura/ui/atoms/aura_button.dart';
+import 'package:aura/ui/atoms/aura_checkbox.dart';
+import 'package:aura/ui/atoms/aura_icon_button.dart';
+import 'package:aura/ui/molecules/aura_confirm_dialog.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/logger.dart';
+import 'package:aura/utils/responsive/responsive_helper.dart';
 
 class DesktopActionItemFormDialog extends StatefulWidget {
   final ActionItemWithMetadata? actionItem;

@@ -11,53 +11,53 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:upgrader/upgrader.dart';
 
-import 'package:omi/backend/http/api/conversations.dart';
-import 'package:omi/backend/http/api/users.dart';
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/backend/schema/app.dart';
-import 'package:omi/backend/schema/bt_device/bt_device.dart';
-import 'package:omi/backend/schema/geolocation.dart';
-import 'package:omi/main.dart';
-import 'package:omi/pages/action_items/action_items_page.dart';
-import 'package:omi/pages/apps/app_detail/app_detail.dart';
-import 'package:omi/pages/apps/page.dart';
-import 'package:omi/pages/chat/page.dart';
-import 'package:omi/pages/conversation_capturing/page.dart';
-import 'package:omi/pages/conversation_detail/page.dart';
-import 'package:omi/pages/conversations/conversations_page.dart';
-import 'package:omi/pages/conversations/sync_page.dart';
-import 'package:omi/pages/conversations/widgets/merge_action_bar.dart';
-import 'package:omi/pages/memories/page.dart';
-import 'package:omi/pages/settings/daily_summary_detail_page.dart';
-import 'package:omi/pages/settings/data_privacy_page.dart';
-import 'package:omi/pages/settings/settings_drawer.dart';
-import 'package:omi/pages/settings/task_integrations_page.dart';
-import 'package:omi/pages/settings/wrapped_2025_page.dart';
-import 'package:omi/providers/action_items_provider.dart';
-import 'package:omi/providers/app_provider.dart';
-import 'package:omi/providers/capture_provider.dart';
-import 'package:omi/providers/connectivity_provider.dart';
-import 'package:omi/providers/conversation_provider.dart';
-import 'package:omi/providers/device_provider.dart';
-import 'package:omi/providers/announcement_provider.dart';
-import 'package:omi/providers/home_provider.dart';
-import 'package:omi/providers/message_provider.dart';
-import 'package:omi/providers/sync_provider.dart';
-import 'package:omi/services/announcement_service.dart';
-import 'package:omi/services/notifications.dart';
-import 'package:omi/services/notifications/daily_reflection_notification.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/audio/foreground.dart';
-import 'package:omi/utils/enums.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/logger.dart';
-import 'package:omi/utils/platform/platform_manager.dart';
-import 'package:omi/utils/platform/platform_service.dart';
-import 'package:omi/utils/responsive/responsive_helper.dart';
-import 'package:omi/widgets/calendar_date_picker_sheet.dart';
-import 'package:omi/widgets/freemium_switch_dialog.dart';
-import 'package:omi/widgets/upgrade_alert.dart';
-import 'package:omi/widgets/bottom_nav_bar.dart';
+import 'package:aura/backend/http/api/conversations.dart';
+import 'package:aura/backend/http/api/users.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/backend/schema/app.dart';
+import 'package:aura/backend/schema/bt_device/bt_device.dart';
+import 'package:aura/backend/schema/geolocation.dart';
+import 'package:aura/main.dart';
+import 'package:aura/pages/action_items/action_items_page.dart';
+import 'package:aura/pages/apps/app_detail/app_detail.dart';
+import 'package:aura/pages/apps/page.dart';
+import 'package:aura/pages/chat/page.dart';
+import 'package:aura/pages/conversation_capturing/page.dart';
+import 'package:aura/pages/conversation_detail/page.dart';
+import 'package:aura/pages/conversations/conversations_page.dart';
+import 'package:aura/pages/conversations/sync_page.dart';
+import 'package:aura/pages/conversations/widgets/merge_action_bar.dart';
+import 'package:aura/pages/memories/page.dart';
+import 'package:aura/pages/settings/daily_summary_detail_page.dart';
+import 'package:aura/pages/settings/data_privacy_page.dart';
+import 'package:aura/pages/settings/settings_drawer.dart';
+import 'package:aura/pages/settings/task_integrations_page.dart';
+import 'package:aura/pages/settings/wrapped_2025_page.dart';
+import 'package:aura/providers/action_items_provider.dart';
+import 'package:aura/providers/app_provider.dart';
+import 'package:aura/providers/capture_provider.dart';
+import 'package:aura/providers/connectivity_provider.dart';
+import 'package:aura/providers/conversation_provider.dart';
+import 'package:aura/providers/device_provider.dart';
+import 'package:aura/providers/announcement_provider.dart';
+import 'package:aura/providers/home_provider.dart';
+import 'package:aura/providers/message_provider.dart';
+import 'package:aura/providers/sync_provider.dart';
+import 'package:aura/services/announcement_service.dart';
+import 'package:aura/services/notifications.dart';
+import 'package:aura/services/notifications/daily_reflection_notification.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/audio/foreground.dart';
+import 'package:aura/utils/enums.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/logger.dart';
+import 'package:aura/utils/platform/platform_manager.dart';
+import 'package:aura/utils/platform/platform_service.dart';
+import 'package:aura/utils/responsive/responsive_helper.dart';
+import 'package:aura/widgets/calendar_date_picker_sheet.dart';
+import 'package:aura/widgets/freemium_switch_dialog.dart';
+import 'package:aura/widgets/upgrade_alert.dart';
+import 'package:aura/widgets/bottom_nav_bar.dart';
 import 'widgets/battery_info_widget.dart';
 
 class HomePageWrapper extends StatefulWidget {
@@ -77,7 +77,7 @@ class _HomePageWrapperState extends State<HomePageWrapper> {
   void initState() {
     WidgetsBinding.instance.addPostFrameCallback((_) async {
       if (mounted) {
-        context.read<DeviceProvider>().periodicConnect('coming from HomePageWrapper', boundDeviceOnly: true);
+        context.read<DeviceProvider>().periodicConnect('caurang from HomePageWrapper', boundDeviceOnly: true);
       }
       if (SharedPreferencesUtil().notificationsEnabled) {
         NotificationService.instance.register();
@@ -295,7 +295,7 @@ class _HomePageState extends State<HomePage> with WidgetsBindingObserver, Ticker
         case "chat":
           Logger.debug('inside chat alias $detailPageId');
           if (detailPageId != null && detailPageId.isNotEmpty) {
-            var appId = detailPageId != "omi" ? detailPageId : ''; // omi ~ no select
+            var appId = detailPageId != "aura" ? detailPageId : ''; // aura ~ no select
             if (mounted) {
               var appProvider = Provider.of<AppProvider>(context, listen: false);
               var messageProvider = Provider.of<MessageProvider>(context, listen: false);

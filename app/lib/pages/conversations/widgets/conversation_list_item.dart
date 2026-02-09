@@ -7,20 +7,20 @@ import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/backend/schema/conversation.dart';
-import 'package:omi/pages/conversation_detail/conversation_detail_provider.dart';
-import 'package:omi/pages/conversation_detail/page.dart';
-import 'package:omi/pages/settings/usage_page.dart';
-import 'package:omi/providers/connectivity_provider.dart';
-import 'package:omi/providers/conversation_provider.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/other/temp.dart';
-import 'package:omi/utils/other/time_utils.dart';
-import 'package:omi/utils/platform/platform_service.dart';
-import 'package:omi/widgets/dialog.dart';
-import 'package:omi/widgets/extensions/string.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/backend/schema/conversation.dart';
+import 'package:aura/pages/conversation_detail/conversation_detail_provider.dart';
+import 'package:aura/pages/conversation_detail/page.dart';
+import 'package:aura/pages/settings/usage_page.dart';
+import 'package:aura/providers/connectivity_provider.dart';
+import 'package:aura/providers/conversation_provider.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/other/temp.dart';
+import 'package:aura/utils/other/time_utils.dart';
+import 'package:aura/utils/platform/platform_service.dart';
+import 'package:aura/widgets/dialog.dart';
+import 'package:aura/widgets/extensions/string.dart';
 
 class ConversationListItem extends StatefulWidget {
   final bool isFromOnboarding;

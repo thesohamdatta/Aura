@@ -2,9 +2,9 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 
-import 'package:omi/models/stt_provider.dart';
-import 'package:omi/models/stt_response_schema.dart';
-import 'package:omi/utils/logger.dart';
+import 'package:aura/models/stt_provider.dart';
+import 'package:aura/models/stt_response_schema.dart';
+import 'package:aura/utils/logger.dart';
 
 class CustomSttConfig {
   final SttProvider provider;
@@ -40,7 +40,7 @@ class CustomSttConfig {
   bool get isLive => SttRequestType.isLive(effectiveRequestType);
   bool get isPolling => SttRequestType.isPolling(effectiveRequestType);
 
-  bool get isEnabled => provider != SttProvider.omi;
+  bool get isEnabled => provider != SttProvider.aura;
 
   SttProviderConfig get providerConfig => SttProviderConfig.get(provider);
 
@@ -71,7 +71,7 @@ class CustomSttConfig {
   }
 
   /// Build request config with all settings applied
-  /// Merges user customizations with provider defaults (user values win)
+  /// Merges user custaurazations with provider defaults (user values win)
   Map<String, dynamic> get requestConfig {
     // Get provider defaults (works for all providers including custom)
     final config = providerConfig.buildRequestConfig(
@@ -104,7 +104,7 @@ class CustomSttConfig {
   }
 
   String get sttConfigId {
-    if (!isEnabled) return 'omi:default';
+    if (!isEnabled) return 'aura:default';
 
     final configData = {
       'api_key': apiKey,
@@ -151,7 +151,7 @@ class CustomSttConfig {
     }
 
     return CustomSttConfig(
-      provider: SttProvider.fromString(json['provider'] ?? 'omi'),
+      provider: SttProvider.fromString(json['provider'] ?? 'aura'),
       apiKey: json['api_key'],
       language: json['language'],
       model: json['model'],
@@ -166,7 +166,7 @@ class CustomSttConfig {
     );
   }
 
-  static const defaultConfig = CustomSttConfig(provider: SttProvider.omi);
+  static const defaultConfig = CustomSttConfig(provider: SttProvider.aura);
 
   /// Copy with new values
   CustomSttConfig copyWith({

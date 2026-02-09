@@ -4,7 +4,7 @@ Quick reference for all API endpoints in the Omi backend.
 
 ## Base URLs
 
-- **Production**: `https://api.omi.me`
+- **Production**: `https://api.aura.me`
 - **Development**: Use ngrok or local backend URL
 
 ## Authentication
@@ -13,12 +13,12 @@ Most endpoints require Firebase authentication via `uid` parameter or Bearer tok
 
 ### Developer API Authentication
 ```
-Authorization: Bearer omi_dev_your_api_key_here
+Authorization: Bearer aura_dev_your_api_key_here
 ```
 
 ### MCP Authentication
 ```
-Authorization: Bearer omi_mcp_your_api_key_here
+Authorization: Bearer aura_mcp_your_api_key_here
 ```
 
 ## Core Endpoints
@@ -169,7 +169,7 @@ Get chat tools provided by an app.
 #### `GET /v1/dev/user/memories`
 Get user memories (Developer API).
 
-**Authentication**: Bearer token with `omi_dev_` prefix
+**Authentication**: Bearer token with `aura_dev_` prefix
 
 #### `POST /v1/dev/user/memories`
 Create a memory (Developer API).
@@ -209,7 +209,7 @@ Revoke an API key.
 #### `GET /v1/mcp/sse` (Server-Sent Events)
 MCP server endpoint for SSE connections.
 
-**Authentication**: Bearer token with `omi_mcp_` prefix
+**Authentication**: Bearer token with `aura_mcp_` prefix
 
 **Tools Available**:
 - `get_memories` - Retrieve memories

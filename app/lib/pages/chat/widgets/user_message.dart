@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'package:omi/backend/schema/message.dart';
-import 'package:omi/pages/chat/widgets/files_handler_widget.dart';
-import 'package:omi/widgets/extensions/string.dart';
-import 'package:omi/widgets/text_selection_controls.dart';
+import 'package:aura/backend/schema/message.dart';
+import 'package:aura/pages/chat/widgets/files_handler_widget.dart';
+import 'package:aura/widgets/extensions/string.dart';
+import 'package:aura/widgets/text_selection_controls.dart';
 
 class HumanMessage extends StatelessWidget {
   final ServerMessage message;
@@ -74,7 +74,7 @@ class HumanMessage extends StatelessWidget {
                   messageText.trimRight(),
                   style: const TextStyle(color: Colors.white, fontSize: 16, height: 1.4),
                   contextMenuBuilder: (context, editableTextState) {
-                    return omiSelectionMenuBuilder(context, editableTextState, (text) {
+                    return auraSelectionMenuBuilder(context, editableTextState, (text) {
                       onAskOmi?.call(text);
                     });
                   },

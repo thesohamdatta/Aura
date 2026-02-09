@@ -3,9 +3,9 @@ import 'package:flutter/services.dart';
 
 import 'package:video_player/video_player.dart';
 
-import 'package:omi/pages/onboarding/wrapper.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/other/temp.dart';
+import 'package:aura/pages/onboarding/wrapper.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/other/temp.dart';
 
 class DeviceSelectionPage extends StatefulWidget {
   const DeviceSelectionPage({super.key});
@@ -125,7 +125,7 @@ class _DeviceSelectionPageState extends State<DeviceSelectionPage> with SingleTi
                       children: [
                         // Title and subtitle
                         Text(
-                          context.l10n.omiYourAiCompanion,
+                          context.l10n.auraYourAiCompanion,
                           style: const TextStyle(
                             color: Colors.black,
                             fontSize: 34,

@@ -3,10 +3,10 @@ import 'dart:io';
 import 'package:http/http.dart' as http;
 import 'package:path_provider/path_provider.dart';
 
-import 'package:omi/backend/http/api/audio.dart';
-import 'package:omi/backend/schema/conversation.dart';
-import 'package:omi/utils/audio/wav_combiner.dart';
-import 'package:omi/utils/logger.dart';
+import 'package:aura/backend/http/api/audio.dart';
+import 'package:aura/backend/schema/conversation.dart';
+import 'package:aura/utils/audio/wav_combiner.dart';
+import 'package:aura/utils/logger.dart';
 
 enum AudioDownloadStage {
   preparing,
@@ -133,7 +133,7 @@ class AudioDownloadService {
     final now = DateTime.now();
     final timestamp =
         '${now.year}${now.month.toString().padLeft(2, '0')}${now.day.toString().padLeft(2, '0')}_${now.hour.toString().padLeft(2, '0')}${now.minute.toString().padLeft(2, '0')}${now.second.toString().padLeft(2, '0')}';
-    return 'omi_$timestamp.wav';
+    return 'aura_$timestamp.wav';
   }
 
   Future<void> cleanup() async {

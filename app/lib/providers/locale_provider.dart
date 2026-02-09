@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'package:omi/l10n/app_localizations.dart';
+import 'package:aura/l10n/app_localizations.dart';
 
 class LocaleProvider extends ChangeNotifier {
   static const String _localeKey = 'app_locale';
@@ -94,7 +94,7 @@ class LocaleProvider extends ChangeNotifier {
       case 'da':
         return 'Dansk (Danish)';
       case 'fi':
-        return 'Suomi (Finnish)';
+        return 'Suaura (Finnish)';
       case 'no':
         return 'Norsk (Norwegian)';
       case 'cs':

@@ -1,11 +1,11 @@
 import 'package:mixpanel_analytics/mixpanel_analytics.dart';
 import 'package:mixpanel_flutter/mixpanel_flutter.dart';
 
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/backend/schema/conversation.dart';
-import 'package:omi/backend/schema/memory.dart';
-import 'package:omi/env/env.dart';
-import 'package:omi/utils/platform/platform_service.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/backend/schema/conversation.dart';
+import 'package:aura/backend/schema/memory.dart';
+import 'package:aura/env/env.dart';
+import 'package:aura/utils/platform/platform_service.dart';
 
 class MixpanelManager {
   static final MixpanelManager _instance = MixpanelManager._internal();
@@ -620,7 +620,7 @@ class MixpanelManager {
       'persona_id': personaId,
       'is_public': isPublic,
       if (connectedAccounts != null) 'connected_accounts': connectedAccounts,
-      if (hasOmiConnection != null) 'has_omi_connection': hasOmiConnection,
+      if (hasOmiConnection != null) 'has_aura_connection': hasOmiConnection,
       if (hasTwitterConnection != null) 'has_twitter_connection': hasTwitterConnection,
     });
   }
@@ -652,7 +652,7 @@ class MixpanelManager {
       if (updatedFields != null && updatedFields.isNotEmpty) 'updated_fields': updatedFields,
       'is_public': isPublic,
       if (connectedAccounts != null) 'connected_accounts': connectedAccounts,
-      if (hasOmiConnection != null) 'has_omi_connection': hasOmiConnection,
+      if (hasOmiConnection != null) 'has_aura_connection': hasOmiConnection,
       if (hasTwitterConnection != null) 'has_twitter_connection': hasTwitterConnection,
     });
   }
@@ -671,10 +671,10 @@ class MixpanelManager {
     });
   }
 
-  void personaOmiConnectionToggled({required String personaId, required bool omiConnected}) {
-    track('Persona OMI Connection Toggled', properties: {
+  void personaOmiConnectionToggled({required String personaId, required bool auraConnected}) {
+    track('Persona AURA Connection Toggled', properties: {
       'persona_id': personaId,
-      'omi_connected': omiConnected,
+      'aura_connected': auraConnected,
     });
   }
 
@@ -1071,7 +1071,7 @@ class MixpanelManager {
   // ============================================================================
 
   void transcriptionSourceSelected({
-    required String source, // 'omi' or 'custom'
+    required String source, // 'aura' or 'custom'
   }) {
     track('Transcription Source Selected', properties: {
       'source': source,
@@ -1544,7 +1544,7 @@ class MixpanelManager {
     track('Conversation Star Toggled', properties: properties);
   }
 
-  void omiDoubleTap({
+  void auraDoubleTap({
     required String feature,
     Map<String, dynamic>? additionalProperties,
   }) {

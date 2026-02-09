@@ -551,7 +551,7 @@ class AppLocalizationsNo extends AppLocalizations {
   String get deviceInfoSection => 'Enhetsinformasjon';
 
   @override
-  String get customizationSection => 'Tilpasning';
+  String get custaurazationSection => 'Tilpasning';
 
   @override
   String get hardwareSection => 'Maskinvare';
@@ -758,19 +758,19 @@ class AppLocalizationsNo extends AppLocalizations {
   }
 
   @override
-  String get shareStatsMessage => 'Deler mine Omi-statistikker! (omi.me - din alltid tilgjengelige AI-assistent)';
+  String get shareStatsMessage => 'Deler mine Omi-statistikker! (aura.me - din alltid tilgjengelige AI-assistent)';
 
   @override
-  String get sharePeriodToday => 'I dag har omi:';
+  String get sharePeriodToday => 'I dag har aura:';
 
   @override
-  String get sharePeriodMonth => 'Denne måneden har omi:';
+  String get sharePeriodMonth => 'Denne måneden har aura:';
 
   @override
-  String get sharePeriodYear => 'Dette året har omi:';
+  String get sharePeriodYear => 'Dette året har aura:';
 
   @override
-  String get sharePeriodAllTime => 'Så langt har omi:';
+  String get sharePeriodAllTime => 'Så langt har aura:';
 
   @override
   String shareStatsListened(String minutes) {
@@ -805,7 +805,7 @@ class AppLocalizationsNo extends AppLocalizations {
   String get noLogFilesFound => 'Ingen loggfiler funnet.';
 
   @override
-  String get omiDebugLog => 'Omi feilsøkingslogg';
+  String get auraDebugLog => 'Omi feilsøkingslogg';
 
   @override
   String get logShared => 'Logg delt';
@@ -1017,7 +1017,7 @@ class AppLocalizationsNo extends AppLocalizations {
   String get connect => 'Connect';
 
   @override
-  String get comingSoon => 'Kommer snart';
+  String get caurangSoon => 'Kommer snart';
 
   @override
   String get integrationsFooter => 'Koble til appene dine for å se data og måledata i chat.';
@@ -1199,7 +1199,7 @@ class AppLocalizationsNo extends AppLocalizations {
   String get refresh => 'Oppdater';
 
   @override
-  String get noUpcomingMeetings => 'Ingen kommende møter';
+  String get noUpcaurangMeetings => 'Ingen kommende møter';
 
   @override
   String get checkingNextDays => 'Sjekker neste 30 dager';
@@ -1208,7 +1208,7 @@ class AppLocalizationsNo extends AppLocalizations {
   String get tomorrow => 'I morgen';
 
   @override
-  String get googleCalendarComingSoon => 'Google-kalenderintegrasjon kommer snart!';
+  String get googleCalendarCaurangSoon => 'Google-kalenderintegrasjon kommer snart!';
 
   @override
   String connectedAsUser(String userId) {
@@ -1433,7 +1433,7 @@ class AppLocalizationsNo extends AppLocalizations {
   }
 
   @override
-  String integrationComingSoon(String appName) {
+  String integrationCaurangSoon(String appName) {
     return 'Integrasjon med $appName kommer snart! Vi jobber hardt for å gi deg flere oppgavebehandlingsalternativer.';
   }
 
@@ -1456,13 +1456,13 @@ class AppLocalizationsNo extends AppLocalizations {
   String get bringYourOwn => 'Ta med din egen';
 
   @override
-  String get payYourSttProvider => 'Bruk omi fritt. Du betaler bare STT-leverandøren direkte.';
+  String get payYourSttProvider => 'Bruk aura fritt. Du betaler bare STT-leverandøren direkte.';
 
   @override
   String get freeMinutesMonth => '1 200 gratis minutter/måned inkludert. Ubegrenset med ';
 
   @override
-  String get omiUnlimited => 'Omi Ubegrenset';
+  String get auraUnlimited => 'Omi Ubegrenset';
 
   @override
   String get hostRequired => 'Vert er påkrevd';
@@ -1584,7 +1584,7 @@ class AppLocalizationsNo extends AppLocalizations {
   }
 
   @override
-  String get omiTranscription => 'Omi-transkripsjon';
+  String get auraTranscription => 'Omi-transkripsjon';
 
   @override
   String get bestInClassTranscription => 'Beste transkripsjon i sin klasse uten oppsett';
@@ -1890,7 +1890,7 @@ class AppLocalizationsNo extends AppLocalizations {
   String get termsOfUse => 'Bruksvilkår';
 
   @override
-  String get omiYourAiCompanion => 'Omi – Din AI-følgesvenn';
+  String get auraYourAiCompanion => 'Omi – Din AI-følgesvenn';
 
   @override
   String get captureEveryMoment => 'Fang hvert øyeblikk. Få AI-drevne\nsammendrag. Aldri ta notater igjen.';
@@ -2409,7 +2409,7 @@ class AppLocalizationsNo extends AppLocalizations {
   String get privacyPolicyTitle => 'Personvernregler';
 
   @override
-  String get omiSttProvider => 'Omi';
+  String get auraSttProvider => 'Omi';
 
   @override
   String labelCopied(String label) {
@@ -2566,7 +2566,7 @@ class AppLocalizationsNo extends AppLocalizations {
   String get checksForAudioFiles => 'Sjekker for lydfiler på SD-kortet';
 
   @override
-  String get omiSyncsAudioFiles => 'Omi synkroniserer deretter lydfilene med serveren';
+  String get auraSyncsAudioFiles => 'Omi synkroniserer deretter lydfilene med serveren';
 
   @override
   String get serverProcessesAudio => 'Serveren behandler lydfilene og oppretter minner';
@@ -3347,7 +3347,7 @@ class AppLocalizationsNo extends AppLocalizations {
   }
 
   @override
-  String get omisMemoryCleared => 'Omis minne om deg er tømt';
+  String get aurasMemoryCleared => 'Omis minne om deg er tømt';
 
   @override
   String get welcomeToOmi => 'Velkommen til Omi';
@@ -3774,7 +3774,7 @@ class AppLocalizationsNo extends AppLocalizations {
   }
 
   @override
-  String get translatedByOmi => 'oversatt av omi';
+  String get translatedByOmi => 'oversatt av aura';
 
   @override
   String get backToConversations => 'Tilbake til samtaler';
@@ -3874,7 +3874,7 @@ class AppLocalizationsNo extends AppLocalizations {
   String get showMeetingsInMenuBar => 'Vis møter i menylinjen';
 
   @override
-  String get displayUpcomingMeetingsDescription => 'Vis kommende møter i menylinjen';
+  String get displayUpcaurangMeetingsDescription => 'Vis kommende møter i menylinjen';
 
   @override
   String get showEventsWithoutParticipants => 'Vis hendelser uten deltakere';
@@ -3883,7 +3883,7 @@ class AppLocalizationsNo extends AppLocalizations {
   String get includePersonalEventsDescription => 'Inkluder personlige hendelser uten deltakere';
 
   @override
-  String get upcomingMeetings => 'Kommende møter';
+  String get upcaurangMeetings => 'Kommende møter';
 
   @override
   String get checkingNext7Days => 'Sjekker de neste 7 dagene';
@@ -4156,7 +4156,7 @@ class AppLocalizationsNo extends AppLocalizations {
   String get weekdaySun => 'Søn';
 
   @override
-  String serviceIntegrationComingSoon(String serviceName) {
+  String serviceIntegrationCaurangSoon(String serviceName) {
     return '$serviceName-integrasjon kommer snart';
   }
 
@@ -4208,11 +4208,11 @@ class AppLocalizationsNo extends AppLocalizations {
   }
 
   @override
-  String get omiApiKeys => 'Omi API-nøkler';
+  String get auraApiKeys => 'Omi API-nøkler';
 
   @override
   String get apiKeysDescription =>
-      'API-nøkler brukes til autentisering når appen din kommuniserer med OMI-serveren. De lar applikasjonen din opprette minner og få sikker tilgang til andre OMI-tjenester.';
+      'API-nøkler brukes til autentisering når appen din kommuniserer med AURA-serveren. De lar applikasjonen din opprette minner og få sikker tilgang til andre AURA-tjenester.';
 
   @override
   String get aboutOmiApiKeys => 'Om Omi API-nøkler';
@@ -4371,7 +4371,7 @@ class AppLocalizationsNo extends AppLocalizations {
   String get e2eeTradeoff2 => '• Hvis du mister passordet ditt, kan dataene dine ikke gjenopprettes.';
 
   @override
-  String get featureComingSoon => 'Denne funksjonen kommer snart!';
+  String get featureCaurangSoon => 'Denne funksjonen kommer snart!';
 
   @override
   String get migrationInProgressMessage => 'Migrering pågår. Du kan ikke endre beskyttelsesnivået før det er fullført.';
@@ -4463,7 +4463,7 @@ class AppLocalizationsNo extends AppLocalizations {
   }
 
   @override
-  String get omiTraining => 'Omi Trening';
+  String get auraTraining => 'Omi Trening';
 
   @override
   String get trainingDataProgram => 'Treningsdataprogram';
@@ -4476,7 +4476,7 @@ class AppLocalizationsNo extends AppLocalizations {
       '• Dataene dine hjelper med å forbedre AI-modeller\n• Bare ikke-sensitive data deles\n• Fullstendig gjennomsiktig prosess';
 
   @override
-  String get learnMoreAtOmiTraining => 'Lær mer på omi.me/training';
+  String get learnMoreAtOmiTraining => 'Lær mer på aura.me/training';
 
   @override
   String get agreeToContributeData => 'Jeg forstår og godtar å bidra med mine data for AI-trening';
@@ -4770,7 +4770,7 @@ class AppLocalizationsNo extends AppLocalizations {
   String get minutes => 'minutter';
 
   @override
-  String get omiHas => 'Omi har:';
+  String get auraHas => 'Omi har:';
 
   @override
   String get premiumMinutesUsed => 'Premium minutter brukt.';
@@ -4799,7 +4799,7 @@ class AppLocalizationsNo extends AppLocalizations {
   String get selectZipFileToImport => 'Velg .zip-filen å importere!';
 
   @override
-  String get otherDevicesComingSoon => 'Andre enheter kommer snart';
+  String get otherDevicesCaurangSoon => 'Andre enheter kommer snart';
 
   @override
   String get deleteAllLimitlessConversations => 'Slett alle Limitless-samtaler?';
@@ -5142,7 +5142,7 @@ class AppLocalizationsNo extends AppLocalizations {
   String get enableApps => 'Aktiver apper';
 
   @override
-  String get omiAppName => 'Omi';
+  String get auraAppName => 'Omi';
 
   @override
   String get showMore => 'vis mer ↓';
@@ -5272,7 +5272,7 @@ class AppLocalizationsNo extends AppLocalizations {
   String get noSummary => 'Ingen oppsummering';
 
   @override
-  String get updateOmiFirmware => 'Oppdater omi-fastvare';
+  String get updateOmiFirmware => 'Oppdater aura-fastvare';
 
   @override
   String get anErrorOccurredTryAgain => 'Det oppstod en feil. Vennligst prøv igjen.';
@@ -5448,7 +5448,7 @@ class AppLocalizationsNo extends AppLocalizations {
   String get wrappedSwipeUpToBegin => 'Sveip opp for å begynne';
 
   @override
-  String get wrappedShareText => 'Min 2025, husket av Omi ✨ omi.me/wrapped';
+  String get wrappedShareText => 'Min 2025, husket av Omi ✨ aura.me/wrapped';
 
   @override
   String get wrappedFailedToShare => 'Deling mislyktes. Vennligst prøv igjen.';
@@ -6221,7 +6221,7 @@ class AppLocalizationsNo extends AppLocalizations {
   }
 
   @override
-  String get omiTranscriptionOptimized =>
+  String get auraTranscriptionOptimized =>
       'Omis innebygde live-transkribering er optimalisert for sanntidssamtaler med automatisk talerdeteksjon og diarisering.';
 
   @override
@@ -6936,7 +6936,7 @@ class AppLocalizationsNo extends AppLocalizations {
   String get almostDone => 'Almost done...';
 
   @override
-  String get omiSays => 'omi says';
+  String get auraSays => 'aura says';
 
   @override
   String get analyzingYourData => 'Analyserer dataene dine...';
@@ -7859,7 +7859,7 @@ class AppLocalizationsNo extends AppLocalizations {
   String get categoryEntertainment => 'Underholdning';
 
   @override
-  String get categoryFinancial => 'Økonomi';
+  String get categoryFinancial => 'Økonaura';
 
   @override
   String get categoryTravel => 'Reise';

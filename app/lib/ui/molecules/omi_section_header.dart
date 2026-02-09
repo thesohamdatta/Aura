@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:omi/ui/atoms/omi_icon_button.dart';
-import 'package:omi/utils/responsive/responsive_helper.dart';
+import 'package:aura/ui/atoms/aura_icon_button.dart';
+import 'package:aura/utils/responsive/responsive_helper.dart';
 
 /// Standard icon + title header row used across pages (action items, overviews, etc.)
 class OmiSectionHeader extends StatelessWidget {

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:provider/provider.dart';
 
-import 'package:omi/providers/user_provider.dart';
-import 'package:omi/utils/l10n_extensions.dart';
+import 'package:aura/providers/user_provider.dart';
+import 'package:aura/utils/l10n_extensions.dart';
 
 extension StringExtension on String {
   String capitalize() {
@@ -27,7 +27,7 @@ class _DataProtectionSectionState extends State<DataProtectionSection> {
     super.initState();
   }
 
-  void _showE2eeComingSoonDialog(BuildContext context) {
+  void _showE2eeCaurangSoonDialog(BuildContext context) {
     showDialog(
       context: context,
       builder: (ctx) => AlertDialog(
@@ -52,7 +52,7 @@ class _DataProtectionSectionState extends State<DataProtectionSection> {
               TextSpan(text: '${context.l10n.e2eeTradeoff1}\n'),
               TextSpan(text: '${context.l10n.e2eeTradeoff2}\n\n'),
               TextSpan(
-                text: context.l10n.featureComingSoon,
+                text: context.l10n.featureCaurangSoon,
                 style: const TextStyle(fontStyle: FontStyle.italic),
               ),
             ],
@@ -256,7 +256,7 @@ class _DataProtectionSectionState extends State<DataProtectionSection> {
 
   Widget _buildE2eeCard(BuildContext context) {
     return GestureDetector(
-      onTap: () => _showE2eeComingSoonDialog(context),
+      onTap: () => _showE2eeCaurangSoonDialog(context),
       child: Container(
         padding: const EdgeInsets.all(16),
         margin: const EdgeInsets.only(top: 12),
@@ -292,7 +292,7 @@ class _DataProtectionSectionState extends State<DataProtectionSection> {
                           borderRadius: BorderRadius.circular(16),
                         ),
                         child: Text(
-                          context.l10n.comingSoon,
+                          context.l10n.caurangSoon,
                           style: const TextStyle(
                             fontSize: 10,
                             color: Colors.white,

@@ -2,23 +2,23 @@ import 'package:flutter/material.dart';
 
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
-import 'package:omi/widgets/shimmer_with_timeout.dart';
+import 'package:aura/widgets/shimmer_with_timeout.dart';
 
-import 'package:omi/gen/assets.gen.dart';
-import 'package:omi/pages/settings/asana_settings_page.dart';
-import 'package:omi/pages/settings/clickup_settings_page.dart';
-import 'package:omi/pages/settings/google_tasks_settings_page.dart';
-import 'package:omi/pages/settings/todoist_settings_page.dart';
-import 'package:omi/providers/task_integration_provider.dart';
-import 'package:omi/services/apple_reminders_service.dart';
-import 'package:omi/services/asana_service.dart';
-import 'package:omi/services/clickup_service.dart';
-import 'package:omi/services/google_tasks_service.dart';
-import 'package:omi/services/todoist_service.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/logger.dart';
-import 'package:omi/utils/platform/platform_service.dart';
+import 'package:aura/gen/assets.gen.dart';
+import 'package:aura/pages/settings/asana_settings_page.dart';
+import 'package:aura/pages/settings/clickup_settings_page.dart';
+import 'package:aura/pages/settings/google_tasks_settings_page.dart';
+import 'package:aura/pages/settings/todoist_settings_page.dart';
+import 'package:aura/providers/task_integration_provider.dart';
+import 'package:aura/services/apple_reminders_service.dart';
+import 'package:aura/services/asana_service.dart';
+import 'package:aura/services/clickup_service.dart';
+import 'package:aura/services/google_tasks_service.dart';
+import 'package:aura/services/todoist_service.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/logger.dart';
+import 'package:aura/utils/platform/platform_service.dart';
 
 enum TaskIntegrationApp {
   appleReminders,
@@ -135,8 +135,8 @@ extension TaskIntegrationAppExtension on TaskIntegrationApp {
         this == TaskIntegrationApp.clickup;
   }
 
-  String get comingSoonText {
-    return 'Coming Soon';
+  String get caurangSoonText {
+    return 'Caurang Soon';
   }
 }
 
@@ -220,7 +220,7 @@ class _TaskIntegrationsPageState extends State<TaskIntegrationsPage> with Widget
 
   Future<void> _selectApp(TaskIntegrationApp app) async {
     if (!app.isAvailable) {
-      _showComingSoonDialog(app);
+      _showCaurangSoonDialog(app);
       return;
     }
 
@@ -461,7 +461,7 @@ class _TaskIntegrationsPageState extends State<TaskIntegrationsPage> with Widget
     );
   }
 
-  void _showComingSoonDialog(TaskIntegrationApp app) {
+  void _showCaurangSoonDialog(TaskIntegrationApp app) {
     showDialog(
       context: context,
       builder: (BuildContext context) {
@@ -475,7 +475,7 @@ class _TaskIntegrationsPageState extends State<TaskIntegrationsPage> with Widget
             style: const TextStyle(color: Colors.white),
           ),
           content: Text(
-            context.l10n.integrationComingSoon(app.displayName),
+            context.l10n.integrationCaurangSoon(app.displayName),
             style: const TextStyle(color: Color(0xFF8E8E93)),
           ),
           actions: [
@@ -619,7 +619,7 @@ class _TaskIntegrationsPageState extends State<TaskIntegrationsPage> with Widget
             if (isLoading && app != TaskIntegrationApp.appleReminders)
               _buildShimmerButton()
             else if (!isAvailable)
-              // Coming Soon button
+              // Caurang Soon button
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                 decoration: BoxDecoration(
@@ -627,7 +627,7 @@ class _TaskIntegrationsPageState extends State<TaskIntegrationsPage> with Widget
                   borderRadius: BorderRadius.circular(16),
                 ),
                 child: Text(
-                  context.l10n.comingSoon,
+                  context.l10n.caurangSoon,
                   style: const TextStyle(
                     color: Color(0xFF8E8E93),
                     fontSize: 12,

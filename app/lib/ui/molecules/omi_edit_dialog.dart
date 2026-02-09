@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:omi/ui/atoms/omi_multiline_input.dart';
-import 'package:omi/utils/responsive/responsive_helper.dart';
+import 'package:aura/ui/atoms/aura_multiline_input.dart';
+import 'package:aura/utils/responsive/responsive_helper.dart';
 
 class OmiEditDialog {
   static Future<String?> show(

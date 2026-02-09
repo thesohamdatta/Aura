@@ -5,15 +5,15 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:version/version.dart';
 
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/backend/schema/bt_device/bt_device.dart';
-import 'package:omi/pages/home/page.dart';
-import 'package:omi/services/devices/omiglass_connection.dart';
-import 'package:omi/services/services.dart';
-import 'package:omi/providers/device_provider.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/logger.dart';
-import 'package:omi/utils/other/temp.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/backend/schema/bt_device/bt_device.dart';
+import 'package:aura/pages/home/page.dart';
+import 'package:aura/services/devices/auraglass_connection.dart';
+import 'package:aura/services/services.dart';
+import 'package:aura/providers/device_provider.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/logger.dart';
+import 'package:aura/utils/other/temp.dart';
 import 'package:provider/provider.dart';
 
 class OmiGlassOtaUpdate extends StatefulWidget {

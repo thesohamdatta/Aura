@@ -8,19 +8,19 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 
-import 'package:omi/backend/schema/app.dart';
-import 'package:omi/pages/apps/providers/add_app_provider.dart';
-import 'package:omi/utils/app_localizations_helper.dart';
-import 'package:omi/providers/app_provider.dart';
-import 'package:omi/providers/connectivity_provider.dart';
-import 'package:omi/ui/atoms/omi_button.dart';
-import 'package:omi/ui/atoms/omi_search_input.dart';
-import 'package:omi/ui/molecules/omi_empty_state.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/logger.dart';
-import 'package:omi/utils/other/debouncer.dart';
-import 'package:omi/utils/responsive/responsive_helper.dart';
+import 'package:aura/backend/schema/app.dart';
+import 'package:aura/pages/apps/providers/add_app_provider.dart';
+import 'package:aura/utils/app_localizations_helper.dart';
+import 'package:aura/providers/app_provider.dart';
+import 'package:aura/providers/connectivity_provider.dart';
+import 'package:aura/ui/atoms/aura_button.dart';
+import 'package:aura/ui/atoms/aura_search_input.dart';
+import 'package:aura/ui/molecules/aura_empty_state.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/logger.dart';
+import 'package:aura/utils/other/debouncer.dart';
+import 'package:aura/utils/responsive/responsive_helper.dart';
 import 'widgets/desktop_app_detail.dart';
 
 class DesktopAppsPage extends StatefulWidget {

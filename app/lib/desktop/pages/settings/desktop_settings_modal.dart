@@ -5,50 +5,50 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:omi/backend/http/api/conversations.dart';
-import 'package:omi/backend/http/api/users.dart';
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/providers/capture_provider.dart';
-import 'package:omi/providers/user_provider.dart';
-import 'package:omi/backend/schema/conversation.dart';
-import 'package:omi/desktop/pages/onboarding/desktop_onboarding_wrapper.dart';
-import 'package:omi/pages/settings/widgets/create_mcp_api_key_dialog.dart';
-import 'package:omi/pages/settings/widgets/mcp_api_key_list_item.dart';
-import 'package:omi/providers/developer_mode_provider.dart';
-import 'package:omi/providers/mcp_provider.dart';
-import 'package:omi/utils/alerts/app_snackbar.dart';
+import 'package:aura/backend/http/api/conversations.dart';
+import 'package:aura/backend/http/api/users.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/providers/capture_provider.dart';
+import 'package:aura/providers/user_provider.dart';
+import 'package:aura/backend/schema/conversation.dart';
+import 'package:aura/desktop/pages/onboarding/desktop_onboarding_wrapper.dart';
+import 'package:aura/pages/settings/widgets/create_mcp_api_key_dialog.dart';
+import 'package:aura/pages/settings/widgets/mcp_api_key_list_item.dart';
+import 'package:aura/providers/developer_mode_provider.dart';
+import 'package:aura/providers/mcp_provider.dart';
+import 'package:aura/utils/alerts/app_snackbar.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:share_plus/share_plus.dart';
-import 'package:omi/backend/http/api/knowledge_graph_api.dart';
-import 'package:omi/env/env.dart';
-import 'package:omi/pages/payments/payments_page.dart';
-import 'package:omi/pages/persona/persona_profile.dart';
-import 'package:omi/pages/settings/change_name_widget.dart';
-import 'package:omi/pages/settings/conversation_display_settings.dart';
-import 'package:omi/pages/settings/conversation_timeout_dialog.dart';
-import 'package:omi/pages/settings/data_privacy_page.dart';
-import 'package:omi/pages/settings/delete_account.dart';
-import 'package:omi/pages/settings/import_history_page.dart';
-import 'package:omi/pages/settings/language_selection_dialog.dart';
-import 'package:omi/pages/settings/people.dart';
-import 'package:omi/pages/settings/transcription_settings_page.dart';
-import 'package:omi/providers/calendar_provider.dart';
-import 'package:omi/services/calendar_service.dart';
+import 'package:aura/backend/http/api/knowledge_graph_api.dart';
+import 'package:aura/env/env.dart';
+import 'package:aura/pages/payments/payments_page.dart';
+import 'package:aura/pages/persona/persona_profile.dart';
+import 'package:aura/pages/settings/change_name_widget.dart';
+import 'package:aura/pages/settings/conversation_display_settings.dart';
+import 'package:aura/pages/settings/conversation_timeout_dialog.dart';
+import 'package:aura/pages/settings/data_privacy_page.dart';
+import 'package:aura/pages/settings/delete_account.dart';
+import 'package:aura/pages/settings/import_history_page.dart';
+import 'package:aura/pages/settings/language_selection_dialog.dart';
+import 'package:aura/pages/settings/people.dart';
+import 'package:aura/pages/settings/transcription_settings_page.dart';
+import 'package:aura/providers/calendar_provider.dart';
+import 'package:aura/services/calendar_service.dart';
 import 'package:intl/intl.dart';
-import 'package:omi/pages/settings/usage_page.dart';
-import 'package:omi/pages/settings/widgets/developer_api_keys_section.dart';
-import 'package:omi/pages/speech_profile/page.dart';
-import 'package:omi/utils/debug_log_manager.dart';
-import 'package:omi/providers/home_provider.dart';
-import 'package:omi/services/auth_service.dart';
-import 'package:omi/services/shortcut_service.dart';
-import 'package:omi/ui/atoms/omi_checkbox.dart';
-import 'package:omi/ui/atoms/omi_icon_button.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/other/temp.dart';
-import 'package:omi/utils/responsive/responsive_helper.dart';
-import 'package:omi/services/notifications/daily_reflection_notification.dart';
+import 'package:aura/pages/settings/usage_page.dart';
+import 'package:aura/pages/settings/widgets/developer_api_keys_section.dart';
+import 'package:aura/pages/speech_profile/page.dart';
+import 'package:aura/utils/debug_log_manager.dart';
+import 'package:aura/providers/home_provider.dart';
+import 'package:aura/services/auth_service.dart';
+import 'package:aura/services/shortcut_service.dart';
+import 'package:aura/ui/atoms/aura_checkbox.dart';
+import 'package:aura/ui/atoms/aura_icon_button.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/other/temp.dart';
+import 'package:aura/utils/responsive/responsive_helper.dart';
+import 'package:aura/services/notifications/daily_reflection_notification.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -1363,10 +1363,10 @@ class _DesktopSettingsModalState extends State<DesktopSettingsModal> {
                   icon: FontAwesomeIcons.google,
                   iconColor: const Color(0xFF4285F4),
                   title: context.l10n.googleCalendar,
-                  subtitle: context.l10n.googleCalendarComingSoon,
+                  subtitle: context.l10n.googleCalendarCaurangSoon,
                   isEnabled: false,
                   onToggle: (value) {
-                    AppSnackbar.showSnackbar(context.l10n.googleCalendarComingSoon);
+                    AppSnackbar.showSnackbar(context.l10n.googleCalendarCaurangSoon);
                   },
                 ),
               ],
@@ -1399,10 +1399,10 @@ class _DesktopSettingsModalState extends State<DesktopSettingsModal> {
               ],
             ),
 
-            // Upcoming Meetings Section
+            // Upcaurang Meetings Section
             if (provider.isAuthorized) ...[
               const SizedBox(height: 24),
-              _buildUpcomingMeetingsSection(provider),
+              _buildUpcaurangMeetingsSection(provider),
             ],
           ],
         );
@@ -1508,14 +1508,14 @@ class _DesktopSettingsModalState extends State<DesktopSettingsModal> {
     );
   }
 
-  Widget _buildUpcomingMeetingsSection(CalendarProvider provider) {
+  Widget _buildUpcaurangMeetingsSection(CalendarProvider provider) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Row(
           children: [
             Text(
-              context.l10n.upcomingMeetings.toUpperCase(),
+              context.l10n.upcaurangMeetings.toUpperCase(),
               style: const TextStyle(
                 fontSize: 11,
                 fontWeight: FontWeight.w600,
@@ -1524,7 +1524,7 @@ class _DesktopSettingsModalState extends State<DesktopSettingsModal> {
               ),
             ),
             const Spacer(),
-            if (provider.upcomingMeetings.isNotEmpty)
+            if (provider.upcaurangMeetings.isNotEmpty)
               TextButton(
                 onPressed: () => provider.refreshMeetings(),
                 style: TextButton.styleFrom(
@@ -1544,7 +1544,7 @@ class _DesktopSettingsModalState extends State<DesktopSettingsModal> {
           ],
         ),
         const SizedBox(height: 8),
-        if (provider.upcomingMeetings.isEmpty)
+        if (provider.upcaurangMeetings.isEmpty)
           Container(
             padding: const EdgeInsets.all(24),
             decoration: BoxDecoration(
@@ -1564,7 +1564,7 @@ class _DesktopSettingsModalState extends State<DesktopSettingsModal> {
                 ),
                 const SizedBox(height: 12),
                 Text(
-                  context.l10n.noUpcomingMeetings,
+                  context.l10n.noUpcaurangMeetings,
                   style: const TextStyle(
                     color: ResponsiveHelper.textSecondary,
                     fontSize: 14,
@@ -1589,7 +1589,7 @@ class _DesktopSettingsModalState extends State<DesktopSettingsModal> {
   }
 
   Widget _buildMeetingsList(CalendarProvider provider) {
-    final sortedMeetings = List<CalendarMeeting>.from(provider.upcomingMeetings)
+    final sortedMeetings = List<CalendarMeeting>.from(provider.upcaurangMeetings)
       ..sort((a, b) => a.startTime.compareTo(b.startTime));
 
     final groupedMeetings = <DateTime, List<CalendarMeeting>>{};
@@ -2089,7 +2089,7 @@ class _DesktopSettingsModalState extends State<DesktopSettingsModal> {
                             ),
                           ),
                           TextButton(
-                            onPressed: () => launchUrl(Uri.parse('https://docs.omi.me/doc/developer/MCP')),
+                            onPressed: () => launchUrl(Uri.parse('https://docs.aura.me/doc/developer/MCP')),
                             child: Text(context.l10n.docs),
                             style: TextButton.styleFrom(foregroundColor: ResponsiveHelper.purplePrimary),
                           ),
@@ -2297,15 +2297,15 @@ class _DesktopSettingsModalState extends State<DesktopSettingsModal> {
               title: context.l10n.privacyPolicy,
               onTap: () {
                 MixpanelManager().pageOpened('About Privacy Policy');
-                launchUrl(Uri.parse('https://www.omi.me/pages/privacy'));
+                launchUrl(Uri.parse('https://www.aura.me/pages/privacy'));
               },
             ),
             _buildSettingsRow(
               title: context.l10n.visitWebsite,
-              subtitle: 'https://omi.me',
+              subtitle: 'https://aura.me',
               onTap: () {
                 MixpanelManager().pageOpened('About Visit Website');
-                launchUrl(Uri.parse('https://www.omi.me/'));
+                launchUrl(Uri.parse('https://www.aura.me/'));
               },
             ),
             _buildSettingsRow(
@@ -2327,7 +2327,7 @@ class _DesktopSettingsModalState extends State<DesktopSettingsModal> {
               subtitle: context.l10n.discordMemberCount,
               onTap: () {
                 MixpanelManager().pageOpened('About Join Discord');
-                launchUrl(Uri.parse('http://discord.omi.me'));
+                launchUrl(Uri.parse('http://discord.aura.me'));
               },
             ),
           ],

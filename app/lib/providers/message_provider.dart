@@ -11,28 +11,28 @@ import 'package:image_picker/image_picker.dart';
 import 'package:path/path.dart' as p;
 import 'package:uuid/uuid.dart';
 
-import 'package:omi/backend/http/api/apps.dart';
-import 'package:omi/backend/http/api/messages.dart';
-import 'package:omi/backend/http/api/users.dart';
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/backend/schema/app.dart';
-import 'package:omi/backend/schema/bt_device/bt_device.dart';
-import 'package:omi/backend/schema/message.dart';
-import 'package:omi/providers/app_provider.dart';
-import 'package:omi/main.dart';
-import 'package:omi/utils/alerts/app_snackbar.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/file.dart';
-import 'package:omi/utils/logger.dart';
-import 'package:omi/utils/platform/platform_service.dart';
+import 'package:aura/backend/http/api/apps.dart';
+import 'package:aura/backend/http/api/messages.dart';
+import 'package:aura/backend/http/api/users.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/backend/schema/app.dart';
+import 'package:aura/backend/schema/bt_device/bt_device.dart';
+import 'package:aura/backend/schema/message.dart';
+import 'package:aura/providers/app_provider.dart';
+import 'package:aura/main.dart';
+import 'package:aura/utils/alerts/app_snackbar.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/file.dart';
+import 'package:aura/utils/logger.dart';
+import 'package:aura/utils/platform/platform_service.dart';
 
 class MessageProvider extends ChangeNotifier {
   static late MethodChannel _askAIChannel;
 
   MessageProvider() {
     if (PlatformService.isDesktop) {
-      _askAIChannel = const MethodChannel('com.omi/ask_ai');
+      _askAIChannel = const MethodChannel('com.aura/ask_ai');
       _askAIChannel.setMethodCallHandler(_handleAskAIMethodCall);
     }
   }
@@ -478,7 +478,7 @@ class MessageProvider extends ChangeNotifier {
     if (currentAppId == 'no_selected') {
       currentAppId = null;
     }
-    String chatTargetId = currentAppId ?? 'omi';
+    String chatTargetId = currentAppId ?? 'aura';
     App? targetApp = currentAppId != null ? appProvider?.apps.firstWhereOrNull((app) => app.id == currentAppId) : null;
     bool isPersonaChat = targetApp != null ? !targetApp.isNotPersona() : false;
 
@@ -553,7 +553,7 @@ class MessageProvider extends ChangeNotifier {
       currentAppId = null;
     }
 
-    String chatTargetId = currentAppId ?? 'omi';
+    String chatTargetId = currentAppId ?? 'aura';
     App? targetApp = currentAppId != null ? appProvider?.apps.firstWhereOrNull((app) => app.id == currentAppId) : null;
     bool isPersonaChat = targetApp != null ? !targetApp.isNotPersona() : false;
 

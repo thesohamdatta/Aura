@@ -7,20 +7,20 @@ import 'package:flutter_blue_plus/flutter_blue_plus.dart';
 import 'package:flutter_provider_utilities/flutter_provider_utilities.dart';
 import 'package:permission_handler/permission_handler.dart';
 
-import 'package:omi/backend/http/api/speech_profile.dart';
-import 'package:omi/backend/http/api/users.dart';
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/backend/schema/bt_device/bt_device.dart';
-import 'package:omi/backend/schema/conversation.dart';
-import 'package:omi/backend/schema/message_event.dart';
-import 'package:omi/backend/schema/transcript_segment.dart';
-import 'package:omi/providers/device_provider.dart';
-import 'package:omi/services/devices.dart';
-import 'package:omi/services/services.dart';
-import 'package:omi/services/sockets/transcription_service.dart';
-import 'package:omi/utils/audio/wav_bytes.dart';
-import 'package:omi/utils/constants.dart';
-import 'package:omi/utils/logger.dart';
+import 'package:aura/backend/http/api/speech_profile.dart';
+import 'package:aura/backend/http/api/users.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/backend/schema/bt_device/bt_device.dart';
+import 'package:aura/backend/schema/conversation.dart';
+import 'package:aura/backend/schema/message_event.dart';
+import 'package:aura/backend/schema/transcript_segment.dart';
+import 'package:aura/providers/device_provider.dart';
+import 'package:aura/services/devices.dart';
+import 'package:aura/services/services.dart';
+import 'package:aura/services/sockets/transcription_service.dart';
+import 'package:aura/utils/audio/wav_bytes.dart';
+import 'package:aura/utils/constants.dart';
+import 'package:aura/utils/logger.dart';
 
 /// Enum for loading text states in speech profile
 enum SpeechProfileLoadingState {
@@ -233,7 +233,7 @@ class SpeechProfileProvider extends ChangeNotifier
   _handleCompletion() async {
     if (uploadingProfile || profileCompleted) return;
     // Only count words from user segments, not Omi questions
-    String userText = segments.where((e) => e.speakerId != omiSpeakerId).map((e) => e.text).join(' ').trim();
+    String userText = segments.where((e) => e.speakerId != auraSpeakerId).map((e) => e.text).join(' ').trim();
     int wordsCount = userText.split(' ').length;
     percentageCompleted = (wordsCount / targetWordsCount).clamp(0, 1);
     notifyListeners();
@@ -340,7 +340,7 @@ class SpeechProfileProvider extends ChangeNotifier
         if (value.isEmpty) return;
 
         // Only remove 3-byte header for Omi/OpenGlass devices
-        final paddingLeft = (device?.type == DeviceType.omi || device?.type == DeviceType.openglass) ? 3 : 0;
+        final paddingLeft = (device?.type == DeviceType.aura || device?.type == DeviceType.openglass) ? 3 : 0;
 
         // Store frame: use storeFramePacket for Omi/OpenGlass (expects header),
         // or append frames directly for other devices (raw frames)
@@ -360,7 +360,7 @@ class SpeechProfileProvider extends ChangeNotifier
 
   _validateSingleSpeaker() {
     // Filter out Omi question segments for speaker validation
-    final userSegments = segments.where((e) => e.speakerId != omiSpeakerId).toList();
+    final userSegments = segments.where((e) => e.speakerId != auraSpeakerId).toList();
 
     int speakersCount = userSegments.map((e) => e.speaker).toSet().length;
     Logger.debug('_validateSingleSpeaker speakers count: $speakersCount');
@@ -399,7 +399,7 @@ class SpeechProfileProvider extends ChangeNotifier
 
   void updateProgressMessage() {
     // Only show user's speech, not Omi questions
-    text = segments.where((e) => e.speakerId != omiSpeakerId).map((e) => e.text).join(' ').trim();
+    text = segments.where((e) => e.speakerId != auraSpeakerId).map((e) => e.text).join(' ').trim();
     int wordsCount = text.split(' ').length;
     progressState = SpeechProfileProgressState.keepSpeaking;
     if (wordsCount > 10) {
@@ -518,7 +518,7 @@ class SpeechProfileProvider extends ChangeNotifier
     Logger.debug('onSegmentReceived: ${newSegments.length} new segments, existing: ${segments.length}');
 
     // Filter out Omi question segments for audio trimming calculation
-    final userSegments = newSegments.where((s) => s.speakerId != omiSpeakerId).toList();
+    final userSegments = newSegments.where((s) => s.speakerId != auraSpeakerId).toList();
 
     if (segments.isEmpty && userSegments.isNotEmpty) {
       audioStorage.removeFramesRange(fromSecond: 0, toSecond: userSegments[0].start.toInt());
@@ -534,7 +534,7 @@ class SpeechProfileProvider extends ChangeNotifier
     _validateSingleSpeaker();
 
     // Display only user's speech, not Omi's questions
-    text = segments.where((e) => e.speakerId != omiSpeakerId).map((e) => e.text).join(' ').trim();
+    text = segments.where((e) => e.speakerId != auraSpeakerId).map((e) => e.text).join(' ').trim();
     percentageCompleted = questionProgress;
 
     notifyInfo('SCROLL_DOWN');

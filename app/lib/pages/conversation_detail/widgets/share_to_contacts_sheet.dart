@@ -6,11 +6,11 @@ import 'package:flutter/services.dart';
 import 'package:flutter_contacts/flutter_contacts.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'package:omi/backend/http/api/conversations.dart';
-import 'package:omi/backend/schema/conversation.dart';
-import 'package:omi/widgets/extensions/string.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/l10n_extensions.dart';
+import 'package:aura/backend/http/api/conversations.dart';
+import 'package:aura/backend/schema/conversation.dart';
+import 'package:aura/widgets/extensions/string.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/l10n_extensions.dart';
 
 /// Contact with phone number for sharing
 class ShareableContact {
@@ -184,7 +184,7 @@ class _ShareToContactsBottomSheetState extends State<ShareToContactsBottomSheet>
       }
 
       // Build the share link and message
-      final shareLink = 'https://h.omi.me/conversations/${widget.conversation.id}';
+      final shareLink = 'https://h.aura.me/conversations/${widget.conversation.id}';
       final message = context.l10n.heresWhatWeDiscussed(shareLink);
 
       // Build recipients string (comma-separated phone numbers)

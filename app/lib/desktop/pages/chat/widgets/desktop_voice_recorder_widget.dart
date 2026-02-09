@@ -5,16 +5,16 @@ import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import 'package:omi/widgets/shimmer_with_timeout.dart';
+import 'package:aura/widgets/shimmer_with_timeout.dart';
 
-import 'package:omi/backend/http/api/messages.dart';
-import 'package:omi/services/services.dart';
-import 'package:omi/ui/atoms/omi_icon_button.dart';
-import 'package:omi/utils/alerts/app_snackbar.dart';
-import 'package:omi/utils/file.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/logger.dart';
-import 'package:omi/utils/responsive/responsive_helper.dart';
+import 'package:aura/backend/http/api/messages.dart';
+import 'package:aura/services/services.dart';
+import 'package:aura/ui/atoms/aura_icon_button.dart';
+import 'package:aura/utils/alerts/app_snackbar.dart';
+import 'package:aura/utils/file.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/logger.dart';
+import 'package:aura/utils/responsive/responsive_helper.dart';
 
 enum RecordingState {
   notRecording,

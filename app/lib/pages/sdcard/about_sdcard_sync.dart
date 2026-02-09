@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:omi/utils/l10n_extensions.dart';
+import 'package:aura/utils/l10n_extensions.dart';
 
 class AboutSdCardSync extends StatefulWidget {
   const AboutSdCardSync({super.key});
@@ -70,7 +70,7 @@ class _AboutSdCardSyncState extends State<AboutSdCardSync> {
                   const Icon(Icons.upload_rounded, size: 40, color: Colors.grey),
                   const SizedBox(height: 8),
                   Text(
-                    context.l10n.omiSyncsAudioFiles,
+                    context.l10n.auraSyncsAudioFiles,
                     textAlign: TextAlign.center,
                     style: const TextStyle(color: Colors.white, fontSize: 16),
                   ),

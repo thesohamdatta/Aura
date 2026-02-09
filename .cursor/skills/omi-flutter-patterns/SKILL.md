@@ -1,5 +1,5 @@
 ---
-name: omi-flutter-patterns
+name: aura-flutter-patterns
 description: "Flutter Dart BLE device communication state management Provider backend integration localization cross-platform iOS Android"
 ---
 
@@ -145,10 +145,10 @@ Use `PlatformManager` for platform detection.
 
 ## Related Documentation
 
-**The `docs/` folder is the single source of truth for all user-facing documentation, deployed at [docs.omi.me](https://docs.omi.me/).**
+**The `docs/` folder is the single source of truth for all user-facing documentation, deployed at [docs.aura.me](https://docs.aura.me/).**
 
-- **App Setup**: `docs/doc/developer/AppSetup.mdx` - [View online](https://docs.omi.me/doc/developer/AppSetup)
-- **BLE Protocol**: `docs/doc/developer/Protocol.mdx` - [View online](https://docs.omi.me/doc/developer/Protocol)
+- **App Setup**: `docs/doc/developer/AppSetup.mdx` - [View online](https://docs.aura.me/doc/developer/AppSetup)
+- **BLE Protocol**: `docs/doc/developer/Protocol.mdx` - [View online](https://docs.aura.me/doc/developer/Protocol)
 - **Flutter Architecture**: `.cursor/rules/flutter-architecture.mdc`
 
 ## Related Cursor Resources

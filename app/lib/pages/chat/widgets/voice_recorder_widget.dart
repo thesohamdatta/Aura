@@ -4,10 +4,10 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 
 import 'package:provider/provider.dart';
-import 'package:omi/widgets/shimmer_with_timeout.dart';
+import 'package:aura/widgets/shimmer_with_timeout.dart';
 
-import 'package:omi/providers/voice_recorder_provider.dart';
-import 'package:omi/utils/l10n_extensions.dart';
+import 'package:aura/providers/voice_recorder_provider.dart';
+import 'package:aura/utils/l10n_extensions.dart';
 
 class VoiceRecorderWidget extends StatefulWidget {
   final Function(String) onTranscriptReady;

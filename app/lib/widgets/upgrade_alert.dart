@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 
 import 'package:upgrader/upgrader.dart';
 
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/l10n_extensions.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/l10n_extensions.dart';
 
 class MyUpgrader extends Upgrader {
   MyUpgrader({super.debugLogging, super.debugDisplayOnce});

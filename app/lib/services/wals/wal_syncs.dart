@@ -1,12 +1,12 @@
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/backend/schema/bt_device/bt_device.dart';
-import 'package:omi/backend/schema/conversation.dart';
-import 'package:omi/services/wals/flash_page_wal_sync.dart';
-import 'package:omi/services/wals/local_wal_sync.dart';
-import 'package:omi/services/wals/sdcard_wal_sync.dart';
-import 'package:omi/services/wals/wal.dart';
-import 'package:omi/services/wals/wal_interfaces.dart';
-import 'package:omi/utils/logger.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/backend/schema/bt_device/bt_device.dart';
+import 'package:aura/backend/schema/conversation.dart';
+import 'package:aura/services/wals/flash_page_wal_sync.dart';
+import 'package:aura/services/wals/local_wal_sync.dart';
+import 'package:aura/services/wals/sdcard_wal_sync.dart';
+import 'package:aura/services/wals/wal.dart';
+import 'package:aura/services/wals/wal_interfaces.dart';
+import 'package:aura/utils/logger.dart';
 
 class WalSyncs implements IWalSync {
   late LocalWalSyncImpl _phoneSync;

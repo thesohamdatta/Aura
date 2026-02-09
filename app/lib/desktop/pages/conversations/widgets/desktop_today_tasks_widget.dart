@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 import 'package:provider/provider.dart';
 
-import 'package:omi/backend/schema/schema.dart';
-import 'package:omi/providers/action_items_provider.dart';
-import 'package:omi/providers/home_provider.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/responsive/responsive_helper.dart';
+import 'package:aura/backend/schema/schema.dart';
+import 'package:aura/providers/action_items_provider.dart';
+import 'package:aura/providers/home_provider.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/responsive/responsive_helper.dart';
 
 /// Desktop widget showing top 3 today's tasks with "Show all ->" button
 class DesktopTodayTasksWidget extends StatelessWidget {

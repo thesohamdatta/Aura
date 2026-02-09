@@ -554,7 +554,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get deviceInfoSection => 'Eszköz információk';
 
   @override
-  String get customizationSection => 'Testreszabás';
+  String get custaurazationSection => 'Testreszabás';
 
   @override
   String get hardwareSection => 'Hardver';
@@ -763,19 +763,19 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get shareStatsMessage =>
-      'Megosztom az Omi statisztikáimat! (omi.me - mindig rendelkezésre álló AI asszisztensed)';
+      'Megosztom az Omi statisztikáimat! (aura.me - mindig rendelkezésre álló AI asszisztensed)';
 
   @override
-  String get sharePeriodToday => 'Ma az omi:';
+  String get sharePeriodToday => 'Ma az aura:';
 
   @override
-  String get sharePeriodMonth => 'Ebben a hónapban az omi:';
+  String get sharePeriodMonth => 'Ebben a hónapban az aura:';
 
   @override
-  String get sharePeriodYear => 'Ebben az évben az omi:';
+  String get sharePeriodYear => 'Ebben az évben az aura:';
 
   @override
-  String get sharePeriodAllTime => 'Eddig az omi:';
+  String get sharePeriodAllTime => 'Eddig az aura:';
 
   @override
   String shareStatsListened(String minutes) {
@@ -810,7 +810,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get noLogFilesFound => 'Nem találhatók naplófájlok.';
 
   @override
-  String get omiDebugLog => 'Omi hibakeresési napló';
+  String get auraDebugLog => 'Omi hibakeresési napló';
 
   @override
   String get logShared => 'Napló megosztva';
@@ -1022,7 +1022,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get connect => 'Connect';
 
   @override
-  String get comingSoon => 'Hamarosan';
+  String get caurangSoon => 'Hamarosan';
 
   @override
   String get integrationsFooter =>
@@ -1209,7 +1209,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get refresh => 'Frissítés';
 
   @override
-  String get noUpcomingMeetings => 'Nincs közelgő találkozó';
+  String get noUpcaurangMeetings => 'Nincs közelgő találkozó';
 
   @override
   String get checkingNextDays => 'Következő 30 nap ellenőrzése';
@@ -1218,7 +1218,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get tomorrow => 'Holnap';
 
   @override
-  String get googleCalendarComingSoon => 'Google naptár integráció hamarosan!';
+  String get googleCalendarCaurangSoon => 'Google naptár integráció hamarosan!';
 
   @override
   String connectedAsUser(String userId) {
@@ -1445,7 +1445,7 @@ class AppLocalizationsHu extends AppLocalizations {
   }
 
   @override
-  String integrationComingSoon(String appName) {
+  String integrationCaurangSoon(String appName) {
     return 'A(z) $appName integrációja hamarosan! Keményen dolgozunk, hogy több feladatkezelési lehetőséget hozzunk.';
   }
 
@@ -1468,13 +1468,13 @@ class AppLocalizationsHu extends AppLocalizations {
   String get bringYourOwn => 'Hozd a sajátod';
 
   @override
-  String get payYourSttProvider => 'Szabadon használd az omi-t. Csak az STT szolgáltatódnak fizetsz közvetlenül.';
+  String get payYourSttProvider => 'Szabadon használd az aura-t. Csak az STT szolgáltatódnak fizetsz közvetlenül.';
 
   @override
   String get freeMinutesMonth => '1200 ingyenes perc/hónap tartalmazza. Korlátlan a következővel: ';
 
   @override
-  String get omiUnlimited => 'Omi Unlimited';
+  String get auraUnlimited => 'Omi Unlimited';
 
   @override
   String get hostRequired => 'Host szükséges';
@@ -1596,7 +1596,7 @@ class AppLocalizationsHu extends AppLocalizations {
   }
 
   @override
-  String get omiTranscription => 'Omi átírás';
+  String get auraTranscription => 'Omi átírás';
 
   @override
   String get bestInClassTranscription => 'Legjobb átírás a kategóriában, zéró beállítással';
@@ -1905,7 +1905,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get termsOfUse => 'Felhasználási feltételeket';
 
   @override
-  String get omiYourAiCompanion => 'Omi – AI társad';
+  String get auraYourAiCompanion => 'Omi – AI társad';
 
   @override
   String get captureEveryMoment =>
@@ -2426,7 +2426,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get privacyPolicyTitle => 'Adatvédelmi irányelvek';
 
   @override
-  String get omiSttProvider => 'Omi';
+  String get auraSttProvider => 'Omi';
 
   @override
   String labelCopied(String label) {
@@ -2584,7 +2584,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get checksForAudioFiles => 'Ellenőrzi a hangfájlokat az SD kártyán';
 
   @override
-  String get omiSyncsAudioFiles => 'Az Omi ezután szinkronizálja a hangfájlokat a szerverrel';
+  String get auraSyncsAudioFiles => 'Az Omi ezután szinkronizálja a hangfájlokat a szerverrel';
 
   @override
   String get serverProcessesAudio => 'A szerver feldolgozza a hangfájlokat és emlékeket hoz létre';
@@ -3368,7 +3368,7 @@ class AppLocalizationsHu extends AppLocalizations {
   }
 
   @override
-  String get omisMemoryCleared => 'Az Omi rólad szóló memóriája törölve lett';
+  String get aurasMemoryCleared => 'Az Omi rólad szóló memóriája törölve lett';
 
   @override
   String get welcomeToOmi => 'Üdvözöljük az Omiban';
@@ -3795,7 +3795,7 @@ class AppLocalizationsHu extends AppLocalizations {
   }
 
   @override
-  String get translatedByOmi => 'fordította az omi';
+  String get translatedByOmi => 'fordította az aura';
 
   @override
   String get backToConversations => 'Vissza a beszélgetésekhez';
@@ -3895,7 +3895,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get showMeetingsInMenuBar => 'Találkozók megjelenítése a menüsorban';
 
   @override
-  String get displayUpcomingMeetingsDescription => 'Közelgő találkozók megjelenítése a menüsorban';
+  String get displayUpcaurangMeetingsDescription => 'Közelgő találkozók megjelenítése a menüsorban';
 
   @override
   String get showEventsWithoutParticipants => 'Résztvevők nélküli események megjelenítése';
@@ -3904,7 +3904,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get includePersonalEventsDescription => 'Résztvevők nélküli személyes események befoglalása';
 
   @override
-  String get upcomingMeetings => 'Közelgő találkozók';
+  String get upcaurangMeetings => 'Közelgő találkozók';
 
   @override
   String get checkingNext7Days => 'A következő 7 nap ellenőrzése';
@@ -4178,7 +4178,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get weekdaySun => 'Vas';
 
   @override
-  String serviceIntegrationComingSoon(String serviceName) {
+  String serviceIntegrationCaurangSoon(String serviceName) {
     return '$serviceName integráció hamarosan';
   }
 
@@ -4230,11 +4230,11 @@ class AppLocalizationsHu extends AppLocalizations {
   }
 
   @override
-  String get omiApiKeys => 'Omi API-kulcsok';
+  String get auraApiKeys => 'Omi API-kulcsok';
 
   @override
   String get apiKeysDescription =>
-      'Az API-kulcsokat hitelesítésre használják, amikor az alkalmazásod kommunikál az OMI szerverrel. Lehetővé teszik az alkalmazásod számára, hogy emlékeket hozzon létre és biztonságosan hozzáférjen más OMI szolgáltatásokhoz.';
+      'Az API-kulcsokat hitelesítésre használják, amikor az alkalmazásod kommunikál az AURA szerverrel. Lehetővé teszik az alkalmazásod számára, hogy emlékeket hozzon létre és biztonságosan hozzáférjen más AURA szolgáltatásokhoz.';
 
   @override
   String get aboutOmiApiKeys => 'Az Omi API-kulcsokról';
@@ -4383,7 +4383,7 @@ class AppLocalizationsHu extends AppLocalizations {
       'A végpontok közötti titkosítás a magánélet aranystandardja. Ha engedélyezve van, az adatait az eszközén titkosítjuk, mielőtt elküldenénk a szervereinkre. Ez azt jelenti, hogy senki, még az Omi sem férhet hozzá a tartalmához.';
 
   @override
-  String get importantTradeoffs => 'Fontos kompromisszumok:';
+  String get importantTradeoffs => 'Fontos kompraurasszumok:';
 
   @override
   String get e2eeTradeoff1 => '• Egyes funkciók, mint például a külső alkalmazás-integrációk, letilthatók.';
@@ -4392,7 +4392,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get e2eeTradeoff2 => '• Ha elveszíti jelszavát, az adatai nem állíthatók helyre.';
 
   @override
-  String get featureComingSoon => 'Ez a funkció hamarosan érkezik!';
+  String get featureCaurangSoon => 'Ez a funkció hamarosan érkezik!';
 
   @override
   String get migrationInProgressMessage =>
@@ -4487,7 +4487,7 @@ class AppLocalizationsHu extends AppLocalizations {
   }
 
   @override
-  String get omiTraining => 'Omi Képzés';
+  String get auraTraining => 'Omi Képzés';
 
   @override
   String get trainingDataProgram => 'Képzési adatprogram';
@@ -4501,7 +4501,7 @@ class AppLocalizationsHu extends AppLocalizations {
       '• Az adatai segítenek az AI modellek fejlesztésében\n• Csak nem érzékeny adatok kerülnek megosztásra\n• Teljesen átlátható folyamat';
 
   @override
-  String get learnMoreAtOmiTraining => 'További információ: omi.me/training';
+  String get learnMoreAtOmiTraining => 'További információ: aura.me/training';
 
   @override
   String get agreeToContributeData => 'Megértem és beleegyezem, hogy hozzájáruljak adataimmal az AI képzéséhez';
@@ -4792,7 +4792,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get minutes => 'perc';
 
   @override
-  String get omiHas => 'Omi:';
+  String get auraHas => 'Omi:';
 
   @override
   String get premiumMinutesUsed => 'Prémium percek elhasználva.';
@@ -4821,7 +4821,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get selectZipFileToImport => 'Válassza ki az importálandó .zip fájlt!';
 
   @override
-  String get otherDevicesComingSoon => 'Más eszközök hamarosan';
+  String get otherDevicesCaurangSoon => 'Más eszközök hamarosan';
 
   @override
   String get deleteAllLimitlessConversations => 'Törli az összes Limitless beszélgetést?';
@@ -5168,7 +5168,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get enableApps => 'Alkalmazások engedélyezése';
 
   @override
-  String get omiAppName => 'Omi';
+  String get auraAppName => 'Omi';
 
   @override
   String get showMore => 'mutass többet ↓';
@@ -5476,7 +5476,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get wrappedSwipeUpToBegin => 'Húzd felfelé a kezdéshez';
 
   @override
-  String get wrappedShareText => '2025-öm, az Omi által megőrizve ✨ omi.me/wrapped';
+  String get wrappedShareText => '2025-öm, az Omi által megőrizve ✨ aura.me/wrapped';
 
   @override
   String get wrappedFailedToShare => 'Megosztás sikertelen. Kérjük, próbáld újra.';
@@ -6255,7 +6255,7 @@ class AppLocalizationsHu extends AppLocalizations {
   }
 
   @override
-  String get omiTranscriptionOptimized =>
+  String get auraTranscriptionOptimized =>
       'Az Omi beépített élő átírása valós idejű beszélgetésekre van optimalizálva automatikus beszélő-felismeréssel és diarizációval.';
 
   @override
@@ -6972,7 +6972,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get almostDone => 'Almost done...';
 
   @override
-  String get omiSays => 'omi says';
+  String get auraSays => 'aura says';
 
   @override
   String get analyzingYourData => 'Adataid elemzése...';

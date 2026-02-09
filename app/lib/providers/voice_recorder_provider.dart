@@ -6,13 +6,13 @@ import 'package:flutter/material.dart';
 
 import 'package:permission_handler/permission_handler.dart';
 
-import 'package:omi/backend/http/api/messages.dart';
-import 'package:omi/main.dart';
-import 'package:omi/services/services.dart';
-import 'package:omi/utils/alerts/app_snackbar.dart';
-import 'package:omi/utils/file.dart';
-import 'package:omi/utils/logger.dart';
-import 'package:omi/utils/l10n_extensions.dart';
+import 'package:aura/backend/http/api/messages.dart';
+import 'package:aura/main.dart';
+import 'package:aura/services/services.dart';
+import 'package:aura/utils/alerts/app_snackbar.dart';
+import 'package:aura/utils/file.dart';
+import 'package:aura/utils/logger.dart';
+import 'package:aura/utils/l10n_extensions.dart';
 
 enum VoiceRecorderState {
   idle,

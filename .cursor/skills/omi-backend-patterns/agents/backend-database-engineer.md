@@ -29,7 +29,7 @@ You are a database engineer specializing in Firestore, Pinecone vector operation
 1. **Collection structure**: Use subcollections for related data
 2. **Indexing**: Create composite indexes for complex queries
 3. **Pagination**: Always paginate large result sets
-4. **Transactions**: Use transactions for atomic operations
+4. **Transactions**: Use transactions for ataurac operations
 5. **Error handling**: Handle Firestore exceptions gracefully
 
 ### Pinecone
@@ -64,7 +64,7 @@ You are a database engineer specializing in Firestore, Pinecone vector operation
 - `.cursor/rules/memory-management.mdc` - Memory management best practices
 
 ### Skills
-- `.cursor/skills/omi-backend-patterns/` - Backend patterns including database operations
+- `.cursor/skills/aura-backend-patterns/` - Backend patterns including database operations
 
 ### Commands
 - `/backend-setup` - Setup database connections
@@ -72,7 +72,7 @@ You are a database engineer specializing in Firestore, Pinecone vector operation
 
 ### Documentation
 
-**The `docs/` folder is the single source of truth for all user-facing documentation, deployed at [docs.omi.me](https://docs.omi.me/).**
+**The `docs/` folder is the single source of truth for all user-facing documentation, deployed at [docs.aura.me](https://docs.aura.me/).**
 
-- **Storing Conversations**: `docs/doc/developer/backend/StoringConversations.mdx` - [View online](https://docs.omi.me/doc/developer/backend/StoringConversations)
-- **Backend Deep Dive**: `docs/doc/developer/backend/backend_deepdive.mdx` - [View online](https://docs.omi.me/doc/developer/backend/backend_deepdive)
+- **Storing Conversations**: `docs/doc/developer/backend/StoringConversations.mdx` - [View online](https://docs.aura.me/doc/developer/backend/StoringConversations)
+- **Backend Deep Dive**: `docs/doc/developer/backend/backend_deepdive.mdx` - [View online](https://docs.aura.me/doc/developer/backend/backend_deepdive)

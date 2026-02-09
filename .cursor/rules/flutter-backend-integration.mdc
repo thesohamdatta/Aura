@@ -305,11 +305,11 @@ class Conversation {
 
 ## Related Documentation
 
-**The `docs/` folder is the single source of truth for all user-facing documentation, deployed at [docs.omi.me](https://docs.omi.me/).**
+**The `docs/` folder is the single source of truth for all user-facing documentation, deployed at [docs.aura.me](https://docs.aura.me/).**
 
-- **App Setup**: `docs/doc/developer/AppSetup.mdx` - [View online](https://docs.omi.me/doc/developer/AppSetup)
-- **API Overview**: `docs/doc/developer/api/overview.mdx` - [View online](https://docs.omi.me/doc/developer/api/overview)
-- **API Endpoints**: `docs/api-reference/` - [View online](https://docs.omi.me/api-reference/)
+- **App Setup**: `docs/doc/developer/AppSetup.mdx` - [View online](https://docs.aura.me/doc/developer/AppSetup)
+- **API Overview**: `docs/doc/developer/api/overview.mdx` - [View online](https://docs.aura.me/doc/developer/api/overview)
+- **API Endpoints**: `docs/api-reference/` - [View online](https://docs.aura.me/api-reference/)
 - **Flutter Architecture**: `.cursor/rules/flutter-architecture.mdc`
 
 ## Related Cursor Resources
@@ -320,8 +320,8 @@ class Conversation {
 - `.cursor/rules/backend-architecture.mdc` - Backend system architecture
 
 ### Skills
-- `.cursor/skills/omi-flutter-patterns/` - Flutter patterns including backend integration
-- `.cursor/skills/omi-api-integration/` - API integration patterns
+- `.cursor/skills/aura-flutter-patterns/` - Flutter patterns including backend integration
+- `.cursor/skills/aura-api-integration/` - API integration patterns
 
 ### Subagents
 - `.cursor/agents/flutter-developer/` - Flutter development specialist

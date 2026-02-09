@@ -5,14 +5,14 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/backend/schema/schema.dart';
-import 'package:omi/desktop/pages/actions/widgets/desktop_action_item_form_dialog.dart';
-import 'package:omi/providers/action_items_provider.dart';
-import 'package:omi/ui/atoms/omi_button.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/responsive/responsive_helper.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/backend/schema/schema.dart';
+import 'package:aura/desktop/pages/actions/widgets/desktop_action_item_form_dialog.dart';
+import 'package:aura/providers/action_items_provider.dart';
+import 'package:aura/ui/atoms/aura_button.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/responsive/responsive_helper.dart';
 
 enum TaskCategory { today, tomorrow, noDeadline, later }
 

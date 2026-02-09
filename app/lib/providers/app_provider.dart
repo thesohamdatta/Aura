@@ -2,16 +2,16 @@ import 'dart:async';
 
 import 'package:collection/collection.dart';
 
-import 'package:omi/backend/http/api/apps.dart';
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/backend/schema/app.dart';
-import 'package:omi/main.dart';
-import 'package:omi/providers/base_provider.dart';
-import 'package:omi/utils/alerts/app_dialog.dart';
-import 'package:omi/utils/alerts/app_snackbar.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/logger.dart';
+import 'package:aura/backend/http/api/apps.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/backend/schema/app.dart';
+import 'package:aura/main.dart';
+import 'package:aura/providers/base_provider.dart';
+import 'package:aura/utils/alerts/app_dialog.dart';
+import 'package:aura/utils/alerts/app_snackbar.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/logger.dart';
 
 class AppProvider extends BaseProvider {
   List<App> apps = [];

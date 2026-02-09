@@ -3,19 +3,19 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'package:omi/backend/http/api/apps.dart' as apps_api;
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/env/env.dart';
-import 'package:omi/main.dart';
-import 'package:omi/providers/base_provider.dart';
-import 'package:omi/services/auth_service.dart';
-import 'package:omi/services/notifications.dart';
-import 'package:omi/utils/alerts/app_snackbar.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/logger.dart';
-import 'package:omi/utils/platform/platform_manager.dart';
-import 'package:omi/utils/platform/platform_service.dart';
+import 'package:aura/backend/http/api/apps.dart' as apps_api;
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/env/env.dart';
+import 'package:aura/main.dart';
+import 'package:aura/providers/base_provider.dart';
+import 'package:aura/services/auth_service.dart';
+import 'package:aura/services/notifications.dart';
+import 'package:aura/utils/alerts/app_snackbar.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/logger.dart';
+import 'package:aura/utils/platform/platform_manager.dart';
+import 'package:aura/utils/platform/platform_service.dart';
 
 class AuthenticationProvider extends BaseProvider {
   FirebaseAuth get _auth => FirebaseAuth.instance;
@@ -186,11 +186,11 @@ class AuthenticationProvider extends BaseProvider {
   }
 
   void openTermsOfService() {
-    _launchUrl('https://www.omi.me/pages/terms-of-service');
+    _launchUrl('https://www.aura.me/pages/terms-of-service');
   }
 
   void openPrivacyPolicy() {
-    _launchUrl('https://www.omi.me/pages/privacy');
+    _launchUrl('https://www.aura.me/pages/privacy');
   }
 
   void _launchUrl(String url) async {

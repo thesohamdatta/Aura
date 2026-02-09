@@ -6,12 +6,12 @@ import 'package:flutter/material.dart';
 import 'package:collection/collection.dart';
 import 'package:provider/provider.dart';
 
-import 'package:omi/backend/schema/person.dart';
-import 'package:omi/providers/connectivity_provider.dart';
-import 'package:omi/providers/people_provider.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/widgets/dialog.dart';
-import 'package:omi/widgets/extensions/functions.dart';
+import 'package:aura/backend/schema/person.dart';
+import 'package:aura/providers/connectivity_provider.dart';
+import 'package:aura/providers/people_provider.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/widgets/dialog.dart';
+import 'package:aura/widgets/extensions/functions.dart';
 
 class UserPeoplePage extends StatelessWidget {
   const UserPeoplePage({super.key});

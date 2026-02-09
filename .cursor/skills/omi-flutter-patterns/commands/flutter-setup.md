@@ -49,7 +49,7 @@ This sets up the app to use Omi's development backend automatically.
    ```
 
 5. **Add API keys to `.dev.env`**
-   - `API_BASE_URL=https://api.omiapi.com/` (or your backend URL)
+   - `API_BASE_URL=https://api.auraapi.com/` (or your backend URL)
    - `OPENAI_API_KEY` (optional)
    - `GOOGLE_MAPS_API_KEY` (optional)
 
@@ -90,10 +90,10 @@ This sets up the app to use Omi's development backend automatically.
 
 ## Related Documentation
 
-**The `docs/` folder is the single source of truth for all user-facing documentation, deployed at [docs.omi.me](https://docs.omi.me/).**
+**The `docs/` folder is the single source of truth for all user-facing documentation, deployed at [docs.aura.me](https://docs.aura.me/).**
 
-- **App Setup**: `docs/doc/developer/AppSetup.mdx` - [View online](https://docs.omi.me/doc/developer/AppSetup)
-- **BLE Protocol**: `docs/doc/developer/Protocol.mdx` - [View online](https://docs.omi.me/doc/developer/Protocol)
+- **App Setup**: `docs/doc/developer/AppSetup.mdx` - [View online](https://docs.aura.me/doc/developer/AppSetup)
+- **BLE Protocol**: `docs/doc/developer/Protocol.mdx` - [View online](https://docs.aura.me/doc/developer/Protocol)
 - **Flutter Architecture**: `.cursor/rules/flutter-architecture.mdc`
 
 ## Related Cursor Resources
@@ -104,8 +104,8 @@ This sets up the app to use Omi's development backend automatically.
 - `.cursor/rules/flutter-localization.mdc` - Localization setup
 
 ### Skills
-- `.cursor/skills/omi-flutter-patterns/` - Flutter patterns
-- `.cursor/skills/omi-firmware-patterns/` - Firmware patterns for BLE
+- `.cursor/skills/aura-flutter-patterns/` - Flutter patterns
+- `.cursor/skills/aura-firmware-patterns/` - Firmware patterns for BLE
 
 ### Subagents
 - `.cursor/agents/flutter-developer/` - Can help with setup

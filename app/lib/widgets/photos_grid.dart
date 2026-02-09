@@ -2,8 +2,8 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 
-import 'package:omi/backend/schema/conversation.dart';
-import 'package:omi/widgets/photo_viewer_page.dart';
+import 'package:aura/backend/schema/conversation.dart';
+import 'package:aura/widgets/photo_viewer_page.dart';
 
 class PhotosGridComponent extends StatelessWidget {
   final List<ConversationPhoto> photos;

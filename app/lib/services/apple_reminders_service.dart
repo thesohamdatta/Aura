@@ -1,11 +1,11 @@
 import 'package:flutter/services.dart';
 
-import 'package:omi/backend/http/api/action_items.dart';
-import 'package:omi/utils/logger.dart';
-import 'package:omi/utils/platform/platform_service.dart';
+import 'package:aura/backend/http/api/action_items.dart';
+import 'package:aura/utils/logger.dart';
+import 'package:aura/utils/platform/platform_service.dart';
 
 class AppleRemindersService {
-  static const _channel = MethodChannel('com.omi.apple_reminders');
+  static const _channel = MethodChannel('com.aura.apple_reminders');
 
   static final AppleRemindersService _instance = AppleRemindersService._internal();
   factory AppleRemindersService() => _instance;

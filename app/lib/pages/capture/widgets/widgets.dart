@@ -4,23 +4,23 @@ import 'package:flutter/material.dart';
 
 import 'package:provider/provider.dart';
 
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/backend/schema/bt_device/bt_device.dart';
-import 'package:omi/backend/schema/conversation.dart';
-import 'package:omi/backend/schema/message_event.dart';
-import 'package:omi/backend/schema/transcript_segment.dart';
-import 'package:omi/pages/home/firmware_update.dart';
-import 'package:omi/pages/home/omiglass_ota_update.dart';
-import 'package:omi/pages/speech_profile/page.dart';
-import 'package:omi/providers/capture_provider.dart';
-import 'package:omi/providers/device_provider.dart';
-import 'package:omi/providers/home_provider.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/enums.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/other/temp.dart';
-import 'package:omi/widgets/photos_grid.dart';
-import 'package:omi/widgets/transcript.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/backend/schema/bt_device/bt_device.dart';
+import 'package:aura/backend/schema/conversation.dart';
+import 'package:aura/backend/schema/message_event.dart';
+import 'package:aura/backend/schema/transcript_segment.dart';
+import 'package:aura/pages/home/firmware_update.dart';
+import 'package:aura/pages/home/auraglass_ota_update.dart';
+import 'package:aura/pages/speech_profile/page.dart';
+import 'package:aura/providers/capture_provider.dart';
+import 'package:aura/providers/device_provider.dart';
+import 'package:aura/providers/home_provider.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/enums.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/other/temp.dart';
+import 'package:aura/widgets/photos_grid.dart';
+import 'package:aura/widgets/transcript.dart';
 
 class SpeechProfileCardWidget extends StatelessWidget {
   const SpeechProfileCardWidget({super.key});

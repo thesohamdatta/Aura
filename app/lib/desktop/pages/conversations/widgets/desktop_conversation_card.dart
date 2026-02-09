@@ -5,18 +5,18 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:share_plus/share_plus.dart';
 
-import 'package:omi/backend/http/api/conversations.dart';
-import 'package:omi/backend/schema/conversation.dart';
-import 'package:omi/pages/settings/usage_page.dart';
-import 'package:omi/providers/conversation_provider.dart';
-import 'package:omi/ui/molecules/omi_confirm_dialog.dart';
-import 'package:omi/ui/molecules/omi_context_menu.dart';
-import 'package:omi/ui/molecules/omi_edit_dialog.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/other/temp.dart';
-import 'package:omi/utils/other/time_utils.dart';
-import 'package:omi/utils/responsive/responsive_helper.dart';
-import 'package:omi/widgets/extensions/string.dart';
+import 'package:aura/backend/http/api/conversations.dart';
+import 'package:aura/backend/schema/conversation.dart';
+import 'package:aura/pages/settings/usage_page.dart';
+import 'package:aura/providers/conversation_provider.dart';
+import 'package:aura/ui/molecules/aura_confirm_dialog.dart';
+import 'package:aura/ui/molecules/aura_context_menu.dart';
+import 'package:aura/ui/molecules/aura_edit_dialog.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/other/temp.dart';
+import 'package:aura/utils/other/time_utils.dart';
+import 'package:aura/utils/responsive/responsive_helper.dart';
+import 'package:aura/widgets/extensions/string.dart';
 
 class DesktopConversationCard extends StatefulWidget {
   final ServerConversation conversation;
@@ -308,7 +308,7 @@ class _DesktopConversationCardState extends State<DesktopConversationCard> {
         return;
       }
 
-      String content = 'https://h.omi.me/conversations/${widget.conversation.id}';
+      String content = 'https://h.aura.me/conversations/${widget.conversation.id}';
       await Share.share(content);
     } catch (e) {
       _showSnackBar(context.l10n.failedToGenerateShareLink);
@@ -329,7 +329,7 @@ class _DesktopConversationCardState extends State<DesktopConversationCard> {
         return;
       }
 
-      String content = 'https://h.omi.me/conversations/${widget.conversation.id}';
+      String content = 'https://h.aura.me/conversations/${widget.conversation.id}';
       await Clipboard.setData(ClipboardData(text: content));
 
       ScaffoldMessenger.of(context).showSnackBar(

@@ -4,13 +4,13 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:provider/provider.dart';
 
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/gen/assets.gen.dart';
-import 'package:omi/providers/auth_provider.dart';
-import 'package:omi/ui/atoms/omi_button.dart';
-import 'package:omi/ui/molecules/omi_sign_in_button.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/responsive/responsive_helper.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/gen/assets.gen.dart';
+import 'package:aura/providers/auth_provider.dart';
+import 'package:aura/ui/atoms/aura_button.dart';
+import 'package:aura/ui/molecules/aura_sign_in_button.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/responsive/responsive_helper.dart';
 
 class DesktopAuthScreen extends StatefulWidget {
   final VoidCallback onSignIn;

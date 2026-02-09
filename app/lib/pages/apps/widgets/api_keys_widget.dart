@@ -4,10 +4,10 @@ import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 
-import 'package:omi/backend/schema/app.dart';
-import 'package:omi/pages/apps/providers/add_app_provider.dart';
-import 'package:omi/utils/alerts/app_snackbar.dart';
-import 'package:omi/utils/l10n_extensions.dart';
+import 'package:aura/backend/schema/app.dart';
+import 'package:aura/pages/apps/providers/add_app_provider.dart';
+import 'package:aura/utils/alerts/app_snackbar.dart';
+import 'package:aura/utils/l10n_extensions.dart';
 
 class ApiKeysWidget extends StatefulWidget {
   final String appId;
@@ -166,7 +166,7 @@ class _ApiKeysWidgetState extends State<ApiKeysWidget> {
                           context: context,
                           builder: (dialogContext) => AlertDialog(
                             backgroundColor: const Color(0xFF1F1F25),
-                            title: Text(context.l10n.omiApiKeys),
+                            title: Text(context.l10n.auraApiKeys),
                             content: Text(
                               context.l10n.apiKeysDescription,
                             ),

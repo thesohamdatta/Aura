@@ -5,9 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:flutter_timezone/flutter_timezone.dart';
 
-import 'package:omi/backend/schema/message.dart';
-import 'package:omi/services/notifications/notification_interface.dart';
-import 'package:omi/utils/logger.dart';
+import 'package:aura/backend/schema/message.dart';
+import 'package:aura/services/notifications/notification_interface.dart';
+import 'package:aura/utils/logger.dart';
 
 /// Basic notification service for platforms without Firebase Messaging support
 /// Currently used for Windows - provides local notifications only

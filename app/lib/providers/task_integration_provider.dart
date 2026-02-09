@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-import 'package:omi/backend/http/api/task_integrations.dart';
-import 'package:omi/pages/settings/task_integrations_page.dart';
-import 'package:omi/services/apple_reminders_service.dart';
-import 'package:omi/services/asana_service.dart';
-import 'package:omi/services/clickup_service.dart';
-import 'package:omi/services/google_tasks_service.dart';
-import 'package:omi/services/todoist_service.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/logger.dart';
-import 'package:omi/utils/platform/platform_service.dart';
+import 'package:aura/backend/http/api/task_integrations.dart';
+import 'package:aura/pages/settings/task_integrations_page.dart';
+import 'package:aura/services/apple_reminders_service.dart';
+import 'package:aura/services/asana_service.dart';
+import 'package:aura/services/clickup_service.dart';
+import 'package:aura/services/google_tasks_service.dart';
+import 'package:aura/services/todoist_service.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/logger.dart';
+import 'package:aura/utils/platform/platform_service.dart';
 
 class TaskIntegrationProvider extends ChangeNotifier {
   TaskIntegrationApp _selectedApp;

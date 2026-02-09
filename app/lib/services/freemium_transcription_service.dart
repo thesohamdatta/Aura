@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 
 import 'package:path_provider/path_provider.dart';
 
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/models/custom_stt_config.dart';
-import 'package:omi/models/stt_provider.dart';
-import 'package:omi/utils/logger.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/models/custom_stt_config.dart';
+import 'package:aura/models/stt_provider.dart';
+import 'package:aura/utils/logger.dart';
 
 /// Enum representing the current freemium transcription state
 enum FreemiumTranscriptionState {

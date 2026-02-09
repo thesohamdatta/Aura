@@ -118,7 +118,7 @@ flutter build windows --flavor prod --release
 - `.cursor/rules/formatting.mdc` - Code formatting before build
 
 ### Skills
-- `.cursor/skills/omi-flutter-patterns/` - Flutter patterns including builds
+- `.cursor/skills/aura-flutter-patterns/` - Flutter patterns including builds
 
 ### Subagents
 - `.cursor/agents/flutter-developer/` - Can help with builds

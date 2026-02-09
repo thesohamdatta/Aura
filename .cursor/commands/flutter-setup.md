@@ -49,7 +49,7 @@ This sets up the app to use Omi's development backend automatically.
    ```
 
 5. **Add API keys to `.dev.env`**
-   - `API_BASE_URL=https://api.omiapi.com/` (or your backend URL)
+   - `API_BASE_URL=https://api.auraapi.com/` (or your backend URL)
    - `OPENAI_API_KEY` (optional)
    - `GOOGLE_MAPS_API_KEY` (optional)
 

@@ -2,7 +2,7 @@
 
 Generate or update documentation for the @-mentioned code or current feature.
 
-**The `docs/` folder is the single source of truth for all user-facing documentation, deployed at [docs.omi.me](https://docs.omi.me/).**
+**The `docs/` folder is the single source of truth for all user-facing documentation, deployed at [docs.aura.me](https://docs.aura.me/).**
 
 ## Process
 
@@ -16,7 +16,7 @@ Generate or update documentation for the @-mentioned code or current feature.
    - Function/class docstrings in code
    - Architecture diagrams (Mermaid if appropriate)
 4. Ensure documentation is clear, accurate, and follows project conventions
-5. Verify paths match docs.omi.me URL structure
+5. Verify paths match docs.aura.me URL structure
 
 ## Related Cursor Resources
 

@@ -9,33 +9,33 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:share_plus/share_plus.dart';
-import 'package:omi/widgets/shimmer_with_timeout.dart';
+import 'package:aura/widgets/shimmer_with_timeout.dart';
 import 'package:skeletonizer/skeletonizer.dart';
 import 'package:timeago/timeago.dart' as timeago;
 import 'package:url_launcher/url_launcher.dart';
 
-import 'package:omi/backend/http/api/apps.dart';
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/l10n/app_localizations.dart';
-import 'package:omi/pages/apps/app_detail/reviews_list_page.dart';
-import 'package:omi/pages/apps/app_home_web_page.dart';
-import 'package:omi/pages/apps/markdown_viewer.dart';
-import 'package:omi/pages/apps/providers/add_app_provider.dart';
-import 'package:omi/pages/apps/widgets/full_screen_image_viewer.dart';
-import 'package:omi/pages/chat/page.dart';
-import 'package:omi/providers/app_provider.dart';
-import 'package:omi/providers/message_provider.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/logger.dart';
-import 'package:omi/utils/other/temp.dart';
-import 'package:omi/widgets/animated_loading_button.dart';
-import 'package:omi/widgets/confirmation_dialog.dart';
-import 'package:omi/widgets/dialog.dart';
-import 'package:omi/widgets/extensions/string.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/backend/http/api/payment.dart';
-import 'package:omi/backend/schema/app.dart';
-import 'package:omi/pages/apps/widgets/show_app_options_sheet.dart';
+import 'package:aura/backend/http/api/apps.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/l10n/app_localizations.dart';
+import 'package:aura/pages/apps/app_detail/reviews_list_page.dart';
+import 'package:aura/pages/apps/app_home_web_page.dart';
+import 'package:aura/pages/apps/markdown_viewer.dart';
+import 'package:aura/pages/apps/providers/add_app_provider.dart';
+import 'package:aura/pages/apps/widgets/full_screen_image_viewer.dart';
+import 'package:aura/pages/chat/page.dart';
+import 'package:aura/providers/app_provider.dart';
+import 'package:aura/providers/message_provider.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/logger.dart';
+import 'package:aura/utils/other/temp.dart';
+import 'package:aura/widgets/animated_loading_button.dart';
+import 'package:aura/widgets/confirmation_dialog.dart';
+import 'package:aura/widgets/dialog.dart';
+import 'package:aura/widgets/extensions/string.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/backend/http/api/payment.dart';
+import 'package:aura/backend/schema/app.dart';
+import 'package:aura/pages/apps/widgets/show_app_options_sheet.dart';
 import 'widgets/capabilities_card.dart';
 import 'widgets/info_card_widget.dart';
 
@@ -790,13 +790,13 @@ class _AppDetailPageState extends State<AppDetailPage> {
 
                             if (app.isNotPersona()) {
                               await Share.share(
-                                'https://h.omi.me/apps/${app.id}',
+                                'https://h.aura.me/apps/${app.id}',
                                 subject: app.name,
                                 sharePositionOrigin: sharePositionOrigin,
                               );
                             } else {
                               await Share.share(
-                                'Check out this Persona on Omi AI: ${app.name} by ${app.author} \n\n${app.description.decodeString}\n\n\nhttps://personas.omi.me/u/${app.username}',
+                                'Check out this Persona on Omi AI: ${app.name} by ${app.author} \n\n${app.description.decodeString}\n\n\nhttps://personas.aura.me/u/${app.username}',
                                 subject: app.name,
                                 sharePositionOrigin: sharePositionOrigin,
                               );

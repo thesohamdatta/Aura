@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 import 'package:provider/provider.dart';
 
-import 'package:omi/pages/settings/task_integrations_page.dart';
-import 'package:omi/providers/task_integration_provider.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/logger.dart';
-import 'package:omi/utils/platform/platform_service.dart';
+import 'package:aura/pages/settings/task_integrations_page.dart';
+import 'package:aura/providers/task_integration_provider.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/logger.dart';
+import 'package:aura/utils/platform/platform_service.dart';
 
 class IntegrationSettingsPage extends StatefulWidget {
   final String appName;

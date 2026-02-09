@@ -72,7 +72,7 @@ Use `PlatformManager` for platform detection.
 - `.cursor/rules/flutter-platform-specific.mdc` - Platform-specific code
 
 ### Skills
-- `.cursor/skills/omi-flutter-patterns/` - Flutter patterns and workflows
+- `.cursor/skills/aura-flutter-patterns/` - Flutter patterns and workflows
 
 ### Commands
 - `/flutter-setup` - Setup Flutter environment
@@ -81,7 +81,7 @@ Use `PlatformManager` for platform detection.
 
 ### Documentation
 
-**The `docs/` folder is the single source of truth for all user-facing documentation, deployed at [docs.omi.me](https://docs.omi.me/).**
+**The `docs/` folder is the single source of truth for all user-facing documentation, deployed at [docs.aura.me](https://docs.aura.me/).**
 
-- **App Setup**: `docs/doc/developer/AppSetup.mdx` - [View online](https://docs.omi.me/doc/developer/AppSetup)
-- **BLE Protocol**: `docs/doc/developer/Protocol.mdx` - [View online](https://docs.omi.me/doc/developer/Protocol)
+- **App Setup**: `docs/doc/developer/AppSetup.mdx` - [View online](https://docs.aura.me/doc/developer/AppSetup)
+- **BLE Protocol**: `docs/doc/developer/Protocol.mdx` - [View online](https://docs.aura.me/doc/developer/Protocol)

@@ -1,6 +1,6 @@
-# Omi Frontend
+# Aura Frontend
 
-A Next.js web application for the Omi wearable device by Based Hardware. This frontend provides interfaces for managing memories, apps, and interacting with the Omi ecosystem.
+A Next.js web application for the Aura wearable device. This frontend provides interfaces for managing memories, apps, and interacting with the Aura ecosystem.
 
 ## Tech Stack
 
@@ -31,7 +31,7 @@ A Next.js web application for the Omi wearable device by Based Hardware. This fr
 
    ```bash
    git clone <repository-url>
-   cd omi/web/frontend
+   cd web/frontend
    ```
 
 2. **Install dependencies**
@@ -89,10 +89,10 @@ See `.env.template` for all required environment variables. Key variables includ
 
 ```bash
 # Build the image
-docker build -t omi-frontend .
+docker build -t aura-frontend .
 
 # Run the container
-docker run -p 3000:3000 omi-frontend
+docker run -p 3000:3000 aura-frontend
 ```
 
 ### Using Docker Compose
@@ -118,13 +118,13 @@ src/
 ├── lib/                  # Utility libraries (Firebase, etc.)
 ├── types/                # TypeScript type definitions
 ├── utils/                # Utility functions
-└── actions/              # Server actions
+|── actions/              # Server actions
 ```
 
 ## Key Features
 
 - **Memory Management**: View and organize personal memories
-- **App Ecosystem**: Browse and manage Omi apps
+- **App Ecosystem**: Browse and manage Aura apps
 - **Search**: Algolia-powered search functionality
 - **Real-time Updates**: Firebase integration for live data
 - **Responsive Design**: Mobile-first responsive interface
@@ -132,7 +132,7 @@ src/
 
 ## API Integration
 
-The frontend connects to the Omi backend API for:
+The frontend connects to the Aura backend API for:
 
 - User authentication and management
 - Memory data synchronization
@@ -166,8 +166,8 @@ Ensure all environment variables are properly configured for your deployment env
 
 ## Support
 
-For issues related to the Omi frontend application, please check the documentation or contact the development team.
+For issues related to the Aura frontend application, please check the documentation or contact the development team.
 
 ## License
 
-This project is part of the Omi ecosystem by Based Hardware.
+This project is licensed under the MIT License.

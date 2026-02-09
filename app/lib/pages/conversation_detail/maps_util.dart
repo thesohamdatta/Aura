@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:map_launcher/map_launcher.dart';
 
-import 'package:omi/env/env.dart';
+import 'package:aura/env/env.dart';
 
 class MapsUtil {
   static String getMapImageUrl(double lat, double lng) {

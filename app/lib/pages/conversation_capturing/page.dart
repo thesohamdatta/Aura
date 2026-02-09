@@ -6,21 +6,21 @@ import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 
-import 'package:omi/backend/preferences.dart';
-import 'package:omi/backend/schema/conversation.dart';
-import 'package:omi/backend/schema/message_event.dart';
-import 'package:omi/backend/schema/transcript_segment.dart';
-import 'package:omi/pages/capture/widgets/widgets.dart';
-import 'package:omi/pages/conversation_detail/widgets/name_speaker_sheet.dart';
-import 'package:omi/providers/capture_provider.dart';
-import 'package:omi/providers/connectivity_provider.dart';
-import 'package:omi/providers/device_provider.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/utils/enums.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/platform/platform_service.dart';
-import 'package:omi/widgets/confirmation_dialog.dart';
-import 'package:omi/widgets/photo_viewer_page.dart';
+import 'package:aura/backend/preferences.dart';
+import 'package:aura/backend/schema/conversation.dart';
+import 'package:aura/backend/schema/message_event.dart';
+import 'package:aura/backend/schema/transcript_segment.dart';
+import 'package:aura/pages/capture/widgets/widgets.dart';
+import 'package:aura/pages/conversation_detail/widgets/name_speaker_sheet.dart';
+import 'package:aura/providers/capture_provider.dart';
+import 'package:aura/providers/connectivity_provider.dart';
+import 'package:aura/providers/device_provider.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/utils/enums.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/platform/platform_service.dart';
+import 'package:aura/widgets/confirmation_dialog.dart';
+import 'package:aura/widgets/photo_viewer_page.dart';
 
 class ConversationCapturingPage extends StatefulWidget {
   final String? topConversationId;

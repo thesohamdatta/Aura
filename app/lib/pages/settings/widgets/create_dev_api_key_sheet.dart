@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 import 'package:provider/provider.dart';
 
-import 'package:omi/pages/settings/widgets/dev_api_key_created_dialog.dart';
-import 'package:omi/providers/dev_api_key_provider.dart';
-import 'package:omi/utils/alerts/app_snackbar.dart';
-import 'package:omi/utils/l10n_extensions.dart';
+import 'package:aura/pages/settings/widgets/dev_api_key_created_dialog.dart';
+import 'package:aura/providers/dev_api_key_provider.dart';
+import 'package:aura/utils/alerts/app_snackbar.dart';
+import 'package:aura/utils/l10n_extensions.dart';
 
 class CreateDevApiKeySheet extends StatefulWidget {
   const CreateDevApiKeySheet({super.key});

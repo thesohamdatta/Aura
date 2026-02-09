@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import 'package:omi/providers/memories_provider.dart';
-import 'package:omi/ui/atoms/omi_icon_button.dart';
-import 'package:omi/utils/l10n_extensions.dart';
-import 'package:omi/utils/responsive/responsive_helper.dart';
+import 'package:aura/providers/memories_provider.dart';
+import 'package:aura/ui/atoms/aura_icon_button.dart';
+import 'package:aura/utils/l10n_extensions.dart';
+import 'package:aura/utils/responsive/responsive_helper.dart';
 
 class DesktopMemoryManagementDialog extends StatelessWidget {
   final MemoriesProvider provider;
@@ -469,7 +469,7 @@ class DesktopMemoryManagementDialog extends StatelessWidget {
                             provider.deleteAllMemories();
                             Navigator.pop(context); // Close confirmation dialog
                             Navigator.pop(context); // Close management dialog
-                            _showSuccessMessage(context, context.l10n.omisMemoryCleared, FontAwesomeIcons.trash);
+                            _showSuccessMessage(context, context.l10n.aurasMemoryCleared, FontAwesomeIcons.trash);
                           },
                           borderRadius: BorderRadius.circular(12),
                           child: Container(

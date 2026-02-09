@@ -539,7 +539,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get deviceInfoSection => '设备信息';
 
   @override
-  String get customizationSection => '自定义';
+  String get custaurazationSection => '自定义';
 
   @override
   String get hardwareSection => '硬件';
@@ -745,7 +745,7 @@ class AppLocalizationsZh extends AppLocalizations {
   }
 
   @override
-  String get shareStatsMessage => '分享我的 Omi 统计数据！(omi.me - 我的全天候 AI 助手)';
+  String get shareStatsMessage => '分享我的 Omi 统计数据！(aura.me - 我的全天候 AI 助手)';
 
   @override
   String get sharePeriodToday => '今天 Omi：';
@@ -792,7 +792,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get noLogFilesFound => '未找到日志文件。';
 
   @override
-  String get omiDebugLog => 'Omi 调试日志';
+  String get auraDebugLog => 'Omi 调试日志';
 
   @override
   String get logShared => '日志已分享';
@@ -1002,7 +1002,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get connect => 'Connect';
 
   @override
-  String get comingSoon => '即将推出';
+  String get caurangSoon => '即将推出';
 
   @override
   String get integrationsFooter => '连接您的应用以在聊天中查看数据和指标。';
@@ -1179,7 +1179,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get refresh => '刷新';
 
   @override
-  String get noUpcomingMeetings => '没有即将到来的会议';
+  String get noUpcaurangMeetings => '没有即将到来的会议';
 
   @override
   String get checkingNextDays => '正在检查未来 30 天';
@@ -1188,7 +1188,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get tomorrow => '明天';
 
   @override
-  String get googleCalendarComingSoon => 'Google 日历集成即将推出！';
+  String get googleCalendarCaurangSoon => 'Google 日历集成即将推出！';
 
   @override
   String connectedAsUser(String userId) {
@@ -1411,7 +1411,7 @@ class AppLocalizationsZh extends AppLocalizations {
   }
 
   @override
-  String integrationComingSoon(String appName) {
+  String integrationCaurangSoon(String appName) {
     return '$appName 集成即将推出！';
   }
 
@@ -1440,7 +1440,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get freeMinutesMonth => '包含 1,200 免费分钟/月。';
 
   @override
-  String get omiUnlimited => 'Omi 无限版';
+  String get auraUnlimited => 'Omi 无限版';
 
   @override
   String get hostRequired => '需要主机';
@@ -1562,7 +1562,7 @@ class AppLocalizationsZh extends AppLocalizations {
   }
 
   @override
-  String get omiTranscription => 'Omi 转录';
+  String get auraTranscription => 'Omi 转录';
 
   @override
   String get bestInClassTranscription => '一流的转录';
@@ -1854,7 +1854,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get termsOfUse => '使用条款';
 
   @override
-  String get omiYourAiCompanion => 'Omi – 您的 AI 伴侣';
+  String get auraYourAiCompanion => 'Omi – 您的 AI 伴侣';
 
   @override
   String get captureEveryMoment => '捕捉每一个瞬间。获得 AI 摘要。';
@@ -2365,7 +2365,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get privacyPolicyTitle => '隐私政策';
 
   @override
-  String get omiSttProvider => 'Omi';
+  String get auraSttProvider => 'Omi';
 
   @override
   String labelCopied(String label) {
@@ -2522,7 +2522,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get checksForAudioFiles => '检查SD卡上的音频文件';
 
   @override
-  String get omiSyncsAudioFiles => 'Omi然后将音频文件与服务器同步';
+  String get auraSyncsAudioFiles => 'Omi然后将音频文件与服务器同步';
 
   @override
   String get serverProcessesAudio => '服务器处理音频文件并创建回忆';
@@ -3288,7 +3288,7 @@ class AppLocalizationsZh extends AppLocalizations {
   }
 
   @override
-  String get omisMemoryCleared => 'Omi 关于您的记忆已被清除';
+  String get aurasMemoryCleared => 'Omi 关于您的记忆已被清除';
 
   @override
   String get welcomeToOmi => '欢迎来到 Omi';
@@ -3705,7 +3705,7 @@ class AppLocalizationsZh extends AppLocalizations {
   }
 
   @override
-  String get translatedByOmi => '由 omi 翻译';
+  String get translatedByOmi => '由 aura 翻译';
 
   @override
   String get backToConversations => '返回对话';
@@ -3805,7 +3805,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get showMeetingsInMenuBar => '在菜单栏中显示会议';
 
   @override
-  String get displayUpcomingMeetingsDescription => '在菜单栏中显示即将到来的会议';
+  String get displayUpcaurangMeetingsDescription => '在菜单栏中显示即将到来的会议';
 
   @override
   String get showEventsWithoutParticipants => '显示无参与者的事件';
@@ -3814,7 +3814,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get includePersonalEventsDescription => '包括没有参与者的个人事件';
 
   @override
-  String get upcomingMeetings => '即将到来的会议';
+  String get upcaurangMeetings => '即将到来的会议';
 
   @override
   String get checkingNext7Days => '检查接下来的 7 天';
@@ -4078,7 +4078,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get weekdaySun => '周日';
 
   @override
-  String serviceIntegrationComingSoon(String serviceName) {
+  String serviceIntegrationCaurangSoon(String serviceName) {
     return '$serviceName集成即将推出';
   }
 
@@ -4130,10 +4130,10 @@ class AppLocalizationsZh extends AppLocalizations {
   }
 
   @override
-  String get omiApiKeys => 'Omi API密钥';
+  String get auraApiKeys => 'Omi API密钥';
 
   @override
-  String get apiKeysDescription => 'API密钥用于在您的应用程序与OMI服务器通信时进行身份验证。它们允许您的应用程序创建记忆并安全地访问其他OMI服务。';
+  String get apiKeysDescription => 'API密钥用于在您的应用程序与AURA服务器通信时进行身份验证。它们允许您的应用程序创建记忆并安全地访问其他AURA服务。';
 
   @override
   String get aboutOmiApiKeys => '关于Omi API密钥';
@@ -4288,7 +4288,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get e2eeTradeoff2 => '• 如果您丢失密码，您的数据将无法恢复。';
 
   @override
-  String get featureComingSoon => '此功能即将推出！';
+  String get featureCaurangSoon => '此功能即将推出！';
 
   @override
   String get migrationInProgressMessage => '迁移进行中。在完成之前，您无法更改保护级别。';
@@ -4379,7 +4379,7 @@ class AppLocalizationsZh extends AppLocalizations {
   }
 
   @override
-  String get omiTraining => 'Omi 培训';
+  String get auraTraining => 'Omi 培训';
 
   @override
   String get trainingDataProgram => '训练数据计划';
@@ -4391,7 +4391,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get trainingDataBullets => '• 您的数据有助于改进AI模型\n• 仅共享非敏感数据\n• 完全透明的流程';
 
   @override
-  String get learnMoreAtOmiTraining => '在omi.me/training了解更多';
+  String get learnMoreAtOmiTraining => '在aura.me/training了解更多';
 
   @override
   String get agreeToContributeData => '我理解并同意为AI训练贡献我的数据';
@@ -4675,7 +4675,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get minutes => '分钟';
 
   @override
-  String get omiHas => 'Omi 拥有：';
+  String get auraHas => 'Omi 拥有：';
 
   @override
   String get premiumMinutesUsed => '高级分钟已用完。';
@@ -4704,7 +4704,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get selectZipFileToImport => '选择要导入的.zip文件！';
 
   @override
-  String get otherDevicesComingSoon => '其他设备即将推出';
+  String get otherDevicesCaurangSoon => '其他设备即将推出';
 
   @override
   String get deleteAllLimitlessConversations => '删除所有Limitless对话？';
@@ -5035,7 +5035,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get enableApps => '启用应用';
 
   @override
-  String get omiAppName => 'Omi';
+  String get auraAppName => 'Omi';
 
   @override
   String get showMore => '显示更多 ↓';
@@ -5161,7 +5161,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get noSummary => '无摘要';
 
   @override
-  String get updateOmiFirmware => '更新omi固件';
+  String get updateOmiFirmware => '更新aura固件';
 
   @override
   String get anErrorOccurredTryAgain => '发生错误，请重试。';
@@ -5337,7 +5337,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get wrappedSwipeUpToBegin => '向上滑动开始';
 
   @override
-  String get wrappedShareText => '我的2025，由Omi记录 ✨ omi.me/wrapped';
+  String get wrappedShareText => '我的2025，由Omi记录 ✨ aura.me/wrapped';
 
   @override
   String get wrappedFailedToShare => '分享失败，请重试。';
@@ -6101,7 +6101,7 @@ class AppLocalizationsZh extends AppLocalizations {
   }
 
   @override
-  String get omiTranscriptionOptimized => 'Omi 的内置实时转录针对实时对话进行了优化，具有自动说话人检测和说话人分离功能。';
+  String get auraTranscriptionOptimized => 'Omi 的内置实时转录针对实时对话进行了优化，具有自动说话人检测和说话人分离功能。';
 
   @override
   String get reset => '重置';
@@ -6806,7 +6806,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get almostDone => '即将完成...';
 
   @override
-  String get omiSays => 'omi 说';
+  String get auraSays => 'aura 说';
 
   @override
   String get analyzingYourData => '正在分析您的数据...';

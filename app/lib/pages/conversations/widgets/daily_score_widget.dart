@@ -5,12 +5,12 @@ import 'package:flutter/services.dart';
 
 import 'package:provider/provider.dart';
 
-import 'package:omi/pages/action_items/widgets/action_item_form_sheet.dart';
-import 'package:omi/utils/analytics/mixpanel.dart';
-import 'package:omi/pages/conversations/widgets/goals_widget.dart';
-import 'package:omi/providers/action_items_provider.dart';
-import 'package:omi/providers/goals_provider.dart';
-import 'package:omi/utils/l10n_extensions.dart';
+import 'package:aura/pages/action_items/widgets/action_item_form_sheet.dart';
+import 'package:aura/utils/analytics/mixpanel.dart';
+import 'package:aura/pages/conversations/widgets/goals_widget.dart';
+import 'package:aura/providers/action_items_provider.dart';
+import 'package:aura/providers/goals_provider.dart';
+import 'package:aura/utils/l10n_extensions.dart';
 
 /// Daily Score Widget - Shows task completion rate as a 0-5 score
 class DailyScoreWidget extends StatefulWidget {

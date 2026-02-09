@@ -1,11 +1,11 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:omi/backend/http/shared.dart';
-import 'package:omi/backend/schema/message.dart';
-import 'package:omi/env/env.dart';
-import 'package:omi/utils/logger.dart';
-import 'package:omi/utils/other/string_utils.dart';
+import 'package:aura/backend/http/shared.dart';
+import 'package:aura/backend/schema/message.dart';
+import 'package:aura/env/env.dart';
+import 'package:aura/utils/logger.dart';
+import 'package:aura/utils/other/string_utils.dart';
 
 Future<List<ServerMessage>> getMessagesServer({
   String? appId,

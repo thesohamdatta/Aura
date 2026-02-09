@@ -1,13 +1,13 @@
 [project]
-name = "mcp-server-omi"
+name = "mcp-server-aura"
 dynamic = ["version"]
-description = 'Model Context Protocol Server for Omi AI'
+description = 'Model Context Protocol Server for Aura AI'
 readme = "README.md"
 requires-python = ">=3.11.6"
 license = "MIT"
-keywords = ["omi", "mcp"]
+keywords = ["aura", "mcp"]
 authors = [
-  { name = "Joan Cabezas", email = "joan.santiago.cabezas@gmail.com" },
+  { name = "Soham Datta", email = "soham@aura.me" },
 ]
 classifiers = [
   "Development Status :: 4 - Beta",
@@ -24,7 +24,7 @@ dependencies = [
 ]
 
 [project.scripts]
-mcp-server-omi = "mcp_server_omi:main"
+mcp-server-aura = "mcp_server_aura:main"
 
 [build-system]
 requires = ["hatchling"]
@@ -40,4 +40,4 @@ python_classes = "Test*"
 python_functions = "test_*"
 
 [tool.hatch.version]
-path = "src/mcp_server_omi/__about__.py"
+path = "src/mcp_server_aura/__about__.py"

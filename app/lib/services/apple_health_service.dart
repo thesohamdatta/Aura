@@ -1,11 +1,11 @@
 import 'package:flutter/services.dart';
 
-import 'package:omi/backend/http/api/integrations.dart';
-import 'package:omi/utils/logger.dart';
-import 'package:omi/utils/platform/platform_service.dart';
+import 'package:aura/backend/http/api/integrations.dart';
+import 'package:aura/utils/logger.dart';
+import 'package:aura/utils/platform/platform_service.dart';
 
 class AppleHealthService {
-  static const _channel = MethodChannel('com.omi.apple_health');
+  static const _channel = MethodChannel('com.aura.apple_health');
 
   static final AppleHealthService _instance = AppleHealthService._internal();
   factory AppleHealthService() => _instance;

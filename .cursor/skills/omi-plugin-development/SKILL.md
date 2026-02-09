@@ -1,5 +1,5 @@
 ---
-name: omi-plugin-development
+name: aura-plugin-development
 description: "Omi plugin app development webhook patterns chat tools OAuth flows prompt-based apps integration apps FastAPI Express"
 ---
 
@@ -23,8 +23,8 @@ Use this skill when:
 #### 1. Prompt-Based Apps
 **No server required** - Just define prompts
 
-- **Chat prompts**: Customize AI personality
-- **Memory prompts**: Customize memory extraction
+- **Chat prompts**: Custauraze AI personality
+- **Memory prompts**: Custauraze memory extraction
 
 #### 2. Integration Apps
 **Requires server endpoint** - Webhook-based
@@ -68,7 +68,7 @@ async def transcript_segment(segment: dict):
     text = segment.get("text")
     
     # Process in real-time
-    if "hey omi" in text.lower():
+    if "hey aura" in text.lower():
         await trigger_action()
     
     return {"status": "received"}
@@ -173,15 +173,15 @@ async def auth():
 
 ## Related Documentation
 
-**The `docs/` folder is the single source of truth for all user-facing documentation, deployed at [docs.omi.me](https://docs.omi.me/).**
+**The `docs/` folder is the single source of truth for all user-facing documentation, deployed at [docs.aura.me](https://docs.aura.me/).**
 
-- **Plugin Introduction**: `docs/doc/developer/apps/Introduction.mdx` - [View online](https://docs.omi.me/doc/developer/apps/Introduction)
-- **Integrations**: `docs/doc/developer/apps/Integrations.mdx` - [View online](https://docs.omi.me/doc/developer/apps/Integrations)
-- **Chat Tools**: `docs/doc/developer/apps/ChatTools.mdx` - [View online](https://docs.omi.me/doc/developer/apps/ChatTools)
-- **OAuth**: `docs/doc/developer/apps/Oauth.mdx` - [View online](https://docs.omi.me/doc/developer/apps/Oauth)
-- **Prompt-Based Apps**: `docs/doc/developer/apps/PromptBased.mdx` - [View online](https://docs.omi.me/doc/developer/apps/PromptBased)
-- **Audio Streaming**: `docs/doc/developer/apps/AudioStreaming.mdx` - [View online](https://docs.omi.me/doc/developer/apps/AudioStreaming)
-- **Submitting Apps**: `docs/doc/developer/apps/Submitting.mdx` - [View online](https://docs.omi.me/doc/developer/apps/Submitting)
+- **Plugin Introduction**: `docs/doc/developer/apps/Introduction.mdx` - [View online](https://docs.aura.me/doc/developer/apps/Introduction)
+- **Integrations**: `docs/doc/developer/apps/Integrations.mdx` - [View online](https://docs.aura.me/doc/developer/apps/Integrations)
+- **Chat Tools**: `docs/doc/developer/apps/ChatTools.mdx` - [View online](https://docs.aura.me/doc/developer/apps/ChatTools)
+- **OAuth**: `docs/doc/developer/apps/Oauth.mdx` - [View online](https://docs.aura.me/doc/developer/apps/Oauth)
+- **Prompt-Based Apps**: `docs/doc/developer/apps/PromptBased.mdx` - [View online](https://docs.aura.me/doc/developer/apps/PromptBased)
+- **Audio Streaming**: `docs/doc/developer/apps/AudioStreaming.mdx` - [View online](https://docs.aura.me/doc/developer/apps/AudioStreaming)
+- **Submitting Apps**: `docs/doc/developer/apps/Submitting.mdx` - [View online](https://docs.aura.me/doc/developer/apps/Submitting)
 - **Plugin Development**: `.cursor/rules/plugin-development.mdc`
 
 ## Related Cursor Resources

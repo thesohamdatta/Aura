@@ -2,8 +2,8 @@ import 'package:flutter/foundation.dart';
 
 import 'package:url_launcher/url_launcher.dart';
 
-import 'package:omi/backend/http/api/task_integrations.dart';
-import 'package:omi/utils/logger.dart';
+import 'package:aura/backend/http/api/task_integrations.dart';
+import 'package:aura/utils/logger.dart';
 
 class ClickUpService {
   static final ClickUpService _instance = ClickUpService._internal();

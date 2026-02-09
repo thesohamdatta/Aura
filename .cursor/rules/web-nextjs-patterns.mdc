@@ -197,7 +197,7 @@ export function ConversationCard({ conversation }) {
 ```tsx
 // app/conversations/page.tsx
 export default async function ConversationsPage() {
-  const conversations = await fetch('https://api.omi.me/v1/conversations', {
+  const conversations = await fetch('https://api.aura.me/v1/conversations', {
     headers: {
       'Authorization': `Bearer ${token}`,
     },
@@ -255,7 +255,7 @@ export function ConversationsList() {
 - `.cursor/rules/backend-api-patterns.mdc` - Backend API integration
 
 ### Skills
-- `.cursor/skills/omi-api-integration/` - API integration patterns
+- `.cursor/skills/aura-api-integration/` - API integration patterns
 
 ### Subagents
 - `.cursor/agents/web-developer/` - Next.js development specialist
