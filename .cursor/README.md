@@ -1,473 +1,794 @@
-# Cursor Configuration
+# Meta Prompt: GitHub README for Aura (Continued)
 
-This directory contains Cursor-specific configuration to make the codebase Cursor-compatible and help AI agents understand the entire Omi ecosystem.
+---
 
-## Structure
+### 15. **Community** (Connect & Support) - CONTINUED
 
 ```
-.cursor/
-├── skills/                    # Skills organized by domain/automation
-│   ├── {skill-name}/
-│   │   ├── SKILL.md          # Skill definition
-│   │   ├── commands/         # Related commands
-│   │   │   └── {command}.md
-│   │   └── agents/           # Related agents
-│   │       └── {agent}.md
-├── rules/                     # Rules (domain + general + automation)
-├── commands/                   # Legacy symlinks (backward compatibility)
-├── agents/                     # Legacy symlinks (backward compatibility)
-├── docs/                      # Architecture and reference documentation
-│   ├── INDEX.md              # Complete resource map
-│   ├── USAGE_GUIDE.md        # Comprehensive usage guide
-│   └── [other docs]
-├── plans/                     # Plan Mode generated plans
-├── hooks/                     # Hook scripts directory
-├── mcp.json                   # MCP server configuration
-├── hooks.json                 # Hooks configuration (optional)
-├── worktrees.json             # Worktree setup configuration (optional)
-├── BUGBOT.md                  # Bugbot review rules (optional)
-└── README.md                  # This file
+?? **Documentation** - Comprehensive guides
+   - docs.aura-pendant.dev (or similar)
+   - Wiki for community knowledge
+
+?? **Showcase** - Community builds
+   - Gallery of custom builds
+   - Modifications and improvements
+   - Use case stories
+
+SUPPORT TIERS:
+- ? Quick questions ? Discord #support
+- ?? Bug reports ? GitHub Issues
+- ?? Feature requests ? GitHub Discussions
+- ?? Private/business inquiries ? Email
+
+Community Guidelines:
+- Link to Code of Conduct
+- Communication expectations
+- Respect and inclusivity policy
+
+ENGAGEMENT METRICS (optional):
+- "Built by [X] makers worldwide"
+- "[X] memories captured"
+- "[Y] hours of conversations transcribed"
 ```
 
-**Note**: The folder is organized by skills. Each skill contains its related commands and agents, making it easier to discover and maintain related resources. Legacy `commands/` and `agents/` directories may contain symlinks for backward compatibility.
+---
 
-### Rules (`.cursor/rules/`)
+### 16. **FAQ** (Frequently Asked Questions)
+```
+STRUCTURE: Collapsible sections or clear Q&A format
 
-Project-specific rules that guide AI behavior based on file context:
+CATEGORIES:
 
-**Backend Rules**:
-- `backend-imports.mdc` - Python import rules (no in-function imports, module hierarchy)
-- `backend-architecture.mdc` - System architecture, module hierarchy, data flow
-- `backend-api-patterns.mdc` - FastAPI patterns, router conventions, error handling
-- `backend-database-patterns.mdc` - Firestore, Pinecone, Redis usage patterns
-- `backend-llm-patterns.mdc` - LLM client usage, prompt engineering, LangGraph
-- `backend-testing.mdc` - Test structure, mocking patterns
+?? **Hardware Questions**
+Q: How long does the battery last?
+A: 8-12 hours with standard use (capture every 5-30 seconds). Up to 24 hours with optimized settings.
 
-**Flutter Rules**:
-- `flutter-localization.mdc` - Flutter l10n requirements
-- `flutter-architecture.mdc` - App structure, state management, providers
-- `flutter-backend-integration.mdc` - API client patterns, WebSocket handling
-- `flutter-ble-protocol.mdc` - Bluetooth Low Energy device communication
+Q: Can I use different batteries?
+A: Yes! Any 3.7V LiPo will work. We recommend 150-250mAh per cell for size/capacity balance.
 
-**Firmware Rules**:
-- `firmware-architecture.mdc` - nRF/ESP32 structure, Zephyr patterns
-- `firmware-ble-service.mdc` - BLE service implementation, audio streaming
+Q: Is it waterproof?
+A: The standard build is splash-resistant but not waterproof. Community members have created waterproof versions.
 
-**Web Rules**:
-- `web-nextjs-patterns.mdc` - Next.js App Router, API routes, Firebase integration
+Q: How heavy is it?
+A: ~40-50g depending on battery configuration. About the weight of two AA batteries.
 
-**Plugin Rules**:
-- `plugin-development.mdc` - Plugin structure, webhook patterns, OAuth flows
+Q: Can I wear it while exercising?
+A: Yes! The pendant design stays secure during most activities. Some users add a sport strap.
 
-**General Rules**:
-- `codebase-overview.mdc` - High-level architecture, component relationships (always applied)
-- `documentation-standards.mdc` - MDX documentation patterns, API docs
-- `formatting.mdc` - Code formatting standards
-- `memory-management.mdc` - Memory management best practices
-- `testing.mdc` - Always run tests before committing
+?? **Software Questions**
+Q: Do I need programming knowledge?
+A: No for basic use with pre-built firmware. Yes if you want to customize code.
 
-### Commands
+Q: Which AI provider should I use?
+A: Groq for speed, OpenAI for quality, Ollama for privacy/offline use.
 
-Commands are organized within skill folders at `skills/{skill}/commands/`. Type `/` in Cursor chat to see all available commands.
+Q: Can it work offline?
+A: Yes with Ollama. Audio/images are cached locally and processed when you have internet.
 
-**Backend Commands** (`skills/aura-backend-patterns/commands/`):
-- `/backend-setup` - Guide for setting up backend environment
-- `/backend-test` - Run backend tests with proper environment
-- `/backend-deploy` - Deploy backend to production
+Q: How is my data stored?
+A: By default in Firebase cloud. You can self-host or use local-only mode.
 
-**Flutter Commands** (`skills/aura-flutter-patterns/commands/`):
-- `/flutter-setup` - Flutter environment setup
-- `/flutter-test` - Run Flutter tests
-- `/flutter-build` - Build Flutter app
+Q: Does it work with iPhone/Android?
+A: Yes! The Omi app supports both iOS 13+ and Android 8+.
 
-**Plugin Commands** (`skills/aura-plugin-development/commands/`):
-- `/create-plugin` - Scaffold new plugin structure
-- `/create-app` - Scaffold new Omi app
-- `/test-integration` - Run integration tests
+?? **Privacy & Legal**
+Q: Is it legal to record conversations?
+A: Laws vary by location. Many places require one-party or all-party consent. Research your local laws.
 
-**Documentation Commands** (`skills/docs-automation/commands/`):
-- `/auto-docs` - Automatically detect code changes and update documentation
-- `/docs` - Generate or update documentation
-- `/update-api-docs` - Update API reference documentation
+Q: Where is my data stored?
+A: Your choice: Omi cloud (encrypted), self-hosted server, or local-only.
 
-**PR Commands** (`skills/pr-automation/commands/`):
-- `/auto-pr` - Automatically generate PR with description and validation
-- `/pr` - Summarize changes and propose PR title/description
-- `/code-review` - Review code for correctness, security, quality, tests
+Q: Can others access my recordings?
+A: Only if you explicitly share. Default is private to your account.
 
-**Other Commands**:
-- `/auto-changelog` (`skills/changelog/commands/`) - Automatically generate changelog from commits
-- `/auto-triage` (`skills/issue-triage/commands/`) - Automatically triage GitHub issues
-- `/self-improve`, `/learn-from-pr`, `/learn-from-conversation` (`skills/self-improvement/commands/`) - Self-improvement commands
-- `/format`, `/lint-and-fix`, `/security-audit`, `/fix-issue`, `/validate-docs`, `/verify-complete`, `/run-tests-and-fix` (general commands in `.cursor/commands/`)
+Q: How long are recordings kept?
+A: You control retention. Default is 30 days, configurable to forever or auto-delete.
 
-**New Feature Commands**:
-- `/plan`, `/ask`, `/debug` (`skills/agent-modes/commands/` or `.cursor/commands/`) - Agent mode workflows
-- `/review-changes` (`skills/agent-review/commands/` or `.cursor/commands/`) - Use Agent Review to find issues
-- `/diagram` (`skills/diagram-generation/commands/` or `.cursor/commands/`) - Generate Mermaid diagrams
-- `/browser-test`, `/accessibility-audit` (`skills/browser-automation/commands/` or `.cursor/commands/`) - Browser testing and accessibility
-- `/semantic-search` (`skills/context-optimization/commands/` or `.cursor/commands/`) - Semantic search guidance
+Q: Is the camera always recording?
+A: No. It captures images at intervals (default 30 seconds) or on-demand. Not continuous video.
 
-### Skills (`.cursor/skills/`)
+?? **Cost & Purchase**
+Q: How much does it cost to build?
+A: $50-70 for components + $10-20 for 3D printing. Total ~$60-90.
 
-Skills are organized in `skills/{skill-name}/` folders. Each skill folder contains:
-- `SKILL.md` - The skill definition
-- `commands/` - Related slash commands
-- `agents/` - Related specialized agents
+Q: Where can I buy pre-built?
+A: Limited DevKits available at [link]. Full commercial version coming Q3 2026.
 
-**Domain Skills**:
-- `aura-backend-patterns/` - Backend-specific patterns (conversation processing, memory extraction, chat system)
-  - Commands: `/backend-setup`, `/backend-test`, `/backend-deploy`
-  - Agents: `backend-api-developer`, `backend-llm-engineer`, `backend-database-engineer`
-- `aura-flutter-patterns/` - Flutter-specific patterns (BLE, audio streaming, state management)
-  - Commands: `/flutter-setup`, `/flutter-test`, `/flutter-build`
-  - Agents: `flutter-developer`
-- `aura-firmware-patterns/` - Firmware patterns (BLE services, audio codecs)
-  - Agents: `firmware-engineer`
-- `aura-api-integration/` - API integration patterns (Developer API, MCP, webhooks)
-  - Commands: `/update-api-docs`
-  - Agents: `web-developer`, `sdk-developer`
-- `aura-plugin-development/` - Plugin development workflow
-  - Commands: `/create-plugin`, `/create-app`, `/test-integration`
-  - Agents: `plugin-developer`
+Q: Are there subscription fees?
+A: No! All software is open source. Optional paid AI API usage (very low cost).
 
-**Automation Skills**:
-- `docs-automation/` - Automate documentation updates when code changes
-  - Commands: `/auto-docs`, `/docs`, `/update-api-docs`
-  - Agents: `docs-generator`
-- `pr-automation/` - Automate PR workflows and validation
-  - Commands: `/auto-pr`, `/pr`, `/code-review`
-  - Agents: `pr-manager`, `code-reviewer`, `test-runner`, `verifier`
-- `changelog/` - Generate changelog entries from commits
-  - Commands: `/auto-changelog`
-  - Agents: `changelog-generator`
-- `issue-triage/` - Automate GitHub issue triage using triage guide
-  - Commands: `/auto-triage`
-- `self-improvement/` - Learn from PRs, issues, and user interactions
-  - Commands: `/self-improve`, `/learn-from-pr`, `/learn-from-conversation`
-- `rule-updater/` - Programmatically update Cursor rules
+Q: What about AI API costs?
+A: Groq: ~$0.05/hour | OpenAI: ~$0.10/hour | Ollama: Free (local)
 
-**New Feature Skills**:
-- `agent-modes/` - Guidance on choosing and using agent modes (Agent, Ask, Plan, Debug)
-  - Commands: `/plan`, `/ask`, `/debug`
-- `debug-mode/` - Debug Mode workflows for tricky bugs and regressions
-  - Commands: `/debug`
-  - Agents: `debug-specialist`
-- `browser-automation/` - Browser testing, design-to-code, accessibility auditing
-  - Commands: `/browser-test`, `/accessibility-audit`
-  - Agents: `browser-automation`
-- `diagram-generation/` - Mermaid diagram generation for architecture visualization
-  - Commands: `/diagram`
-  - Agents: `diagram-generator`
-- `context-optimization/` - Context window optimization and @ mention strategies
-  - Commands: `/semantic-search`
-  - Agents: `context-manager`
-- `agent-review/` - Agent Review workflows for catching bugs before merging
-  - Commands: `/review-changes`
+??? **Technical Support**
+Q: My device won't connect to WiFi. Help?
+A: [Link to troubleshooting guide]
 
-### Agents
+Q: The camera image is dark/blurry?
+A: [Link to camera calibration guide]
 
-Agents are organized within skill folders at `skills/{skill}/agents/`. Each agent is a `.md` file with YAML frontmatter (name, description, model, is_background) followed by the prompt.
+Q: Battery drains too fast?
+A: [Link to power optimization guide]
 
-**Backend Agents** (`skills/aura-backend-patterns/agents/`):
-- `backend-api-developer.md` - FastAPI router development, endpoint patterns
-- `backend-llm-engineer.md` - LLM integration, prompt engineering, LangGraph
-- `backend-database-engineer.md` - Firestore, Pinecone, Redis optimization
+Q: How do I update firmware?
+A: [Link to OTA update guide]
 
-**Frontend Agents**:
-- `flutter-developer.md` (`skills/aura-flutter-patterns/agents/`) - Flutter app development, BLE integration
-- `web-developer.md` (`skills/aura-api-integration/agents/`) - Next.js frontend development
+FORMAT: Use GitHub's collapsible sections for long FAQs:
+<details>
+<summary>Q: Question here?</summary>
+A: Answer here with links and formatting.
+</details>
+```
 
-**Firmware Agents**:
-- `firmware-engineer.md` (`skills/aura-firmware-patterns/agents/`) - C/C++ firmware development, BLE services
+---
 
-**Integration Agents**:
-- `plugin-developer.md` (`skills/aura-plugin-development/agents/`) - Plugin/app development, webhook integration
-- `sdk-developer.md` (`skills/aura-api-integration/agents/`) - SDK development (Python, Swift, React Native)
+### 17. **Troubleshooting** (Common Issues)
+```
+STRUCTURE: Problem ? Solution format with severity levels
 
-**Automation Agents**:
-- `docs-generator.md` (`skills/docs-automation/agents/`) - Automatically generate/update documentation when code changes
-- `pr-manager.md`, `code-reviewer.md`, `test-runner.md`, `verifier.md` (`skills/pr-automation/agents/`) - PR automation agents
-- `changelog-generator.md` (`skills/changelog/agents/`) - Generate changelog entries from commits/PRs
+?? CRITICAL ISSUES
 
-**New Feature Agents**:
-- `debug-specialist.md` (`skills/debug-mode/agents/`) - Debug Mode workflows: hypothesis generation, log instrumentation, runtime analysis
-- `browser-automation.md` (`skills/browser-automation/agents/`) - Browser testing, design-to-code, accessibility auditing
-- `diagram-generator.md` (`skills/diagram-generation/agents/`) - Mermaid diagram generation for architecture visualization
-- `context-manager.md` (`skills/context-optimization/agents/`) - Context window optimization, @ mention strategies, semantic search guidance
+**Device won't turn on**
+- Check: Battery connections (polarity correct?)
+- Check: Battery voltage (>3.0V per cell)
+- Check: Power switch (if installed)
+- Try: Charge for 30 minutes minimum
+- Solution: [Detailed debug guide link]
 
-### Documentation (`.cursor/docs/`)
+**Won't flash firmware**
+- Check: USB cable (must support data, not just charging)
+- Check: Correct COM port selected
+- Check: PSRAM set to "OPI PSRAM" ?? CRITICAL
+- Check: ESP32 board package version (2.0.11+)
+- Solution: [Step-by-step flashing guide]
 
-Architecture and reference documentation:
+?? COMMON ISSUES
 
-- `ARCHITECTURE.md` - Complete system architecture with diagrams
-- `API_REFERENCE.md` - API endpoint reference
-- `DATA_FLOW.md` - Data flow diagrams for key workflows
-- `BACKEND_COMPONENTS.md` - Backend module reference
-- `FLUTTER_COMPONENTS.md` - Flutter app structure
-- `FIRMWARE_COMPONENTS.md` - Firmware architecture
-- `INDEX.md` - Complete resource map and relationships (rules, commands, skills, agents)
-- `USAGE_GUIDE.md` - Comprehensive usage guide with getting started, workflows, and best practices
-- `feedback-loop.md` - Feedback loop system documentation
-- `user-interaction-learning.md` - User interaction learning system
+**Poor battery life (<4 hours)**
+- Cause: Capture frequency too high
+- Fix: Increase interval to 30+ seconds
+- Cause: WiFi always on
+- Fix: Use BLE mode or batch uploads
+- Guide: [Battery optimization checklist]
 
-### Plans (`.cursor/plans/`)
+**Audio quality is poor**
+- Check: Microphone positioning (not covered)
+- Check: Background noise levels
+- Check: Sample rate (16kHz recommended)
+- Adjust: Gain settings in firmware
+- Guide: [Audio tuning guide]
 
-Plan Mode can save generated plans to this directory for future reference and team sharing. Plans are created when you click "Save to workspace" in Plan Mode.
+**Camera not capturing**
+- Verify: PSRAM configuration (OPI PSRAM)
+- Check: Camera initialization in serial monitor
+- Test: Run camera test code
+- Replace: Camera module if hardware failure
+- Guide: [Camera debugging guide]
 
-### Hooks (`.cursor/hooks/` and `.cursor/hooks.json`)
+**App won't pair with device**
+- Check: Bluetooth enabled on phone
+- Check: Device in pairing mode (LED blinking)
+- Check: Not already paired to another phone
+- Try: Restart both device and app
+- Try: Forget device and re-pair
+- Guide: [BLE troubleshooting]
 
-Hooks allow you to observe, control, and extend the agent loop using custom scripts. See [Cursor Hooks documentation](https://cursor.com/docs/agent/hooks) for details.
+?? MINOR ISSUES
 
-- `hooks.json` - Hook configuration (optional, template provided)
-- `hooks/` - Directory for hook scripts
+**LED not lighting up**
+- May be: LED disabled in firmware (check config)
+- Check: LED pin connections
+- Brightness: May be too dim (adjust in code)
 
-### Worktrees (`.cursor/worktrees.json`)
+**Enclosure doesn't fit**
+- Issue: 3D printer calibration
+- Fix: Scale STL by 101-102%
+- Alternative: Sand edges for better fit
 
-Configuration for worktree setup when using parallel agents. See [Cursor Worktrees documentation](https://cursor.com/docs/configuration/worktrees) for details.
+GETTING MORE HELP:
+1. Search GitHub Issues for similar problems
+2. Check Discord #support channel
+3. Create new GitHub Issue with:
+   - Detailed problem description
+   - Serial monitor output
+   - Photos of hardware
+   - Firmware version
+   - Steps to reproduce
 
-- `worktrees.json` - Worktree setup commands (optional, template provided)
+DIAGNOSTIC COMMANDS:
+```cpp
+// Add to setup() for debug info
+Serial.println("=== Aura Diagnostic ===");
+Serial.println("Firmware: " + String(FIRMWARE_VERSION));
+Serial.println("Free Heap: " + String(ESP.getFreeHeap()));
+Serial.println("PSRAM: " + String(ESP.getFreePsram()));
+Serial.println("WiFi MAC: " + WiFi.macAddress());
+```
+```
 
-### Bugbot (`.cursor/BUGBOT.md`)
+---
 
-Review guidelines for Bugbot to automatically catch issues before they reach human reviewers. See [Cursor Bugbot documentation](https://cursor.com/docs/cookbook/bugbot-rules) for details.
+### 18. **Safety & Legal** (Important Disclaimers)
+```
+?? HARDWARE SAFETY
 
-- `BUGBOT.md` - Bugbot review rules (optional, template provided)
+**Battery Safety (CRITICAL)**
+- Never short circuit LiPo batteries
+- Charge in fire-safe container
+- Inspect batteries before each use (no swelling/damage)
+- Do not over-discharge (<3.0V per cell)
+- Use appropriate fuse/protection circuit
+- Dispose of damaged batteries properly at recycling center
 
-## Usage
+**Electrical Safety**
+- Verify polarity before connecting power
+- Use ESD protection when handling electronics
+- Solder in well-ventilated area
+- Allow components to cool before handling
+- Check connections with multimeter
 
-### Rules
+**Wearable Safety**
+- Do not wear during water activities (unless waterproofed)
+- Remove if device becomes hot
+- Ensure enclosure has no sharp edges
+- Check cord/chain strength regularly
 
-Rules are automatically applied based on:
-- File globs (e.g., `backend/**/*.py`)
-- Always applied flag (for rules like `codebase-overview.mdc`)
+?? PRIVACY & LEGAL
 
-### Commands
+**Recording Laws**
+?? **You are responsible for complying with local laws**
 
-Type `/` in Cursor chat to see available commands. Commands provide step-by-step guidance for common tasks.
+- **One-party consent** (US most states): Only you need to consent
+- **Two-party consent** (CA, FL, etc.): All parties must consent
+- **Video recording**: May have separate requirements
+- **Public vs Private**: Different rules apply
 
-### Skills
+**Recommendation**:
+- Research your local laws
+- Inform others when recording in two-party states
+- Add visual indicator (LED) to show recording
+- Use audio-only mode in sensitive situations
 
-Skills are automatically available when working in relevant parts of the codebase. They provide domain-specific guidance and patterns.
+**Data Protection (GDPR, CCPA)**
+- If recording others, you may be a data controller
+- Implement data retention policies
+- Allow data deletion on request
+- Secure storage required
 
-### Agents
+**Usage Restrictions**
+- Do not use for illegal surveillance
+- Respect workplace recording policies
+- Do not record in restricted areas (hospitals, government)
+- Follow venue policies (concerts, theaters)
 
-Agents can be invoked for specialized tasks. They have deep knowledge of their specific domain. Agents are automatically available to Agent and appear in Cursor settings. Each agent file is located in `skills/{skill}/agents/{agent}.md` with YAML frontmatter containing `name`, `description`, `model`, and `is_background`.
+**Liability Disclaimer**
+```
+THE SOFTWARE AND HARDWARE DESIGNS ARE PROVIDED "AS IS",
+WITHOUT WARRANTY OF ANY KIND. YOU BUILD AND USE AT YOUR OWN RISK.
 
-**Automation agents** are designed to run proactively when relevant tasks are detected, automatically handling documentation updates, PR creation, test running, code review, verification, and changelog generation.
+The creators are not responsible for:
+- Improper assembly or use
+- Violation of local laws
+- Privacy violations
+- Injury or property damage
+- Data loss or security breaches
+```
 
-### MCP Integration (`.cursor/mcp.json`)
+**Medical Disclaimer**
+- Not a medical device
+- Not for diagnostic or treatment purposes
+- Do not replace professional medical advice
+- Health tracking features are informational only
 
-Model Context Protocol (MCP) servers provide external tool integration:
+??? SECURITY BEST PRACTICES
+- Change default WiFi credentials
+- Use strong API keys
+- Enable encryption for cloud storage
+- Regular firmware updates
+- Secure physical access to device
+- Review app permissions
 
-- **GitHub MCP**: PR/issue automation, fetching repository data
-- **Notion MCP**: Sync internal docs to Notion (if configured)
-- **Figma MCP**: Reference design assets (if configured)
-- **Browser MCP**: Web testing and validation
+?? LICENSE & ATTRIBUTION
+- Hardware: CERN OHL v2 (or your choice)
+- Software: MIT License
+- Firmware: MIT License
+- Omi components: Inherit Omi licenses
+- Required attribution when redistributing
+```
 
-MCP servers enable automation workflows like auto-updating docs from code changes, creating PRs programmatically, and syncing with external documentation.
+---
 
-## Community Skills from skills.sh
+### 19. **Credits & Acknowledgments**
+```
+SECTIONS:
 
-[skills.sh](https://skills.sh/) is the open agent skills ecosystem that makes finding and installing skills easier for both developers and AI agents. Skills v1.1.1+ includes interactive discovery and agent support.
+?? **Project Leadership**
+[Your name/team] - Creator & Lead Developer
+- GitHub: [@username]
+- Twitter: [@handle]
+- Email: contact@aura-pendant.dev
 
-### Discovering Skills
+?? **Built on Omi**
+This project is built on the incredible open source work by:
+- **Based Hardware Team** - Original Omi ecosystem
+  - Website: https://omi.me
+  - GitHub: https://github.com/BasedHardware/omi
+  - Special thanks to [key contributors if known]
 
-**For Developers:**
+?? **Key Technologies**
+- **ESP32 Arduino Core** - Espressif Systems
+- **Flutter** - Google
+- **FastAPI** - Sebasti�n Ram�rez
+- **Ollama** - Ollama team
+- **Groq** - Groq Inc
+- **OpenAI** - OpenAI
+
+?? **Contributors**
+[Automatically generated from GitHub contributors]
+[Or manual list with links to profiles]
+
+Special recognition:
+- [@contributor1] - Custom PCB design
+- [@contributor2] - iOS app improvements
+- [@contributor3] - Power optimization
+- [Your community contributors]
+
+?? **Inspiration**
+- Meta Ray-Ban smart glasses
+- Rewind Pendant
+- Limitless
+- Google Glass
+- Humane AI Pin
+
+?? **Design & Assets**
+- Logo: [Designer name]
+- 3D Models: [Designer name]
+- Photography: [Photographer name]
+- Documentation: [Writer name]
+
+?? **Licensing**
+- Hardware designs: [License]
+- Firmware: MIT License
+- Software: MIT License
+- Documentation: CC BY-SA 4.0
+- Omi components: Inherit respective licenses
+
+?? **Funding & Support**
+[If applicable]
+- Sponsored by: [Company/Organization]
+- Crowdfunding: [Platform link]
+- Bounty program: omi.me/bounties
+
+?? **Awards & Recognition**
+[If applicable]
+- Featured on Hackaday
+- Hackster.io Project of the Month
+- DEF CON Demo
+
+TONE: Grateful and humble, give credit generously
+```
+
+---
+
+### 20. **Additional Resources** (Links & References)
+```
+ORGANIZE BY CATEGORY:
+
+?? **Official Documentation**
+- [Full Documentation Site] - Comprehensive guides
+- [API Reference] - Developer documentation
+- [Hardware Specs] - Detailed specifications
+- [Firmware Reference] - Code documentation
+
+?? **Tutorials & Guides**
+- [Complete Build Tutorial] - Start to finish
+- [Firmware Customization Guide] - Modify code
+- [App Development Guide] - Build custom apps
+- [Advanced Power Optimization] - Maximize battery
+- [3D Printing Tips] - Perfect prints
+
+?? **Videos**
+- [Project Introduction] - What is Aura?
+- [Hardware Assembly] - Step-by-step build
+- [Software Setup] - Getting started
+- [Use Cases Demo] - Real-world examples
+- [Developer Deep Dive] - Architecture overview
+
+?? **Research & Papers**
+- [Project whitepaper] - Technical details
+- [Battery life analysis] - Power consumption study
+- [Privacy considerations] - Security architecture
+- [AI model comparison] - Performance benchmarks
+
+?? **External Resources**
+- [ESP32-S3 Datasheet] - Official specs
+- [Arduino ESP32 Docs] - Programming reference
+- [Flutter Documentation] - App development
+- [Omi Documentation] - Base platform
+
+??? **Tools & Utilities**
+- [Firmware Flasher] - Easy GUI tool
+- [3D Model Viewer] - Preview before printing
+- [Config Generator] - Create settings file
+- [Battery Calculator] - Estimate runtime
+
+?? **Community Resources**
+- [Forum] - Discussion board
+- [Wiki] - Community knowledge base
+- [Gallery] - Showcase of builds
+- [Blog] - Project updates and stories
+
+?? **Press & Media**
+- [Press Kit] - For journalists
+- [Media Coverage] - Articles about Aura
+- [Podcast Appearances] - Interviews
+
+FORMAT: Clean link list with descriptions
+```
+
+---
+
+### 21. **License** (Legal)
+```
+STRUCTURE: Clear and prominent
+
+---
+
+## ?? License
+
+### Hardware
+The Aura hardware designs (schematics, PCB layouts, 3D models, CAD files) are licensed under:
+- **[CERN Open Hardware License v2 - Permissive]**
+- OR **[Creative Commons BY-SA 4.0]**
+
+You are free to:
+- ? Use commercially
+- ? Modify designs
+- ? Distribute
+- ? Manufacture and sell
+
+Requirements:
+- Attribution required
+- Share modifications under same license
+- Include license notice
+
+### Software & Firmware
+The Aura firmware and software are licensed under:
+- **MIT License**
+
+```
+MIT License
+
+Copyright (c) 2026 [Your Name/Organization]
+
+Permission is hereby granted, free of charge...
+[Full MIT license text]
+```
+
+### Documentation
+Documentation is licensed under:
+- **Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)**
+
+### Third-Party Components
+This project incorporates code from:
+- **Omi** - MIT License - github.com/BasedHardware/omi
+- **ESP32 Arduino Core** - LGPL-2.1 - github.com/espressif/arduino-esp32
+- **[Other dependencies]** - See THIRD_PARTY_LICENSES.md
+
+### Patents
+No patent applications are filed. This is a purely open source project.
+
+### Trademarks
+"Aura" is [trademark status]. Omi is a trademark of Based Hardware.
+
+### Contribution License Agreement
+By contributing, you agree that your contributions will be licensed under the same terms.
+
+---
+
+For full license text, see [LICENSE.md] file.
+```
+
+---
+
+### 22. **Call to Action** (Footer/Closing)
+```
+---
+
+## ?? Get Started Now
+
+Ready to build your own Aura pendant?
+
+1. **? Star this repository** to show support and stay updated
+2. **?? [Order Components]** - $60 DIY kit or pre-built option
+3. **?? [Follow the Guide]** - Complete build instructions
+4. **?? [Join Discord]** - Connect with the community
+5. **?? [Share Your Build]** - Show us what you create!
+
+---
+
+## ?? Support the Project
+
+If Aura has been valuable to you, consider:
+
+- **? Star & Share** - Help others discover the project
+- **?? Contribute** - Code, docs, or ideas welcome
+- **?? Sponsor** - Support development (GitHub Sponsors link)
+- **??? Buy a Kit** - Pre-built kits support ongoing work
+- **?? Spread the Word** - Twitter, Reddit, forums
+
+---
+
+## ?? Stay Connected
+
+- ?? Website: **aura-pendant.dev**
+- ?? Discord: **[Join Community]**
+- ?? Twitter: **[@AuraPendant]**
+- ?? Newsletter: **[Subscribe]**
+- ?? YouTube: **[Channel]**
+
+---
+
+## ?? Questions?
+
+Check the [FAQ](#faq) � Browse [Issues](link) � Ask in [Discord](link)
+
+---
+
+<p align="center">
+  <strong>Built with ?? by the open source community</strong><br>
+  <sub>Powered by <a href="https://omi.me">Omi</a></sub>
+</p>
+
+<p align="center">
+  <sub>Last updated: [Auto-generated date]</sub>
+</p>
+
+---
+
+[Back to top ??](#)
+```
+
+---
+
+## VISUAL DESIGN GUIDELINES
+
+### **Badges & Status Indicators**
+```markdown
+Use shields.io for consistent badges at top:
+
+![Build Status](https://img.shields.io/github/actions/workflow/status/user/repo/build.yml)
+![License](https://img.shields.io/badge/license-MIT-blue)
+![Version](https://img.shields.io/badge/version-1.0.0-green)
+![Platform](https://img.shields.io/badge/platform-ESP32--S3-orange)
+![Stars](https://img.shields.io/github/stars/user/repo?style=social)
+```
+
+### **Emoji Usage**
+```
+Use emojis consistently as visual anchors:
+- ?? Goals/objectives
+- ?? Hardware/tools
+- ?? Software/code
+- ?? Mobile/apps
+- ?? AI/intelligence
+- ?? Security/privacy
+- ?? Ideas/tips
+- ?? Warnings
+- ? Completed/verified
+- ?? In progress
+- ?? Data/metrics
+- ?? Video/media
+- ?? Documentation
+- ?? Community
+
+Don't overuse - max 1-2 per heading/section
+```
+
+### **Tables**
+```markdown
+Use tables for comparisons, specs, BOMs:
+
+| Column 1 | Column 2 | Column 3 |
+|----------|----------|----------|
+| Data     | Data     | Data     |
+
+Keep columns reasonable width
+Use emoji in first column for visual interest
+Right-align numbers
+Center-align checkmarks/icons
+```
+
+### **Code Blocks**
+```markdown
+Always specify language for syntax highlighting:
+
+```cpp
+// C++ code
+```
+
+```python
+# Python code
+```
+
 ```bash
-# Interactive skill discovery (search as you type)
-npx skills find
-
-# Install a skill
-npx skills add <owner/repo> <skill-name>
-
-# Update existing skills
-npx skills update
+# Shell commands
 ```
 
-**For AI Agents:**
-- Use the `find-skills` meta skill from `vercel-labs/skills` for programmatic discovery
-- Skills.sh supports non-interactive mode for automated workflows
-- When users ask for skills, recommend them from [skills.sh](https://skills.sh/) based on their needs
-
-### Recommended Skills for Omi
-
-**Frontend/Web:**
-```bash
-# React/Next.js best practices
-npx skills add vercel-labs/agent-skills vercel-react-best-practices
-
-# Web design guidelines
-npx skills add vercel-labs/agent-skills web-design-guidelines
-
-# TypeScript patterns
-npx skills add wshobson/agents typescript-advanced-types
+```json
+// JSON data
 ```
 
-**Backend:**
-```bash
-# FastAPI patterns
-npx skills add wshobson/agents fastapi-templates
-
-# Python testing
-npx skills add wshobson/agents python-testing-patterns
-
-# API design principles
-npx skills add wshobson/agents api-design-principles
+Add filename comments:
+```cpp
+// File: firmware/src/main.cpp
+```
 ```
 
-**Mobile:**
-```bash
-# React Native best practices
-npx skills add callstackincubator/agent-skills react-native-best-practices
+### **Images**
+```markdown
+Guidelines:
+- Use descriptive alt text for accessibility
+- Optimize file size (<500KB preferred)
+- Consistent aspect ratios
+- Professional quality (no blurry photos)
+- Include captions where helpful
+- Use GitHub relative paths: ![](./images/diagram.png)
+- Consider dark mode compatibility
 
-# Expo skills
-npx skills add expo/skills building-native-ui
+For diagrams: Use Mermaid when possible for GitHub rendering
+For photos: High resolution, good lighting
+For screenshots: Crop to relevant area, annotate if needed
 ```
 
-**Other Useful Skills:**
-```bash
-# Code review excellence
-npx skills add wshobson/agents code-review-excellence
+### **Collapsible Sections**
+```markdown
+For long content, use details/summary:
 
-# Architecture patterns
-npx skills add wshobson/agents architecture-patterns
+<details>
+<summary>Click to expand detailed explanation</summary>
 
-# Git workflows
-npx skills add wshobson/agents git-advanced-workflows
+Content here remains hidden until clicked.
+Great for advanced topics, long lists, verbose details.
+
+</details>
 ```
 
-### Skill Recommendations
+---
 
-When users ask for skills or need help with specific tasks, recommend relevant skills from [skills.sh](https://skills.sh/). Browse the [skills leaderboard](https://skills.sh/) to find popular and trending skills for your use case.
+## WRITING CHECKLIST
 
-## Automation Capabilities
+Before finalizing README, verify:
 
-The `.cursor` folder includes comprehensive automation for:
+### **Content Quality**
+- [ ] No broken links (test all URLs)
+- [ ] No typos or grammatical errors
+- [ ] Technical accuracy verified
+- [ ] Code snippets tested and working
+- [ ] All commands have expected output shown
+- [ ] Screenshots are current and accurate
+- [ ] Video links work and are public
+- [ ] Version numbers are correct
 
-### Documentation Automation
-- Auto-detect API endpoint changes and update API reference docs
-- Generate architecture diagrams from code structure
-- Sync documentation between `.cursor/` and `docs/` directories
-- Update Mermaid diagrams automatically
+### **Audience Coverage**
+- [ ] Beginners can understand how to start
+- [ ] Developers can find technical details
+- [ ] Contributors know how to help
+- [ ] Legal/safety info is prominent
+- [ ] Multiple skill levels accommodated
 
-### PR Automation
-- Generate comprehensive PR descriptions from git diff
-- Validate PR requirements (tests, docs, conventions)
-- Link related issues automatically
-- Suggest reviewers based on changed files
+### **Navigation**
+- [ ] Table of contents included (auto-generated)
+- [ ] Clear section hierarchy (H2, H3, H4)
+- [ ] "Back to top" links in long sections
+- [ ] Cross-references between sections work
+- [ ] External links open in new tabs (where appropriate)
 
-### Test Automation
-- Automatically run tests based on changed files
-- Fix test failures and re-run until green
-- Run tests in parallel where possible
-- Analyze failures and suggest fixes
+### **Maintenance**
+- [ ] Version number tracking system
+- [ ] Last updated date (auto or manual)
+- [ ] Changelog link
+- [ ] Process for keeping docs current
+- [ ] Dead link checker set up
 
-### Code Review Automation
-- Check architecture compliance
-- Verify import hierarchy
-- Check for common mistakes
-- Perform security audits
+### **Accessibility**
+- [ ] Alt text for all images
+- [ ] Descriptive link text (not "click here")
+- [ ] Semantic HTML in details/tables
+- [ ] Color not sole indicator of info
+- [ ] Code blocks have language specified
 
-### Verification
-- Verify completed work actually functions
-- Run end-to-end tests
-- Check edge cases
-- Report incomplete implementations
+### **Mobile Friendly**
+- [ ] Tables scroll horizontally on small screens
+- [ ] Images resize appropriately
+- [ ] No ultra-wide code blocks
+- [ ] Collapsible sections for long content
 
-### Changelog Generation
-- Parse commit messages following conventional commits
-- Categorize changes (feat/fix/docs)
-- Generate formatted changelog entries
-- Update CHANGELOG.md automatically
+---
 
-### Issue Triage
-- Score issues using triage formula from ISSUE_TRIAGE_GUIDE.MD
-- Assign priority levels (P0-P3)
-- Suggest lane assignment
-- Map issues to Omi layers
+## TONE EXAMPLES
 
-## Related Files
+### ? **GOOD Tone:**
+```
+"Aura is an open-source AI pendant that captures and understands your world.
+With just 40 grams on your neck, you get all-day battery life, visual context,
+and intelligent summaries of your conversations and experiences.
 
-- **`.cursorignore`** - Files excluded from semantic search and indexing (security & performance)
-- **`AGENTS.md`** - Project root file with coding guidelines and conventions
-- **`CLAUDE.md`** - Additional coding guidelines
-- **`.cursor/mcp.json`** - MCP server configuration for external tool integration
+Whether you're a maker wanting to build your own wearable AI, a developer
+looking to extend the platform, or someone who wants a privacy-respecting
+alternative to commercial products�Aura is for you."
+```
 
-## Architecture Overview
+### ? **AVOID This Tone:**
+```
+"This is the most revolutionary product ever created. Nothing else comes close.
+If you're not using Aura, you're living in the past. Commercial products are
+trash compared to this. Built by geniuses for geniuses."
+```
 
-Omi is a multimodal AI wearable platform with:
+### ? **GOOD Technical Description:**
+```
+"The ESP32-S3 Sense provides dual-core processing at 240MHz with 8MB PSRAM,
+enabling simultaneous camera capture and audio processing. The OV2640 camera
+sensor delivers 2MP images with configurable JPEG compression, while the I2S
+MEMS microphone captures 16kHz audio for transcription."
+```
 
-- **Backend**: Python/FastAPI (Firebase, Pinecone, Redis, Deepgram, OpenAI)
-- **App**: Flutter/Dart (iOS, Android, macOS, Windows)
-- **Firmware**: C/C++ (nRF chips, ESP32-S3, Zephyr)
-- **Web**: Next.js/TypeScript (frontend, personas)
-- **Plugins**: Python/Node.js apps
-- **SDKs**: Python, Swift, React Native
-- **MCP**: Python Model Context Protocol server
+### ? **AVOID Over-simplification:**
+```
+"It has a camera and microphone that work really well and do stuff with AI."
+```
 
-See `.cursor/docs/ARCHITECTURE.md` for detailed architecture documentation.
+---
 
-## Documentation References
+## SUCCESS METRICS
 
-**The `docs/` folder is the single source of truth for all user-facing documentation, deployed at [docs.aura.me](https://docs.aura.me/).**
+A successful README will achieve:
 
-All documentation is available locally in the `docs/` folder and deployed at [docs.aura.me](https://docs.aura.me/).
+**Primary Goals:**
+- [ ] 70%+ of readers understand what Aura is within 30 seconds
+- [ ] Clear path to "first build" for makers (clickable from top section)
+- [ ] <5 minutes to find answer to common questions (good navigation)
+- [ ] Developers can find API docs within 2 clicks
+- [ ] Contributors know exactly how to help
 
-### Key Documentation Files
+**Secondary Goals:**
+- [ ] Professional appearance (attracts serious collaborators)
+- [ ] Inspirational (makes people want to build)
+- [ ] Trustworthy (proper safety warnings, honest comparisons)
+- [ ] Comprehensive (answers 90% of questions internally)
+- [ ] Maintainable (easy to update as project evolves)
 
-**Backend**:
-- `docs/doc/developer/backend/backend_deepdive.mdx` - [Backend architecture](https://docs.aura.me/doc/developer/backend/backend_deepdive)
-- `docs/doc/developer/backend/chat_system.mdx` - [Chat system](https://docs.aura.me/doc/developer/backend/chat_system)
-- `docs/doc/developer/backend/StoringConversations.mdx` - [Data storage](https://docs.aura.me/doc/developer/backend/StoringConversations)
-- `docs/doc/developer/backend/transcription.mdx` - [Transcription](https://docs.aura.me/doc/developer/backend/transcription)
-- `docs/doc/developer/backend/Backend_Setup.mdx` - [Backend setup](https://docs.aura.me/doc/developer/backend/Backend_Setup)
+**Metrics to Track:**
+- GitHub stars (social proof)
+- Clone/download rate (actual usage)
+- Issue response time (community health)
+- External links/mentions (reach)
+- Contributor count (community engagement)
 
-**App & Protocol**:
-- `docs/doc/developer/AppSetup.mdx` - [App setup](https://docs.aura.me/doc/developer/AppSetup)
-- `docs/doc/developer/Protocol.mdx` - [BLE protocol](https://docs.aura.me/doc/developer/Protocol)
+---
 
-**API**:
-- `docs/doc/developer/api/overview.mdx` - [API overview](https://docs.aura.me/doc/developer/api/overview)
-- `docs/api-reference/` - [API endpoints](https://docs.aura.me/api-reference/)
+## FINAL INSTRUCTIONS
 
-**App Development**:
-- `docs/doc/developer/apps/Introduction.mdx` - [Plugin development](https://docs.aura.me/doc/developer/apps/Introduction)
-- `docs/doc/developer/MCP.mdx` - [MCP server](https://docs.aura.me/doc/developer/MCP)
+When generating the actual README based on this meta prompt:
 
-**Complete Index**: `docs/INDEX.md` - [View online](https://docs.aura.me/llms.txt)
+1. **Start with the hero section** - Hook readers immediately
+2. **Progressive disclosure** - Start broad, get detailed progressively
+3. **Visual hierarchy** - Use H2, H3, H4 consistently
+4. **Scannable** - Headers, bullets, bold, emojis for quick scanning
+5. **Action-oriented** - Every section should have clear next steps
+6. **Honest** - Don't oversell, acknowledge limitations
+7. **Welcoming** - Encourage participation at all skill levels
+8. **Professional** - Grammar, spelling, formatting matter
+9. **Current** - Reference actual current versions/dates
+10. **Tested** - Verify every link, command, and code snippet
 
-### Internal Cursor Documentation
+**Length Target:** 8,000-12,000 words (comprehensive but not bloated)
 
-- `.cursor/docs/` - Internal Cursor agent documentation (not user-facing)
-- `.cursor/docs/INDEX.md` - Complete Cursor resource map and relationships
+**Update Frequency:** Monthly for minor updates, immediately for critical changes
 
-### External Resources
+**Ownership:** README is the project's front door�make it incredible.
 
-- [docs.aura.me](https://docs.aura.me/) - Complete online documentation
-- [Cursor Docs](https://cursor.com/docs) - Cursor documentation
+---
 
-## Getting Help
-
-- **New to Cursor?** Start with `.cursor/docs/USAGE_GUIDE.md` for comprehensive guidance
-- **Looking for resources?** See `.cursor/docs/INDEX.md` for complete resource map and relationships
-- **Need quick reference?** Check the relevant rule file for patterns
-- **Common tasks?** Use commands for step-by-step guidance
-- **Architecture questions?** Reference architecture documentation in `docs/` folder (source of truth)
-
-## Cross-Referencing System
-
-All resources (rules, commands, skills, subagents) are deeply interconnected:
-
-- **Rules** reference related rules, skills, subagents, and commands
-- **Skills** reference related rules and subagents that use them
-- **Subagents** reference related rules and skills they use
-- **Commands** reference related rules, skills, and subagents
-
-This interconnected structure ensures:
-- **Deep Context**: AI can navigate between related resources
-- **Staying in Sync**: Cross-references help maintain consistency
-- **Better Discovery**: Easy to find related resources
-- **Comprehensive Help**: Full context of the ecosystem
-
-See `.cursor/docs/INDEX.md` for the complete relationship map.
+**This meta prompt represents the complete blueprint for creating a world-class GitHub README for the Aura Wearable AI Pendant project. Apply these principles consistently to create documentation that serves beginners and experts alike, drives adoption, and builds a thriving open source community.**
