@@ -21,7 +21,8 @@
 </div>
 
 <p align="center">
-  <img src="app/assets/images/omi-with-rope.webp" alt="Aura pendant" width="560" />
+ <img width="1024" height="1024" alt="Document" src="https://github.com/user-attachments/assets/6d9cdf9c-a221-4aad-8b5f-77d4b5787495" />
+
 </p>
 
 <p align="center">
@@ -108,13 +109,7 @@ flowchart LR
     Backend --> LLM["LLM / STT Providers"]
 ```
 
-## Visuals
 
-<p align="center">
-  <img src="web/frontend/public/omi_1.webp" alt="Pendant close-up" width="31%" />
-  <img src="web/frontend/public/omi-app.png" alt="Web app preview" width="31%" />
-  <img src="web/frontend/public/omi_2.webp" alt="Pendant worn" width="31%" />
-</p>
 
 ## Integrations
 
@@ -150,5 +145,5 @@ MIT. See [`LICENSE`](LICENSE).
   Built by <a href="https://github.com/thesohamdatta">Soham Datta</a> and open-source contributors.
 </p>
 
-> Aura is an independent project and is not officially affiliated with Omi or Based Hardware.
-#
+
+
