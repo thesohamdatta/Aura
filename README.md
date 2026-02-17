@@ -35,17 +35,17 @@
 
 ## What It Does
 
-You can wear aura as you want pendant , clip , microphone , watch and more. It quietly captures moments — conversations, ideas, faces, scenes — throughout your day. Later, you ask questions. It answers.
+You can wear aura as you want : pendant , clip , microphone , as a watch and many more ways . It captures moments — conversations, ideas, faces, scenes — throughout your day. Then , you ask questions. It answers.
 
 ```
-"What did the client say about pricing?"     → Instant recall.
-"Show me everything from Tuesday's meeting." → Done.
-"Who was that person I met at the event?"    → Photo + name + context.
+"Where did I park?"                        → Aura knows.
+"What did mom ask me to pick up?"          → Milk, eggs, the usual guilt trip.
+"Did I take my meds this morning?"         → Yes. Relax.
 ```
 
 No screen , no friction , no distaction , no more loopholes.
 
-Assistance are joked they do not assists us
+Virtual Assistance are joke they do not assists us
 
 We have lot of distraction in our phone
 
@@ -68,7 +68,7 @@ Aura will be changing this
 | **3D-Printed Enclosure** | PLA/PETG · custom pendant form | Wearable housing |
 | **30 AWG Wires** | Flexible · ultra-thin | Internal wiring |
 
-> **Total BOM Cost: ~$70 &nbsp;·&nbsp; Weight: ~45g &nbsp;·&nbsp; Battery Life: 8–12 hours**
+> **Total BOM Cost: ~$30 &nbsp;·&nbsp; Weight: ~45g &nbsp;·&nbsp; Battery Life: 5-8 hours**
 
 ---
 
@@ -117,7 +117,6 @@ Zero data leaves your machine.
 
 ### Build It Yourself
 
-**Time: ~2–3 hours &nbsp;·&nbsp; Cost: ~$70**
 
 ```bash
 # 1. Clone the repository
@@ -173,15 +172,11 @@ We're building the future of wearable AI in the open. Every contribution matters
 🌍  Other language?     → Help us translate
 ```
 
-**[→ Contributing Guide](link) &nbsp;·&nbsp; [→ Open Bounties](link) &nbsp;·&nbsp; [→ Discord](link)**
-
-First-time open source contributor? Welcome. We'll walk you through it.
-
 ---
 
 ## The People
 
-Built by a community that believes wearable AI should be open, affordable, and in your control — not the 299$ giant.
+Built by a people that believes wearable AI should be open, affordable, and in your control — not the 299$ giant.
 
 **Core Team:** [Soham Datta](https://www.linkedin.com/in/thesohamdatta) &nbsp;·&nbsp; [Laxman Pajai](https://www.linkedin.com/in/laxman-pajai-434b98239/?originalSubdomain=in)
 
