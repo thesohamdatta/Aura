@@ -1,20 +1,19 @@
 <div align="center">
 
-<img src="Assets/MAIN/hero iamge.png" alt="AURA — AI wearable pendant" width="60%"/>
+<h1><b>AURA</b></h1>
+
+*Open-source AI wearable pendant. Sees it. Hears it. Remembers it.*
 
 <br/>
 
-# AURA
-
-**Open-source AI wearable pendant. Sees it. Hears it. Remembers it.**
+<img src="Assets/MAIN/hero mockup of the applicatoin .webp" alt="AURA — AI wearable pendant" width="80%"/>
 
 <br/>
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-000000?style=flat-square)](LICENSE)
-[![MCU](https://img.shields.io/badge/MCU-ESP32--S3%20Sense-E7473C?style=flat-square)](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/)
-[![App](https://img.shields.io/badge/App-Android-02569B?style=flat-square)](app/android)
-[![Cost](https://img.shields.io/badge/Build%20Cost-~%2460%20USD-2EA043?style=flat-square)](#bill-of-materials)
-[![Stars](https://img.shields.io/github/stars/thesohamdatta/Aura-Wearable-AI?style=flat-square&color=FFD700)](https://github.com/thesohamdatta/Aura-Wearable-AI/stargazers)
+[![MCU](https://img.shields.io/badge/MCU-ESP32--S3%20Sense-000000?style=flat-square)](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/)
+[![App](https://img.shields.io/badge/App-Android-000000?style=flat-square)](app/android)
+[![Cost](https://img.shields.io/badge/Build%20Cost-~%2460%20USD-000000?style=flat-square)](#bill-of-materials)
 
 </div>
 
@@ -26,11 +25,12 @@
 
 <div align="center">
 
-AURA is a pendant you wear around your neck. It continuously captures audio and images, streams them to your phone, and AI turns everything into searchable memories, summaries, and action items — automatically.
+## Most AI focuses on **screens**. We focus on **presence**.
+## Most AI is a **tool**. AURA is a **sense**.
 
-**What it is:** A wearable AI context engine · Open hardware + firmware + app · ~10 hours battery · Under 50g
+<br/>
 
-**Built for:** developers, researchers, and builders who want to extend it.
+<img src="Assets/MAIN/hw-front.png" alt="AURA Hardware Front" width="60%"/>
 
 </div>
 
