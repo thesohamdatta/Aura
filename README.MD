@@ -1,6 +1,6 @@
 <div align="center">
 
-<h1><b>AURA</b></h1>
+<h1><b><font color="#E63B2E">AURA</font></b></h1>
 
 *Open-source AI wearable pendant. Sees it. Hears it. Remembers it.*
 
@@ -40,7 +40,7 @@
 
 <br/>
 
-## Artifact 01: HARDWARE
+## <font color="#E63B2E">Artifact 01: HARDWARE</font>
 
 <img src="Assets/3D PARTS/INSIDE VIEW/EXPLODED VIEW.png" width="100%"/>
 
@@ -54,7 +54,7 @@
 
 <br/>
 
-## Artifact 02: SOFTWARE
+## <font color="#E63B2E">Artifact 02: SOFTWARE</font>
 
 <img src="Assets/MAIN/Applicaiton UI Mock up.png" width="100%"/>
 
@@ -66,7 +66,7 @@ Aura Companion is a searchable memory engine that indexes environmental context 
 
 <br/>
 
-## Artifact 03: INTELLIGENCE
+## <font color="#E63B2E">Artifact 03: INTELLIGENCE</font>
 
 **[ DATA PIPELINE ]**
 ```text
@@ -112,7 +112,7 @@ Camera     ────────▶  (Orchestrator) ────▶ GPT-4o Vi
 
 <br/>
 
-## How it works
+## <font color="#E63B2E">How it works</font>
 
 <div align="center">
 
@@ -147,7 +147,7 @@ Camera     ────────▶  (Orchestrator) ────▶ GPT-4o Vi
 
 <br/>
 
-## Mobile App
+## <font color="#E63B2E">Mobile App</font>
 
 <div align="center">
 
@@ -171,7 +171,7 @@ Camera     ────────▶  (Orchestrator) ────▶ GPT-4o Vi
 
 <br/>
 
-## Bill of Materials
+## <font color="#E63B2E">Bill of Materials</font>
 
 **Total: ~$60 USD**
 
@@ -198,7 +198,7 @@ Camera     ────────▶  (Orchestrator) ────▶ GPT-4o Vi
 
 <br/>
 
-## Hardware
+## <font color="#E63B2E">Hardware</font>
 
 <div align="center">
 
@@ -262,7 +262,7 @@ SS12D00-G3 slider switch inline with battery ground wire.
 
 <br/>
 
-## 3D Enclosure
+## <font color="#E63B2E">3D Enclosure</font>
 
 <div align="center">
 
@@ -320,7 +320,7 @@ No printer? Upload to [JLCPCB](https://3d.jlcpcb.com) or [Craftcloud](https://cr
 
 <br/>
 
-## Build Guide
+## <font color="#E63B2E">Build Guide</font>
 
 Follow in order. Don't skip steps.
 
