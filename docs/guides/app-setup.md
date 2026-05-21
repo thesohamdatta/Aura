@@ -24,7 +24,7 @@
 **Option B — Command line:**
 
 ```bash
-cd app/android
+cd ../../app/android
 
 # Debug build
 ./gradlew assembleDebug
@@ -51,7 +51,7 @@ Include the trailing slash.
 
 ## Pairing with AURA
 
-1. Flash firmware to the pendant (see [`firmware/readme.md`](../firmware/readme.md))
+1. Flash firmware to the pendant (see [`firmware/readme.md`](../../firmware/readme.md))
 2. Power on the AURA pendant
 3. Open the app → go to **Devices**
 4. Tap **Pair new device** → select **AURA** from the list

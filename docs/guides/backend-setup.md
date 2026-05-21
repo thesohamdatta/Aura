@@ -46,7 +46,7 @@ Without these, the Developer Settings page will fail.
 ### 2 — Environment File
 
 ```bash
-cd Aura-Wearable-AI/backend
+cd ../../backend
 
 # Windows
 copy .env.template .env
