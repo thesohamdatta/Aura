@@ -40,8 +40,53 @@
 
 <br/>
 
+## Artifact 01: HARDWARE
+
+<img src="Assets/3D PARTS/INSIDE VIEW/EXPLODED VIEW.png" width="100%"/>
+
+**[ SYSTEM SPECIFICATIONS ]**
+- **CORE:** XIAO ESP32-S3 Sense (Xtensa® LX7 @ 240MHz)
+- **OPTICS:** OV2640 2MP Camera module
+- **AUDIO:** High-sensitivity digital PDM microphone
+- **MEMORY:** 8MB PSRAM + 8MB Flash
+- **POWER:** 500mAh Dual-LiPo array / USB-C PD
+- **CONNECT:** 2.4GHz WiFi / Bluetooth Low Energy 5.0
+
+<br/>
+
+## Artifact 02: SOFTWARE
+
+<img src="Assets/MAIN/Applicaiton UI Mock up.png" width="100%"/>
+
+**[ MEMORY ENGINE ]**
+Aura Companion is a searchable memory engine that indexes environmental context in real-time.
+- **TRANSCRIPTION:** Continuous audio stream processing via Deepgram.
+- **VISION:** Contextual frame analysis via GPT-4o.
+- **RETRIEVAL:** Semantic search across vector-indexed history.
+
+<br/>
+
+## Artifact 03: INTELLIGENCE
+
+**[ DATA PIPELINE ]**
+```text
+[ SIGNAL ]            [ CLIENT ]            [ COGNITION ]            [ MEMORY ]
+──────────            ──────────            ─────────────            ──────────
+Microphone ────────▶  Android App ────────▶ Deepgram STT  ────────▶ Vector DB
+Camera     ────────▶  (Orchestrator) ────▶ GPT-4o Vision ────────▶ Memory Engine
+```
+
+<br/>
+
+---
+
+<br/>
+
 ## Table of Contents
 
+- [Artifact 01: HARDWARE](#artifact-01-hardware)
+- [Artifact 02: SOFTWARE](#artifact-02-software)
+- [Artifact 03: INTELLIGENCE](#artifact-03-intelligence)
 - [How it works](#how-it-works)
 - [Mobile App](#mobile-app)
 - [Bill of Materials](#bill-of-materials)
