@@ -615,23 +615,7 @@ Aura-Wearable-AI/
 
 ## Contributing
 
-```bash
-git checkout -b feature/your-feature
-# make changes
-git commit -m "feat: short description of what and why"
-# open pull request
-```
-
-Good contributions:
-- **Hardware:** new case designs, better battery layout
-- **Firmware:** power optimization, new sensors, compression
-- **App:** new views, integrations, offline support
-- **AI:** better prompts, model support, edge inference
-- **Docs:** corrections, clarity, translations
-
-Include photos or video for hardware changes. Keep PRs focused.
-
-[Open an issue](https://github.com/thesohamdatta/Aura-Wearable-AI/issues) · [Browse open PRs](https://github.com/thesohamdatta/Aura-Wearable-AI/pulls)
+Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTING.md) to get started.
 
 <br/>
 
@@ -641,7 +625,7 @@ Include photos or video for hardware changes. Keep PRs focused.
 
 ## License
 
-MIT. Use it, modify it, build products with it. Keep the license file.
+This project is licensed under the [MIT License](LICENSE).
 
 <br/>
 
