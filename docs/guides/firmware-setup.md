@@ -17,7 +17,7 @@ No toolchain needed. Just drag and drop.
 
 ### Step 2 — Flash
 
-Copy the `.uf2` file from `firmware/releases/` to the ESP32S3 drive.  
+Copy the `.uf2` file from `../../firmware/releases/` to the ESP32S3 drive.  
 The device flashes automatically and reboots.
 
 ### Step 3 — Monitor (optional)
@@ -39,7 +39,7 @@ pip install platformio
 
 **Build and upload:**
 ```bash
-cd firmware
+cd ../../firmware
 
 # Standard build
 platformio run -e seeed_xiao_esp32s3 --target upload

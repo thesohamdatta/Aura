@@ -335,25 +335,7 @@ The AURA firmware handles real-time audio encoding (Opus) and image capture.
 2. Hold **BOOT** → press **RESET** → release **BOOT**.
 3. Copy `firmware/releases/aura_glass_firmware.uf2` to the `ESP32S3` drive.
 
-<details>
-<summary><b>Detailed Manual Build (Arduino/PlatformIO)</b></summary>
-
-**Requirements:**
-- [Arduino IDE 2.x](https://www.arduino.cc/en/software)
-- ESP32 Board Manager URL: `https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json`
-
-**Critical Board Settings:**
-- **Board:** `XIAO_ESP32S3`
-- **PSRAM:** `OPI PSRAM` (Required for camera)
-- **Flash Mode:** `QIO 80MHz`
-
-**Key Configuration (`firmware/src/config.h`):**
-```cpp
-#define BLE_DEVICE_NAME            "AURA"
-#define PHOTO_CAPTURE_INTERVAL_MS  30000   // image every 30s
-#define MIC_SAMPLE_RATE            16000   // 16kHz audio
-```
-</details>
+> **DEEP DIVE:** For detailed flashing methods, battery specs, and manual builds, visit the [Firmware Setup Guide](docs/guides/firmware-setup.md).
 
 <br/>
 
@@ -364,21 +346,8 @@ The companion app orchestrates the data flow between the wearable and the AI bac
 **Installation:**
 1. Download the latest `.apk` from [Releases](https://github.com/thesohamdatta/Aura-Wearable-AI/releases).
 2. Install on any Android device (Android 10+).
-3. Grant Bluetooth and Location permissions.
 
-<details>
-<summary><b>Build from Source (Android Studio)</b></summary>
-
-```bash
-cd Aura-Wearable-AI/app/android
-
-# Build debug APK
-./gradlew assembleDebug
-
-# Install on connected device
-./gradlew installDebug
-```
-</details>
+> **DEEP DIVE:** For build requirements, Gradle commands, and pairing instructions, visit the [Mobile App Setup Guide](docs/guides/app-setup.md).
 
 <br/>
 
@@ -390,29 +359,7 @@ The FastAPI backend processes audio streams and analyzes visual context.
 1. Create a `.env` file in `/backend`.
 2. Configure your `API_BASE_URL` in the Mobile App settings.
 
-<details>
-<summary><b>API Key Configuration</b></summary>
-
-| Service | Best for | Key Source |
-|:---|:---|:---|
-| **Deepgram** | Transcription | [console.deepgram.com](https://console.deepgram.com) |
-| **OpenAI** | Vision (GPT-4o) | [platform.openai.com](https://platform.openai.com) |
-| **Pinecone** | Long-term Memory | [app.pinecone.io](https://app.pinecone.io) |
-| **Firebase** | Auth / Storage | [console.firebase.google.com](https://console.firebase.google.com) |
-</details>
-
-<details>
-<summary><b>Local Environment Setup</b></summary>
-
-```bash
-cd backend
-python -m venv venv
-source venv/bin/activate # Windows: venv\Scripts\activate
-
-pip install -r requirements.txt
-uvicorn main:app --reload --port 8000
-```
-</details>
+> **DEEP DIVE:** For Firebase setup, Firestore indexing, and server deployment, visit the [Backend Setup Guide](docs/guides/backend-setup.md).
 
 <br/>
 
@@ -420,22 +367,7 @@ uvicorn main:app --reload --port 8000
 
 Run everything on your machine. No cloud API keys required.
 
-<details>
-<summary><b>Self-Hosted LLM (Ollama)</b></summary>
-
-```bash
-# Install Ollama → https://ollama.com
-ollama pull llama3.2
-ollama pull moondream:1.8b-v2-fp16
-ollama serve
-```
-
-In `.env`:
-```
-LLM_PROVIDER=ollama
-OLLAMA_URL=http://localhost:11434
-```
-</details>
+> **DEEP DIVE:** For self-hosted LLM setup (Ollama) and local vision models, visit the [Local Mode Guide](docs/guides/backend-setup.md#self-hosted-llm-ollama).
 
 <br/>
 
