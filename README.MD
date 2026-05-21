@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="Assest/MAIN/hero iamge.png" alt="AURA — AI wearable pendant" width="60%"/>
+<img src="Assets/MAIN/hero iamge.png" alt="AURA — AI wearable pendant" width="60%"/>
 
 <br/>
 
@@ -71,7 +71,7 @@ AURA is a pendant you wear around your neck. It continuously captures audio and 
 
 <div align="center">
 
-<img src="Assest/MAIN/diagram.jpg" alt="AURA system architecture diagram" width="92%"/>
+<img src="Assets/MAIN/diagram.jpg" alt="AURA system architecture diagram" width="92%"/>
 
 </div>
 
@@ -106,7 +106,7 @@ AURA is a pendant you wear around your neck. It continuously captures audio and 
 
 <div align="center">
 
-<img src="Assest/MAIN/Applicaiton UI Mock up.png" alt="AURA Android app — all screens" width="88%"/>
+<img src="Assets/MAIN/Applicaiton UI Mock up.png" alt="AURA Android app — all screens" width="88%"/>
 
 <br/><sub>Conversations · Memories · Tasks · Search</sub>
 
@@ -123,7 +123,7 @@ AURA is a pendant you wear around your neck. It continuously captures audio and 
 **Total: ~$60 USD**
 
 <div align="center">
-<img src="Assest/MAIN/Document.png" alt="All components laid out" width="72%"/>
+<img src="Assets/MAIN/Document.png" alt="All components laid out" width="72%"/>
 </div>
 
 <br/>
@@ -152,21 +152,21 @@ AURA is a pendant you wear around your neck. It continuously captures audio and 
 <table>
 <tr>
 <td align="center" width="50%">
-<img src="Assest/MAIN/hero iamge.png" width="100%"/>
+<img src="Assets/MAIN/hero iamge.png" width="100%"/>
 <br/><sub>AURA — Front face</sub>
 </td>
 <td align="center" width="50%">
-<img src="Assest/MAIN/hw-wearing.jpg" width="100%"/>
+<img src="Assets/MAIN/hw-wearing.jpg" width="100%"/>
 <br/><sub>AURA — Worn as a pendant</sub>
 </td>
 </tr>
 <tr>
 <td align="center" width="50%">
-<img src="Assest/MAIN/hw-two-a.jpg" width="100%"/>
+<img src="Assets/MAIN/hw-two-a.jpg" width="100%"/>
 <br/><sub>AURA — Device views</sub>
 </td>
 <td align="center" width="50%">
-<img src="Assest/MAIN/hw-two-b.jpg" width="100%"/>
+<img src="Assets/MAIN/hw-two-b.jpg" width="100%"/>
 <br/><sub>AURA — Back and side profiles</sub>
 </td>
 </tr>
@@ -216,11 +216,11 @@ SS12D00-G3 slider switch inline with battery ground wire.
 <table>
 <tr>
 <td align="center" width="50%">
-<img src="Assest/3D PARTS/INSIDE VIEW/EXPLODED VIEW.png" width="100%"/>
+<img src="Assets/3D PARTS/INSIDE VIEW/EXPLODED VIEW.png" width="100%"/>
 <br/><sub>Exploded — component fit &amp; assembly order</sub>
 </td>
 <td align="center" width="50%">
-<img src="Assest/3D PARTS/INSIDE VIEW/TOP VIEW.png" width="100%"/>
+<img src="Assets/3D PARTS/INSIDE VIEW/TOP VIEW.png" width="100%"/>
 <br/><sub>Top view — full assembly layout</sub>
 </td>
 </tr>
@@ -231,15 +231,15 @@ SS12D00-G3 slider switch inline with battery ground wire.
 <table>
 <tr>
 <td align="center" width="33%">
-<img src="Assest/3D PARTS/base chipset of esp32 s3 sence .png" width="100%"/>
+<img src="Assets/3D PARTS/base chipset of esp32 s3 sence .png" width="100%"/>
 <br/><sub>ESP32-S3 Base Board</sub>
 </td>
 <td align="center" width="33%">
-<img src="Assest/3D PARTS/memory card and camera extension.png" width="100%"/>
+<img src="Assets/3D PARTS/memory card and camera extension.png" width="100%"/>
 <br/><sub>Expansion Board</sub>
 </td>
 <td align="center" width="33%">
-<img src="Assest/3D PARTS/camera module.png" width="100%"/>
+<img src="Assets/3D PARTS/camera module.png" width="100%"/>
 <br/><sub>Camera Module</sub>
 </td>
 </tr>
@@ -598,7 +598,7 @@ Aura-Wearable-AI/
 ├── hardware/
 │   └── CASE.stl                  ← 3D printable case
 │
-├── Assest/
+├── Assets/
 │   ├── MAIN/                     ← hero images, app mockups
 │   ├── 3D PARTS/                 ← STL renders, exploded views
 │   │   └── INSIDE VIEW/          ← CASE.stl + assembly renders
@@ -660,6 +660,6 @@ Built on the ESP32-S3 Sense. Designed to be extended.
 
 <br/>
 
-<img src="Assest/MAIN/the neckless.png" alt="AURA pendant necklace" width="90px"/>
+<img src="Assets/MAIN/the neckless.png" alt="AURA pendant necklace" width="90px"/>
 
 </div>

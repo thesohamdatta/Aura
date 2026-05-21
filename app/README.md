@@ -6,8 +6,8 @@ Pairs with the AURA pendant over BLE, streams audio and images to the backend, a
 
 <div align="center">
 
-<img src="../Assest/MAIN/Hero APP mocuk of applicaiotn .png" width="48%"/> &nbsp;
-<img src="../Assest/MAIN/Applicaiton UI Mock up.png" width="48%"/>
+<img src="../Assets/MAIN/Hero APP mocuk of applicaiotn .png" width="48%"/> &nbsp;
+<img src="../Assets/MAIN/Applicaiton UI Mock up.png" width="48%"/>
 
 </div>
 
