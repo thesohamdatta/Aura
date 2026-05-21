@@ -163,6 +163,14 @@ Camera     ────────▶  (Orchestrator) ────▶ GPT-4o Vi
 
 <br/>
 
+<div align="center">
+
+# <font color="#E63B2E">TECHNICAL SPECIFICATION</font>
+
+</div>
+
+<br/>
+
 ## Bill of Materials
 
 **Total: ~$60 USD**
@@ -173,14 +181,14 @@ Camera     ────────▶  (Orchestrator) ────▶ GPT-4o Vi
 
 <br/>
 
-| Component | Spec | Qty | Cost | Link |
+| Component | Spec | Qty | Cost | Source |
 |:---|:---|:---:|:---:|:---|
-| XIAO ESP32-S3 Sense | MCU + Camera + Mic | 1 | ~$15 | [Seeed Studio](https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html) |
-| LiPo Battery 350mAh | 3.7V single cell | 2 | ~$8 | [Robu.in](https://robu.in/product/wly751535-350mah-3-7v-single-cell-rechargeable-lipo-battery) |
-| Slider Switch | 4mm SPDT 1P2T slide | 1 | ~$1 | [Robu.in](https://robu.in/product/4mm-spdt-1p2t-slide-switch-pack-of-10) |
-| Wire | 28 AWG silicone, flexible | 1 set | ~$5 | [Amazon](https://www.amazon.com/s?k=BNTECHGO+28+AWG+silicone+wire) |
-| 3D Printed Case | PLA/PETG, STL included | 1 | ~$3 | [Print or order](#3d-enclosure) |
-| Necklace cord | 2–3mm, any length | 1 | ~$2 | [Amazon](https://www.amazon.com/s?k=waxed+cord+necklace+2mm+black) |
+| **XIAO ESP32-S3 Sense** | `MCU + Camera + Mic` | 1 | `$15.00` | [Seeed Studio](https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html) |
+| **LiPo Battery 350mAh** | `3.7V single cell` | 2 | `$8.00` | [Robu.in](https://robu.in/product/wly751535-350mah-3-7v-single-cell-rechargeable-lipo-battery) |
+| **Slider Switch** | `4mm SPDT 1P2T` | 1 | `$1.00` | [Robu.in](https://robu.in/product/4mm-spdt-1p2t-slide-switch-pack-of-10) |
+| **Silicon Wire** | `28 AWG flexible` | 1 | `$5.00` | [Amazon](https://www.amazon.com/s?k=BNTECHGO+28+AWG+silicone+wire) |
+| **3D Enclosure** | `PLA/PETG (STL)` | 1 | `$3.00` | [Project STL](#3d-enclosure) |
+| **Necklace Cord** | `2mm Waxed` | 1 | `$2.00` | [Amazon](https://www.amazon.com/s?k=waxed+cord+necklace+2mm+black) |
 
 > Order 2 extra batteries. LiPo capacity varies by batch.
 
@@ -320,158 +328,114 @@ Follow in order. Don't skip steps.
 
 ### 1 — Firmware
 
-See full details in [`firmware/readme.md`](firmware/readme.md).
+The AURA firmware handles real-time audio encoding (Opus) and image capture.
+
+**Quick Start:**
+1. Connect ESP32-S3 via USB-C.
+2. Hold **BOOT** → press **RESET** → release **BOOT**.
+3. Copy `firmware/releases/aura_glass_firmware.uf2` to the `ESP32S3` drive.
+
+<details>
+<summary><b>Detailed Manual Build (Arduino/PlatformIO)</b></summary>
 
 **Requirements:**
-- [Arduino IDE 2.x](https://www.arduino.cc/en/software) or [PlatformIO](https://platformio.org/install)
-- ESP32 board package — add this URL in `File → Preferences`:
+- [Arduino IDE 2.x](https://www.arduino.cc/en/software)
+- ESP32 Board Manager URL: `https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json`
 
-```
-https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
-```
+**Critical Board Settings:**
+- **Board:** `XIAO_ESP32S3`
+- **PSRAM:** `OPI PSRAM` (Required for camera)
+- **Flash Mode:** `QIO 80MHz`
 
-Then `Tools → Board → Boards Manager` → search `esp32` → Install.
-
-**Board settings — get these right before uploading:**
-
-```
-Tools → Board  →  XIAO_ESP32S3
-Tools → PSRAM  →  OPI PSRAM        ← required. Camera fails without this.
-Tools → Port   →  your COM port
-```
-
-> **Windows only:** If COM port doesn't appear, install the [CH340 driver](https://www.wch-ic.com/downloads/CH341SER_EXE.html) and restart.
-
-**Get the code:**
-
-```bash
-git clone https://github.com/thesohamdatta/Aura-Wearable-AI.git
-cd Aura-Wearable-AI/firmware
-```
-
-**Key config values in `firmware/src/config.h`:**
-
+**Key Configuration (`firmware/src/config.h`):**
 ```cpp
 #define BLE_DEVICE_NAME            "AURA"
 #define PHOTO_CAPTURE_INTERVAL_MS  30000   // image every 30s
 #define MIC_SAMPLE_RATE            16000   // 16kHz audio
-#define CAMERA_FRAME_SIZE          FRAMESIZE_VGA
 ```
-
-**Upload via UF2 (easiest):**
-
-```
-1. Hold BOOT → press RESET → release BOOT
-2. Device appears as USB drive "ESP32S3"
-3. Copy firmware/releases/aura_glass_firmware.uf2 to the drive
-4. Device reboots automatically
-5. Open Serial Monitor @ 115200 baud
-```
-
-**Upload via Arduino IDE:**
-
-```
-1. Connect ESP32-S3 via USB-C
-2. Hold BOOT → press RESET → release BOOT
-3. Click Upload in Arduino IDE
-4. Open Serial Monitor @ 115200 baud
-```
-
-Expected output:
-
-```
-[AURA] Camera initialized
-[AURA] Microphone initialized
-[AURA] BLE advertising
-[AURA] Ready
-```
+</details>
 
 <br/>
 
 ### 2 — Mobile App Setup
 
-**Build from source (Android):**
+The companion app orchestrates the data flow between the wearable and the AI backend.
+
+**Installation:**
+1. Download the latest `.apk` from [Releases](https://github.com/thesohamdatta/Aura-Wearable-AI/releases).
+2. Install on any Android device (Android 10+).
+3. Grant Bluetooth and Location permissions.
+
+<details>
+<summary><b>Build from Source (Android Studio)</b></summary>
 
 ```bash
 cd Aura-Wearable-AI/app/android
 
-# Open in Android Studio, or build via Gradle:
+# Build debug APK
 ./gradlew assembleDebug
 
-# Install on connected device:
+# Install on connected device
 ./gradlew installDebug
 ```
-
-Open app → pair via Bluetooth → done.
+</details>
 
 <br/>
 
 ### 3 — Backend
 
-See full details in [`backend/README.md`](backend/README.md).
-
-**API keys you need:**
-
-| Service | Free tier? | Get key |
-|:---|:---:|:---|
-| Firebase | Yes | [console.firebase.google.com](https://console.firebase.google.com) |
-| Deepgram | Yes | [console.deepgram.com](https://console.deepgram.com) |
-| OpenAI | No | [platform.openai.com](https://platform.openai.com) |
-| Pinecone | Yes | [app.pinecone.io](https://app.pinecone.io) |
-| Redis (Upstash) | Yes | [console.upstash.com](https://console.upstash.com) |
+The FastAPI backend processes audio streams and analyzes visual context.
 
 **Setup:**
+1. Create a `.env` file in `/backend`.
+2. Configure your `API_BASE_URL` in the Mobile App settings.
+
+<details>
+<summary><b>API Key Configuration</b></summary>
+
+| Service | Best for | Key Source |
+|:---|:---|:---|
+| **Deepgram** | Transcription | [console.deepgram.com](https://console.deepgram.com) |
+| **OpenAI** | Vision (GPT-4o) | [platform.openai.com](https://platform.openai.com) |
+| **Pinecone** | Long-term Memory | [app.pinecone.io](https://app.pinecone.io) |
+| **Firebase** | Auth / Storage | [console.firebase.google.com](https://console.firebase.google.com) |
+</details>
+
+<details>
+<summary><b>Local Environment Setup</b></summary>
 
 ```bash
-cd Aura-Wearable-AI/backend
-
-# Windows
+cd backend
 python -m venv venv
-venv\Scripts\activate
+source venv/bin/activate # Windows: venv\Scripts\activate
 
 pip install -r requirements.txt
-
-copy .env.template .env
-# fill in your keys
-
-uvicorn main:app --reload --env-file .env --port 8000
+uvicorn main:app --reload --port 8000
 ```
-
-**Expose to the internet (required for device connection):**
-
-```bash
-# Install ngrok → https://ngrok.com
-ngrok http 8000
-```
-
-In app settings, set:
-
-```
-API_BASE_URL=https://your-ngrok-url.ngrok-free.app/
-```
-
-Include the trailing slash.
+</details>
 
 <br/>
 
 ### 4 — Local / Private Mode
 
-Run everything on your machine. No cloud required.
+Run everything on your machine. No cloud API keys required.
+
+<details>
+<summary><b>Self-Hosted LLM (Ollama)</b></summary>
 
 ```bash
 # Install Ollama → https://ollama.com
-ollama pull moondream:1.8b-v2-fp16
 ollama pull llama3.2
+ollama pull moondream:1.8b-v2-fp16
 ollama serve
 ```
 
 In `.env`:
-
 ```
-OLLAMA_URL=http://localhost:11434/api/chat
-OLLAMA_MODEL=llama3.2
-VISION_MODEL=moondream:1.8b-v2-fp16
+LLM_PROVIDER=ollama
+OLLAMA_URL=http://localhost:11434
 ```
+</details>
 
 <br/>
 
@@ -481,13 +445,12 @@ VISION_MODEL=moondream:1.8b-v2-fp16
 
 ## AI Provider Reference
 
-| Provider | Speed | Quality | Cost | Best for |
+| Provider | Speed | Intelligence | Privacy | Best For |
 |:---|:---:|:---:|:---:|:---|
-| OpenAI GPT-4o | Medium | Best | Paid | Vision + accuracy |
-| Ollama (local) | Slow | Good | Free | Privacy |
-| Deepgram | Fast | Excellent | Pay-as-go | Transcription |
-
-Recommended stack: **Deepgram + GPT-4o Vision**
+| **GPT-4o** | Fast | High | Low | Production |
+| **Llama 3.2** | Medium | Med | High | Privacy |
+| **Moondream** | Slow | Med | High | Local Vision |
+| **Deepgram** | Instant | - | Med | Transcription |
 
 <br/>
 
@@ -680,15 +643,21 @@ This project is licensed under the [MIT License](LICENSE).
 
 <div align="center">
 
-**AURA** — open hardware, open firmware, open app.  
-Built on the ESP32-S3 Sense. Designed to be extended.
+<br/>
+
+`SYSTEM OPERATIONAL` 🟢
 
 <br/>
 
-[⭐ Star this repo](https://github.com/thesohamdatta/Aura-Wearable-AI) · [GitHub Issues](https://github.com/thesohamdatta/Aura-Wearable-AI/issues) · [Pull Requests](https://github.com/thesohamdatta/Aura-Wearable-AI/pulls)
+**AURA** — Open Hardware · Open Firmware · Open Intelligence  
+Built for the next era of human-AI presence.
 
 <br/>
 
-<img src="Assets/MAIN/the neckless.png" alt="AURA pendant necklace" width="90px"/>
+[⭐ Star this repo](https://github.com/thesohamdatta/Aura-Wearable-AI) · [GitHub Issues](https://github.com/thesohamdatta/Aura-Wearable-AI/issues) · [License](LICENSE)
+
+<br/>
+
+<img src="Assets/MAIN/the neckless.png" alt="AURA pendant necklace" width="80px"/>
 
 </div>
