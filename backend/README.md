@@ -1,21 +1,37 @@
-# AURA Backend
+<div align="center">
+  <p align="center"><code>[ SIGNAL 01 // THE BRAIN ]</code></p>
+  <h1><b><font color="#E63B2E">BACKEND</font></b></h1>
+</div>
 
-FastAPI backend that powers AURA's transcription, memory, and AI chat pipeline.
+<br/>
 
-For the full module reference see [`INDEX.md`](INDEX.md).
+<div align="center">
+  <img src="../Assets/MAIN/diagram.jpg" width="90%"/>
+</div>
+
+<br/>
+
+FastAPI backend that powers AURA's transcription, vision analysis, memory storage, and AI chat pipeline.
+
+---
+
+## Quick Start
+
+1. **Install** dependencies: `pip install -r requirements.txt`
+2. **Configure** keys: `copy .env.template .env`
+3. **Run** server: `uvicorn main:app --reload`
+4. **Tunnel** via ngrok: `ngrok http 8000`
 
 ---
 
 ## What it does
 
-| Feature | How |
+| Feature | Provider |
 |:---|:---|
-| Audio transcription | Deepgram real-time STT over WebSocket |
-| Vision analysis | GPT-4o processes images from the pendant |
-| Memory storage | Pinecone vector DB + Firestore |
-| Chat | LangGraph agentic system with RAG |
-| Auth | Firebase Authentication |
-| Caching | Redis (Upstash recommended) |
+| STT | Deepgram |
+| Vision | GPT-4o |
+| Vector DB | Pinecone |
+| Agent | LangGraph |
 
 ---
 
@@ -23,28 +39,14 @@ For the full module reference see [`INDEX.md`](INDEX.md).
 
 ```
 backend/
-├── main.py               ← FastAPI app entry point
-├── dependencies.py       ← shared dependencies & auth
-├── requirements.txt
-├── .env.template         ← copy to .env
-│
-├── routers/              ← API endpoints
-│   ├── transcribe.py     ← audio WebSocket
-│   ├── conversations.py  ← memory CRUD
-│   ├── chat.py           ← AI chat
-│   ├── memories.py       ← memory operations
-│   └── developer.py      ← developer API
-│
-├── database/             ← data access layer
-│   ├── conversations.py
-│   ├── memories.py
-│   ├── vector_db.py      ← Pinecone
-│   └── redis_db.py
-│
-└── utils/
-    ├── llm/              ← LLM clients + processing
-    ├── stt/              ← speech-to-text (Deepgram)
-    └── retrieval/        ← RAG + LangGraph agent
+├── main.py           ← entry point
+├── routers/          ← API endpoints
+├── database/         ← data layer
+└── utils/            ← LLM & STT logic
 ```
 
-See [`INDEX.md`](INDEX.md) for full module reference.
+<br/>
+
+---
+
+> **DEEP DIVE:** For Firebase setup, Firestore indexing, and API key references, visit the [Backend Setup Guide](../docs/guides/backend-setup.md).

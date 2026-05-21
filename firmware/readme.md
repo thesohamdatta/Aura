@@ -1,8 +1,25 @@
-# AURA Firmware
+<div align="center">
+  <p align="center"><code>[ SIGNAL 02 // THE EYE ]</code></p>
+  <h1><b><font color="#E63B2E">FIRMWARE</font></b></h1>
+</div>
 
-Firmware for the AURA wearable AI pendant running on the **Seeed XIAO ESP32-S3 Sense**.
+<br/>
 
-Handles audio capture, image capture, BLE streaming to the companion app, and OTA updates.
+<div align="center">
+  <img src="../Assets/MAIN/main moduel.webp" width="80%"/>
+</div>
+
+<br/>
+
+Firmware for the AURA wearable AI pendant running on the **Seeed XIAO ESP32-S3 Sense**. Handles audio capture, image capture, BLE streaming, and OTA updates.
+
+---
+
+## Quick Start
+
+1. **Connect** XIAO ESP32-S3 via USB-C.
+2. **Flash** via UF2 (Method 1) or **Build** via PlatformIO (Method 2).
+3. **Verify** Serial Monitor @ `115200` baud.
 
 ---
 
@@ -10,43 +27,24 @@ Handles audio capture, image capture, BLE streaming to the companion app, and OT
 
 ```
 firmware/src/
-├── app.cpp              ← main application loop & task orchestration
-├── app.h
-├── mic.cpp              ← PDM microphone (I2S, 16kHz)
-├── mic.h
-├── opus_encoder.cpp     ← Opus audio compression
-├── opus_encoder.h
-├── ota.cpp              ← OTA firmware update over BLE+WiFi
-├── ota.h
-├── config.h             ← all tunable settings
-├── camera_pins.h        ← ESP32-S3 Sense camera pin map
-└── camera_index.h       ← camera driver
+├── app.cpp              ← main application loop
+├── mic.cpp              ← audio capture
+├── opus_encoder.cpp     ← compression
+└── config.h             ← all tunable settings
 ```
-
-Key settings are in `config.h`. You should not need to edit anything else for a standard build.
 
 ---
 
 ## Configuration (`src/config.h`)
 
-All important values are in one file:
-
 ```cpp
-// Device identity
-#define BLE_DEVICE_NAME         "AURA"
-#define FIRMWARE_VERSION_STRING "2.3.2"
-
-// Camera
-#define PHOTO_CAPTURE_INTERVAL_MS  30000   // 30s between captures
-#define CAMERA_FRAME_SIZE          FRAMESIZE_VGA  // 640×480
-
-// Audio
-#define MIC_SAMPLE_RATE  16000   // 16kHz
-#define OPUS_BITRATE     32000   // 32kbps
-
-// Battery (2× 250mAh = 500mAh total)
-#define BATTERY_MAX_VOLTAGE  4.2f
-#define BATTERY_MIN_VOLTAGE  3.2f
+#define PHOTO_CAPTURE_INTERVAL_MS  30000   // 30s
+#define CAMERA_FRAME_SIZE          FRAMESIZE_VGA
+#define MIC_SAMPLE_RATE            16000
 ```
 
-Increasing `PHOTO_CAPTURE_INTERVAL_MS` extends battery life significantly.
+<br/>
+
+---
+
+> **DEEP DIVE:** For detailed flashing methods, battery specs, and troubleshooting, visit the [Firmware Setup Guide](../docs/guides/firmware-setup.md).
