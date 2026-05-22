@@ -1,0 +1,7 @@
+flowchart TD
+    Start[Incoming Audio] --> Lang{Language?}
+    Lang -->|English| DG3[Deepgram Nova-3]
+    Lang -->|Multi/Auto| Soniox[Soniox<br/>95+ languages]
+    Lang -->|Unsupported by Nova-3| DG2[Deepgram Nova-2]
+    DG3 -->|Fallback on error| DG2
+    DG2 -->|Fallback on error| SM[Speechmatics]

@@ -1,0 +1,16 @@
+flowchart LR
+    subgraph App["📱 Aura App"]
+        Capture[Audio Capture]
+    end
+
+    subgraph Custom["🎧 Your STT Service"]
+        WS[WebSocket Server]
+    end
+
+    subgraph Backend["🖥️ Aura Backend"]
+        API["/v4/listen"]
+    end
+
+    Capture -->|Binary audio| WS
+    WS -->|JSON transcripts| Capture
+    Capture -->|suggested_transcript| API

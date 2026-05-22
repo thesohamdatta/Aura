@@ -1,0 +1,49 @@
+flowchart TD
+    subgraph Client
+        App["🔵 Aura App<br/>(Flutter)"]
+    end
+
+    subgraph API["API Endpoints"]
+        WS["/v4/listen<br/>WebSocket"]
+        Conv["/v1/conversations<br/>REST"]
+        Chat["/v2/messages<br/>REST"]
+    end
+
+    subgraph Routers
+        Trans["routers/transcribe.py"]
+        ConvR["routers/conversations.py"]
+        ChatR["routers/chat.py"]
+    end
+
+    subgraph Processing
+        DG["Deepgram API<br/>Speech-to-Text"]
+        PC["process_conversation()"]
+        LG["LangGraph<br/>Agentic System"]
+    end
+
+    subgraph Storage["Data Storage"]
+        FS[("Firestore<br/>Conversations & Memories")]
+        Pine[("Pinecone<br/>Vector Embeddings")]
+        Redis[("Redis<br/>Cache & Metadata")]
+        GCS[("Google Cloud Storage<br/>Binary Files")]
+    end
+
+    App --> WS
+    App --> Conv
+    App --> Chat
+
+    WS --> Trans
+    Conv --> ConvR
+    Chat --> ChatR
+
+    Trans --> DG
+    ConvR --> PC
+    ChatR --> LG
+
+    PC --> FS
+    PC --> Pine
+    PC --> GCS
+    LG --> FS
+    LG --> Pine
+    LG --> Redis
+    Trans --> GCS

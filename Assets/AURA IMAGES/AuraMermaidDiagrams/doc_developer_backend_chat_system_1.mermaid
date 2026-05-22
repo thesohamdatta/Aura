@@ -1,0 +1,25 @@
+flowchart TD
+    subgraph Client["📱 Flutter App"]
+        Q[User Question]
+    end
+
+    subgraph Backend["🖥️ FastAPI Backend"]
+        Router{LangGraph<br/>Router}
+    end
+
+    Q --> Router
+
+    Router -->|Simple| NC[No Context Path]
+    Router -->|Context Needed| A[Agentic Path]
+    Router -->|Persona App| P[Persona Path]
+
+    NC --> LLM1[Direct LLM<br/>Response]
+    A --> Tools[Tool Calls<br/>22+ tools]
+    Tools --> LLM2[LLM with<br/>Context]
+    P --> LLM3[Persona LLM<br/>Response]
+
+    LLM1 --> Stream[Streaming Response]
+    LLM2 --> Stream
+    LLM3 --> Stream
+
+    Stream --> |with citations| Q

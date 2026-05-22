@@ -1,0 +1,15 @@
+sequenceDiagram
+    participant Agent as 🤖 LLM Agent
+    participant Tool as 🔧 Vector Search Tool
+    participant Embed as 📊 OpenAI Embeddings
+    participant Pine as 🌲 Pinecone
+    participant Fire as 🔥 Firestore
+
+    Agent->>Tool: search_conversations_tool(query, dates)
+    Tool->>Embed: embed_query("John project discussion")
+    Embed-->>Tool: [0.012, -0.034, 0.056, ...] (3,072 dims)
+    Tool->>Pine: query(vector, uid filter, date range)
+    Pine-->>Tool: [conv_id_456, conv_id_789] ranked by similarity
+    Tool->>Fire: get_conversations_by_id(ids)
+    Fire-->>Tool: Full conversation data
+    Tool-->>Agent: Formatted context with citations

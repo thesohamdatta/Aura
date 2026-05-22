@@ -1,0 +1,14 @@
+sequenceDiagram
+    participant App as Your App
+    participant User as User Browser
+    participant Aura as Aura Auth Server
+    participant Firebase as Firebase Auth
+
+    App->>User: Redirect to /v1/oauth/authorize
+    User->>Aura: Visit authorization page
+    Aura->>Firebase: User logs in (Google/Apple)
+    Firebase-->>Aura: Firebase ID token
+    Aura->>Aura: Exchange token for uid
+    Aura->>User: Redirect to App Home URL
+    User->>App: ?uid=USER_ID&state=STATE
+    App->>App: Store uid for API calls

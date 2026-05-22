@@ -1,0 +1,30 @@
+flowchart LR
+    subgraph External["External Services"]
+        OAI[OpenAI]
+        DG[Deepgram]
+        Pine[Pinecone]
+        Redis[Redis]
+    end
+
+    subgraph Google["Google Cloud"]
+        FB[Firebase]
+        GCS[Cloud Storage]
+    end
+
+    subgraph Backend["Your Backend"]
+        API[FastAPI Server]
+        Push[Pusher Service]
+    end
+
+    subgraph App["Aura App"]
+        Flutter[Flutter Client]
+    end
+
+    Flutter <-->|Ngrok| API
+    API --> OAI
+    API --> DG
+    API --> Pine
+    API --> Redis
+    API --> FB
+    API --> GCS
+    API --> Push

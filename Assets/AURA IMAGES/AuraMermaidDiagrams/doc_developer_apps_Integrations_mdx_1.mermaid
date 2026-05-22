@@ -1,0 +1,18 @@
+flowchart LR
+    subgraph Aura["Aura Backend"]
+        M[Memory Created]
+        T[Live Transcript]
+        A[Audio Stream]
+    end
+
+    subgraph Your["Your Server"]
+        W[Webhook Endpoint]
+        P[Process Data]
+        E[External Services]
+    end
+
+    M -->|POST| W
+    T -->|POST| W
+    A -->|POST| W
+    W --> P
+    P --> E

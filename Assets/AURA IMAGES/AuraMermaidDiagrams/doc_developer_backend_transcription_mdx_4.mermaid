@@ -1,0 +1,27 @@
+sequenceDiagram
+    participant App as 📱 Aura App
+    participant Backend as 🖥️ Backend
+    participant Socket1 as 🎧 Deepgram Socket 1
+    participant Socket2 as 🎧 Deepgram Socket 2
+
+    Note over Backend: User has speech profile<br/>(duration: 30 seconds)
+
+    App->>Backend: Connect WebSocket
+    Backend->>Socket1: Create (for live audio)
+    Backend->>Socket2: Create (for profile training)
+
+    loop First 30 seconds
+        App->>Backend: Audio chunk
+        Backend->>Socket2: Send to profile socket
+        Socket2-->>Backend: Transcript (training)
+    end
+
+    Note over Backend: Profile duration elapsed
+    Backend->>Socket2: Close socket
+
+    loop Remaining session
+        App->>Backend: Audio chunk
+        Backend->>Socket1: Send to live socket
+        Socket1-->>Backend: Transcript with speaker IDs
+        Backend-->>App: Segments (is_user: true/false)
+    end

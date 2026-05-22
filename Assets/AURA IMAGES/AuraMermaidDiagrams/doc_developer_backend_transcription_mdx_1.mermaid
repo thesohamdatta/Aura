@@ -1,0 +1,23 @@
+flowchart LR
+    subgraph Client["📱 Aura App"]
+        Audio[Audio Capture]
+    end
+
+    subgraph Backend["🖥️ Backend"]
+        WS["/v4/listen<br/>WebSocket"]
+        Decode[Audio Decoder]
+    end
+
+    subgraph STT["🎧 STT Providers"]
+        DG[Deepgram Nova-3]
+        Soniox[Soniox]
+        SM[Speechmatics]
+    end
+
+    Audio -->|Binary stream| WS
+    WS --> Decode
+    Decode --> DG
+    Decode -.->|Fallback| Soniox
+    Decode -.->|Fallback| SM
+    DG -->|Transcript| WS
+    WS -->|JSON segments| Audio
