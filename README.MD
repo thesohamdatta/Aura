@@ -13,12 +13,17 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-000000?style=flat-square)](LICENSE)
 [![GitHub Stars](https://img.shields.io/github/stars/thesohamdatta/Aura-Wearable-AI?style=flat-square&color=000000)](https://github.com/thesohamdatta/Aura-Wearable-AI)
 [![MCU](https://img.shields.io/badge/MCU-ESP32--S3%20Sense-000000?style=flat-square)](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/)
+[![Build Cost](https://img.shields.io/badge/Build%20Cost-~$60%20USD-000000?style=flat-square)](#-hardware-architecture)
 
 <br/>
 
 ### "Commercial AI is a closed box. AURA is the open-source response."
 
 AURA is a wearable AI context engine designed to capture, process, and remember environmental signals in real-time. It transforms your daily life into a searchable, semantic memory—controlled entirely by you.
+
+<br/>
+
+[**Deploy Backend**](backend/README.md) • [**Flash Firmware**](firmware/readme.md) • [**Get the App**](app/README.md) • [**Join Discord**](https://github.com/thesohamdatta/Aura-Wearable-AI/issues)
 
 </div>
 
@@ -47,11 +52,11 @@ AURA is a wearable AI context engine designed to capture, process, and remember 
 
 <br/>
 
-AURA isn't just hardware; it's a **Digital Instrument**. By leveraging the compact power of the **XIAO ESP32-S3 Sense**, we've packed a camera, digital microphone, and dual-core processor into a form factor smaller than a coin.
+AURA leverages the compact power of the **XIAO ESP32-S3 Sense** to pack high-fidelity sensors into a form factor smaller than a coin. Unlike proprietary devices, AURA gives you the **Raw Stream**—no gatekeepers, no subscription fees.
 
-- **Passive Context:** It sees what you see, hears what you hear.
-- **Privacy First:** Your data, your keys, your intelligence.
-- **Open Architecture:** Fully customizable from the STL case to the RAG backend.
+- **Continuous Context:** Passive capture of audio and visual frames.
+- **Privacy First:** Local streaming + self-hosted RAG backend.
+- **Extreme Portability:** 350mAh LiPo powered, 3D-printable enclosure.
 
 <br/>
 
@@ -59,7 +64,37 @@ AURA isn't just hardware; it's a **Digital Instrument**. By leveraging the compa
 
 <br/>
 
-## 2. The Experience: Your Life, Searchable.
+## 2. Intelligence Pipeline: Beyond Recording.
+
+<div align="center">
+  <img src="Assets/AURA%20IMAGES/DIAGRAMS/system_architecture.png" alt="AURA System Architecture" width="100%" style="border-radius: 2rem;"/>
+</div>
+
+<br/>
+
+AURA doesn't just store files; it understands them. Our **Multi-Threaded RAG (Retrieval-Augmented Generation)** pipeline processes data through three distinct layers:
+
+### **A. Perception Layer**
+- **STT:** Deepgram Nova-3 for 98%+ transcription accuracy.
+- **Vision:** GPT-4o Vision analysis of environmental frames.
+- **Streaming:** Efficient MJPEG and PDM audio over WebSockets.
+
+### **B. Cognition Layer (RAG)**
+- **Vector DB:** Pinecone-backed semantic indexing.
+- **Person-Awareness:** Intelligent speaker identification and assignment.
+- **Contextual Chunking:** Multi-threaded extraction of relevant conversation segments.
+
+### **C. Interface Layer**
+- **Searchable Life:** Instantly recall "The meeting details from Tuesday."
+- **Agentic Chat:** A personal AI that knows your world as well as you do.
+
+<br/>
+
+---
+
+<br/>
+
+## 3. The Experience: Your Life, Searchable.
 
 <div align="center">
   <img src="Assets/AURA%20IMAGES/SOFTWARE/software_mockups.jpg" alt="AURA Mobile Interface" width="90%" style="border-radius: 2rem;"/>
@@ -67,11 +102,12 @@ AURA isn't just hardware; it's a **Digital Instrument**. By leveraging the compa
 
 <br/>
 
-The AURA mobile app acts as the bridge between raw sensory data and actionable insights. Using **Deepgram** for transcription and **GPT-4o Vision** for frame analysis, AURA builds a semantic index of your day.
-
-- **Semantic Memory:** Ask "What was the name of the book mentioned at lunch?" and get an instant answer.
-- **Contextual Vision:** AI-driven image analysis understands the *meaning* of what you've seen.
-- **Agentic Chat:** A natural language interface to interact with your captured history.
+| Use Case | How AURA Helps |
+| :--- | :--- |
+| **Professional** | Instant summaries of every meeting, searchable by speaker or topic. |
+| **Academic** | Never miss a lecture detail; ask questions to your class recordings. |
+| **Creative** | Capture "Eureka" moments as they happen, indexed by visual context. |
+| **Personal** | A searchable archive of family stories and shared memories. |
 
 <br/>
 
@@ -79,7 +115,7 @@ The AURA mobile app acts as the bridge between raw sensory data and actionable i
 
 <br/>
 
-## 3. The Achievement: Build the Future.
+## 4. Hardware Architecture
 
 <div align="center">
   <table border="0">
@@ -99,13 +135,15 @@ The AURA mobile app acts as the bridge between raw sensory data and actionable i
 
 <br/>
 
-AURA is a testament to what a single developer can achieve with open-source tools. From circuit design to cloud architecture, every piece of this project is a building block for the next generation of personal AI.
+AURA is designed for **Assembly**. Every component is off-the-shelf, making it the most accessible AI wearable on the planet.
 
-### Core Specifications
-- **MCU:** Xtensa® Dual-core 32-bit LX7 @ 240MHz
-- **Optics:** OV2640 2MP Camera
-- **Audio:** Digital PDM Microphone
-- **Storage:** Long-term RAG via Pinecone & Firestore
+| Component | Specification |
+| :--- | :--- |
+| **MCU** | Dual-core 32-bit LX7 @ 240MHz |
+| **RAM** | 8MB PSRAM + 384KB SRAM |
+| **Camera** | OV2640 2MP (1600x1200) |
+| **Mic** | Digital PDM Microphone |
+| **Wireless** | 2.4GHz WiFi + BLE 5.0 |
 
 <br/>
 
@@ -113,16 +151,12 @@ AURA is a testament to what a single developer can achieve with open-source tool
 
 <br/>
 
-## 4. Quick Start: Join the Frontier.
+## 5. Roadmap: The Path to AGI Wearables
 
-### 1. [Firmware](docs/guides/firmware-setup.md)
-Flash the latest binary to your XIAO ESP32-S3 and start streaming.
-
-### 2. [Backend](docs/guides/backend-setup.md)
-Deploy the Python/FastAPI engine to handle the AI heavy lifting.
-
-### 3. [Mobile App](docs/guides/app-setup.md)
-Install the Android client to view and chat with your memories.
+- [x] **Phase 1: Foundation** — Core streaming, transcription, and basic RAG.
+- [ ] **Phase 2: Vision 2.0** — Real-time object detection and spatial awareness.
+- [ ] **Phase 3: Multi-Modal Agents** — Proactive AI assistance based on current context.
+- [ ] **Phase 4: Swarm Intelligence** — Multi-device context sharing and collaborative memory.
 
 <br/>
 
