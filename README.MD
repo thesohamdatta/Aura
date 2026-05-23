@@ -6,7 +6,7 @@
 
 <br/>
 
-<img src="Assets/AURA%20IMAGES/HERO%20IMAGES/the%20hero%202.jpeg" alt="AURA — Cinematic Hero" width="100%" style="border-radius: 2rem;"/>
+<img src="D:\PROJECTS\2026\Aura-Wearable-AI\Assets\chat gpt image\hero.png" alt="AURA — Cinematic Hero" width="100%" style="border-radius: 2rem;"/>
 
 <br/>
 
@@ -17,7 +17,17 @@
 
 <br/>
 
-### "Commercial AI is a closed box. AURA is the open-source response."
+### "We have Personal Computers — to create, work, and produce things that matter. We have Tiny Supercomputers — Smartphones — to consume, but we are drawn into the Social Dilemma.
+
+But why have humans never built something different?
+
+They tried. Ten years before smartphones, they made wearables — but added a screen to it. A screen that demands attention. A screen that distracts. A screen we never needed.
+
+That is why we are building Aura.
+
+A device that combines the productive power of a computer and the connectivity of a smartphone — but with one fundamental difference. It does not pull you in. It works for you, quietly, in the background — transforming your intent into action, without ever asking for your attention.
+
+Less distraction. More done."
 
 AURA is a wearable AI context engine designed to capture, process, and remember environmental signals in real-time. It transforms your daily life into a searchable, semantic memory—controlled entirely by you.
 
