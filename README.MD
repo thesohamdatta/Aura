@@ -6,7 +6,7 @@
 
 <br/>
 
-<img src="D:\PROJECTS\2026\Aura-Wearable-AI\Assets\PRO\HERO\hero .png" alt="AURA — Cinematic Hero" width="100%" style="border-radius: 2rem;"/>
+<img src="Assets/PRO/HERO/hero .png" alt="AURA — Cinematic Hero" width="100%" style="border-radius: 2rem;"/>
 
 <br/>
 
