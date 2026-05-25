@@ -54,7 +54,7 @@ AURA is a wearable AI context engine designed to capture, process, and remember 
       </td>
       <td width="50%" align="center">
         <img src="Assets/AURA%20IMAGES/esp32%20s3%20sence/3d%20iamge%20of%20the%20all%20module.png" width="90%" style="border-radius: 2rem;"/>
-        <p><i>The architecture of memory.</i></p>
+        <p><i>The brain.</i></p>
       </td>
     </tr>
   </table>
