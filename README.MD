@@ -53,8 +53,13 @@ AURA is a wearable AI context engine designed to capture, process, and remember 
         <p><i>Fits in the palm of your hand.</i></p>
       </td>
       <td width="50%" align="center">
+<<<<<<< HEAD
         <img src="Assets/PRO/OPNEN%20SOURCE/clearn%20one.png" width="90%" style="border-radius: 2rem;"/>
         <p><i>Smaller than a ₹1 coin. Packed with intelligence.</i></p>
+=======
+        <img src="Assets/AURA%20IMAGES/esp32%20s3%20sence/3d%20iamge%20of%20the%20all%20module.png" width="90%" style="border-radius: 2rem;"/>
+        <p><i>The brain.</i></p>
+>>>>>>> 825f7d231343abcad10879058f92a1bbd50c58c8
       </td>
     </tr>
   </table>
