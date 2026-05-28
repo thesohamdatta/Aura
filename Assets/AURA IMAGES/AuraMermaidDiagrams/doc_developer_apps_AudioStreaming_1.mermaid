@@ -1,8 +1,0 @@
-flowchart LR
-    subgraph Device["Aura Device"]
-        M[Microphone] --> A[Audio Buffer]
-    end
-
-    A -->|Every X seconds| B[Aura Backend]
-    B -->|POST octet-stream| W[Your Webhook]
-    W --> P[Your Processing]
