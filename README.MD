@@ -33,7 +33,7 @@ AURA is a wearable AI context engine designed to capture, process, and remember 
 
 <br/>
 
-[**Deploy Backend**](backend/README.md) • [**Flash Firmware**](firmware/readme.md) • [**Get the App**](app/README.md) • [**Join Discord**](https://github.com/thesohamdatta/Aura-Wearable-AI/issues)
+[**Deploy Backend**](backend/README.md) • [**Flash Firmware**](firmware/readme.md) • [**Get the App**](app/README.md) • [**Issues**](https://github.com/thesohamdatta/Aura-Wearable-AI/issues)
 
 </div>
 
