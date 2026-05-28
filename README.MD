@@ -6,7 +6,7 @@
 
 <br/>
 
-<img src="Assets/PRO/OPNEN%20SOURCE/HERO%20MAIN%20(1).png" alt="AURA — Worn in the real world" width="100%" style="border-radius: 2rem;"/>
+<img src="Assets/hero/hero%20image%201.jpg" alt="AURA — Worn in the real world" width="100%" style="border-radius: 2rem;"/>
 
 <br/>
 
@@ -49,17 +49,12 @@ AURA is a wearable AI context engine designed to capture, process, and remember 
   <table border="0">
     <tr>
       <td width="50%" align="center">
-        <img src="Assets/PRO/OPNEN%20SOURCE/HAND%20.png" width="90%" style="border-radius: 2rem;"/>
+        <img src="Assets/hero/aura%203.png" width="90%" style="border-radius: 2rem;"/>
         <p><i>Fits in the palm of your hand.</i></p>
       </td>
       <td width="50%" align="center">
-<<<<<<< HEAD
-        <img src="Assets/PRO/OPNEN%20SOURCE/clearn%20one.png" width="90%" style="border-radius: 2rem;"/>
+        <img src="Assets/hero/internal%20view%201.png" width="90%" style="border-radius: 2rem;"/>
         <p><i>Smaller than a ₹1 coin. Packed with intelligence.</i></p>
-=======
-        <img src="Assets/AURA%20IMAGES/esp32%20s3%20sence/3d%20iamge%20of%20the%20all%20module.png" width="90%" style="border-radius: 2rem;"/>
-        <p><i>The brain.</i></p>
->>>>>>> 825f7d231343abcad10879058f92a1bbd50c58c8
       </td>
     </tr>
   </table>
@@ -82,7 +77,7 @@ AURA leverages the compact power of the **XIAO ESP32-S3 Sense** to pack high-fid
 ## 2. Intelligence Pipeline: Beyond Recording.
 
 <div align="center">
-  <img src="Assets/PRO/OPNEN%20SOURCE/circuit%20assemly.png" alt="AURA Component Assembly — ESP32-S3 Sense, LiPo Battery, WiFi Antenna" width="70%" style="border-radius: 2rem;"/>
+  <img src="Assets/hero/circuit%20assemly.png" alt="AURA Component Assembly — ESP32-S3 Sense, LiPo Battery, WiFi Antenna" width="70%" style="border-radius: 2rem;"/>
   <p><i>Every component is off-the-shelf. Total BOM cost: ~$60 USD.</i></p>
 </div>
 
@@ -113,32 +108,7 @@ AURA doesn't just store files; it understands them. Our **Multi-Threaded RAG (Re
 ## 3. The Experience: Your Life, Searchable.
 
 <div align="center">
-  <img src="Assets/PRO/SOFTWARE/software_mockups.jpg" alt="AURA App — Summaries, Tasks, Memories with the Superpowers of AI" width="100%" style="border-radius: 2rem;"/>
-</div>
-
-<br/>
-
-<div align="center">
-  <table border="0">
-    <tr>
-      <td width="25%" align="center">
-        <img src="Assets/PRO/SOFTWARE/software_screen3.png" width="100%" style="border-radius: 1.5rem;"/>
-        <p><i>Device pairing & status.</i></p>
-      </td>
-      <td width="25%" align="center">
-        <img src="Assets/PRO/SOFTWARE/software_screen4.jpg" width="100%" style="border-radius: 1.5rem;"/>
-        <p><i>Agentic AI chat — ask anything about your day.</i></p>
-      </td>
-      <td width="25%" align="center">
-        <img src="Assets/PRO/SOFTWARE/software_screen1.png" width="100%" style="border-radius: 1.5rem;"/>
-        <p><i>Searchable memory feed.</i></p>
-      </td>
-      <td width="25%" align="center">
-        <img src="Assets/PRO/SOFTWARE/software_screen2.png" width="100%" style="border-radius: 1.5rem;"/>
-        <p><i>Personal context profile.</i></p>
-      </td>
-    </tr>
-  </table>
+  <img src="Assets/hero/software_mockups.jpg" alt="AURA App — Summaries, Tasks, Memories with the Superpowers of AI" width="100%" style="border-radius: 2rem;"/>
 </div>
 
 <br/>
@@ -162,15 +132,15 @@ AURA doesn't just store files; it understands them. Our **Multi-Threaded RAG (Re
   <table border="0">
     <tr>
       <td width="33%" align="center">
-        <img src="Assets/PRO/OPNEN%20SOURCE/hero%20.png" width="100%" style="border-radius: 1.5rem;"/>
+        <img src="Assets/hero/aura%202.png" width="100%" style="border-radius: 1.5rem;"/>
         <p><i>Front & back. Camera lens + magnetic clasp.</i></p>
       </td>
       <td width="33%" align="center">
-        <img src="Assets/PRO/OPNEN%20SOURCE/internal%20view.png" width="100%" style="border-radius: 1.5rem;"/>
+        <img src="Assets/hero/internal%20view%202.jpg" width="100%" style="border-radius: 1.5rem;"/>
         <p><i>Open internals — ESP32-S3 Sense module + LiPo.</i></p>
       </td>
       <td width="33%" align="center">
-        <img src="Assets/PRO/OPNEN%20SOURCE/exploded%20view.png" width="100%" style="border-radius: 1.5rem;"/>
+        <img src="Assets/hero/exploded%20view.jpg" width="100%" style="border-radius: 1.5rem;"/>
         <p><i>Exploded CAD view — 3D-printable, fully open.</i></p>
       </td>
     </tr>
@@ -216,6 +186,6 @@ AURA is designed for **Assembly**. Every component is off-the-shelf, making it t
 
 <br/>
 
-<img src="Assets/PRO/OPNEN%20SOURCE/HERO%20MAIN%20(3).png" alt="AURA — The device." width="220px" style="border-radius: 2rem;"/>
+<img src="Assets/hero/hero%20image%203.png" alt="AURA — The device." width="220px" style="border-radius: 2rem;"/>
 
 </div>
