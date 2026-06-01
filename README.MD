@@ -6,9 +6,18 @@
 
 <br/>
 
-<img src="Assets/hero/123456l.png" alt="AURA — Worn in the real world" width="100%" style="border-radius: 2rem;"/>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://w3.org">
+  <defs>
+    <clipPath id="auraCircle">
+      <circle cx="100" cy="100" r="100" />
+    </clipPath>
+  </defs>
+  <image width="200" height="200" href="Assets/hero/123456l.png" clip-path="url(#auraCircle)" preserveAspectRatio="xMidYMid slice" />
+</svg>
 
 <br/>
+</div>
+
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-000000?style=flat-square)](LICENSE)
 [![GitHub Stars](https://img.shields.io/github/stars/thesohamdatta/Aura-Wearable-AI?style=flat-square&color=000000)](https://github.com/thesohamdatta/Aura-Wearable-AI)
