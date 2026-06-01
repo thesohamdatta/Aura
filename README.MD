@@ -6,7 +6,7 @@
 
 <br/>
 
-<img src="Assets/hero/hero%20image%201.jpg" alt="AURA — Worn in the real world" width="100%" style="border-radius: 2rem;"/>
+<img src="Assets/hero/123456l.png" alt="AURA — Worn in the real world" width="100%" style="border-radius: 2rem;"/>
 
 <br/>
 
