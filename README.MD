@@ -6,17 +6,9 @@
 
 <br/>
 
-<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://w3.org">
-  <defs>
-    <clipPath id="auraCircle">
-      <circle cx="100" cy="100" r="100" />
-    </clipPath>
-  </defs>
-  <image width="200" height="200" href="Assets/hero/123456l.png" clip-path="url(#auraCircle)" preserveAspectRatio="xMidYMid slice" />
-</svg>
+<img src="Assets/hero/123456l.png" alt="AURA — Worn in the real world" style="width: 100%; max-width: 400px; border-radius: 50%; aspect-ratio: 1 / 1; object-fit: cover;" />
 
 <br/>
-</div>
 
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-000000?style=flat-square)](LICENSE)
