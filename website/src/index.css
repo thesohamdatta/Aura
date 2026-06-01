@@ -1,0 +1,393 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =====================================================
+   AURA — GLOBAL DESIGN SYSTEM
+   Grayscale + Aura Mint Accent (Apple Design Philosophy)
+   ===================================================== */
+
+@layer base {
+  :root {
+    --void: #FFFFFF; /* Pure white background for light mode */
+    --aura: #0F766E; /* High contrast deep teal/mint for legible light mode text/accents */
+    --aura-light: #94E2D5; /* Signature product mint */
+    --plasma: #1D1D1F; /* Dark charcoal */
+    --ghost: #1D1D1F; /* Ink black text for light mode */
+    --graphite: #F5F5F7; /* Apple light gray cards for light mode */
+    --mist: #86868B; /* Apple standard gray text */
+    --noise-opacity: 0.015;
+  }
+
+  .dark {
+    --void: #000000; /* Deep black for dark mode */
+    --aura: #94E2D5; /* Signature product mint as accent for dark mode */
+    --aura-light: #86868B;
+    --plasma: #94E2D5;
+    --ghost: #F5F5F7; /* Apple light gray text for dark mode */
+    --graphite: #1C1C1E; /* Apple dark gray cards */
+    --mist: #86868B; /* Dark mode gray text */
+    --noise-opacity: 0.04;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background: var(--void);
+    color: var(--ghost);
+    font-family: 'Sora', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Smooth theme transitions */
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+
+  body {
+    background: var(--void);
+    overflow-x: hidden;
+    /* Smooth theme transitions */
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+
+  /* Selection color */
+  ::selection {
+    background: rgba(148, 226, 213, 0.25);
+    color: var(--ghost);
+  }
+
+  /* Scroll margin for anchor sections */
+  section[id] {
+    scroll-margin-top: 80px;
+  }
+}
+
+@layer utilities {
+  /* ── Noise overlay ── */
+  .noise-overlay {
+    position: relative;
+  }
+  .noise-overlay::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: var(--noise-opacity);
+    pointer-events: none;
+    z-index: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+  }
+
+  /* ── Glow utilities ── */
+  .glow-aura {
+    text-shadow: 0 0 40px rgba(148, 226, 213, 0.3);
+  }
+  .glow-plasma {
+    text-shadow: 0 0 60px rgba(134, 134, 139, 0.25);
+  }
+
+  /* ── Gradient text ── */
+  .gradient-text {
+    color: var(--aura);
+  }
+  .dark .gradient-text {
+    background: linear-gradient(135deg, #FFFFFF 0%, #94E2D5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .gradient-text-white {
+    color: var(--ghost);
+  }
+  .dark .gradient-text-white {
+    background: linear-gradient(180deg, #ffffff 0%, rgba(255,255,255,0.7) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* ── Glass morphism ── */
+  .glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  .dark .glass {
+    background: rgba(20, 20, 25, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+  }
+  .glass-strong {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+  }
+  .dark .glass-strong {
+    background: rgba(20, 20, 25, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  /* ── Rounded system ── */
+  .radius-card { border-radius: 2rem; }
+  .radius-pill { border-radius: 100px; }
+
+  /* ── Magnetic button base ── */
+  .btn-magnetic {
+    position: relative;
+    overflow: hidden;
+    /* Explicit properties only — never transition: all */
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                opacity 0.3s ease;
+  }
+  .btn-magnetic:hover {
+    transform: scale(1.03) translateY(-1px);
+  }
+  /* Focus-visible ring (Vercel guideline) */
+  .btn-magnetic:focus-visible {
+    outline: 2px solid var(--aura);
+    outline-offset: 3px;
+  }
+  .btn-magnetic .btn-bg-slide {
+    position: absolute;
+    inset: 0;
+    transform: translateX(-101%);
+    /* Explicit properties only */
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  .btn-magnetic:hover .btn-bg-slide {
+    transform: translateX(0);
+  }
+
+  /* ── Global focus-visible ring (Vercel guideline) ── */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    outline: 2px solid var(--aura);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  /* ── Typewriter cursor ── */
+  .cursor-blink::after {
+    content: '|';
+    animation: blink 1.2s step-end infinite;
+    color: var(--aura);
+    font-weight: 300;
+    margin-left: 2px;
+  }
+
+  /* ── Shimmer loading bar ── */
+  .shimmer-bar {
+    background: linear-gradient(90deg,
+      rgba(148,226,213,0) 0%,
+      rgba(148,226,213,0.4) 50%,
+      rgba(148,226,213,0) 100%);
+    background-size: 200% 100%;
+    animation: shimmer 2s linear infinite;
+  }
+
+  /* ── Scan line ── */
+  .scan-line {
+    background: linear-gradient(180deg,
+      transparent 0%,
+      rgba(148,226,213,0.15) 50%,
+      transparent 100%);
+    height: 40%;
+    animation: scan 3s linear infinite;
+  }
+
+  /* ── Pulse dot ── */
+  .pulse-dot {
+    position: relative;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #22c55e;
+    flex-shrink: 0;
+  }
+  .pulse-dot::after {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    border: 2px solid #22c55e;
+    animation: pulseRing 2.5s ease-out infinite;
+  }
+
+  /* ── Section reveal (JS sets --progress) ── */
+  .section-reveal {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .section-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ── Word reveal ── */
+  .word-reveal span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  /* ── Stagger children visible ── */
+  .stagger-children > * {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  .stagger-children.visible > * {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .stagger-children.visible > *:nth-child(1) { transition-delay: 0s; }
+  .stagger-children.visible > *:nth-child(2) { transition-delay: 0.1s; }
+  .stagger-children.visible > *:nth-child(3) { transition-delay: 0.2s; }
+  .stagger-children.visible > *:nth-child(4) { transition-delay: 0.3s; }
+  .stagger-children.visible > *:nth-child(5) { transition-delay: 0.4s; }
+  .stagger-children.visible > *:nth-child(6) { transition-delay: 0.5s; }
+
+  /* ── Tabular numbers for specs/data (Vercel guideline) ── */
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* ── Scrollbar styling ── */
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--void);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--aura);
+    border-radius: 2px;
+  }
+
+  /* ── Reduced motion fallback (Vercel guideline) ── */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+    .orbit-1,
+    .orbit-2,
+    .orbit-3 {
+      animation: none !important;
+    }
+    .scan-line {
+      animation: none !important;
+      opacity: 0.1 !important;
+    }
+    .shimmer-bar {
+      animation: none !important;
+    }
+    .pulse-dot::after {
+      animation: none !important;
+    }
+  }
+}
+
+/* ── Protocol card stack ── */
+.protocol-card {
+  position: sticky;
+  top: 80px;
+  transform-origin: top center;
+  /* Explicit properties */
+  transition: transform 0.5s ease, filter 0.5s ease, opacity 0.5s ease;
+}
+
+/* ── Keyframe animations ── */
+
+/* Orbit animations for hero / device */
+@keyframes orbit1 {
+  from { transform: rotate(0deg) translateX(120px) rotate(0deg); }
+  to   { transform: rotate(360deg) translateX(120px) rotate(-360deg); }
+}
+@keyframes orbit2 {
+  from { transform: rotate(90deg) translateX(180px) rotate(-90deg); }
+  to   { transform: rotate(450deg) translateX(180px) rotate(-450deg); }
+}
+@keyframes orbit3 {
+  from { transform: rotate(180deg) translateX(100px) rotate(-180deg); }
+  to   { transform: rotate(540deg) translateX(100px) rotate(-540deg); }
+}
+.orbit-1 { animation: orbit1 12s linear infinite; }
+.orbit-2 { animation: orbit2 18s linear infinite reverse; }
+.orbit-3 { animation: orbit3 9s linear infinite; }
+
+/* Scan line movement */
+@keyframes scan {
+  0%   { top: -40%; }
+  100% { top: 140%; }
+}
+
+/* Blink for cursor */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* Pulse ring expansion */
+@keyframes pulseRing {
+  0%   { transform: scale(1); opacity: 0.7; }
+  100% { transform: scale(2.5); opacity: 0; }
+}
+
+/* Animate pulse ring on hero device */
+@keyframes pulseRingHero {
+  0%   { transform: scale(1); opacity: 0.5; }
+  100% { transform: scale(2); opacity: 0; }
+}
+.animate-pulse-ring {
+  animation: pulseRingHero 2s ease-out infinite;
+}
+
+/* Floating device animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-12px); }
+}
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Shimmer effect */
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Spin (for geometry in protocol) */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Scan line horizontal (for protocol laser grid) */
+@keyframes scanLine {
+  0%   { left: -2%; opacity: 0; }
+  10%  { opacity: 1; }
+  90%  { opacity: 1; }
+  100% { left: 102%; opacity: 0; }
+}
+
+/* Fade in for hero sparkles */
+@keyframes sparkle {
+  0%, 100% { opacity: 0.15; transform: scale(1); }
+  50%       { opacity: 0.8; transform: scale(1.8); }
+}
