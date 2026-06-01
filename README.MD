@@ -6,9 +6,10 @@
 
 <br/>
 
-<img src="Assets/hero/hero%20image%201.jpg" alt="AURA — Worn in the real world" width="100%" style="border-radius: 2rem;"/>
+<img src="Assets/hero/123456l.png" alt="AURA — Worn in the real world" style="width: 100%; max-width: 400px; border-radius: 50%; aspect-ratio: 1 / 1; object-fit: cover;" />
 
 <br/>
+
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-000000?style=flat-square)](LICENSE)
 [![GitHub Stars](https://img.shields.io/github/stars/thesohamdatta/Aura-Wearable-AI?style=flat-square&color=000000)](https://github.com/thesohamdatta/Aura-Wearable-AI)
@@ -33,7 +34,7 @@ AURA is a wearable AI context engine designed to capture, process, and remember 
 
 <br/>
 
-[**Deploy Backend**](backend/README.md) • [**Flash Firmware**](firmware/readme.md) • [**Get the App**](app/README.md) • [**Join Discord**](https://github.com/thesohamdatta/Aura-Wearable-AI/issues)
+[**Deploy Backend**](backend/README.md) • [**Flash Firmware**](firmware/readme.md) • [**Get the App**](app/README.md) • [**Issues**](https://github.com/thesohamdatta/Aura-Wearable-AI/issues)
 
 </div>
 
