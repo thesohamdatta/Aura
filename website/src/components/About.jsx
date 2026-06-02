@@ -95,11 +95,10 @@ export default function About() {
             About Aura
           </p>
           <h1 className="text-apple-hero text-[var(--page-text)] text-balance mb-6">
-            Built by a student.<br />For everyone.
+            Reinvent how people See and Hear their world.
           </h1>
           <p className="text-apple-lead text-[var(--page-text-muted)] text-balance pb-16">
-            Aura is an independent open-source project — no VC funding,
-            no NDAs, no corporate roadmap. Just curiosity and a soldering iron.
+            We founded Aura to create a less socially disruptive technology. An independent, open-source project built by students — no VC funding, no NDAs. Just curiosity and a soldering iron.
           </p>
         </div>
       </header>
@@ -207,50 +206,81 @@ export default function About() {
           </div>
         </section>
 
-        {/* Founder */}
+        {/* Founder / Team */}
         <section id="founder" className="section-reveal">
-          <div className="flex items-center gap-4 mb-12">
-            <span className="text-apple-fine text-[var(--page-text-subtle)] uppercase tracking-widest font-mono">The Builder</span>
-            <div className="flex-1 h-px bg-[var(--page-border)]" />
+          <div className="flex flex-col md:flex-row md:items-end gap-4 mb-12">
+            <div>
+              <span className="text-apple-fine text-[var(--page-text-subtle)] uppercase tracking-widest font-mono">Real Humans</span>
+              <h2 className="text-apple-display-md text-[var(--page-text)] mt-2">We are not from IIT</h2>
+            </div>
+            <div className="flex-1 h-px bg-[var(--page-border)] md:mb-2" />
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-8 items-start">
-            {/* Avatar */}
-            <div
-              className="w-20 h-20 sm:w-24 sm:h-24 rounded-apple-lg overflow-hidden shrink-0 flex items-center justify-center text-apple-blue-dark text-2xl font-semibold"
-              style={{ backgroundColor: 'rgba(41,151,255,0.10)', border: '1px solid rgba(41,151,255,0.15)' }}
-              aria-label="Soham Datta avatar"
-            >
-              SD
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Soham Datta */}
+            <div className="flex gap-6 items-start">
+              <div
+                className="w-16 h-16 rounded-apple-lg overflow-hidden shrink-0 flex items-center justify-center text-apple-blue-dark text-xl font-semibold select-none"
+                style={{ backgroundColor: 'rgba(41,151,255,0.10)', border: '1px solid rgba(41,151,255,0.15)' }}
+              >
+                SD
+              </div>
+              <div className="flex-1">
+                <h3 className="text-apple-body-strong text-[var(--page-text)] mb-1">Soham Datta</h3>
+                <p className="text-apple-caption text-apple-blue dark:text-apple-blue-dark font-mono mb-3">
+                  Lead Researcher
+                </p>
+                <p className="text-apple-body text-[var(--page-text-muted)] mb-4">
+                  For the love of the personal intelligence. Engineering student and maker. Aura started as a personal frustration with memory, turning into an open ecosystem.
+                </p>
+                <div className="flex items-center gap-3">
+                  <a
+                    href="https://github.com/thesohamdatta"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-apple-caption link-apple dark:text-apple-blue-dark font-semibold"
+                  >
+                    GitHub
+                  </a>
+                  <span className="text-[var(--page-text-subtle)]">·</span>
+                  <a
+                    href="https://x.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-apple-caption link-apple dark:text-apple-blue-dark"
+                  >
+                    @sohamdatta →
+                  </a>
+                </div>
+              </div>
             </div>
-            <div className="flex-1">
-              <h3 className="text-apple-body-strong text-[var(--page-text)] mb-1">Soham Datta</h3>
-              <p className="text-apple-caption text-[var(--page-text-subtle)] mb-4">
-                Founder · Builder · Student
-              </p>
-              <p className="text-apple-body text-[var(--page-text-muted)] mb-5">
-                Engineering student and indie hardware maker. Aura started as a personal
-                frustration with forgetting everything important. It turned into a full
-                open-source project that anyone can build, own, and improve.
-              </p>
-              <div className="flex items-center gap-3">
-                <a
-                  href="https://github.com/thesohamdatta"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-apple-secondary"
-                  style={{ fontSize: 14, padding: '8px 18px' }}
-                >
-                  GitHub
-                </a>
-                <a
-                  href="https://x.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-apple-caption link-apple dark:text-apple-blue-dark"
-                >
-                  @sohamdatta →
-                </a>
+
+            {/* Laxman Pajai */}
+            <div className="flex gap-6 items-start">
+              <div
+                className="w-16 h-16 rounded-apple-lg overflow-hidden shrink-0 flex items-center justify-center text-apple-blue-dark text-xl font-semibold select-none"
+                style={{ backgroundColor: 'rgba(41,151,255,0.10)', border: '1px solid rgba(41,151,255,0.15)' }}
+              >
+                LP
+              </div>
+              <div className="flex-1">
+                <h3 className="text-apple-body-strong text-[var(--page-text)] mb-1">Laxman Pajai</h3>
+                <p className="text-apple-caption text-apple-blue dark:text-apple-blue-dark font-mono mb-3">
+                  Hardware & Design
+                </p>
+                <p className="text-apple-body text-[var(--page-text-muted)] mb-4">
+                  For the love of Experience. Focused on physical aesthetics, print parameters, 3D dynamics, and structural casing fits of the Aura pendant hardware.
+                </p>
+                <div className="flex items-center gap-3">
+                  <a
+                    href="https://github.com/thesohamdatta/Aura-Wearable-AI"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-apple-caption link-apple dark:text-apple-blue-dark"
+                  >
+                    Repository
+                  </a>
+                </div>
               </div>
             </div>
           </div>

@@ -3,35 +3,51 @@ import { useEffect, useRef } from 'react'
 const blocks = [
   {
     id: 'problem',
-    eyebrow: 'The Problem',
-    heading: 'Every insight you have disappears.',
-    body: `Meetings, conversations, ideas — they happen and they vanish. 
-You either record nothing, or drown in disorganised notes no one reads. 
-The smartest people we know spend hours recalling what they already knew.`,
-  },
-  {
-    id: 'status-quo',
-    eyebrow: 'The Status Quo',
+    eyebrow: 'Humans Need Third Device',
     heading: 'Smartphones are the wrong tool.',
-    body: `Your phone is a screen. Every AI assistant lives behind a notification wall. 
-To capture anything useful you have to stop, unlock, type, and interrupt yourself. 
-That is the opposite of thinking.`,
+    body: `We have Personal Computers — to create, work, and produce things that matter. We have Tiny Supercomputers — Smartphones — to consume, but we are drawn into the Social Dilemma.
+
+But why have humans never built something different?
+
+They tried. Ten years before smartphones, they made wearables — but added a screen to it. A screen that demands attention. A screen that distracts. A screen we never needed.
+
+That is why we are building Aura. A device that combines the productive power of a computer and the connectivity of a smartphone — but with one fundamental difference. It does not pull you in. It works for you, quietly, in the background — transforming your intent into action, without ever asking for your attention.
+
+Less distraction. More done.`,
   },
   {
-    id: 'dilemma',
-    eyebrow: 'The Dilemma',
-    heading: 'Capture everything or capture nothing?',
-    body: `You cannot remember everything, and recording everything feels invasive. 
-Most tools force a binary choice: constant surveillance or zero memory. 
-That is a false dilemma. Intelligence should be ambient, not intrusive.`,
+    id: 'social-dilemma',
+    eyebrow: 'Social Dilemma',
+    heading: 'The social giants are eating our brains.',
+    body: `Their influence has a deeply negative impact on our behaviour — how we talk, what we see, how we do things, how we live. This effect is damaging human nature, and it already has.
+
+The smartphone is at the centre of all this. It manipulates our minds without us ever knowing why we do what we do, or how we became this way. We were not like this before.
+
+For years, we have developed and refined this technology. Some of the greatest engineers in the world have worked on it — hired for one reason and one reason only: attention. How to capture the maximum attention of people. How to turn that attention into money. How to build an empire out of it.
+
+There is no escape here. No freedom. No freedom. No freedom.`,
   },
   {
-    id: 'answer',
-    eyebrow: 'The Answer',
-    heading: 'Aura: ambient AI that earns your trust.',
-    body: `Aura runs on your terms — local AI or cloud, open-source firmware, data you own. 
-It captures what matters, forgets the rest, and surfaces insights when you need them. 
-No screen required. No privacy trade-off.`,
+    id: 'ai-dilemma',
+    eyebrow: 'AI Dilemma',
+    heading: 'AI is not going to save this socially fucked up world.',
+    body: `AI can and will change how we live, what we see, and how we perceive things — things we never needed and never wanted. The Slop. Its impact on our brain is not reversible.
+
+AI is absolutely revolutionary and can change humanity. But humans are creating AI, AI is creating AI, and AI Dominate humans. We are in the Matrix.
+
+Hence, we believe AI is humanity's last invention.`,
+  },
+  {
+    id: 'aura-answer',
+    eyebrow: 'Aura',
+    heading: "That's Why We Need Aura",
+    body: `We need a device that doesn't demand attention, doesn't bombard us with information, doesn't ping us with notifications every second — a device that needs no screen.
+
+We need it combining the intelligence of AI and the human mind. The Personal Superintelligence.
+
+The least socially disruptive device we've ever needed.
+
+Humane AI Pin was the beginning — and it will return in another soul.`,
     isAnswer: true,
   },
 ]

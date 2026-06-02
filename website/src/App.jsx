@@ -8,6 +8,7 @@ import Dilemma from './components/Dilemma'
 import About from './components/About'
 import Docs from './components/Docs'
 import Waitlist from './components/Waitlist'
+import Faq from './components/Faq'
 import Footer from './components/Footer'
 
 function App() {
@@ -83,6 +84,7 @@ function App() {
             <Features />
             <Device />
             <Protocol />
+            <Faq />
             <Waitlist />
           </>
         )}
