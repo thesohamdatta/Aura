@@ -1,15 +1,11 @@
 import { useEffect, useRef, useState } from 'react'
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-gsap.registerPlugin(ScrollTrigger)
-
-/* ── Card 1: Diagnostic Shuffler ── */
+/* ── Diagnostic Shuffler ── */
 function DiagnosticShuffler() {
   const items = [
-    { label: 'Meeting Recap', meta: '14 action items captured', icon: '🎙' },
-    { label: 'Context Switch', meta: 'Remembered previous context', icon: '🔄' },
-    { label: 'Voice Note', meta: 'Transcribed & summarized', icon: '📝' },
+    { label: 'Meeting Recap',   meta: '14 action items captured' },
+    { label: 'Context Switch',  meta: 'Remembered previous context' },
+    { label: 'Voice Note',      meta: 'Transcribed & summarized' },
   ]
   const [stack, setStack] = useState(items)
 
@@ -25,32 +21,27 @@ function DiagnosticShuffler() {
   }, [])
 
   return (
-    <div className="relative h-44 w-full">
+    <div className="relative h-36 w-full" aria-hidden="true">
       {stack.map((item, i) => (
         <div
           key={item.label}
-          className="absolute left-0 right-0 glass-strong radius-card px-5 py-4 flex items-center gap-3"
+          className="absolute left-0 right-0 rounded-apple-lg px-4 py-3 flex items-center gap-3"
           style={{
             top: `${i * 10}px`,
             zIndex: stack.length - i,
-            opacity: 1 - i * 0.22,
-            transform: `scale(${1 - i * 0.04})`,
-            transition: 'all 0.55s cubic-bezier(0.34, 1.56, 0.64, 1)',
-            background: i === 0
-              ? 'rgba(148,226,213,0.12)'
-              : 'rgba(255,255,255,0.03)',
-            borderColor: i === 0
-              ? 'var(--aura)'
-              : 'rgba(255,255,255,0.06)',
+            opacity: 1 - i * 0.25,
+            transform: `scale(${1 - i * 0.035})`,
+            transition: 'all 0.5s cubic-bezier(0.34,1.56,0.64,1)',
+            backgroundColor: i === 0 ? 'rgba(41,151,255,0.12)' : 'rgba(255,255,255,0.05)',
+            border: `1px solid ${i === 0 ? '#2997ff' : 'rgba(255,255,255,0.08)'}`,
           }}
         >
-          <span className="text-2xl">{item.icon}</span>
           <div className="flex-1 min-w-0">
-            <p className="text-sm font-medium text-ghost truncate">{item.label}</p>
-            <p className="text-xs text-mist truncate mt-0.5">{item.meta}</p>
+            <p className="text-apple-caption-strong text-white truncate">{item.label}</p>
+            <p className="text-apple-caption text-apple-muted-body truncate mt-0.5">{item.meta}</p>
           </div>
           {i === 0 && (
-            <span className="text-xs font-mono text-aura bg-aura/10 dark:bg-aura/20 px-2 py-0.5 rounded-full shrink-0">
+            <span className="text-apple-fine text-apple-blue-dark bg-apple-blue-dark/10 px-2 py-0.5 rounded-apple-pill shrink-0">
               Live
             </span>
           )}
@@ -60,27 +51,28 @@ function DiagnosticShuffler() {
   )
 }
 
-/* ── Card 2: Telemetry Typewriter ── */
+/* ── Telemetry Typewriter ── */
+const TYPEWRITER_LINES = [
+  '> Transcribing audio...',
+  '> Meeting: "Next sprint starts Monday"',
+  '> Task captured: Review PR #42',
+  '> Summary generated in 0.8s',
+  '> Memory indexed ✓',
+]
+
 function TelemetryTypewriter() {
-  const lines = [
-    '> Transcribing audio...',
-    '> Meeting: "Next sprint starts Monday"',
-    '> Task captured: Review PR #42',
-    '> Summary generated in 0.8s',
-    '> Memory indexed ✓',
-  ]
   const [displayed, setDisplayed] = useState('')
-  const [lineIdx, setLineIdx] = useState(0)
-  const [charIdx, setCharIdx] = useState(0)
+  const [lineIdx, setLineIdx]     = useState(0)
+  const [charIdx, setCharIdx]     = useState(0)
 
   useEffect(() => {
-    const current = lines[lineIdx]
+    const current = TYPEWRITER_LINES[lineIdx]
     if (charIdx < current.length) {
       const t = setTimeout(() => setCharIdx(c => c + 1), 38)
       return () => clearTimeout(t)
     } else {
       const t = setTimeout(() => {
-        const next = (lineIdx + 1) % lines.length
+        const next = (lineIdx + 1) % TYPEWRITER_LINES.length
         setLineIdx(next)
         setCharIdx(0)
         setDisplayed(prev => (prev + '\n' + current).split('\n').slice(-5).join('\n'))
@@ -90,86 +82,23 @@ function TelemetryTypewriter() {
   }, [charIdx, lineIdx])
 
   const fullDisplay = displayed
-    ? displayed + '\n' + lines[lineIdx].slice(0, charIdx)
-    : lines[lineIdx].slice(0, charIdx)
+    ? displayed + '\n' + TYPEWRITER_LINES[lineIdx].slice(0, charIdx)
+    : TYPEWRITER_LINES[lineIdx].slice(0, charIdx)
 
   return (
-    <div className="relative h-44 w-full glass-strong radius-card p-4 overflow-hidden">
-      <div className="flex items-center gap-2 mb-3">
-        <span className="pulse-dot" aria-hidden="true" />
-        <span className="text-xs font-mono text-aura tracking-wider uppercase">Live Feed</span>
+    <div
+      className="relative h-36 w-full rounded-apple-lg p-4 overflow-hidden"
+      style={{ backgroundColor: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)' }}
+      aria-hidden="true"
+    >
+      <div className="flex items-center gap-2 mb-2">
+        <span className="pulse-dot" style={{ background: '#2997ff' }} />
+        <span className="text-apple-fine text-apple-blue-dark tracking-wider uppercase">Live Feed</span>
       </div>
-      <pre className="font-mono text-xs text-mist leading-relaxed whitespace-pre-wrap break-all">
+      <pre className="font-mono text-xs text-apple-muted-body leading-relaxed whitespace-pre-wrap break-all">
         {fullDisplay}
-        <span className="text-aura animate-pulse">▋</span>
+        <span className="text-apple-blue-dark animate-blink">▋</span>
       </pre>
-    </div>
-  )
-}
-
-/* ── Card 3: Cursor Protocol Scheduler ── */
-function CursorScheduler() {
-  const days = ['S', 'M', 'T', 'W', 'T', 'F', 'S']
-  const [activeDay, setActiveDay] = useState(null)
-  const [phase, setPhase] = useState('idle') // idle | moving | clicking | saving
-
-  useEffect(() => {
-    const sequence = async () => {
-      await new Promise(r => setTimeout(r, 600))
-      setPhase('moving')
-      const day = Math.floor(Math.random() * 7)
-      await new Promise(r => setTimeout(r, 800))
-      setPhase('clicking')
-      setActiveDay(day)
-      await new Promise(r => setTimeout(r, 400))
-      setPhase('saving')
-      await new Promise(r => setTimeout(r, 1200))
-      setPhase('idle')
-    }
-    const id = setInterval(sequence, 4000)
-    sequence()
-    return () => clearInterval(id)
-  }, [])
-
-  return (
-    <div className="relative h-44 w-full glass-strong radius-card p-4 overflow-hidden">
-      <p className="text-xs font-mono text-mist mb-3 uppercase tracking-wider">Weekly Sync Schedule</p>
-      <div className="grid grid-cols-7 gap-1.5 mb-4">
-        {days.map((d, i) => (
-          <div
-            key={i}
-            className="flex flex-col items-center gap-1.5"
-          >
-            <span className="text-xs text-mist font-mono">{d}</span>
-            <div
-              className="w-8 h-8 rounded-xl flex items-center justify-center transition-all duration-300"
-              style={{
-                background: activeDay === i
-                  ? 'rgba(148,226,213,0.2)'
-                  : 'rgba(255,255,255,0.04)',
-                border: activeDay === i
-                  ? '1px solid var(--aura)'
-                  : '1px solid rgba(255,255,255,0.06)',
-                transform: phase === 'clicking' && activeDay === i ? 'scale(0.92)' : 'scale(1)',
-              }}
-            >
-              {activeDay === i && (
-                <div className="w-1.5 h-1.5 rounded-full bg-aura" />
-              )}
-            </div>
-          </div>
-        ))}
-      </div>
-      <div
-        className="glass radius-pill px-3 py-1.5 inline-flex items-center gap-2 transition-all duration-300"
-        style={{
-          opacity: phase === 'saving' ? 1 : 0.3,
-          transform: phase === 'saving' ? 'scale(1.02)' : 'scale(1)',
-        }}
-      >
-        <span className="w-1.5 h-1.5 rounded-full bg-green-400" />
-        <span className="text-xs font-mono text-ghost">Saved to Aura memory</span>
-      </div>
     </div>
   )
 }
@@ -179,62 +108,54 @@ export default function Features() {
   const sectionRef = useRef(null)
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.fromTo('.feature-card',
-        { y: 48, opacity: 0 },
-        {
-          y: 0, opacity: 1, stagger: 0.15, duration: 0.9, ease: 'power3.out',
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: 'top 75%',
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible')
           }
-        }
-      )
-      gsap.fromTo('.features-heading',
-        { y: 32, opacity: 0 },
-        {
-          y: 0, opacity: 1, duration: 0.8, ease: 'power3.out',
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: 'top 80%',
-          }
-        }
-      )
-      gsap.fromTo('.software-showcase',
-        { y: 48, opacity: 0 },
-        {
-          y: 0, opacity: 1, duration: 1, ease: 'power3.out',
-          scrollTrigger: {
-            trigger: '.software-showcase',
-            start: 'top 80%',
-          }
-        }
-      )
-    }, sectionRef)
-    return () => ctx.revert()
+        })
+      },
+      { threshold: 0.1 }
+    )
+    sectionRef.current?.querySelectorAll('.section-reveal').forEach(el => observer.observe(el))
+    return () => observer.disconnect()
   }, [])
 
   const cards = [
     {
       id: 'capture',
-      eyebrow: '01 — Capture',
+      num: '01',
       title: 'Never Miss A Thing.',
-      desc: 'AI captures every conversation, insight and idea automatically. No tapping, no prompting.',
+      desc: 'AI captures every conversation, insight, and idea automatically. No tapping, no prompting.',
       component: <DiagnosticShuffler />,
     },
     {
       id: 'recall',
-      eyebrow: '02 — Recall',
-      title: 'Recalls Instantly',
+      num: '02',
+      title: 'Recalls Instantly.',
       desc: 'Ask anything from your day. Aura already knows the answer — with full context and timeline.',
       component: <TelemetryTypewriter />,
     },
     {
-      id: 'schedule',
-      eyebrow: '03 — Organize',
+      id: 'memory',
+      num: '03',
       title: 'Your Second Brain.',
       desc: 'Auto summaries, tasks, and memories. Synced, searchable, and always ready.',
-      component: <CursorScheduler />,
+      component: (
+        <div
+          className="h-36 w-full rounded-apple-lg flex items-center justify-center"
+          style={{ backgroundColor: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)' }}
+          aria-hidden="true"
+        >
+          <div className="text-center space-y-2">
+            <div className="w-10 h-10 rounded-full border-2 border-apple-blue-dark/40 flex items-center justify-center mx-auto">
+              <div className="w-3 h-3 rounded-full bg-apple-blue-dark" />
+            </div>
+            <p className="text-apple-fine text-apple-muted-body uppercase tracking-widest">Memory indexed</p>
+          </div>
+        </div>
+      ),
     },
   ]
 
@@ -242,182 +163,137 @@ export default function Features() {
     <section
       id="intelligence"
       ref={sectionRef}
-      className="relative py-36 px-4 noise-overlay"
+      className="tile-dark-1 section-apple"
+      aria-label="Features"
     >
-      {/* Background accent */}
-      <div className="absolute inset-0 -z-10" aria-hidden="true"
-        style={{
-          background: 'radial-gradient(ellipse 70% 50% at 50% 0%, rgba(148,226,213,0.04) 0%, transparent 75%)'
-        }}
-      />
-
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-[980px] mx-auto">
         {/* Section header */}
-        <div className="features-heading text-center mb-24">
-          <div className="inline-flex items-center gap-2 glass radius-pill px-4 py-1.5 mb-5">
-            <span className="text-xs font-mono text-aura tracking-widest uppercase">Your Partner In Everything</span>
-          </div>
-          <h2 className="text-[clamp(2.2rem,5vw,3.8rem)] font-bold tracking-tight text-ghost mb-4 text-wrap-balance leading-tight">
-            Intelligence that works<br />
-            <span className="font-serif italic text-aura">while you do.</span>
+        <div className="text-center mb-16 section-reveal">
+          <p className="text-apple-caption-strong text-apple-blue-dark uppercase tracking-widest mb-4">
+            Your Partner In Everything
+          </p>
+          <h2 className="text-apple-display text-white text-balance mb-5">
+            Intelligence that works<br />while you do.
           </h2>
-          <p className="text-mist text-base md:text-lg font-light max-w-xl mx-auto leading-relaxed">
+          <p className="text-apple-body text-apple-muted-body max-w-xl mx-auto text-balance">
             No screens. No notifications. No interruptions. Aura captures your world
             and surfaces what matters — only when you need it.
           </p>
         </div>
 
         {/* Cards grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-24">
-          {cards.map((card) => (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {cards.map((card, i) => (
             <div
               key={card.id}
-              className="feature-card glass-strong radius-card p-6 flex flex-col gap-6
-                hover:border-aura/20 transition-all duration-500 group border border-white/5"
+              className="section-reveal card-apple flex flex-col gap-5"
+              style={{ transitionDelay: `${i * 0.1}s` }}
             >
-              {/* Card interactive component */}
-              <div className="relative z-10">
-                {card.component}
-              </div>
-
-              {/* Card copy */}
-              <div className="mt-auto">
-                <span className="text-xs font-mono text-aura tracking-widest uppercase">{card.eyebrow}</span>
-                <h3 className="text-xl font-semibold text-ghost mt-1.5 mb-2 transition-all duration-300">
-                  {card.title}
-                </h3>
-                <p className="text-sm text-mist font-light leading-relaxed">{card.desc}</p>
+              <div>{card.component}</div>
+              <div>
+                <span className="text-apple-fine text-apple-muted-48 font-mono uppercase tracking-widest">{card.num}</span>
+                <h3 className="text-apple-body-strong text-white mt-1 mb-2">{card.title}</h3>
+                <p className="text-apple-caption text-apple-muted-body">{card.desc}</p>
               </div>
             </div>
           ))}
         </div>
 
-        {/* ── Real Asset Software Showcase (Double Whitespace) ── */}
-        <div className="software-showcase mt-32 border border-white/5 glass-strong radius-card p-8 md:p-12 overflow-hidden">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            {/* Left side text */}
-            <div className="lg:col-span-5 space-y-6">
-              <span className="text-xs font-mono text-aura tracking-widest uppercase block">Mobile Companion App</span>
-              <h3 className="text-3xl font-bold tracking-tight text-ghost leading-tight">
-                Your entire history,<br />
-                <span className="font-serif italic text-aura">neatly indexed.</span>
+        {/* Software showcase */}
+        <div className="mt-16 section-reveal card-apple">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            {/* Copy */}
+            <div className="lg:col-span-5 space-y-5">
+              <span className="text-apple-caption-strong text-apple-blue-dark uppercase tracking-widest block">
+                Mobile Companion App
+              </span>
+              <h3 className="text-apple-display-md text-white">
+                Your entire history,<br />neatly indexed.
               </h3>
-              <p className="text-sm text-mist leading-relaxed font-light">
-                Aura streams transcription packets and audio frames securely to your phone. 
-                The companion Flutter app lets you search your conversations, review automated tasks, 
-                and ask questions to your local-first memory pipeline.
+              <p className="text-apple-body text-apple-muted-body">
+                Aura streams transcription packets securely to your phone.
+                Search your conversations, review automated tasks, and ask
+                questions to your local-first memory pipeline.
               </p>
-              <ul className="space-y-3 font-mono text-xs text-mist list-none pl-0">
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-aura shrink-0" />
-                  Real-time speech transcription matching
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-aura shrink-0" />
-                  Semantic retrieval of past conversations
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-aura shrink-0" />
-                  Secure local-first vector DB storage
-                </li>
+              <ul className="space-y-2">
+                {[
+                  'Real-time speech transcription',
+                  'Semantic retrieval of past conversations',
+                  'Secure local-first storage',
+                ].map(feat => (
+                  <li key={feat} className="flex items-center gap-2 text-apple-caption text-apple-muted-body">
+                    <span className="w-1.5 h-1.5 rounded-full bg-apple-blue-dark shrink-0" />
+                    {feat}
+                  </li>
+                ))}
               </ul>
             </div>
 
-            {/* Right side pure CSS phone companion mockup */}
-            <div className="lg:col-span-7 flex justify-center w-full">
-              <div className="relative w-full max-w-[340px] aspect-[9/18] rounded-[2.5rem] border-4 border-ghost/40 bg-void p-3 shadow-2xl overflow-hidden flex flex-col text-left">
-                {/* Phone Speaker & Camera Notch */}
-                <div className="absolute top-2 left-1/2 -translate-x-1/2 w-32 h-4 bg-ghost rounded-full z-20 flex items-center justify-center">
-                  <div className="w-12 h-1 bg-void/20 rounded-full mr-2" />
-                  <div className="w-2.5 h-2.5 rounded-full bg-void/35" />
-                </div>
-                
-                {/* Simulated Screen Content */}
-                <div className="flex-1 flex flex-col mt-6 font-sans text-ghost overflow-hidden">
-                  {/* Status Bar */}
-                  <div className="flex items-center justify-between px-3 py-1.5 text-[10px] font-mono text-mist font-medium">
+            {/* Phone mockup */}
+            <div className="lg:col-span-7 flex justify-center">
+              <div className="relative w-full max-w-[280px] aspect-[9/18] rounded-[2rem] border-4 border-white/20 p-3 overflow-hidden flex flex-col"
+                style={{ backgroundColor: '#1c1c1e' }}>
+                {/* Notch */}
+                <div className="absolute top-2 left-1/2 -translate-x-1/2 w-24 h-3.5 bg-black rounded-full z-20" />
+                <div className="flex-1 flex flex-col mt-5 overflow-hidden">
+                  {/* Status bar */}
+                  <div className="flex items-center justify-between px-3 py-1 text-[10px] font-mono text-white/50">
                     <span>9:41</span>
-                    <div className="flex items-center gap-1.5">
+                    <div className="flex items-center gap-1">
                       <span>5G</span>
-                      <div className="w-4 h-2 border border-mist/40 rounded-sm p-0.5 flex items-center">
-                        <div className="w-full h-full bg-mist" />
+                      <div className="w-4 h-2 border border-white/40 rounded-sm p-0.5">
+                        <div className="w-full h-full bg-white/60" />
                       </div>
                     </div>
                   </div>
-
-                  {/* App Header */}
-                  <div className="px-3 py-2 border-b border-ghost/5 flex items-center justify-between">
+                  {/* App header */}
+                  <div className="px-3 py-2 border-b border-white/5 flex items-center justify-between">
                     <div>
-                      <h4 className="text-xs font-mono text-mist uppercase tracking-wider">Aura OS1</h4>
-                      <h3 className="text-sm font-semibold tracking-tight">Conversations</h3>
+                      <p className="text-[9px] font-mono text-white/40 uppercase tracking-wider">Aura</p>
+                      <p className="text-xs font-semibold text-white">Conversations</p>
                     </div>
-                    <span className="w-2 h-2 rounded-full bg-aura animate-pulse" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-apple-blue animate-pulse" />
                   </div>
-
-                  {/* Feed stream */}
-                  <div className="flex-1 overflow-y-auto px-3 py-4 space-y-4 text-xs font-light">
-                    {/* Live indicator banner */}
-                    <div className="bg-aura/10 border border-aura/20 p-2.5 rounded-xl flex items-center justify-between">
-                      <div className="flex items-center gap-2">
-                        <span className="w-1.5 h-1.5 rounded-full bg-aura animate-pulse" />
-                        <span className="font-mono text-[9px] text-ghost tracking-wider uppercase">Streaming Audio</span>
+                  {/* Feed */}
+                  <div className="flex-1 overflow-y-auto px-3 py-3 space-y-3">
+                    <div className="rounded-xl p-2 text-[9px]"
+                      style={{ backgroundColor: 'rgba(41,151,255,0.12)', border: '1px solid rgba(41,151,255,0.2)' }}>
+                      <div className="flex items-center gap-1.5 mb-1">
+                        <span className="w-1 h-1 rounded-full bg-apple-blue-dark" />
+                        <span className="font-mono text-white/60 uppercase tracking-wide">Streaming</span>
                       </div>
-                      <span className="font-mono text-[9px] text-mist">00:42</span>
+                      <p className="text-white/80 leading-relaxed font-light">
+                        "Confirm the battery voltage levels are stable at 3.7V..."
+                      </p>
                     </div>
-
-                    {/* Chat Node 1 */}
-                    <div className="space-y-1">
-                      <div className="flex items-center justify-between text-[9px] font-mono text-mist">
-                        <span>Laxman Pajai</span>
-                        <span>10:32 AM</span>
-                      </div>
-                      <div className="bg-graphite p-3 rounded-2xl rounded-tl-none border border-ghost/5">
-                        <p className="leading-relaxed">
-                          We should align the micro LiPo battery protection circuits on the new revision. Let's make it fit inside a 36mm chassis.
-                        </p>
-                      </div>
+                    <div className="rounded-xl p-2"
+                      style={{ backgroundColor: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.06)' }}>
+                      <span className="text-[8px] font-mono text-white/40 block mb-1">10:32 · Hardware Lab</span>
+                      <p className="text-[9px] text-white/70 leading-relaxed font-light">
+                        "We need the camera aperture centered exactly inside the 36mm chassis."
+                      </p>
                     </div>
-
-                    {/* Chat Node 2 */}
-                    <div className="space-y-1">
-                      <div className="flex items-center justify-between text-[9px] font-mono text-mist">
-                        <span>Soham Datta</span>
-                        <span>10:33 AM</span>
-                      </div>
-                      <div className="bg-ghost text-void p-3 rounded-2xl rounded-tr-none border border-white/5">
-                        <p className="leading-relaxed">
-                          Agreed. Let's ensure the camera aperture cutout is perfectly centered. I'll update the STL file parameters.
-                        </p>
-                      </div>
-                    </div>
-
-                    {/* Task Node */}
-                    <div className="border border-aura/35 bg-aura/5 p-3 rounded-2xl space-y-2">
-                      <div className="flex items-center gap-1.5">
-                        <span className="text-[10px]">✅</span>
-                        <span className="font-mono text-[9px] text-ghost tracking-wider uppercase">Auto Task Created</span>
-                      </div>
-                      <p className="font-semibold text-ghost text-[11px]">Update camera casing STL dimensions to 36mm</p>
-                      <p className="text-[10px] text-mist">Assigned to Laxman Pajai</p>
+                    <div className="rounded-xl p-2"
+                      style={{ backgroundColor: 'rgba(41,151,255,0.06)', border: '1px solid rgba(41,151,255,0.15)' }}>
+                      <p className="text-[8px] font-mono text-apple-blue-dark uppercase tracking-wide">✓ Auto Task</p>
+                      <p className="text-[9px] text-white font-semibold mt-0.5">Update STL to 36mm chassis</p>
                     </div>
                   </div>
-
-                  {/* App Bottom Search Bar */}
-                  <div className="p-3 border-t border-ghost/5 bg-void">
-                    <div className="bg-graphite border border-ghost/10 rounded-full px-3 py-2 flex items-center justify-between">
-                      <span className="text-[10px] text-mist/60">Ask your memory anything...</span>
+                  {/* Search bar */}
+                  <div className="p-3 border-t border-white/5">
+                    <div className="rounded-full px-3 py-2 flex items-center justify-between"
+                      style={{ backgroundColor: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.08)' }}>
+                      <span className="text-[10px] text-white/30">Ask your memory anything...</span>
                       <span className="text-xs">⚡</span>
                     </div>
                   </div>
                 </div>
-
-                {/* Home Indicator Bar */}
-                <div className="absolute bottom-1.5 left-1/2 -translate-x-1/2 w-28 h-1 bg-ghost/40 rounded-full" />
+                {/* Home bar */}
+                <div className="absolute bottom-1.5 left-1/2 -translate-x-1/2 w-20 h-1 bg-white/30 rounded-full" />
               </div>
             </div>
           </div>
         </div>
-
       </div>
     </section>
   )

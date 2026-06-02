@@ -12,31 +12,34 @@ import Footer from './components/Footer'
 
 function App() {
   const [currentRoute, setCurrentRoute] = useState(() => {
-    // Read route from path or fallback to hash if available
-    const path = window.location.pathname
-    if (path && path !== '/') {
-      return path
-    }
     const hash = window.location.hash.slice(1)
     if (hash && hash.startsWith('/')) {
       return hash
     }
+    const path = window.location.pathname
+    if (path === '/dilemma') return '/dilemma'
+    if (path === '/about-us') return '/about-us'
+    if (path.startsWith('/docs')) return '/docs'
     return '/'
   })
 
   useEffect(() => {
     const handlePopState = () => {
-      const path = window.location.pathname
-      if (path && path !== '/') {
-        setCurrentRoute(path)
-        return
-      }
       const hash = window.location.hash.slice(1)
       if (hash && hash.startsWith('/')) {
         setCurrentRoute(hash)
         return
       }
-      setCurrentRoute('/')
+      const path = window.location.pathname
+      if (path === '/dilemma') {
+        setCurrentRoute('/dilemma')
+      } else if (path === '/about-us') {
+        setCurrentRoute('/about-us')
+      } else if (path.startsWith('/docs')) {
+        setCurrentRoute('/docs')
+      } else {
+        setCurrentRoute('/')
+      }
     }
     window.addEventListener('popstate', handlePopState)
     window.addEventListener('hashchange', handlePopState)
@@ -46,11 +49,26 @@ function App() {
     }
   }, [])
 
+  useEffect(() => {
+    let title = 'Aura — AI Wearable. Always With You.'
+    if (currentRoute === '/dilemma') {
+      title = 'The Dilemma — Aura'
+    } else if (currentRoute === '/about-us') {
+      title = 'About Us — Aura'
+    } else if (currentRoute.startsWith('/docs')) {
+      title = 'Documentation — Aura'
+    }
+    document.title = title
+  }, [currentRoute])
+
   const navigate = (path) => {
-    // Push path and hash to support both standard routing and hash fallback
-    window.history.pushState(null, '', path)
-    window.location.hash = '#' + path
-    setCurrentRoute(path)
+    const isSubdir = window.location.pathname !== '/' && window.location.pathname !== '/index.html'
+    if (isSubdir) {
+      window.location.hash = '#' + path
+    } else {
+      window.history.pushState(null, '', path)
+      setCurrentRoute(path)
+    }
     window.scrollTo(0, 0)
   }
 
@@ -68,12 +86,12 @@ function App() {
             <Waitlist />
           </>
         )}
-        {currentRoute === '/dilemma' && <Dilemma />}
-        {currentRoute === '/about-us' && <About />}
+        {currentRoute === '/dilemma' && <Dilemma onNavigate={navigate} />}
+        {currentRoute === '/about-us' && <About onNavigate={navigate} />}
         {currentRoute.startsWith('/docs') && <Docs />}
       </main>
 
-      <Footer />
+      <Footer currentRoute={currentRoute} onNavigate={navigate} />
     </>
   )
 }

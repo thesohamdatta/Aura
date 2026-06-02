@@ -696,65 +696,76 @@ export default function Docs() {
     : []
 
   return (
-    <section className="bg-void text-ghost py-24 min-h-screen px-4">
-      <div className="max-w-6xl mx-auto">
-        {/* Header */}
-        <div className="border-b border-ghost/10 dark:border-white/5 pb-8 mb-12 flex flex-col md:flex-row md:items-center justify-between gap-6">
-          <div>
-            <h2 className="text-3xl font-semibold tracking-tight gradient-text-white">Help Center</h2>
-            <p className="text-mist text-sm font-light mt-1">Documentation, setup guides, and hardware schematics.</p>
-          </div>
-          {/* Search bar */}
-          <div className="relative w-full md:w-80">
-            <input
-              type="text"
-              placeholder="Search docs..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-graphite/50 dark:bg-graphite border border-ghost/15 dark:border-white/5 radius-pill px-5 py-2.5 text-sm
-                focus:border-aura/50 focus:outline-none transition-all text-ghost dark:text-white"
-            />
-            {searchQuery && (
-              <div className="absolute top-full left-0 right-0 mt-2 bg-void dark:bg-graphite border border-ghost/20 dark:border-white/10 rounded-2xl p-2 z-20 shadow-2xl max-h-60 overflow-y-auto">
-                {filteredArticles.length > 0 ? (
-                  filteredArticles.map(art => (
-                    <button
-                      key={art.id}
-                      onClick={() => {
-                        setSelectedArticleId(art.id)
-                        setSearchQuery('')
-                      }}
-                      className="w-full text-left px-4 py-2 hover:bg-ghost/5 dark:hover:bg-white/5 rounded-xl text-sm transition-colors text-ghost dark:text-white"
-                    >
-                      {art.title}
-                    </button>
-                  ))
-                ) : (
-                  <p className="text-xs text-mist p-3 text-center">No articles found.</p>
-                )}
-              </div>
-            )}
+    <div className="min-h-screen bg-[var(--page-bg)] text-[var(--page-text)] pt-[96px]">
+      {/* Page header */}
+      <header className="section-apple pb-0 border-b border-[var(--page-border)]">
+        <div className="max-w-[980px] mx-auto">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-10">
+            <div>
+              <p className="text-apple-caption-strong text-apple-blue dark:text-apple-blue-dark uppercase tracking-widest mb-3">
+                Documentation
+              </p>
+              <h1 className="text-apple-display text-[var(--page-text)]">Help Center</h1>
+              <p className="text-apple-body text-[var(--page-text-muted)] mt-2">
+                Setup guides, hardware schematics, and configuration docs.
+              </p>
+            </div>
+            {/* Search bar */}
+            <div className="relative w-full md:w-72 shrink-0">
+              <input
+                type="text"
+                placeholder="Search docs…"
+                id="docs-search"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full h-11 rounded-apple-pill px-5 text-apple-caption text-[var(--page-text)] bg-[var(--page-surface)] border border-[var(--page-border)] placeholder:text-[var(--page-text-subtle)] focus:outline-none focus:border-apple-blue transition-colors"
+              />
+              {searchQuery && (
+                <div className="absolute top-full left-0 right-0 mt-2 rounded-apple-md p-2 z-20 max-h-60 overflow-y-auto"
+                  style={{ backgroundColor: 'var(--page-bg)', border: '1px solid var(--page-border)', boxShadow: '0 8px 24px rgba(0,0,0,0.12)' }}
+                >
+                  {filteredArticles.length > 0 ? (
+                    filteredArticles.map(art => (
+                      <button
+                        key={art.id}
+                        onClick={() => {
+                          setSelectedArticleId(art.id)
+                          setSearchQuery('')
+                        }}
+                        className="w-full text-left px-4 py-2.5 text-apple-caption text-[var(--page-text)] hover:bg-[var(--page-surface)] rounded-apple-sm transition-colors"
+                      >
+                        {art.title}
+                      </button>
+                    ))
+                  ) : (
+                    <p className="text-apple-caption text-[var(--page-text-subtle)] p-3 text-center">No results.</p>
+                  )}
+                </div>
+              )}
+            </div>
           </div>
         </div>
+      </header>
 
-        {/* 2-Column Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
+      {/* 2-column layout */}
+      <div className="max-w-[980px] mx-auto px-5 py-12">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-10">
           {/* Sidebar */}
-          <aside className="lg:col-span-1 space-y-8">
+          <aside className="lg:col-span-1 space-y-8" aria-label="Documentation navigation">
             {categories.map((cat) => (
-              <div key={cat.name} className="space-y-3">
-                <h3 className="text-xs font-mono text-mist uppercase tracking-widest pl-3 border-l-2 border-ghost/10 dark:border-white/5">
+              <div key={cat.name} className="space-y-1">
+                <h3 className="text-apple-fine text-[var(--page-text-subtle)] font-mono uppercase tracking-widest px-2 mb-2">
                   {cat.name}
                 </h3>
-                <ul className="space-y-1 list-none">
+                <ul className="space-y-0.5 list-none">
                   {cat.articles.map((art) => (
                     <li key={art.id}>
                       <button
                         onClick={() => setSelectedArticleId(art.id)}
-                        className={`w-full text-left px-3 py-2 text-sm rounded-xl transition-all duration-300 font-light ${
+                        className={`w-full text-left px-3 py-2 text-apple-caption rounded-apple-sm transition-all duration-150 ${
                           selectedArticleId === art.id
-                            ? 'bg-aura/10 text-aura font-medium border border-aura/20 shadow-sm'
-                            : 'text-mist hover:text-ghost dark:hover:text-white hover:bg-ghost/5 dark:hover:bg-white/5'
+                            ? 'bg-[rgba(0,102,204,0.08)] text-apple-blue dark:text-apple-blue-dark font-semibold'
+                            : 'text-[var(--page-text-muted)] hover:text-[var(--page-text)] hover:bg-[var(--page-surface)]'
                         }`}
                       >
                         {art.title}
@@ -766,24 +777,30 @@ export default function Docs() {
             ))}
           </aside>
 
-          {/* Reader Window */}
-          <main className="lg:col-span-3 bg-graphite/40 dark:bg-graphite/30 radius-card p-8 md:p-12 border border-ghost/10 dark:border-white/5 min-h-[500px] shadow-sm">
-            <span className="text-xs font-mono text-aura uppercase tracking-wider block mb-2">
+          {/* Reader pane */}
+          <main
+            className="lg:col-span-3 rounded-apple-lg p-8 md:p-10 min-h-[500px]"
+            style={{
+              backgroundColor: 'var(--page-surface)',
+              border: '1px solid var(--page-border)',
+            }}
+          >
+            <span className="text-apple-fine text-apple-blue dark:text-apple-blue-dark uppercase tracking-widest font-mono block mb-2">
               {activeArticle.category}
             </span>
-            <h1 className="text-3xl font-semibold tracking-tight text-ghost dark:text-white mb-2">
+            <h2 className="text-apple-display-md text-[var(--page-text)] mb-2">
               {activeArticle.title}
-            </h1>
-            <p className="text-sm text-mist font-light mb-8 italic">
+            </h2>
+            <p className="text-apple-caption text-[var(--page-text-subtle)] mb-8">
               {activeArticle.desc}
             </p>
-            <hr className="border-ghost/10 dark:border-white/5 mb-8" />
-            <div className="text-ghost dark:text-ghost font-light leading-relaxed space-y-6">
+            <div className="h-px bg-[var(--page-border)] mb-8" />
+            <div className="text-apple-body text-[var(--page-text-muted)] leading-relaxed space-y-6">
               {activeArticle.content}
             </div>
           </main>
         </div>
       </div>
-    </section>
+    </div>
   )
 }

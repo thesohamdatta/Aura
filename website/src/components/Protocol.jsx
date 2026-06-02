@@ -1,172 +1,170 @@
 import { useEffect, useRef } from 'react'
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-gsap.registerPlugin(ScrollTrigger)
-
-const protocol = [
+const layers = [
   {
+    id: 'capture',
     num: '01',
-    title: 'Wear It',
-    desc: 'Clip Aura to your collar or lanyard. Magnetic clasp locks in seconds. No setup, no pairing ritual.',
-    tag: 'Physical Layer',
-    visual: (
-      <svg viewBox="0 0 100 100" className="w-20 h-20 text-ghost transition-transform duration-500 group-hover:scale-110">
-        <circle cx="50" cy="50" r="30" fill="none" stroke="var(--ghost)" strokeWidth="1.5" />
-        <circle cx="50" cy="50" r="16" fill="none" stroke="var(--aura)" strokeWidth="1.5" />
-        <circle cx="50" cy="50" r="6" fill="var(--ghost)" />
-        <path d="M50,10 L50,20 M44,12 L56,12" stroke="var(--ghost)" strokeWidth="1.5" />
+    name: 'Capture Layer',
+    icon: (
+      <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <circle cx="12" cy="12" r="3" />
+        <path d="M12 1v3m0 16v3M4.22 4.22l2.12 2.12m11.32 11.32 2.12 2.12M1 12h3m16 0h3M4.22 19.78l2.12-2.12m11.32-11.32 2.12-2.12" />
       </svg>
-    )
+    ),
+    description: 'On-device PDM microphone and OV2640 camera capture raw audio and visual input.',
+    badge: 'ESP32-S3 Sense',
   },
   {
+    id: 'edge',
     num: '02',
-    title: 'It Listens & Sees',
-    desc: 'Microphone captures audio continuously. Camera shoots at set intervals. All processed on-device first.',
-    tag: 'Capture Layer',
-    visual: (
-      <svg viewBox="0 0 100 100" className="w-24 h-16 text-ghost transition-transform duration-500 group-hover:scale-110">
-        <path d="M10,50 Q25,20 40,80 T70,20 T90,50" fill="none" stroke="var(--ghost)" strokeWidth="1" strokeOpacity="0.25" />
-        <path d="M10,50 Q25,35 40,65 T70,35 T90,50" fill="none" stroke="var(--aura)" strokeWidth="1.8" />
-        <rect x="5" y="10" width="90" height="80" rx="4" fill="none" stroke="var(--ghost)" strokeWidth="1.5" strokeOpacity="0.1" />
-        <line x1="0" y1="50" x2="100" y2="50" stroke="var(--aura)" strokeWidth="0.5" strokeOpacity="0.4" strokeDasharray="3 3" />
+    name: 'Edge Processing',
+    icon: (
+      <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
       </svg>
-    )
+    ),
+    description: 'Audio compressed and streamed via BLE or Wi-Fi to the Aura companion app in real time.',
+    badge: 'BLE + Wi-Fi',
   },
   {
+    id: 'ai',
     num: '03',
-    title: 'AI Understands',
-    desc: 'Deepgram transcribes. GPT-4o or Groq analyzes. Summaries, tasks, and memories surface in your app.',
-    tag: 'Intelligence Layer',
-    visual: (
-      <svg viewBox="0 0 100 100" className="w-24 h-16 text-ghost transition-transform duration-500 group-hover:scale-110">
-        <path d="M20,50 L50,25 L80,50 M50,25 L50,75" fill="none" stroke="var(--ghost)" strokeWidth="1" strokeOpacity="0.2" />
-        <circle cx="20" cy="50" r="8" fill="var(--void)" stroke="var(--ghost)" strokeWidth="1.5" />
-        <circle cx="50" cy="25" r="8" fill="var(--void)" stroke="var(--aura)" strokeWidth="2" />
-        <circle cx="80" cy="50" r="8" fill="var(--void)" stroke="var(--ghost)" strokeWidth="1.5" />
-        <circle cx="50" cy="75" r="8" fill="var(--void)" stroke="var(--ghost)" strokeWidth="1.5" />
-        <circle cx="20" cy="50" r="3" fill="var(--ghost)" />
-        <circle cx="50" cy="25" r="3" fill="var(--aura)" />
-        <circle cx="80" cy="50" r="3" fill="var(--ghost)" />
-        <circle cx="50" cy="75" r="3" fill="var(--ghost)" />
-        <text x="50" y="14" textAnchor="middle" className="text-[5px] font-mono fill-aura font-medium uppercase">AI CLOUD</text>
-        <text x="20" y="64" textAnchor="middle" className="text-[5px] font-mono fill-mist uppercase">MIC</text>
-        <text x="80" y="64" textAnchor="middle" className="text-[5px] font-mono fill-mist uppercase">CAM</text>
-        <text x="50" y="89" textAnchor="middle" className="text-[5px] font-mono fill-mist uppercase">DB</text>
+    name: 'AI Pipeline',
+    icon: (
+      <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <rect x="4" y="4" width="16" height="16" rx="2" />
+        <path d="M9 9h6m-6 3h6m-6 3h4" />
       </svg>
-    )
+    ),
+    description: 'Deepgram / Whisper transcription → LLM (Groq / GPT-4o / Ollama) for semantic understanding.',
+    badge: 'Cloud / Local',
+  },
+  {
+    id: 'memory',
+    num: '04',
+    name: 'Memory Engine',
+    icon: (
+      <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" />
+        <path d="M12 8v4l3 3" />
+      </svg>
+    ),
+    description: 'Omi memory pipeline indexes your conversations. Semantic search, auto-tasks, timeline recall.',
+    badge: 'Omi + Local DB',
   },
 ]
 
 export default function Protocol() {
   const sectionRef = useRef(null)
-  const cardsRef = useRef([])
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.fromTo('.protocol-heading',
-        { y: 32, opacity: 0 },
-        {
-          y: 0, opacity: 1, duration: 0.9, ease: 'power3.out',
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: 'top 80%',
-          }
-        }
-      )
-
-      cardsRef.current.forEach((card, i) => {
-        if (!card) return
-        gsap.fromTo(card,
-          { y: 60, opacity: 0 },
-          {
-            y: 0, opacity: 1,
-            duration: 0.9,
-            delay: i * 0.15,
-            ease: 'power3.out',
-            scrollTrigger: {
-              trigger: card,
-              start: 'top 85%',
-            }
-          }
-        )
-      })
-    }, sectionRef)
-    return () => ctx.revert()
+    const observer = new IntersectionObserver(
+      entries => entries.forEach(e => e.isIntersecting && e.target.classList.add('visible')),
+      { threshold: 0.08 }
+    )
+    sectionRef.current?.querySelectorAll('.section-reveal').forEach(el => observer.observe(el))
+    return () => observer.disconnect()
   }, [])
 
   return (
     <section
       id="protocol"
       ref={sectionRef}
-      className="relative py-36 px-4 bg-void border-t border-white/5"
+      className="tile-dark-2 section-apple"
+      aria-label="How Aura Works"
     >
-      <div
-        className="absolute inset-0 -z-10"
-        aria-hidden="true"
-        style={{
-          background: 'radial-gradient(ellipse 60% 40% at 80% 50%, rgba(148,226,213,0.03) 0%, transparent 70%)',
-        }}
-      />
-
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-[980px] mx-auto">
         {/* Header */}
-        <div className="protocol-heading text-center mb-24">
-          <div className="inline-flex items-center gap-2 glass radius-pill px-4 py-1.5 mb-5">
-            <span className="text-xs font-mono text-aura tracking-widest uppercase">How It Works</span>
-          </div>
-          <h2 className="text-[clamp(2rem,5vw,3.8rem)] font-bold tracking-tight text-ghost mb-4 text-wrap-balance leading-tight">
-            Three layers.{' '}
-            <span className="font-serif italic text-aura">One seamless experience.</span>
+        <div className="text-center mb-16 section-reveal">
+          <p className="text-apple-caption-strong text-apple-blue-dark uppercase tracking-widest mb-4">
+            The Full Stack
+          </p>
+          <h2 className="text-apple-display text-white text-balance mb-5">
+            How Aura Works.
           </h2>
-          <p className="text-mist text-base md:text-lg font-light max-w-xl mx-auto leading-relaxed">
-            Aura's architecture is designed to stay invisible — capturing and processing
-            everything while demanding nothing from you.
+          <p className="text-apple-body text-apple-muted-body max-w-xl mx-auto text-balance">
+            Four layers. From sensor to insight. Each one replaceable, open, and hackable.
           </p>
         </div>
 
-        {/* Protocol cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {protocol.map((step, i) => (
-            <div
-              key={step.num}
-              ref={el => cardsRef.current[i] = el}
-              className="glass-strong radius-card p-7 flex flex-col gap-6
-                hover:border-aura/25 transition-all duration-500 group relative overflow-hidden border border-white/5"
-            >
-              {/* Glow on hover */}
+        {/* Vertical pipeline — timeline style */}
+        <div className="relative">
+          {/* Spine line */}
+          <div
+            className="absolute left-[28px] md:left-[36px] top-0 bottom-0 w-px"
+            style={{ background: 'linear-gradient(to bottom, rgba(41,151,255,0.6), rgba(41,151,255,0.1))' }}
+            aria-hidden="true"
+          />
+
+          <div className="space-y-0">
+            {layers.map((layer, i) => (
               <div
-                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
-                style={{
-                  background: 'radial-gradient(ellipse 60% 40% at 50% 100%, rgba(171,237,225,0.06) 0%, transparent 70%)'
-                }}
-              />
+                key={layer.id}
+                className="section-reveal relative flex gap-6 md:gap-10 pb-10 last:pb-0 group"
+                style={{ transitionDelay: `${i * 0.1}s` }}
+              >
+                {/* Node */}
+                <div className="relative shrink-0">
+                  <div
+                    className="w-14 h-14 md:w-16 md:h-16 rounded-apple-lg flex items-center justify-center text-apple-blue-dark transition-all duration-300 group-hover:scale-105"
+                    style={{ backgroundColor: 'rgba(41,151,255,0.10)', border: '1px solid rgba(41,151,255,0.2)' }}
+                  >
+                    {layer.icon}
+                  </div>
+                  {/* Connector dot */}
+                  {i < layers.length - 1 && (
+                    <div
+                      className="absolute -bottom-5 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full"
+                      style={{ background: 'rgba(41,151,255,0.4)' }}
+                      aria-hidden="true"
+                    />
+                  )}
+                </div>
 
-              {/* Step number */}
-              <div className="flex items-center justify-between">
-                <span className="text-[10px] font-mono text-mist tracking-widest uppercase">{step.tag}</span>
+                {/* Content */}
+                <div className="flex-1 min-w-0 pt-1">
+                  <div className="flex flex-wrap items-center gap-3 mb-2">
+                    <span className="text-apple-fine text-apple-blue-dark font-mono">{layer.num}</span>
+                    <h3 className="text-apple-body-strong text-white">{layer.name}</h3>
+                    <span
+                      className="text-apple-fine rounded-apple-pill px-2.5 py-0.5"
+                      style={{ backgroundColor: 'rgba(255,255,255,0.07)', color: '#cccccc' }}
+                    >
+                      {layer.badge}
+                    </span>
+                  </div>
+                  <p className="text-apple-caption text-apple-muted-body leading-relaxed">
+                    {layer.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Stack choice card */}
+        <div
+          className="mt-16 section-reveal rounded-apple-lg p-8 md:p-10"
+          style={{ backgroundColor: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.07)' }}
+        >
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              { title: 'Run local', desc: 'Use Ollama + Whisper entirely offline. Your data never leaves your device.', badge: 'Privacy Mode' },
+              { title: 'Run cloud', desc: 'Connect GPT-4o and Deepgram for maximum accuracy and speed.', badge: 'Pro Mode' },
+              { title: 'Run hybrid', desc: 'Local transcription, cloud reasoning. Balance speed and privacy.', badge: 'Recommended' },
+            ].map(opt => (
+              <div key={opt.title}>
                 <span
-                  className="text-3xl font-semibold font-mono"
-                  style={{ color: 'var(--mist)', opacity: 0.15 }}
+                  className="inline-block text-apple-fine rounded-apple-pill px-2 py-0.5 mb-3"
+                  style={{ backgroundColor: 'rgba(41,151,255,0.12)', color: '#2997ff' }}
                 >
-                  {step.num}
+                  {opt.badge}
                 </span>
+                <h4 className="text-apple-body-strong text-white mb-2">{opt.title}</h4>
+                <p className="text-apple-caption text-apple-muted-body">{opt.desc}</p>
               </div>
-
-              {/* Visual Asset Container */}
-              <div className="relative overflow-hidden rounded-2xl border border-white/5 bg-void/50 aspect-video flex items-center justify-center p-4">
-                {step.visual}
-              </div>
-
-              {/* Copy */}
-              <div className="mt-auto">
-                <h3 className="text-xl font-semibold text-ghost mb-2 transition-all duration-300">
-                  {step.title}
-                </h3>
-                <p className="text-sm text-mist font-light leading-relaxed">{step.desc}</p>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

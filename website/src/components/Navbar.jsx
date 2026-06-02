@@ -1,5 +1,10 @@
 import { useEffect, useState } from 'react'
 
+/**
+ * Apple-style two-tier navigation:
+ *   1. global-nav  — 44px solid black bar, always visible
+ *   2. sub-nav-frosted — 52px frosted-glass bar, product links + primary CTA
+ */
 export default function Navbar({ currentRoute, onNavigate }) {
   const [menuOpen, setMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
@@ -9,78 +14,77 @@ export default function Navbar({ currentRoute, onNavigate }) {
       if (saved) return saved
       return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
     }
-    return 'dark'
+    return 'light'
   })
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 40)
-    }
+    const handleScroll = () => setScrolled(window.scrollY > 8)
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   useEffect(() => {
     const root = window.document.documentElement
-    if (theme === 'dark') {
-      root.classList.add('dark')
-    } else {
-      root.classList.remove('dark')
-    }
+    theme === 'dark' ? root.classList.add('dark') : root.classList.remove('dark')
     localStorage.setItem('theme', theme)
   }, [theme])
 
-  const toggleTheme = () => {
-    setTheme(prev => (prev === 'dark' ? 'light' : 'dark'))
-  }
+  const toggleTheme = () => setTheme(p => p === 'dark' ? 'light' : 'dark')
 
   const navItems = [
-    { label: 'Home', path: '/' },
+    { label: 'Home',     path: '/' },
     { label: 'Dilemma', path: '/dilemma' },
-    { label: 'About Us', path: '/about-us' },
-    { label: 'Docs', path: '/docs' }
+    { label: 'About',   path: '/about-us' },
+    { label: 'Docs',    path: '/docs' },
   ]
 
-  const handleLinkClick = (e, path) => {
+  const handleLink = (e, path) => {
     e.preventDefault()
     setMenuOpen(false)
     onNavigate(path)
   }
 
-  return (
-    <nav
-      className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[min(880px,94vw)]
-        radius-pill px-6 py-3 flex items-center justify-between gap-4
-        transition-all duration-500 ${
-          scrolled || menuOpen
-            ? 'glass-strong shadow-[0_8px_32px_rgba(0,0,0,0.08)] dark:shadow-[0_8px_32px_rgba(0,0,0,0.4)] border-white/10'
-            : 'bg-transparent border border-transparent'
-        }`}
-    >
-      {/* Logo */}
-      <a
-        href="/"
-        onClick={(e) => handleLinkClick(e, '/')}
-        className="flex items-center gap-2 group transition-transform duration-300 hover:-translate-y-0.5"
-      >
-        <span className="text-lg font-semibold tracking-tight text-ghost hover:text-aura transition-all duration-300">
-          aura
-        </span>
-        <span className="w-1.5 h-1.5 rounded-full bg-aura animate-pulse" aria-hidden="true" />
-      </a>
+  const handleWaitlist = (e) => {
+    if (currentRoute !== '/') {
+      handleLink(e, '/')
+      setTimeout(() => document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' }), 120)
+    } else {
+      e.preventDefault()
+      document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })
+    }
+    setMenuOpen(false)
+  }
 
-      {/* Navigation links */}
-      <div className="flex items-center gap-6">
-        <ul className="hidden md:flex items-center gap-6 list-none m-0 p-0">
+  return (
+    <header className="fixed top-0 left-0 right-0 z-50">
+      {/* ── Tier 1: Global Nav — solid black 44px bar ── */}
+      <nav
+        className="tile-black flex items-center justify-between px-5"
+        style={{ height: 44, minHeight: 44 }}
+        aria-label="Global navigation"
+      >
+        {/* Logo */}
+        <a
+          href="/"
+          onClick={(e) => handleLink(e, '/')}
+          className="text-apple-nav text-white flex items-center gap-1.5 hover:opacity-75 transition-opacity"
+          aria-label="Aura home"
+        >
+          <span className="font-semibold tracking-tight text-sm">aura</span>
+          <span className="w-1 h-1 rounded-full bg-apple-blue" aria-hidden="true" />
+        </a>
+
+        {/* Desktop nav links */}
+        <ul className="hidden md:flex items-center gap-7 list-none m-0 p-0">
           {navItems.map((item) => (
             <li key={item.path}>
               <a
                 href={item.path}
-                onClick={(e) => handleLinkClick(e, item.path)}
-                className={`text-sm font-light tracking-wide transition-all duration-300 hover:-translate-y-px inline-block ${
-                  currentRoute === item.path
-                    ? 'text-aura font-medium'
-                    : 'text-mist hover:text-ghost'
+                onClick={(e) => handleLink(e, item.path)}
+                className={`text-apple-nav transition-opacity ${
+                  (currentRoute === item.path || (currentRoute.startsWith(item.path + '/') && item.path !== '/'))
+                    ? 'text-white opacity-100'
+                    : 'text-white/70 hover:text-white/100'
                 }`}
               >
                 {item.label}
@@ -89,95 +93,117 @@ export default function Navbar({ currentRoute, onNavigate }) {
           ))}
         </ul>
 
-        {/* Vertical divider */}
-        <span className="hidden md:inline-block w-px h-4 bg-mist/20" />
+        {/* Right cluster: theme toggle + search icon placeholder */}
+        <div className="flex items-center gap-4">
+          {/* Theme toggle */}
+          <button
+            onClick={toggleTheme}
+            className="text-white/70 hover:text-white transition-opacity p-1"
+            aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+          >
+            {theme === 'dark' ? (
+              <svg className="w-4 h-4 fill-none stroke-current" viewBox="0 0 24 24" strokeWidth="1.5">
+                <circle cx="12" cy="12" r="4" />
+                <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+              </svg>
+            ) : (
+              <svg className="w-4 h-4 fill-none stroke-current" viewBox="0 0 24 24" strokeWidth="1.5">
+                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+              </svg>
+            )}
+          </button>
 
-        {/* Theme Toggle Button */}
-        <button
-          onClick={toggleTheme}
-          className="p-1.5 rounded-full border border-mist/20 hover:border-ghost/40 transition-colors focus:outline-none"
-          aria-label="Toggle light or dark theme"
-        >
-          {theme === 'dark' ? (
-            <svg className="w-4 h-4 fill-none stroke-current" viewBox="0 0 24 24" strokeWidth="2">
-              <circle cx="12" cy="12" r="4" />
-              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
-            </svg>
-          ) : (
-            <svg className="w-4 h-4 fill-none stroke-current" viewBox="0 0 24 24" strokeWidth="2">
-              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
-            </svg>
-          )}
-        </button>
+          {/* Mobile hamburger */}
+          <button
+            className="md:hidden flex flex-col gap-1 p-1 group"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle menu"
+            aria-expanded={menuOpen}
+          >
+            <span className={`block w-5 h-px bg-white transition-all duration-200 ${menuOpen ? 'rotate-45 translate-y-1.5' : ''}`} />
+            <span className={`block w-5 h-px bg-white transition-all duration-200 ${menuOpen ? 'opacity-0' : ''}`} />
+            <span className={`block w-5 h-px bg-white transition-all duration-200 ${menuOpen ? '-rotate-45 -translate-y-1.5' : ''}`} />
+          </button>
+        </div>
+      </nav>
 
-        {/* CTA */}
-        <a
-          href="#waitlist"
-          onClick={(e) => {
-            if (currentRoute !== '/') {
-              handleLinkClick(e, '/')
-              setTimeout(() => {
-                document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })
-              }, 100)
-            } else {
-              e.preventDefault()
-              document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })
-            }
-          }}
-          className="hidden md:flex btn-magnetic items-center gap-2 radius-pill
-            bg-ghost text-void text-xs font-semibold px-4 py-2 hover:bg-mist/20 hover:text-ghost transition-colors duration-300"
-        >
-          <span className="relative z-10">Contribute to open source</span>
-        </a>
-      </div>
-
-      {/* Mobile hamburger */}
-      <button
-        className="md:hidden flex flex-col gap-1.5 p-2 group"
-        onClick={() => setMenuOpen(!menuOpen)}
-        aria-label="Toggle menu"
-        aria-expanded={menuOpen}
+      {/* ── Tier 2: Sub-nav frosted glass — 52px ── */}
+      <div
+        className={`nav-frosted border-b border-apple-hairline/60 transition-all duration-300 ${
+          scrolled ? 'shadow-apple-hairline' : ''
+        }`}
+        style={{ height: 52, minHeight: 52 }}
       >
-        <span className={`block w-5 h-px bg-ghost transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-2' : ''}`} />
-        <span className={`block w-5 h-px bg-ghost transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
-        <span className={`block w-5 h-px bg-ghost transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
-      </button>
+        <div className="flex items-center justify-between h-full px-5 max-w-[1440px] mx-auto">
+          {/* Product category name */}
+          <span className="text-apple-tagline text-apple-ink dark:text-white hidden sm:block">
+            aura
+          </span>
 
-      {/* Mobile menu */}
-      {menuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 mt-2 glass-strong radius-card p-6 flex flex-col gap-4 border border-white/10">
-          {navItems.map((item) => (
-            <a
-              key={item.path}
-              href={item.path}
-              onClick={(e) => handleLinkClick(e, item.path)}
-              className={`text-base font-light tracking-wide transition-colors ${
-                currentRoute === item.path ? 'text-aura font-medium' : 'text-ghost hover:text-white'
-              }`}
-            >
-              {item.label}
-            </a>
-          ))}
+          {/* Inline utility links (desktop) */}
+          <div className="hidden md:flex items-center gap-6">
+                      {navItems.slice(1).map((item) => (
+              <a
+                key={item.path}
+                href={item.path}
+                onClick={(e) => handleLink(e, item.path)}
+                className={`text-apple-caption transition-opacity ${
+                  currentRoute === item.path
+                    ? 'text-apple-ink dark:text-white'
+                    : 'text-apple-muted-80 dark:text-apple-muted-body hover:text-apple-ink dark:hover:text-white'
+                }`}
+              >
+                {item.label}
+              </a>
+            ))}
+          </div>
+
+          {/* Primary CTA — always visible */}
           <a
             href="#waitlist"
-            onClick={(e) => {
-              setMenuOpen(false)
-              if (currentRoute !== '/') {
-                handleLinkClick(e, '/')
-                setTimeout(() => {
-                  document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })
-                }, 100)
-              } else {
-                e.preventDefault()
-                document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })
-              }
-            }}
-            className="mt-2 text-center btn-magnetic radius-pill bg-ghost text-void text-sm font-medium py-3"
+            id="nav-cta-waitlist"
+            onClick={handleWaitlist}
+            className="btn-apple-primary"
+            style={{ fontSize: 14, padding: '8px 18px' }}
           >
-            Contribute to open source
+            Join Waitlist
           </a>
         </div>
+      </div>
+
+      {/* ── Mobile dropdown menu ── */}
+      {menuOpen && (
+        <div
+          className="md:hidden tile-black border-t border-white/10"
+          role="dialog"
+          aria-label="Mobile navigation"
+        >
+          <ul className="list-none px-5 py-4 space-y-1">
+            {navItems.map((item) => (
+              <li key={item.path}>
+                <a
+                  href={item.path}
+                  onClick={(e) => handleLink(e, item.path)}
+                  className={`block py-3 text-apple-body border-b border-white/10 transition-opacity ${
+                    currentRoute === item.path ? 'text-white' : 'text-white/65 hover:text-white'
+                  }`}
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <div className="px-5 pb-5 pt-2">
+            <a
+              href="#waitlist"
+              onClick={handleWaitlist}
+              className="btn-apple-primary w-full text-center justify-center"
+            >
+              Join Waitlist
+            </a>
+          </div>
+        </div>
       )}
-    </nav>
+    </header>
   )
 }
