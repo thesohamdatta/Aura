@@ -39,26 +39,26 @@ export default function Dilemma() {
         className="absolute inset-0 -z-10 pointer-events-none"
         aria-hidden="true"
         style={{
-          background: 'radial-gradient(ellipse 60% 60% at 50% 50%, rgba(226,59,46,0.04) 0%, transparent 80%)'
+          background: 'radial-gradient(ellipse 60% 60% at 50% 50%, rgba(171,237,225,0.04) 0%, transparent 80%)'
         }}
       />
 
       <div className="max-w-3xl mx-auto">
         {/* Eyebrow */}
         <div className="dilemma-block inline-flex items-center gap-2 glass radius-pill px-4 py-1.5 mb-8">
-          <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" aria-hidden="true" />
+          <span className="w-1.5 h-1.5 rounded-full bg-aura animate-pulse" aria-hidden="true" />
           <span className="text-xs font-mono text-mist tracking-widest uppercase">The Attention Crisis</span>
         </div>
 
         {/* Big Statement */}
         <h2 className="dilemma-block text-[clamp(2rem,6vw,4rem)] font-semibold tracking-tight gradient-text-white mb-16 leading-[1.1]">
           The social giants are eating{' '}
-          <span className="font-serif italic text-red-400">our brains.</span>
+          <span className="font-serif italic text-aura">our brains.</span>
         </h2>
 
         <div className="space-y-16 text-mist font-light text-base md:text-lg leading-relaxed">
           {/* Block 1 */}
-          <div className="dilemma-block border-l border-red-500/20 pl-6 space-y-4">
+          <div className="dilemma-block border-l border-aura/20 pl-6 space-y-4">
             <h3 className="text-lg font-mono text-ghost dark:text-white tracking-wide uppercase">Humans Need a Third Device</h3>
             <p>
               We have Personal Computers — to create, work, and produce things that matter. We have Tiny Supercomputers — Smartphones — to consume, but we are drawn into the Social Dilemma.
@@ -72,7 +72,7 @@ export default function Dilemma() {
           </div>
 
           {/* Block 2 */}
-          <div className="dilemma-block border-l border-red-500/20 pl-6 space-y-4">
+          <div className="dilemma-block border-l border-aura/20 pl-6 space-y-4">
             <h3 className="text-lg font-mono text-ghost dark:text-white tracking-wide uppercase">The Social Dilemma</h3>
             <p>
               Their influence has a deeply negative impact on our behaviour — how we talk, what we see, how we do things, how we live. This effect is damaging human nature, and it already has.
@@ -83,13 +83,13 @@ export default function Dilemma() {
             <p>
               For years, we have developed and refined this technology. Some of the greatest engineers in the world have worked on it — hired for one reason and one reason only: attention. How to capture the maximum attention of people. How to turn that attention into money. How to build an empire out of it.
             </p>
-            <p className="text-red-400 font-mono text-sm tracking-widest uppercase">
+            <p className="text-aura font-mono text-sm tracking-widest uppercase">
               There is no escape here. No freedom. No freedom. No freedom.
             </p>
           </div>
 
           {/* Block 3 */}
-          <div className="dilemma-block border-l border-red-500/20 pl-6 space-y-4">
+          <div className="dilemma-block border-l border-aura/20 pl-6 space-y-4">
             <h3 className="text-lg font-mono text-ghost dark:text-white tracking-wide uppercase">The AI Dilemma</h3>
             <p>
               AI is not going to make it good or help us live better in this socially fucked up world. Instead, AI can and will change how we live, what we see, and how we perceive things — things we never needed and never wanted. The Slop. Its impact on our brain is not reversible.

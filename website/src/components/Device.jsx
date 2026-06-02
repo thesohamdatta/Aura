@@ -101,20 +101,90 @@ export default function Device() {
                 <div className="scan-line w-full" />
               </div>
 
-              {/* Toggle Images */}
+              {/* Interactive SVG Schematics */}
               <div className="relative w-full h-full flex items-center justify-center">
                 {activeTab === 'exploded' ? (
-                  <img
-                    src="/assets/hero/exploded view.jpg"
-                    alt="Aura hardware exploded assembly view"
-                    className="w-full h-full object-cover rounded-2xl transition-transform duration-700 ease-out group-hover:scale-105"
-                  />
+                  <svg viewBox="0 0 200 200" className="w-[85%] h-[85%] text-ghost">
+                    {/* Connection line helpers */}
+                    <path d="M100,20 L100,180" stroke="var(--aura)" strokeWidth="0.5" strokeDasharray="2 2" opacity="0.3" />
+                    
+                    {/* Layer 1: Front Cover */}
+                    <g transform="translate(0, -30)" className="transition-transform duration-500 hover:translate-y-[-10px]">
+                      <circle cx="100" cy="55" r="24" fill="var(--void)" stroke="var(--ghost)" strokeWidth="1.5" />
+                      <circle cx="100" cy="55" r="10" fill="var(--void)" stroke="var(--ghost)" strokeWidth="1" />
+                      <circle cx="100" cy="55" r="4" fill="var(--ghost)" />
+                      <text x="100" y="24" textAnchor="middle" className="text-[7px] font-mono fill-mist">Front Enclosure (3D PLA)</text>
+                    </g>
+
+                    {/* Layer 2: ESP32-S3 Board */}
+                    <g transform="translate(0, 0)">
+                      <rect x="78" y="80" width="44" height="36" rx="3" fill="var(--void)" stroke="var(--ghost)" strokeWidth="1.5" />
+                      {/* Seeed Xiao details */}
+                      <rect x="88" y="88" width="24" height="18" rx="1" fill="none" stroke="var(--ghost)" strokeWidth="1" strokeDasharray="1 1" />
+                      <circle cx="100" cy="98" r="3" fill="var(--aura)" />
+                      <text x="142" y="100" textAnchor="start" className="text-[7px] font-mono fill-ghost">XIAO ESP32-S3</text>
+                      <path d="M122,98 L138,98" stroke="var(--ghost)" strokeWidth="0.5" />
+                    </g>
+
+                    {/* Layer 3: LiPo Battery */}
+                    <g transform="translate(0, 30)">
+                      <rect x="82" y="120" width="36" height="22" rx="2" fill="var(--ghost)" stroke="var(--ghost)" strokeWidth="1" />
+                      <path d="M96,120 L96,117" stroke="var(--ghost)" strokeWidth="1.5" />
+                      <path d="M104,120 L104,117" stroke="var(--ghost)" strokeWidth="1.5" />
+                      <text x="100" y="152" textAnchor="middle" className="text-[7px] font-mono fill-mist">150mAh Battery Pack</text>
+                    </g>
+                    
+                    {/* Layer 4: Rear Magnetic Mount */}
+                    <g transform="translate(0, 55)">
+                      <circle cx="100" cy="145" r="20" fill="var(--void)" stroke="var(--ghost)" strokeWidth="1.5" />
+                      <circle cx="100" cy="145" r="8" fill="var(--ghost)" />
+                      <text x="60" y="148" textAnchor="end" className="text-[7px] font-mono fill-ghost">Neodymium Clasp</text>
+                      <path d="M80,145 L68,145" stroke="var(--ghost)" strokeWidth="0.5" />
+                    </g>
+                  </svg>
                 ) : (
-                  <img
-                    src="/assets/hero/ALL COMPONENTS.png"
-                    alt="Aura circuitry layout and component connections"
-                    className="w-[90%] h-[90%] object-contain rounded-2xl transition-transform duration-700 ease-out group-hover:scale-105"
-                  />
+                  <svg viewBox="0 0 200 200" className="w-[85%] h-[85%] text-ghost">
+                    {/* Core Board */}
+                    <rect x="60" y="60" width="80" height="80" rx="6" fill="var(--void)" stroke="var(--ghost)" strokeWidth="2" />
+                    <text x="100" y="76" textAnchor="middle" className="text-[9px] font-mono font-bold fill-ghost">ESP32-S3 SENSE</text>
+
+                    {/* Pins Left */}
+                    <g transform="translate(50, 80)">
+                      <rect x="0" y="0" width="10" height="6" rx="1" fill="var(--ghost)" />
+                      <rect x="0" y="10" width="10" height="6" rx="1" fill="var(--ghost)" />
+                      <rect x="0" y="20" width="10" height="6" rx="1" fill="var(--ghost)" />
+                      <rect x="0" y="30" width="10" height="6" rx="1" fill="var(--ghost)" />
+                    </g>
+                    
+                    {/* Pins Right */}
+                    <g transform="translate(140, 80)">
+                      <rect x="0" y="0" width="10" height="6" rx="1" fill="var(--ghost)" />
+                      <rect x="0" y="10" width="10" height="6" rx="1" fill="var(--ghost)" />
+                      <rect x="0" y="20" width="10" height="6" rx="1" fill="var(--ghost)" />
+                      <rect x="0" y="30" width="10" height="6" rx="1" fill="var(--ghost)" />
+                    </g>
+
+                    {/* Connections & Peripherals */}
+                    {/* Camera */}
+                    <circle cx="100" cy="115" r="12" fill="var(--void)" stroke="var(--aura)" strokeWidth="1.5" />
+                    <circle cx="100" cy="115" r="4" fill="var(--ghost)" />
+                    <text x="100" y="134" textAnchor="middle" className="text-[7px] font-mono fill-ghost">OV2640</text>
+
+                    {/* Mic (Top Left) */}
+                    <rect x="25" y="25" width="25" height="15" rx="2" fill="var(--void)" stroke="var(--ghost)" strokeWidth="1" />
+                    <text x="37.5" y="34" textAnchor="middle" className="text-[6px] font-mono fill-ghost">PDM MIC</text>
+                    <path d="M50,32.5 L75,32.5 L75,60" fill="none" stroke="var(--aura)" strokeWidth="1" strokeDasharray="2 2" />
+
+                    {/* Battery Power (Bottom) */}
+                    <rect x="85" y="165" width="30" height="16" rx="2" fill="var(--void)" stroke="var(--ghost)" strokeWidth="1" />
+                    <text x="100" y="175" textAnchor="middle" className="text-[6px] font-mono fill-ghost">LIPO 3.7V</text>
+                    <path d="M100,165 L100,140" fill="none" stroke="var(--ghost)" strokeWidth="1" />
+
+                    {/* Signal indicators */}
+                    <circle cx="15" cy="100" r="1.5" fill="var(--aura)" />
+                    <line x1="15" y1="100" x2="60" y2="100" stroke="var(--aura)" strokeWidth="0.75" />
+                    <text x="15" y="94" className="text-[6px] font-mono fill-aura">ANTENNA</text>
+                  </svg>
                 )}
               </div>
             </div>

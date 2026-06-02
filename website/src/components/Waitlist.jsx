@@ -44,7 +44,7 @@ export default function Waitlist() {
         </p>
 
         {submitted ? (
-          <div className="glass-strong radius-card p-8 border border-green-500/25 bg-green-500/5 max-w-md mx-auto">
+          <div className="glass-strong radius-card p-8 border border-aura/25 bg-aura/5 max-w-md mx-auto">
             <span className="text-3xl mb-3 block">🎉</span>
             <h3 className="text-lg font-semibold text-ghost mb-1">You’re on the list!</h3>
             <p className="text-sm text-mist font-light">We’ve registered your email. Watch out for open-source batch updates soon.</p>

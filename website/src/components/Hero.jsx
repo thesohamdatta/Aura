@@ -149,12 +149,30 @@ export default function Hero() {
             aria-hidden="true"
           />
 
-          {/* Device hardware render */}
-          <img
-            src="/assets/hero/aura 2.png"
-            alt="Aura wearable device"
-            className="relative z-10 w-44 h-44 object-contain filter drop-shadow-[0_12px_24px_rgba(0,0,0,0.15)] dark:drop-shadow-[0_12px_32px_rgba(148,226,213,0.3)]"
-          />
+          {/* Stylized SVG Representation of the Aura Pendant */}
+          <svg
+            className="relative z-10 w-44 h-44 filter drop-shadow-[0_12px_24px_rgba(0,0,0,0.15)] dark:drop-shadow-[0_12px_32px_rgba(171,237,225,0.2)]"
+            viewBox="0 0 100 100"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            {/* Outer body frame */}
+            <circle cx="50" cy="50" r="44" fill="var(--void)" stroke="var(--ghost)" strokeWidth="2.5" />
+            {/* Inner aesthetic groove ring */}
+            <circle cx="50" cy="50" r="36" stroke="var(--ghost)" strokeWidth="1" strokeOpacity="0.15" strokeDasharray="3 3" />
+            {/* Center camera sensor frame */}
+            <circle cx="50" cy="50" r="22" fill="var(--void)" stroke="var(--ghost)" strokeWidth="2" />
+            {/* Lens outer glass bezel */}
+            <circle cx="50" cy="50" r="14" fill="var(--ghost)" stroke="var(--aura)" strokeWidth="1.5" />
+            {/* Lens aperture core */}
+            <circle cx="50" cy="50" r="8" fill="#000000" />
+            {/* Aperture highlight reflection */}
+            <circle cx="47" cy="47" r="2" fill="#FFFFFF" fillOpacity="0.4" />
+            {/* Status indicator LED */}
+            <circle cx="50" cy="22" r="2" fill="var(--aura)" />
+            {/* Mic sensor input hole */}
+            <circle cx="50" cy="78" r="1.5" fill="var(--ghost)" fillOpacity="0.5" />
+          </svg>
         </div>
       </div>
 

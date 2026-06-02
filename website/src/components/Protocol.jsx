@@ -9,25 +9,52 @@ const protocol = [
     num: '01',
     title: 'Wear It',
     desc: 'Clip Aura to your collar or lanyard. Magnetic clasp locks in seconds. No setup, no pairing ritual.',
-    img: '/assets/hero/aura 4.png',
-    alt: 'Aura wearable hardware design render',
     tag: 'Physical Layer',
+    visual: (
+      <svg viewBox="0 0 100 100" className="w-20 h-20 text-ghost transition-transform duration-500 group-hover:scale-110">
+        <circle cx="50" cy="50" r="30" fill="none" stroke="var(--ghost)" strokeWidth="1.5" />
+        <circle cx="50" cy="50" r="16" fill="none" stroke="var(--aura)" strokeWidth="1.5" />
+        <circle cx="50" cy="50" r="6" fill="var(--ghost)" />
+        <path d="M50,10 L50,20 M44,12 L56,12" stroke="var(--ghost)" strokeWidth="1.5" />
+      </svg>
+    )
   },
   {
     num: '02',
     title: 'It Listens & Sees',
     desc: 'Microphone captures audio continuously. Camera shoots at set intervals. All processed on-device first.',
-    img: '/assets/diagrams/flow.png',
-    alt: 'Audio capture and image processing data flow diagram',
     tag: 'Capture Layer',
+    visual: (
+      <svg viewBox="0 0 100 100" className="w-24 h-16 text-ghost transition-transform duration-500 group-hover:scale-110">
+        <path d="M10,50 Q25,20 40,80 T70,20 T90,50" fill="none" stroke="var(--ghost)" strokeWidth="1" strokeOpacity="0.25" />
+        <path d="M10,50 Q25,35 40,65 T70,35 T90,50" fill="none" stroke="var(--aura)" strokeWidth="1.8" />
+        <rect x="5" y="10" width="90" height="80" rx="4" fill="none" stroke="var(--ghost)" strokeWidth="1.5" strokeOpacity="0.1" />
+        <line x1="0" y1="50" x2="100" y2="50" stroke="var(--aura)" strokeWidth="0.5" strokeOpacity="0.4" strokeDasharray="3 3" />
+      </svg>
+    )
   },
   {
     num: '03',
     title: 'AI Understands',
     desc: 'Deepgram transcribes. GPT-4o or Groq analyzes. Summaries, tasks, and memories surface in your app.',
-    img: '/assets/diagrams/how_chat_tools_work.png',
-    alt: 'AI tool calls and chat context generation diagram',
     tag: 'Intelligence Layer',
+    visual: (
+      <svg viewBox="0 0 100 100" className="w-24 h-16 text-ghost transition-transform duration-500 group-hover:scale-110">
+        <path d="M20,50 L50,25 L80,50 M50,25 L50,75" fill="none" stroke="var(--ghost)" strokeWidth="1" strokeOpacity="0.2" />
+        <circle cx="20" cy="50" r="8" fill="var(--void)" stroke="var(--ghost)" strokeWidth="1.5" />
+        <circle cx="50" cy="25" r="8" fill="var(--void)" stroke="var(--aura)" strokeWidth="2" />
+        <circle cx="80" cy="50" r="8" fill="var(--void)" stroke="var(--ghost)" strokeWidth="1.5" />
+        <circle cx="50" cy="75" r="8" fill="var(--void)" stroke="var(--ghost)" strokeWidth="1.5" />
+        <circle cx="20" cy="50" r="3" fill="var(--ghost)" />
+        <circle cx="50" cy="25" r="3" fill="var(--aura)" />
+        <circle cx="80" cy="50" r="3" fill="var(--ghost)" />
+        <circle cx="50" cy="75" r="3" fill="var(--ghost)" />
+        <text x="50" y="14" textAnchor="middle" className="text-[5px] font-mono fill-aura font-medium uppercase">AI CLOUD</text>
+        <text x="20" y="64" textAnchor="middle" className="text-[5px] font-mono fill-mist uppercase">MIC</text>
+        <text x="80" y="64" textAnchor="middle" className="text-[5px] font-mono fill-mist uppercase">CAM</text>
+        <text x="50" y="89" textAnchor="middle" className="text-[5px] font-mono fill-mist uppercase">DB</text>
+      </svg>
+    )
   },
 ]
 
@@ -111,7 +138,7 @@ export default function Protocol() {
               <div
                 className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
                 style={{
-                  background: 'radial-gradient(ellipse 60% 40% at 50% 100%, rgba(148,226,213,0.06) 0%, transparent 70%)'
+                  background: 'radial-gradient(ellipse 60% 40% at 50% 100%, rgba(171,237,225,0.06) 0%, transparent 70%)'
                 }}
               />
 
@@ -127,13 +154,8 @@ export default function Protocol() {
               </div>
 
               {/* Visual Asset Container */}
-              <div className="relative overflow-hidden rounded-2xl border border-white/5 bg-void/50 aspect-video flex items-center justify-center p-2">
-                <img
-                  src={step.img}
-                  alt={step.alt}
-                  className="max-w-full max-h-full object-contain rounded-lg transition-transform duration-700 ease-out group-hover:scale-105"
-                  loading="lazy"
-                />
+              <div className="relative overflow-hidden rounded-2xl border border-white/5 bg-void/50 aspect-video flex items-center justify-center p-4">
+                {step.visual}
               </div>
 
               {/* Copy */}

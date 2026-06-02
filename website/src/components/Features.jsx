@@ -323,15 +323,96 @@ export default function Features() {
               </ul>
             </div>
 
-            {/* Right side high-res app screens mockup */}
-            <div className="lg:col-span-7 flex justify-center">
-              <div className="relative group overflow-hidden rounded-2xl border border-white/5 bg-void/50 p-2 max-w-lg shadow-[0_20px_50px_rgba(0,0,0,0.15)] dark:shadow-[0_20px_50px_rgba(148,226,213,0.05)]">
-                <img
-                  src="/assets/hero/software_mockups.jpg"
-                  alt="Aura Mobile Flutter App Interface and mockups"
-                  className="rounded-xl w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
-                  loading="lazy"
-                />
+            {/* Right side pure CSS phone companion mockup */}
+            <div className="lg:col-span-7 flex justify-center w-full">
+              <div className="relative w-full max-w-[340px] aspect-[9/18] rounded-[2.5rem] border-4 border-ghost/40 bg-void p-3 shadow-2xl overflow-hidden flex flex-col text-left">
+                {/* Phone Speaker & Camera Notch */}
+                <div className="absolute top-2 left-1/2 -translate-x-1/2 w-32 h-4 bg-ghost rounded-full z-20 flex items-center justify-center">
+                  <div className="w-12 h-1 bg-void/20 rounded-full mr-2" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-void/35" />
+                </div>
+                
+                {/* Simulated Screen Content */}
+                <div className="flex-1 flex flex-col mt-6 font-sans text-ghost overflow-hidden">
+                  {/* Status Bar */}
+                  <div className="flex items-center justify-between px-3 py-1.5 text-[10px] font-mono text-mist font-medium">
+                    <span>9:41</span>
+                    <div className="flex items-center gap-1.5">
+                      <span>5G</span>
+                      <div className="w-4 h-2 border border-mist/40 rounded-sm p-0.5 flex items-center">
+                        <div className="w-full h-full bg-mist" />
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* App Header */}
+                  <div className="px-3 py-2 border-b border-ghost/5 flex items-center justify-between">
+                    <div>
+                      <h4 className="text-xs font-mono text-mist uppercase tracking-wider">Aura OS1</h4>
+                      <h3 className="text-sm font-semibold tracking-tight">Conversations</h3>
+                    </div>
+                    <span className="w-2 h-2 rounded-full bg-aura animate-pulse" />
+                  </div>
+
+                  {/* Feed stream */}
+                  <div className="flex-1 overflow-y-auto px-3 py-4 space-y-4 text-xs font-light">
+                    {/* Live indicator banner */}
+                    <div className="bg-aura/10 border border-aura/20 p-2.5 rounded-xl flex items-center justify-between">
+                      <div className="flex items-center gap-2">
+                        <span className="w-1.5 h-1.5 rounded-full bg-aura animate-pulse" />
+                        <span className="font-mono text-[9px] text-ghost tracking-wider uppercase">Streaming Audio</span>
+                      </div>
+                      <span className="font-mono text-[9px] text-mist">00:42</span>
+                    </div>
+
+                    {/* Chat Node 1 */}
+                    <div className="space-y-1">
+                      <div className="flex items-center justify-between text-[9px] font-mono text-mist">
+                        <span>Laxman Pajai</span>
+                        <span>10:32 AM</span>
+                      </div>
+                      <div className="bg-graphite p-3 rounded-2xl rounded-tl-none border border-ghost/5">
+                        <p className="leading-relaxed">
+                          We should align the micro LiPo battery protection circuits on the new revision. Let's make it fit inside a 36mm chassis.
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Chat Node 2 */}
+                    <div className="space-y-1">
+                      <div className="flex items-center justify-between text-[9px] font-mono text-mist">
+                        <span>Soham Datta</span>
+                        <span>10:33 AM</span>
+                      </div>
+                      <div className="bg-ghost text-void p-3 rounded-2xl rounded-tr-none border border-white/5">
+                        <p className="leading-relaxed">
+                          Agreed. Let's ensure the camera aperture cutout is perfectly centered. I'll update the STL file parameters.
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Task Node */}
+                    <div className="border border-aura/35 bg-aura/5 p-3 rounded-2xl space-y-2">
+                      <div className="flex items-center gap-1.5">
+                        <span className="text-[10px]">✅</span>
+                        <span className="font-mono text-[9px] text-ghost tracking-wider uppercase">Auto Task Created</span>
+                      </div>
+                      <p className="font-semibold text-ghost text-[11px]">Update camera casing STL dimensions to 36mm</p>
+                      <p className="text-[10px] text-mist">Assigned to Laxman Pajai</p>
+                    </div>
+                  </div>
+
+                  {/* App Bottom Search Bar */}
+                  <div className="p-3 border-t border-ghost/5 bg-void">
+                    <div className="bg-graphite border border-ghost/10 rounded-full px-3 py-2 flex items-center justify-between">
+                      <span className="text-[10px] text-mist/60">Ask your memory anything...</span>
+                      <span className="text-xs">⚡</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Home Indicator Bar */}
+                <div className="absolute bottom-1.5 left-1/2 -translate-x-1/2 w-28 h-1 bg-ghost/40 rounded-full" />
               </div>
             </div>
           </div>

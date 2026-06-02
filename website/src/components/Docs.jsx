@@ -1,5 +1,163 @@
 import { useState } from 'react'
 
+const SystemArchitectureSVG = () => (
+  <svg className="w-full h-auto bg-graphite/30 border border-ghost/10 dark:border-white/5 rounded-2xl p-6" viewBox="0 0 500 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="20" y="80" width="100" height="80" rx="8" stroke="var(--ghost)" strokeWidth="1.5" fill="var(--void)" />
+    <text x="70" y="110" className="fill-ghost text-[10px] font-mono font-semibold" textAnchor="middle">AURA PENDANT</text>
+    <text x="70" y="125" className="fill-mist text-[8px] font-mono" textAnchor="middle">Mic & Camera</text>
+    <text x="70" y="140" className="fill-aura text-[8px] font-mono font-semibold" textAnchor="middle">ESP32-S3</text>
+    
+    <path d="M 120,120 L 200,120" stroke="var(--aura)" strokeWidth="1.5" strokeDasharray="4 4" />
+    <circle cx="160" cy="120" r="12" fill="var(--void)" stroke="var(--ghost)" strokeWidth="1" />
+    <text x="160" y="123" className="fill-ghost text-[8px] font-mono font-semibold" textAnchor="middle">Wi-Fi</text>
+    
+    <rect x="200" y="60" width="120" height="120" rx="8" stroke="var(--ghost)" strokeWidth="1.5" fill="var(--void)" />
+    <text x="260" y="85" className="fill-ghost text-[10px] font-mono font-semibold" textAnchor="middle">BACKEND ENGINE</text>
+    <line x1="210" y1="95" x2="310" y2="95" stroke="var(--ghost)" strokeWidth="0.5" strokeOpacity="0.2" />
+    <text x="260" y="110" className="fill-mist text-[8px] font-mono" textAnchor="middle">Deepgram Speech</text>
+    <text x="260" y="125" className="fill-mist text-[8px] font-mono" textAnchor="middle">GPT-4o Vision</text>
+    <text x="260" y="140" className="fill-aura text-[8px] font-mono font-semibold" textAnchor="middle">Local SQLite / Vector</text>
+    <text x="260" y="155" className="fill-ghost text-[8px] font-mono" textAnchor="middle">FastAPI (Python)</text>
+    
+    <path d="M 320,120 L 400,120" stroke="var(--ghost)" strokeWidth="1.5" strokeDasharray="2 2" />
+    <rect x="400" y="80" width="80" height="80" rx="8" stroke="var(--ghost)" strokeWidth="1.5" fill="var(--void)" />
+    <text x="440" y="110" className="fill-ghost text-[10px] font-mono font-semibold" textAnchor="middle">OMI APP</text>
+    <text x="440" y="125" className="fill-mist text-[8px] font-mono" textAnchor="middle">Flutter UI</text>
+    <text x="440" y="140" className="fill-aura text-[8px] font-mono font-semibold" textAnchor="middle">Transcripts</text>
+  </svg>
+);
+
+const SoftwareMockupsCSS = () => (
+  <div className="flex flex-col sm:flex-row gap-6 justify-center items-center py-6 px-4 bg-graphite/20 border border-ghost/10 dark:border-white/5 rounded-2xl">
+    <div className="w-[240px] border-[6px] border-ghost/85 rounded-[2rem] bg-void aspect-[9/18] relative shadow-xl overflow-hidden p-4 flex flex-col">
+      <div className="w-12 h-3.5 bg-ghost rounded-full mx-auto mb-4" />
+      <div className="flex justify-between items-center mb-4 border-b border-ghost/5 pb-2">
+        <span className="text-[10px] font-mono text-aura font-semibold">Memories</span>
+        <span className="text-[8px] font-mono text-mist">Connected</span>
+      </div>
+      <div className="space-y-2.5 overflow-y-auto flex-1 text-left">
+        <div className="p-2 bg-graphite rounded-xl border border-ghost/5">
+          <span className="text-[8px] font-mono text-aura block">19:42 · Hardware Lab</span>
+          <p className="text-[9px] font-light leading-relaxed text-ghost">"Confirm the battery voltage levels are stable at 3.7V. If they drop, trigger deep sleep mode immediately."</p>
+        </div>
+        <div className="p-2 bg-graphite rounded-xl border border-ghost/5">
+          <span className="text-[8px] font-mono text-aura block">18:15 · Ideas</span>
+          <p className="text-[9px] font-light leading-relaxed text-ghost">"Aura should support hot-word activation for sending direct push requests to local server."</p>
+        </div>
+      </div>
+    </div>
+    
+    <div className="w-[240px] border-[6px] border-ghost/85 rounded-[2rem] bg-void aspect-[9/18] relative shadow-xl overflow-hidden p-4 flex flex-col">
+      <div className="w-12 h-3.5 bg-ghost rounded-full mx-auto mb-4" />
+      <div className="flex justify-between items-center mb-4 border-b border-ghost/5 pb-2">
+        <span className="text-[10px] font-mono text-aura font-semibold">Action Items</span>
+        <span className="text-[8px] font-mono text-aura">2 Pending</span>
+      </div>
+      <div className="space-y-3 text-left">
+        <div className="flex items-start gap-2 p-2 bg-graphite rounded-xl border border-ghost/5">
+          <input type="checkbox" readOnly checked className="mt-0.5 accent-aura" />
+          <div className="space-y-0.5">
+            <span className="text-[9px] font-semibold text-ghost block">Buy ESP32-S3 board</span>
+            <span className="text-[7px] text-mist block">From Seeed Studio ($15)</span>
+          </div>
+        </div>
+        <div className="flex items-start gap-2 p-2 bg-graphite rounded-xl border border-ghost/5">
+          <input type="checkbox" readOnly checked={false} className="mt-0.5 accent-aura" />
+          <div className="space-y-0.5">
+            <span className="text-[9px] font-semibold text-ghost block">Solder battery cells</span>
+            <span className="text-[7px] text-mist block">Wire 6x 150mAh LiPos</span>
+          </div>
+        </div>
+        <div className="flex items-start gap-2 p-2 bg-graphite rounded-xl border border-ghost/5">
+          <input type="checkbox" readOnly checked={false} className="mt-0.5 accent-aura" />
+          <div className="space-y-0.5">
+            <span className="text-[9px] font-semibold text-ghost block">Configure Ollama URL</span>
+            <span className="text-[7px] text-mist block">Point to local 11434 port</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
+const AppSetupSVG = () => (
+  <svg className="w-full h-auto bg-graphite/30 border border-ghost/10 dark:border-white/5 rounded-2xl p-6" viewBox="0 0 500 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="15" y="60" width="100" height="90" rx="8" stroke="var(--ghost)" strokeWidth="1" fill="var(--void)" />
+    <text x="65" y="80" className="fill-aura text-[8px] font-mono font-semibold" textAnchor="middle">STEP 01</text>
+    <text x="65" y="105" className="fill-ghost text-[10px] font-semibold" textAnchor="middle">Pair Device</text>
+    <text x="65" y="125" className="fill-mist text-[8px] font-mono" textAnchor="middle">Turn on BLE</text>
+    <text x="65" y="137" className="fill-mist text-[8px] font-mono" textAnchor="middle">Scan for "Omi"</text>
+    
+    <path d="M 115,105 L 175,105" stroke="var(--aura)" strokeWidth="1" strokeDasharray="3 3" />
+    
+    <rect x="175" y="60" width="130" height="90" rx="8" stroke="var(--ghost)" strokeWidth="1" fill="var(--void)" />
+    <text x="240" y="80" className="fill-aura text-[8px] font-mono font-semibold" textAnchor="middle">STEP 02</text>
+    <text x="240" y="105" className="fill-ghost text-[10px] font-semibold" textAnchor="middle">Provision Wi-Fi</text>
+    <text x="240" y="125" className="fill-mist text-[8px] font-mono" textAnchor="middle">Enter SSID & Pass</text>
+    <text x="240" y="137" className="fill-mist text-[8px] font-mono" textAnchor="middle">via App Interface</text>
+    
+    <path d="M 305,105 L 365,105" stroke="var(--aura)" strokeWidth="1" strokeDasharray="3 3" />
+    
+    <rect x="365" y="60" width="120" height="90" rx="8" stroke="var(--ghost)" strokeWidth="1" fill="var(--void)" />
+    <text x="425" y="80" className="fill-aura text-[8px] font-mono font-semibold" textAnchor="middle">STEP 03</text>
+    <text x="425" y="105" className="fill-ghost text-[10px] font-semibold" textAnchor="middle">Set Backend URL</text>
+    <text x="425" y="125" className="fill-mist text-[8px] font-mono" textAnchor="middle">Save ngrok/cloud</text>
+    <text x="425" y="137" className="fill-mist text-[8px] font-mono" textAnchor="middle">URL to device env</text>
+  </svg>
+);
+
+const HowChatToolsWorkSVG = () => (
+  <svg className="w-full h-auto bg-graphite/30 border border-ghost/10 dark:border-white/5 rounded-2xl p-6" viewBox="0 0 500 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="20" y="90" width="90" height="60" rx="6" stroke="var(--ghost)" strokeWidth="1" fill="var(--void)" />
+    <text x="65" y="115" className="fill-ghost text-[9px] font-mono font-semibold" textAnchor="middle">USER INQUIRY</text>
+    <text x="65" y="130" className="fill-mist text-[8px]" textAnchor="middle">"What did Soham say?"</text>
+    
+    <path d="M 110,120 L 160,120" stroke="var(--ghost)" strokeWidth="1" />
+    
+    <rect x="160" y="70" width="140" height="100" rx="8" stroke="var(--aura)" strokeWidth="1.5" fill="var(--void)" />
+    <text x="230" y="95" className="fill-ghost text-[9px] font-mono font-semibold" textAnchor="middle">AI ROUTER</text>
+    <line x1="170" y1="105" x2="290" y2="105" stroke="var(--ghost)" strokeWidth="0.5" strokeOpacity="0.2" />
+    <text x="230" y="125" className="fill-mist text-[8px] font-mono" textAnchor="middle">Needs databases?</text>
+    <text x="230" y="145" className="fill-aura text-[8px] font-mono font-semibold" textAnchor="middle">{"Yes -> Call Tool"}</text>
+    
+    <path d="M 300,100 L 370,60" stroke="var(--aura)" strokeWidth="1" />
+    <path d="M 300,140 L 370,180" stroke="var(--ghost)" strokeWidth="1" strokeOpacity="0.4" />
+    
+    <rect x="370" y="30" width="110" height="60" rx="6" stroke="var(--aura)" strokeWidth="1.5" fill="var(--void)" />
+    <text x="425" y="55" className="fill-aura text-[9px] font-mono font-semibold" textAnchor="middle">SQLite Query</text>
+    <text x="425" y="70" className="fill-mist text-[7px]" textAnchor="middle">Search conversations</text>
+    
+    <rect x="370" y="150" width="110" height="60" rx="6" stroke="var(--ghost)" strokeWidth="1" strokeOpacity="0.4" fill="var(--void)" />
+    <text x="425" y="175" className="fill-ghost text-[9px] font-mono font-semibold" textAnchor="middle" fillOpacity="0.5">Google Search</text>
+    <text x="425" y="190" className="fill-mist text-[7px]" textAnchor="middle" fillOpacity="0.5">Find web resource</text>
+  </svg>
+);
+
+const TranscriptionFlowSVG = () => (
+  <svg className="w-full h-auto bg-graphite/30 border border-ghost/10 dark:border-white/5 rounded-2xl p-6" viewBox="0 0 500 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="15" y="70" width="100" height="80" rx="6" stroke="var(--ghost)" strokeWidth="1" fill="var(--void)" />
+    <text x="65" y="95" className="fill-ghost text-[9px] font-mono font-semibold" textAnchor="middle">AUDIO CAPTURE</text>
+    <text x="65" y="115" className="fill-mist text-[8px]" textAnchor="middle">16kHz Mono PDM</text>
+    <text x="65" y="130" className="fill-aura text-[8px] font-mono" textAnchor="middle">ESP32 Buffer</text>
+    
+    <path d="M 115,110 L 165,110" stroke="var(--aura)" strokeWidth="1.5" />
+    
+    <rect x="165" y="70" width="110" height="80" rx="6" stroke="var(--ghost)" strokeWidth="1" fill="var(--void)" />
+    <text x="220" y="95" className="fill-ghost text-[9px] font-mono font-semibold" textAnchor="middle">STREAMING BUFFER</text>
+    <text x="220" y="115" className="fill-mist text-[8px]" textAnchor="middle">WAV header packing</text>
+    <text x="220" y="130" className="fill-mist text-[8px]" textAnchor="middle">3-second packets</text>
+    
+    <path d="M 275,110 L 325,110" stroke="var(--aura)" strokeWidth="1.5" />
+    
+    <rect x="325" y="60" width="160" height="100" rx="8" stroke="var(--aura)" strokeWidth="2" fill="var(--void)" />
+    <text x="405" y="85" className="fill-ghost text-[9px] font-mono font-semibold" textAnchor="middle">TRANSCRIPTION LAYER</text>
+    <line x1="335" y1="95" x2="475" y2="95" stroke="var(--ghost)" strokeWidth="0.5" strokeOpacity="0.2" />
+    <text x="405" y="115" className="fill-aura text-[8px] font-mono font-semibold" textAnchor="middle">Deepgram API (Cloud)</text>
+    <text x="405" y="130" className="fill-mist text-[8px] font-mono" textAnchor="middle">or</text>
+    <text x="405" y="145" className="fill-ghost text-[8px] font-mono font-semibold" textAnchor="middle">Whisper (Offline/Local)</text>
+  </svg>
+);
+
 const categories = [
   {
     name: 'Getting Started',
@@ -75,11 +233,7 @@ const articlesContent = {
         </p>
         <div className="w-full pt-4">
           <p className="text-xs font-mono text-mist uppercase tracking-widest mb-3">System Architecture Diagram</p>
-          <img 
-            src="/assets/diagrams/system_architecture.png" 
-            alt="Aura System Architecture" 
-            className="w-full h-auto rounded-2xl border border-ghost/10 dark:border-white/5 shadow-2xl bg-void"
-          />
+          <SystemArchitectureSVG />
         </div>
       </div>
     )
@@ -262,19 +416,11 @@ const articlesContent = {
         <div className="w-full space-y-6 pt-4">
           <div>
             <p className="text-xs font-mono text-mist uppercase tracking-widest mb-3">Flutter Companion Application</p>
-            <img 
-              src="/assets/hero/software_mockups.jpg" 
-              alt="Aura Software Interface Mockups" 
-              className="w-full h-auto rounded-2xl border border-ghost/10 dark:border-white/5 shadow-2xl bg-void"
-            />
+            <SoftwareMockupsCSS />
           </div>
           <div>
             <p className="text-xs font-mono text-mist uppercase tracking-widest mb-3">Application Setup Architecture</p>
-            <img 
-              src="/assets/diagrams/app_setup.png" 
-              alt="Aura App Setup Flowchart" 
-              className="w-full h-auto rounded-2xl border border-ghost/10 dark:border-white/5 shadow-2xl bg-void"
-            />
+            <AppSetupSVG />
           </div>
         </div>
       </div>
@@ -329,17 +475,17 @@ python main.py`}
               <tr className="border-b border-ghost/5 dark:border-white/5">
                 <td className="p-3 border border-ghost/10 dark:border-white/5 font-semibold text-ghost dark:text-white font-mono">Groq</td>
                 <td className="p-3 border border-ghost/10 dark:border-white/5">Fast, real-time responses</td>
-                <td className="p-3 border border-ghost/10 dark:border-white/5 text-red-500 font-medium">Requires connection</td>
+                <td className="p-3 border border-ghost/10 dark:border-white/5 text-ghost/40 font-medium">Requires connection</td>
               </tr>
               <tr className="border-b border-ghost/5 dark:border-white/5">
                 <td className="p-3 border border-ghost/10 dark:border-white/5 font-semibold text-ghost dark:text-white font-mono">OpenAI</td>
                 <td className="p-3 border border-ghost/10 dark:border-white/5">Quality reasoning, vision tags</td>
-                <td className="p-3 border border-ghost/10 dark:border-white/5 text-red-500 font-medium">Requires connection</td>
+                <td className="p-3 border border-ghost/10 dark:border-white/5 text-ghost/40 font-medium">Requires connection</td>
               </tr>
               <tr className="border-b border-ghost/5 dark:border-white/5">
                 <td className="p-3 border border-ghost/10 dark:border-white/5 font-semibold text-ghost dark:text-white font-mono">Ollama</td>
                 <td className="p-3 border border-ghost/10 dark:border-white/5">Local, private intelligence</td>
-                <td className="p-3 border border-ghost/10 dark:border-white/5 text-teal font-semibold dark:text-aura">Fully Offline</td>
+                <td className="p-3 border border-ghost/10 dark:border-white/5 text-aura font-semibold">Fully Offline</td>
               </tr>
             </tbody>
           </table>
@@ -347,11 +493,7 @@ python main.py`}
         <p>For Ollama (local model execution), configure your local Ollama instance and set <code className="bg-ghost/5 dark:bg-white/10 px-1.5 py-0.5 rounded text-xs text-ghost dark:text-white">OLLAMA_URL=http://localhost:11434</code> in your backend environment configuration.</p>
         <div className="w-full pt-4">
           <p className="text-xs font-mono text-mist uppercase tracking-widest mb-3">AI Engine Tool Interaction Diagram</p>
-          <img 
-            src="/assets/diagrams/how_chat_tools_work.png" 
-            alt="AI Chat Tools Workflow" 
-            className="w-full h-auto rounded-2xl border border-ghost/10 dark:border-white/5 shadow-2xl bg-void"
-          />
+          <HowChatToolsWorkSVG />
         </div>
       </div>
     )
@@ -370,11 +512,7 @@ python main.py`}
         <p>Audio is captured at 16kHz mono PDM from the high-sensitivity built-in microphone on the ESP32-S3 Sense.</p>
         <div className="w-full pt-4">
           <p className="text-xs font-mono text-mist uppercase tracking-widest mb-3">Audio Transcription Pipeline Flowchart</p>
-          <img 
-            src="/assets/diagrams/transcription_flow.png" 
-            alt="Aura Audio Transcription Flowchart" 
-            className="w-full h-auto rounded-2xl border border-ghost/10 dark:border-white/5 shadow-2xl bg-void"
-          />
+          <TranscriptionFlowSVG />
         </div>
       </div>
     )
@@ -438,7 +576,7 @@ python main.py`}
               <tr className="border-b border-ghost/5 dark:border-white/5">
                 <td className="p-3 border border-ghost/10 dark:border-white/5 font-semibold text-ghost dark:text-white font-mono">Active (camera + Wi-Fi)</td>
                 <td className="p-3 border border-ghost/10 dark:border-white/5">~150–200mA</td>
-                <td className="p-3 border border-ghost/10 dark:border-white/5 text-red-500 font-medium">~2 hours continuous</td>
+                <td className="p-3 border border-ghost/10 dark:border-white/5 text-ghost/40 font-medium">~2 hours continuous</td>
               </tr>
               <tr className="border-b border-ghost/5 dark:border-white/5">
                 <td className="p-3 border border-ghost/10 dark:border-white/5 font-semibold text-ghost dark:text-white font-mono">Idle (BLE capture standby)</td>
@@ -448,12 +586,12 @@ python main.py`}
               <tr className="border-b border-ghost/5 dark:border-white/5">
                 <td className="p-3 border border-ghost/10 dark:border-white/5 font-semibold text-ghost dark:text-white font-mono">Deep Sleep (scheduled wake)</td>
                 <td className="p-3 border border-ghost/10 dark:border-white/5">&lt;1mA</td>
-                <td className="p-3 border border-ghost/10 dark:border-white/5 text-teal dark:text-aura font-semibold">~8+ hours</td>
+                <td className="p-3 border border-ghost/10 dark:border-white/5 text-aura font-semibold">~8+ hours</td>
               </tr>
             </tbody>
           </table>
         </div>
-        <div className="bg-amber-500/10 border border-amber-500/20 p-4 rounded-xl text-amber-800 dark:text-amber-300">
+        <div className="bg-graphite border border-ghost/10 p-4 rounded-xl text-ghost">
           <p className="text-xs font-mono uppercase tracking-wider mb-2">LiPo Battery Safety Rules</p>
           <ul className="list-disc list-inside space-y-1 text-sm font-light">
             <li>Never short circuit positive and negative terminals.</li>
