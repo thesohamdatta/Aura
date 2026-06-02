@@ -186,7 +186,7 @@ export default function Features() {
           {cards.map((card, i) => (
             <div
               key={card.id}
-              className="section-reveal card-apple flex flex-col gap-5"
+              className="section-reveal bg-[#2a2a2c] border border-white/5 rounded-apple-lg p-6 flex flex-col gap-5"
               style={{ transitionDelay: `${i * 0.1}s` }}
             >
               <div>{card.component}</div>
@@ -200,7 +200,7 @@ export default function Features() {
         </div>
 
         {/* Software showcase */}
-        <div className="mt-16 section-reveal card-apple">
+        <div className="mt-16 section-reveal bg-[#2a2a2c] border border-white/5 rounded-apple-lg p-8 md:p-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             {/* Copy */}
             <div className="lg:col-span-5 space-y-5">

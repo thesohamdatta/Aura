@@ -58,28 +58,57 @@ export default function Hero() {
         <div className="shadow-apple-product">
           {/* Aura pendant vector — on white background */}
           <svg
-            width="160"
-            height="160"
+            width="170"
+            height="170"
             viewBox="0 0 100 100"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            {/* Outer shell */}
-            <circle cx="50" cy="50" r="44" fill="#ffffff" stroke="#1d1d1f" strokeWidth="2" />
-            {/* Inner groove */}
-            <circle cx="50" cy="50" r="36" stroke="#1d1d1f" strokeWidth="0.75" strokeOpacity="0.12" strokeDasharray="3 3" />
-            {/* Sensor frame */}
-            <circle cx="50" cy="50" r="22" fill="#ffffff" stroke="#1d1d1f" strokeWidth="1.5" />
-            {/* Lens bezel */}
-            <circle cx="50" cy="50" r="14" fill="#1d1d1f" stroke="#0066cc" strokeWidth="1.5" />
-            {/* Aperture */}
-            <circle cx="50" cy="50" r="8" fill="#000000" />
-            {/* Highlight */}
-            <circle cx="47" cy="47" r="2" fill="#ffffff" fillOpacity="0.4" />
-            {/* Status LED */}
-            <circle cx="50" cy="22" r="2.5" fill="#0066cc" />
-            {/* Mic hole */}
-            <circle cx="50" cy="78" r="1.5" fill="#1d1d1f" fillOpacity="0.4" />
+            <defs>
+              <linearGradient id="metal-casing" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stopColor="#ffffff" />
+                <stop offset="30%" stopColor="#e2e2e7" />
+                <stop offset="50%" stopColor="#8e8e93" />
+                <stop offset="70%" stopColor="#d1d1d6" />
+                <stop offset="100%" stopColor="#48484a" />
+              </linearGradient>
+              <linearGradient id="metal-bevel" x1="100" y1="0" x2="0" y2="100" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stopColor="#ffffff" />
+                <stop offset="50%" stopColor="#d1d1d6" />
+                <stop offset="100%" stopColor="#8e8e93" />
+              </linearGradient>
+              <radialGradient id="glass-lens" cx="40%" cy="40%" r="60%">
+                <stop offset="0%" stopColor="#1c1c1e" />
+                <stop offset="70%" stopColor="#0a0a0c" />
+                <stop offset="100%" stopColor="#000000" />
+              </radialGradient>
+              <linearGradient id="lens-reflection" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stopColor="#ffffff" stopOpacity="0.5" />
+                <stop offset="40%" stopColor="#ffffff" stopOpacity="0.1" />
+                <stop offset="100%" stopColor="#ffffff" stopOpacity="0" />
+              </linearGradient>
+              <radialGradient id="blue-flare" cx="50%" cy="50%" r="50%">
+                <stop offset="80%" stopColor="#0066cc" stopOpacity="1" />
+                <stop offset="100%" stopColor="#2997ff" stopOpacity="0.1" />
+              </radialGradient>
+            </defs>
+            <circle cx="50" cy="51.5" r="44" fill="#000000" fillOpacity="0.08" />
+            <circle cx="50" cy="50" r="44" fill="url(#metal-casing)" stroke="#1d1d1f" strokeWidth="0.5" />
+            <circle cx="50" cy="50" r="41.5" fill="#ffffff" />
+            <circle cx="50" cy="50" r="41.5" fill="url(#metal-bevel)" fillOpacity="0.06" />
+            <circle cx="50" cy="50" r="36" stroke="#1d1d1f" strokeWidth="0.5" strokeOpacity="0.12" strokeDasharray="2 2" />
+            <circle cx="50" cy="50" r="23" fill="url(#metal-bevel)" stroke="#1d1d1f" strokeWidth="0.5" />
+            <circle cx="50" cy="50" r="21.5" fill="#ffffff" />
+            <circle cx="50" cy="50" r="15" fill="url(#metal-casing)" stroke="#1d1d1f" strokeWidth="0.5" />
+            <circle cx="50" cy="50" r="13.5" fill="url(#glass-lens)" />
+            <circle cx="50" cy="50" r="10" stroke="url(#blue-flare)" strokeWidth="0.75" strokeOpacity="0.8" />
+            <circle cx="50" cy="50" r="6" fill="#050508" />
+            <path d="M 42,42 A 11 11 0 0 1 58,42 L 50,50 Z" fill="url(#lens-reflection)" fillOpacity="0.35" />
+            <circle cx="47" cy="47" r="1" fill="#ffffff" fillOpacity="0.65" />
+            <circle cx="50" cy="20" r="2" fill="#1d1d1f" fillOpacity="0.08" />
+            <circle cx="50" cy="20" r="1.25" fill="#0066cc" />
+            <circle cx="50" cy="20" r="3" fill="#2997ff" fillOpacity="0.25" />
+            <circle cx="50" cy="80" r="1.25" fill="#1d1d1f" fillOpacity="0.8" />
           </svg>
         </div>
       </div>
@@ -133,9 +162,9 @@ export default function Hero() {
       </div>
 
       {/* Scroll cue */}
-      <div className="mt-16 flex flex-col items-center gap-2 opacity-30" aria-hidden="true">
-        <span className="text-apple-fine text-apple-ink uppercase tracking-widest">Scroll</span>
-        <div className="w-px h-10 bg-gradient-to-b from-apple-ink to-transparent" />
+      <div className="mt-16 flex flex-col items-center gap-2" aria-hidden="true">
+        <span className="text-apple-fine text-apple-ink/30 uppercase tracking-widest">Scroll</span>
+        <div className="w-px h-10 bg-apple-ink/20" />
       </div>
     </section>
   )

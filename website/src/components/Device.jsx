@@ -153,7 +153,7 @@ export default function Device() {
               {specs.map((spec) => (
                 <div
                   key={spec.label}
-                  className="card-apple hover:border-apple-blue/30 transition-colors duration-200 cursor-default"
+                  className="bg-white border border-[#e0e0e0] rounded-apple-lg p-6 hover:border-apple-blue/30 transition-colors duration-200 cursor-default"
                 >
                   <p className="text-apple-fine text-apple-muted-48 uppercase tracking-widest mb-1">{spec.label}</p>
                   <p className="text-apple-body-strong text-apple-ink leading-snug">{spec.value}</p>
@@ -163,7 +163,7 @@ export default function Device() {
 
             {/* Build cost card */}
             <div
-              className="mt-4 card-apple flex items-center justify-between"
+              className="mt-4 bg-white border border-[#e0e0e0] rounded-apple-lg p-6 flex items-center justify-between"
             >
               <div>
                 <p className="text-apple-fine text-apple-muted-48 uppercase tracking-widest mb-1">Build Cost</p>

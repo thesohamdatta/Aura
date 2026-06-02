@@ -29,6 +29,17 @@ export default function Navbar({ currentRoute, onNavigate }) {
     localStorage.setItem('theme', theme)
   }, [theme])
 
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [menuOpen])
+
   const toggleTheme = () => setTheme(p => p === 'dark' ? 'light' : 'dark')
 
   const navItems = [
@@ -174,18 +185,19 @@ export default function Navbar({ currentRoute, onNavigate }) {
       {/* ── Mobile dropdown menu ── */}
       {menuOpen && (
         <div
-          className="md:hidden tile-black border-t border-white/10"
+          className="md:hidden fixed top-[44px] left-0 right-0 bottom-0 tile-black border-t border-white/10 z-40 flex flex-col justify-between"
           role="dialog"
           aria-label="Mobile navigation"
+          style={{ height: 'calc(100dvh - 44px)' }}
         >
-          <ul className="list-none px-5 py-4 space-y-1">
-            {navItems.map((item) => (
-              <li key={item.path}>
+          <ul className="list-none px-6 py-8 space-y-2">
+            {navItems.map((item, i) => (
+              <li key={item.path} style={{ animationDelay: `${i * 0.05}s` }}>
                 <a
                   href={item.path}
                   onClick={(e) => handleLink(e, item.path)}
-                  className={`block py-3 text-apple-body border-b border-white/10 transition-opacity ${
-                    currentRoute === item.path ? 'text-white' : 'text-white/65 hover:text-white'
+                  className={`block py-3 text-xl font-medium tracking-tight border-b border-white/5 transition-opacity ${
+                    currentRoute === item.path ? 'text-white' : 'text-white/60 hover:text-white'
                   }`}
                 >
                   {item.label}
@@ -193,11 +205,11 @@ export default function Navbar({ currentRoute, onNavigate }) {
               </li>
             ))}
           </ul>
-          <div className="px-5 pb-5 pt-2">
+          <div className="p-6 pb-12">
             <a
               href="#waitlist"
               onClick={handleWaitlist}
-              className="btn-apple-primary w-full text-center justify-center"
+              className="btn-apple-primary w-full text-center py-4 justify-center"
             >
               Join Waitlist
             </a>

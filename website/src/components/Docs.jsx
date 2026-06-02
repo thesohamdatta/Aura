@@ -750,8 +750,36 @@ export default function Docs() {
       {/* 2-column layout */}
       <div className="max-w-[980px] mx-auto px-5 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-10">
+          {/* Mobile Article Selector */}
+          <div className="lg:hidden">
+            <label htmlFor="mobile-docs-select" className="text-apple-fine text-[var(--page-text-subtle)] font-mono uppercase tracking-widest block mb-2 px-1">
+              Select Article
+            </label>
+            <select
+              id="mobile-docs-select"
+              value={selectedArticleId}
+              onChange={(e) => {
+                setSelectedArticleId(e.target.value);
+                setTimeout(() => {
+                  document.getElementById('docs-reader')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 50);
+              }}
+              className="w-full h-11 rounded-apple-md px-4 text-apple-caption text-[var(--page-text)] bg-[var(--page-surface)] border border-[var(--page-border)] focus:outline-none focus:border-apple-blue transition-colors cursor-pointer"
+            >
+              {categories.map((cat) => (
+                <optgroup key={cat.name} label={cat.name} className="bg-[var(--page-bg)] text-[var(--page-text)]">
+                  {cat.articles.map((art) => (
+                    <option key={art.id} value={art.id} className="bg-[var(--page-bg)] text-[var(--page-text)]">
+                      {art.title}
+                    </option>
+                  ))}
+                </optgroup>
+              ))}
+            </select>
+          </div>
+
           {/* Sidebar */}
-          <aside className="lg:col-span-1 space-y-8" aria-label="Documentation navigation">
+          <aside className="hidden lg:block lg:col-span-1 space-y-8" aria-label="Documentation navigation">
             {categories.map((cat) => (
               <div key={cat.name} className="space-y-1">
                 <h3 className="text-apple-fine text-[var(--page-text-subtle)] font-mono uppercase tracking-widest px-2 mb-2">
@@ -779,6 +807,7 @@ export default function Docs() {
 
           {/* Reader pane */}
           <main
+            id="docs-reader"
             className="lg:col-span-3 rounded-apple-lg p-8 md:p-10 min-h-[500px]"
             style={{
               backgroundColor: 'var(--page-surface)',
