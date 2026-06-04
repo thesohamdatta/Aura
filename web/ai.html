@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Pipeline — AURA Wearable AI</title>
+  <meta name="description" content="Inside the intelligence pipeline of Aura. Speed, vision, reasoning, and context.">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/ai.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Aura home">
+        AURA
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="dilemma.html">Dilemma</a></li>
+        <li><a href="docs.html">Docs</a></li>
+        <li><a href="ai.html">AI</a></li>
+        <li>
+          <a href="https://github.com/thesohamdatta/Aura-Wearable-AI"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="nav-github">
+            GitHub ↗
+          </a>
+        </li>
+      </ul>
+      <button class="theme-toggle" aria-label="Toggle dark mode">
+        <!-- Sun icon -->
+        <svg class="icon-sun" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <!-- Moon icon -->
+        <svg class="icon-moon" viewBox="0 0 24 24">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+      <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile menu overlay -->
+  <div class="nav-mobile-overlay" aria-hidden="true">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="dilemma.html">Dilemma</a></li>
+      <li><a href="docs.html">Docs</a></li>
+      <li><a href="ai.html">AI</a></li>
+      <li><a href="https://github.com/thesohamdatta/Aura-Wearable-AI" target="_blank" rel="noopener noreferrer">GitHub ↗</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Container -->
+  <main class="ai-container">
+    
+    <!-- Hero Header -->
+    <header class="ai-hero text-container reveal">
+      <span class="overline">INTELLIGENCE</span>
+      <h1 class="ai-headline">The intelligence inside Aura.</h1>
+      <p class="ai-subtext">Four layers. One pipeline. Always listening.</p>
+    </header>
+
+    <!-- Pipeline Diagram Section -->
+    <section class="section pipeline-section">
+      <div class="container">
+        <h2 class="section-title text-mono">DATAFLOW PIPELINE</h2>
+        
+        <!-- Interactive Node Graph (pure HTML & CSS/JS) -->
+        <div class="pipeline-graph">
+          <!-- Row 1: Audio Pipeline -->
+          <div class="pipeline-row" id="row-audio">
+            <div class="pipeline-node" id="node-mic">
+              <span class="node-icon">🎤</span>
+              <span class="node-label text-mono">PDM MIC</span>
+              <span class="node-sublabel">16kHz PCM</span>
+            </div>
+            
+            <div class="pipeline-line"><div class="line-progress"></div></div>
+            
+            <div class="pipeline-node" id="node-deepgram">
+              <span class="node-icon">🧠</span>
+              <span class="node-label text-mono">Deepgram</span>
+              <span class="node-sublabel">Nova-3 STT</span>
+            </div>
+            
+            <div class="pipeline-line"><div class="line-progress"></div></div>
+            
+            <div class="pipeline-node" id="node-llama">
+              <span class="node-icon">🧠</span>
+              <span class="node-label text-mono">Groq / Llama 3</span>
+              <span class="node-sublabel">500 tok/sec</span>
+            </div>
+            
+            <div class="pipeline-line"><div class="line-progress"></div></div>
+            
+            <div class="pipeline-node" id="node-response">
+              <span class="node-icon">💬</span>
+              <span class="node-label text-mono">Response</span>
+              <span class="node-sublabel">Audio Output</span>
+            </div>
+          </div>
+
+          <!-- Row 2: Vision Pipeline -->
+          <div class="pipeline-row" id="row-vision">
+            <div class="pipeline-node" id="node-cam">
+              <span class="node-icon">📷</span>
+              <span class="node-label text-mono">CAMERA</span>
+              <span class="node-sublabel">OV2640 JPEG</span>
+            </div>
+            
+            <div class="pipeline-line"><div class="line-progress"></div></div>
+            
+            <div class="pipeline-node" id="node-gpt4">
+              <span class="node-icon">🧠</span>
+              <span class="node-label text-mono">GPT-4o Vision</span>
+              <span class="node-sublabel">Scene Analysis</span>
+            </div>
+            
+            <div class="pipeline-line"><div class="line-progress"></div></div>
+            
+            <div class="pipeline-node" id="node-context">
+              <span class="node-icon">🖼️</span>
+              <span class="node-label text-mono">Visual Context</span>
+              <span class="node-sublabel">Semantic Map</span>
+            </div>
+            
+            <!-- Diagonal line to Groq Node -->
+            <div class="pipeline-line diagonal-line"><div class="line-progress"></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Four AI Component Cards -->
+    <section class="section cards-section">
+      <div class="container">
+        <div class="cards-grid stagger-container">
+          
+          <!-- Card 1: HEAR -->
+          <div class="ai-card stagger-item">
+            <span class="card-overline text-mono">HEAR</span>
+            <h3>Speech Transcription</h3>
+            <span class="engine-tag text-mono">Deepgram Nova-2</span>
+            <div class="metric text-mono">0.5s median latency</div>
+            <p>Streaming WebSocket. 16kHz PCM. Word-level timestamps.</p>
+          </div>
+
+          <!-- Card 2: SEE -->
+          <div class="ai-card stagger-item">
+            <span class="card-overline text-mono">SEE</span>
+            <h3>Visual Understanding</h3>
+            <span class="engine-tag text-mono">GPT-4o Vision</span>
+            <div class="metric text-mono">2.0s median latency</div>
+            <p>640×480 JPEG. On-command capture. Natural language output.</p>
+          </div>
+
+          <!-- Card 3: THINK -->
+          <div class="ai-card stagger-item">
+            <span class="card-overline text-mono">THINK</span>
+            <h3>Language Reasoning</h3>
+            <span class="engine-tag text-mono">Groq · Llama 3</span>
+            <div class="metric text-mono">500+ tokens/sec</div>
+            <p>Text-only queries routed here. Low latency, high throughput.</p>
+          </div>
+
+          <!-- Card 4: REMEMBER -->
+          <div class="ai-card stagger-item">
+            <span class="card-overline text-mono">REMEMBER</span>
+            <h3>Vector Memory</h3>
+            <span class="engine-tag text-mono">Pinecone RAG</span>
+            <div class="metric text-mono">Top-k semantic search</div>
+            <p>1536-dim embeddings. Conversation retrieval by meaning, not keyword.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Honesty Box -->
+    <section class="section honesty-section reveal">
+      <div class="honesty-box">
+        <h3>What Aura does not do yet.</h3>
+        <ul role="list">
+          <li>On-device AI inference — cloud required for all processing</li>
+          <li>Offline mode — internet connection required</li>
+          <li>LiveKit real-time streaming — planned, not yet implemented</li>
+          <li>Formal user study — informal team testing only</li>
+        </ul>
+        <div class="honesty-footer text-mono">
+          We ship honest documentation. Every spec is measured, not aspirational.
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col col-brand">
+        <span class="footer-logo">AURA</span>
+        <p class="footer-tagline">Always with you.</p>
+      </div>
+      <div class="footer-col col-links">
+        <span class="footer-title">PAGES</span>
+        <ul role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="dilemma.html">Dilemma</a></li>
+          <li><a href="docs.html">Docs</a></li>
+          <li><a href="ai.html">AI</a></li>
+        </ul>
+      </div>
+      <div class="footer-col col-links">
+        <span class="footer-title">CONNECT</span>
+        <ul role="list">
+          <li><a href="https://github.com/thesohamdatta/Aura-Wearable-AI" target="_blank" rel="noopener noreferrer">GitHub ↗</a></li>
+          <li><a href="https://www.linkedin.com/in/thesohamdatta" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></li>
+          <li><a href="mailto:thesohamdatta@gmail.com">thesohamdatta@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <div class="bottom-left">Built in Pune. Open sourced for the world.</div>
+      <div class="bottom-right">© 2025–2026 Soham Datta</div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/ai.js"></script>
+</body>
+</html>

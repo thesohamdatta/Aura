@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentation — AURA Wearable AI</title>
+  <meta name="description" content="Aura developer guides. Hardware assembly, firmware flashing, and backend hosting.">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/docs.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Aura home">
+        AURA
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="dilemma.html">Dilemma</a></li>
+        <li><a href="docs.html">Docs</a></li>
+        <li><a href="ai.html">AI</a></li>
+        <li>
+          <a href="https://github.com/thesohamdatta/Aura-Wearable-AI"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="nav-github">
+            GitHub ↗
+          </a>
+        </li>
+      </ul>
+      <button class="theme-toggle" aria-label="Toggle dark mode">
+        <!-- Sun icon -->
+        <svg class="icon-sun" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <!-- Moon icon -->
+        <svg class="icon-moon" viewBox="0 0 24 24">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+      <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile menu overlay -->
+  <div class="nav-mobile-overlay" aria-hidden="true">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="dilemma.html">Dilemma</a></li>
+      <li><a href="docs.html">Docs</a></li>
+      <li><a href="ai.html">AI</a></li>
+      <li><a href="https://github.com/thesohamdatta/Aura-Wearable-AI" target="_blank" rel="noopener noreferrer">GitHub ↗</a></li>
+    </ul>
+  </div>
+
+  <!-- Docs Layout Wrapper -->
+  <div class="docs-wrapper">
+    
+    <!-- Mobile select dropdown navigation -->
+    <div class="mobile-docs-nav">
+      <label for="mobile-docs-select" class="sr-only">Jump to section</label>
+      <select id="mobile-docs-select" aria-label="Documentation sections">
+        <optgroup label="Getting Started">
+          <option value="#intro">Introduction</option>
+          <option value="#quickstart">Quick Start</option>
+        </optgroup>
+        <optgroup label="Hardware">
+          <option value="#bom">Bill of Materials</option>
+          <option value="#assembly">Assembly Guide</option>
+          <option value="#enclosure">Enclosure</option>
+        </optgroup>
+        <optgroup label="Firmware">
+          <option value="#firmware-setup">Setup</option>
+          <option value="#camera">Camera</option>
+          <option value="#audio">Audio</option>
+          <option value="#ble">BLE Protocol</option>
+        </optgroup>
+        <optgroup label="Backend">
+          <option value="#backend-install">Installation</option>
+          <option value="#api-keys">API Keys</option>
+          <option value="#endpoints">Endpoints</option>
+        </optgroup>
+        <optgroup label="Mobile App">
+          <option value="#ios">iOS Setup</option>
+          <option value="#android">Android Setup</option>
+        </optgroup>
+        <optgroup label="Contributing">
+          <option value="#contributing">How to Contribute</option>
+          <option value="#license">License</option>
+        </optgroup>
+      </select>
+    </div>
+
+    <!-- Left Sticky Sidebar -->
+    <aside class="docs-sidebar-wrapper">
+      <nav class="docs-sidebar" aria-label="Documentation navigation">
+        <ul>
+          <li class="sidebar-section">Getting Started</li>
+          <li><a href="#intro" class="active">Introduction</a></li>
+          <li><a href="#quickstart">Quick Start</a></li>
+
+          <li class="sidebar-section">Hardware</li>
+          <li><a href="#bom">Bill of Materials</a></li>
+          <li><a href="#assembly">Assembly Guide</a></li>
+          <li><a href="#enclosure">Enclosure</a></li>
+
+          <li class="sidebar-section">Firmware</li>
+          <li><a href="#firmware-setup">Setup</a></li>
+          <li><a href="#camera">Camera</a></li>
+          <li><a href="#audio">Audio</a></li>
+          <li><a href="#ble">BLE Protocol</a></li>
+
+          <li class="sidebar-section">Backend</li>
+          <li><a href="#backend-install">Installation</a></li>
+          <li><a href="#api-keys">API Keys</a></li>
+          <li><a href="#endpoints">Endpoints</a></li>
+
+          <li class="sidebar-section">Mobile App</li>
+          <li><a href="#ios">iOS Setup</a></li>
+          <li><a href="#android">Android Setup</a></li>
+
+          <li class="sidebar-section">Contributing</li>
+          <li><a href="#contributing">How to Contribute</a></li>
+          <li><a href="#license">License</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Right Scrollable Content -->
+    <main class="docs-content">
+      
+      <!-- Introduction -->
+      <section id="intro" class="docs-section">
+        <h1>Introduction</h1>
+        <p>AURA is an open-source wearable AI context engine designed to continuously stream environment signals. It captures audio and visual frames, processing them into a searchable semantic memory locally or on self-hosted instances.</p>
+        <p>This documentation outlines how to build the pendant, configure the firmware, setup the multi-threaded RAG backend, and run the client applications.</p>
+      </section>
+
+      <!-- Quick Start -->
+      <section id="quickstart" class="docs-section">
+        <h2>Quick Start</h2>
+        <p>To get a development environment running immediately, clone the repository and launch the backend using Docker Compose.</p>
+        <pre><code class="language-bash"><span class="pl-k">git clone</span> https://github.com/thesohamdatta/Aura-Wearable-AI.git
+<span class="pl-k">cd</span> Aura-Wearable-AI/backend
+<span class="pl-k">cp</span> .env.template .env
+<span class="pl-k">docker-compose</span> up --build</code></pre>
+      </section>
+
+      <!-- Bill of Materials -->
+      <section id="bom" class="docs-section">
+        <h2>Bill of Materials</h2>
+        <p>All hardware parts are off-the-shelf components. The total build cost is <strong>~$60 USD (measured)</strong>.</p>
+        <table class="docs-table">
+          <thead>
+            <tr>
+              <th>Part Name</th>
+              <th>Specification</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Microcontroller</td>
+              <td>Seeed Studio XIAO ESP32-S3 Sense</td>
+              <td>Specified</td>
+            </tr>
+            <tr>
+              <td>Camera</td>
+              <td>OV2640 2MP (1600x1200 resolution)</td>
+              <td>Specified</td>
+            </tr>
+            <tr>
+              <td>Microphone</td>
+              <td>Digital PDM Microphone</td>
+              <td>Specified</td>
+            </tr>
+            <tr>
+              <td>Battery</td>
+              <td>350mAh LiPo Battery (gives <strong>1–2 hours</strong> of battery life, measured)</td>
+              <td>Measured</td>
+            </tr>
+            <tr>
+              <td>Enclosure</td>
+              <td>3D-Printable PLA/PETG filament</td>
+              <td>Measured</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Assembly Guide -->
+      <section id="assembly" class="docs-section">
+        <h2>Assembly Guide</h2>
+        <p>Assemble the hardware stack by connecting the LiPo battery directly to the battery pads on the underside of the XIAO module. Solder wire connections carefully to ensure structural rigidity.</p>
+        <p>Align the OV2640 camera ribbon cable into the FPC connector and lock it down. Mount the ESP32-S3 module inside the enclosure base, positioning the camera lens through the front bezel circular opening.</p>
+      </section>
+
+      <!-- Enclosure -->
+      <section id="enclosure" class="docs-section">
+        <h2>Enclosure</h2>
+        <p>The CAD enclosure files are open-source and ready for printing. We recommend printing with PLA or PETG at a 0.2mm layer height with 15% infill. Magnetic clasp slots are integrated into the rear shell to secure the pendant during use.</p>
+      </section>
+
+      <!-- Firmware Setup -->
+      <section id="firmware-setup" class="docs-section">
+        <h2>Setup (Firmware)</h2>
+        <p>Before compiling, configure the local credentials in the firmware code. Open <code>firmware/main.cpp</code> and configure the Wi-Fi credentials:</p>
+        <pre><code class="language-cpp"><span class="pl-k">const char</span>* ssid = <span class="pl-s">"YOUR_WIFI_SSID"</span>;
+<span class="pl-k">const char</span>* password = <span class="pl-s">"YOUR_WIFI_PASSWORD"</span>;
+<span class="pl-k">const char</span>* serverUrl = <span class="pl-s">"ws://your-backend-ip:8000/stream"</span>;</code></pre>
+      </section>
+
+      <!-- Camera -->
+      <section id="camera" class="docs-section">
+        <h2>Camera Configuration</h2>
+        <p>Configure the OV2640 camera registers for optimized frame transfer. The default streams JPEG frames at 640x480 resolution (specified) over WebSocket streams at a target rate of 5 frames per second (measured).</p>
+      </section>
+
+      <!-- Audio -->
+      <section id="audio" class="docs-section">
+        <h2>Audio Configuration</h2>
+        <p>The digital PDM microphone streams 16kHz mono audio (specified) over binary WebSocket channels. Audio data is packed into PDM chunks and sent directly to the Deepgram pipeline for transcription.</p>
+      </section>
+
+      <!-- BLE Protocol -->
+      <section id="ble" class="docs-section">
+        <h2>BLE Protocol</h2>
+        <p>Bluetooth Low Energy (BLE 5.0) is configured to handle local device settings, device provisioning (Wi-Fi credential passing), and connection statuses. Device advertises itself as <code>AURA-DEVICE-XXXX</code>.</p>
+      </section>
+
+      <!-- Installation (Backend) -->
+      <section id="backend-install" class="docs-section">
+        <h2>Installation (Backend)</h2>
+        <p>The RAG backend is written in Python (FastAPI). Install the local dependencies using pip:</p>
+        <pre><code class="language-bash"><span class="pl-k">cd</span> backend
+<span class="pl-k">pip</span> install -r requirements.txt
+<span class="pl-k">uvicorn</span> main:app --host 0.0.0.0 --port 8000</code></pre>
+      </section>
+
+      <!-- API Keys -->
+      <section id="api-keys" class="docs-section">
+        <h2>API Keys</h2>
+        <p>The pipeline relies on cloud endpoints. Fill in the required API keys inside your <code>.env</code> file:</p>
+        <pre><code class="language-ini"><span class="pl-s">DEEPGRAM_API_KEY</span>=<span class="pl-v">your_deepgram_key</span>
+<span class="pl-s">PINECONE_API_KEY</span>=<span class="pl-v">your_pinecone_key</span>
+<span class="pl-s">OPENAI_API_KEY</span>=<span class="pl-v">your_openai_key</span>
+<span class="pl-s">GROQ_API_KEY</span>=<span class="pl-v">your_groq_key</span></code></pre>
+      </section>
+
+      <!-- Endpoints -->
+      <section id="endpoints" class="docs-section">
+        <h2>Endpoints</h2>
+        <p>Core backend API endpoints exposed for streaming and querying:</p>
+        <table class="docs-table">
+          <thead>
+            <tr>
+              <th>Endpoint</th>
+              <th>Method</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>/stream</code></td>
+              <td>WS</td>
+              <td>Websocket channel for incoming visual and audio streams from ESP32.</td>
+            </tr>
+            <tr>
+              <td><code>/query</code></td>
+              <td>POST</td>
+              <td>Submit user query to search the vector memory database.</td>
+            </tr>
+            <tr>
+              <td><code>/memories</code></td>
+              <td>GET</td>
+              <td>List indexed conversational memories.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- iOS Setup -->
+      <section id="ios" class="docs-section">
+        <h2>iOS Setup</h2>
+        <p>Open the Swift-based iOS app in Xcode. Configure the backend URL in <code>Config.swift</code>, sign with your Apple developer account, and build the target on an iOS device.</p>
+      </section>
+
+      <!-- Android Setup -->
+      <section id="android" class="docs-section">
+        <h2>Android Setup</h2>
+        <p>Open the Android project located in <code>app/android/</code> inside Android Studio. Update local IP settings in the Gradle files and build the project to run on Android 12+ targets.</p>
+        <p><em>Note: No formal user studies have been conducted. Testing is limited to local developer instances.</em></p>
+      </section>
+
+      <!-- How to Contribute -->
+      <section id="contributing" class="docs-section">
+        <h2>How to Contribute</h2>
+        <p>Contributions are welcome! Please fork the repository, commit clean changes inside feature branches, and submit pull requests. Check <code>CONTRIBUTING.md</code> in the repository root for design guidelines.</p>
+      </section>
+
+      <!-- License -->
+      <section id="license" class="docs-section">
+        <h2>License</h2>
+        <p>Aura Wearable AI is open-source hardware, firmware, and software distributed under the <strong>MIT License</strong>. Check the root <code>LICENSE</code> file for legal terms.</p>
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col col-brand">
+        <span class="footer-logo">AURA</span>
+        <p class="footer-tagline">Always with you.</p>
+      </div>
+      <div class="footer-col col-links">
+        <span class="footer-title">PAGES</span>
+        <ul role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="dilemma.html">Dilemma</a></li>
+          <li><a href="docs.html">Docs</a></li>
+          <li><a href="ai.html">AI</a></li>
+        </ul>
+      </div>
+      <div class="footer-col col-links">
+        <span class="footer-title">CONNECT</span>
+        <ul role="list">
+          <li><a href="https://github.com/thesohamdatta/Aura-Wearable-AI" target="_blank" rel="noopener noreferrer">GitHub ↗</a></li>
+          <li><a href="https://www.linkedin.com/in/thesohamdatta" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></li>
+          <li><a href="mailto:thesohamdatta@gmail.com">thesohamdatta@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <div class="bottom-left">Built in Pune. Open sourced for the world.</div>
+      <div class="bottom-right">© 2025–2026 Soham Datta</div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/docs.js"></script>
+</body>
+</html>
