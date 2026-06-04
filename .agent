@@ -1,0 +1,38 @@
+# Aura Wearable AI — Agent Core Instructions & System Rules
+
+This file defines the strict branding, design guidelines, and scope for any AI agent working on the Aura Wearable AI repository.
+
+## 1. Project Scope & Architecture
+* **Task:** Maintain and design the main static website located in the `/web` subdirectory.
+* **Core Pages:**
+  1. `index.html` (Home) — Exploded hardware view, interactive RAG simulator, comparison table, inline SVGs.
+  2. `about.html` (About) — Minimalist open-source narrative.
+  3. `ai.html` (AI Pipeline) — Technical pipeline diagrams (Perception $\leftrightarrow$ Cognition $\leftrightarrow$ Interface).
+  4. `docs.html` (Docs) — Technical assembly steps, firmware flashing, and backend deploy instructions.
+  5. `manifesto.html` (Manifesto) — The philosophical column outlining the "screenless, ambient" thesis.
+
+## 2. Design System & Brand Identity (DESIGN.md)
+Always follow the Apple Design System rules detailed in `DESIGN.md`:
+* **Typography:**
+  * Native System Sans Stack: `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif`.
+  * Display headers: negative letter-spacing (`-0.02em` or `-0.28px`) for tight tracking.
+  * Body font: 17px, line-height 1.47.
+* **Colors:**
+  * Primary Accent: Action Blue (`#0066cc`) for all interactive buttons, links, and highlights.
+  * Dark Canvas: Charcoal (`#272729` / `#1c1c1e`) and true black (`#000000`).
+  * Light Canvas: Off-white parchment (`#f5f5f7`) and pure white (`#ffffff`).
+* **UI Geometry & Shapes:**
+  * Buttons/Inputs: Full capsule pill (`border-radius: 9999px`).
+  * Cards: Soft rectangle (`border-radius: 18px`).
+  * Spacing: Base-8 unit rhythm (padding values like 8px, 16px, 24px, 48px, 80px).
+* **Elevation/Shadows:**
+  * Zero drop-shadows on buttons, text, header bars, or cards.
+  * Exactly one drop-shadow (`rgba(0, 0, 0, 0.22) 3px 5px 30px`) is reserved exclusively for photographic product images/SVGs resting on a surface.
+* **Section Transitions:**
+  * No borders or decorative lines between rows. Use full-bleed alternating color bands (Parchment $\leftrightarrow$ White $\leftrightarrow$ Black) as the section break.
+
+## 3. Technology Stack Rules
+* **Core:** Vanilla HTML5, Vanilla CSS3 (custom CSS variables in `global.css`), Vanilla ES6+ JS.
+* **Animations:** GSAP & ScrollTrigger.
+* **Deployment:** CI/CD deployment via GitHub Actions (`.github/workflows/deploy-web.yml`) serving the `/web` subdirectory to GitHub Pages.
+* **Placeholders:** Never use image placeholder text (e.g., `[pendant-front.jpg]`). Use styled inline SVG layers or custom illustrations.
