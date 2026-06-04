@@ -29,3 +29,4 @@ app/android/app/src/prod/google-services.json
 firmware/.pio/
 
 vendor/omi/backend/_temp/
+.superpowers/
