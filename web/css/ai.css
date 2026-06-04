@@ -75,7 +75,11 @@
 
 .pipeline-node:hover {
   transform: translateY(-2px);
-  border-color: var(--cyan);
+  border-color: var(--primary);
+}
+
+[data-theme="dark"] .pipeline-node:hover {
+  border-color: var(--primary-on-dark);
 }
 
 .node-icon {
@@ -114,8 +118,12 @@
   left: 0;
   height: 2px;
   width: 0%;
-  background: var(--cyan);
+  background: var(--primary);
   transition: width 1.2s ease-in-out;
+}
+
+[data-theme="dark"] .line-progress {
+  background: var(--primary-on-dark);
 }
 
 /* Diagonal line from Visual Context (Row 2) to Groq/Llama 3 (Row 1) */
@@ -154,17 +162,25 @@
 }
 
 .ai-card:hover {
-  border-left-color: var(--cyan);
+  border-left-color: var(--primary);
   transform: translateY(-2px);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
 }
 
+[data-theme="dark"] .ai-card:hover {
+  border-left-color: var(--primary-on-dark);
+}
+
 .card-overline {
   font-size: 11px;
-  color: var(--cyan);
+  color: var(--primary);
   letter-spacing: var(--tracking-wide);
   display: block;
   margin-bottom: var(--space-xs);
+}
+
+[data-theme="dark"] .card-overline {
+  color: var(--primary-on-dark);
 }
 
 .ai-card h3 {
@@ -184,8 +200,12 @@
 .metric {
   font-size: 20px;
   font-weight: 700;
-  color: var(--cyan);
+  color: var(--primary);
   margin-bottom: var(--space-sm);
+}
+
+[data-theme="dark"] .metric {
+  color: var(--primary-on-dark);
 }
 
 .ai-card p {

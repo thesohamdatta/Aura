@@ -110,13 +110,18 @@
 }
 
 .tag {
-  font-family: var(--font-mono);
+  font-family: var(--font-text);
   font-size: 11px;
-  color: var(--cyan);
-  background: var(--cyan-dim);
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: rgba(0, 0, 0, 0.05);
   border-radius: 4px;
   padding: 3px 8px;
   white-space: nowrap;
+}
+
+[data-theme="dark"] .tag {
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .linkedin-link {
@@ -129,7 +134,7 @@
 }
 
 .linkedin-link:hover:not(.disabled) {
-  color: var(--cyan);
+  color: var(--primary);
 }
 
 .linkedin-link.disabled {
@@ -159,7 +164,7 @@
 
 .ack-link {
   font-size: var(--text-sm);
-  color: var(--cyan);
+  color: var(--primary);
   text-decoration: none;
   font-weight: 500;
   transition: opacity 0.2s ease;

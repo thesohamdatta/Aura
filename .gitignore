@@ -30,3 +30,4 @@ firmware/.pio/
 
 vendor/omi/backend/_temp/
 .superpowers/
+.agnet/

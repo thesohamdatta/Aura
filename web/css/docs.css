@@ -28,7 +28,7 @@
 }
 
 .docs-sidebar .sidebar-section {
-  font-family: var(--font-mono);
+  font-family: var(--font-display);
   font-size: 11px;
   font-weight: 700;
   color: var(--text-tertiary);
@@ -56,9 +56,13 @@
 }
 
 .docs-sidebar a.active {
-  color: var(--cyan);
+  color: var(--primary);
   font-weight: 600;
   padding-left: 4px;
+}
+
+[data-theme="dark"] .docs-sidebar a.active {
+  color: var(--primary-on-dark);
 }
 
 /* Main Content Area */
@@ -112,7 +116,7 @@
 }
 
 .docs-table th {
-  font-family: var(--font-mono);
+  font-family: var(--font-display);
   font-size: 11px;
   color: var(--text-tertiary);
   letter-spacing: var(--tracking-wide);
@@ -169,7 +173,7 @@ code {
   border-radius: 8px;
   background: var(--bg-secondary);
   border: 1px solid var(--border);
-  font-family: var(--font-mono);
+  font-family: var(--font-text);
   font-size: var(--text-sm);
   color: var(--text-primary);
   outline: none;
