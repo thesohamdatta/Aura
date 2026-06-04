@@ -1,0 +1,52 @@
+/* Full-bleed alternating tiles */
+.tile-light {
+  background: var(--canvas);
+  color: var(--ink);
+  padding: 80px 24px;
+  text-align: center;
+}
+.tile-parchment {
+  background: var(--canvas-parchment);
+  color: var(--ink);
+  padding: 80px 24px;
+  text-align: center;
+}
+.tile-dark {
+  background: var(--surface-tile-1);
+  color: var(--text-primary);
+  padding: 80px 24px;
+  text-align: center;
+}
+
+/* Hero Display Styling */
+.hero {
+  padding-top: 140px;
+  padding-bottom: 80px;
+}
+.hero-headline {
+  font-family: var(--font-display);
+  font-size: 56px;
+  font-weight: 600;
+  line-height: 1.07;
+  letter-spacing: -0.28px;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+.hero-subtext {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.47;
+  color: #86868b;
+  max-width: 600px;
+  margin: 0 auto 32px;
+}
+.hero-image-wrapper {
+  margin: 48px auto;
+  width: 320px;
+  height: 320px;
+}
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}

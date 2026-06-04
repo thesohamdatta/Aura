@@ -83,27 +83,37 @@
   </div>
 
   <!-- Section 1: Hero -->
-  <header class="hero">
+  <header class="hero tile-parchment">
     <div class="hero-inner text-container">
-      <span class="overline reveal">AURA / 001</span>
-      <h1 class="hero-headline reveal">The phone was never the answer.</h1>
+      <span class="overline">Aura Edition / 001</span>
+      <h1 class="hero-headline">The phone was never the answer.</h1>
+      <p class="hero-subtext">Ambient context engine. Screenless, voice-first, and built on the open frontier.</p>
       
-      <!-- Pendant image placeholder -->
-      <div class="hero-image-wrapper reveal">
-        <!-- Render placeholder when real photos are not present -->
-        <div class="img-placeholder hero-pendant" data-label="pendant-front.jpg" style="width: 320px; height: 320px; background: var(--gray-200); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 11px; color: var(--gray-500); margin: 48px auto 0; box-shadow: 0 24px 48px rgba(0,0,0,0.08);">
-          [pendant-front.jpg]
-        </div>
+      <!-- Inline SVG Pendant Graphic -->
+      <div class="hero-image-wrapper">
+        <svg class="pendant-svg" width="320" height="320" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" style="filter: drop-shadow(0 20px 30px rgba(0,0,0,0.15))">
+          <!-- Outer Pendant Case -->
+          <circle cx="100" cy="100" r="85" fill="url(#pendant-body)" stroke="#d2d2d7" stroke-width="1"/>
+          <!-- Inner Core / Bezel -->
+          <circle cx="100" cy="100" r="55" fill="#1d1d1f" stroke="#333336" stroke-width="1.5"/>
+          <!-- Camera Lens Accent -->
+          <circle cx="100" cy="100" r="18" fill="#000000" stroke="#86868b" stroke-width="2"/>
+          <circle cx="94" cy="94" r="5" fill="#2997ff" opacity="0.6"/> <!-- Blue Reflection -->
+          <!-- Metallic Gradients -->
+          <defs>
+            <radialGradient id="pendant-body" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" transform="translate(100 100) rotate(90) scale(85)">
+              <stop offset="0" stop-color="#ffffff"/>
+              <stop offset="0.75" stop-color="#f5f5f7"/>
+              <stop offset="1" stop-color="#e2e2e7"/>
+            </radialGradient>
+          </defs>
+        </svg>
       </div>
 
-      <div class="hero-actions reveal">
+      <div class="hero-actions">
         <a href="#product" class="btn btn-primary">Explore Aura</a>
-        <a href="docs.html" class="btn btn-secondary">Build Your Own</a>
+        <a href="https://github.com/thesohamdatta/Aura-Wearable-AI" class="btn btn-secondary">Build Yours</a>
       </div>
-    </div>
-    <div class="scroll-indicator">
-      <span class="text-mono">scroll</span>
-      <div class="chevron">↓</div>
     </div>
   </header>
 
