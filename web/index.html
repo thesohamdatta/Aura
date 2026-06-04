@@ -181,9 +181,34 @@
         </div>
       </div>
 
-      <div class="solution-image-wrapper reveal">
-        <div class="img-placeholder" data-label="pendant-hand.jpg" style="width: 100%; max-width: 560px; height: 380px; background: var(--gray-200); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 11px; color: var(--gray-500); margin: 64px auto 0;">
-          [pendant-hand.jpg]
+      <!-- Memory Chat Simulator Widget -->
+      <div class="simulator-container">
+        <span class="overline">Context Retrieval</span>
+        <h2 class="section-headline">Instant semantic recall.</h2>
+        <p style="margin-bottom: 32px; color: #86868b; max-width: 600px; margin-left: auto; margin-right: auto;">Click a memory query below to see Aura locate detailed context instantly from your past days.</p>
+        
+        <div class="chat-simulator">
+          <div class="sim-queries">
+            <button class="sim-query-btn" onclick="triggerSim('meeting')">"What did we decide on Tuesday?"</button>
+            <button class="sim-query-btn" onclick="triggerSim('idea')">"Recall my idea about wearables."</button>
+          </div>
+          <div class="sim-display">
+            <div class="sim-row query-row">
+              <span class="sim-tag">Query:</span>
+              <p id="sim-query-text" class="sim-text">Select a memory query above...</p>
+            </div>
+            <div class="sim-waveform" id="sim-wave" style="display: none;">
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+            </div>
+            <div class="sim-row response-row" id="sim-response" style="opacity: 0;">
+              <span class="sim-tag success-tag">Aura:</span>
+              <p id="sim-response-text" class="sim-text">Result text will load...</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
