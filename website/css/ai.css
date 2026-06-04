@@ -1,0 +1,218 @@
+/* website/css/ai.css */
+/* AI Pipeline page specific styles */
+
+.ai-hero {
+  padding-top: calc(52px + 12vh);
+  padding-bottom: 8vh;
+}
+
+.ai-lead {
+  font-size: clamp(18px, 2vw, 22px);
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Pipeline Diagram */
+.pipeline-diagram {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0;
+  position: relative;
+}
+
+.pipeline-node {
+  background: #111111; /* Darker than black for contrast in black section */
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 16px;
+  padding: 24px;
+  width: 240px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.pipeline-node.hardware {
+  border-color: var(--cyan);
+}
+
+.pipeline-node .mono {
+  display: block;
+  font-size: 11px;
+  color: var(--cyan);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+}
+
+.pipeline-node strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+
+.pipeline-node small {
+  color: rgba(255,255,255,0.6);
+  font-size: 13px;
+}
+
+.pipeline-connector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 60px;
+  position: relative;
+}
+
+.pipeline-connector .line {
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--cyan) 0%, rgba(255,255,255,0.2) 100%);
+}
+
+.pipeline-connector .dot {
+  width: 8px;
+  height: 8px;
+  background: var(--cyan);
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  /* Animation handled by GSAP in ai.js */
+}
+
+.pipeline-branches {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  width: 100%;
+  margin-top: 40px;
+  position: relative;
+}
+
+/* Horizontal connecting line for branches */
+.pipeline-branches::before {
+  content: '';
+  position: absolute;
+  top: -40px;
+  left: 12.5%; /* Center of first branch */
+  right: 12.5%; /* Center of last branch */
+  height: 2px;
+  background: rgba(255,255,255,0.2);
+}
+
+.branch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.branch .pipeline-connector.vertical {
+  width: 2px;
+  height: 40px;
+  background: rgba(255,255,255,0.2);
+  margin-top: -40px;
+}
+
+.pipeline-node.service {
+  width: 100%;
+  max-width: 220px;
+}
+
+/* Capabilities Grid */
+.capabilities-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  padding: 80px 0;
+}
+
+.cap-card {
+  padding: 40px;
+  border-radius: 24px;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.cap-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--text-tertiary);
+}
+
+.cap-metric {
+  font-family: var(--font-display);
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--cyan);
+  margin-bottom: 24px;
+}
+
+/* Honesty Box */
+.honesty-section {
+  padding-bottom: 120px;
+}
+
+.honesty-box {
+  background-color: var(--bg-secondary);
+  border-radius: 24px;
+  padding: 48px;
+  border-left: 6px solid var(--rose);
+}
+
+.honesty-list {
+  list-style: none;
+  padding: 0;
+}
+
+.honesty-list li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 16px;
+  color: var(--text-secondary);
+}
+
+.honesty-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--rose);
+  font-weight: bold;
+}
+
+.honesty-list strong {
+  color: var(--text-primary);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .pipeline-branches {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 24px;
+  }
+  
+  .pipeline-branches::before {
+    display: none; /* Hide horizontal line, layout gets too complex, rely on flex stacking */
+  }
+  
+  .branch .pipeline-connector.vertical {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .capabilities-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .pipeline-branches {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .honesty-box {
+    padding: 32px 24px;
+  }
+}

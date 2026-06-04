@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Pipeline — Aura</title>
+  
+  <meta name="description" content="The intelligence inside Aura. A 4-layer cloud AI pipeline using Deepgram, Groq, OpenAI, and Pinecone for sub-second ambient computing.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/ai.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">Aura</a>
+      
+      <div class="nav-links" id="nav-links">
+        <a href="about.html" class="nav-link">About</a>
+        <a href="ai.html" class="nav-link active">AI Pipeline</a>
+        <a href="docs.html" class="nav-link">Docs</a>
+        <a href="manifesto.html" class="nav-link">Manifesto</a>
+        
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
+      </div>
+
+      <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero -->
+    <section class="ai-hero">
+      <div class="container text-center reveal-stagger">
+        <span class="overline">Architecture</span>
+        <h1 class="hero-headline">The intelligence<br>inside Aura.</h1>
+        <p class="ai-lead mt-4">Hardware is only half the equation. Aura’s brain lives in the cloud, utilizing a 4-layer pipeline optimized for sub-second latency.</p>
+      </div>
+    </section>
+
+    <!-- Pipeline Diagram -->
+    <section class="pipeline-section section-black">
+      <div class="container reveal">
+        <h2 class="section-title text-center">Data Flow</h2>
+        
+        <div class="pipeline-diagram mt-4">
+          <!-- Row 1: Hardware to Cloud -->
+          <div class="pipeline-node hardware">
+            <span class="mono">Hardware</span>
+            <strong>Pendant</strong>
+            <small>Audio + Images</small>
+          </div>
+          
+          <div class="pipeline-connector">
+            <div class="line"></div>
+            <div class="dot"></div>
+          </div>
+          
+          <div class="pipeline-node">
+            <span class="mono">Gateway</span>
+            <strong>Backend API</strong>
+            <small>WebSocket / REST</small>
+          </div>
+
+          <!-- Row 2: Cloud Services -->
+          <div class="pipeline-branches">
+            <div class="branch">
+              <div class="pipeline-connector vertical"></div>
+              <div class="pipeline-node service">
+                <span class="mono">Transcription</span>
+                <strong>Deepgram</strong>
+                <small>Nova-2 Speech-to-Text</small>
+              </div>
+            </div>
+            
+            <div class="branch">
+              <div class="pipeline-connector vertical"></div>
+              <div class="pipeline-node service">
+                <span class="mono">Vision</span>
+                <strong>OpenAI</strong>
+                <small>GPT-4o Vision</small>
+              </div>
+            </div>
+            
+            <div class="branch">
+              <div class="pipeline-connector vertical"></div>
+              <div class="pipeline-node service">
+                <span class="mono">Reasoning</span>
+                <strong>Groq</strong>
+                <small>Llama-3 (800+ T/s)</small>
+              </div>
+            </div>
+            
+            <div class="branch">
+              <div class="pipeline-connector vertical"></div>
+              <div class="pipeline-node service">
+                <span class="mono">Memory</span>
+                <strong>Pinecone</strong>
+                <small>Vector Database</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Capabilities Grid -->
+    <section class="capabilities-section">
+      <div class="container">
+        <div class="capabilities-grid reveal-stagger">
+          <div class="cap-card">
+            <div class="cap-metric">~300ms</div>
+            <h3 class="sub-title mb-2">Hear (Deepgram)</h3>
+            <p>Using Nova-2, audio is transcribed in near real-time. It understands context, accents, and casual speech far better than native mobile STT.</p>
+          </div>
+          <div class="cap-card">
+            <div class="cap-metric">~1.2s</div>
+            <h3 class="sub-title mb-2">See (GPT-4o)</h3>
+            <p>When you ask "What am I looking at?", a 1fps visual stream frame is sent to OpenAI. Slower latency, but deep contextual understanding.</p>
+          </div>
+          <div class="cap-card">
+            <div class="cap-metric">800 T/s</div>
+            <h3 class="sub-title mb-2">Think (Groq)</h3>
+            <p>We use Groq's LPU infrastructure running Llama-3. It processes your intent so fast that the AI begins responding before you finish lowering your hand.</p>
+          </div>
+          <div class="cap-card">
+            <div class="cap-metric">Infinite</div>
+            <h3 class="sub-title mb-2">Remember (Pinecone)</h3>
+            <p>Every transcript is embedded and stored in Pinecone. When you ask "Where did I park?", Groq queries Pinecone to retrieve the exact moment.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Honesty Box -->
+    <section class="honesty-section">
+      <div class="container-narrow reveal">
+        <div class="honesty-box">
+          <h2 class="sub-title mb-2">What Aura does not do yet</h2>
+          <p>We believe in building in public, which means being honest about limitations.</p>
+          <ul class="honesty-list mt-4">
+            <li><strong>No offline mode:</strong> If you lose internet, Aura stops working. Local STT/LLMs are too large for the ESP32 right now.</li>
+            <li><strong>Video streaming:</strong> The ESP32-S3 cannot encode h.264 video. We send JPEG frames at 1fps instead.</li>
+            <li><strong>Speaker output:</strong> The current hardware has no speaker. Responses are delivered to your phone or connected earbuds.</li>
+            <li><strong>Wake word:</strong> Always-on listening drains the 400mAh battery in 2 hours. We currently use a physical tap-to-talk mechanism to ensure 12h battery life.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="section-black site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4 class="nav-logo mb-2">Aura</h4>
+        <p class="text-sm">MIT Licensed open-source project.</p>
+      </div>
+      <div>
+        <span class="overline">Project</span>
+        <a href="about.html">About</a>
+        <a href="manifesto.html">Manifesto</a>
+        <a href="ai.html">AI Pipeline</a>
+      </div>
+      <div>
+        <span class="overline">Resources</span>
+        <a href="docs.html">Documentation</a>
+        <a href="https://github.com/thesohamdatta/Aura-Wearable-AI" target="_blank" rel="noopener">GitHub Repo</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.23/dist/lenis.min.js" defer></script>
+  
+  <script src="js/nav.js" defer></script>
+  <script src="js/animations.js" defer></script>
+  <script src="js/ai.js" defer></script>
+</body>
+</html>

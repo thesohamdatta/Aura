@@ -1,0 +1,77 @@
+/* website/css/manifesto.css */
+/* Manifesto long-form reading styling */
+
+.manifesto-hero {
+  padding-top: calc(52px + 15vh);
+  padding-bottom: 5vh;
+}
+
+.essay-container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 24px 120px;
+}
+
+.essay-container p {
+  font-size: 20px;
+  line-height: 1.7;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+}
+
+.essay-container .lead {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  margin-bottom: 48px;
+  color: var(--text-primary);
+}
+
+.essay-container h2 {
+  font-family: var(--font-display);
+  font-size: 32px;
+  letter-spacing: -0.015em;
+  margin-top: 56px;
+  margin-bottom: 24px;
+}
+
+.essay-container blockquote {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--text-primary);
+  padding: 24px 32px;
+  margin: 48px 0;
+  border-left: 4px solid var(--rose);
+  background: var(--bg-secondary);
+  border-radius: 0 16px 16px 0;
+}
+
+.essay-container .closing {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--rose);
+  text-align: center;
+  margin-top: 80px;
+}
+
+@media (max-width: 768px) {
+  .essay-container p {
+    font-size: 18px;
+  }
+  
+  .essay-container .lead {
+    font-size: 24px;
+  }
+  
+  .essay-container blockquote {
+    font-size: 20px;
+    padding: 20px 24px;
+  }
+}

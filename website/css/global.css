@@ -1,0 +1,227 @@
+/* website/css/global.css */
+/* Core tokens and resets */
+
+:root {
+  /* Surfaces */
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F5F5F7;
+  --bg-tertiary: #E8E8ED;
+
+  /* Text */
+  --text-primary: #1D1D1F;
+  --text-secondary: #6E6E73;
+  --text-tertiary: #AEAEB2;
+
+  /* Brand Accents */
+  --cyan: #00D9FF;
+  --cyan-dim: rgba(0,217,255,0.08);
+  --rose: #FF206E;
+  --rose-dim: rgba(255,32,110,0.08);
+
+  /* Constant values */
+  --black: #000000;
+  --white: #FFFFFF;
+  
+  /* UI Elements */
+  --nav-bg: rgba(255,255,255,0.72);
+  --border: rgba(0,0,0,0.08);
+
+  /* Typography Scale */
+  --font-body: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+  --font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "Space Mono", "SF Mono", "Fira Code", monospace;
+
+  /* Spacing */
+  --section-pad: clamp(80px, 12vw, 160px);
+  --max-content: 980px;
+  --max-text: 680px;
+}
+
+[data-theme="dark"] {
+  --bg-primary: #000000;
+  --bg-secondary: #111111;
+  --bg-tertiary: #1C1C1E;
+  
+  --text-primary: #F5F5F7;
+  --text-secondary: #A1A1A6;
+  --text-tertiary: #6E6E73;
+  
+  --nav-bg: rgba(0,0,0,0.72);
+  --border: rgba(255,255,255,0.08);
+}
+
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: auto; /* Handled by Lenis */
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+}
+
+img, picture, video, canvas {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: var(--cyan);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/* Typography Utilities */
+h1, h2, h3, .display {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.hero-headline {
+  font-size: clamp(48px, 8vw, 96px);
+  letter-spacing: -0.025em;
+  line-height: 1.05;
+}
+
+.section-title {
+  font-size: clamp(32px, 4vw, 56px);
+  letter-spacing: -0.015em;
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+.sub-title {
+  font-size: clamp(22px, 2.5vw, 32px);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.overline {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  display: block;
+  margin-bottom: 12px;
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+/* Layout Utilities */
+.container {
+  max-width: var(--max-content);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.container-narrow {
+  max-width: var(--max-text);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+section {
+  padding: var(--section-pad) 0;
+}
+
+.section-black {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.section-black h2, 
+.section-black p, 
+.section-black .overline {
+  color: var(--white);
+}
+
+.section-black .overline {
+  opacity: 0.7;
+}
+
+/* Button System */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  padding: 0 22px;
+  border-radius: 98px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease, background-color 0.2s ease;
+  border: none;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-primary {
+  background: var(--text-primary);
+  color: var(--bg-primary);
+}
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 1.5px solid var(--text-primary);
+  color: var(--text-primary);
+}
+
+.btn-ghost {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.3);
+  color: var(--white);
+}
+
+/* Utilities */
+.text-center { text-align: center; }
+.mt-4 { margin-top: 32px; }
+.mb-2 { margin-bottom: 16px; }
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

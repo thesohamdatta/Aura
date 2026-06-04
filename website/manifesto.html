@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manifesto — Aura</title>
+  
+  <meta name="description" content="Humans Need a Third Device. Why the smartphone era is ending, and what comes next.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/manifesto.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">Aura</a>
+      
+      <div class="nav-links" id="nav-links">
+        <a href="about.html" class="nav-link">About</a>
+        <a href="ai.html" class="nav-link">AI Pipeline</a>
+        <a href="docs.html" class="nav-link">Docs</a>
+        <a href="manifesto.html" class="nav-link active">Manifesto</a>
+        
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
+      </div>
+
+      <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+    </div>
+  </nav>
+
+  <main class="manifesto-page">
+    <section class="manifesto-hero">
+      <div class="container text-center reveal-stagger">
+        <span class="overline">Manifesto</span>
+        <h1 class="hero-headline">Humans Need a<br>Third Device.</h1>
+      </div>
+    </section>
+
+    <section class="manifesto-content reveal-stagger">
+      <div class="essay-container">
+        <p class="lead">The smartphone demands your attention. The laptop demands your labor. The third device demands nothing.</p>
+        
+        <h2>The tyranny of the screen</h2>
+        <p>For fifteen years, the glowing rectangle in our pockets has been the mediator between our physical reality and our digital capability. If you want to know something, you stop what you are doing, pull out the glass, unlock it, open an app, type a query, read the result, and put it away.</p>
+        <p>This is high-friction capability. It breaks eye contact. It shatters presence.</p>
+        
+        <blockquote>
+          "We have built incredible intelligence in the cloud, but we have bottlenecked it behind a six-inch screen."
+        </blockquote>
+
+        <h2>Ambient intelligence</h2>
+        <p>The next era of computing isn't about better screens. It's about no screens at all. It's about ambient intelligence—systems that hear what you hear, see what you see, and quietly build context in the background without requiring a context switch from you.</p>
+        
+        <h2>Why Open Source?</h2>
+        <p>When a device is listening to your life 24/7, trust is the only currency that matters. Proprietary hardware forces you to trust a corporation. Open-source hardware allows you to trust the math. Aura is an assertion that the foundational hardware of the AI era should belong to the public domain.</p>
+
+        <p class="closing">The phone was the answer to the internet.<br>The pendant is the answer to AI.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="section-black site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4 class="nav-logo mb-2">Aura</h4>
+        <p class="text-sm">MIT Licensed open-source project.</p>
+      </div>
+      <div>
+        <span class="overline">Project</span>
+        <a href="about.html">About</a>
+        <a href="manifesto.html">Manifesto</a>
+        <a href="ai.html">AI Pipeline</a>
+      </div>
+      <div>
+        <span class="overline">Resources</span>
+        <a href="docs.html">Documentation</a>
+        <a href="https://github.com/thesohamdatta/Aura-Wearable-AI" target="_blank" rel="noopener">GitHub Repo</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.23/dist/lenis.min.js" defer></script>
+  
+  <script src="js/nav.js" defer></script>
+  <script src="js/animations.js" defer></script>
+</body>
+</html>
