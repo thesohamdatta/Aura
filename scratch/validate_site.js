@@ -37,9 +37,6 @@ pages.forEach(page => {
   if (!html.includes('<nav')) errors.push('Missing semantic navigation');
   if (!html.includes('<footer')) errors.push('Missing semantic footer');
 
-  // Check sub-nav
-  if (!html.includes('class="sub-nav"')) errors.push('Missing secondary sub-nav');
-
   if (errors.length > 0) {
     console.error(`Validation FAILED for ${page}:`);
     errors.forEach(e => console.error(`  - ${e}`));

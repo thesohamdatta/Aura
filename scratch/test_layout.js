@@ -3,6 +3,15 @@ const path = require('path');
 
 const navCssPath = path.join(__dirname, '../web/css/nav.css');
 const docsCssPath = path.join(__dirname, '../web/css/docs.css');
+const webDir = path.join(__dirname, '../web');
+
+const pages = [
+  'index.html',
+  'about.html',
+  'ai.html',
+  'docs.html',
+  'manifesto.html'
+];
 
 let testFailures = 0;
 
@@ -18,41 +27,73 @@ function runTest(name, assertFn) {
 }
 
 // ----------------------------------------------------
-// TEST CASE 1: Navbar Width Alignment (Tracer Bullet)
+// TEST CASE 1: Single Unified Navbar in HTML
 // ----------------------------------------------------
-runTest('Navbar inner alignment has width: 100%', () => {
+runTest('All HTML pages have exactly one navbar and no secondary sub-nav', () => {
+  pages.forEach(page => {
+    const pagePath = path.join(webDir, page);
+    if (!fs.existsSync(pagePath)) {
+      throw new Error(`${page} not found`);
+    }
+    const html = fs.readFileSync(pagePath, 'utf-8');
+
+    // Should have only one navbar
+    const navCount = (html.match(/<nav\s+id="navbar"/g) || []).length;
+    if (navCount !== 1) {
+      throw new Error(`${page} has ${navCount} <nav id="navbar"> elements instead of exactly 1`);
+    }
+
+    // Should NOT have secondary sub-nav class markup
+    if (html.includes('class="sub-nav"') || html.includes('class="sub-nav-inner"')) {
+      throw new Error(`${page} still contains sub-nav markup ('class="sub-nav"')`);
+    }
+
+    // Should contain all 5 core navigation links
+    const links = ['index.html', 'about.html', 'manifesto.html', 'docs.html', 'ai.html'];
+    links.forEach(link => {
+      if (!html.includes(`href="${link}"`)) {
+        throw new Error(`${page} is missing navigation link to ${link}`);
+      }
+    });
+  });
+});
+
+// ----------------------------------------------------
+// TEST CASE 2: Frosted Glass Navbar CSS Specs
+// ----------------------------------------------------
+runTest('Navbar CSS specifies frosted-glass aesthetics, height of 52px, and 100% width inner container', () => {
   if (!fs.existsSync(navCssPath)) {
     throw new Error('nav.css not found');
   }
   const css = fs.readFileSync(navCssPath, 'utf-8');
+
+  // Verify #navbar has 52px height and frosted-glass blur
+  const navbarMatch = css.match(/#navbar\s*\{([^}]*)\}/);
+  if (!navbarMatch) {
+    throw new Error('Could not find #navbar ruleset in nav.css');
+  }
+  const navbarRules = navbarMatch[1];
   
-  // Extract .nav-inner rules
+  if (!navbarRules.includes('height: 52px')) {
+    throw new Error('#navbar is not configured with a premium "height: 52px"');
+  }
+  if (!navbarRules.includes('backdrop-filter') || !navbarRules.includes('blur')) {
+    throw new Error('#navbar is missing frosted-glass backdrop-filter blur style');
+  }
+
+  // Verify sub-nav classes are deleted from CSS
+  if (css.includes('.sub-nav ') || css.includes('.sub-nav-inner')) {
+    throw new Error('nav.css still contains obsolete .sub-nav styling rules');
+  }
+
+  // Verify .nav-inner has width: 100%
   const navInnerMatch = css.match(/\.nav-inner\s*\{([^}]*)\}/);
   if (!navInnerMatch) {
-    throw new Error('Could not find .nav-inner selector in nav.css');
+    throw new Error('Could not find .nav-inner ruleset in nav.css');
   }
-  const rules = navInnerMatch[1];
-  
-  if (!rules.includes('width: 100%')) {
-    throw new Error('.nav-inner block is missing "width: 100%" declaration');
-  }
-});
-
-// ----------------------------------------------------
-// TEST CASE 2: Navbar Links Distribution
-// ----------------------------------------------------
-runTest('Navbar links have flex-grow and justify-content: space-between on desktop', () => {
-  const css = fs.readFileSync(navCssPath, 'utf-8');
-  const match = css.match(/\.nav-links\s*\{([^}]*)\}/);
-  if (!match) {
-    throw new Error('Could not find .nav-links selector in nav.css');
-  }
-  const rules = match[1];
-  if (!rules.includes('justify-content: space-between')) {
-    throw new Error('.nav-links is missing "justify-content: space-between"');
-  }
-  if (!rules.includes('flex-grow: 1')) {
-    throw new Error('.nav-links is missing "flex-grow: 1"');
+  const navInnerRules = navInnerMatch[1];
+  if (!navInnerRules.includes('width: 100%')) {
+    throw new Error('.nav-inner is missing "width: 100%"');
   }
 });
 
@@ -65,19 +106,16 @@ runTest('Docs section headers, table headers, and mobile select do not use monos
   }
   const css = fs.readFileSync(docsCssPath, 'utf-8');
 
-  // Verify .docs-sidebar .sidebar-section
   const sectionMatch = css.match(/\.docs-sidebar\s+\.sidebar-section\s*\{([^}]*)\}/);
   if (sectionMatch && sectionMatch[1].includes('var(--font-mono)')) {
     throw new Error('.docs-sidebar .sidebar-section is using var(--font-mono)');
   }
 
-  // Verify .docs-table th
   const tableThMatch = css.match(/\.docs-table\s+th\s*\{([^}]*)\}/);
   if (tableThMatch && tableThMatch[1].includes('var(--font-mono)')) {
     throw new Error('.docs-table th is using var(--font-mono)');
   }
 
-  // Verify .mobile-docs-nav select
   const selectMatch = css.match(/\.mobile-docs-nav\s+select\s*\{([^}]*)\}/);
   if (selectMatch && selectMatch[1].includes('var(--font-mono)')) {
     throw new Error('.mobile-docs-nav select is using var(--font-mono)');
@@ -101,7 +139,6 @@ runTest('Docs active sidebar link uses Action Blue, not Cyan', () => {
     throw new Error('.docs-sidebar a.active is missing var(--primary)');
   }
 });
-
 
 // Final check
 if (testFailures > 0) {
