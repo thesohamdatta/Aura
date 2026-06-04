@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AURA — The Open-Source Intelligence Frontier</title>
+  <meta name="description" content="Aura is an open-source ambient intelligence wearable. Screenless, voice-first, privacy-respecting, and built on the open frontier.">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Aura home">
+        AURA
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="manifesto.html">Manifesto</a></li>
+        <li><a href="docs.html">Docs</a></li>
+        <li><a href="ai.html">AI</a></li>
+        <li>
+          <a href="https://github.com/thesohamdatta/Aura-Wearable-AI"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="nav-github">
+            GitHub ↗
+          </a>
+        </li>
+      </ul>
+      <button class="theme-toggle" aria-label="Toggle dark mode">
+        <!-- Sun icon -->
+        <svg class="icon-sun" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <!-- Moon icon -->
+        <svg class="icon-moon" viewBox="0 0 24 24">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+      <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Product Sub-Nav -->
+  <div class="sub-nav">
+    <div class="sub-nav-inner">
+      <span class="sub-nav-title">AURA OS</span>
+      <div class="sub-nav-actions">
+        <a href="about.html">About</a>
+        <a href="manifesto.html">Manifesto</a>
+        <a href="docs.html">Docs</a>
+        <a href="ai.html">AI</a>
+        <a href="https://github.com/thesohamdatta/Aura-Wearable-AI" class="sub-nav-btn">Build Yours</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile menu overlay -->
+  <div class="nav-mobile-overlay" aria-hidden="true">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="manifesto.html">Manifesto</a></li>
+      <li><a href="docs.html">Docs</a></li>
+      <li><a href="ai.html">AI</a></li>
+      <li><a href="https://github.com/thesohamdatta/Aura-Wearable-AI" target="_blank" rel="noopener noreferrer">GitHub ↗</a></li>
+    </ul>
+  </div>
+
+  <!-- Section 1: Hero -->
+  <header class="hero">
+    <div class="hero-inner text-container">
+      <span class="overline reveal">AURA / 001</span>
+      <h1 class="hero-headline reveal">The phone was never the answer.</h1>
+      
+      <!-- Pendant image placeholder -->
+      <div class="hero-image-wrapper reveal">
+        <!-- Render placeholder when real photos are not present -->
+        <div class="img-placeholder hero-pendant" data-label="pendant-front.jpg" style="width: 320px; height: 320px; background: var(--gray-200); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 11px; color: var(--gray-500); margin: 48px auto 0; box-shadow: 0 24px 48px rgba(0,0,0,0.08);">
+          [pendant-front.jpg]
+        </div>
+      </div>
+
+      <div class="hero-actions reveal">
+        <a href="#product" class="btn btn-primary">Explore Aura</a>
+        <a href="docs.html" class="btn btn-secondary">Build Your Own</a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span class="text-mono">scroll</span>
+      <div class="chevron">↓</div>
+    </div>
+  </header>
+
+  <!-- Section 2: Product Statement -->
+  <section id="product" class="section product-statement">
+    <div class="container text-container">
+      <span class="overline reveal">WHAT IS AURA</span>
+      <h2 class="section-headline reveal">AI that lives with you. Not in your pocket.</h2>
+      <p class="body-text reveal">Worn around your neck. Always listening, never demanding. Voice-first. Screenless. Yours to build on.</p>
+      
+      <div class="product-image-wrapper reveal">
+        <div class="img-placeholder" data-label="pendant-worn.jpg" style="width: 100%; max-width: 720px; height: 420px; background: var(--gray-200); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 11px; color: var(--gray-500); margin: 56px auto 0;">
+          [pendant-worn.jpg]
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: The Problem (Full-bleed Black) -->
+  <section class="section problem-section">
+    <div class="container">
+      <div class="stats-grid stagger-container">
+        <div class="stat-block stagger-item">
+          <span class="stat-number" data-target="96">0</span><span class="stat-suffix">×</span>
+          <span class="stat-label">daily phone unlocks.</span>
+        </div>
+        <div class="stat-block stagger-item">
+          <span class="stat-number" data-target="4">0</span><span class="stat-suffix">hrs</span>
+          <span class="stat-label">staring at glass. daily.</span>
+        </div>
+      </div>
+      <div class="problem-footer reveal">
+        <p class="italic-quote">“The interface became the cage.”</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: The Solution -->
+  <section class="section solution-section">
+    <div class="container">
+      <div class="text-container">
+        <span class="overline reveal">THE ANSWER</span>
+        <h2 class="section-headline reveal">No screen. No unlock. No friction.</h2>
+      </div>
+      
+      <div class="solution-grid stagger-container">
+        <div class="solution-col stagger-item">
+          <span class="col-overline">VOICE FIRST</span>
+          <h3>Speak naturally.</h3>
+          <p>Aura transcribes at 0.5s. Responds before you finish the thought.</p>
+        </div>
+        <div class="solution-col stagger-item">
+          <span class="col-overline">ALWAYS ON</span>
+          <h3>Worn. Present. Ready.</h3>
+          <p>No unlock. No app. No context switch. The interface is conversation.</p>
+        </div>
+        <div class="solution-col stagger-item">
+          <span class="col-overline">OPEN SOURCE</span>
+          <h3>Yours to build on.</h3>
+          <p>Hardware files. Firmware. Backend. All of it. MIT licensed.</p>
+        </div>
+      </div>
+
+      <div class="solution-image-wrapper reveal">
+        <div class="img-placeholder" data-label="pendant-hand.jpg" style="width: 100%; max-width: 560px; height: 380px; background: var(--gray-200); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 11px; color: var(--gray-500); margin: 64px auto 0;">
+          [pendant-hand.jpg]
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Specs Strip -->
+  <section class="specs-strip">
+    <div class="container">
+      <div class="specs-grid stagger-container">
+        <div class="spec-item stagger-item">
+          <span class="spec-value">0.5s</span>
+          <span class="spec-label">Voice latency</span>
+        </div>
+        <div class="spec-item stagger-item">
+          <span class="spec-value">80g</span>
+          <span class="spec-label">Total weight</span>
+        </div>
+        <div class="spec-item stagger-item">
+          <span class="spec-value">~$50</span>
+          <span class="spec-label">Bill of materials</span>
+        </div>
+        <div class="spec-item stagger-item">
+          <span class="spec-value">MIT</span>
+          <span class="spec-label">License</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: Comparison Table -->
+  <section class="section comparison-section">
+    <div class="container">
+      <div class="text-container reveal">
+        <span class="overline">COMPARISON</span>
+        <h2 class="section-headline">How Aura compares</h2>
+      </div>
+
+      <div class="table-wrapper reveal">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th scope="col">Device</th>
+              <th scope="col">Audio</th>
+              <th scope="col">Camera</th>
+              <th scope="col">Open Source</th>
+              <th scope="col">Screenless</th>
+              <th scope="col">Cost</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Humane AI Pin</td>
+              <td>✓</td>
+              <td>✓</td>
+              <td class="cross">✗</td>
+              <td>✓</td>
+              <td>$699</td>
+            </tr>
+            <tr>
+              <td>Limitless</td>
+              <td>✓</td>
+              <td class="cross">✗</td>
+              <td class="cross">✗</td>
+              <td>✓</td>
+              <td>$99</td>
+            </tr>
+            <tr>
+              <td>Omi DevKit</td>
+              <td>✓</td>
+              <td class="cross">✗</td>
+              <td>✓</td>
+              <td>✓</td>
+              <td>$89</td>
+            </tr>
+            <tr class="highlight-row">
+              <td>Aura</td>
+              <td>✓</td>
+              <td>✓</td>
+              <td>✓</td>
+              <td>✓</td>
+              <td>~$50</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 7: Manifesto Tease (Full-bleed Black) -->
+  <section class="section dilemma-tease">
+    <div class="container text-container">
+      <div class="pull-quote-wrapper reveal">
+        <blockquote class="pull-quote">“We were not like this before.”</blockquote>
+        <cite class="attribution">— The Manifesto</cite>
+      </div>
+      <p class="supporting-text reveal">The smartphone is not the villain. The interface is.</p>
+      <div class="reveal">
+        <a href="manifesto.html" class="btn btn-ghost">Read the Manifesto →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 8: Final CTA -->
+  <section class="section final-cta">
+    <div class="container text-container">
+      <h2 class="section-headline reveal">Build the third device.</h2>
+      <p class="body-text reveal">Open source. Fork it. Wear it. Make it yours.</p>
+      <div class="reveal cta-buttons">
+        <a href="https://github.com/thesohamdatta/Aura-Wearable-AI" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View on GitHub</a>
+        <a href="docs.html" class="btn btn-secondary">Read the Docs</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 9: Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col col-brand">
+        <span class="footer-logo">AURA</span>
+        <p class="footer-tagline">Always with you.</p>
+      </div>
+      <div class="footer-col col-links">
+        <span class="footer-title">PAGES</span>
+        <ul role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="manifesto.html">Manifesto</a></li>
+          <li><a href="docs.html">Docs</a></li>
+          <li><a href="ai.html">AI</a></li>
+        </ul>
+      </div>
+      <div class="footer-col col-links">
+        <span class="footer-title">CONNECT</span>
+        <ul role="list">
+          <li><a href="https://github.com/thesohamdatta/Aura-Wearable-AI" target="_blank" rel="noopener noreferrer">GitHub ↗</a></li>
+          <li><a href="https://www.linkedin.com/in/thesohamdatta" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></li>
+          <li><a href="mailto:thesohamdatta@gmail.com">thesohamdatta@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <div class="bottom-left">Built in Pune. Open sourced for the world.</div>
+      <div class="bottom-right">© 2025–2026 Soham Datta</div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>
