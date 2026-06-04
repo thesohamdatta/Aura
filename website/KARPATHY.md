@@ -1,4 +1,4 @@
-# Aura Website — KARPATHY.md
+# Aura Website â€” KARPATHY.md
 ## How the Karpathy Guidelines apply to this specific codebase.
 ## Read this before writing any file. It is the code discipline contract.
 
@@ -10,24 +10,24 @@
 
 | Assumption | Risk if wrong |
 |---|---|
-| GitHub Pages serves from `website/` root | All asset paths break — test with local server first |
+| GitHub Pages serves from `website/` root | All asset paths break â€” test with local server first |
 | `defer` scripts load after DOM is ready | GSAP/Lenis init must happen inside `DOMContentLoaded` or at script body |
-| `prefers-color-scheme` works for initial theme | Flash of wrong theme — use `data-theme` on `<html>` set inline before body |
-| Three.js import maps work on target browsers | Falls back gracefully — add `<noscript>` static image |
+| `prefers-color-scheme` works for initial theme | Flash of wrong theme â€” use `data-theme` on `<html>` set inline before body |
+| Three.js import maps work on target browsers | Falls back gracefully â€” add `<noscript>` static image |
 | CDN URLs are stable at pinned versions | Pin exact versions (already done in RESOURCES.md) |
-| Pendant photos will be shot eventually | Three.js sphere is placeholder — don't architect around photos existing |
+| Pendant photos will be shot eventually | Three.js sphere is placeholder â€” don't architect around photos existing |
 
 ### When to stop and ask (don't guess)
-- Any change to `global.css` variables — confirm scope first
-- Adding a new CSS file — check if an existing one should be extended
-- Any animation that touches the hero section — performance implications
-- Changing the `website/` folder structure — breaks GitHub Pages paths
+- Any change to `global.css` variables â€” confirm scope first
+- Adding a new CSS file â€” check if an existing one should be extended
+- Any animation that touches the hero section â€” performance implications
+- Changing the `website/` folder structure â€” breaks GitHub Pages paths
 
 ---
 
 ## 2. Simplicity First
 
-### File budget — max lines per file
+### File budget â€” max lines per file
 | File | Max lines | Why |
 |---|---|---|
 | `css/global.css` | 300 | Design tokens + reset + utilities only |
@@ -38,33 +38,33 @@
 | `js/docs.js` | 60 | Scroll spy + mobile select only |
 | `[page].html` | 200 | Semantic structure, no inline styles |
 
-If a file grows past budget → split or simplify, don't just expand.
+If a file grows past budget â†’ split or simplify, don't just expand.
 
 ### What we do NOT build in v1
 ```
-❌ Search bar (docs page)
-❌ Cookie/analytics banner
-❌ Contact form
-❌ Blog / changelog
-❌ Video background
-❌ Particle effects
-❌ Custom cursor
-❌ Loading screen / splash
-❌ Service worker
-❌ i18n / translations
+âŒ Search bar (docs page)
+âŒ Cookie/analytics banner
+âŒ Contact form
+âŒ Blog / changelog
+âŒ Video background
+âŒ Particle effects
+âŒ Custom cursor
+âŒ Loading screen / splash
+âŒ Service worker
+âŒ i18n / translations
 ```
 Every one of these can be a GitHub issue for v2.
 
-### CSS specificity rules — keep it flat
+### CSS specificity rules â€” keep it flat
 - No `!important` except `prefers-reduced-motion` override
 - No nesting deeper than 2 levels (`.nav-inner .nav-logo` is max)
 - No ID selectors in CSS (IDs are for JS only)
 - Use CSS custom properties, never magic numbers
 
-### JS rules — keep it procedural
+### JS rules â€” keep it procedural
 - No classes unless state is genuinely complex
 - No event delegation when direct binding is simpler
-- No utility libraries (lodash, etc.) — use native browser APIs
+- No utility libraries (lodash, etc.) â€” use native browser APIs
 - All functions named for what they do, not what they are
 
 ---
@@ -84,10 +84,10 @@ Every file touches exactly one concern. If you need to touch two files to implem
 | Code block theme | `docs.html` `<link>` tag only |
 
 ### Shared vs page-specific
-- `global.css` — shared. Touch if changing design tokens, reset, or shared utilities
-- `nav.css` — shared. Touch only for nav behaviour
-- `[page].css` — isolated. Changes only affect that page
-- `animations.js` — shared. Only GSAP/Lenis setup + `.reveal` pattern
+- `global.css` â€” shared. Touch if changing design tokens, reset, or shared utilities
+- `nav.css` â€” shared. Touch only for nav behaviour
+- `[page].css` â€” isolated. Changes only affect that page
+- `animations.js` â€” shared. Only GSAP/Lenis setup + `.reveal` pattern
 
 ### Don't touch the manifesto text
 The essay is the founder's voice. Do not rewrite, condense, or "improve" it.
@@ -105,7 +105,7 @@ HTML structure around it: fine. The words: not your call.
 - [ ] Dark mode toggle works, persists on refresh
 - [ ] Three.js pendant renders, rotates with mouse
 - [ ] All 9 sections visible and correctly styled
-- [ ] Lighthouse performance ≥ 85 on mobile
+- [ ] Lighthouse performance â‰¥ 85 on mobile
 - [ ] No horizontal scroll on 375px viewport
 
 **about.html**
@@ -129,11 +129,11 @@ HTML structure around it: fine. The words: not your call.
 - [ ] All 4 essay sections present word-for-word
 - [ ] Blockquote styled with rose left border
 - [ ] Closing quote in rose italic
-- [ ] Reading width ≤ 720px, comfortable
+- [ ] Reading width â‰¤ 720px, comfortable
 
 **GitHub Pages deployment**
 - [ ] Push to `main` triggers GitHub Actions workflow
-- [ ] `thesohamdatta.github.io/Aura-Wearable-AI` loads
+- [ ] `thesohamdatta.github.io/aura` loads
 - [ ] All 5 pages accessible from deployed URL
 - [ ] No broken image links on deployed site
 
@@ -144,18 +144,18 @@ HTML structure around it: fine. The words: not your call.
 This is the dependency graph. Build in this sequence:
 
 ```
-1. global.css        → no dependencies
-2. nav.css           → depends on: global.css variables
-3. nav.js            → depends on: nav.css classes
-4. animations.js     → depends on: GSAP, Lenis (CDN)
-5. home.css          → depends on: global.css
-6. index.html        → depends on: global.css, nav.css, home.css, nav.js, animations.js
-7. home.js           → depends on: Three.js (CDN), index.html canvas element
+1. global.css        â†’ no dependencies
+2. nav.css           â†’ depends on: global.css variables
+3. nav.js            â†’ depends on: nav.css classes
+4. animations.js     â†’ depends on: GSAP, Lenis (CDN)
+5. home.css          â†’ depends on: global.css
+6. index.html        â†’ depends on: global.css, nav.css, home.css, nav.js, animations.js
+7. home.js           â†’ depends on: Three.js (CDN), index.html canvas element
 8. about.css + about.html
 9. ai.css + ai.html + ai.js
 10. docs.css + docs.html + docs.js
 11. manifesto.css + manifesto.html
-12. Copy assets → Test paths → GitHub Pages deploy
+12. Copy assets â†’ Test paths â†’ GitHub Pages deploy
 ```
 
 Never skip steps. Never build a page before its CSS is done.
@@ -167,13 +167,13 @@ Never skip steps. Never build a page before its CSS is done.
 Run this mental checklist on every change:
 
 ```
-□ Does every changed line trace to the user's request?
-□ Is there a simpler way to do this?
-□ Did I touch anything I wasn't supposed to?
-□ Does it work with dark mode on?
-□ Does it work at 375px wide?
-□ Are all console errors cleared?
-□ Did I remove any orphaned CSS/JS I created?
+â–¡ Does every changed line trace to the user's request?
+â–¡ Is there a simpler way to do this?
+â–¡ Did I touch anything I wasn't supposed to?
+â–¡ Does it work with dark mode on?
+â–¡ Does it work at 375px wide?
+â–¡ Are all console errors cleared?
+â–¡ Did I remove any orphaned CSS/JS I created?
 ```
 
-If any box is unchecked — fix it before committing.
+If any box is unchecked â€” fix it before committing.

@@ -1,9 +1,9 @@
-# Issue Tracker — GitHub Issues
+# Issue Tracker â€” GitHub Issues
 
 ## Location
 
 Issues live in **GitHub Issues** on the repository:
-`https://github.com/thesohamdatta/Aura-Wearable-AI/issues`
+`https://github.com/thesohamdatta/aura/issues`
 
 ## CLI
 
@@ -11,16 +11,16 @@ Use the `gh` CLI for all issue operations:
 
 ```bash
 # Create an issue
-gh issue create --title "..." --body "..." --label "..." --repo thesohamdatta/Aura-Wearable-AI
+gh issue create --title "..." --body "..." --label "..." --repo thesohamdatta/aura
 
 # List issues
-gh issue list --repo thesohamdatta/Aura-Wearable-AI --label "website"
+gh issue list --repo thesohamdatta/aura --label "website"
 
 # View an issue
-gh issue view <number> --repo thesohamdatta/Aura-Wearable-AI
+gh issue view <number> --repo thesohamdatta/aura
 
 # Close an issue
-gh issue close <number> --repo thesohamdatta/Aura-Wearable-AI
+gh issue close <number> --repo thesohamdatta/aura
 ```
 
 ## Label scoping
@@ -35,4 +35,4 @@ Each issue must have: What to build, Acceptance criteria, Blocked by.
 
 ## Milestone
 
-Target milestone: `Website v1.0 — GitHub Pages Launch`
+Target milestone: `Website v1.0 â€” GitHub Pages Launch`

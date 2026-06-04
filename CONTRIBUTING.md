@@ -5,7 +5,7 @@ Thank you for your interest in contributing to AURA! We welcome contributions fr
 ## How to Contribute
 
 ### 1. Reporting Bugs
-- Check the [Issues](https://github.com/thesohamdatta/Aura-Wearable-AI/issues) page to see if the bug has already been reported.
+- Check the [Issues](https://github.com/thesohamdatta/aura/issues) page to see if the bug has already been reported.
 - If not, open a new issue. Provide as much detail as possible, including steps to reproduce, hardware versions, and environment details (Arduino IDE version, Android version, etc.).
 
 ### 2. Feature Requests
@@ -17,7 +17,7 @@ To contribute code or hardware designs:
 1. **Fork the repository** to your own GitHub account.
 2. **Clone the repository** to your local machine:
    ```bash
-   git clone https://github.com/your-username/Aura-Wearable-AI.git
+   git clone https://github.com/your-username/aura.git
    ```
 3. **Create a new branch** for your feature or bugfix:
    ```bash

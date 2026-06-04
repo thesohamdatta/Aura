@@ -309,7 +309,7 @@ Replace the hero image placeholder with an inline vector drawing representing th
 
       <div class="hero-actions">
         <a href="#product" class="btn btn-primary">Explore Aura</a>
-        <a href="https://github.com/thesohamdatta/Aura-Wearable-AI" class="btn btn-secondary">Build Yours</a>
+        <a href="https://github.com/thesohamdatta/aura" class="btn btn-secondary">Build Yours</a>
       </div>
     </div>
   </header>
@@ -390,7 +390,7 @@ Implement the statistics row inside the dilemma section with number-counters tha
     <div class="container">
       <div class="stats-grid">
         <div class="stat-block">
-          <span class="stat-number" data-target="96">0</span><span class="stat-suffix">×</span>
+          <span class="stat-number" data-target="96">0</span><span class="stat-suffix">Ã—</span>
           <span class="stat-label">daily phone unlocks.</span>
         </div>
         <div class="stat-block">
@@ -399,7 +399,7 @@ Implement the statistics row inside the dilemma section with number-counters tha
         </div>
       </div>
       <div class="problem-footer">
-        <p class="italic-quote">“The interface became the cage.”</p>
+        <p class="italic-quote">â€œThe interface became the cage.â€</p>
       </div>
     </div>
   </section>
@@ -745,34 +745,34 @@ Improve the devices comparison table to match the clean glassmorphic style speci
           <tbody>
             <tr>
               <td class="device-name">Humane AI Pin</td>
-              <td>✓</td>
-              <td>✓</td>
-              <td class="cross">✗</td>
-              <td>✓</td>
+              <td>âœ“</td>
+              <td>âœ“</td>
+              <td class="cross">âœ—</td>
+              <td>âœ“</td>
               <td>$699</td>
             </tr>
             <tr>
               <td class="device-name">Limitless Pendant</td>
-              <td>✓</td>
-              <td class="cross">✗</td>
-              <td class="cross">✗</td>
-              <td>✓</td>
+              <td>âœ“</td>
+              <td class="cross">âœ—</td>
+              <td class="cross">âœ—</td>
+              <td>âœ“</td>
               <td>$99</td>
             </tr>
             <tr>
               <td class="device-name">Omi DevKit</td>
-              <td>✓</td>
-              <td class="cross">✗</td>
-              <td>✓</td>
-              <td>✓</td>
+              <td>âœ“</td>
+              <td class="cross">âœ—</td>
+              <td>âœ“</td>
+              <td>âœ“</td>
               <td>$89</td>
             </tr>
             <tr class="highlight-row">
               <td class="device-name">Aura</td>
-              <td>✓</td>
-              <td>✓</td>
-              <td>✓</td>
-              <td>✓</td>
+              <td>âœ“</td>
+              <td>âœ“</td>
+              <td>âœ“</td>
+              <td>âœ“</td>
               <td class="price-highlight">~$50</td>
             </tr>
           </tbody>
@@ -985,9 +985,9 @@ Run the validator script to verify the homepage HTML contains no unresolved plac
   Expected: PASS
 - [ ] **Step 2: Verification of files existence**
   Verify the following paths are correct:
-  - [index.html](file:///D:/PROJECTS/2026/Aura-Wearable-AI/web/index.html)
-  - [home.css](file:///D:/PROJECTS/2026/Aura-Wearable-AI/web/css/home.css)
-  - [home.js](file:///D:/PROJECTS/2026/Aura-Wearable-AI/web/js/home.js)
+  - [index.html](file:///D:/PROJECTS/2026/aura/web/index.html)
+  - [home.css](file:///D:/PROJECTS/2026/aura/web/css/home.css)
+  - [home.js](file:///D:/PROJECTS/2026/aura/web/js/home.js)
 - [ ] **Step 3: Commit**
   Run:
   ```bash

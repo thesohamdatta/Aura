@@ -1,4 +1,4 @@
-# ADR 002 — GitHub Pages Deployment via GitHub Actions
+# ADR 002 â€” GitHub Pages Deployment via GitHub Actions
 
 **Date:** 2026-06  
 **Status:** Accepted  
@@ -17,10 +17,10 @@ GitHub Pages, deployed from the `website/` subfolder via GitHub Actions workflow
 
 ## Rationale
 
-1. **Single platform** — the code is already on GitHub. No third-party account needed.
-2. **Free forever** — public repos get unlimited GitHub Pages with no usage limits.
-3. **URL** — `thesohamdatta.github.io/Aura-Wearable-AI` is the canonical URL.
-4. **Transparency** — the deploy workflow is in `.github/workflows/` — visible to contributors.
+1. **Single platform** â€” the code is already on GitHub. No third-party account needed.
+2. **Free forever** â€” public repos get unlimited GitHub Pages with no usage limits.
+3. **URL** â€” `thesohamdatta.github.io/aura` is the canonical URL.
+4. **Transparency** â€” the deploy workflow is in `.github/workflows/` â€” visible to contributors.
 
 ## Implementation
 
@@ -32,5 +32,5 @@ GitHub Pages, deployed from the `website/` subfolder via GitHub Actions workflow
 ## Consequences
 
 - All asset paths must be relative (no absolute `/` paths)
-- The site root is `/Aura-Wearable-AI/` not `/` — links between pages must use filenames, not paths
+- The site root is `/aura/` not `/` â€” links between pages must use filenames, not paths
 - Custom domain can be added later via CNAME file in `website/`

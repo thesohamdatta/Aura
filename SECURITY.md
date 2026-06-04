@@ -7,7 +7,7 @@ We take the security of AURA seriously. If you believe you have found a security
 ### How to report
 Please **do not** open a public GitHub issue for security vulnerabilities. Instead, report them via one of the following methods:
 
-1. **GitHub Security Advisory:** You can report a vulnerability privately through the [Security](https://github.com/thesohamdatta/Aura-Wearable-AI/security/advisories/new) tab on GitHub.
+1. **GitHub Security Advisory:** You can report a vulnerability privately through the [Security](https://github.com/thesohamdatta/aura/security/advisories/new) tab on GitHub.
 2. **Email:** [INSERT CONTACT EMAIL]
 
 ### What to include
