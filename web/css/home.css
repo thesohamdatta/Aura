@@ -186,4 +186,99 @@
   100% { height: 20px; }
 }
 
+/* Exploded Diagram Styles */
+.exploded-section {
+  margin-top: 60px;
+  border-top: 1px solid var(--border);
+  padding-top: 60px;
+  text-align: center;
+}
+.exploded-headline {
+  font-family: var(--font-display);
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 1.19;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+.exploded-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  max-width: 800px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+.exploded-diagram {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  height: 320px;
+  width: 300px;
+}
+.exploded-layer {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), filter 0.3s ease;
+}
+.exploded-layer svg {
+  transition: filter 0.3s ease;
+}
+.exploded-layer:hover svg {
+  filter: drop-shadow(0 12px 18px rgba(0, 102, 204, 0.2));
+}
+
+/* Layer stacked visual offsets */
+.exploded-layer[data-layer="front"] { top: 20px; z-index: 3; }
+.exploded-layer[data-layer="mcu"]   { top: 100px; z-index: 2; }
+.exploded-layer[data-layer="back"]  { top: 180px; z-index: 1; }
+
+/* Isometric vertical expansion on hover */
+.exploded-diagram:hover .exploded-layer[data-layer="front"] { transform: translateY(-30px); }
+.exploded-diagram:hover .exploded-layer[data-layer="mcu"]   { transform: translateY(0px); }
+.exploded-diagram:hover .exploded-layer[data-layer="back"]  { transform: translateY(30px); }
+
+.layer-label {
+  font-size: 11px;
+  font-family: var(--font-mono);
+  color: #86868b;
+  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.exploded-info {
+  flex: 1;
+  background: var(--canvas);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  text-align: left;
+  min-width: 280px;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.exploded-info h4 {
+  font-family: var(--font-display);
+  font-size: 21px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--ink);
+  letter-spacing: -0.12px;
+}
+.exploded-info p {
+  font-family: var(--font-text);
+  font-size: 15px;
+  line-height: 1.47;
+  color: #86868b;
+}
+
+
 

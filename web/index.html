@@ -124,9 +124,47 @@
       <h2 class="section-headline reveal">AI that lives with you. Not in your pocket.</h2>
       <p class="body-text reveal">Worn around your neck. Always listening, never demanding. Voice-first. Screenless. Yours to build on.</p>
       
-      <div class="product-image-wrapper reveal">
-        <div class="img-placeholder" data-label="pendant-worn.jpg" style="width: 100%; max-width: 720px; height: 420px; background: var(--gray-200); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 11px; color: var(--gray-500); margin: 56px auto 0;">
-          [pendant-worn.jpg]
+      <!-- Interactive Exploded Diagram Widget -->
+      <div class="exploded-section">
+        <span class="overline">Hardware Assembly</span>
+        <h3 class="exploded-headline">Open schematic. Modular design.</h3>
+        <p style="margin-bottom: 40px; color: #86868b;">Hover or tap on the layers below to inspect individual assembly details.</p>
+
+        <div class="exploded-wrapper">
+          <div class="exploded-diagram">
+            <!-- Layer 3: Front Shell -->
+            <div class="exploded-layer" data-layer="front">
+              <svg viewBox="0 0 100 40" width="200" height="80">
+                <ellipse cx="50" cy="20" rx="40" ry="12" fill="rgba(255,255,255,0.75)" stroke="#86868b" stroke-width="1"/>
+                <ellipse cx="50" cy="20" rx="10" ry="4" fill="#1d1d1f"/>
+              </svg>
+              <span class="layer-label">Front Case (3D Printed PLA)</span>
+            </div>
+
+            <!-- Layer 2: ESP32-S3 Module -->
+            <div class="exploded-layer" data-layer="mcu">
+              <svg viewBox="0 0 100 40" width="200" height="80">
+                <rect x="25" y="10" width="50" height="20" rx="2" fill="#1e3a8a" stroke="#2563eb" stroke-width="1.5"/>
+                <rect x="40" y="14" width="20" height="12" fill="#9ca3af"/>
+              </svg>
+              <span class="layer-label">XIAO ESP32-S3 Sense MCU</span>
+            </div>
+
+            <!-- Layer 1: Lithium Battery & Back Shell -->
+            <div class="exploded-layer" data-layer="back">
+              <svg viewBox="0 0 100 40" width="200" height="80">
+                <ellipse cx="50" cy="20" rx="40" ry="12" fill="rgba(39,39,41,0.9)" stroke="#333336" stroke-width="1.5"/>
+                <rect x="35" y="16" width="30" height="8" fill="#059669"/>
+              </svg>
+              <span class="layer-label">350mAh Battery & Base</span>
+            </div>
+          </div>
+
+          <!-- Info Card -->
+          <div class="exploded-info">
+            <h4 id="layer-info-title">Hover over a layer</h4>
+            <p id="layer-info-desc">Explore the modular building blocks of the Aura hardware stack. Total assembly time: ~10 minutes.</p>
+          </div>
         </div>
       </div>
     </div>
