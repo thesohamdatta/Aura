@@ -994,3 +994,62 @@ Run the validator script to verify the homepage HTML contains no unresolved plac
   git status
   git commit -m "chore: complete landing page visual overhaul task list validation"
   ```
+
+---
+
+### Task 11: GitHub Pages CI/CD Workflow Setup
+Create a GitHub Actions workflow to deploy the `/web` subdirectory to GitHub Pages automatically on push to the `main` branch.
+
+**Files:**
+- Create: `.github/workflows/deploy-web.yml`
+
+- [ ] **Step 1: Write GitHub Pages deployment workflow**
+  Write `.github/workflows/deploy-web.yml` with checkout, pages upload, and deploy steps.
+  ```yaml
+  name: Deploy Web to GitHub Pages
+
+  on:
+    push:
+      branches:
+        - main
+      paths:
+        - 'web/**'
+
+  permissions:
+    contents: read
+    pages: write
+    id-token: write
+
+  concurrency:
+    group: 'pages'
+    cancel-in-progress: true
+
+  jobs:
+    deploy:
+      environment:
+        name: github-pages
+        url: ${{ steps.deployment.outputs.page_url }}
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout
+          uses: actions/checkout@v4
+        
+        - name: Setup Pages
+          uses: actions/configure-pages@v4
+        
+        - name: Upload artifact
+          uses: actions/upload-pages-artifact@v3
+          with:
+            path: './web'
+        
+        - name: Deploy to GitHub Pages
+          id: deployment
+          uses: actions/deploy-pages@v4
+  ```
+- [ ] **Step 2: Commit workflow**
+  Run:
+  ```bash
+  git add .github/workflows/deploy-web.yml
+  git commit -m "ci: add GitHub Pages deployment workflow for web directory"
+  ```
+
