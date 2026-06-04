@@ -1,0 +1,127 @@
+/* Manifesto Page Styles */
+
+.manifesto-container {
+  max-width: var(--text-max);
+  margin: 0 auto;
+  padding: calc(52px + var(--space-xl)) 24px var(--space-2xl);
+}
+
+.manifesto-hero {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.manifesto-hero .overline {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  margin-bottom: var(--space-xs);
+}
+
+.text-accent {
+  color: var(--primary);
+}
+
+[data-theme="dark"] .text-accent {
+  color: var(--primary-on-dark);
+}
+
+.manifesto-headline {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--text-primary);
+  max-width: var(--narrow-max);
+  margin: 0 auto var(--space-sm);
+}
+
+.manifesto-subhead {
+  font-family: var(--font-text);
+  font-size: 20px;
+  line-height: 1.4;
+  color: var(--text-secondary);
+  max-width: var(--narrow-max);
+  margin: 0 auto;
+}
+
+.essay-body {
+  font-family: var(--font-text);
+  font-size: var(--text-base); /* 17px per Apple guidelines */
+  line-height: var(--leading-normal); /* 1.47 per Apple guidelines */
+  color: var(--text-primary);
+}
+
+.essay-section {
+  margin-bottom: var(--space-lg);
+}
+
+.essay-section h2 {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-tight);
+  color: var(--text-primary);
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-sm);
+}
+
+.essay-section p {
+  margin-bottom: var(--space-md);
+  max-width: 70ch;
+}
+
+/* Distinct Blockquote Styling */
+.manifesto-quote {
+  font-family: var(--font-text);
+  font-size: var(--text-lg);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--text-primary);
+  border-left: 3px solid var(--primary);
+  padding-left: var(--space-md);
+  margin: var(--space-lg) 0;
+  line-height: var(--leading-snug);
+}
+
+[data-theme="dark"] .manifesto-quote {
+  border-left-color: var(--primary-on-dark);
+}
+
+/* Closing Quote Styling */
+.closing-quote-wrapper {
+  border-top: 1px solid var(--border);
+  margin-top: var(--space-2xl);
+  padding-top: var(--space-xl);
+  text-align: center;
+}
+
+.closing-quote {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-style: italic;
+  color: var(--primary);
+  line-height: var(--leading-snug);
+  max-width: var(--narrow-max);
+  margin: 0 auto;
+}
+
+[data-theme="dark"] .closing-quote {
+  color: var(--primary-on-dark);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .manifesto-container {
+    padding-top: calc(52px + var(--space-md));
+  }
+  
+  .manifesto-subhead {
+    font-size: 18px;
+  }
+}
