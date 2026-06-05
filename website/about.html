@@ -1,132 +1,88 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us â€” Aura</title>
-  
-  <meta name="description" content="Aura is built by a team of undergraduate students in Pune, India. Frustrated by proprietary AI hardware, we built our own.">
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-  
+  <title>About — Aura Wearable AI</title>
+  <meta name="description" content="Four undergrads from Pune building an open-source AI wearable pendant. The builder story behind Aura.">
   <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/about.css">
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav id="navbar">
-    <div class="nav-container">
-      <a href="index.html" class="nav-logo">Aura</a>
-      
-      <div class="nav-links" id="nav-links">
-        <a href="about.html" class="nav-link active">About</a>
-        <a href="ai.html" class="nav-link">AI Pipeline</a>
-        <a href="docs.html" class="nav-link">Docs</a>
-        <a href="manifesto.html" class="nav-link">Manifesto</a>
-        
-        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
-          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-        </button>
-      </div>
-
-      <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Menu">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-      </button>
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">AURA</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="ai.html">AI</a></li>
+      <li><a href="docs.html">Docs</a></li>
+      <li><a href="manifesto.html">Manifesto</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="https://github.com/thesohamdatta/aura" target="_blank" rel="noopener" class="btn-primary">Build Your Own ↗</a>
     </div>
-  </nav>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-overlay" id="nav-overlay">
+  <button class="nav-overlay-close" onclick="toggleNav()" aria-label="Close menu">✕</button>
+  <ul class="nav-overlay-links">
+    <li><a href="index.html" onclick="toggleNav()">Home</a></li>
+    <li><a href="about.html" onclick="toggleNav()">About</a></li>
+    <li><a href="ai.html" onclick="toggleNav()">AI</a></li>
+    <li><a href="docs.html" onclick="toggleNav()">Docs</a></li>
+    <li><a href="manifesto.html" onclick="toggleNav()">Manifesto</a></li>
+  </ul>
+  <a href="https://github.com/thesohamdatta/aura" target="_blank" rel="noopener" class="btn-primary">Build Your Own ↗</a>
+</div>
+<script>
+function toggleNav() {
+  var overlay = document.getElementById('nav-overlay');
+  overlay.classList.toggle('open');
+}
+</script>
 
-  <main>
-    <!-- Hero -->
-    <section class="about-hero">
-      <div class="container text-center reveal-stagger">
-        <h1 class="hero-headline">Built by people<br>who got frustrated.</h1>
-      </div>
-    </section>
+<main>
+  <article class="about-article section section-parchment">
+    <span class="overline">The Builders</span>
+    <h1>About Aura</h1>
 
-    <!-- Origin Story -->
-    <section class="story-section">
-      <div class="container-narrow reveal-stagger">
-        <p>In late 2025, we watched the tech industry pivot to wearable AI. Products launched with huge promises, closed ecosystems, and price tags north of $700. They required monthly subscriptions just to access your own memory.</p>
-        <p>We were undergraduate engineering students in Pune, India. We couldn't afford them. More importantly, we didn't want to rely on closed systems for something as intimate as our personal memory.</p>
-        <p>We realized the math didn't add up. The sensors required â€” an I2S microphone, a low-res camera, a bluetooth chip â€” were incredibly cheap. The real magic was happening in the cloud anyway.</p>
-        <p>So we built Aura. An open-source, $50 wearable that does exactly what the proprietary devices do, but you own the hardware, and you route the data to whichever LLM you prefer.</p>
-      </div>
-    </section>
+    <p>We are four undergraduates from Pune, India, studying AI and Machine Learning at PES Modern College of Engineering. We built Aura with our own money, over nights and weekends, because we wanted to understand what it would feel like to carry AI — not in a phone, but around our necks.</p>
 
-    <!-- Team -->
-    <section class="team-section section-black">
-      <div class="container">
-        <h2 class="section-title text-center reveal mb-4">The Team</h2>
-        
-        <div class="team-grid reveal-stagger mt-4">
-          
-          <div class="team-card">
-            <div class="team-avatar">
-              <!-- No actual image provided in assets, using initials as fallback -->
-              <div class="avatar-fallback">SD</div>
-            </div>
-            <div class="team-info">
-              <h3>Soham Datta</h3>
-              <span class="overline">AI & Backend Lead</span>
-              <p>Built the sub-second Groq + Pinecone inference pipeline. Obsessed with reducing latency.</p>
-            </div>
-          </div>
+    <p>The project started as a question: what if the interface disappeared? Phones demand your eyes. Laptops demand your desk. We wanted something that asked for neither.</p>
 
-          <div class="team-card">
-            <div class="team-avatar">
-              <div class="avatar-fallback">LP</div>
-            </div>
-            <div class="team-info">
-              <h3>Laxman Pujari</h3>
-              <span class="overline">Hardware & Firmware Lead</span>
-              <p>Designed the PCB layout, 3D enclosures, and wrote the C-based ESP32 audio streaming firmware.</p>
-            </div>
-          </div>
+    <p>Aura is built on the XIAO ESP32-S3 Sense — a microcontroller smaller than a matchbox. The case is 3D printed. The battery lasts one to two hours. We state this plainly, not as a limitation but as a fact.</p>
 
-        </div>
-      </div>
-    </section>
+    <p>Prof. Sonal Pansare guided us through the hardware architecture and kept the project grounded in what was real, not what was wished for.</p>
 
-    <!-- Open Source Note -->
-    <section class="oss-section">
-      <div class="container-narrow text-center reveal">
-        <h2 class="sub-title">Standing on the shoulders of giants.</h2>
-        <p class="mt-4">Aura wouldn't exist without the open-source community. We specifically want to acknowledge the incredible work by the <a href="https://github.com/BasedHardware/omi" target="_blank" rel="noopener">BasedHardware/omi</a> team, whose early open-source necklace designs inspired us to start building.</p>
-        <a href="https://github.com/thesohamdatta/aura" class="btn btn-primary mt-4">Star on GitHub</a>
-      </div>
-    </section>
-  </main>
+    <p>We built on the Omi open-source ecosystem — <a href="https://github.com/BasedHardware/omi" target="_blank" rel="noopener">github.com/BasedHardware/omi</a> — because it gave us a foundation to build from, not a ceiling to build under.</p>
 
-  <footer class="section-black site-footer">
-    <div class="container footer-grid">
-      <div>
-        <h4 class="nav-logo mb-2">Aura</h4>
-        <p class="text-sm">MIT Licensed open-source project.</p>
-      </div>
-      <div>
-        <span class="overline">Project</span>
-        <a href="about.html">About</a>
-        <a href="manifesto.html">Manifesto</a>
-        <a href="ai.html">AI Pipeline</a>
-      </div>
-      <div>
-        <span class="overline">Resources</span>
-        <a href="docs.html">Documentation</a>
-        <a href="https://github.com/thesohamdatta/aura" target="_blank" rel="noopener">GitHub Repo</a>
-      </div>
-    </div>
-  </footer>
+    <p>Aura is MIT licensed because it had to be. Open hardware, open firmware, open backend. If you can improve it, you should.</p>
+  </article>
+</main>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.23/dist/lenis.min.js" defer></script>
-  
-  <script src="js/nav.js" defer></script>
-  <script src="js/animations.js" defer></script>
+<footer class="site-footer">
+  <div class="container">
+    <a href="index.html" class="footer-logo">AURA</a>
+    <p class="footer-tagline">A student project at AIML dept, PES Modern College of Engineering, Pune.</p>
+    <ul class="footer-links">
+      <li><a href="https://github.com/thesohamdatta/aura" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="docs.html">Docs</a></li>
+      <li><a href="manifesto.html">Manifesto</a></li>
+    </ul>
+    <hr class="footer-divider">
+    <p class="footer-copy">© 2026 Aura. MIT License. Built in Pune, India.</p>
+  </div>
+</footer>
+
 </body>
 </html>

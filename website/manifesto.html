@@ -1,101 +1,107 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Manifesto â€” Aura</title>
-  
-  <meta name="description" content="Humans Need a Third Device. Why the smartphone era is ending, and what comes next.">
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-  
+  <title>The Third Device Hypothesis — Aura Manifesto</title>
+  <meta name="description" content="The intellectual argument for a third category of personal device: worn, screenless, ambient AI. Against the smartphone as the primary interface.">
   <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/manifesto.css">
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav id="navbar">
-    <div class="nav-container">
-      <a href="index.html" class="nav-logo">Aura</a>
-      
-      <div class="nav-links" id="nav-links">
-        <a href="about.html" class="nav-link">About</a>
-        <a href="ai.html" class="nav-link">AI Pipeline</a>
-        <a href="docs.html" class="nav-link">Docs</a>
-        <a href="manifesto.html" class="nav-link active">Manifesto</a>
-        
-        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
-          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-        </button>
-      </div>
-
-      <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Menu">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-      </button>
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">AURA</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="ai.html">AI</a></li>
+      <li><a href="docs.html">Docs</a></li>
+      <li><a href="manifesto.html" class="active">Manifesto</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="https://github.com/thesohamdatta/aura" target="_blank" rel="noopener" class="btn-primary">Build Your Own ↗</a>
     </div>
-  </nav>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-overlay" id="nav-overlay">
+  <button class="nav-overlay-close" onclick="toggleNav()" aria-label="Close menu">✕</button>
+  <ul class="nav-overlay-links">
+    <li><a href="index.html" onclick="toggleNav()">Home</a></li>
+    <li><a href="about.html" onclick="toggleNav()">About</a></li>
+    <li><a href="ai.html" onclick="toggleNav()">AI</a></li>
+    <li><a href="docs.html" onclick="toggleNav()">Docs</a></li>
+    <li><a href="manifesto.html" onclick="toggleNav()">Manifesto</a></li>
+  </ul>
+  <a href="https://github.com/thesohamdatta/aura" target="_blank" rel="noopener" class="btn-primary">Build Your Own ↗</a>
+</div>
+<script>
+function toggleNav() {
+  var overlay = document.getElementById('nav-overlay');
+  overlay.classList.toggle('open');
+}
+</script>
 
-  <main class="manifesto-page">
-    <section class="manifesto-hero">
-      <div class="container text-center reveal-stagger">
-        <span class="overline">Manifesto</span>
-        <h1 class="hero-headline">Humans Need a<br>Third Device.</h1>
-      </div>
-    </section>
+<main>
+  <section class="section-parchment">
+    <article class="manifesto-article">
+      <span class="overline">Essay</span>
+      <h1>The Third Device Hypothesis</h1>
+      <p class="manifesto-dateline">June 2026 — Pune, India</p>
 
-    <section class="manifesto-content reveal-stagger">
-      <div class="essay-container">
-        <p class="lead">The smartphone demands your attention. The laptop demands your labor. The third device demands nothing.</p>
-        
-        <h2>The tyranny of the screen</h2>
-        <p>For fifteen years, the glowing rectangle in our pockets has been the mediator between our physical reality and our digital capability. If you want to know something, you stop what you are doing, pull out the glass, unlock it, open an app, type a query, read the result, and put it away.</p>
-        <p>This is high-friction capability. It breaks eye contact. It shatters presence.</p>
-        
-        <blockquote>
-          "We have built incredible intelligence in the cloud, but we have bottlenecked it behind a six-inch screen."
-        </blockquote>
+      <h2>I. The Device Problem</h2>
 
-        <h2>Ambient intelligence</h2>
-        <p>The next era of computing isn't about better screens. It's about no screens at all. It's about ambient intelligenceâ€”systems that hear what you hear, see what you see, and quietly build context in the background without requiring a context switch from you.</p>
-        
-        <h2>Why Open Source?</h2>
-        <p>When a device is listening to your life 24/7, trust is the only currency that matters. Proprietary hardware forces you to trust a corporation. Open-source hardware allows you to trust the math. Aura is an assertion that the foundational hardware of the AI era should belong to the public domain.</p>
+      <p>The personal computer arrived and gave us a stationary interface — powerful, precise, anchored to a desk. It extended what we could do, but it required us to go to it. The smartphone came next. It was the first device that came with us, that fit in a pocket, that was always within reach. And for two decades, we called this progress.</p>
 
-        <p class="closing">The phone was the answer to the internet.<br>The pendant is the answer to AI.</p>
-      </div>
-    </section>
-  </main>
+      <p>But the smartphone was never neutral. It was designed to demand attention. Every notification, every glowing rectangle, every moment of friction between a thought and its execution — these were not bugs in the system. They were the system. The interface became the cage.</p>
 
-  <footer class="section-black site-footer">
-    <div class="container footer-grid">
-      <div>
-        <h4 class="nav-logo mb-2">Aura</h4>
-        <p class="text-sm">MIT Licensed open-source project.</p>
-      </div>
-      <div>
-        <span class="overline">Project</span>
-        <a href="about.html">About</a>
-        <a href="manifesto.html">Manifesto</a>
-        <a href="ai.html">AI Pipeline</a>
-      </div>
-      <div>
-        <span class="overline">Resources</span>
-        <a href="docs.html">Documentation</a>
-        <a href="https://github.com/thesohamdatta/aura" target="_blank" rel="noopener">GitHub Repo</a>
-      </div>
-    </div>
-  </footer>
+      <p>We have been so focused on what smartphones can do that we stopped asking what they cost. The cost is not money. It is attention. Every second you spend looking at a screen is a second you are not present in the world that surrounds you.</p>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.23/dist/lenis.min.js" defer></script>
-  
-  <script src="js/nav.js" defer></script>
-  <script src="js/animations.js" defer></script>
+      <h2>II. The Third Device</h2>
+
+      <p>There is a third category. Not stationary. Not mobile-and-demanding. Worn. Ambient. Screenless. A device that gathers context without requiring your gaze. That answers questions without requiring your hands. That listens without waiting for a command.</p>
+
+      <p>Clark and Chalmers argued in 1998 that cognition extends beyond the skull — that a notebook, a map, a person who remembers for you can all be part of a cognitive system. They called this the Extended Mind. If cognition can extend into a notebook, it can extend into a pendant. The question is what kind of extension we want.</p>
+
+      <p>Tulving's work on episodic memory shows that the human capacity for recall is associative and contextual, not indexed. We remember by reliving. An AI that captures the ambient context of a day — not as surveillance, but as a prosthesis — can become part of how we recall and reason.</p>
+
+      <h2>III. The Hypothesis</h2>
+
+      <blockquote>"The third device is not a smarter phone. It is a different kind of thing entirely. It does not ask for your eyes. It does not ask for your hands. It asks only that you speak."</blockquote>
+
+      <p>Fogg's Behaviour Model tells us that behaviour changes when motivation, ability, and a prompt converge. The smartphone prompt is a notification — it interrupts. The wearable prompt is a word — you initiate. The difference is not technical. It is relational.</p>
+
+      <p>Aura does not solve this problem. It is a prototype. The battery lasts one to two hours. The case is printed plastic. The AI is cloud-hosted and costs real money to run. We state this plainly because honesty about limitations is the only way to understand where to go next.</p>
+
+      <p>But the question it raises is real: what would it mean to carry intelligence without staring at it? What would it mean to have a device that is present without being demanding? What would change if the interface stepped back?</p>
+
+      <p class="manifesto-close">"We were not like this before."</p>
+    </article>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <a href="index.html" class="footer-logo">AURA</a>
+    <p class="footer-tagline">A student project at AIML dept, PES Modern College of Engineering, Pune.</p>
+    <ul class="footer-links">
+      <li><a href="https://github.com/thesohamdatta/aura" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="docs.html">Docs</a></li>
+      <li><a href="manifesto.html">Manifesto</a></li>
+    </ul>
+    <hr class="footer-divider">
+    <p class="footer-copy">© 2026 Aura. MIT License. Built in Pune, India.</p>
+  </div>
+</footer>
+
 </body>
 </html>

@@ -1,278 +1,174 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Documentation â€” Aura</title>
-  
-  <meta name="description" content="Technical documentation for Aura Wearable AI. Build guide, hardware BOM, API reference, and AI pipeline setup.">
-  
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-  
-  <!-- Prism.js Theme -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-one-dark.min.css">
-  
-  <!-- CSS -->
+  <title>Build Your Own Aura — Docs</title>
+  <meta name="description" content="Step-by-step guide to printing the case, flashing firmware, and running the backend for Aura, the open-source AI wearable pendant.">
   <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/docs.css">
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav id="navbar" class="scrolled"> <!-- Always frosted on docs -->
-    <div class="nav-container">
-      <a href="index.html" class="nav-logo">Aura</a>
-      
-      <div class="nav-links" id="nav-links">
-        <a href="about.html" class="nav-link">About</a>
-        <a href="ai.html" class="nav-link">AI Pipeline</a>
-        <a href="docs.html" class="nav-link active">Docs</a>
-        <a href="manifesto.html" class="nav-link">Manifesto</a>
-        
-        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
-          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-        </button>
-      </div>
-
-      <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Menu">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-      </button>
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">AURA</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="ai.html">AI</a></li>
+      <li><a href="docs.html" class="active">Docs</a></li>
+      <li><a href="manifesto.html">Manifesto</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="https://github.com/thesohamdatta/aura" target="_blank" rel="noopener" class="btn-primary">Build Your Own ↗</a>
     </div>
-  </nav>
-
-  <!-- Docs Layout -->
-  <div class="docs-layout">
-    
-    <!-- Mobile Section Selector -->
-    <div class="docs-mobile-nav">
-      <select id="docs-section-select" aria-label="Documentation Section">
-        <option value="getting-started">Getting Started</option>
-        <option value="hardware">Hardware / BOM</option>
-        <option value="assembly">Assembly</option>
-        <option value="firmware">Firmware</option>
-        <option value="backend">Backend & AI Pipeline</option>
-        <option value="mobile-app">Mobile App</option>
-        <option value="api-reference">API Reference</option>
-        <option value="contributing">Contributing</option>
-      </select>
-    </div>
-
-    <!-- Sidebar -->
-    <aside class="docs-sidebar">
-      <div class="sidebar-sticky">
-        <h3 class="overline mb-2">Documentation</h3>
-        <nav class="sidebar-nav">
-          <a href="#getting-started" class="sidebar-link active">Getting Started</a>
-          <a href="#hardware" class="sidebar-link">Hardware / BOM</a>
-          <a href="#assembly" class="sidebar-link">Assembly</a>
-          <a href="#firmware" class="sidebar-link">Firmware</a>
-          <a href="#backend" class="sidebar-link">Backend & AI Pipeline</a>
-          <a href="#mobile-app" class="sidebar-link">Mobile App</a>
-          <a href="#api-reference" class="sidebar-link">API Reference</a>
-          <a href="#contributing" class="sidebar-link">Contributing</a>
-        </nav>
-      </div>
-    </aside>
-
-    <!-- Main Content -->
-    <main class="docs-content">
-      
-      <!-- Section 1 -->
-      <section id="getting-started" class="docs-section">
-        <h1 class="hero-headline">Documentation</h1>
-        <p class="docs-lead">Everything you need to build, deploy, and extend Aura.</p>
-        
-        <h2>Getting Started</h2>
-        <p>Aura is an open-source AI pendant built around the XIAO ESP32-S3 Sense. It uses a lightweight embedded C firmware to capture audio and images, streaming them over Bluetooth/WiFi to a companion app or directly to the backend.</p>
-        <div class="callout callout-info">
-          <strong>Prerequisites</strong>
-          <p>You will need a soldering iron, a 3D printer (or printing service), and basic knowledge of the Arduino IDE or PlatformIO.</p>
-        </div>
-      </section>
-
-      <hr>
-
-      <!-- Section 2 -->
-      <section id="hardware" class="docs-section">
-        <h2>Hardware & BOM</h2>
-        <p>The total cost to build an Aura pendant is approximately $50 USD. Prices fluctuate based on supplier (AliExpress/Digikey).</p>
-        
-        <table class="docs-table">
-          <thead>
-            <tr>
-              <th>Component</th>
-              <th>Spec/Model</th>
-              <th>Est. Cost</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Microcontroller</td>
-              <td>Seeed Studio XIAO ESP32-S3 Sense</td>
-              <td>$14.99</td>
-            </tr>
-            <tr>
-              <td>Battery</td>
-              <td>3.7V 400mAh LiPo (502030)</td>
-              <td>$4.00</td>
-            </tr>
-            <tr>
-              <td>Microphone</td>
-              <td>INMP441 (I2S Interface)</td>
-              <td>$2.50</td>
-            </tr>
-            <tr>
-              <td>Camera</td>
-              <td>OV2640 (Included with XIAO Sense)</td>
-              <td>$0.00</td>
-            </tr>
-            <tr>
-              <td>Enclosure</td>
-              <td>3D Printed Resin / PLA</td>
-              <td>~$3.00</td>
-            </tr>
-            <tr>
-              <td>Misc</td>
-              <td>Wires, Kapton tape, Lanyard ring</td>
-              <td>$5.00</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-
-      <hr>
-
-      <!-- Section 3 -->
-      <section id="assembly" class="docs-section">
-        <h2>Assembly</h2>
-        <p>Assembly takes roughly 45 minutes for an experienced maker.</p>
-        <ol>
-          <li><strong>Solder the Microphone:</strong> Connect the INMP441 VDD to 3.3V, GND to GND, L/R to GND, WS to GPIO 42, SCK to GPIO 41, and SD to GPIO 40.</li>
-          <li><strong>Attach Camera:</strong> Snap the OV2640 camera connector onto the XIAO board.</li>
-          <li><strong>Battery:</strong> Solder the battery wires to the battery pads on the back of the XIAO.</li>
-          <li><strong>Housing:</strong> Carefully insert the assembled unit into the 3D printed housing, ensuring the camera lens aligns with the front aperture.</li>
-        </ol>
-      </section>
-
-      <hr>
-
-      <!-- Section 4 -->
-      <section id="firmware" class="docs-section">
-        <h2>Firmware</h2>
-        <p>We use PlatformIO to manage the build process. The firmware handles I2S audio recording, JPEG compression for the camera, and BLE/WiFi networking.</p>
-        
-        <h3>Flashing the device</h3>
-        <pre><code class="language-bash">
-# Clone the repository
-git clone https://github.com/thesohamdatta/aura.git
-
-# Navigate to firmware
-cd aura/firmware
-
-# Build and flash via PlatformIO
-pio run -t upload
-        </code></pre>
-      </section>
-
-      <hr>
-
-      <!-- Section 5 -->
-      <section id="backend" class="docs-section">
-        <h2>Backend & AI Pipeline</h2>
-        <p>The backend routes hardware streams through four major AI services.</p>
-        
-        <ol>
-          <li><strong>Deepgram:</strong> Real-time streaming transcription of the I2S audio feed.</li>
-          <li><strong>Groq:</strong> Llama-3 inference for sub-second intent classification and conversational responses.</li>
-          <li><strong>OpenAI:</strong> GPT-4o for processing the 1fps visual stream from the OV2640.</li>
-          <li><strong>Pinecone:</strong> Vector database for long-term memory retrieval based on transcript embeddings.</li>
-        </ol>
-
-        <div class="callout callout-warning">
-          <strong>API Keys Required</strong>
-          <p>You must copy `.env.example` to `.env` and fill in your keys for Deepgram, Groq, OpenAI, and Pinecone before starting the backend.</p>
-        </div>
-      </section>
-
-      <hr>
-
-      <!-- Section 6 -->
-      <section id="mobile-app" class="docs-section">
-        <h2>Mobile App</h2>
-        <p>The companion app (React Native) is used for provisioning WiFi credentials to the pendant and acting as an alternative bridge when away from known WiFi networks.</p>
-        <pre><code class="language-bash">
-cd app/
-npm install
-npx expo start
-        </code></pre>
-      </section>
-
-      <hr>
-
-      <!-- Section 7 -->
-      <section id="api-reference" class="docs-section">
-        <h2>API Reference</h2>
-        <p>The device communicates with the backend via WebSocket for real-time audio, and REST for settings.</p>
-        
-        <h3>WebSocket: Audio Stream</h3>
-        <p><code>wss://api.aura.local/v1/stream</code></p>
-        <p>Expects raw 16kHz 16-bit PCM audio chunks.</p>
-
-        <h3>REST: Memory Query</h3>
-        <p><code>GET /v1/memory</code></p>
-        <pre><code class="language-json">
-// Request
-{
-  "query": "Where did I leave my keys?",
-  "timeframe": "last_24_hours"
-}
-
-// Response
-{
-  "status": "success",
-  "answer": "You left them on the kitchen counter at 8:45 AM.",
-  "confidence": 0.92,
-  "source_image_id": "img_993821"
-}
-        </code></pre>
-      </section>
-
-      <hr>
-
-      <!-- Section 8 -->
-      <section id="contributing" class="docs-section">
-        <h2>Contributing</h2>
-        <p>We welcome pull requests for firmware optimizations, backend integrations, and hardware enclosure designs.</p>
-        <ul>
-          <li><strong>Hardware:</strong> Submit `.step` files and STL exports.</li>
-          <li><strong>Code:</strong> Ensure PRs pass the GitHub Actions CI pipeline.</li>
-          <li><strong>Bugs:</strong> Use the Issue Tracker with the appropriate tags.</li>
-        </ul>
-      </section>
-      
-      <!-- Footer margin -->
-      <div style="height: 100px;"></div>
-
-    </main>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </button>
   </div>
+</nav>
+<div class="nav-overlay" id="nav-overlay">
+  <button class="nav-overlay-close" onclick="toggleNav()" aria-label="Close menu">✕</button>
+  <ul class="nav-overlay-links">
+    <li><a href="index.html" onclick="toggleNav()">Home</a></li>
+    <li><a href="about.html" onclick="toggleNav()">About</a></li>
+    <li><a href="ai.html" onclick="toggleNav()">AI</a></li>
+    <li><a href="docs.html" onclick="toggleNav()">Docs</a></li>
+    <li><a href="manifesto.html" onclick="toggleNav()">Manifesto</a></li>
+  </ul>
+  <a href="https://github.com/thesohamdatta/aura" target="_blank" rel="noopener" class="btn-primary">Build Your Own ↗</a>
+</div>
+<script>
+function toggleNav() {
+  var overlay = document.getElementById('nav-overlay');
+  overlay.classList.toggle('open');
+}
+</script>
 
-  <!-- Scripts -->
-  <!-- Prism.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-json.min.js" defer></script>
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.23/dist/lenis.min.js" defer></script>
-  
-  <script src="js/nav.js" defer></script>
-  <script src="js/animations.js" defer></script>
-  <script src="js/docs.js" defer></script>
+<main>
+  <section class="section-white">
+    <div class="docs-page">
+
+      <h1>Build Your Own Aura</h1>
+      <p class="docs-intro">Everything you need to build an Aura pendant. Hardware files, firmware, and backend are all open source under MIT license.</p>
+
+      <table class="docs-table">
+        <thead>
+          <tr>
+            <th>Component</th>
+            <th>Source</th>
+            <th>Cost</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>XIAO ESP32-S3 Sense</td>
+            <td>Seeed Studio / Amazon</td>
+            <td>$15–24</td>
+          </tr>
+          <tr>
+            <td>OV2640 Camera Module</td>
+            <td>Included with XIAO Sense</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>MEMS Microphone</td>
+            <td>Included with XIAO Sense</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>150mAh LiPo × 6</td>
+            <td>Amazon</td>
+            <td>$12</td>
+          </tr>
+          <tr>
+            <td>Wires &amp; connectors</td>
+            <td>Local electronics</td>
+            <td>$5</td>
+          </tr>
+          <tr>
+            <td>3D printed case</td>
+            <td>Print yourself or online</td>
+            <td>$5–10</td>
+          </tr>
+          <tr>
+            <td>USB-C cable</td>
+            <td>Anywhere</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td><strong>Total</strong></td>
+            <td>—</td>
+            <td><strong>~$50–70</strong></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Step 1 -->
+      <section class="docs-step">
+        <h2>1. Print the Case</h2>
+        <p>STL files are in the <code>hardware/</code> directory on GitHub.</p>
+        <p>Recommended: PLA, 0.2mm layer height, 15% infill.</p>
+        <a href="https://github.com/thesohamdatta/aura/tree/main/hardware" target="_blank" rel="noopener">View STL files on GitHub →</a>
+      </section>
+
+      <!-- Step 2 -->
+      <section class="docs-step">
+        <h2>2. Flash the Firmware</h2>
+        <p>Requires Arduino IDE 2.x with ESP32 board package version 2.9.0 (exact version).</p>
+        <pre class="code-block">Board: XIAO_ESP32S3
+PSRAM: OPI PSRAM  ← required for camera
+Upload Speed: 921600</pre>
+        <a href="https://github.com/thesohamdatta/aura/tree/main/firmware" target="_blank" rel="noopener">View firmware on GitHub →</a>
+      </section>
+
+      <!-- Step 3 -->
+      <section class="docs-step">
+        <h2>3. Run the Backend</h2>
+        <p>Python 3.11+, FastAPI.</p>
+        <pre class="code-block">git clone https://github.com/thesohamdatta/aura
+cd aura/backend
+pip install -r requirements.txt
+cp .env.example .env
+# Edit .env: add your API keys
+uvicorn main:app --reload</pre>
+        <a href="https://github.com/thesohamdatta/aura/tree/main/backend" target="_blank" rel="noopener">View backend on GitHub →</a>
+      </section>
+
+      <!-- Step 4 -->
+      <section class="docs-step">
+        <h2>4. Configure API Keys</h2>
+        <pre class="code-block">DEEPGRAM_API_KEY=your_key_here
+GROQ_API_KEY=your_key_here
+OPENAI_API_KEY=your_key_here  # for GPT-4o vision
+PINECONE_API_KEY=your_key_here
+PINECONE_ENV=your_environment</pre>
+        <p>Deepgram free tier at <a href="https://console.deepgram.com" target="_blank" rel="noopener">console.deepgram.com</a>. Groq free tier at <a href="https://console.groq.com" target="_blank" rel="noopener">console.groq.com</a>.</p>
+      </section>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <a href="index.html" class="footer-logo">AURA</a>
+    <p class="footer-tagline">A student project at AIML dept, PES Modern College of Engineering, Pune.</p>
+    <ul class="footer-links">
+      <li><a href="https://github.com/thesohamdatta/aura" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="docs.html">Docs</a></li>
+      <li><a href="manifesto.html">Manifesto</a></li>
+    </ul>
+    <hr class="footer-divider">
+    <p class="footer-copy">© 2026 Aura. MIT License. Built in Pune, India.</p>
+  </div>
+</footer>
+
 </body>
 </html>

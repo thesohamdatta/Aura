@@ -1,0 +1,259 @@
+/* =============================================================
+   style.css — Aura Base Styles
+   Minimal reset, layout utilities, and component patterns.
+   Depends on global.css for all design tokens.
+   ============================================================= */
+
+/* ── Reset ──────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-text);
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+  color: var(--color-ink);
+  background-color: var(--color-canvas-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img, video, svg {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--color-action-blue);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+  border-radius: var(--radius-utility);
+}
+
+/* ── Layout utilities ───────────────────────────────────────── */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: var(--space-lg);
+}
+
+.section {
+  padding-block: var(--space-3xl);
+}
+
+.section-sm {
+  padding-block: var(--space-2xl);
+}
+
+/* ── Section background alternation classes ─────────────────── */
+.section-white {
+  background-color: var(--color-canvas-white);
+  color: var(--color-ink);
+}
+
+.section-parchment {
+  background-color: var(--color-canvas-parchment);
+  color: var(--color-ink);
+}
+
+.section-dark {
+  background-color: var(--color-canvas-dark);
+  color: var(--color-ink-dark);
+}
+
+.section-black {
+  background-color: var(--color-canvas-black);
+  color: var(--color-ink-dark);
+}
+
+/* ── Typography ─────────────────────────────────────────────── */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: var(--tracking-display);
+  line-height: var(--leading-tight);
+}
+
+h1 { font-size: var(--text-hero); }
+h2 { font-size: var(--text-display); }
+h3 { font-size: var(--text-title); }
+
+p {
+  max-width: 68ch;
+  line-height: var(--leading-body);
+  color: var(--color-ink-secondary);
+}
+
+.section-dark p,
+.section-black p {
+  color: var(--color-ink-dark-secondary);
+}
+
+blockquote {
+  border-left: 3px solid var(--color-action-blue);
+  padding-left: var(--space-lg);
+  margin-block: var(--space-xl);
+  font-size: var(--text-title);
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--color-ink);
+  letter-spacing: var(--tracking-display);
+  line-height: var(--leading-loose);
+}
+
+/* ── Overline label ─────────────────────────────────────────── */
+.overline {
+  font-size: var(--text-caption);
+  font-family: var(--font-text);
+  font-weight: 400;
+  letter-spacing: var(--tracking-nav);
+  text-transform: uppercase;
+  color: var(--color-ink-secondary);
+  margin-bottom: var(--space-md);
+  display: block;
+}
+
+.section-dark .overline,
+.section-black .overline {
+  color: var(--color-ink-dark-secondary);
+}
+
+/* ── Buttons ────────────────────────────────────────────────── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: 10px 22px;
+  background-color: var(--color-action-blue);
+  color: #ffffff;
+  font-family: var(--font-text);
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: var(--radius-pill);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color var(--duration-fast) var(--ease-standard),
+              transform var(--duration-fast) var(--ease-standard);
+  white-space: nowrap;
+}
+
+.btn-primary:hover {
+  background-color: #004fa3;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: 9px 22px;
+  background-color: transparent;
+  color: var(--color-action-blue);
+  font-family: var(--font-text);
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-action-blue);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color var(--duration-fast) var(--ease-standard),
+              color var(--duration-fast) var(--ease-standard),
+              transform var(--duration-fast) var(--ease-standard);
+  white-space: nowrap;
+}
+
+.btn-ghost:hover {
+  background-color: var(--color-action-blue);
+  color: #ffffff;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.btn-ghost:active {
+  transform: translateY(0);
+}
+
+/* ── Cards ──────────────────────────────────────────────────── */
+.spec-card {
+  background-color: var(--color-canvas-parchment);
+  border-radius: var(--radius-card);
+  padding: var(--space-lg);
+}
+
+.stack-card {
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-card);
+  padding: var(--space-lg);
+  color: var(--color-ink-dark);
+}
+
+/* ── Grid helpers ───────────────────────────────────────────── */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-md);
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-md);
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-md);
+}
+
+/* ── CTA group ──────────────────────────────────────────────── */
+.cta-group {
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .section {
+    padding-block: var(--space-2xl);
+  }
+
+  .container {
+    padding-inline: var(--space-md);
+  }
+
+  h1 { font-size: clamp(32px, 8vw, 52px); }
+  h2 { font-size: clamp(24px, 6vw, 36px); }
+}
+
+@media (max-width: 375px) {
+  .container {
+    padding-inline: var(--space-md);
+  }
+}

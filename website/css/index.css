@@ -1,0 +1,140 @@
+/* =============================================================
+   index.css — Aura Home Page Styles
+   Page-specific styles for index.html.
+   Depends on global.css, style.css, nav.css, footer.css.
+   ============================================================= */
+
+/* ── Text-center utility ────────────────────────────────────── */
+.text-center {
+  text-align: center;
+}
+
+.text-center p {
+  margin-inline: auto;
+}
+
+/* ── Hero section ───────────────────────────────────────────── */
+.hero {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: var(--space-xl);
+}
+
+.hero h1 {
+  color: var(--color-ink);
+  max-width: 16ch;
+  margin-inline: auto;
+}
+
+.hero p {
+  max-width: 46ch;
+  margin-inline: auto;
+}
+
+/* ── Pendant float animation ────────────────────────────────── */
+.hero-pendant {
+  margin-block: var(--space-2xl);
+  display: flex;
+  justify-content: center;
+}
+
+.hero-pendant svg {
+  animation: float 3s ease-in-out infinite;
+  box-shadow: var(--shadow-product);
+  border-radius: 50%;
+}
+
+@keyframes float {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+
+/* ── Spec grid ──────────────────────────────────────────────── */
+.spec-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.spec-card .spec-value {
+  font-size: var(--text-title);
+  font-weight: 600;
+  color: var(--color-ink);
+  font-family: var(--font-display);
+  margin-bottom: var(--space-xs);
+}
+
+.spec-card .spec-label {
+  font-size: var(--text-caption);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-nav);
+  color: var(--color-ink-secondary);
+  line-height: var(--leading-body);
+}
+
+/* ── Spec note ──────────────────────────────────────────────── */
+.spec-note {
+  font-size: 13px;
+  margin-top: var(--space-xl);
+  color: var(--color-ink-secondary);
+  max-width: none;
+}
+
+.spec-note a {
+  color: var(--color-action-blue);
+}
+
+/* ── Stack cards ────────────────────────────────────────────── */
+.stack-card h3 {
+  font-size: var(--text-body);
+  font-weight: 600;
+  color: var(--color-ink-dark);
+  margin-bottom: var(--space-xs);
+}
+
+.stack-card p {
+  font-size: 14px;
+  color: var(--color-ink-dark-secondary);
+  max-width: none;
+}
+
+.stack-icon {
+  width: 32px;
+  height: 32px;
+  margin-bottom: var(--space-sm);
+}
+
+/* ── Section spacing overrides for problem section ──────────── */
+.section-parchment p + p {
+  margin-top: var(--space-lg);
+}
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 70vh;
+    gap: var(--space-lg);
+  }
+
+  .hero-pendant {
+    margin-block: var(--space-xl);
+  }
+
+  .spec-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: 60vh;
+  }
+
+  .cta-group {
+    flex-direction: column;
+    align-items: center;
+  }
+}

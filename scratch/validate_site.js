@@ -12,7 +12,7 @@ const pages = [
 let globalErrors = 0;
 
 pages.forEach(page => {
-  const htmlPath = path.join(__dirname, '../web', page);
+  const htmlPath = path.join(__dirname, '../website', page);
   if (!fs.existsSync(htmlPath)) {
     console.error(`ERROR: ${page} not found at ${htmlPath}!`);
     globalErrors++;

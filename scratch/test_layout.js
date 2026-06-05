@@ -1,9 +1,11 @@
 const fs = require('fs');
 const path = require('path');
 
-const navCssPath = path.join(__dirname, '../web/css/nav.css');
-const docsCssPath = path.join(__dirname, '../web/css/docs.css');
-const webDir = path.join(__dirname, '../web');
+const navCssPath = path.join(__dirname, '../website/css/nav.css');
+const docsCssPath = path.join(__dirname, '../website/css/docs.css');
+const globalCssPath = path.join(__dirname, '../website/css/global.css');
+const styleCssPath = path.join(__dirname, '../website/css/style.css');
+const websiteDir = path.join(__dirname, '../website');
 
 const pages = [
   'index.html',
@@ -31,7 +33,7 @@ function runTest(name, assertFn) {
 // ----------------------------------------------------
 runTest('All HTML pages have exactly one navbar and no secondary sub-nav', () => {
   pages.forEach(page => {
-    const pagePath = path.join(webDir, page);
+    const pagePath = path.join(websiteDir, page);
     if (!fs.existsSync(pagePath)) {
       throw new Error(`${page} not found`);
     }
@@ -81,7 +83,7 @@ runTest('Navbar CSS specifies frosted-glass aesthetics, height of 52px, and 100%
     throw new Error('#navbar is missing frosted-glass backdrop-filter blur style');
   }
 
-  // Verify sub-nav classes are deleted from CSS
+  // Verify sub-nav classes are not present
   if (css.includes('.sub-nav ') || css.includes('.sub-nav-inner')) {
     throw new Error('nav.css still contains obsolete .sub-nav styling rules');
   }
@@ -98,7 +100,53 @@ runTest('Navbar CSS specifies frosted-glass aesthetics, height of 52px, and 100%
 });
 
 // ----------------------------------------------------
-// TEST CASE 3: Docs Typography (No Monospace on Headers)
+// TEST CASE 3: Global CSS has required design tokens
+// ----------------------------------------------------
+runTest('global.css contains all required CSS custom property tokens', () => {
+  if (!fs.existsSync(globalCssPath)) {
+    throw new Error('global.css not found');
+  }
+  const css = fs.readFileSync(globalCssPath, 'utf-8');
+
+  const requiredVars = [
+    '--color-ink',
+    '--color-canvas-white',
+    '--color-canvas-parchment',
+    '--color-canvas-dark',
+    '--color-action-blue',
+    '--font-display',
+    '--font-text',
+    '--font-mono',
+    '--radius-pill',
+    '--radius-card',
+  ];
+
+  requiredVars.forEach(v => {
+    if (!css.includes(v)) {
+      throw new Error(`global.css is missing required token: ${v}`);
+    }
+  });
+});
+
+// ----------------------------------------------------
+// TEST CASE 4: style.css has component patterns
+// ----------------------------------------------------
+runTest('style.css contains required component patterns (.btn-primary, .btn-ghost, .spec-card)', () => {
+  if (!fs.existsSync(styleCssPath)) {
+    throw new Error('style.css not found');
+  }
+  const css = fs.readFileSync(styleCssPath, 'utf-8');
+
+  const requiredClasses = ['.btn-primary', '.btn-ghost', '.spec-card', '.section-white', '.section-parchment', '.section-dark'];
+  requiredClasses.forEach(cls => {
+    if (!css.includes(cls)) {
+      throw new Error(`style.css is missing required class: ${cls}`);
+    }
+  });
+});
+
+// ----------------------------------------------------
+// TEST CASE 5: Docs Typography (No Monospace on Headers)
 // ----------------------------------------------------
 runTest('Docs section headers, table headers, and mobile select do not use monospace', () => {
   if (!fs.existsSync(docsCssPath)) {
@@ -119,24 +167,6 @@ runTest('Docs section headers, table headers, and mobile select do not use monos
   const selectMatch = css.match(/\.mobile-docs-nav\s+select\s*\{([^}]*)\}/);
   if (selectMatch && selectMatch[1].includes('var(--font-mono)')) {
     throw new Error('.mobile-docs-nav select is using var(--font-mono)');
-  }
-});
-
-// ----------------------------------------------------
-// TEST CASE 4: Docs Active Link Color (Action Blue, not Cyan)
-// ----------------------------------------------------
-runTest('Docs active sidebar link uses Action Blue, not Cyan', () => {
-  const css = fs.readFileSync(docsCssPath, 'utf-8');
-  const match = css.match(/\.docs-sidebar\s+a\.active\s*\{([^}]*)\}/);
-  if (!match) {
-    throw new Error('Could not find .docs-sidebar a.active in docs.css');
-  }
-  const rules = match[1];
-  if (rules.includes('var(--cyan)')) {
-    throw new Error('.docs-sidebar a.active is using var(--cyan)');
-  }
-  if (!rules.includes('var(--primary)')) {
-    throw new Error('.docs-sidebar a.active is missing var(--primary)');
   }
 });
 

@@ -1,0 +1,73 @@
+/* =============================================================
+   footer.css — Aura Footer
+   Black background, white secondary text.
+   ============================================================= */
+
+.site-footer {
+  background-color: var(--color-canvas-black);
+  color: var(--color-ink-dark-secondary);
+  padding-block: var(--space-2xl);
+}
+
+.site-footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-md);
+}
+
+.footer-logo {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--color-ink-dark);
+  text-decoration: none;
+}
+
+.footer-tagline {
+  font-size: 13px;
+  color: var(--color-ink-dark-secondary);
+  max-width: 52ch;
+  text-align: center;
+  line-height: var(--leading-body);
+}
+
+.footer-links {
+  display: flex;
+  gap: var(--space-lg);
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+}
+
+.footer-links a {
+  font-size: 13px;
+  color: var(--color-ink-dark-secondary);
+  text-decoration: none;
+  transition: color var(--duration-fast) var(--ease-standard);
+}
+
+.footer-links a:hover {
+  color: var(--color-ink-dark);
+  text-decoration: none;
+}
+
+.footer-divider {
+  width: 100%;
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-copy {
+  font-size: 12px;
+  color: var(--color-ink-dark-secondary);
+  opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+  .site-footer {
+    padding-block: var(--space-xl);
+  }
+}

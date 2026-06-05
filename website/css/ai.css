@@ -1,218 +1,169 @@
-/* website/css/ai.css */
-/* AI Pipeline page specific styles */
+/* =============================================================
+   ai.css — Aura AI Pipeline Page Styles
+   Scoped styles for ai.html only.
+   All values use CSS custom properties from global.css.
+   ============================================================= */
+
+/* ── Hero ──────────────────────────────────────────────────── */
 
 .ai-hero {
-  padding-top: calc(52px + 12vh);
-  padding-bottom: 8vh;
-}
-
-.ai-lead {
-  font-size: clamp(18px, 2vw, 22px);
-  color: var(--text-secondary);
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-/* Pipeline Diagram */
-.pipeline-diagram {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 40px 0;
-  position: relative;
-}
-
-.pipeline-node {
-  background: #111111; /* Darker than black for contrast in black section */
-  border: 1px solid rgba(255,255,255,0.15);
-  border-radius: 16px;
-  padding: 24px;
-  width: 240px;
+  padding-block: var(--space-3xl);
   text-align: center;
-  position: relative;
-  z-index: 2;
 }
 
-.pipeline-node.hardware {
-  border-color: var(--cyan);
+.ai-hero h1 {
+  color: var(--color-ink-dark);
 }
 
-.pipeline-node .mono {
-  display: block;
-  font-size: 11px;
-  color: var(--cyan);
+.ai-hero p {
+  color: var(--color-ink-dark-secondary);
+  margin-inline: auto;
+}
+
+.ai-disclosure {
+  margin-top: var(--space-xl);
+  padding: var(--space-lg);
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-card);
+  border-left: 3px solid var(--color-aura-teal);
+  text-align: left;
+  max-width: 680px;
+  margin-inline: auto;
+}
+
+/* ── Pipeline Grid ─────────────────────────────────────────── */
+
+.pipeline-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: var(--space-lg);
+  padding-block: var(--space-2xl);
+}
+
+/* ── Pipeline Card ─────────────────────────────────────────── */
+
+.pipeline-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-card);
+  padding: var(--space-xl);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-lg);
+  align-items: start;
+  transition: border-color var(--duration-base) var(--ease-standard);
+}
+
+.pipeline-card:hover {
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+.pipeline-card h2 {
+  color: var(--color-ink-dark);
+  font-size: var(--text-title);
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: var(--tracking-display);
+  margin-block: 0 var(--space-sm);
+}
+
+.pipeline-card p {
+  color: var(--color-ink-dark-secondary);
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+  margin: 0;
+}
+
+/* ── Card Body ─────────────────────────────────────────────── */
+
+.pipeline-card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Pipeline Label (sub-heading above h2) ─────────────────── */
+
+.pipeline-label {
+  font-size: var(--text-caption);
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin-bottom: 8px;
+  letter-spacing: var(--tracking-nav);
+  color: var(--color-aura-teal);
+  margin-bottom: var(--space-sm);
+  font-family: var(--font-text);
+  font-weight: 600;
 }
 
-.pipeline-node strong {
-  display: block;
-  font-family: var(--font-display);
-  font-size: 24px;
-  margin-bottom: 4px;
-}
+/* ── Metric ────────────────────────────────────────────────── */
 
-.pipeline-node small {
-  color: rgba(255,255,255,0.6);
-  font-size: 13px;
-}
-
-.pipeline-connector {
+.pipeline-metric {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 60px;
-  position: relative;
+  align-items: baseline;
+  gap: var(--space-xs);
+  margin-top: var(--space-md);
 }
 
-.pipeline-connector .line {
-  width: 2px;
-  height: 100%;
-  background: linear-gradient(to bottom, var(--cyan) 0%, rgba(255,255,255,0.2) 100%);
-}
-
-.pipeline-connector .dot {
-  width: 8px;
-  height: 8px;
-  background: var(--cyan);
-  border-radius: 50%;
-  position: absolute;
-  top: 0;
-  /* Animation handled by GSAP in ai.js */
-}
-
-.pipeline-branches {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-  width: 100%;
-  margin-top: 40px;
-  position: relative;
-}
-
-/* Horizontal connecting line for branches */
-.pipeline-branches::before {
-  content: '';
-  position: absolute;
-  top: -40px;
-  left: 12.5%; /* Center of first branch */
-  right: 12.5%; /* Center of last branch */
-  height: 2px;
-  background: rgba(255,255,255,0.2);
-}
-
-.branch {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.branch .pipeline-connector.vertical {
-  width: 2px;
-  height: 40px;
-  background: rgba(255,255,255,0.2);
-  margin-top: -40px;
-}
-
-.pipeline-node.service {
-  width: 100%;
-  max-width: 220px;
-}
-
-/* Capabilities Grid */
-.capabilities-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 32px;
-  padding: 80px 0;
-}
-
-.cap-card {
-  padding: 40px;
-  border-radius: 24px;
-  background-color: var(--bg-secondary);
-  border: 1px solid var(--border);
-  transition: transform 0.3s ease, border-color 0.3s ease;
-}
-
-.cap-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--text-tertiary);
-}
-
-.cap-metric {
+.metric-value {
   font-family: var(--font-display);
-  font-size: 48px;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  color: var(--cyan);
-  margin-bottom: 24px;
+  font-size: var(--text-display);
+  font-weight: 600;
+  color: var(--color-ink-dark);
+  letter-spacing: var(--tracking-display);
+  line-height: var(--leading-tight);
 }
 
-/* Honesty Box */
-.honesty-section {
-  padding-bottom: 120px;
+.metric-label {
+  font-size: var(--text-caption);
+  color: var(--color-ink-dark-secondary);
+  font-family: var(--font-text);
 }
 
-.honesty-box {
-  background-color: var(--bg-secondary);
-  border-radius: 24px;
-  padding: 48px;
-  border-left: 6px solid var(--rose);
+/* ── Tag ───────────────────────────────────────────────────── */
+
+.pipeline-tag {
+  display: inline-block;
+  font-size: 11px;
+  padding: 2px 10px;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-ink-dark-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-top: var(--space-sm);
+  font-family: var(--font-text);
+  width: fit-content;
 }
 
-.honesty-list {
-  list-style: none;
-  padding: 0;
+/* ── Icon Column ───────────────────────────────────────────── */
+
+.pipeline-icon {
+  width: 48px;
+  flex-shrink: 0;
+  padding-top: var(--space-xs);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  opacity: 0.85;
 }
 
-.honesty-list li {
-  position: relative;
-  padding-left: 24px;
-  margin-bottom: 16px;
-  color: var(--text-secondary);
-}
+/* ── Responsive ────────────────────────────────────────────── */
 
-.honesty-list li::before {
-  content: '→';
-  position: absolute;
-  left: 0;
-  color: var(--rose);
-  font-weight: bold;
-}
-
-.honesty-list strong {
-  color: var(--text-primary);
-}
-
-/* Responsive */
-@media (max-width: 1024px) {
-  .pipeline-branches {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px 24px;
+@media (max-width: 600px) {
+  .pipeline-card {
+    grid-template-columns: 1fr;
   }
-  
-  .pipeline-branches::before {
-    display: none; /* Hide horizontal line, layout gets too complex, rely on flex stacking */
-  }
-  
-  .branch .pipeline-connector.vertical {
+
+  .pipeline-icon {
     display: none;
   }
-}
 
-@media (max-width: 768px) {
-  .capabilities-grid {
-    grid-template-columns: 1fr;
+  .ai-hero {
+    padding-block: var(--space-2xl);
   }
-  
-  .pipeline-branches {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-  
-  .honesty-box {
-    padding: 32px 24px;
+
+  .pipeline-grid {
+    padding-inline: var(--space-md);
   }
 }

@@ -1,138 +1,172 @@
-/* website/css/nav.css */
-/* Shared navigation styling */
+/* =============================================================
+   nav.css — Aura Navigation Bar
+   Frosted glass sticky nav. Mobile hamburger overlay.
+   ============================================================= */
 
+/* ── Nav bar ────────────────────────────────────────────────── */
 #navbar {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 52px;
-  background: transparent;
+  right: 0;
   z-index: 1000;
-  transition: background-color 0.4s ease, border-bottom 0.4s ease;
+  height: 52px;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  background: rgba(245, 245, 247, 0.72);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
 }
 
-#navbar.scrolled {
-  background: var(--nav-bg);
-  backdrop-filter: saturate(180%) blur(20px);
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
-  border-bottom: 1px solid var(--border);
-}
-
-.nav-container {
-  max-width: var(--max-content);
-  margin: 0 auto;
-  height: 100%;
-  padding: 0 24px;
+.nav-inner {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: var(--space-lg);
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: var(--space-lg);
 }
 
+/* ── Logo ───────────────────────────────────────────────────── */
 .nav-logo {
   font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 20px;
-  color: var(--text-primary);
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--color-ink);
   text-decoration: none;
-  letter-spacing: -0.015em;
+  flex-shrink: 0;
 }
 
+.nav-logo:hover {
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+/* ── Center links ───────────────────────────────────────────── */
 .nav-links {
   display: flex;
-  gap: 24px;
   align-items: center;
+  gap: var(--space-lg);
+  list-style: none;
 }
 
-.nav-link {
-  font-size: 13px;
-  color: var(--text-primary);
+.nav-links a {
+  font-family: var(--font-text);
+  font-size: var(--text-caption);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-ink-secondary);
   text-decoration: none;
-  opacity: 0.8;
-  transition: opacity 0.2s ease;
+  transition: color var(--duration-fast) var(--ease-standard);
 }
 
-.nav-link:hover, .nav-link.active {
-  opacity: 1;
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--color-ink);
+  text-decoration: none;
 }
 
-/* Theme Toggle Button */
-.theme-toggle {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--text-primary);
-  opacity: 0.8;
-  transition: opacity 0.2s ease;
+/* ── Right CTA ──────────────────────────────────────────────── */
+.nav-cta {
+  flex-shrink: 0;
 }
 
-.theme-toggle:hover {
-  opacity: 1;
-}
-
-.theme-toggle svg {
-  width: 18px;
-  height: 18px;
-  fill: currentColor;
-}
-
-/* SVG Icon toggling */
-[data-theme="dark"] .icon-moon { display: none; }
-[data-theme="light"] .icon-sun { display: none; }
-[data-theme="light"] .icon-moon { display: block; }
-[data-theme="dark"] .icon-sun { display: block; }
-
-
-/* Mobile Nav */
-.mobile-menu-btn {
+/* ── Hamburger (mobile only) ────────────────────────────────── */
+.nav-hamburger {
   display: none;
   background: none;
   border: none;
   cursor: pointer;
-  padding: 4px;
-  color: var(--text-primary);
+  padding: var(--space-xs);
+  color: var(--color-ink);
+  flex-direction: column;
+  gap: 5px;
 }
 
-.mobile-menu-btn svg {
-  width: 24px;
-  height: 24px;
-  stroke: currentColor;
-  stroke-width: 2;
-  stroke-linecap: round;
+.nav-hamburger span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background-color: var(--color-ink);
+  border-radius: 2px;
+  transition: transform var(--duration-fast) var(--ease-standard),
+              opacity var(--duration-fast) var(--ease-standard);
 }
 
+/* ── Mobile overlay ─────────────────────────────────────────── */
+.nav-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: var(--color-canvas-parchment);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xl);
+  transform: translateX(100%);
+  transition: transform var(--duration-base) var(--ease-standard);
+}
+
+.nav-overlay.open {
+  display: flex;
+  transform: translateX(0);
+}
+
+.nav-overlay-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.nav-overlay-links a {
+  font-family: var(--font-display);
+  font-size: var(--text-display);
+  font-weight: 600;
+  letter-spacing: var(--tracking-display);
+  color: var(--color-ink);
+  text-decoration: none;
+  transition: opacity var(--duration-fast) var(--ease-standard);
+}
+
+.nav-overlay-links a:hover {
+  opacity: 0.6;
+  text-decoration: none;
+}
+
+.nav-overlay-close {
+  position: absolute;
+  top: var(--space-lg);
+  right: var(--space-lg);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: var(--color-ink);
+  padding: var(--space-xs);
+  line-height: 1;
+}
+
+/* ── Page body offset ───────────────────────────────────────── */
+body {
+  padding-top: 52px;
+}
+
+/* ── Responsive ─────────────────────────────────────────────── */
 @media (max-width: 768px) {
-  .mobile-menu-btn {
-    display: block;
+  .nav-links,
+  .nav-cta {
+    display: none;
   }
-  
-  .nav-links {
-    position: fixed;
-    top: 52px;
-    left: 0;
-    width: 100%;
-    height: calc(100vh - 52px);
-    background: var(--bg-primary);
-    flex-direction: column;
-    padding: 48px 24px;
-    transform: translateY(-100%);
-    opacity: 0;
-    pointer-events: none;
-    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
-  }
-  
-  .nav-links.nav-open {
-    transform: translateY(0);
-    opacity: 1;
-    pointer-events: auto;
-  }
-  
-  .nav-link {
-    font-size: 24px;
-    font-weight: 600;
+
+  .nav-hamburger {
+    display: flex;
   }
 }
