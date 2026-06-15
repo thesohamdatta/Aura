@@ -18,16 +18,16 @@
 <!-- Top Navigation Anchor (from JSON) -->
 <nav id="navbar" class="fixed top-0 w-full h-[52px] z-[100] bg-transparent transition-all duration-300">
 <div class="nav-inner flex justify-between items-center px-margin-base w-full max-w-[1200px] mx-auto h-full">
-<a href="index.html" class="font-display text-[21px] font-semibold tracking-[-0.3px] text-[#1d1d1f]">Aura</a>
+<a href="index.html" class="font-display text-tagline text-ink">Aura</a>
 <div id="mobileMenu" class="hidden absolute top-[52px] left-0 w-full bg-surface/95 backdrop-blur-md border-b border-black/10 flex-col p-4 gap-4 md:static md:w-auto md:bg-transparent md:border-none md:p-0 md:flex md:flex-row md:gap-8 items-center">
-<a class="nav-link font-body text-[17px] font-normal text-[#1d1d1f]/65 hover:text-accent-blue transition-colors duration-200" href="index.html">Overview</a>
-<a class="nav-link font-body text-[17px] font-normal text-[#1d1d1f]/65 hover:text-accent-blue transition-colors duration-200" href="about.html">About</a>
-<a class="nav-link font-body text-[17px] font-normal text-[#1d1d1f]/65 hover:text-accent-blue transition-colors duration-200" href="ai.html">AI</a>
-<a class="nav-link font-body text-[17px] font-normal text-[#1d1d1f]/65 hover:text-accent-blue transition-colors duration-200" href="manifesto.html">Dilemma</a>
-<a class="nav-link font-body text-[17px] font-semibold text-[#1d1d1f] hover:text-accent-blue transition-colors duration-200" href="docs.html">Docs</a>
+<a class="nav-link font-body text-body font-normal text-ink-secondary hover:text-accent-blue transition-colors duration-200" href="index.html">Overview</a>
+<a class="nav-link font-body text-body font-normal text-ink-secondary hover:text-accent-blue transition-colors duration-200" href="about.html">About</a>
+<a class="nav-link font-body text-body font-normal text-ink-secondary hover:text-accent-blue transition-colors duration-200" href="ai.html">AI</a>
+<a class="nav-link font-body text-body font-normal text-ink-secondary hover:text-accent-blue transition-colors duration-200" href="manifesto.html">Dilemma</a>
+<a class="nav-link font-body text-body font-semibold text-ink hover:text-accent-blue transition-colors duration-200" href="docs.html">Docs</a>
 </div>
 <div class="flex items-center gap-4">
-<a href="docs.html#hardware" class="bg-accent-blue text-white rounded-full px-[15px] py-[6px] text-[14px] font-medium hover:opacity-90 transition-opacity flex items-center justify-center">Build Yours</a>
+<a href="docs.html#hardware" class="bg-accent-blue text-white rounded-full px-[15px] py-[6px] text-caption font-medium hover:opacity-90 transition-opacity flex items-center justify-center">Build Yours</a>
 <button type="button" aria-label="Toggle navigation menu" onclick="document.getElementById('mobileMenu').classList.toggle('hidden'); document.getElementById('mobileMenu').classList.toggle('flex')" class="md:hidden flex items-center text-on-surface dark:text-surface-bright">
   <span class="material-symbols-outlined">menu</span>
 </button>
@@ -38,85 +38,85 @@
 <!-- Left Sidebar Documentation Tree (260px) -->
 <aside class="w-[260px] h-[calc(100vh-52px)] sticky top-[52px] hidden md:flex flex-col py-8 px-4 bg-[#f5f5f7] border-r border-[#d2d2d7]/35 overflow-y-auto">
 <div class="mb-6 px-3">
-<h2 class="font-hero-h1 text-[16px] font-bold text-[#1d1d1f] mb-1 tracking-tight">Documentation</h2>
-<p class="font-body text-[11px] text-[#86868b] uppercase tracking-wider font-semibold">Aura Reference</p>
+<h2 class="font-display text-body-strong font-bold text-ink mb-1 tracking-tight">Documentation</h2>
+<p class="font-body text-fine-print text-ink-tertiary uppercase tracking-wider font-semibold">Aura Reference</p>
 </div>
 <nav class="flex flex-col gap-1">
 <div class="mb-4">
-<p class="text-[10px] font-bold text-[#86868b] uppercase tracking-widest mb-2 px-3">Getting Started</p>
-<a class="flex items-center gap-2.5 px-3 py-1.5 rounded-md font-body text-xs text-[#0066cc] font-semibold bg-[#e8e8ed]/60 transition-colors" href="#what-is-aura">
+<p class="font-body text-micro-legal font-bold text-ink-tertiary uppercase tracking-widest mb-2 px-3">Getting Started</p>
+<a class="flex items-center gap-2.5 px-3 py-1.5 rounded-md font-body text-fine-print text-accent-blue font-semibold bg-[#e8e8ed]/60 transition-colors" href="#what-is-aura">
 <span class="shrink-0 inline-flex items-center justify-center" style="width:16px;height:16px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg></span>
 <span class="truncate">What Is Aura</span>
 </a>
-<a class="flex items-center gap-2.5 px-3 py-1.5 rounded-md font-body text-xs text-[#515154] hover:bg-[#e8e8ed]/45 hover:text-[#1d1d1f] transition-colors" href="#how-aura-works">
+<a class="flex items-center gap-2.5 px-3 py-1.5 rounded-md font-body text-fine-print text-ink-secondary hover:bg-[#e8e8ed]/45 hover:text-[#1d1d1f] transition-colors" href="#how-aura-works">
 <span class="shrink-0 inline-flex items-center justify-center" style="width:16px;height:16px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
 <span class="truncate">How Aura Works</span>
 </a>
-<a class="flex items-center gap-2.5 px-3 py-1.5 rounded-md font-body text-xs text-[#515154] hover:bg-[#e8e8ed]/45 hover:text-[#1d1d1f] transition-colors" href="#bom">
+<a class="flex items-center gap-2.5 px-3 py-1.5 rounded-md font-body text-fine-print text-ink-secondary hover:bg-[#e8e8ed]/45 hover:text-[#1d1d1f] transition-colors" href="#bom">
 <span class="shrink-0 inline-flex items-center justify-center" style="width:16px;height:16px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg></span>
 <span class="truncate">Bill of Materials</span>
 </a>
-<a class="flex items-center gap-2.5 px-3 py-1.5 rounded-md font-body text-xs text-[#515154] hover:bg-[#e8e8ed]/45 hover:text-[#1d1d1f] transition-colors" href="#bom-case">
+<a class="flex items-center gap-2.5 px-3 py-1.5 rounded-md font-body text-fine-print text-ink-secondary hover:bg-[#e8e8ed]/45 hover:text-[#1d1d1f] transition-colors" href="#bom-case">
 <span class="shrink-0 inline-flex items-center justify-center" style="width:16px;height:16px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></span>
 <span class="truncate">BOM Case</span>
 </a>
 </div>
 <div class="mb-4">
-<p class="text-[10px] font-bold text-[#86868b] uppercase tracking-widest mb-2 px-3">Engineering</p>
-<a class="flex items-center gap-2.5 px-3 py-1.5 rounded-md font-body text-xs text-[#515154] hover:bg-[#e8e8ed]/45 hover:text-[#1d1d1f] transition-colors" href="#hardware">
+<p class="font-body text-micro-legal font-bold text-ink-tertiary uppercase tracking-widest mb-2 px-3">Engineering</p>
+<a class="flex items-center gap-2.5 px-3 py-1.5 rounded-md font-body text-fine-print text-ink-secondary hover:bg-[#e8e8ed]/45 hover:text-[#1d1d1f] transition-colors" href="#hardware">
 <span class="shrink-0 inline-flex items-center justify-center" style="width:16px;height:16px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="15" x2="23" y2="15"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="15" x2="4" y2="15"/></svg></span>
 <span class="truncate">Hardware Overview</span>
 </a>
-<a class="flex items-center gap-2.5 px-3 py-1.5 rounded-md font-body text-xs text-[#515154] hover:bg-[#e8e8ed]/45 hover:text-[#1d1d1f] transition-colors" href="#firmware">
+<a class="flex items-center gap-2.5 px-3 py-1.5 rounded-md font-body text-fine-print text-ink-secondary hover:bg-[#e8e8ed]/45 hover:text-[#1d1d1f] transition-colors" href="#firmware">
 <span class="shrink-0 inline-flex items-center justify-center" style="width:16px;height:16px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg></span>
 <span class="truncate">Flashing Firmware</span>
 </a>
-<a class="flex items-center gap-2.5 px-3 py-1.5 rounded-md font-body text-xs text-[#515154] hover:bg-[#e8e8ed]/45 hover:text-[#1d1d1f] transition-colors" href="#backend">
+<a class="flex items-center gap-2.5 px-3 py-1.5 rounded-md font-body text-fine-print text-ink-secondary hover:bg-[#e8e8ed]/45 hover:text-[#1d1d1f] transition-colors" href="#backend">
 <span class="shrink-0 inline-flex items-center justify-center" style="width:16px;height:16px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></span>
 <span class="truncate">Setting Up Backend</span>
 </a>
-<a class="flex items-center gap-2.5 px-3 py-1.5 rounded-md font-body text-xs text-[#515154] hover:bg-[#e8e8ed]/45 hover:text-[#1d1d1f] transition-colors" href="#setup-app">
+<a class="flex items-center gap-2.5 px-3 py-1.5 rounded-md font-body text-fine-print text-ink-secondary hover:bg-[#e8e8ed]/45 hover:text-[#1d1d1f] transition-colors" href="#setup-app">
 <span class="shrink-0 inline-flex items-center justify-center" style="width:16px;height:16px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18.01"/></svg></span>
 <span class="truncate">Setting Up App</span>
 </a>
 </div>
 <div class="mb-4">
-<p class="text-[10px] font-bold text-[#86868b] uppercase tracking-widest mb-2 px-3">Configuration</p>
-<a class="flex items-center gap-2.5 px-3 py-1.5 rounded-md font-body text-xs text-[#515154] hover:bg-[#e8e8ed]/45 hover:text-[#1d1d1f] transition-colors" href="#ai-providers">
+<p class="font-body text-micro-legal font-bold text-ink-tertiary uppercase tracking-widest mb-2 px-3">Configuration</p>
+<a class="flex items-center gap-2.5 px-3 py-1.5 rounded-md font-body text-fine-print text-ink-secondary hover:bg-[#e8e8ed]/45 hover:text-[#1d1d1f] transition-colors" href="#ai-providers">
 <span class="shrink-0 inline-flex items-center justify-center" style="width:16px;height:16px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></span>
 <span class="truncate">AI Providers Setup</span>
 </a>
-<a class="flex items-center gap-2.5 px-3 py-1.5 rounded-md font-body text-xs text-[#515154] hover:bg-[#e8e8ed]/45 hover:text-[#1d1d1f] transition-colors" href="#transcription">
+<a class="flex items-center gap-2.5 px-3 py-1.5 rounded-md font-body text-fine-print text-ink-secondary hover:bg-[#e8e8ed]/45 hover:text-[#1d1d1f] transition-colors" href="#transcription">
 <span class="shrink-0 inline-flex items-center justify-center" style="width:16px;height:16px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></span>
 <span class="truncate">Transcription Setup</span>
 </a>
-<a class="flex items-center gap-2.5 px-3 py-1.5 rounded-md font-body text-xs text-[#515154] hover:bg-[#e8e8ed]/45 hover:text-[#1d1d1f] transition-colors" href="#camera-config">
+<a class="flex items-center gap-2.5 px-3 py-1.5 rounded-md font-body text-fine-print text-ink-secondary hover:bg-[#e8e8ed]/45 hover:text-[#1d1d1f] transition-colors" href="#camera-config">
 <span class="shrink-0 inline-flex items-center justify-center" style="width:16px;height:16px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></span>
 <span class="truncate">Camera Config</span>
 </a>
-<a class="flex items-center gap-2.5 px-3 py-1.5 rounded-md font-body text-xs text-[#515154] hover:bg-[#e8e8ed]/45 hover:text-[#1d1d1f] transition-colors" href="#battery-power">
+<a class="flex items-center gap-2.5 px-3 py-1.5 rounded-md font-body text-fine-print text-ink-secondary hover:bg-[#e8e8ed]/45 hover:text-[#1d1d1f] transition-colors" href="#battery-power">
 <span class="shrink-0 inline-flex items-center justify-center" style="width:16px;height:16px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><rect x="1" y="6" width="18" height="12" rx="2"/><line x1="23" y1="11" x2="23" y2="13"/><polyline points="11 7 6 13 10 13 9 17 14 11 10 11 11 7"/></svg></span>
 <span class="truncate">Battery &amp; Power</span>
 </a>
-<a class="flex items-center gap-2.5 px-3 py-1.5 rounded-md font-body text-xs text-[#515154] hover:bg-[#e8e8ed]/45 hover:text-[#1d1d1f] transition-colors" href="#ota-updates">
+<a class="flex items-center gap-2.5 px-3 py-1.5 rounded-md font-body text-fine-print text-ink-secondary hover:bg-[#e8e8ed]/45 hover:text-[#1d1d1f] transition-colors" href="#ota-updates">
 <span class="shrink-0 inline-flex items-center justify-center" style="width:16px;height:16px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="10"/><polyline points="8 12 12 16 16 12"/><line x1="12" y1="8" x2="12" y2="16"/></svg></span>
 <span class="truncate">OTA Updates</span>
 </a>
 </div>
 <div class="mb-4">
-<p class="text-[10px] font-bold text-[#86868b] uppercase tracking-widest mb-2 px-3">Memory &amp; AI</p>
-<a class="flex items-center gap-2.5 px-3 py-1.5 rounded-md font-body text-xs text-[#515154] hover:bg-[#e8e8ed]/45 hover:text-[#1d1d1f] transition-colors" href="#memory-rag">
+<p class="font-body text-micro-legal font-bold text-ink-tertiary uppercase tracking-widest mb-2 px-3">Memory &amp; AI</p>
+<a class="flex items-center gap-2.5 px-3 py-1.5 rounded-md font-body text-fine-print text-ink-secondary hover:bg-[#e8e8ed]/45 hover:text-[#1d1d1f] transition-colors" href="#memory-rag">
 <span class="shrink-0 inline-flex items-center justify-center" style="width:16px;height:16px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/></svg></span>
 <span class="truncate">Memory &amp; RAG</span>
 </a>
 </div>
 <div class="mb-4">
-<p class="text-[10px] font-bold text-[#86868b] uppercase tracking-widest mb-2 px-3">Privacy &amp; Support</p>
-<a class="flex items-center gap-2.5 px-3 py-1.5 rounded-md font-body text-xs text-[#515154] hover:bg-[#e8e8ed]/45 hover:text-[#1d1d1f] transition-colors" href="#privacy-data">
+<p class="font-body text-micro-legal font-bold text-ink-tertiary uppercase tracking-widest mb-2 px-3">Privacy &amp; Support</p>
+<a class="flex items-center gap-2.5 px-3 py-1.5 rounded-md font-body text-fine-print text-ink-secondary hover:bg-[#e8e8ed]/45 hover:text-[#1d1d1f] transition-colors" href="#privacy-data">
 <span class="shrink-0 inline-flex items-center justify-center" style="width:16px;height:16px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
 <span class="truncate">Privacy &amp; Data</span>
 </a>
-<a class="flex items-center gap-2.5 px-3 py-1.5 rounded-md font-body text-xs text-[#515154] hover:bg-[#e8e8ed]/45 hover:text-[#1d1d1f] transition-colors" href="#troubleshooting">
+<a class="flex items-center gap-2.5 px-3 py-1.5 rounded-md font-body text-fine-print text-ink-secondary hover:bg-[#e8e8ed]/45 hover:text-[#1d1d1f] transition-colors" href="#troubleshooting">
 <span class="shrink-0 inline-flex items-center justify-center" style="width:16px;height:16px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span>
 <span class="truncate">Troubleshooting</span>
 </a>
@@ -127,38 +127,38 @@
 <main class="flex-1 min-w-0 pb-section-v-padding">
 <div class="max-w-[760px] mx-auto px-margin-base pt-12">
 <!-- Breadcrumbs -->
-<nav class="flex items-center gap-2 text-label text-text-secondary mb-8">
+<nav class="flex items-center gap-2 text-label text-ink-secondary mb-8">
 <span>Aura</span>
 <span class="material-symbols-outlined text-[14px]">chevron_right</span>
 <span class="text-on-surface">Documentation</span>
 </nav>
 <article class="prose max-w-none">
-<h1 class="font-hero-h1-mobile md:font-hero-h1 text-hero-h1-mobile md:text-[56px] leading-tight tracking-tight text-on-surface text-left mb-6">System Architecture</h1>
-<p class="font-body text-body text-text-secondary mb-12 max-w-[680px]">
+<h1 class="font-display text-display-lg md:text-hero-display leading-tight tracking-tight text-on-surface text-left mb-6">System Architecture</h1>
+<p class="font-body text-body text-ink-secondary mb-12 max-w-[680px]">
     The Aura project represents a shift toward modular open-source hardware. This documentation provides a technical foundation for building, deploying, and maintaining Aura systems.
 </p>
 
 <!-- What Is Aura -->
 <section class="mb-16 scroll-mt-24" id="what-is-aura">
-<h2 class="font-section-h2-mobile md:font-section-h2 text-section-h2-mobile md:text-section-h2 tracking-tight text-on-surface text-left mb-6 border-b border-outline-variant/30 pb-4">What Is Aura</h2>
-<p class="font-body text-body text-text-secondary mb-6 max-w-[680px]">
+<h2 class="font-display text-display-md md:text-hero-display tracking-tight text-on-surface text-left mb-6 border-b border-outline-variant/30 pb-4">What Is Aura</h2>
+<p class="font-body text-body text-ink-secondary mb-6 max-w-[680px]">
     Aura is an open-source AI wearable pendant. You wear it around your neck. It listens, sees, and thinks — so you don't have to pause your day to take notes or remember things.
 </p>
-<p class="font-body text-body text-text-secondary mb-6 max-w-[680px]">
+<p class="font-body text-body text-ink-secondary mb-6 max-w-[680px]">
     It captures audio and images, sends them to an AI, and turns everything into summaries, transcripts, and action items — all accessible from your phone.
 </p>
-<p class="font-body text-body text-text-secondary mb-6 max-w-[680px]">
+<p class="font-body text-body text-ink-secondary mb-6 max-w-[680px]">
     Built on the Omi ecosystem. Fully open source. Around $50–70 to build yourself.
 </p>
 </section>
 
 <!-- How Aura Works -->
 <section class="mb-16 scroll-mt-24" id="how-aura-works">
-<h2 class="font-section-h2-mobile md:font-section-h2 text-section-h2-mobile md:text-section-h2 tracking-tight text-on-surface text-left mb-6 border-b border-outline-variant/30 pb-4">How Aura Works</h2>
-<p class="font-body text-body text-text-secondary mb-6 max-w-[680px]">
+<h2 class="font-display text-display-md md:text-hero-display tracking-tight text-on-surface text-left mb-6 border-b border-outline-variant/30 pb-4">How Aura Works</h2>
+<p class="font-body text-body text-ink-secondary mb-6 max-w-[680px]">
     The execution pipeline flows simply:
 </p>
-<ul class="list-disc pl-6 mb-6 font-body text-body text-text-secondary flex flex-col gap-2 max-w-[680px]">
+<ul class="list-disc pl-6 mb-6 font-body text-body text-ink-secondary flex flex-col gap-2 max-w-[680px]">
     <li>Aura's microphone captures audio continuously.</li>
     <li>The camera captures images at set intervals.</li>
     <li>Both are sent to the backend over Wi-Fi.</li>
@@ -167,19 +167,19 @@
     <li>Everything is summarized and stored.</li>
     <li>You see it all in the Omi app on your phone.</li>
 </ul>
-<p class="font-body text-body text-text-secondary mb-6 max-w-[680px]">
+<p class="font-body text-body text-ink-secondary mb-6 max-w-[680px]">
     The ESP32-S3 handles capture and transmission. The backend handles all AI processing. Your phone is just the mobile interface.
 </p>
 </section>
 
 <!-- Bill of Materials -->
 <section class="mb-16 scroll-mt-24" id="bom">
-<h2 class="font-section-h2-mobile md:font-section-h2 text-section-h2-mobile md:text-section-h2 tracking-tight text-on-surface text-left mb-6 border-b border-outline-variant/30 pb-4">Bill of Materials</h2>
-<p class="font-body text-body text-text-secondary mb-6 max-w-[680px]">
+<h2 class="font-display text-display-md md:text-hero-display tracking-tight text-on-surface text-left mb-6 border-b border-outline-variant/30 pb-4">Bill of Materials</h2>
+<p class="font-body text-body text-ink-secondary mb-6 max-w-[680px]">
     What to buy and where to get it:
 </p>
 <div class="overflow-x-auto mb-6 max-w-[680px]">
-    <table class="w-full text-left font-body text-label text-text-secondary border-collapse">
+    <table class="w-full text-left font-body text-label text-ink-secondary border-collapse">
         <thead>
             <tr class="border-b border-outline-variant/30">
                 <th class="py-3 font-semibold text-on-surface">Item</th>
@@ -221,39 +221,39 @@
         </tbody>
     </table>
 </div>
-<p class="font-body text-body text-text-secondary max-w-[680px]">
+<p class="font-body text-body text-ink-secondary max-w-[680px]">
     You can print the case STL files from the Aura hardware folder on GitHub.
 </p>
 </section>
 
 <!-- BOM Case -->
 <section class="mb-16 scroll-mt-24" id="bom-case">
-<h2 class="font-section-h2-mobile md:font-section-h2 text-section-h2-mobile md:text-section-h2 tracking-tight text-on-surface text-left mb-6 border-b border-outline-variant/30 pb-4">BOM Case Assembly</h2>
-<p class="font-body text-body text-text-secondary mb-6 max-w-[680px]">
+<h2 class="font-display text-display-md md:text-hero-display tracking-tight text-on-surface text-left mb-6 border-b border-outline-variant/30 pb-4">BOM Case Assembly</h2>
+<p class="font-body text-body text-ink-secondary mb-6 max-w-[680px]">
     Download the STL files from the <a href="https://github.com/thesohamdatta/Aura-Wearable-AI/tree/main/hardware" target="_blank" rel="noopener noreferrer" class="text-accent-blue hover:underline">Aura Hardware folder on GitHub</a>.
 </p>
-<p class="font-body text-body text-text-secondary mb-4 max-w-[680px]">
+<p class="font-body text-body text-ink-secondary mb-4 max-w-[680px]">
     <strong>Recommended 3D Print Settings:</strong>
 </p>
-<ul class="list-disc pl-6 mb-6 font-body text-body text-text-secondary flex flex-col gap-2 max-w-[680px]">
+<ul class="list-disc pl-6 mb-6 font-body text-body text-ink-secondary flex flex-col gap-2 max-w-[680px]">
     <li>Material: PLA or PETG</li>
     <li>Layer height: 0.2mm</li>
     <li>Infill: 20%</li>
     <li>Supports: Yes, where needed</li>
 </ul>
-<p class="font-body text-body text-text-secondary mb-6 max-w-[680px]">
+<p class="font-body text-body text-ink-secondary mb-6 max-w-[680px]">
     After printing, mount the ESP32-S3 board, route the battery wires, and snap the case shut. The pendant loop is built into the design. If you don't have a 3D printer, you can use local makerspaces or online printing services like Craftcloud or PCBWay.
 </p>
 </section>
 
 <!-- Hardware Overview -->
 <section class="mb-16 scroll-mt-24" id="hardware">
-<h2 class="font-section-h2-mobile md:font-section-h2 text-section-h2-mobile md:text-section-h2 tracking-tight text-on-surface text-left mb-6 border-b border-outline-variant/30 pb-4">Hardware Overview</h2>
-<p class="font-body text-body text-text-secondary mb-6 max-w-[680px]">
+<h2 class="font-display text-display-md md:text-hero-display tracking-tight text-on-surface text-left mb-6 border-b border-outline-variant/30 pb-4">Hardware Overview</h2>
+<p class="font-body text-body text-ink-secondary mb-6 max-w-[680px]">
     The XIAO ESP32-S3 Sense is the core. Camera and microphone are already integrated on the board — no extra modules needed.
 </p>
 <div class="overflow-x-auto mb-6 max-w-[680px]">
-    <table class="w-full text-left font-body text-label text-text-secondary border-collapse">
+    <table class="w-full text-left font-body text-label text-ink-secondary border-collapse">
         <thead>
             <tr class="border-b border-outline-variant/30">
                 <th class="py-3 font-semibold text-on-surface">Component</th>
@@ -296,31 +296,31 @@
 
 <!-- Flashing the Firmware -->
 <section class="mb-16 scroll-mt-24" id="firmware">
-<h2 class="font-section-h2-mobile md:font-section-h2 text-section-h2-mobile md:text-section-h2 tracking-tight text-on-surface text-left mb-6 border-b border-outline-variant/30 pb-4">Flashing the Firmware</h2>
-<p class="font-body text-body text-text-secondary mb-6 max-w-[680px]">
+<h2 class="font-display text-display-md md:text-hero-display tracking-tight text-on-surface text-left mb-6 border-b border-outline-variant/30 pb-4">Flashing the Firmware</h2>
+<p class="font-body text-body text-ink-secondary mb-6 max-w-[680px]">
     Aura firmware runs on the XIAO ESP32-S3 Sense. It coordinates audio streams, BLE advertisement, Wi-Fi connections, and camera frames. You can install it using several methods depending on your development environment.
 </p>
 
-<p class="font-body text-body text-text-secondary mb-4 max-w-[680px]">
+<p class="font-body text-body text-ink-secondary mb-4 max-w-[680px]">
     <strong>Method 1: UF2 Drag-and-Drop Flash (Easiest)</strong>
 </p>
-<p class="font-body text-body text-text-secondary mb-4 max-w-[680px]">
+<p class="font-body text-body text-ink-secondary mb-4 max-w-[680px]">
     This method requires no tools or compiler environments. 
 </p>
-<ol class="list-decimal pl-6 mb-6 font-body text-body text-text-secondary flex flex-col gap-2 max-w-[680px]">
+<ol class="list-decimal pl-6 mb-6 font-body text-body text-ink-secondary flex flex-col gap-2 max-w-[680px]">
     <li>Connect your XIAO ESP32-S3 Sense to your computer using a USB-C data cable.</li>
     <li>Enter bootloader mode: Hold down the <strong>BOOT</strong> button on the board, press and release the <strong>RESET</strong> button, then release the <strong>BOOT</strong> button.</li>
     <li>A new USB disk drive named <code>"ESP32S3"</code> will mount on your system.</li>
     <li>Copy the pre-compiled <code>.uf2</code> file from the <code>firmware/releases/</code> folder in the repo and drop it directly onto the mounted drive. The device will auto-flash and reboot.</li>
 </ol>
 
-<p class="font-body text-body text-text-secondary mb-4 max-w-[680px]">
+<p class="font-body text-body text-ink-secondary mb-4 max-w-[680px]">
     <strong>Method 2: PlatformIO (Recommended for developers)</strong>
 </p>
-<p class="font-body text-body text-text-secondary mb-4 max-w-[680px]">
+<p class="font-body text-body text-ink-secondary mb-4 max-w-[680px]">
     PlatformIO provides complete control over compiling environments. From the repo root, run:
 </p>
-<pre class="bg-bg-parchment p-4 rounded-xl text-xs font-mono text-on-surface mb-6 max-w-[680px] overflow-x-auto">
+<pre class="bg-canvas-parchment p-4 rounded-xl text-xs font-mono text-on-surface mb-6 max-w-[680px] overflow-x-auto">
 pip install platformio
 cd firmware
 
@@ -331,40 +331,40 @@ platformio run -e seeed_xiao_esp32s3 --target upload
 platformio device monitor --baud 115200
 </pre>
 
-<p class="font-body text-body text-text-secondary mb-4 max-w-[680px]">
+<p class="font-body text-body text-ink-secondary mb-4 max-w-[680px]">
     <strong>Method 3: Arduino IDE</strong>
 </p>
-<p class="font-body text-body text-text-secondary mb-4 max-w-[680px]">
+<p class="font-body text-body text-ink-secondary mb-4 max-w-[680px]">
     If flashing via the Arduino IDE, follow these settings carefully — compilation may succeed but the camera will fail at runtime if PSRAM is not configured correctly:
 </p>
-<ol class="list-decimal pl-6 mb-6 font-body text-body text-text-secondary flex flex-col gap-2 max-w-[680px]">
+<ol class="list-decimal pl-6 mb-6 font-body text-body text-ink-secondary flex flex-col gap-2 max-w-[680px]">
     <li>Install <a href="https://www.arduino.cc/en/software" target="_blank" rel="noopener noreferrer" class="text-accent-blue hover:underline">Arduino IDE 2.x</a>.</li>
     <li>Add the ESP32 board manager URL in <code>File → Preferences → Additional boards manager URLs</code>:
-        <code class="block bg-bg-parchment p-2 rounded mt-2 text-xs font-mono">https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json</code>
+        <code class="block bg-canvas-parchment p-2 rounded mt-2 text-xs font-mono">https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json</code>
     </li>
     <li>Go to <code>Tools → Board → Boards Manager</code> → search <code>esp32</code> → Install version <strong>2.0.17</strong>.</li>
     <li>Configure the board profile in the <strong>Tools</strong> menu — get these right or the camera won't work:
-        <pre class="bg-bg-parchment p-3 rounded-lg mt-2 text-xs font-mono">Tools → Board  →  XIAO_ESP32S3
+        <pre class="bg-canvas-parchment p-3 rounded-lg mt-2 text-xs font-mono">Tools → Board  →  XIAO_ESP32S3
 Tools → PSRAM  →  OPI PSRAM        ← Required. Camera fails without this.
 Tools → Port   →  your COM port</pre>
-        <p class="text-xs mt-1 text-text-secondary">On Windows, if the COM port doesn't appear, install the <a href="https://www.wch-ic.com/downloads/CH341SER_EXE.html" target="_blank" rel="noopener noreferrer" class="text-accent-blue hover:underline">CH340 driver</a> and restart.</p>
+        <p class="text-xs mt-1 text-ink-secondary">On Windows, if the COM port doesn't appear, install the <a href="https://www.wch-ic.com/downloads/CH341SER_EXE.html" target="_blank" rel="noopener noreferrer" class="text-accent-blue hover:underline">CH340 driver</a> and restart.</p>
     </li>
     <li>Open <code>firmware/firmware.ino</code> and click <strong>Upload</strong>.</li>
     <li>Open Serial Monitor at <strong>115200 baud</strong>. Expected output:
-        <pre class="bg-bg-parchment p-3 rounded-lg mt-2 text-xs font-mono">[AURA] Camera initialized
+        <pre class="bg-canvas-parchment p-3 rounded-lg mt-2 text-xs font-mono">[AURA] Camera initialized
 [AURA] Microphone initialized
 [AURA] BLE advertising
 [AURA] Ready</pre>
     </li>
 </ol>
 
-<p class="font-body text-body text-text-secondary mb-4 max-w-[680px]">
+<p class="font-body text-body text-ink-secondary mb-4 max-w-[680px]">
     <strong>Method 4: Arduino CLI</strong>
 </p>
-<p class="font-body text-body text-text-secondary mb-4 max-w-[680px]">
+<p class="font-body text-body text-ink-secondary mb-4 max-w-[680px]">
     For headless or CI environments, use the Arduino CLI to compile and upload directly from the terminal:
 </p>
-<pre class="bg-bg-parchment p-4 rounded-xl text-xs font-mono text-on-surface mb-4 max-w-[680px] overflow-x-auto"># Add ESP32 board manager
+<pre class="bg-canvas-parchment p-4 rounded-xl text-xs font-mono text-on-surface mb-4 max-w-[680px] overflow-x-auto"># Add ESP32 board manager
 arduino-cli config add board_manager.additional_urls \
   https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
 
@@ -377,10 +377,10 @@ arduino-cli board list
 # Compile and upload (replace COM5 with your port)
 arduino-cli compile --build-path build --output-dir dist \
   -e -u -p COM5 -b esp32:esp32:XIAO_ESP32S3:PSRAM=opi</pre>
-<p class="font-body text-body text-text-secondary mb-6 max-w-[680px]">
+<p class="font-body text-body text-ink-secondary mb-6 max-w-[680px]">
     The Aura firmware depends on two external libraries for Opus audio codec support. Clone them into your Arduino libraries folder:
 </p>
-<pre class="bg-bg-parchment p-4 rounded-xl text-xs font-mono text-on-surface mb-6 max-w-[680px] overflow-x-auto"># Find your libraries folder
+<pre class="bg-canvas-parchment p-4 rounded-xl text-xs font-mono text-on-surface mb-6 max-w-[680px] overflow-x-auto"># Find your libraries folder
 arduino-cli config get directories.user
 # then add /libraries to that path
 
@@ -389,7 +389,7 @@ git clone https://github.com/pschatzmann/arduino-audio-tools.git</pre>
 
 <div class="overflow-x-auto mb-8 max-w-[680px]">
     <p class="font-body text-label font-semibold text-on-surface mb-3">PlatformIO Build Environments</p>
-    <table class="w-full text-left font-body text-label text-text-secondary border-collapse">
+    <table class="w-full text-left font-body text-label text-ink-secondary border-collapse">
         <thead>
             <tr class="border-b border-outline-variant/30">
                 <th class="py-3 font-semibold text-on-surface">Environment</th>
@@ -420,38 +420,38 @@ git clone https://github.com/pschatzmann/arduino-audio-tools.git</pre>
 
 <!-- Setting Up the Backend -->
 <section class="mb-16 scroll-mt-24" id="backend">
-<h2 class="font-section-h2-mobile md:font-section-h2 text-section-h2-mobile md:text-section-h2 tracking-tight text-on-surface text-left mb-6 border-b border-outline-variant/30 pb-4">Setting Up the Backend</h2>
-<p class="font-body text-body text-text-secondary mb-6 max-w-[680px]">
+<h2 class="font-display text-display-md md:text-hero-display tracking-tight text-on-surface text-left mb-6 border-b border-outline-variant/30 pb-4">Setting Up the Backend</h2>
+<p class="font-body text-body text-ink-secondary mb-6 max-w-[680px]">
     The Aura backend powers all AI capabilities, transcription pipelines, conversation processing, and cloud integrations. It acts as the orchestration layer between the physical ESP32-S3 hardware and deep model APIs.
 </p>
 
-<p class="font-body text-body text-text-secondary mb-4 max-w-[680px]">
+<p class="font-body text-body text-ink-secondary mb-4 max-w-[680px]">
     <strong>System Requirements & Dependencies:</strong>
 </p>
-<ul class="list-disc pl-6 mb-6 font-body text-body text-text-secondary flex flex-col gap-2 max-w-[680px]">
+<ul class="list-disc pl-6 mb-6 font-body text-body text-ink-secondary flex flex-col gap-2 max-w-[680px]">
     <li>Python 3.10 or 3.11 (tested primarily on Python 3.10.12 / 3.11.4)</li>
     <li>Google Cloud SDK & Firebase Command Line Tools</li>
     <li>System packages: <code>git</code>, <code>ffmpeg</code>, and <code>opus</code></li>
     <li>Ngrok or Cloudflare Tunnel (for local development exposing)</li>
 </ul>
 
-<p class="font-body text-body text-text-secondary mb-4 max-w-[680px]">
+<p class="font-body text-body text-ink-secondary mb-4 max-w-[680px]">
     <strong>Step 1: Google Cloud & Firebase Initialization</strong>
 </p>
-<p class="font-body text-body text-text-secondary mb-4 max-w-[680px]">
+<p class="font-body text-body text-ink-secondary mb-4 max-w-[680px]">
     Aura uses Firebase Firestore for storing conversation keys and settings. Authenticate your terminal and assign the active developer project:
 </p>
-<pre class="bg-bg-parchment p-4 rounded-xl text-xs font-mono text-on-surface mb-6 max-w-[680px] overflow-x-auto">
+<pre class="bg-canvas-parchment p-4 rounded-xl text-xs font-mono text-on-surface mb-6 max-w-[680px] overflow-x-auto">
 gcloud auth login
 gcloud config set project &lt;your-project-id&gt;
 gcloud auth application-default login --project &lt;your-project-id&gt;
 </pre>
-<p class="font-body text-body text-text-secondary mb-4 max-w-[680px]">
+<p class="font-body text-body text-ink-secondary mb-4 max-w-[680px]">
     Ensure the following APIs are enabled in the Google Cloud API Console:
     <strong>Cloud Resource Manager API</strong>, <strong>Firebase Management API</strong>, and <strong>Cloud Firestore API</strong>. Then, create the necessary composite indexes in Firestore:
 </p>
 <div class="overflow-x-auto mb-6 max-w-[680px]">
-    <table class="w-full text-left font-body text-label text-text-secondary border-collapse">
+    <table class="w-full text-left font-body text-label text-ink-secondary border-collapse">
         <thead>
             <tr class="border-b border-outline-variant/30">
                 <th class="py-3 font-semibold text-on-surface">Collection ID</th>
@@ -471,31 +471,31 @@ gcloud auth application-default login --project &lt;your-project-id&gt;
     </table>
 </div>
 
-<p class="font-body text-body text-text-secondary mb-4 max-w-[680px]">
+<p class="font-body text-body text-ink-secondary mb-4 max-w-[680px]">
     <strong>Step 2: Backend Environment Variables Setup</strong>
 </p>
-<p class="font-body text-body text-text-secondary mb-4 max-w-[680px]">
+<p class="font-body text-body text-ink-secondary mb-4 max-w-[680px]">
     Clone the codebase, enter the backend folder, and create your <code>.env</code> file based on the template:
 </p>
-<pre class="bg-bg-parchment p-4 rounded-xl text-xs font-mono text-on-surface mb-6 max-w-[680px] overflow-x-auto">
+<pre class="bg-canvas-parchment p-4 rounded-xl text-xs font-mono text-on-surface mb-6 max-w-[680px] overflow-x-auto">
 git clone https://github.com/thesohamdatta/Aura-Wearable-AI.git
 cd Aura-Wearable-AI/backend
 cp .env.template .env
 </pre>
-<p class="font-body text-body text-text-secondary mb-4 max-w-[680px]">
+<p class="font-body text-body text-ink-secondary mb-4 max-w-[680px]">
     Configure the parameters inside your <code>.env</code>. You must provide:
 </p>
-<ul class="list-disc pl-6 mb-6 font-body text-body text-text-secondary flex flex-col gap-2 max-w-[680px]">
+<ul class="list-disc pl-6 mb-6 font-body text-body text-ink-secondary flex flex-col gap-2 max-w-[680px]">
     <li><code>OPENAI_API_KEY</code> & <code>DEEPGRAM_API_KEY</code></li>
     <li><code>PINECONE_API_KEY</code> & <code>PINECONE_INDEX_NAME</code> (Index set to 1536 dimensions for OpenAI vectors)</li>
     <li><code>REDIS_DB_HOST</code>, <code>REDIS_DB_PORT</code>, and <code>REDIS_DB_PASSWORD</code> (For memory cache caching)</li>
     <li><code>GOOGLE_APPLICATION_CREDENTIALS=google-credentials.json</code></li>
 </ul>
 
-<p class="font-body text-body text-text-secondary mb-4 max-w-[680px]">
+<p class="font-body text-body text-ink-secondary mb-4 max-w-[680px]">
     <strong>Step 3: Installation & Server Boot</strong>
 </p>
-<pre class="bg-bg-parchment p-4 rounded-xl text-xs font-mono text-on-surface mb-6 max-w-[680px] overflow-x-auto">
+<pre class="bg-canvas-parchment p-4 rounded-xl text-xs font-mono text-on-surface mb-6 max-w-[680px] overflow-x-auto">
 # Create and activate virtual environment
 python -m venv venv
 source venv/bin/activate  # On Windows use: venv\Scripts\activate
@@ -507,73 +507,73 @@ pip install -r requirements.txt
 uvicorn main:app --reload --env-file .env --port 8000
 </pre>
 
-<p class="font-body text-body text-text-secondary mb-4 max-w-[680px]">
+<p class="font-body text-body text-ink-secondary mb-4 max-w-[680px]">
     <strong>Step 4: Exposing local server to device (Ngrok)</strong>
 </p>
-<p class="font-body text-body text-text-secondary mb-4 max-w-[680px]">
+<p class="font-body text-body text-ink-secondary mb-4 max-w-[680px]">
     Start a secure tunnel on port 8000 to acquire a public HTTPS URL:
 </p>
-<pre class="bg-bg-parchment p-4 rounded-xl text-xs font-mono text-on-surface mb-6 max-w-[680px] overflow-x-auto">
+<pre class="bg-canvas-parchment p-4 rounded-xl text-xs font-mono text-on-surface mb-6 max-w-[680px] overflow-x-auto">
 ngrok http 8000
 </pre>
-<p class="font-body text-body text-text-secondary max-w-[680px]">
+<p class="font-body text-body text-ink-secondary max-w-[680px]">
     Copy the generated HTTPS tunnel address and paste it as the <code>API_BASE_URL</code> in your app's environment configuration, making sure to append the trailing slash: <code>API_BASE_URL=https://&lt;subdomain&gt;.ngrok-free.app/</code>.
 </p>
 </section>
 
 <!-- Setting Up the App -->
 <section class="mb-16 scroll-mt-24" id="setup-app">
-<h2 class="font-section-h2-mobile md:font-section-h2 text-section-h2-mobile md:text-section-h2 tracking-tight text-on-surface text-left mb-6 border-b border-outline-variant/30 pb-4">Setting Up the App</h2>
-<p class="font-body text-body text-text-secondary mb-6 max-w-[680px]">
+<h2 class="font-display text-display-md md:text-hero-display tracking-tight text-on-surface text-left mb-6 border-b border-outline-variant/30 pb-4">Setting Up the App</h2>
+<p class="font-body text-body text-ink-secondary mb-6 max-w-[680px]">
     Aura ships a native Android companion app built with Kotlin. It pairs with the pendant over Bluetooth LE, lets you configure the backend URL, browse transcription history, and monitor battery status in real time.
 </p>
 
-<p class="font-body text-body text-text-secondary mb-4 max-w-[680px]">
+<p class="font-body text-body text-ink-secondary mb-4 max-w-[680px]">
     <strong>Requirements:</strong>
 </p>
-<ul class="list-disc pl-6 mb-6 font-body text-body text-text-secondary flex flex-col gap-2 max-w-[680px]">
+<ul class="list-disc pl-6 mb-6 font-body text-body text-ink-secondary flex flex-col gap-2 max-w-[680px]">
     <li>Android Studio Hedgehog or later</li>
     <li>Android SDK 26+ (Android 8.0 minimum)</li>
     <li>A physical Android device with Bluetooth LE support — BLE emulation is unreliable on emulators</li>
 </ul>
 
-<p class="font-body text-body text-text-secondary mb-4 max-w-[680px]">
+<p class="font-body text-body text-ink-secondary mb-4 max-w-[680px]">
     <strong>Option A — Android Studio (Recommended):</strong>
 </p>
-<ol class="list-decimal pl-6 mb-6 font-body text-body text-text-secondary flex flex-col gap-2 max-w-[680px]">
+<ol class="list-decimal pl-6 mb-6 font-body text-body text-ink-secondary flex flex-col gap-2 max-w-[680px]">
     <li>Clone the repo and open <code>app/android/</code> in Android Studio.</li>
     <li>Wait for the Gradle sync to complete.</li>
     <li>Connect your Android device via USB and enable <strong>USB Debugging</strong> in Developer Options.</li>
     <li>Click <strong>Run ▶</strong>.</li>
 </ol>
 
-<p class="font-body text-body text-text-secondary mb-4 max-w-[680px]">
+<p class="font-body text-body text-ink-secondary mb-4 max-w-[680px]">
     <strong>Option B — Command Line:</strong>
 </p>
-<pre class="bg-bg-parchment p-4 rounded-xl text-xs font-mono text-on-surface mb-6 max-w-[680px] overflow-x-auto">cd app/android
+<pre class="bg-canvas-parchment p-4 rounded-xl text-xs font-mono text-on-surface mb-6 max-w-[680px] overflow-x-auto">cd app/android
 
 # Debug build
 ./gradlew assembleDebug
 
 # Install directly on connected device
 ./gradlew installDebug</pre>
-<p class="font-body text-label text-text-secondary mb-6 max-w-[680px]">
+<p class="font-body text-label text-ink-secondary mb-6 max-w-[680px]">
     APK output: <code>app/build/outputs/apk/debug/app-debug.apk</code>
 </p>
 
-<p class="font-body text-body text-text-secondary mb-4 max-w-[680px]">
+<p class="font-body text-body text-ink-secondary mb-4 max-w-[680px]">
     <strong>Configuration:</strong>
 </p>
-<p class="font-body text-body text-text-secondary mb-4 max-w-[680px]">
+<p class="font-body text-body text-ink-secondary mb-4 max-w-[680px]">
     After first launch, open the app settings and set your backend URL:
 </p>
-<pre class="bg-bg-parchment p-4 rounded-xl text-xs font-mono text-on-surface mb-6 max-w-[680px] overflow-x-auto">API_BASE_URL = https://your-ngrok-url.ngrok-free.app/</pre>
-<p class="font-body text-label text-text-secondary mb-8 max-w-[680px]">Include the trailing slash.</p>
+<pre class="bg-canvas-parchment p-4 rounded-xl text-xs font-mono text-on-surface mb-6 max-w-[680px] overflow-x-auto">API_BASE_URL = https://your-ngrok-url.ngrok-free.app/</pre>
+<p class="font-body text-label text-ink-secondary mb-8 max-w-[680px]">Include the trailing slash.</p>
 
-<p class="font-body text-body text-text-secondary mb-4 max-w-[680px]">
+<p class="font-body text-body text-ink-secondary mb-4 max-w-[680px]">
     <strong>Pairing with Aura:</strong>
 </p>
-<ol class="list-decimal pl-6 mb-6 font-body text-body text-text-secondary flex flex-col gap-2 max-w-[680px]">
+<ol class="list-decimal pl-6 mb-6 font-body text-body text-ink-secondary flex flex-col gap-2 max-w-[680px]">
     <li>Flash the firmware to the pendant (see <a href="#firmware" class="text-accent-blue hover:underline">Flashing Firmware</a> above).</li>
     <li>Power on the Aura pendant.</li>
     <li>Open the app → go to <strong>Devices</strong>.</li>
@@ -583,7 +583,7 @@ ngrok http 8000
 
 <div class="overflow-x-auto mb-6 max-w-[680px]">
     <p class="font-body text-label font-semibold text-on-surface mb-3">App Troubleshooting</p>
-    <table class="w-full text-left font-body text-label text-text-secondary border-collapse">
+    <table class="w-full text-left font-body text-label text-ink-secondary border-collapse">
         <thead>
             <tr class="border-b border-outline-variant/30">
                 <th class="py-3 font-semibold text-on-surface">Issue</th>
@@ -614,12 +614,12 @@ ngrok http 8000
 
 <!-- AI Providers Setup -->
 <section class="mb-16 scroll-mt-24" id="ai-providers">
-<h2 class="font-section-h2-mobile md:font-section-h2 text-section-h2-mobile md:text-section-h2 tracking-tight text-on-surface text-left mb-6 border-b border-outline-variant/30 pb-4">AI Providers Setup</h2>
-<p class="font-body text-body text-text-secondary mb-6 max-w-[680px]">
+<h2 class="font-display text-display-md md:text-hero-display tracking-tight text-on-surface text-left mb-6 border-b border-outline-variant/30 pb-4">AI Providers Setup</h2>
+<p class="font-body text-body text-ink-secondary mb-6 max-w-[680px]">
     Aura supports three distinct AI providers. Set your preferred choice in your environment (<code>.env</code>) file:
 </p>
 <div class="overflow-x-auto mb-6 max-w-[680px]">
-    <table class="w-full text-left font-body text-label text-text-secondary border-collapse">
+    <table class="w-full text-left font-body text-label text-ink-secondary border-collapse">
         <thead>
             <tr class="border-b border-outline-variant/30">
                 <th class="py-3 font-semibold text-on-surface">Provider</th>
@@ -646,19 +646,19 @@ ngrok http 8000
         </tbody>
     </table>
 </div>
-<p class="font-body text-body text-text-secondary max-w-[680px]">
+<p class="font-body text-body text-ink-secondary max-w-[680px]">
     For Ollama (local private setup), set <code>OLLAMA_URL=http://localhost:11434</code> in your backend <code>.env</code>.
 </p>
 </section>
 
 <!-- Transcription Setup -->
 <section class="mb-16 scroll-mt-24" id="transcription">
-<h2 class="font-section-h2-mobile md:font-section-h2 text-section-h2-mobile md:text-section-h2 tracking-tight text-on-surface text-left mb-6 border-b border-outline-variant/30 pb-4">Transcription Setup</h2>
-<p class="font-body text-body text-text-secondary mb-6 max-w-[680px]">
+<h2 class="font-display text-display-md md:text-hero-display tracking-tight text-on-surface text-left mb-6 border-b border-outline-variant/30 pb-4">Transcription Setup</h2>
+<p class="font-body text-body text-ink-secondary mb-6 max-w-[680px]">
     Aura captures high-fidelity audio at 16kHz mono PDM from the built-in microphone on the ESP32-S3 Sense. Two transcription options are available:
 </p>
 <div class="overflow-x-auto mb-6 max-w-[680px]">
-    <table class="w-full text-left font-body text-label text-text-secondary border-collapse">
+    <table class="w-full text-left font-body text-label text-ink-secondary border-collapse">
         <thead>
             <tr class="border-b border-outline-variant/30">
                 <th class="py-3 font-semibold text-on-surface">Option</th>
@@ -684,12 +684,12 @@ ngrok http 8000
 
 <!-- Camera Configuration -->
 <section class="mb-16 scroll-mt-24" id="camera-config">
-<h2 class="font-section-h2-mobile md:font-section-h2 text-section-h2-mobile md:text-section-h2 tracking-tight text-on-surface text-left mb-6 border-b border-outline-variant/30 pb-4">Camera Configuration</h2>
-<p class="font-body text-body text-text-secondary mb-6 max-w-[680px]">
+<h2 class="font-display text-display-md md:text-hero-display tracking-tight text-on-surface text-left mb-6 border-b border-outline-variant/30 pb-4">Camera Configuration</h2>
+<p class="font-body text-body text-ink-secondary mb-6 max-w-[680px]">
     You can tune the camera resolution, capture intervals, and compression settings inside your device's <code>firmware.ino</code>:
 </p>
 <div class="overflow-x-auto mb-6 max-w-[680px]">
-    <table class="w-full text-left font-body text-label text-text-secondary border-collapse">
+    <table class="w-full text-left font-body text-label text-ink-secondary border-collapse">
         <thead>
             <tr class="border-b border-outline-variant/30">
                 <th class="py-3 font-semibold text-on-surface">Setting</th>
@@ -716,26 +716,26 @@ ngrok http 8000
         </tbody>
     </table>
 </div>
-<p class="font-body text-body text-text-secondary max-w-[680px]">
+<p class="font-body text-body text-ink-secondary max-w-[680px]">
     Lower resolution + higher interval = longer battery life. For vision AI, SVGA is the sweet spot — good enough for GPT-4o, small enough to transmit fast.
 </p>
 </section>
 
 <!-- Battery & Power -->
 <section class="mb-16 scroll-mt-24" id="battery-power">
-<h2 class="font-section-h2-mobile md:font-section-h2 text-section-h2-mobile md:text-section-h2 tracking-tight text-on-surface text-left mb-6 border-b border-outline-variant/30 pb-4">Battery &amp; Power</h2>
-<p class="font-body text-body text-text-secondary mb-6 max-w-[680px]">
+<h2 class="font-display text-display-md md:text-hero-display tracking-tight text-on-surface text-left mb-6 border-b border-outline-variant/30 pb-4">Battery &amp; Power</h2>
+<p class="font-body text-body text-ink-secondary mb-6 max-w-[680px]">
     Aura runs on 2× 250mAh Li-ion cells wired in parallel — 500mAh total at 3.7V nominal. Battery voltage is monitored via a resistor divider connected to <code>GPIO2 (A1)</code>.
 </p>
-<pre class="bg-bg-parchment p-4 rounded-xl text-xs font-mono text-on-surface mb-6 max-w-[680px] overflow-x-auto">Battery + ──[R1: 169kΩ]──+──[R2: 110kΩ]── Battery -
+<pre class="bg-canvas-parchment p-4 rounded-xl text-xs font-mono text-on-surface mb-6 max-w-[680px] overflow-x-auto">Battery + ──[R1: 169kΩ]──+──[R2: 110kΩ]── Battery -
                           |
                         GPIO2 (A1)   (2.536:1 voltage divider)</pre>
 
-<p class="font-body text-body text-text-secondary mb-4 max-w-[680px]">
+<p class="font-body text-body text-ink-secondary mb-4 max-w-[680px]">
     <strong>Current Draw by Mode:</strong>
 </p>
 <div class="overflow-x-auto mb-6 max-w-[680px]">
-    <table class="w-full text-left font-body text-label text-text-secondary border-collapse">
+    <table class="w-full text-left font-body text-label text-ink-secondary border-collapse">
         <thead>
             <tr class="border-b border-outline-variant/30">
                 <th class="py-3 font-semibold text-on-surface">Mode</th>
@@ -759,11 +759,11 @@ ngrok http 8000
     </table>
 </div>
 
-<p class="font-body text-body text-text-secondary mb-4 max-w-[680px]">
+<p class="font-body text-body text-ink-secondary mb-4 max-w-[680px]">
     <strong>Expected Runtime (500mAh):</strong>
 </p>
 <div class="overflow-x-auto mb-6 max-w-[680px]">
-    <table class="w-full text-left font-body text-label text-text-secondary border-collapse">
+    <table class="w-full text-left font-body text-label text-ink-secondary border-collapse">
         <thead>
             <tr class="border-b border-outline-variant/30">
                 <th class="py-3 font-semibold text-on-surface">Usage Pattern</th>
@@ -787,11 +787,11 @@ ngrok http 8000
     </table>
 </div>
 
-<p class="font-body text-body text-text-secondary mb-4 max-w-[680px]">
+<p class="font-body text-body text-ink-secondary mb-4 max-w-[680px]">
     <strong>Voltage Reference:</strong>
 </p>
 <div class="overflow-x-auto mb-6 max-w-[680px]">
-    <table class="w-full text-left font-body text-label text-text-secondary border-collapse">
+    <table class="w-full text-left font-body text-label text-ink-secondary border-collapse">
         <thead>
             <tr class="border-b border-outline-variant/30">
                 <th class="py-3 font-semibold text-on-surface">Voltage</th>
@@ -829,14 +829,14 @@ ngrok http 8000
     </table>
 </div>
 
-<p class="font-body text-body text-text-secondary mb-4 max-w-[680px]">
+<p class="font-body text-body text-ink-secondary mb-4 max-w-[680px]">
     <strong>Serial Battery Commands:</strong>
 </p>
-<p class="font-body text-body text-text-secondary mb-4 max-w-[680px]">
+<p class="font-body text-body text-ink-secondary mb-4 max-w-[680px]">
     Connect at 115200 baud and type any of these commands:
 </p>
 <div class="overflow-x-auto mb-6 max-w-[680px]">
-    <table class="w-full text-left font-body text-label text-text-secondary border-collapse">
+    <table class="w-full text-left font-body text-label text-ink-secondary border-collapse">
         <thead>
             <tr class="border-b border-outline-variant/30">
                 <th class="py-3 font-semibold text-on-surface">Command</th>
@@ -868,19 +868,19 @@ ngrok http 8000
     </table>
 </div>
 
-<p class="font-body text-body text-text-secondary mb-4 max-w-[680px]">
+<p class="font-body text-body text-ink-secondary mb-4 max-w-[680px]">
     <strong>Charging &amp; LED Status:</strong>
 </p>
-<ul class="list-disc pl-6 mb-6 font-body text-body text-text-secondary flex flex-col gap-2 max-w-[680px]">
+<ul class="list-disc pl-6 mb-6 font-body text-body text-ink-secondary flex flex-col gap-2 max-w-[680px]">
     <li><strong>Red LED</strong> — Charging in progress</li>
     <li><strong>Green LED</strong> — Fully charged</li>
     <li>Typical charge time: 1–1.5 hours from a USB 2.0 port</li>
 </ul>
 
-<p class="font-body text-body text-text-secondary mb-4 max-w-[680px]">
+<p class="font-body text-body text-ink-secondary mb-4 max-w-[680px]">
     <strong>Best Practices:</strong>
 </p>
-<ul class="list-disc pl-6 mb-6 font-body text-body text-text-secondary flex flex-col gap-2 max-w-[680px]">
+<ul class="list-disc pl-6 mb-6 font-body text-body text-ink-secondary flex flex-col gap-2 max-w-[680px]">
     <li>Charge when battery voltage drops below 3.8V (20%)</li>
     <li>Never let voltage drop below 3.5V — cell damage threshold</li>
     <li>Charge at 10°C–40°C ambient temperature range</li>
@@ -892,15 +892,15 @@ ngrok http 8000
 
 <!-- OTA Firmware Updates -->
 <section class="mb-16 scroll-mt-24" id="ota-updates">
-<h2 class="font-section-h2-mobile md:font-section-h2 text-section-h2-mobile md:text-section-h2 tracking-tight text-on-surface text-left mb-6 border-b border-outline-variant/30 pb-4">OTA Firmware Updates</h2>
-<p class="font-body text-body text-text-secondary mb-6 max-w-[680px]">
+<h2 class="font-display text-display-md md:text-hero-display tracking-tight text-on-surface text-left mb-6 border-b border-outline-variant/30 pb-4">OTA Firmware Updates</h2>
+<p class="font-body text-body text-ink-secondary mb-6 max-w-[680px]">
     Aura supports over-the-air firmware updates via BLE + Wi-Fi, so you can update the pendant's firmware without connecting a USB cable. Wi-Fi credentials are delivered from the app over Bluetooth LE — the device only connects to Wi-Fi for the duration of the update, then returns to BLE-only mode.
 </p>
 
-<p class="font-body text-body text-text-secondary mb-4 max-w-[680px]">
+<p class="font-body text-body text-ink-secondary mb-4 max-w-[680px]">
     <strong>OTA Update Flow:</strong>
 </p>
-<ol class="list-decimal pl-6 mb-6 font-body text-body text-text-secondary flex flex-col gap-2 max-w-[680px]">
+<ol class="list-decimal pl-6 mb-6 font-body text-body text-ink-secondary flex flex-col gap-2 max-w-[680px]">
     <li>Open the Aura app and navigate to <strong>Device Settings → Firmware Update</strong>.</li>
     <li>The app sends Wi-Fi credentials to the pendant via <code>OTA_CONTROL_UUID</code> BLE characteristic.</li>
     <li>Pendant connects to Wi-Fi using the provided credentials.</li>
@@ -909,23 +909,23 @@ ngrok http 8000
     <li>Device reboots automatically with the new firmware loaded.</li>
 </ol>
 
-<div class="bg-bg-parchment p-5 rounded-xl max-w-[680px] border border-outline-variant/20 mb-6">
-    <p class="font-label font-semibold text-on-surface mb-2">Note on Wi-Fi Credentials</p>
-    <p class="font-body text-label text-text-secondary">Wi-Fi credentials sent during OTA are not stored permanently on the device. After the update completes and the device reboots, it returns to BLE-only advertising mode. Your credentials are never persisted on flash storage.</p>
+<div class="bg-canvas-parchment p-5 rounded-xl max-w-[680px] border border-outline-variant/20 mb-6">
+    <p class="font-body text-body-strong text-ink mb-2">Note on Wi-Fi Credentials</p>
+    <p class="font-body text-label text-ink-secondary">Wi-Fi credentials sent during OTA are not stored permanently on the device. After the update completes and the device reboots, it returns to BLE-only advertising mode. Your credentials are never persisted on flash storage.</p>
 </div>
 </section>
 
 <!-- Memory & RAG -->
 <section class="mb-16 scroll-mt-24" id="memory-rag">
-<h2 class="font-section-h2-mobile md:font-section-h2 text-section-h2-mobile md:text-section-h2 tracking-tight text-on-surface text-left mb-6 border-b border-outline-variant/30 pb-4">Memory &amp; RAG</h2>
-<p class="font-body text-body text-text-secondary mb-6 max-w-[680px]">
+<h2 class="font-display text-display-md md:text-hero-display tracking-tight text-on-surface text-left mb-6 border-b border-outline-variant/30 pb-4">Memory &amp; RAG</h2>
+<p class="font-body text-body text-ink-secondary mb-6 max-w-[680px]">
     Aura's long-term memory system is built on a Retrieval-Augmented Generation (RAG) pipeline. Every conversation and captured moment is embedded as a high-dimensional vector and stored in Pinecone for semantic recall. When you ask Aura something, it retrieves the most relevant memories to ground the AI response — no hallucinations from a stale model snapshot.
 </p>
 
-<p class="font-body text-body text-text-secondary mb-4 max-w-[680px]">
+<p class="font-body text-body text-ink-secondary mb-4 max-w-[680px]">
     <strong>Pipeline Architecture:</strong>
 </p>
-<ol class="list-decimal pl-6 mb-6 font-body text-body text-text-secondary flex flex-col gap-2 max-w-[680px]">
+<ol class="list-decimal pl-6 mb-6 font-body text-body text-ink-secondary flex flex-col gap-2 max-w-[680px]">
     <li>Audio transcription arrives from Deepgram (or local Whisper) as plain text.</li>
     <li>The backend chunks the transcript into overlapping segments for context preservation.</li>
     <li>Each chunk is embedded using OpenAI's <code>text-embedding-3-small</code> model (1536 dimensions).</li>
@@ -934,30 +934,30 @@ ngrok http 8000
     <li>Retrieved chunks are injected into the system prompt context window before the LLM call (Groq or GPT-4o).</li>
 </ol>
 
-<p class="font-body text-body text-text-secondary mb-4 max-w-[680px]">
+<p class="font-body text-body text-ink-secondary mb-4 max-w-[680px]">
     <strong>Pinecone Index Setup:</strong>
 </p>
-<pre class="bg-bg-parchment p-4 rounded-xl text-xs font-mono text-on-surface mb-6 max-w-[680px] overflow-x-auto"># Create a new Pinecone index
+<pre class="bg-canvas-parchment p-4 rounded-xl text-xs font-mono text-on-surface mb-6 max-w-[680px] overflow-x-auto"># Create a new Pinecone index
 # Dimensions: 1536 (matches OpenAI text-embedding-3-small)
 # Metric: cosine
 # Name: set in .env as PINECONE_INDEX_NAME=aura-memories</pre>
-<p class="font-body text-body text-text-secondary mb-6 max-w-[680px]">
+<p class="font-body text-body text-ink-secondary mb-6 max-w-[680px]">
     Log in to <a href="https://app.pinecone.io" target="_blank" rel="noopener noreferrer" class="text-accent-blue hover:underline">app.pinecone.io</a>, create an index with <strong>1536 dimensions</strong> and <strong>cosine</strong> similarity, then add its name to your backend <code>.env</code>.
 </p>
 
-<p class="font-body text-body text-text-secondary mb-4 max-w-[680px]">
+<p class="font-body text-body text-ink-secondary mb-4 max-w-[680px]">
     <strong>Redis Memory Cache:</strong>
 </p>
-<p class="font-body text-body text-text-secondary mb-4 max-w-[680px]">
+<p class="font-body text-body text-ink-secondary mb-4 max-w-[680px]">
     Redis is used as a fast ephemeral cache layer for recent conversation context — reducing redundant Pinecone queries and improving response latency. Use <a href="https://console.upstash.com" target="_blank" rel="noopener noreferrer" class="text-accent-blue hover:underline">Upstash</a> for a free, serverless Redis instance:
 </p>
-<pre class="bg-bg-parchment p-4 rounded-xl text-xs font-mono text-on-surface mb-6 max-w-[680px] overflow-x-auto">REDIS_DB_HOST=your-upstash-endpoint
+<pre class="bg-canvas-parchment p-4 rounded-xl text-xs font-mono text-on-surface mb-6 max-w-[680px] overflow-x-auto">REDIS_DB_HOST=your-upstash-endpoint
 REDIS_DB_PORT=6379
 REDIS_DB_PASSWORD=your-upstash-password</pre>
 
 <div class="overflow-x-auto mb-6 max-w-[680px]">
     <p class="font-body text-label font-semibold text-on-surface mb-3">Memory Stack Summary</p>
-    <table class="w-full text-left font-body text-label text-text-secondary border-collapse">
+    <table class="w-full text-left font-body text-label text-ink-secondary border-collapse">
         <thead>
             <tr class="border-b border-outline-variant/30">
                 <th class="py-3 font-semibold text-on-surface">Layer</th>
@@ -993,12 +993,12 @@ REDIS_DB_PASSWORD=your-upstash-password</pre>
 
 <!-- Privacy & Data -->
 <section class="mb-16 scroll-mt-24" id="privacy-data">
-<h2 class="font-section-h2-mobile md:font-section-h2 text-section-h2-mobile md:text-section-h2 tracking-tight text-on-surface text-left mb-6 border-b border-outline-variant/30 pb-4">Privacy & Data</h2>
-<p class="font-body text-body text-text-secondary mb-6 max-w-[680px]">
+<h2 class="font-display text-display-md md:text-hero-display tracking-tight text-on-surface text-left mb-6 border-b border-outline-variant/30 pb-4">Privacy & Data</h2>
+<p class="font-body text-body text-ink-secondary mb-6 max-w-[680px]">
     Aura is privacy-first by design. Nothing is sent anywhere by default without your explicit configuration. You control every API key and every endpoint.
 </p>
 <div class="overflow-x-auto mb-6 max-w-[680px]">
-    <table class="w-full text-left font-body text-label text-text-secondary border-collapse">
+    <table class="w-full text-left font-body text-label text-ink-secondary border-collapse">
         <thead>
             <tr class="border-b border-outline-variant/30">
                 <th class="py-3 font-semibold text-on-surface">Feature</th>
@@ -1030,18 +1030,18 @@ REDIS_DB_PASSWORD=your-upstash-password</pre>
         </tbody>
     </table>
 </div>
-<p class="font-body text-body text-text-secondary max-w-[680px]">
+<p class="font-body text-body text-ink-secondary max-w-[680px]">
     Note: Recording in public spaces may be subject to local laws. Always inform others when recording.
 </p>
 </section>
 
 <!-- Troubleshooting -->
 <section class="mb-16 scroll-mt-24" id="troubleshooting">
-<h2 class="font-section-h2-mobile md:font-section-h2 text-section-h2-mobile md:text-section-h2 tracking-tight text-on-surface text-left mb-6 border-b border-outline-variant/30 pb-4">Troubleshooting</h2>
+<h2 class="font-display text-display-md md:text-hero-display tracking-tight text-on-surface text-left mb-6 border-b border-outline-variant/30 pb-4">Troubleshooting</h2>
 
 <p class="font-body text-label font-semibold text-on-surface mb-4">Firmware &amp; Hardware</p>
 <div class="overflow-x-auto mb-8 max-w-[680px]">
-    <table class="w-full text-left font-body text-label text-text-secondary border-collapse">
+    <table class="w-full text-left font-body text-label text-ink-secondary border-collapse">
         <thead>
             <tr class="border-b border-outline-variant/30">
                 <th class="py-3 font-semibold text-on-surface">Problem</th>
@@ -1082,58 +1082,58 @@ REDIS_DB_PASSWORD=your-upstash-password</pre>
 </div>
 
 <p class="font-body text-label font-semibold text-on-surface mb-4">Backend &amp; API</p>
-<div class="flex flex-col gap-5 max-w-[680px] font-body text-body text-text-secondary mb-8">
+<div class="flex flex-col gap-5 max-w-[680px] font-body text-body text-ink-secondary mb-8">
     <div>
-        <h4 class="font-label text-on-surface font-bold mb-1"><code>No internet connection</code> when loading models</h4>
+        <h4 class="font-body text-body-strong text-ink mb-1"><code>No internet connection</code> when loading models</h4>
         <p>Add to <code>utils/stt/vad.py</code> after the imports block:</p>
-        <pre class="bg-bg-parchment p-3 rounded-lg mt-2 text-xs font-mono">import ssl
+        <pre class="bg-canvas-parchment p-3 rounded-lg mt-2 text-xs font-mono">import ssl
 ssl._create_default_https_context = ssl._create_unverified_context</pre>
     </div>
     <div>
-        <h4 class="font-label text-on-surface font-bold mb-1"><code>Internal Server Error</code> on Developer Settings page</h4>
+        <h4 class="font-body text-body-strong text-ink mb-1"><code>Internal Server Error</code> on Developer Settings page</h4>
         <p>Firestore composite indexes are missing. See <a href="#backend" class="text-accent-blue hover:underline">Backend Setup → Step 1</a> for the required index definitions.</p>
     </div>
     <div>
-        <h4 class="font-label text-on-surface font-bold mb-1"><code>authentication errors</code> from gcloud</h4>
+        <h4 class="font-body text-body-strong text-ink mb-1"><code>authentication errors</code> from gcloud</h4>
         <p>Re-run application-default login:</p>
-        <pre class="bg-bg-parchment p-3 rounded-lg mt-2 text-xs font-mono">gcloud auth application-default login --project &lt;your-project-id&gt;</pre>
+        <pre class="bg-canvas-parchment p-3 rounded-lg mt-2 text-xs font-mono">gcloud auth application-default login --project &lt;your-project-id&gt;</pre>
     </div>
     <div>
-        <h4 class="font-label text-on-surface font-bold mb-1">No transcription appearing</h4>
+        <h4 class="font-body text-body-strong text-ink mb-1">No transcription appearing</h4>
         <p>Check the Deepgram API key in your <code>.env</code> file. Verify the backend server is running and that <code>API_BASE_URL</code> in the app includes a trailing slash.</p>
     </div>
 </div>
-<div class="bg-bg-parchment p-6 mt-8 rounded-xl max-w-[680px] border border-outline-variant/20">
-    <h4 class="font-label text-on-surface font-bold mb-1">Question not answered?</h4>
-    <p class="font-body text-label text-text-secondary">Contact support at: <a href="mailto:thesohamdatta@gmail.com" class="text-accent-blue hover:underline">thesohamdatta@gmail.com</a></p>
+<div class="bg-canvas-parchment p-6 mt-8 rounded-xl max-w-[680px] border border-outline-variant/20">
+    <h4 class="font-body text-body-strong text-ink mb-1">Question not answered?</h4>
+    <p class="font-body text-label text-ink-secondary">Contact support at: <a href="mailto:thesohamdatta@gmail.com" class="text-accent-blue hover:underline">thesohamdatta@gmail.com</a></p>
 </div>
 </section>
 </article>
 <footer class="mt-20 pt-12 border-t border-outline-variant/30 flex flex-col md:flex-row justify-between items-start gap-8">
 <div>
-<div class="font-hero-h1 text-section-h3 font-semibold text-on-surface mb-4">Aura</div>
-<p class="font-body text-label text-text-secondary">© 2024 Aura Project. All rights reserved.</p>
+<div class="font-display text-lead font-semibold text-ink mb-4">Aura</div>
+<p class="font-body text-label text-ink-secondary">© 2024 Aura Project. All rights reserved.</p>
 </div>
 <div class="grid grid-cols-2 md:grid-cols-4 gap-12 text-label">
 <div class="flex flex-col gap-2">
-<span class="font-label text-on-surface font-bold">Build</span>
-<a class="text-text-secondary hover:text-accent-blue transition-colors" href="#hardware">Hardware</a>
-<a class="text-text-secondary hover:text-accent-blue transition-colors" href="#firmware">SDK</a>
+<span class="font-body text-caption font-bold">Build</span>
+<a class="text-ink-secondary hover:text-accent-blue transition-colors" href="#hardware">Hardware</a>
+<a class="text-ink-secondary hover:text-accent-blue transition-colors" href="#firmware">SDK</a>
 </div>
 <div class="flex flex-col gap-2">
-<span class="font-label text-on-surface font-bold">Learn</span>
-<a class="text-text-secondary hover:text-accent-blue transition-colors" href="ai.html">Tutorials</a>
-<a class="text-text-secondary hover:text-accent-blue transition-colors" href="manifesto.html">Concepts</a>
+<span class="font-body text-caption font-bold">Learn</span>
+<a class="text-ink-secondary hover:text-accent-blue transition-colors" href="ai.html">Tutorials</a>
+<a class="text-ink-secondary hover:text-accent-blue transition-colors" href="manifesto.html">Concepts</a>
 </div>
 <div class="flex flex-col gap-2">
-<span class="font-label text-on-surface font-bold">Community</span>
-<a class="text-text-secondary hover:text-accent-blue transition-colors" href="#" target="_blank" rel="noopener noreferrer" aria-disabled="true" tabindex="-1">Discord</a>
-<a class="text-text-secondary hover:text-accent-blue transition-colors" href="#" target="_blank" rel="noopener noreferrer" aria-disabled="true" tabindex="-1">Forum</a>
+<span class="font-body text-caption font-bold">Community</span>
+<a class="text-ink-secondary hover:text-accent-blue transition-colors" href="#" target="_blank" rel="noopener noreferrer" aria-disabled="true" tabindex="-1">Discord</a>
+<a class="text-ink-secondary hover:text-accent-blue transition-colors" href="#" target="_blank" rel="noopener noreferrer" aria-disabled="true" tabindex="-1">Forum</a>
 </div>
 <div class="flex flex-col gap-2">
-<span class="font-label text-on-surface font-bold">Project</span>
-<a class="text-text-secondary hover:text-accent-blue transition-colors" href="https://github.com/thesohamdatta/aura" target="_blank" rel="noopener noreferrer">GitHub</a>
-<a class="text-text-secondary hover:text-accent-blue transition-colors" href="#" target="_blank" rel="noopener noreferrer" aria-disabled="true" tabindex="-1">License</a>
+<span class="font-body text-caption font-bold">Project</span>
+<a class="text-ink-secondary hover:text-accent-blue transition-colors" href="https://github.com/thesohamdatta/aura" target="_blank" rel="noopener noreferrer">GitHub</a>
+<a class="text-ink-secondary hover:text-accent-blue transition-colors" href="#" target="_blank" rel="noopener noreferrer" aria-disabled="true" tabindex="-1">License</a>
 </div>
 </div>
 </footer>

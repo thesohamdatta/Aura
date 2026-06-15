@@ -102,10 +102,27 @@ tailwind.config = {
                 "overline": ["12px", { "lineHeight": "1.5", "letterSpacing": "0.08em", "fontWeight": "600" }],
                 "section-h2": ["56px", { "lineHeight": "1.1", "letterSpacing": "-0.028em", "fontWeight": "600" }],
                 "section-h3": ["28px", { "lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "400" }],
-                "body": ["17px", { "lineHeight": "1.47", "letterSpacing": "-0.022em", "fontWeight": "400" }],
+                "body": ["17px", { "lineHeight": "1.47", "letterSpacing": "-0.374px", "fontWeight": "400" }],
                 "label": ["14px", { "lineHeight": "1.2", "fontWeight": "500" }],
                 "hero-h1-mobile": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600" }],
-                "section-h2-mobile": ["36px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600" }]
+                "section-h2-mobile": ["36px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                
+                /* ── Apple HIG Typography Tokens ── */
+                "hero-display": ["56px", { "lineHeight": "1.07", "letterSpacing": "-0.28px", "fontWeight": "600" }],
+                "display-lg": ["40px", { "lineHeight": "1.10", "letterSpacing": "0px", "fontWeight": "600" }],
+                "display-md": ["34px", { "lineHeight": "1.47", "letterSpacing": "-0.374px", "fontWeight": "600" }],
+                "lead": ["28px", { "lineHeight": "1.14", "letterSpacing": "0.196px", "fontWeight": "400" }],
+                "lead-airy": ["24px", { "lineHeight": "1.50", "letterSpacing": "0px", "fontWeight": "300" }],
+                "tagline": ["21px", { "lineHeight": "1.19", "letterSpacing": "0.231px", "fontWeight": "600" }],
+                "body-strong": ["17px", { "lineHeight": "1.24", "letterSpacing": "-0.374px", "fontWeight": "600" }],
+                "dense-link": ["17px", { "lineHeight": "2.41", "letterSpacing": "0px", "fontWeight": "400" }],
+                "caption": ["14px", { "lineHeight": "1.43", "letterSpacing": "-0.224px", "fontWeight": "400" }],
+                "caption-strong": ["14px", { "lineHeight": "1.29", "letterSpacing": "-0.224px", "fontWeight": "600" }],
+                "button-large": ["18px", { "lineHeight": "1.0", "letterSpacing": "0px", "fontWeight": "300" }],
+                "button-utility": ["14px", { "lineHeight": "1.29", "letterSpacing": "-0.224px", "fontWeight": "400" }],
+                "fine-print": ["12px", { "lineHeight": "1.0", "letterSpacing": "-0.12px", "fontWeight": "400" }],
+                "micro-legal": ["10px", { "lineHeight": "1.3", "letterSpacing": "-0.08px", "fontWeight": "400" }],
+                "nav-link": ["12px", { "lineHeight": "1.0", "letterSpacing": "-0.12px", "fontWeight": "400" }]
             }
         },
     },

@@ -17,16 +17,16 @@
 <!-- TOP NAVIGATION SHELL -->
 <nav id="navbar" class="fixed top-0 w-full h-[52px] z-[100] bg-transparent">
 <div class="nav-inner flex justify-between items-center px-margin-base w-full max-w-[1200px] mx-auto h-full">
-<a href="index.html" class="font-display text-[21px] font-semibold tracking-[-0.3px]" style="color: #ffffff;">Aura</a>
+<a href="index.html" class="font-display text-tagline" style="color: #ffffff;">Aura</a>
 <div id="mobileMenu" class="hidden absolute top-[52px] left-0 w-full bg-surface/95 backdrop-blur-md border-b border-black/10 flex-col p-4 gap-4 md:static md:w-auto md:bg-transparent md:border-none md:p-0 md:flex md:flex-row md:gap-8 items-center h-full">
-<a class="nav-link font-body text-[17px] font-semibold text-white hover:text-accent-blue transition-colors" href="index.html">Overview</a>
-<a class="nav-link font-body text-[17px] font-normal text-white/90 hover:text-accent-blue transition-colors" href="about.html">About</a>
-<a class="nav-link font-body text-[17px] font-normal text-white/90 hover:text-accent-blue transition-colors" href="ai.html">AI</a>
-<a class="nav-link font-body text-[17px] font-normal text-white/90 hover:text-accent-blue transition-colors" href="manifesto.html">Dilemma</a>
-<a class="nav-link font-body text-[17px] font-normal text-white/90 hover:text-accent-blue transition-colors" href="docs.html">Docs</a>
+<a class="nav-link font-body text-body font-semibold text-white hover:text-accent-blue transition-colors" href="index.html">Overview</a>
+<a class="nav-link font-body text-body font-normal text-white/90 hover:text-accent-blue transition-colors" href="about.html">About</a>
+<a class="nav-link font-body text-body font-normal text-white/90 hover:text-accent-blue transition-colors" href="ai.html">AI</a>
+<a class="nav-link font-body text-body font-normal text-white/90 hover:text-accent-blue transition-colors" href="manifesto.html">Dilemma</a>
+<a class="nav-link font-body text-body font-normal text-white/90 hover:text-accent-blue transition-colors" href="docs.html">Docs</a>
 </div>
 <div class="flex items-center gap-4">
-<a href="docs.html#hardware" class="bg-accent-blue text-white rounded-full px-[15px] py-[6px] text-[14px] font-medium hover:opacity-90 transition-opacity flex items-center justify-center">Build Yours</a>
+<a href="docs.html#hardware" class="bg-accent-blue text-white rounded-full px-[15px] py-[6px] text-caption font-medium hover:opacity-90 transition-opacity flex items-center justify-center">Build Yours</a>
 <button onclick="document.getElementById('mobileMenu').classList.toggle('hidden'); document.getElementById('mobileMenu').classList.toggle('flex')" class="md:hidden flex items-center text-on-surface dark:text-surface-bright">
   <span class="material-symbols-outlined">menu</span>
 </button>
@@ -43,8 +43,8 @@
     <div class="flex flex-col md:flex-row justify-between items-end w-full gap-8">
       <!-- Left Title (Asymmetrical) -->
       <div class="text-left select-none">
-        <span class="font-label text-overline text-white/60 uppercase tracking-[0.2em] block mb-2">Aura</span>
-        <h1 class="font-hero-h1-mobile md:font-hero-h1 text-hero-h1-mobile md:text-hero-h1 text-white leading-[1.05] tracking-tight">Worn.<br>Screenless.<br>Aware.</h1>
+        <span class="font-body text-overline text-white/60 uppercase tracking-[0.2em] block mb-2">Aura</span>
+        <h1 class="font-display text-display-lg md:text-hero-display text-white leading-[1.05] tracking-tight">Worn.<br>Screenless.<br>Aware.</h1>
       </div>
 
       <!-- AirPods-Style Floating Pill Component (aligned to the right on desktop, full-width on mobile) -->
@@ -98,7 +98,7 @@
 <!-- 2. GET THE HIGHLIGHTS -->
 <section class="bg-[#f5f5f7] py-section-v-padding border-t border-black/10">
 <div class="max-w-[1200px] mx-auto px-margin-base">
-<h2 class="font-section-h2-mobile md:font-section-h2 text-section-h2-mobile md:text-section-h2 mb-12">The highlights.</h2>
+<h2 class="font-display text-display-md md:text-hero-display mb-12">The highlights.</h2>
 
 <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
 
@@ -106,8 +106,8 @@
   <div class="group cursor-default">
     <div class="rounded-[18px] bg-white overflow-hidden aspect-[3/4] flex flex-col justify-between p-8 mb-4 hover:scale-[1.015] transition-transform duration-500 shadow-sm border border-black/5">
       <div>
-        <p class="text-[10px] font-semibold text-[#86868b] uppercase tracking-widest mb-3">Voice</p>
-        <p class="font-display text-[26px] leading-tight font-semibold text-[#1d1d1f] tracking-tight">0.5s<br>transcrip-<br>tion.</p>
+        <p class="font-body text-micro-legal font-semibold text-ink-tertiary uppercase tracking-widest mb-3">Voice</p>
+        <p class="font-display text-lead font-semibold text-ink">0.5s<br>transcrip-<br>tion.</p>
       </div>
       <div class="flex-1 flex items-end justify-start pb-2">
         <!-- Waveform bars -->
@@ -126,35 +126,35 @@
       </div>
       <div class="flex items-center gap-2 mt-4">
         <svg viewBox="0 0 24 24" fill="none" stroke="#0066cc" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
-        <span class="text-[11px] font-medium text-[#0066cc]">Deepgram Nova-2</span>
+        <span class="font-body text-fine-print font-medium text-accent-blue">Deepgram Nova-2</span>
       </div>
     </div>
-    <p class="font-body text-label text-[#1d1d1f] leading-snug"><strong>0.5 second transcription.</strong> <span class="text-[#86868b]">Every word captured and stored as semantic meaning — not just raw text.</span></p>
+    <p class="font-body text-caption text-ink leading-snug"><strong>0.5 second transcription.</strong> <span class="text-[#86868b]">Every word captured and stored as semantic meaning — not just raw text.</span></p>
   </div>
 
   <!-- Card 2: Vision — action blue, camera icon -->
   <div class="group cursor-default">
     <div class="rounded-[18px] bg-white overflow-hidden aspect-[3/4] flex flex-col justify-between p-8 mb-4 hover:scale-[1.015] transition-transform duration-500 shadow-sm border border-black/5">
       <div>
-        <p class="text-[10px] font-semibold text-[#86868b] uppercase tracking-widest mb-3">Vision</p>
-        <p class="font-display text-[26px] leading-tight font-semibold text-[#1d1d1f] tracking-tight">within<br>reach.</p>
+        <p class="font-body text-micro-legal font-semibold text-ink-tertiary uppercase tracking-widest mb-3">Vision</p>
+        <p class="font-display text-lead font-semibold text-ink">within<br>reach.</p>
       </div>
       <div class="flex-1 flex items-center justify-center">
         <div class="w-20 h-20 rounded-full bg-[#0066cc]/10 flex items-center justify-center">
           <svg viewBox="0 0 24 24" fill="none" stroke="#0066cc" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="36" height="36"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
         </div>
       </div>
-      <p class="text-[#86868b] text-[11px] font-medium tracking-wide">capture what you see</p>
+      <p class="font-body text-ink-tertiary text-fine-print font-medium tracking-wide">capture what you see</p>
     </div>
-    <p class="font-body text-label text-[#1d1d1f] leading-snug"><strong>It sees what you see.</strong> <span class="text-[#86868b]">2MP OV2640. On-command capture. GPT-4o Vision in under 2 seconds.</span></p>
+    <p class="font-body text-caption text-ink leading-snug"><strong>It sees what you see.</strong> <span class="text-[#86868b]">2MP OV2640. On-command capture. GPT-4o Vision in under 2 seconds.</span></p>
   </div>
 
   <!-- Card 3: Memory — parchment, brain/search visual -->
   <div class="group cursor-default">
     <div class="rounded-[18px] bg-white overflow-hidden aspect-[3/4] flex flex-col justify-between p-8 mb-4 hover:scale-[1.015] transition-transform duration-500 shadow-sm border border-black/5">
       <div>
-        <p class="text-[10px] font-semibold text-[#86868b] uppercase tracking-widest mb-3">Memory</p>
-        <p class="font-display text-[26px] leading-tight font-semibold text-[#1d1d1f] tracking-tight">never<br>forgets.</p>
+        <p class="font-body text-micro-legal font-semibold text-ink-tertiary uppercase tracking-widest mb-3">Memory</p>
+        <p class="font-display text-lead font-semibold text-ink">never<br>forgets.</p>
       </div>
       <div class="flex-1 flex items-center justify-center">
         <div class="relative">
@@ -168,41 +168,41 @@
           </div>
         </div>
       </div>
-      <p class="text-[11px] font-medium text-[#86868b]">Pinecone vector search</p>
+      <p class="font-body text-fine-print font-medium text-ink-tertiary">Pinecone vector search</p>
     </div>
-    <p class="font-body text-label text-[#1d1d1f] leading-snug"><strong>Never forgets.</strong> <span class="text-[#86868b]">Retrieve any conversation by meaning — not keyword. Works weeks later.</span></p>
+    <p class="font-body text-caption text-ink leading-snug"><strong>Never forgets.</strong> <span class="text-[#86868b]">Retrieve any conversation by meaning — not keyword. Works weeks later.</span></p>
   </div>
 
   <!-- Card 4: Open Source — dark canvas, file tree -->
   <div class="group cursor-default">
     <div class="rounded-[18px] bg-[#272729] overflow-hidden aspect-[3/4] flex flex-col justify-between p-8 mb-4 hover:scale-[1.015] transition-transform duration-500 shadow-sm">
       <div>
-        <p class="text-[10px] font-semibold text-white/40 uppercase tracking-widest mb-3">Open Source</p>
-        <p class="font-display text-[26px] leading-tight font-semibold text-white tracking-tight">every-<br>thing<br>public.</p>
+        <p class="font-body text-micro-legal font-semibold text-white/40 uppercase tracking-widest mb-3">Open Source</p>
+        <p class="font-display text-lead font-semibold text-white">every-<br>thing<br>public.</p>
       </div>
       <div class="flex-1 flex flex-col justify-center gap-2 py-3">
         <div class="flex items-center gap-2.5">
           <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" style="opacity:0.5"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
-          <span class="text-white/60 text-[11px] font-mono">firmware/</span>
-          <span class="ml-auto text-[10px] font-medium" style="color:#34d399">MIT</span>
+          <span class="text-white/60 text-fine-print font-mono">firmware/</span>
+          <span class="ml-auto text-micro-legal font-medium" style="color:#34d399">MIT</span>
         </div>
         <div class="flex items-center gap-2.5">
           <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" style="opacity:0.5"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
-          <span class="text-white/60 text-[11px] font-mono">backend/</span>
-          <span class="ml-auto text-[10px] font-medium" style="color:#34d399">MIT</span>
+          <span class="text-white/60 text-fine-print font-mono">backend/</span>
+          <span class="ml-auto text-micro-legal font-medium" style="color:#34d399">MIT</span>
         </div>
         <div class="flex items-center gap-2.5">
           <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" style="opacity:0.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
-          <span class="text-white/60 text-[11px] font-mono">hardware/</span>
-          <span class="ml-auto text-[10px] font-medium" style="color:#34d399">MIT</span>
+          <span class="text-white/60 text-fine-print font-mono">hardware/</span>
+          <span class="ml-auto text-micro-legal font-medium" style="color:#34d399">MIT</span>
         </div>
       </div>
       <div class="flex items-center gap-2 border-t border-white/10 pt-3">
         <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" style="opacity:0.4"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-        <span class="text-white/40 text-[10px]">github.com/thesohamdatta/aura</span>
+        <span class="text-white/40 text-micro-legal">github.com/thesohamdatta/aura</span>
       </div>
     </div>
-    <p class="font-body text-label text-[#1d1d1f] leading-snug"><strong>Everything public.</strong> <span class="text-[#86868b]">MIT licensed. Firmware, schematics, backend. Fork it. Build your own. ~$50 BOM.</span></p>
+    <p class="font-body text-caption text-ink leading-snug"><strong>Everything public.</strong> <span class="text-[#86868b]">MIT licensed. Firmware, schematics, backend. Fork it. Build your own. ~$50 BOM.</span></p>
   </div>
 
 </div>
@@ -279,8 +279,8 @@
 
   <!-- Headline Block -->
   <div class="w-full text-center px-4">
-    <span class="block text-[17px] font-normal text-white/80 tracking-tight mb-2">Seamless experience</span>
-    <h2 class="demo-headline text-[48px] md:text-[56px] font-bold tracking-[-0.003em] text-white max-w-[700px] mx-auto mb-20 leading-[1.07]">
+    <span class="block font-body text-body font-normal text-white/80 tracking-tight mb-2">Seamless experience</span>
+    <h2 class="demo-headline font-display text-display-lg md:text-hero-display text-white max-w-[700px] mx-auto mb-20">
       A completely different way to remember.
     </h2>
   </div>
@@ -292,10 +292,10 @@
 
   <!-- Caption Block -->
   <div class="demo-caption-container w-full text-center max-w-[600px] mx-auto">
-    <h3 id="demoCaptionLabel" class="demo-caption-label text-[21px] font-semibold text-[#1d1d1f] mb-3 leading-tight">
+    <h3 id="demoCaptionLabel" class="demo-caption-label font-display text-tagline text-ink mb-3">
       Aura remembers. So you don't have to.
     </h3>
-    <p id="demoCaptionBody" class="demo-caption-body text-[17px] font-normal text-[#6e6e73] leading-[1.6] max-w-[480px] mx-auto">
+    <p id="demoCaptionBody" class="demo-caption-body font-body text-body font-normal text-ink-secondary max-w-[480px] mx-auto">
       Ask anything. Aura surfaces what you've heard, seen, and said — with full context, instantly.
     </p>
   </div>
@@ -304,7 +304,7 @@
 <!-- 3. TAKE A CLOSER LOOK -->
 <section class="bg-white pt-section-v-padding">
 <div class="max-w-[1200px] mx-auto px-margin-base mb-12">
-<h2 class="font-section-h2-mobile md:font-section-h2 text-section-h2-mobile md:text-section-h2">A closer look.</h2>
+<h2 class="font-display text-display-md md:text-hero-display">A closer look.</h2>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-12 gap-2 w-full px-2">
   <!-- Card 1: Wide Product Shot -->
@@ -334,23 +334,23 @@
   <img alt="Person wearing Aura" class="absolute inset-0 w-full h-full object-cover object-center" src="assets/hero/hero-silhouette.jpg">
   <div class="absolute inset-0 bg-black/40"></div>
   <div class="relative text-center px-margin-base max-w-prose-max-width z-10 select-none">
-    <span class="font-label text-overline text-white/60 uppercase tracking-[0.2em] mb-4 block">Voice capture</span>
-    <h2 class="font-display text-[48px] md:text-[80px] font-bold text-white leading-[1.05] tracking-tight">A completely different way to remember.</h2>
+    <span class="font-body text-overline text-white/60 uppercase tracking-[0.2em] mb-4 block">Voice capture</span>
+    <h2 class="font-display text-display-lg md:text-hero-display text-white leading-[1.05] tracking-tight">A completely different way to remember.</h2>
   </div>
 </section>
 <!-- 5. VOICE FEATURE CARDS -->
 <section class="bg-[#f5f5f7] py-section-v-padding text-on-surface overflow-hidden relative border-b border-black/5">
 <div class="max-w-[1200px] mx-auto px-margin-base relative">
 <div class="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[#f5f5f7] to-transparent z-10 pointer-events-none hidden md:block"></div>
-<div class="md:hidden absolute top-0 right-margin-base text-label font-label text-text-secondary">scroll &rarr;</div>
+<div class="md:hidden absolute top-0 right-margin-base text-caption font-body text-ink-secondary">scroll &rarr;</div>
 <div class="flex overflow-x-auto gap-8 no-scrollbar -mx-margin-base px-margin-base pt-8 md:pt-0">
 <div class="min-w-[400px] md:min-w-[600px] rounded-[28px] bg-white border border-black/5 shadow-sm overflow-hidden flex flex-col transition-all hover:scale-[1.01]">
 <div class="h-[360px]">
 <img alt="Mic grill detail" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhbvPsXfGiHOc3vuEdkOzyhtqrp1Vw6p8pCi5u0AJr3lxCPHSZ1h_j5vu4V5I3KhLqqUAGz5f3tMIRBL_tyVHyQ8R868GuT22vtqSq1KK7tRO_k8qF0hpAK6wdDE4e25KCzpM0mhUmy59vfs9HqbyiqdmV-i3k7ei0OGzshgRqWHB9HArGHQguJxeb4jfFspVXWasmqn-EfPzLyPcC-fgetFZjnKWXrTA11qhacwf4PwQf9RpY8yhXqr6_bHDHUkzGU6hAGmlm60g">
 </div>
 <div class="p-8 h-[240px]">
-<h3 class="font-section-h3 text-section-h3 mb-4 text-on-surface font-semibold tracking-tight">Spatial Listening</h3>
-<p class="text-text-secondary text-body leading-relaxed">Advanced digital MEMS microphones focus on the voice in front of you, filtering out background noise for crystal clear semantic extraction.</p>
+<h3 class="font-display text-lead mb-4 text-ink font-semibold">Spatial Listening</h3>
+<p class="text-ink-secondary text-body leading-relaxed">Advanced digital MEMS microphones focus on the voice in front of you, filtering out background noise for crystal clear semantic extraction.</p>
 </div>
 </div>
 <div class="min-w-[400px] md:min-w-[600px] rounded-[28px] bg-white border border-black/5 shadow-sm overflow-hidden flex flex-col transition-all hover:scale-[1.01]">
@@ -360,8 +360,8 @@
 </div>
 </div>
 <div class="p-8 h-[240px]">
-<h3 class="font-section-h3 text-section-h3 mb-4 text-on-surface font-semibold tracking-tight">Semantic Indexing</h3>
-<p class="text-text-secondary text-body leading-relaxed">Everything you hear is processed by LLMs to create a searchable index of facts, tasks, and memories you mentioned throughout the day.</p>
+<h3 class="font-display text-lead mb-4 text-ink font-semibold">Semantic Indexing</h3>
+<p class="text-ink-secondary text-body leading-relaxed">Everything you hear is processed by LLMs to create a searchable index of facts, tasks, and memories you mentioned throughout the day.</p>
 </div>
 </div>
 </div>
@@ -373,61 +373,61 @@
 <img alt="Aura camera view" class="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCt15xv83IejmGIkFY7UtCbpcr2d1QC_Ta_RvYWm9P_3uV1W06RXsps7G33lPRQHEtZhqHyErN90Iq-pITN_OtlvA5aUGaIYERQMAcEZdvmSAnjRVHXADFaf_F2XX_i-XWWFKj_kNUMuJBMmaxUCjIRv5iYk1srkDNXC5uHhVxcz-G0TfsoIOiOvIQRPOaAk7ZNkQBFHYPUezFHGk6dgVWc-dAKBy_m2CnsO6G7Bee0srvdssieILyv7bkhr6NYjDMj9LEOHD7hJj4">
 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
 <div class="relative text-center px-margin-base max-w-prose-max-width">
-<span class="font-label text-overline text-white/80 uppercase mb-4 block">Visual understanding</span>
-<h2 class="font-section-h2-mobile md:font-section-h2 text-section-h2-mobile md:text-section-h2 text-white">It sees what you point it at.</h2>
+<span class="font-body text-overline text-white/80 uppercase mb-4 block">Visual understanding</span>
+<h2 class="font-display text-display-md md:text-hero-display text-white">It sees what you point it at.</h2>
 </div>
 </div>
 <div class="max-w-[1200px] mx-auto px-margin-base py-section-v-padding grid grid-cols-1 md:grid-cols-3 gap-gutter">
-<div class="p-8 text-center bg-bg-parchment rounded-[18px]">
+<div class="p-8 text-center bg-canvas-parchment rounded-[18px]">
 <span class="inline-flex items-center justify-center mb-4 text-[#1d1d1f]"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width:2.25rem;height:2.25rem"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></span>
-<h3 class="font-section-h3 text-section-h3 mb-2">2MP Sensor</h3>
-<p class="text-text-secondary text-body">Optimized for high-contrast indoor and outdoor visual recognition.</p>
+<h3 class="font-display text-lead mb-2">2MP Sensor</h3>
+<p class="text-ink-secondary text-body">Optimized for high-contrast indoor and outdoor visual recognition.</p>
 </div>
-<div class="p-8 text-center bg-bg-parchment rounded-[18px]">
+<div class="p-8 text-center bg-canvas-parchment rounded-[18px]">
 <span class="inline-flex items-center justify-center mb-4 text-[#1d1d1f]"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width:2.25rem;height:2.25rem"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></span>
-<h3 class="font-section-h3 text-section-h3 mb-2">GPT-4o Vision</h3>
-<p class="text-text-secondary text-body">Direct integration with advanced vision models for near-instant analysis.</p>
+<h3 class="font-display text-lead mb-2">GPT-4o Vision</h3>
+<p class="text-ink-secondary text-body">Direct integration with advanced vision models for near-instant analysis.</p>
 </div>
-<div class="p-8 text-center bg-bg-parchment rounded-[18px]">
+<div class="p-8 text-center bg-canvas-parchment rounded-[18px]">
 <span class="inline-flex items-center justify-center mb-4 text-[#1d1d1f]"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width:2.25rem;height:2.25rem"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
-<h3 class="font-section-h3 text-section-h3 mb-2">Smart Retrieval</h3>
-<p class="text-text-secondary text-body">Find that document you looked at 3 hours ago by simply describing it.</p>
+<h3 class="font-display text-lead mb-2">Smart Retrieval</h3>
+<p class="text-ink-secondary text-body">Find that document you looked at 3 hours ago by simply describing it.</p>
 </div>
 </div>
 </section>
 <!-- 7. WEARABILITY -->
 <section class="bg-white py-section-v-padding overflow-hidden">
 <div class="max-w-[1200px] mx-auto px-margin-base text-center">
-<h2 class="font-section-h2-mobile md:font-section-h2 text-section-h2-mobile md:text-section-h2 mb-4">Built to disappear.</h2>
-<p class="font-section-h3 text-section-h3 text-text-secondary mb-12">80 grams. Worn all day.</p>
+<h2 class="font-display text-display-md md:text-hero-display mb-4">Built to disappear.</h2>
+<p class="font-body text-lead text-ink-secondary mb-12">80 grams. Worn all day.</p>
 <div class="relative inline-block my-20">
 <img alt="Aura device floating" class="w-full max-w-[800px] mx-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxeOX2uzmTWYIQ9qAOT5P7Z0q7xd3HGaQDnynTWF-V3AlQIF2omtr3JZStfd7xLuEV6OYzTuZXY-_-5RsKA9rsushl-hgNb_i_rtoDgUR8m8y20_DSydXxBzTbgfFEV3zQqm4P0D_s7Y4A_1IUZ5C-GI4aMjdSXcEYlqgvOLuP6zqSf2mNBas_683VjYRMtc-n3cUGUGaIQdhnMxDogE3-qVe81Oue7E2-4fd-5EQWIp_U23laxpXwD6VGcgzR2K4Goxq8wNi3w_U">
 <!-- Annotations -->
 <div class="absolute top-[20%] right-[10%] flex items-center gap-4">
 <div class="h-px w-24 bg-[#1d1d1f]/20"></div>
-<span class="font-label text-label text-text-secondary">2MP wide-angle lens</span>
+<span class="font-body text-caption text-ink-secondary">2MP wide-angle lens</span>
 </div>
 <div class="absolute bottom-[20%] left-[10%] flex items-center gap-4">
-<span class="font-label text-label text-text-secondary">MEMS Microphones</span>
+<span class="font-body text-caption text-ink-secondary">MEMS Microphones</span>
 <div class="h-px w-24 bg-[#1d1d1f]/20"></div>
 </div>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter max-w-prose-max-width mx-auto border-t border-black/10 pt-12">
 <div class="flex justify-between items-center py-4 border-b border-black/5">
-<span class="font-section-h3 text-section-h3 text-text-secondary">Dimensions</span>
-<span class="text-body font-semibold text-[#1d1d1f]">50 x 68 x 18 mm</span>
+<span class="font-body text-caption text-ink-secondary">Dimensions</span>
+<span class="font-body text-body-strong text-ink">50 x 68 x 18 mm</span>
 </div>
 <div class="flex justify-between items-center py-4 border-b border-black/5">
-<span class="font-section-h3 text-section-h3 text-text-secondary">Weight</span>
-<span class="text-body font-semibold text-[#1d1d1f]">80 grams</span>
+<span class="font-body text-caption text-ink-secondary">Weight</span>
+<span class="font-body text-body-strong text-ink">80 grams</span>
 </div>
 <div class="flex justify-between items-center py-4 border-b border-black/5">
-<span class="font-section-h3 text-section-h3 text-text-secondary">Battery Life</span>
-<span class="text-body font-semibold text-[#1d1d1f]">8 hours active</span>
+<span class="font-body text-caption text-ink-secondary">Battery Life</span>
+<span class="font-body text-body-strong text-ink">8 hours active</span>
 </div>
 <div class="flex justify-between items-center py-4 border-b border-black/5">
-<span class="font-section-h3 text-section-h3 text-text-secondary">Charging</span>
-<span class="text-body font-semibold text-[#1d1d1f]">USB-C</span>
+<span class="font-body text-caption text-ink-secondary">Charging</span>
+<span class="font-body text-body-strong text-ink">USB-C</span>
 </div>
 </div>
 </div>
@@ -436,14 +436,14 @@
 <!-- 8. BATTERY & POWER -->
 <section style="background: linear-gradient(to bottom, #095034 0%, #095034 40%, #ffffff 70%, #ffffff 100%);" class="pt-section-v-padding overflow-hidden relative">
   <div class="max-w-[1200px] mx-auto px-margin-base text-center relative z-10">
-    <span class="font-label text-overline text-white/80 uppercase tracking-widest mb-4 block">Battery</span>
-    <h2 class="font-display text-[48px] md:text-[80px] font-bold text-white leading-[1.1] tracking-tight mb-16 relative z-10">
+    <span class="font-body text-overline text-white/80 uppercase tracking-widest mb-4 block">Battery</span>
+    <h2 class="font-display text-display-lg md:text-hero-display text-white mb-16 relative z-10">
       Charges fast.<br>And lasts.
       <div class="flex flex-col items-center mt-[-10px] space-y-[-20px] md:space-y-[-40px] select-none pointer-events-none" aria-hidden="true">
-        <span class="text-[48px] md:text-[80px] font-bold text-white opacity-40 transform scale-y-90 translate-y-4 blur-[1px]">and lasts</span>
-        <span class="text-[48px] md:text-[80px] font-bold text-white opacity-20 transform scale-y-75 translate-y-8 blur-[2px]">and lasts</span>
-        <span class="text-[48px] md:text-[80px] font-bold text-white opacity-10 transform scale-y-50 translate-y-12 blur-[3px]">and lasts</span>
-        <span class="text-[48px] md:text-[80px] font-bold text-white opacity-5 transform scale-y-25 translate-y-16 blur-[4px]">and lasts</span>
+        <span class="font-display text-display-lg md:text-hero-display text-white opacity-40 transform scale-y-90 translate-y-4 blur-[1px]">and lasts</span>
+        <span class="font-display text-display-lg md:text-hero-display text-white opacity-20 transform scale-y-75 translate-y-8 blur-[2px]">and lasts</span>
+        <span class="font-display text-display-lg md:text-hero-display text-white opacity-10 transform scale-y-50 translate-y-12 blur-[3px]">and lasts</span>
+        <span class="font-display text-display-lg md:text-hero-display text-white opacity-5 transform scale-y-25 translate-y-16 blur-[4px]">and lasts</span>
       </div>
     </h2>
   </div>
@@ -453,26 +453,26 @@
   </div>
 
   <div class="max-w-[1200px] mx-auto px-margin-base">
-    <p class="text-center max-w-[600px] mx-auto mt-12 font-body text-body text-[#1d1d1f] leading-relaxed">
+    <p class="text-center max-w-[600px] mx-auto mt-12 font-body text-body text-ink leading-relaxed">
       <strong>Power for hours with a smaller, more capable footprint.</strong><br>
       The high-density Li-Po cell is optimized for minimal volume without sacrificing longevity. Coupled with our custom ultra-low-power ESP32-S3 architecture, it provides all-day ambient awareness.
     </p>
 
     <div class="max-w-[800px] mx-auto mt-20 grid grid-cols-1 md:grid-cols-3 gap-12 text-center pb-section-v-padding">
       <div>
-        <p class="font-label text-[11px] md:text-[13px] text-text-secondary mb-2">Up to</p>
-        <p class="font-display text-[40px] md:text-[56px] font-semibold text-[#30d158] leading-none mb-4 tracking-tight">8 hours</p>
-        <p class="font-body text-[13px] leading-tight text-text-secondary">of active listening time on a<br>single charge</p>
+        <p class="font-body text-fine-print text-ink-secondary mb-2">Up to</p>
+        <p class="font-display text-display-lg md:text-hero-display font-semibold text-[#30d158] leading-none mb-4">8 hours</p>
+        <p class="font-body text-fine-print text-ink-secondary">of active listening time on a<br>single charge</p>
       </div>
       <div>
-        <p class="font-label text-[11px] md:text-[13px] text-text-secondary mb-2">Capacity</p>
-        <p class="font-display text-[40px] md:text-[56px] font-semibold text-[#30d158] leading-none mb-4 tracking-tight">350 mAh</p>
-        <p class="font-body text-[13px] leading-tight text-text-secondary">high-density Li-Po<br>battery cell</p>
+        <p class="font-body text-fine-print text-ink-secondary mb-2">Capacity</p>
+        <p class="font-display text-display-lg md:text-hero-display font-semibold text-[#30d158] leading-none mb-4">350 mAh</p>
+        <p class="font-body text-fine-print text-ink-secondary">high-density Li-Po<br>battery cell</p>
       </div>
       <div>
-        <p class="font-label text-[11px] md:text-[13px] text-text-secondary mb-2">Charging</p>
-        <p class="font-display text-[40px] md:text-[56px] font-semibold text-[#30d158] leading-none mb-4 tracking-tight">USB-C</p>
-        <p class="font-body text-[13px] leading-tight text-text-secondary">fast charging everywhere<br>you go</p>
+        <p class="font-body text-fine-print text-ink-secondary mb-2">Charging</p>
+        <p class="font-display text-display-lg md:text-hero-display font-semibold text-[#30d158] leading-none mb-4">USB-C</p>
+        <p class="font-body text-fine-print text-ink-secondary">fast charging everywhere<br>you go</p>
       </div>
     </div>
   </div>
@@ -481,9 +481,9 @@
 <!-- 9. THESIS -->
 <section class="bg-[#272729] py-section-v-padding text-white text-center">
 <div class="max-w-[1200px] mx-auto px-margin-base">
-<span class="font-label text-overline text-white/40 uppercase mb-8 block">THE THESIS</span>
-<h2 class="font-section-h2-mobile md:font-section-h2 text-section-h2-mobile md:text-section-h2 mb-4">The third device.</h2>
-<p class="text-2xl md:text-3xl font-medium tracking-tight text-white/70 mb-20">Beyond laptop. Beyond phone.</p>
+<span class="font-body text-overline text-white/40 uppercase mb-8 block">THE THESIS</span>
+<h2 class="font-display text-display-md md:text-hero-display mb-4">The third device.</h2>
+<p class="font-body text-lead-airy md:text-lead text-white/70 mb-20">Beyond laptop. Beyond phone.</p>
 <div class="relative h-96 flex items-center justify-center mb-20">
 <div class="absolute inset-0 bg-[#2997ff]/20 rounded-full blur-[120px] scale-75"></div>
 <img alt="Aura core" class="relative z-10 w-64" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxeOX2uzmTWYIQ9qAOT5P7Z0q7xd3HGaQDnynTWF-V3AlQIF2omtr3JZStfd7xLuEV6OYzTuZXY-_-5RsKA9rsushl-hgNb_i_rtoDgUR8m8y20_DSydXxBzTbgfFEV3zQqm4P0D_s7Y4A_1IUZ5C-GI4aMjdSXcEYlqgvOLuP6zqSf2mNBas_683VjYRMtc-n3cUGUGaIQdhnMxDogE3-qVe81Oue7E2-4fd-5EQWIp_U23laxpXwD6VGcgzR2K4Goxq8wNi3w_U">
@@ -508,11 +508,11 @@
 <section class="py-section-v-padding overflow-hidden" style="background: radial-gradient(circle at center, #fcf8fb, #f5f5f7);">
 <div class="max-w-[1200px] mx-auto px-margin-base flex flex-col md:flex-row items-center gap-16">
 <div class="md:w-1/2">
-<h2 class="font-section-h2-mobile md:font-section-h2 text-section-h2-mobile md:text-section-h2 mb-6">Everything on your phone.</h2>
+<h2 class="font-display text-display-md md:text-hero-display mb-6">Everything on your phone.</h2>
 <div class="space-y-6">
-<p class="font-section-h3 text-section-h3 text-text-secondary">Conversation history.</p>
-<p class="font-section-h3 text-section-h3 text-text-secondary">Memory timeline.</p>
-<p class="font-section-h3 text-section-h3 text-text-secondary">Device control.</p>
+<p class="font-body text-caption text-ink-secondary">Conversation history.</p>
+<p class="font-body text-caption text-ink-secondary">Memory timeline.</p>
+<p class="font-body text-caption text-ink-secondary">Device control.</p>
 </div>
 </div>
 <div class="md:w-1/2 flex justify-center">
@@ -521,23 +521,23 @@
 </div>
 </section>
 <!-- 10. SPECS -->
-<section class="bg-bg-parchment py-section-v-padding overflow-hidden">
+<section class="bg-canvas-parchment py-section-v-padding overflow-hidden">
 <div class="max-w-[1200px] mx-auto px-margin-base">
 <div class="flex flex-col md:flex-row justify-between items-start mb-20 gap-12">
 <div class="md:w-1/2">
-<h2 class="font-section-h2-mobile md:font-section-h2 text-section-h2-mobile md:text-section-h2 mb-12">Technical specifications.</h2>
+<h2 class="font-display text-display-md md:text-hero-display mb-12">Technical specifications.</h2>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
 <div>
-<span class="text-5xl font-semibold text-[#1d1d1f] tracking-tight block mb-2">0.5s</span>
-<span class="text-label font-medium text-[#86868b]">Transcription latency</span>
+<span class="font-display text-hero-display font-semibold text-ink tracking-tight block mb-2">0.5s</span>
+<span class="font-body text-caption font-medium text-ink-tertiary">Transcription latency</span>
 </div>
 <div>
-<span class="text-5xl font-semibold text-[#1d1d1f] tracking-tight block mb-2">~$50</span>
-<span class="text-label font-medium text-[#86868b]">Bill of materials</span>
+<span class="font-display text-hero-display font-semibold text-ink tracking-tight block mb-2">~$50</span>
+<span class="font-body text-caption font-medium text-ink-tertiary">Bill of materials</span>
 </div>
 <div>
-<span class="text-5xl font-semibold text-[#1d1d1f] tracking-tight block mb-2">80g</span>
-<span class="text-label font-medium text-[#86868b]">Total weight</span>
+<span class="font-display text-hero-display font-semibold text-ink tracking-tight block mb-2">80g</span>
+<span class="font-body text-caption font-medium text-ink-tertiary">Total weight</span>
 </div>
 </div>
 </div>
@@ -548,41 +548,41 @@
 <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
 <div class="bg-white rounded-[18px] p-8">
 <img alt="Board schematics" class="w-full h-64 object-contain mb-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB47Q9IbXbfKFr9U_mlTKXAiywi7yHOzyOEzR0zHVxU3sbyxJZUSmhZRrEv477u-2GyhY0uezkQ4-Y1ENUi43Xeaign68yB3qOeO08oR-BKP5Va03Pw0xwsWIFWnmvgdP2psjfWrjkXPQ7-mGJGNGJBX8wyZdmD6hca_pHvDvOyv9XP2_87AfvFF96OgbXIO3oRmVyaezQd422VBooII1vyXRFtpB64aghYhP1x7vF5NVJWKeqlXc6GML-nTfA8zIxHNRw7JRonsiw">
-<h3 class="font-section-h3 text-section-h3 mb-2">Custom ESP32-S3 Board</h3>
-<p class="text-text-secondary text-body">Low power architecture optimized for Wi-Fi and Bluetooth LE connectivity with integrated power management.</p>
+<h3 class="font-display text-lead mb-2">Custom ESP32-S3 Board</h3>
+<p class="text-ink-secondary text-body">Low power architecture optimized for Wi-Fi and Bluetooth LE connectivity with integrated power management.</p>
 </div>
 <div class="bg-white rounded-[18px] p-8">
 <img alt="Battery module" class="w-full h-64 object-contain mb-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgJ2NmZ5e7siDhzSWoykkpU0g9GUCq_edzjifcUSeerF3Xc1R3Zv8Re8QKCxf59F3IiC62ZTbeJBKNTuhbWgCP4a1H87uPNL9HtRgyojcu2vxYrTrBBLFqs34cyXH8k6Wx2DtWt_tmJ4qH31G1KI0aAWt0XKSorbB_4fovC2KrCct-uXrhQP8_jaWjivuQN-sn_K_-e08lMbBifaUZKmG1eRR_d_AKSdiXe07qgrc_8wUP2CxXuuGTSAPRztj-UdY3swovHSW17aM">
-<h3 class="font-section-h3 text-section-h3 mb-2">High-Density Li-Po</h3>
-<p class="text-text-secondary text-body">3.7V 350mAh cell designed for maximum energy density in minimal physical footprint.</p>
+<h3 class="font-display text-lead mb-2">High-Density Li-Po</h3>
+<p class="text-ink-secondary text-body">3.7V 350mAh cell designed for maximum energy density in minimal physical footprint.</p>
 </div>
 </div>
 </div>
 </section>
 <!-- 11. WHY BUILD YOURS -->
-<section class="bg-bg-parchment py-section-v-padding">
+<section class="bg-canvas-parchment py-section-v-padding">
 <div class="max-w-[1200px] mx-auto px-margin-base">
-<h2 class="font-section-h2-mobile md:font-section-h2 text-section-h2-mobile md:text-section-h2 mb-12">Why build yours?</h2>
+<h2 class="font-display text-display-md md:text-hero-display mb-12">Why build yours?</h2>
 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
 <div class="bg-white p-8 rounded-[18px] flex flex-col gap-4 items-center text-center shadow-sm border border-black/5">
 <span class="inline-flex text-[#1d1d1f]"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:3rem;height:3rem"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></svg></span>
-<p class="font-label text-label font-semibold text-[#1d1d1f]">Open source</p>
+<p class="font-body text-caption font-semibold text-ink">Open source</p>
 </div>
 <div class="bg-white p-8 rounded-[18px] flex flex-col gap-4 items-center text-center shadow-sm border border-black/5">
 <span class="inline-flex text-[#1d1d1f]"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:3rem;height:3rem"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></span>
-<p class="font-label text-label font-semibold text-[#1d1d1f]">Inexpensive</p>
+<p class="font-body text-caption font-semibold text-ink">Inexpensive</p>
 </div>
 <div class="bg-white p-8 rounded-[18px] flex flex-col gap-4 items-center text-center shadow-sm border border-black/5">
 <span class="inline-flex text-[#1d1d1f]"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:3rem;height:3rem"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18.01"/></svg></span>
-<p class="font-label text-label font-semibold text-[#1d1d1f]">Custom app</p>
+<p class="font-body text-caption font-semibold text-ink">Custom app</p>
 </div>
 <div class="bg-white p-8 rounded-[18px] flex flex-col gap-4 items-center text-center shadow-sm border border-black/5">
 <span class="inline-flex text-[#1d1d1f]"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:3rem;height:3rem"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></span>
-<p class="font-label text-label font-semibold text-[#1d1d1f]">Self-hostable</p>
+<p class="font-body text-caption font-semibold text-ink">Self-hostable</p>
 </div>
 <div class="bg-white p-8 rounded-[18px] flex flex-col gap-4 items-center text-center shadow-sm border border-black/5">
 <span class="inline-flex text-[#1d1d1f]"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:3rem;height:3rem"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/></svg></span>
-<p class="font-label text-label font-semibold text-[#1d1d1f]">Great for students</p>
+<p class="font-body text-caption font-semibold text-ink">Great for students</p>
 </div>
 </div>
 </div>
@@ -590,14 +590,14 @@
 <!-- 12. KEEP EXPLORING -->
 <section class="bg-white py-section-v-padding">
 <div class="max-w-[1200px] mx-auto px-margin-base">
-<h2 class="font-section-h2-mobile md:font-section-h2 text-section-h2-mobile md:text-section-h2 mb-12">Keep exploring.</h2>
-<div class="w-full bg-bg-parchment rounded-[32px] overflow-hidden flex flex-col md:flex-row items-center">
+<h2 class="font-display text-display-md md:text-hero-display mb-12">Keep exploring.</h2>
+<div class="w-full bg-canvas-parchment rounded-[32px] overflow-hidden flex flex-col md:flex-row items-center">
 <div class="p-12 md:w-1/2">
-<h3 class="font-section-h2-mobile md:font-section-h2 text-section-h2-mobile md:text-section-h2 mb-6">Start your build today.</h3>
-<p class="text-body text-text-secondary mb-8 max-w-prose-max-width">Fork the repo, order the components, and build your own aware wearable. Full guides included.</p>
+<h3 class="font-display text-display-md md:text-hero-display mb-6">Start your build today.</h3>
+<p class="font-body text-body text-ink-secondary mb-8 max-w-prose-max-width">Fork the repo, order the components, and build your own aware wearable. Full guides included.</p>
 <div class="flex gap-4">
-<a href="docs.html#hardware" class="bg-accent-blue text-white font-label text-label px-8 py-3 rounded-full hover:opacity-90 transition-all flex items-center justify-center">Build Yours</a>
-<a href="docs.html" class="text-accent-blue font-label text-label flex items-center gap-2 hover:gap-3 transition-all">View Docs <span class="material-symbols-outlined text-sm">chevron_right</span></a>
+<a href="docs.html#hardware" class="bg-accent-blue text-white font-body text-body px-8 py-3 rounded-full hover:opacity-90 transition-all flex items-center justify-center">Build Yours</a>
+<a href="docs.html" class="text-accent-blue font-body text-body flex items-center gap-2 hover:gap-3 transition-all">View Docs <span class="material-symbols-outlined text-sm">chevron_right</span></a>
 </div>
 </div>
 <div class="md:w-1/2 p-12">
@@ -786,9 +786,9 @@
     <div class="faq-card">
       <div>
         <span class="material-symbols-outlined text-[32px] text-[#1d1d1f] mb-5">mic</span>
-        <h3 class="text-[19px] font-semibold text-[#1d1d1f] leading-[1.3] mb-2.5">What does Aura actually capture?</h3>
+        <h3 class="font-display text-tagline font-semibold text-ink leading-[1.3] mb-2.5">What does Aura actually capture?</h3>
         <div class="faq-answer">
-          <p class="text-[14px] font-normal text-[#6e6e73] leading-[1.5]">
+          <p class="font-body text-caption font-normal text-ink-secondary leading-[1.5]">
             Aura's 2MP wide-angle camera and dual MEMS microphones capture your conversations, environment, and visual context continuously — processing everything on-device with no raw data ever leaving your pocket.
           </p>
         </div>
@@ -802,9 +802,9 @@
     <div class="faq-card">
       <div>
         <span class="material-symbols-outlined text-[32px] text-[#1d1d1f] mb-5">security</span>
-        <h3 class="text-[19px] font-semibold text-[#1d1d1f] leading-[1.3] mb-2.5">Is my data private?</h3>
+        <h3 class="font-display text-tagline font-semibold text-ink leading-[1.3] mb-2.5">Is my data private?</h3>
         <div class="faq-answer">
-          <p class="text-[14px] font-normal text-[#6e6e73] leading-[1.5]">
+          <p class="font-body text-caption font-normal text-ink-secondary leading-[1.5]">
             Everything is processed locally on the XIAO ESP32-S3. Audio is transcribed on-device via Whisper. Only anonymised semantic embeddings sync to the cloud. Your raw conversations are never uploaded or stored.
           </p>
         </div>
@@ -818,9 +818,9 @@
     <div class="faq-card">
       <div>
         <span class="material-symbols-outlined text-[32px] text-[#1d1d1f] mb-5">bolt</span>
-        <h3 class="text-[19px] font-semibold text-[#1d1d1f] leading-[1.3] mb-2.5">How fast does it respond?</h3>
+        <h3 class="font-display text-tagline font-semibold text-ink leading-[1.3] mb-2.5">How fast does it respond?</h3>
         <div class="faq-answer">
-          <p class="text-[14px] font-normal text-[#6e6e73] leading-[1.5]">
+          <p class="font-body text-caption font-normal text-ink-secondary leading-[1.5]">
             Aura achieves sub-200ms response latency for context retrieval. Queries are processed via a RAG pipeline combining Pinecone vector search and Redis caching — designed to feel instant.
           </p>
         </div>
@@ -834,9 +834,9 @@
     <div class="faq-card">
       <div>
         <span class="material-symbols-outlined text-[32px] text-[#1d1d1f] mb-5">code</span>
-        <h3 class="text-[19px] font-semibold text-[#1d1d1f] leading-[1.3] mb-2.5">Can I build one myself?</h3>
+        <h3 class="font-display text-tagline font-semibold text-ink leading-[1.3] mb-2.5">Can I build one myself?</h3>
         <div class="faq-answer">
-          <p class="text-[14px] font-normal text-[#6e6e73] leading-[1.5]">
+          <p class="font-body text-caption font-normal text-ink-secondary leading-[1.5]">
             Yes. Aura is fully open-source. The hardware BOM costs ~$50, firmware runs on FreeRTOS, and the full build guide is in the Docs. No soldering experience required for the base build.
           </p>
         </div>
@@ -850,9 +850,9 @@
     <div class="faq-card">
       <div>
         <span class="material-symbols-outlined text-[32px] text-[#1d1d1f] mb-5">smartphone</span>
-        <h3 class="text-[19px] font-semibold text-[#1d1d1f] leading-[1.3] mb-2.5">What phone does it work with?</h3>
+        <h3 class="font-display text-tagline font-semibold text-ink leading-[1.3] mb-2.5">What phone does it work with?</h3>
         <div class="faq-answer">
-          <p class="text-[14px] font-normal text-[#6e6e73] leading-[1.5]">
+          <p class="font-body text-caption font-normal text-ink-secondary leading-[1.5]">
             Aura pairs with the companion Flutter app on both iOS and Android. The app handles voice queries, memory browsing, and settings sync via BLE. No proprietary ecosystem required.
           </p>
         </div>
@@ -866,9 +866,9 @@
     <div class="faq-card">
       <div>
         <span class="material-symbols-outlined text-[32px] text-[#1d1d1f] mb-5">battery_charging_full</span>
-        <h3 class="text-[19px] font-semibold text-[#1d1d1f] leading-[1.3] mb-2.5">How long does the battery last?</h3>
+        <h3 class="font-display text-tagline font-semibold text-ink leading-[1.3] mb-2.5">How long does the battery last?</h3>
         <div class="faq-answer">
-          <p class="text-[14px] font-normal text-[#6e6e73] leading-[1.5]">
+          <p class="font-body text-caption font-normal text-ink-secondary leading-[1.5]">
             Aura runs all day on a single charge — designed for 8+ hours of active use. It charges via USB-C in under 45 minutes and enters a low-power standby mode when not actively capturing.
           </p>
         </div>
@@ -972,11 +972,11 @@
 <footer class="bg-inverse-surface dark:bg-on-background py-section-v-padding text-surface-bright">
 <div class="max-w-[1200px] mx-auto px-margin-base grid grid-cols-1 md:grid-cols-4 gap-gutter">
 <div>
-<div class="font-hero-h1 text-section-h3 text-surface-bright mb-4">Aura</div>
+<div class="font-display text-lead text-surface-bright mb-4">Aura</div>
 <p class="text-outline-variant text-label">The open source wearable AI project.</p>
 </div>
 <div>
-<h4 class="font-label text-label font-semibold mb-4 uppercase opacity-50">Build</h4>
+<h4 class="font-body text-caption font-semibold mb-4 uppercase opacity-50">Build</h4>
 <ul class="space-y-2">
 <li><a class="text-outline-variant hover:text-surface-bright transition-colors" href="docs.html#hardware">Components</a></li>
 <li><a class="text-outline-variant hover:text-surface-bright transition-colors" href="docs.html#firmware">Firmware</a></li>
@@ -984,7 +984,7 @@
 </ul>
 </div>
 <div>
-<h4 class="font-label text-label font-semibold mb-4 uppercase opacity-50">Learn</h4>
+<h4 class="font-body text-caption font-semibold mb-4 uppercase opacity-50">Learn</h4>
 <ul class="space-y-2">
 <li><a class="text-outline-variant hover:text-surface-bright transition-colors" href="docs.html">Documentation</a></li>
 <li><a class="text-outline-variant hover:text-surface-bright transition-colors" href="docs.html">Guides</a></li>
@@ -992,7 +992,7 @@
 </ul>
 </div>
 <div>
-<h4 class="font-label text-label font-semibold mb-4 uppercase opacity-50">Community</h4>
+<h4 class="font-body text-caption font-semibold mb-4 uppercase opacity-50">Community</h4>
 <ul class="space-y-2">
 <li><a class="text-outline-variant hover:text-surface-bright transition-colors" href="https://github.com/thesohamdatta/aura" target="_blank">GitHub</a></li>
 <li><a class="text-outline-variant hover:text-surface-bright transition-colors" aria-disabled="true" href="#">Discord</a></li>
