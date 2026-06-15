@@ -97,99 +97,159 @@
 </section>
 <!-- 2. GET THE HIGHLIGHTS -->
 <section class="bg-[#f5f5f7] py-section-v-padding border-t border-black/10">
-<div class="max-w-[1200px] mx-auto px-margin-base mb-12">
-<h2 class="font-display text-display-md md:text-hero-display tracking-tight text-[#1d1d1f]">The highlights.</h2>
+<!-- 2. GET THE HIGHLIGHTS -->
+<section class="bg-[#f5f5f7] py-section-v-padding border-t border-black/10 overflow-hidden">
+  <style>
+    @keyframes wavePulse {
+      0%, 100% { transform: scaleY(0.7); }
+      50% { transform: scaleY(1.1); }
+    }
+    .wave-bar { animation: wavePulse 1.5s ease-in-out infinite; transform-origin: bottom; }
+    .wave-bar:nth-child(1) { animation-delay: 0.0s; height: 35%; }
+    .wave-bar:nth-child(2) { animation-delay: 0.2s; height: 60%; }
+    .wave-bar:nth-child(3) { animation-delay: 0.4s; height: 100%; box-shadow: 0 0 15px rgba(0,102,204,0.5); }
+    .wave-bar:nth-child(4) { animation-delay: 0.2s; height: 75%; }
+    .wave-bar:nth-child(5) { animation-delay: 0.0s; height: 40%; }
+  </style>
+
+<div class="max-w-[1200px] mx-auto px-margin-base mb-16 md:mb-20 text-center md:text-left">
+  <p class="font-body text-[14px] md:text-[15px] font-semibold text-[#86868b] uppercase tracking-[0.15em] mb-4">Core Capabilities</p>
+  <h2 class="font-display text-[48px] md:text-[64px] lg:text-[72px] font-semibold text-[#1d1d1f] tracking-[-0.02em] leading-[1.05]">
+    Intelligence,<br>woven into life.
+  </h2>
 </div>
+
 <div class="max-w-[1200px] mx-auto px-margin-base">
 
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-[1200px] mx-auto w-full pb-8">
 
     <!-- Card 1: Voice -->
-    <div class="rounded-[32px] md:rounded-[40px] bg-white overflow-hidden flex flex-col relative shadow-[0_4px_24px_rgba(0,0,0,0.04)] h-[500px] md:h-[600px] border border-black/5 group">
-      <div class="p-8 md:p-10 z-10">
-        <p class="font-body text-[13px] font-semibold text-[#86868b] uppercase tracking-widest mb-3">Voice</p>
-        <p class="font-display text-[32px] md:text-[40px] font-semibold text-[#1d1d1f] leading-tight">0.5s transcription.</p>
-        <p class="font-body text-[17px] text-[#86868b] leading-snug mt-3 max-w-[280px]">Every word captured and stored as semantic meaning — not just raw text.</p>
+    <div class="rounded-[32px] md:rounded-[40px] bg-white overflow-hidden flex flex-col relative shadow-[0_4px_24px_rgba(0,0,0,0.04)] h-[500px] md:h-[600px] border border-black/5 group cursor-default">
+      <div class="p-8 md:p-12 z-10">
+        <p class="font-body text-[14px] font-semibold text-[#0066cc] uppercase tracking-widest mb-4">Voice</p>
+        <p class="font-display text-[36px] md:text-[44px] font-semibold text-[#1d1d1f] leading-tight tracking-tight">Captures every detail.</p>
+        <p class="font-body text-[17px] md:text-[19px] text-[#86868b] leading-[1.4] mt-4 max-w-[280px]">0.5s transcription. Every word is processed and stored as semantic meaning, not just raw text.</p>
       </div>
-      <div class="flex-1 flex items-end justify-center pb-12 relative overflow-hidden">
+      <div class="flex-1 flex items-end justify-center pb-16 relative overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent z-10 pointer-events-none"></div>
-        <div class="flex items-end gap-[4px] h-32 relative z-0 transform transition-transform duration-1000 group-hover:scale-105">
-          <div class="w-[6px] rounded-full bg-[#0066cc]/30" style="height:20%"></div>
-          <div class="w-[6px] rounded-full bg-[#0066cc]/50" style="height:45%"></div>
-          <div class="w-[6px] rounded-full bg-[#0066cc]/70" style="height:80%"></div>
-          <div class="w-[6px] rounded-full bg-[#0066cc]" style="height:100%"></div>
-          <div class="w-[6px] rounded-full bg-[#0066cc]/80" style="height:65%"></div>
-          <div class="w-[6px] rounded-full bg-[#0066cc]/60" style="height:90%"></div>
-          <div class="w-[6px] rounded-full bg-[#0066cc]/40" style="height:50%"></div>
+        <div class="flex items-center justify-center h-full w-full relative z-0 transform transition-transform duration-1000 group-hover:scale-[1.05]">
+          <!-- Ambient Glow -->
+          <div class="absolute inset-0 bg-[#0066cc]/5 blur-[60px] rounded-full scale-150 transform transition-all duration-1000 group-hover:bg-[#0066cc]/10"></div>
+          <!-- Waveform -->
+          <div class="flex items-end gap-[6px] h-32 w-full justify-center">
+            <div class="w-[8px] rounded-full bg-gradient-to-t from-[#0066cc]/50 to-[#0066cc] wave-bar"></div>
+            <div class="w-[8px] rounded-full bg-gradient-to-t from-[#0066cc]/50 to-[#0066cc] wave-bar"></div>
+            <div class="w-[8px] rounded-full bg-gradient-to-t from-[#0066cc]/50 to-[#0066cc] wave-bar"></div>
+            <div class="w-[8px] rounded-full bg-gradient-to-t from-[#0066cc]/50 to-[#0066cc] wave-bar"></div>
+            <div class="w-[8px] rounded-full bg-gradient-to-t from-[#0066cc]/50 to-[#0066cc] wave-bar"></div>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- Card 2: Vision -->
-    <div class="rounded-[32px] md:rounded-[40px] bg-white overflow-hidden flex flex-col relative shadow-[0_4px_24px_rgba(0,0,0,0.04)] h-[500px] md:h-[600px] border border-black/5 group">
-      <div class="p-8 md:p-10 z-10">
-        <p class="font-body text-[13px] font-semibold text-[#86868b] uppercase tracking-widest mb-3">Vision</p>
-        <p class="font-display text-[32px] md:text-[40px] font-semibold text-[#1d1d1f] leading-tight">Sees what you see.</p>
-        <p class="font-body text-[17px] text-[#86868b] leading-snug mt-3 max-w-[280px]">2MP OV2640. On-command capture. GPT-4o Vision in under 2 seconds.</p>
+    <div class="rounded-[32px] md:rounded-[40px] bg-white overflow-hidden flex flex-col relative shadow-[0_4px_24px_rgba(0,0,0,0.04)] h-[500px] md:h-[600px] border border-black/5 group cursor-default">
+      <div class="p-8 md:p-12 z-10">
+        <p class="font-body text-[14px] font-semibold text-[#1d1d1f] uppercase tracking-widest mb-4">Vision</p>
+        <p class="font-display text-[36px] md:text-[44px] font-semibold text-[#1d1d1f] leading-tight tracking-tight">Understands what it sees.</p>
+        <p class="font-body text-[17px] md:text-[19px] text-[#86868b] leading-[1.4] mt-4 max-w-[280px]">2MP OV2640 with on-command capture. GPT-4o Vision processes your world in under 2 seconds.</p>
       </div>
       <div class="flex-1 flex items-center justify-center relative overflow-hidden">
-         <div class="w-48 h-48 rounded-full border border-black/5 flex items-center justify-center relative bg-[#f5f5f7] transform transition-transform duration-[1.5s] ease-out group-hover:scale-[1.03] group-hover:shadow-lg">
-            <div class="w-32 h-32 rounded-full bg-black flex items-center justify-center shadow-[inset_0_4px_20px_rgba(255,255,255,0.2)] relative overflow-hidden">
-               <div class="absolute w-full h-full bg-gradient-to-br from-white/20 to-transparent rounded-full opacity-50"></div>
-               <div class="w-12 h-12 rounded-full bg-[#111] border-2 border-white/10 shadow-[inset_0_0_10px_rgba(0,0,0,1)]"></div>
+         <div class="w-64 h-64 rounded-full flex items-center justify-center relative transform transition-transform duration-[1.5s] ease-out group-hover:scale-[1.05]">
+            <!-- Outer Camera Bezel -->
+            <div class="absolute inset-0 rounded-full border border-black/5 bg-gradient-to-b from-[#f5f5f7] to-[#ffffff] shadow-[0_20px_40px_rgba(0,0,0,0.08)]"></div>
+            <!-- Inner Lens Housing -->
+            <div class="w-48 h-48 rounded-full bg-[#0a0a0a] flex items-center justify-center shadow-[inset_0_10px_30px_rgba(0,0,0,1)] relative overflow-hidden ring-1 ring-black/10">
+               <!-- Curved Glass Reflections -->
+               <div class="absolute w-[140%] h-[140%] bg-gradient-to-br from-white/10 via-transparent to-transparent rounded-full opacity-70 -top-[20%] -left-[20%] mix-blend-screen"></div>
+               <div class="absolute w-[80%] h-[80%] bg-gradient-to-br from-white/5 to-transparent rounded-full top-[10%] left-[10%]"></div>
+               <!-- Aperture Core -->
+               <div class="w-20 h-20 rounded-full bg-black border border-white/5 shadow-[inset_0_0_20px_rgba(0,0,0,1)] relative overflow-hidden flex items-center justify-center">
+                 <div class="w-8 h-8 rounded-full opacity-60" style="background: radial-gradient(circle, rgba(0,102,204,0.5) 0%, transparent 70%);"></div>
+               </div>
             </div>
          </div>
       </div>
     </div>
 
     <!-- Card 3: Memory -->
-    <div class="rounded-[32px] md:rounded-[40px] bg-white overflow-hidden flex flex-col relative shadow-[0_4px_24px_rgba(0,0,0,0.04)] h-[500px] md:h-[600px] border border-black/5 group">
-      <div class="p-8 md:p-10 z-10">
-        <p class="font-body text-[13px] font-semibold text-[#86868b] uppercase tracking-widest mb-3">Memory</p>
-        <p class="font-display text-[32px] md:text-[40px] font-semibold text-[#1d1d1f] leading-tight">Never forgets.</p>
-        <p class="font-body text-[17px] text-[#86868b] leading-snug mt-3 max-w-[280px]">Retrieve any conversation by meaning — not keyword. Works weeks later.</p>
+    <div class="rounded-[32px] md:rounded-[40px] bg-white overflow-hidden flex flex-col relative shadow-[0_4px_24px_rgba(0,0,0,0.04)] h-[500px] md:h-[600px] border border-black/5 group cursor-default">
+      <div class="p-8 md:p-12 z-10">
+        <p class="font-body text-[14px] font-semibold text-[#9333ea] uppercase tracking-widest mb-4">Memory</p>
+        <p class="font-display text-[36px] md:text-[44px] font-semibold text-[#1d1d1f] leading-tight tracking-tight">Never forgets.</p>
+        <p class="font-body text-[17px] md:text-[19px] text-[#86868b] leading-[1.4] mt-4 max-w-[280px]">Pinecone vector retrieval. Search your life by meaning and context, not just by exact keywords.</p>
       </div>
       <div class="flex-1 flex items-center justify-center relative overflow-hidden">
-        <div class="absolute w-[200%] h-[200%] opacity-[0.15] transition-transform duration-[1.5s] ease-out group-hover:scale-110 group-hover:rotate-6" style="background-image: radial-gradient(circle at center, #0066cc 2px, transparent 2.5px); background-size: 32px 32px;"></div>
-        <div class="w-24 h-24 rounded-full bg-white shadow-xl flex items-center justify-center relative z-10 transform transition-transform duration-[1.5s] ease-out group-hover:scale-110">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#0066cc" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="32" height="32"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <!-- Abstract Neural/Memory Glow -->
+        <div class="absolute w-[250%] h-[250%] opacity-[0.12] transition-transform duration-[2s] ease-out group-hover:scale-110 group-hover:rotate-12" style="background-image: radial-gradient(circle at center, #9333ea 2px, transparent 2.5px); background-size: 32px 32px; transform: perspective(500px) rotateX(30deg);"></div>
+        <div class="w-48 h-48 absolute rounded-full bg-gradient-to-tr from-[#9333ea] to-[#4f46e5] blur-[50px] opacity-15 group-hover:opacity-30 transition-opacity duration-1000 group-hover:scale-110"></div>
+        <div class="w-24 h-24 rounded-full bg-white shadow-2xl flex items-center justify-center relative z-10 transform transition-transform duration-[1.5s] ease-out group-hover:scale-110 border border-[#9333ea]/10">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#9333ea" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="32" height="32"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
         </div>
       </div>
     </div>
 
-    <!-- Card 4: Open Source (Hero) -->
-    <div class="lg:col-span-3 rounded-[32px] md:rounded-[40px] bg-[#1d1d1f] overflow-hidden flex flex-col md:flex-row relative shadow-[0_8px_32px_rgba(0,0,0,0.2)] h-[550px] md:h-[600px] group border border-white/5">
-      <div class="p-8 md:p-14 lg:p-16 z-10 w-full md:w-[45%] flex flex-col justify-center relative">
-        <div class="absolute inset-0 bg-gradient-to-r from-[#1d1d1f] via-[#1d1d1f] to-transparent z-0"></div>
+    <!-- Card 4: Open Source (Hero Manifesto) -->
+    <div class="lg:col-span-3 rounded-[32px] md:rounded-[40px] bg-[#121212] overflow-hidden flex flex-col md:flex-row relative shadow-[0_20px_40px_rgba(0,0,0,0.15)] md:h-[600px] group border border-white/10 cursor-default">
+      
+      <!-- Content Side -->
+      <div class="p-10 md:p-16 lg:p-20 z-20 w-full md:w-[55%] flex flex-col justify-center relative">
+        <div class="absolute inset-0 bg-gradient-to-r from-[#121212] via-[#121212] to-transparent z-0"></div>
         <div class="relative z-10">
-          <p class="font-body text-[13px] font-semibold text-white/40 uppercase tracking-widest mb-4">Open Source</p>
-          <p class="font-display text-[40px] md:text-[56px] font-semibold text-white leading-[1.05] tracking-tight mb-4">Everything public.</p>
-          <p class="font-body text-[19px] text-[#86868b] leading-relaxed max-w-[340px]">MIT licensed. Firmware, schematics, and backend. Fork it. Build your own. ~$50 BOM.</p>
-        </div>
-        <div class="mt-10">
-           <a href="docs.html" class="inline-flex items-center justify-center bg-[#0066cc] text-white rounded-full px-6 py-3.5 font-display font-medium text-[15px] hover:scale-[1.02] hover:bg-[#0071e3] transition-all duration-300">View the repository</a>
+          <p class="font-mono text-[14px] font-semibold text-[#34d399] uppercase tracking-widest mb-6">Open Architecture</p>
+          <h3 class="font-display text-[48px] md:text-[64px] font-semibold text-white leading-[1.05] tracking-tight mb-6">Built for builders.</h3>
+          <p class="font-body text-[19px] md:text-[21px] text-[#a1a1a6] leading-relaxed max-w-[420px] mb-12">
+            Aura is a manifesto for the open-source hardware movement. Firmware, schematics, and the entire AI pipeline are completely public. Fork the repository. Change the wake word. Build your own form factor.
+          </p>
+          <div class="flex flex-wrap items-center gap-6">
+            <a href="docs.html" class="inline-flex items-center justify-center bg-[#0066cc] text-white rounded-full px-8 py-4 font-display font-medium text-[17px] hover:scale-[1.03] hover:bg-[#0071e3] transition-all duration-300">View the repository</a>
+            <span class="font-mono text-[15px] text-[#86868b]"><span class="text-white/40">License:</span> MIT</span>
+          </div>
         </div>
       </div>
-      <div class="absolute inset-0 md:left-[40%] overflow-hidden flex items-center justify-end z-0">
-         <div class="w-[150%] md:w-full h-full opacity-30 md:opacity-50 flex items-center justify-center transform transition-transform duration-[2s] ease-out group-hover:scale-105 group-hover:-translate-x-4">
-           <!-- Code block visual -->
-           <div class="font-mono text-[14px] leading-loose text-[#34d399] p-10 select-none">
-             <div><span class="text-white/40">1</span> <span class="text-[#ff7b72]">import</span> <span class="text-[#79c0ff]">Aura</span> <span class="text-[#ff7b72]">from</span> <span class="text-[#a5d6ff]">'@thesohamdatta/aura'</span></div>
-             <div><span class="text-white/40">2</span></div>
-             <div><span class="text-white/40">3</span> <span class="text-[#ff7b72]">const</span> <span class="text-[#79c0ff]">device</span> = <span class="text-[#ff7b72]">new</span> <span class="text-[#d2a8ff]">Aura</span>({</div>
-             <div><span class="text-white/40">4</span>   <span class="text-[#79c0ff]">hardware</span>: <span class="text-[#a5d6ff]">'ESP32-S3'</span>,</div>
-             <div><span class="text-white/40">5</span>   <span class="text-[#79c0ff]">license</span>: <span class="text-[#a5d6ff]">'MIT'</span>,</div>
-             <div><span class="text-white/40">6</span>   <span class="text-[#79c0ff]">cost</span>: <span class="text-[#a5d6ff]">'$50'</span></div>
-             <div><span class="text-white/40">7</span> })</div>
-             <div><span class="text-white/40">8</span></div>
-             <div><span class="text-white/40">9</span> <span class="text-[#d2a8ff]">device</span>.<span class="text-[#79c0ff]">listen</span>()</div>
-           </div>
-         </div>
+
+      <!-- Visual Side: Terminal Window -->
+      <div class="absolute inset-0 md:left-[45%] flex items-center justify-end z-10 p-8 md:p-0">
+        <!-- Dramatic gradient fade on the edge -->
+        <div class="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#121212] to-transparent z-20 hidden md:block"></div>
+        
+        <div class="w-full md:w-[120%] h-full flex flex-col justify-center transform transition-transform duration-[2s] ease-out group-hover:scale-[1.02] md:group-hover:-translate-x-6 opacity-90 md:opacity-100">
+          
+          <!-- Code Editor Window -->
+          <div class="bg-[#1e1e1e] rounded-2xl border border-white/10 shadow-2xl overflow-hidden md:translate-x-12 md:-rotate-2 group-hover:rotate-0 transition-transform duration-[1.5s] ease-out w-full max-w-[600px] ml-auto">
+            <div class="flex items-center px-4 py-3 border-b border-white/5 bg-[#181818]">
+              <div class="flex gap-2">
+                <div class="w-3 h-3 rounded-full bg-[#ff5f56]"></div>
+                <div class="w-3 h-3 rounded-full bg-[#ffbd2e]"></div>
+                <div class="w-3 h-3 rounded-full bg-[#27c93f]"></div>
+              </div>
+              <p class="font-mono text-[12px] text-[#86868b] ml-4">main.cpp — aura-firmware</p>
+            </div>
+            <div class="font-mono text-[14px] md:text-[15px] leading-loose text-[#e6e6e6] p-6 md:p-8 overflow-hidden">
+              <div><span class="text-white/30">1</span> <span class="text-[#ff7b72]">#include</span> <span class="text-[#a5d6ff]">&lt;Aura.h&gt;</span></div>
+              <div><span class="text-white/30">2</span></div>
+              <div><span class="text-white/30">3</span> <span class="text-[#ff7b72]">void</span> <span class="text-[#d2a8ff]">setup</span>() {</div>
+              <div><span class="text-white/30">4</span>   <span class="text-[#79c0ff]">Aura</span>.<span class="text-[#d2a8ff]">begin</span>();</div>
+              <div><span class="text-white/30">5</span>   <span class="text-[#79c0ff]">Aura</span>.<span class="text-[#d2a8ff]">setWakeWord</span>(<span class="text-[#a5d6ff]">"Hey Aura"</span>);</div>
+              <div><span class="text-white/30">6</span>   <span class="text-[#79c0ff]">Aura</span>.<span class="text-[#d2a8ff]">enableVision</span>(<span class="text-[#79c0ff]">true</span>);</div>
+              <div><span class="text-white/30">7</span> }</div>
+              <div><span class="text-white/30">8</span></div>
+              <div><span class="text-white/30">9</span> <span class="text-[#ff7b72]">void</span> <span class="text-[#d2a8ff]">loop</span>() {</div>
+              <div><span class="text-white/30">10</span>  <span class="text-[#79c0ff]">Aura</span>.<span class="text-[#d2a8ff]">listen</span>();</div>
+              <div><span class="text-white/30">11</span> }</div>
+              <div class="mt-4 flex">
+                <span class="text-[#34d399]">aura@esp32</span><span class="text-white">:</span><span class="text-[#79c0ff]">~</span><span class="text-white">$</span> <span class="ml-2 w-2 h-4 bg-white/60 inline-block animate-pulse"></span>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
 
   </div>
 
+</div>
 </div>
 </section>
 
