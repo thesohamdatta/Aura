@@ -32,48 +32,79 @@
 </nav>
 <div class="max-w-[1200px] mx-auto flex pt-[52px]">
 <!-- Left Sidebar Documentation Tree (260px) -->
-<aside class="w-[260px] h-[calc(100vh-44px)] sticky top-[44px] hidden md:flex flex-col py-8 px-margin-base bg-surface-container-lowest border-r border-outline-variant/20 overflow-y-auto">
+<aside class="w-[260px] h-[calc(100vh-52px)] sticky top-[52px] hidden md:flex flex-col py-8 px-margin-base bg-surface-container-lowest border-r border-outline-variant/20 overflow-y-auto">
 <div class="mb-8">
-<h2 class="font-hero-h1 text-label font-bold text-on-surface mb-2 tracking-tight">Documentation</h2>
+<h2 class="font-hero-h1 text-[18px] font-bold text-on-surface mb-2 tracking-tight">Documentation</h2>
 <p class="font-body text-[12px] text-text-secondary">Technical Guides</p>
 </div>
 <nav class="flex flex-col gap-1">
 <div class="mb-4">
-<p class="text-[11px] font-bold text-text-secondary uppercase tracking-widest mb-3 px-2">Core Concepts</p>
-<a class="flex items-center gap-3 px-2 py-1.5 rounded-lg font-body text-label text-accent-blue font-semibold border-r-2 border-accent-blue bg-surface-container-low transition-transform active:translate-x-1" href="docs.html">
-<span class="material-symbols-outlined text-[18px]">book</span>
-                        Introduction
-                    </a>
-<a class="flex items-center gap-3 px-2 py-1.5 rounded-lg font-body text-label text-text-secondary hover:bg-surface-container-low transition-colors group" href="index.html#features">
-<span class="material-symbols-outlined text-[18px]">rocket_launch</span>
-                        Quick Start
-                    </a>
+<p class="text-[11px] font-bold text-text-secondary uppercase tracking-widest mb-3 px-2">Getting Started</p>
+<a class="flex items-center gap-3 px-2 py-1.5 rounded-lg font-body text-label text-accent-blue font-semibold border-r-2 border-accent-blue bg-surface-container-low transition-transform active:translate-x-1 animate-nav-item" href="#what-is-aura">
+<span class="material-symbols-outlined text-[18px]">info</span>
+    What Is Aura
+</a>
+<a class="flex items-center gap-3 px-2 py-1.5 rounded-lg font-body text-label text-text-secondary hover:bg-surface-container-low transition-colors group" href="#how-aura-works">
+<span class="material-symbols-outlined text-[18px]">settings</span>
+    How Aura Works
+</a>
+<a class="flex items-center gap-3 px-2 py-1.5 rounded-lg font-body text-label text-text-secondary hover:bg-surface-container-low transition-colors group" href="#bom">
+<span class="material-symbols-outlined text-[18px]">shopping_cart</span>
+    Bill of Materials
+</a>
+<a class="flex items-center gap-3 px-2 py-1.5 rounded-lg font-body text-label text-text-secondary hover:bg-surface-container-low transition-colors group" href="#bom-case">
+<span class="material-symbols-outlined text-[18px]">3d_rotation</span>
+    BOM Case
+</a>
 </div>
 <div class="mb-4">
 <p class="text-[11px] font-bold text-text-secondary uppercase tracking-widest mb-3 px-2">Engineering</p>
 <a class="flex items-center gap-3 px-2 py-1.5 rounded-lg font-body text-label text-text-secondary hover:bg-surface-container-low transition-colors" href="#hardware">
 <span class="material-symbols-outlined text-[18px]">memory</span>
-                        Hardware
-                    </a>
+    Hardware Overview
+</a>
 <a class="flex items-center gap-3 px-2 py-1.5 rounded-lg font-body text-label text-text-secondary hover:bg-surface-container-low transition-colors" href="#firmware">
 <span class="material-symbols-outlined text-[18px]">developer_board</span>
-                        Firmware
-                    </a>
+    Flashing Firmware
+</a>
 <a class="flex items-center gap-3 px-2 py-1.5 rounded-lg font-body text-label text-text-secondary hover:bg-surface-container-low transition-colors" href="#backend">
 <span class="material-symbols-outlined text-[18px]">storage</span>
-                        Backend
-                    </a>
+    Setting Up Backend
+</a>
+<a class="flex items-center gap-3 px-2 py-1.5 rounded-lg font-body text-label text-text-secondary hover:bg-surface-container-low transition-colors" href="#setup-app">
+<span class="material-symbols-outlined text-[18px]">smartphone</span>
+    Setting Up App
+</a>
 </div>
 <div class="mb-4">
-<p class="text-[11px] font-bold text-text-secondary uppercase tracking-widest mb-3 px-2">Resources</p>
-<a class="flex items-center gap-3 px-2 py-1.5 rounded-lg font-body text-label text-text-secondary hover:bg-surface-container-low transition-colors" href="https://github.com/thesohamdatta/aura" target="_blank">
+<p class="text-[11px] font-bold text-text-secondary uppercase tracking-widest mb-3 px-2">Configuration</p>
+<a class="flex items-center gap-3 px-2 py-1.5 rounded-lg font-body text-label text-text-secondary hover:bg-surface-container-low transition-colors" href="#ai-providers">
 <span class="material-symbols-outlined text-[18px]">api</span>
-                        API Reference
-                    </a>
-<a class="flex items-center gap-3 px-2 py-1.5 rounded-lg font-body text-label text-text-secondary hover:bg-surface-container-low transition-colors" href="https://github.com/thesohamdatta/aura" target="_blank">
-<span class="material-symbols-outlined text-[18px]">cloud_upload</span>
-                        Deployment
-                    </a>
+    AI Providers Setup
+</a>
+<a class="flex items-center gap-3 px-2 py-1.5 rounded-lg font-body text-label text-text-secondary hover:bg-surface-container-low transition-colors" href="#transcription">
+<span class="material-symbols-outlined text-[18px]">hearing</span>
+    Transcription Setup
+</a>
+<a class="flex items-center gap-3 px-2 py-1.5 rounded-lg font-body text-label text-text-secondary hover:bg-surface-container-low transition-colors" href="#camera-config">
+<span class="material-symbols-outlined text-[18px]">photo_camera</span>
+    Camera Config
+</a>
+<a class="flex items-center gap-3 px-2 py-1.5 rounded-lg font-body text-label text-text-secondary hover:bg-surface-container-low transition-colors" href="#battery-power">
+<span class="material-symbols-outlined text-[18px]">battery_charging_full</span>
+    Battery & Power
+</a>
+</div>
+<div class="mb-4">
+<p class="text-[11px] font-bold text-text-secondary uppercase tracking-widest mb-3 px-2">Privacy & Support</p>
+<a class="flex items-center gap-3 px-2 py-1.5 rounded-lg font-body text-label text-text-secondary hover:bg-surface-container-low transition-colors" href="#privacy-data">
+<span class="material-symbols-outlined text-[18px]">security</span>
+    Privacy & Data
+</a>
+<a class="flex items-center gap-3 px-2 py-1.5 rounded-lg font-body text-label text-text-secondary hover:bg-surface-container-low transition-colors" href="#troubleshooting">
+<span class="material-symbols-outlined text-[18px]">help</span>
+    Troubleshooting
+</a>
 </div>
 </nav>
 </aside>
@@ -89,68 +120,482 @@
 <article class="prose max-w-none">
 <h1 class="font-hero-h1 text-hero-h1-mobile md:text-[56px] leading-tight mb-6">System Architecture</h1>
 <p class="font-body text-body text-text-secondary mb-12 max-w-[680px]">
-                        The Aura project represents a shift toward modular open-source hardware. This documentation provides a technical foundation for building, deploying, and maintaining Aura systems.
-                    </p>
-<!-- Hardware Section -->
+    The Aura project represents a shift toward modular open-source hardware. This documentation provides a technical foundation for building, deploying, and maintaining Aura systems.
+</p>
+
+<!-- What Is Aura -->
+<section class="mb-16 scroll-mt-24" id="what-is-aura">
+<h2 class="font-section-h2 text-section-h2-mobile md:text-section-h2 mb-6 border-b border-outline-variant/30 pb-4">What Is Aura</h2>
+<p class="font-body text-body text-text-secondary mb-6 max-w-[680px]">
+    Aura is an open-source AI wearable pendant. You wear it around your neck. It listens, sees, and thinks — so you don't have to pause your day to take notes or remember things.
+</p>
+<p class="font-body text-body text-text-secondary mb-6 max-w-[680px]">
+    It captures audio and images, sends them to an AI, and turns everything into summaries, transcripts, and action items — all accessible from your phone.
+</p>
+<p class="font-body text-body text-text-secondary mb-6 max-w-[680px]">
+    Built on the Omi ecosystem. Fully open source. Around $50–70 to build yourself.
+</p>
+</section>
+
+<!-- How Aura Works -->
+<section class="mb-16 scroll-mt-24" id="how-aura-works">
+<h2 class="font-section-h2 text-section-h2-mobile md:text-section-h2 mb-6 border-b border-outline-variant/30 pb-4">How Aura Works</h2>
+<p class="font-body text-body text-text-secondary mb-6 max-w-[680px]">
+    The execution pipeline flows simply:
+</p>
+<ul class="list-disc pl-6 mb-6 font-body text-body text-text-secondary flex flex-col gap-2 max-w-[680px]">
+    <li>Aura's microphone captures audio continuously.</li>
+    <li>The camera captures images at set intervals.</li>
+    <li>Both are sent to the backend over Wi-Fi.</li>
+    <li>The backend transcribes audio via Deepgram or Whisper.</li>
+    <li>Images are understood via GPT-4o Vision or Moondream.</li>
+    <li>Everything is summarized and stored.</li>
+    <li>You see it all in the Omi app on your phone.</li>
+</ul>
+<p class="font-body text-body text-text-secondary mb-6 max-w-[680px]">
+    The ESP32-S3 handles capture and transmission. The backend handles all AI processing. Your phone is just the mobile interface.
+</p>
+</section>
+
+<!-- Bill of Materials -->
+<section class="mb-16 scroll-mt-24" id="bom">
+<h2 class="font-section-h2 text-section-h2-mobile md:text-section-h2 mb-6 border-b border-outline-variant/30 pb-4">Bill of Materials</h2>
+<p class="font-body text-body text-text-secondary mb-6 max-w-[680px]">
+    What to buy and where to get it:
+</p>
+<div class="overflow-x-auto mb-6 max-w-[680px]">
+    <table class="w-full text-left font-body text-label text-text-secondary border-collapse">
+        <thead>
+            <tr class="border-b border-outline-variant/30">
+                <th class="py-3 font-semibold text-on-surface">Item</th>
+                <th class="py-3 font-semibold text-on-surface">Where to Buy</th>
+                <th class="py-3 font-semibold text-on-surface">Approx Cost</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="border-b border-outline-variant/10">
+                <td class="py-3">XIAO ESP32-S3 Sense</td>
+                <td class="py-3">Seeed Studio / Amazon</td>
+                <td class="py-3">$15–24</td>
+            </tr>
+            <tr class="border-b border-outline-variant/10">
+                <td class="py-3">150mAh LiPo × 6</td>
+                <td class="py-3">Amazon</td>
+                <td class="py-3">$12</td>
+            </tr>
+            <tr class="border-b border-outline-variant/10">
+                <td class="py-3">Wires</td>
+                <td class="py-3">Amazon</td>
+                <td class="py-3">$5</td>
+            </tr>
+            <tr class="border-b border-outline-variant/10">
+                <td class="py-3">3D printed case</td>
+                <td class="py-3">Print yourself or order online</td>
+                <td class="py-3">$5–10</td>
+            </tr>
+            <tr class="border-b border-outline-variant/10">
+                <td class="py-3">USB-C cable</td>
+                <td class="py-3">Anywhere</td>
+                <td class="py-3">—</td>
+            </tr>
+            <tr class="border-b border-outline-variant/30 font-semibold text-on-surface">
+                <td class="py-3">Total Cost</td>
+                <td class="py-3"></td>
+                <td class="py-3">~$50–70</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<p class="font-body text-body text-text-secondary max-w-[680px]">
+    You can print the case STL files from the Omi Glass hardware folder on GitHub.
+</p>
+</section>
+
+<!-- BOM Case -->
+<section class="mb-16 scroll-mt-24" id="bom-case">
+<h2 class="font-section-h2 text-section-h2-mobile md:text-section-h2 mb-6 border-b border-outline-variant/30 pb-4">BOM Case Assembly</h2>
+<p class="font-body text-body text-text-secondary mb-6 max-w-[680px]">
+    Download the STL files from the <a href="https://github.com/thesohamdatta/Aura-Wearable-AI/tree/main/hardware" target="_blank" class="text-accent-blue hover:underline">Aura Hardware folder on GitHub</a>.
+</p>
+<p class="font-body text-body text-text-secondary mb-4 max-w-[680px]">
+    <strong>Recommended 3D Print Settings:</strong>
+</p>
+<ul class="list-disc pl-6 mb-6 font-body text-body text-text-secondary flex flex-col gap-2 max-w-[680px]">
+    <li>Material: PLA or PETG</li>
+    <li>Layer height: 0.2mm</li>
+    <li>Infill: 20%</li>
+    <li>Supports: Yes, where needed</li>
+</ul>
+<p class="font-body text-body text-text-secondary mb-6 max-w-[680px]">
+    After printing, mount the ESP32-S3 board, route the battery wires, and snap the case shut. The pendant loop is built into the design. If you don't have a 3D printer, you can use local makerspaces or online printing services like Craftcloud or PCBWay.
+</p>
+</section>
+
+<!-- Hardware Overview -->
 <section class="mb-16 scroll-mt-24" id="hardware">
-<h2 class="font-section-h2 text-section-h2-mobile md:text-section-h2 mb-6 border-b border-outline-variant/30 pb-4">Hardware</h2>
+<h2 class="font-section-h2 text-section-h2-mobile md:text-section-h2 mb-6 border-b border-outline-variant/30 pb-4">Hardware Overview</h2>
 <p class="font-body text-body text-text-secondary mb-6 max-w-[680px]">
-                            Aura utilizes a custom-designed PCB centered around the ESP32-S3 microcontroller. The physical chassis is machined from high-grade 6061 aluminum to ensure thermal stability and structural integrity.
-                        </p>
-<div class="bg-bg-parchment border-l-4 border-accent-blue p-6 mb-8 rounded-r-xl">
-<h4 class="font-label text-on-surface font-bold mb-2">Technical Specification</h4>
-<p class="font-body text-label text-text-secondary">
-                                All schematics are available in the Aura repository under the CERN OHL-P license. Use only validated components for thermal compliance.
-                            </p>
+    The XIAO ESP32-S3 Sense is the core. Camera and microphone are already integrated on the board — no extra modules needed.
+</p>
+<div class="overflow-x-auto mb-6 max-w-[680px]">
+    <table class="w-full text-left font-body text-label text-text-secondary border-collapse">
+        <thead>
+            <tr class="border-b border-outline-variant/30">
+                <th class="py-3 font-semibold text-on-surface">Component</th>
+                <th class="py-3 font-semibold text-on-surface">Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="border-b border-outline-variant/10">
+                <td class="py-3">Microcontroller</td>
+                <td class="py-3">XIAO ESP32-S3 Sense</td>
+            </tr>
+            <tr class="border-b border-outline-variant/10">
+                <td class="py-3">Camera</td>
+                <td class="py-3">OV2640 — built into ESP32-S3 Sense</td>
+            </tr>
+            <tr class="border-b border-outline-variant/10">
+                <td class="py-3">Microphone</td>
+                <td class="py-3">PDM — built into ESP32-S3 Sense</td>
+            </tr>
+            <tr class="border-b border-outline-variant/10">
+                <td class="py-3">Battery</td>
+                <td class="py-3">6× 150mAh LiPo cells</td>
+            </tr>
+            <tr class="border-b border-outline-variant/10">
+                <td class="py-3">Enclosure</td>
+                <td class="py-3">Custom 3D printed case</td>
+            </tr>
+            <tr class="border-b border-outline-variant/10">
+                <td class="py-3">Connectivity</td>
+                <td class="py-3">Wi-Fi 2.4GHz + Bluetooth LE</td>
+            </tr>
+            <tr class="border-b border-outline-variant/10">
+                <td class="py-3">Charging</td>
+                <td class="py-3">USB-C</td>
+            </tr>
+        </tbody>
+    </table>
 </div>
-<img alt="Aura Hardware" class="w-full aspect-video object-cover rounded-xl mb-6" data-alt="A macro photograph of a high-end custom circuit board with silver traces and black components set against a clean white backdrop. The lighting is crisp and modern, emphasizing the precision of the hardware engineering. The aesthetic is professional and minimalist, aligning with the corporate light-mode design of the Aura brand documentation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzodHDbhEk2xfUDzHRPAJjH9g3WxLHA7sOhsd6Sl8myJgvvR5FDuml2en7DApj9sn05VwpdTQmOSx2ZEuOpRtns9vpQUCSltlqQmHy7lIhEgEX6RE4SJ5hUlf6thuf1cxxPwvtnqWHQE35j7RzI3MXQ-nJwV9GfAPQvOeZjFkxrbLo955pQwHyJ5HTJ0ZV9QGgkVS00DAFHkQVrCyIExYHmX1L_KunUeGt9KwW4RDHNjh-GKOcJx9EiNwxyDA1VgK2ngCSM1nL_LQ">
 </section>
-<!-- Firmware Section -->
+
+<!-- Flashing the Firmware -->
 <section class="mb-16 scroll-mt-24" id="firmware">
-<h2 class="font-section-h2 text-section-h2-mobile md:text-section-h2 mb-6 border-b border-outline-variant/30 pb-4">Firmware</h2>
+<h2 class="font-section-h2 text-section-h2-mobile md:text-section-h2 mb-6 border-b border-outline-variant/30 pb-4">Flashing the Firmware</h2>
+<p class="font-body text-body text-text-secondary mb-4 max-w-[680px]">
+    <strong>Prerequisites:</strong>
+</p>
+<ul class="list-disc pl-6 mb-6 font-body text-body text-text-secondary flex flex-col gap-2 max-w-[680px]">
+    <li>Arduino IDE or PlatformIO</li>
+    <li>ESP32 board package installed</li>
+    <li>USB-C cable connected to your XIAO ESP32-S3 Sense</li>
+</ul>
+<p class="font-body text-body text-text-secondary mb-4 max-w-[680px]">
+    <strong>Installation Steps:</strong>
+</p>
+<ol class="list-decimal pl-6 mb-6 font-body text-body text-text-secondary flex flex-col gap-2 max-w-[680px]">
+    <li>Clone the Aura repository from GitHub.</li>
+    <li>Open <code>firmware.ino</code> in Arduino IDE.</li>
+    <li>In Arduino IDE, go to <strong>Tools → Board</strong> and select <strong>XIAO_ESP32S3</strong>.</li>
+    <li>Go to <strong>Tools → PSRAM</strong> and set it to <strong>OPI PSRAM</strong> (this is required).</li>
+    <li>Select your active COM port and click <strong>Upload</strong>.</li>
+</ol>
+</section>
+
+<!-- Setting Up the Backend -->
+<section class="mb-16 scroll-mt-24" id="backend">
+<h2 class="font-section-h2 text-section-h2-mobile md:text-section-h2 mb-6 border-b border-outline-variant/30 pb-4">Setting Up the Backend</h2>
 <p class="font-body text-body text-text-secondary mb-6 max-w-[680px]">
-                            The firmware is written in C++ using the ESP-IDF framework. It handles real-time sensor processing and encrypted communication with the Aura backend.
-                        </p>
-<div class="bg-[#1d1d1f] rounded-xl p-6 mb-8 overflow-x-auto">
-<div class="flex justify-between items-center mb-4">
-<span class="text-[12px] font-mono text-text-secondary">aura_init.cpp</span>
-<span class="material-symbols-outlined text-white text-[16px] cursor-pointer hover:text-accent-blue">content_copy</span>
+    The backend handles all AI processing — transcription, summarization, and memory storage.
+</p>
+<p class="font-body text-body text-text-secondary mb-4 max-w-[680px]">
+    <strong>System Requirements:</strong>
+</p>
+<ul class="list-disc pl-6 mb-6 font-body text-body text-text-secondary flex flex-col gap-2 max-w-[680px]">
+    <li>Python 3.11+</li>
+    <li>OpenAI or Groq API key</li>
+    <li>Deepgram API key</li>
+    <li>Firebase project</li>
+</ul>
+<p class="font-body text-body text-text-secondary mb-6 max-w-[680px]">
+    <strong>Deployment Steps:</strong>
+    Expose your backend locally with Ngrok and set the resulting Ngrok URL as the <code>API_BASE_URL</code> in the app's <code>.dev.env</code> file. Check the <a href="https://github.com/thesohamdatta/Aura-Wearable-AI/tree/main/backend" target="_blank" class="text-accent-blue hover:underline">Backend instructions on GitHub</a> for complete details.
+</p>
+</section>
+
+<!-- Setting Up the App -->
+<section class="mb-16 scroll-mt-24" id="setup-app">
+<h2 class="font-section-h2 text-section-h2-mobile md:text-section-h2 mb-6 border-b border-outline-variant/30 pb-4">Setting Up the App</h2>
+<p class="font-body text-body text-text-secondary mb-6 max-w-[680px]">
+    Aura uses the Flutter app as its mobile interface. Detailed setups can be found in the <a href="https://github.com/thesohamdatta/Aura-Wearable-AI/tree/main/app" target="_blank" class="text-accent-blue hover:underline">App guide on GitHub</a>.
+</p>
+<p class="font-body text-body text-text-secondary mb-4 max-w-[680px]">
+    <strong>Requirements:</strong>
+</p>
+<ul class="list-disc pl-6 mb-6 font-body text-body text-text-secondary flex flex-col gap-2 max-w-[680px]">
+    <li>Flutter SDK installed</li>
+    <li>Android Studio (Android) or Xcode (iOS)</li>
+    <li>Firebase project configured</li>
+</ul>
+<p class="font-body text-body text-text-secondary max-w-[680px]">
+    Make sure to set the <code>API_BASE_URL</code> variable in your <code>.dev.env</code> file to your backend server URL (including the trailing slash <code>/</code>).
+</p>
+</section>
+
+<!-- AI Providers Setup -->
+<section class="mb-16 scroll-mt-24" id="ai-providers">
+<h2 class="font-section-h2 text-section-h2-mobile md:text-section-h2 mb-6 border-b border-outline-variant/30 pb-4">AI Providers Setup</h2>
+<p class="font-body text-body text-text-secondary mb-6 max-w-[680px]">
+    Aura supports three distinct AI providers. Set your preferred choice in your environment (<code>.env</code>) file:
+</p>
+<div class="overflow-x-auto mb-6 max-w-[680px]">
+    <table class="w-full text-left font-body text-label text-text-secondary border-collapse">
+        <thead>
+            <tr class="border-b border-outline-variant/30">
+                <th class="py-3 font-semibold text-on-surface">Provider</th>
+                <th class="py-3 font-semibold text-on-surface">Best For</th>
+                <th class="py-3 font-semibold text-on-surface">Internet Required</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="border-b border-outline-variant/10">
+                <td class="py-3">Groq</td>
+                <td class="py-3">Fast, real-time responses</td>
+                <td class="py-3">Yes</td>
+            </tr>
+            <tr class="border-b border-outline-variant/10">
+                <td class="py-3">OpenAI</td>
+                <td class="py-3">Best quality, vision support</td>
+                <td class="py-3">Yes</td>
+            </tr>
+            <tr class="border-b border-outline-variant/10">
+                <td class="py-3">Ollama</td>
+                <td class="py-3">Local, private, offline</td>
+                <td class="py-3">No (Localhost)</td>
+            </tr>
+        </tbody>
+    </table>
 </div>
-<pre class="font-mono text-[14px] text-white leading-relaxed"><code>void aura_system_start() {
-    // Initialize secure element
-    if (crypto_chip.begin() == SUCCESS) {
-        system_log("Secure boot verified");
-    }
-    
-    // Start sensor mesh
-    mesh_network.initialize();
-    
-    // Begin main execution loop
-    xTaskCreate(aura_main_loop, "MAIN", 4096, NULL, 5, NULL);
-}</code></pre>
+<p class="font-body text-body text-text-secondary max-w-[680px]">
+    For Ollama (local private setup), set <code>OLLAMA_URL=http://localhost:11434</code> in your backend <code>.env</code>.
+</p>
+</section>
+
+<!-- Transcription Setup -->
+<section class="mb-16 scroll-mt-24" id="transcription">
+<h2 class="font-section-h2 text-section-h2-mobile md:text-section-h2 mb-6 border-b border-outline-variant/30 pb-4">Transcription Setup</h2>
+<p class="font-body text-body text-text-secondary mb-6 max-w-[680px]">
+    Aura captures high-fidelity audio at 16kHz mono PDM from the built-in microphone on the ESP32-S3 Sense. Two transcription options are available:
+</p>
+<div class="overflow-x-auto mb-6 max-w-[680px]">
+    <table class="w-full text-left font-body text-label text-text-secondary border-collapse">
+        <thead>
+            <tr class="border-b border-outline-variant/30">
+                <th class="py-3 font-semibold text-on-surface">Option</th>
+                <th class="py-3 font-semibold text-on-surface">Speed</th>
+                <th class="py-3 font-semibold text-on-surface">Internet Required</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="border-b border-outline-variant/10">
+                <td class="py-3">Deepgram</td>
+                <td class="py-3">Fast, real-time</td>
+                <td class="py-3">Yes (console.deepgram.com)</td>
+            </tr>
+            <tr class="border-b border-outline-variant/10">
+                <td class="py-3">Whisper (local)</td>
+                <td class="py-3">Slower, accurate</td>
+                <td class="py-3">No (runs via Ollama)</td>
+            </tr>
+        </tbody>
+    </table>
 </div>
 </section>
-<!-- Backend Section -->
-<section class="mb-16 scroll-mt-24" id="backend">
-<h2 class="font-section-h2 text-section-h2-mobile md:text-section-h2 mb-6 border-b border-outline-variant/30 pb-4">Backend</h2>
+
+<!-- Camera Configuration -->
+<section class="mb-16 scroll-mt-24" id="camera-config">
+<h2 class="font-section-h2 text-section-h2-mobile md:text-section-h2 mb-6 border-b border-outline-variant/30 pb-4">Camera Configuration</h2>
 <p class="font-body text-body text-text-secondary mb-6 max-w-[680px]">
-                            Aura utilizes a distributed microservices architecture built on Rust and PostgreSQL. The system is designed for high availability and low-latency data ingestion.
-                        </p>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter mb-12">
-<div class="bg-surface-container-low p-8 rounded-xl">
-<h3 class="font-section-h3 text-[20px] mb-4 font-semibold">Data Privacy</h3>
-<p class="font-body text-label text-text-secondary">
-                                    All telemetry is end-to-end encrypted before leaving the local hardware node. The backend never stores raw sensitive keys.
-                                </p>
+    You can tune the camera resolution, capture intervals, and compression settings inside your device's <code>firmware.ino</code>:
+</p>
+<div class="overflow-x-auto mb-6 max-w-[680px]">
+    <table class="w-full text-left font-body text-label text-text-secondary border-collapse">
+        <thead>
+            <tr class="border-b border-outline-variant/30">
+                <th class="py-3 font-semibold text-on-surface">Setting</th>
+                <th class="py-3 font-semibold text-on-surface">Default Value</th>
+                <th class="py-3 font-semibold text-on-surface">Available Options</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="border-b border-outline-variant/10">
+                <td class="py-3">Resolution</td>
+                <td class="py-3">SVGA (800×600)</td>
+                <td class="py-3">QQVGA → UXGA</td>
+            </tr>
+            <tr class="border-b border-outline-variant/10">
+                <td class="py-3">Capture Interval</td>
+                <td class="py-3">30 seconds</td>
+                <td class="py-3">Any (ms)</td>
+            </tr>
+            <tr class="border-b border-outline-variant/10">
+                <td class="py-3">JPEG Quality</td>
+                <td class="py-3">12</td>
+                <td class="py-3">0 (best) – 63 (worst)</td>
+            </tr>
+        </tbody>
+    </table>
 </div>
-<div class="bg-surface-container-low p-8 rounded-xl">
-<h3 class="font-section-h3 text-[20px] mb-4 font-semibold">Scalability</h3>
-<p class="font-body text-label text-text-secondary">
-                                    Horizontally scalable services allow the Aura network to grow dynamically as new nodes are activated globally.
-                                </p>
+<p class="font-body text-body text-text-secondary max-w-[680px]">
+    Lower resolution + higher interval = longer battery life. For vision AI, SVGA is the sweet spot — good enough for GPT-4o, small enough to transmit fast.
+</p>
+</section>
+
+<!-- Battery & Power -->
+<section class="mb-16 scroll-mt-24" id="battery-power">
+<h2 class="font-section-h2 text-section-h2-mobile md:text-section-h2 mb-6 border-b border-outline-variant/30 pb-4">Battery & Power</h2>
+<p class="font-body text-body text-text-secondary mb-4 max-w-[680px]">
+    <strong>Estimated Power Consumption:</strong>
+</p>
+<div class="overflow-x-auto mb-6 max-w-[680px]">
+    <table class="w-full text-left font-body text-label text-text-secondary border-collapse">
+        <thead>
+            <tr class="border-b border-outline-variant/30">
+                <th class="py-3 font-semibold text-on-surface">State</th>
+                <th class="py-3 font-semibold text-on-surface">Current Draw</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="border-b border-outline-variant/10">
+                <td class="py-3">Active (camera + Wi-Fi)</td>
+                <td class="py-3">~150–200mA</td>
+            </tr>
+            <tr class="border-b border-outline-variant/10">
+                <td class="py-3">Idle (BLE only)</td>
+                <td class="py-3">~20–40mA</td>
+            </tr>
+            <tr class="border-b border-outline-variant/10">
+                <td class="py-3">Deep sleep</td>
+                <td class="py-3">&lt;1mA</td>
+            </tr>
+        </tbody>
+    </table>
 </div>
+<p class="font-body text-body text-text-secondary mb-4 max-w-[680px]">
+    <strong>Battery Life (350mAh total):</strong>
+</p>
+<div class="overflow-x-auto mb-6 max-w-[680px]">
+    <table class="w-full text-left font-body text-label text-text-secondary border-collapse">
+        <thead>
+            <tr class="border-b border-outline-variant/30">
+                <th class="py-3 font-semibold text-on-surface">Usage Pattern</th>
+                <th class="py-3 font-semibold text-on-surface">Battery Life</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="border-b border-outline-variant/10">
+                <td class="py-3">Capture every 5s</td>
+                <td class="py-3">~2 hours</td>
+            </tr>
+            <tr class="border-b border-outline-variant/10">
+                <td class="py-3">Capture every 30s</td>
+                <td class="py-3">~5 hours</td>
+            </tr>
+            <tr class="border-b border-outline-variant/10">
+                <td class="py-3">Deep sleep between captures</td>
+                <td class="py-3">~8+ hours</td>
+            </tr>
+        </tbody>
+    </table>
 </div>
-<img alt="Network Infrastructure" class="w-full aspect-[21/9] object-cover rounded-xl" data-alt="A sophisticated abstract visualization of a data network with interconnected glowing lines in shades of blue and white. The background is a clean, bright space that gives a sense of deep digital infrastructure without being dark. The mood is highly technical, clean, and optimistic, perfect for illustrating a modern backend architecture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2hFKXB3hCGKsMdBD-SVeSiQHWtvvxVl4miIamKNp8aRVJJdsejaakLppyN9HxQeSb1nYMYqHgZVGjstMX-ys9vounjrfd1vi5-5onxAFM_5FyGSkfmV5PUF5KjX2E8XNpfquFqg9kob8dIdb9TfHcqyv2jgzqP9jS42wMsqf-8Ux9iBiCujiVCb4W2O4WM4MIrGhhFsEnyee3Gvyb0KkMBciTDokAllCf0cSqjSG_3iNPAXPQs4MDvaR-NYeiBsgSYTq3BB2-OhI">
+<p class="font-body text-body text-text-secondary mb-4 max-w-[680px]">
+    <strong>Battery Safety Guidelines:</strong>
+</p>
+<ul class="list-disc pl-6 mb-6 font-body text-body text-text-secondary flex flex-col gap-2 max-w-[680px]">
+    <li>Never short circuit LiPo cells.</li>
+    <li>Do not discharge below 3.0V per cell.</li>
+    <li>Charge at 1C max (150mA per cell).</li>
+    <li>Always include a protection circuit.</li>
+</ul>
+</section>
+
+<!-- Privacy & Data -->
+<section class="mb-16 scroll-mt-24" id="privacy-data">
+<h2 class="font-section-h2 text-section-h2-mobile md:text-section-h2 mb-6 border-b border-outline-variant/30 pb-4">Privacy & Data</h2>
+<p class="font-body text-body text-text-secondary mb-6 max-w-[680px]">
+    Aura is privacy-first by design. Nothing is sent anywhere by default without your explicit configuration. You control every API key and every endpoint.
+</p>
+<div class="overflow-x-auto mb-6 max-w-[680px]">
+    <table class="w-full text-left font-body text-label text-text-secondary border-collapse">
+        <thead>
+            <tr class="border-b border-outline-variant/30">
+                <th class="py-3 font-semibold text-on-surface">Feature</th>
+                <th class="py-3 font-semibold text-on-surface">Local Option</th>
+                <th class="py-3 font-semibold text-on-surface">Cloud Option</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="border-b border-outline-variant/10">
+                <td class="py-3">Transcription</td>
+                <td class="py-3">Whisper (Ollama)</td>
+                <td class="py-3">Deepgram</td>
+            </tr>
+            <tr class="border-b border-outline-variant/10">
+                <td class="py-3">AI Processing</td>
+                <td class="py-3">Ollama</td>
+                <td class="py-3">Groq / OpenAI</td>
+            </tr>
+            <tr class="border-b border-outline-variant/10">
+                <td class="py-3">Memory Storage</td>
+                <td class="py-3">Self-hosted Firebase</td>
+                <td class="py-3">Omi Cloud</td>
+            </tr>
+            <tr class="border-b border-outline-variant/10">
+                <td class="py-3">Images</td>
+                <td class="py-3">Your backend</td>
+                <td class="py-3">Your backend</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<p class="font-body text-body text-text-secondary max-w-[680px]">
+    Note: Recording in public spaces may be subject to local laws. Always inform others when recording.
+</p>
+</section>
+
+<!-- Troubleshooting -->
+<section class="mb-16 scroll-mt-24" id="troubleshooting">
+<h2 class="font-section-h2 text-section-h2-mobile md:text-section-h2 mb-6 border-b border-outline-variant/30 pb-4">Troubleshooting</h2>
+<div class="flex flex-col gap-6 max-w-[680px] font-body text-body text-text-secondary">
+    <div>
+        <h4 class="font-label text-on-surface font-bold mb-1">Camera not initializing</h4>
+        <p>Check that PSRAM is set to <strong>OPI PSRAM</strong> in the Arduino IDE Tools menu. This is required to load the camera buffer.</p>
+    </div>
+    <div>
+        <h4 class="font-label text-on-surface font-bold mb-1">Wi-Fi not connecting</h4>
+        <p>Confirm you are using a 2.4GHz network. The ESP32 does not support 5GHz. Double-check that SSID and password are correct.</p>
+    </div>
+    <div>
+        <h4 class="font-label text-on-surface font-bold mb-1">App not finding device</h4>
+        <p>Make sure your ESP32 is powered on. Look for "Omi" in the Bluetooth scan. Restart both the mobile app and your hardware device.</p>
+    </div>
+    <div>
+        <h4 class="font-label text-on-surface font-bold mb-1">No transcription appearing</h4>
+        <p>Check the Deepgram API key in your <code>.env</code> file. Verify that the backend server is running and that <code>API_BASE_URL</code> is set correctly in the app.</p>
+    </div>
+    <div>
+        <h4 class="font-label text-on-surface font-bold mb-1">Short battery life</h4>
+        <p>Reduce image capture frequency. Enable deep sleep between captures. Lower camera resolution.</p>
+    </div>
+    <div>
+        <h4 class="font-label text-on-surface font-bold mb-1">Build errors in Arduino IDE</h4>
+        <p>Ensure that ESP32 board package version 2.9.0 is installed. Use the exact version — other versions may break the camera driver.</p>
+    </div>
+</div>
+<div class="bg-bg-parchment p-6 mt-8 rounded-xl max-w-[680px] border border-outline-variant/20">
+    <h4 class="font-label text-on-surface font-bold mb-1">Question not answered?</h4>
+    <p class="font-body text-label text-text-secondary">Contact support at: <a href="mailto:SUPPORT@OPTIXELCAM.COM" class="text-accent-blue hover:underline">SUPPORT@OPTIXELCAM.COM</a></p>
+</div>
 </section>
 </article>
 <footer class="mt-20 pt-12 border-t border-outline-variant/30 flex flex-col md:flex-row justify-between items-start gap-8">
@@ -210,7 +655,7 @@
         const observerOptions = {
             root: null,
             rootMargin: '0px',
-            threshold: 0.5
+            threshold: 0.2
         };
 
         const observer = new IntersectionObserver((entries) => {
