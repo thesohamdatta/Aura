@@ -601,6 +601,337 @@
 </div>
 </div>
 </section>
+
+<!-- FAQ Section -->
+<section id="faq-section" class="w-full overflow-hidden bg-[#f5f5f7]">
+  <style>
+    #faq-section {
+      padding: 80px 0;
+      position: relative;
+    }
+    #faq-section .faq-header-row {
+      padding: 0 max(24px, calc((100vw - 1200px) / 2));
+      margin-bottom: 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    #faq-section .faq-headline {
+      font-size: 40px;
+      font-weight: 700;
+      color: #1d1d1f;
+      letter-spacing: -0.003em;
+      line-height: 1.07;
+      max-width: 480px;
+    }
+    @media (min-width: 768px) {
+      #faq-section .faq-headline {
+        font-size: 56px;
+      }
+    }
+    #faq-section .faq-docs-link {
+      font-size: 17px;
+      color: #0066cc;
+      font-weight: 400;
+      text-decoration: none;
+      padding-bottom: 8px;
+    }
+    #faq-section .faq-docs-link:hover {
+      text-decoration: underline;
+    }
+    #faq-section .cards-container {
+      display: flex;
+      flex-direction: row;
+      overflow-x: auto;
+      gap: 16px;
+      padding: 0 max(24px, calc((100vw - 1200px) / 2));
+      padding-bottom: 32px;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      cursor: grab;
+    }
+    #faq-section .cards-container::-webkit-scrollbar {
+      display: none;
+    }
+    #faq-section .faq-card {
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 28px 24px 24px 24px;
+      width: 300px;
+      flex-shrink: 0;
+      min-height: 220px;
+      max-height: 220px;
+      overflow: hidden;
+      scroll-snap-align: start;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      transition: max-height 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.25s ease, transform 0.25s ease;
+    }
+    #faq-section .faq-card:hover {
+      box-shadow: 0 4px 20px rgba(0,0,0,0.10);
+      transform: translateY(-2px);
+    }
+    #faq-section .faq-card.expanded {
+      max-height: 600px;
+    }
+    #faq-section .faq-card .faq-answer {
+      opacity: 0.6;
+      transition: opacity 0.3s ease;
+    }
+    #faq-section .faq-card.expanded .faq-answer {
+      opacity: 1;
+    }
+    #faq-section .faq-expand-btn {
+      width: 36px;
+      height: 36px;
+      background: #1d1d1f;
+      border-radius: 50%;
+      color: #ffffff;
+      font-size: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s ease;
+      border: none;
+      outline: none;
+    }
+    #faq-section .faq-card.expanded .faq-expand-btn {
+      transform: rotate(45deg);
+    }
+    #faq-section .faq-controls {
+      position: absolute;
+      bottom: 24px;
+      right: max(24px, calc((100vw - 1200px) / 2));
+      display: flex;
+      gap: 8px;
+      z-index: 10;
+    }
+    #faq-section .faq-control-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0.08);
+      color: #1d1d1f;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      outline: none;
+      transition: background 0.2s ease, opacity 0.2s ease;
+    }
+    #faq-section .faq-control-btn:hover:not(:disabled) {
+      background: rgba(0, 0, 0, 0.12);
+    }
+    #faq-section .faq-control-btn:disabled {
+      opacity: 0.3;
+      cursor: default;
+    }
+    @media (max-width: 767px) {
+      #faq-section {
+        padding: 60px 0;
+      }
+      #faq-section .faq-header-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+      }
+      #faq-section .faq-card {
+        width: 280px;
+      }
+      #faq-section .faq-controls {
+        display: none;
+      }
+    }
+  </style>
+
+  <!-- Header Row -->
+  <div class="faq-header-row">
+    <h2 class="faq-headline">Everything you wanted to know about Aura.</h2>
+    <a href="docs.html" class="faq-docs-link">Read the Docs ›</a>
+  </div>
+
+  <!-- Cards Row -->
+  <div id="faq-cards-container" class="cards-container">
+    <!-- Card 1 -->
+    <div class="faq-card">
+      <div>
+        <span class="material-symbols-outlined text-[32px] text-[#1d1d1f] mb-5">mic</span>
+        <h3 class="text-[19px] font-semibold text-[#1d1d1f] leading-[1.3] mb-2.5">What does Aura actually capture?</h3>
+        <p class="faq-answer text-[14px] font-normal text-[#6e6e73] leading-[1.5]">
+          Aura's 2MP wide-angle camera and dual MEMS microphones capture your conversations, environment, and visual context continuously — processing everything on-device with no raw data ever leaving your pocket.
+        </p>
+      </div>
+      <div class="flex justify-end pt-4">
+        <button class="faq-expand-btn select-none cursor-pointer">+</button>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="faq-card">
+      <div>
+        <span class="material-symbols-outlined text-[32px] text-[#1d1d1f] mb-5">security</span>
+        <h3 class="text-[19px] font-semibold text-[#1d1d1f] leading-[1.3] mb-2.5">Is my data private?</h3>
+        <p class="faq-answer text-[14px] font-normal text-[#6e6e73] leading-[1.5]">
+          Everything is processed locally on the XIAO ESP32-S3. Audio is transcribed on-device via Whisper. Only anonymised semantic embeddings sync to the cloud. Your raw conversations are never uploaded or stored.
+        </p>
+      </div>
+      <div class="flex justify-end pt-4">
+        <button class="faq-expand-btn select-none cursor-pointer">+</button>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="faq-card">
+      <div>
+        <span class="material-symbols-outlined text-[32px] text-[#1d1d1f] mb-5">bolt</span>
+        <h3 class="text-[19px] font-semibold text-[#1d1d1f] leading-[1.3] mb-2.5">How fast does it respond?</h3>
+        <p class="faq-answer text-[14px] font-normal text-[#6e6e73] leading-[1.5]">
+          Aura achieves sub-200ms response latency for context retrieval. Queries are processed via a RAG pipeline combining Pinecone vector search and Redis caching — designed to feel instant.
+        </p>
+      </div>
+      <div class="flex justify-end pt-4">
+        <button class="faq-expand-btn select-none cursor-pointer">+</button>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="faq-card">
+      <div>
+        <span class="material-symbols-outlined text-[32px] text-[#1d1d1f] mb-5">code</span>
+        <h3 class="text-[19px] font-semibold text-[#1d1d1f] leading-[1.3] mb-2.5">Can I build one myself?</h3>
+        <p class="faq-answer text-[14px] font-normal text-[#6e6e73] leading-[1.5]">
+          Yes. Aura is fully open-source. The hardware BOM costs ~$50, firmware runs on FreeRTOS, and the full build guide is in the Docs. No soldering experience required for the base build.
+        </p>
+      </div>
+      <div class="flex justify-end pt-4">
+        <button class="faq-expand-btn select-none cursor-pointer">+</button>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="faq-card">
+      <div>
+        <span class="material-symbols-outlined text-[32px] text-[#1d1d1f] mb-5">smartphone</span>
+        <h3 class="text-[19px] font-semibold text-[#1d1d1f] leading-[1.3] mb-2.5">What phone does it work with?</h3>
+        <p class="faq-answer text-[14px] font-normal text-[#6e6e73] leading-[1.5]">
+          Aura pairs with the companion Flutter app on both iOS and Android. The app handles voice queries, memory browsing, and settings sync via BLE. No proprietary ecosystem required.
+        </p>
+      </div>
+      <div class="flex justify-end pt-4">
+        <button class="faq-expand-btn select-none cursor-pointer">+</button>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="faq-card">
+      <div>
+        <span class="material-symbols-outlined text-[32px] text-[#1d1d1f] mb-5">battery_charging_full</span>
+        <h3 class="text-[19px] font-semibold text-[#1d1d1f] leading-[1.3] mb-2.5">How long does the battery last?</h3>
+        <p class="faq-answer text-[14px] font-normal text-[#6e6e73] leading-[1.5]">
+          Aura runs all day on a single charge — designed for 8+ hours of active use. It charges via USB-C in under 45 minutes and enters a low-power standby mode when not actively capturing.
+        </p>
+      </div>
+      <div class="flex justify-end pt-4">
+        <button class="faq-expand-btn select-none cursor-pointer">+</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Prev/Next Controls -->
+  <div class="faq-controls">
+    <button id="faq-prev-btn" class="faq-control-btn" aria-label="Previous page">
+      <svg class="sf-symbol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width: 1.25em; height: 1.25em; display: inline-block; vertical-align: middle;"><polyline points="15 18 9 12 15 6"></polyline></svg>
+    </button>
+    <button id="faq-next-btn" class="faq-control-btn" aria-label="Next page">
+      <svg class="sf-symbol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width: 1.25em; height: 1.25em; display: inline-block; vertical-align: middle;"><polyline points="9 18 15 12 9 6"></polyline></svg>
+    </button>
+  </div>
+</section>
+
+<script>
+  (function() {
+    const container = document.getElementById('faq-cards-container');
+    const prevBtn = document.getElementById('faq-prev-btn');
+    const nextBtn = document.getElementById('faq-next-btn');
+
+    if (!container || !prevBtn || !nextBtn) return;
+
+    // 1. Prev/Next Arrow Click behavior
+    prevBtn.addEventListener('click', () => {
+      container.scrollBy({ left: -340, behavior: 'smooth' });
+    });
+
+    nextBtn.addEventListener('click', () => {
+      container.scrollBy({ left: 340, behavior: 'smooth' });
+    });
+
+    // 2. Disabled Arrow States based on scroll position
+    const updateArrowStates = () => {
+      const scrollLeft = container.scrollLeft;
+      const maxScrollLeft = container.scrollWidth - container.clientWidth;
+      
+      prevBtn.disabled = (scrollLeft <= 5);
+      nextBtn.disabled = (scrollLeft >= maxScrollLeft - 5);
+    };
+
+    container.addEventListener('scroll', updateArrowStates);
+    window.addEventListener('resize', updateArrowStates);
+
+    // Initial check after symbols render
+    setTimeout(updateArrowStates, 300);
+
+    // 3. Drag to scroll on desktop
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    container.addEventListener('mousedown', (e) => {
+      isDown = true;
+      container.style.cursor = 'grabbing';
+      startX = e.pageX - container.offsetLeft;
+      scrollLeft = container.scrollLeft;
+    });
+
+    container.addEventListener('mouseleave', () => {
+      if (isDown) {
+        isDown = false;
+        container.style.cursor = 'grab';
+      }
+    });
+
+    container.addEventListener('mouseup', () => {
+      if (isDown) {
+        isDown = false;
+        container.style.cursor = 'grab';
+      }
+    });
+
+    container.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - container.offsetLeft;
+      const walk = (x - startX) * 1.5;
+      container.scrollLeft = scrollLeft - walk;
+    });
+
+    // 4. Card Expand/Collapse Interaction
+    const cards = container.querySelectorAll('.faq-card');
+    cards.forEach(card => {
+      const expandBtn = card.querySelector('.faq-expand-btn');
+      if (expandBtn) {
+        expandBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          card.classList.toggle('expanded');
+        });
+      }
+    });
+  })();
+</script>
+
 <!-- FOOTER -->
 <footer class="bg-inverse-surface dark:bg-on-background py-section-v-padding text-surface-bright">
 <div class="max-w-[1200px] mx-auto px-margin-base grid grid-cols-1 md:grid-cols-4 gap-gutter">
