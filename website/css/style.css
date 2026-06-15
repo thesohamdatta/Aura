@@ -29,3 +29,35 @@
     background-color: var(--color-canvas-dark);
     color: var(--color-canvas-white);
 }
+
+/* AirPods-style Floating Pill Component */
+.hero-pill {
+    animation: float 4s ease-in-out infinite;
+    transform-origin: center;
+    box-shadow: 
+        0 8px 32px rgba(0,0,0,0.12),
+        0 2px 8px rgba(0,0,0,0.08),
+        inset 0 1px 0 rgba(255,255,255,0.4);
+}
+
+.hero-pill-btn:hover {
+    background-color: #0077ed !important;
+}
+
+@media (max-width: 640px) {
+    .hero-pill-container {
+        margin-left: -16px;
+        margin-right: -16px;
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotate(-0.5deg);
+        filter: drop-shadow(0 12px 20px rgba(0,0,0,0.15));
+    }
+    50% {
+        transform: translateY(-6px) rotate(-0.5deg);
+        filter: drop-shadow(0 6px 10px rgba(0,0,0,0.25));
+    }
+}

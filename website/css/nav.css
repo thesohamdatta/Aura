@@ -7,16 +7,36 @@
     height: 52px;
     z-index: 100;
     
-    /* Frosted glass backdrop filter (required by layout tests) */
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    /* Premium glassmorphism base styles (required by layout tests) */
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     
-    transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-    contain: paint;
+    transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease, -webkit-backdrop-filter 0.3s ease;
+}
+
+/* Scrolled state or static subpage state */
+#navbar.scrolled,
+#navbar:not(.bg-transparent) {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(24px) saturate(200%);
+    -webkit-backdrop-filter: blur(24px) saturate(200%);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .nav-inner {
     width: 100%;
+}
+
+@media (min-width: 768px) {
+    #mobileMenu {
+        background: transparent !important;
+        background-color: transparent !important;
+        border: none !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+    }
 }
 
 /* Ensure body has padding at top to account for fixed header */

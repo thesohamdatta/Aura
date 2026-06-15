@@ -14,9 +14,9 @@
 <script src="js/liquid-glass.js" defer></script>
 <script src="js/sf-symbols.js" defer></script>
 </head>
-<body class="bg-surface text-on-surface">
+<body class="bg-surface text-on-surface !pt-0">
 <!-- Top Navigation Anchor (from JSON) -->
-<nav id="navbar" class="fixed top-0 w-full h-[52px] z-[100] bg-white/72 backdrop-blur-xl border-b border-black/[0.08] transition-all duration-300">
+<nav id="navbar" class="fixed top-0 w-full h-[52px] z-[100] bg-transparent transition-all duration-300">
 <div class="nav-inner flex justify-between items-center px-margin-base w-full max-w-[1200px] mx-auto h-full">
 <a href="index.html" class="font-display text-[21px] font-semibold tracking-[-0.3px] text-[#1d1d1f]">Aura</a>
 <div id="mobileMenu" class="hidden absolute top-[52px] left-0 w-full bg-surface/95 backdrop-blur-md border-b border-black/10 flex-col p-4 gap-4 md:static md:w-auto md:bg-transparent md:border-none md:p-0 md:flex md:flex-row md:gap-8 items-center">
@@ -1145,32 +1145,41 @@ ssl._create_default_https_context = ssl._create_unverified_context</pre>
         const navbar = document.getElementById('navbar');
         if (navbar && navbar.classList.contains('bg-transparent')) {
             const navLinks = document.querySelectorAll('.nav-link');
+            const logo = navbar.querySelector('a.font-display');
             const handleScroll = () => {
                 if (window.scrollY > 40) {
-                    navbar.classList.add('bg-white/72', 'backdrop-blur-xl', 'border-b', 'border-black/[0.08]');
+                    navbar.classList.add('scrolled');
                     navbar.classList.remove('bg-transparent');
-                    navLinks.forEach(l => {
-                        if (l.classList.contains('font-semibold')) {
-                            l.classList.add('text-[#1d1d1f]');
-                            l.classList.remove('text-white', 'text-white/90', 'text-white/65', 'text-[#1d1d1f]/65');
-                        } else {
-                            l.classList.add('text-[#1d1d1f]/65');
-                            l.classList.remove('text-white', 'text-white/90', 'text-white/65', 'text-[#1d1d1f]');
-                        }
-                    });
+                    
+                    // Transition to frosted white glass (using inline styles to guarantee specificity)
+                    navbar.style.background = 'rgba(255, 255, 255, 0.65)';
+                    navbar.style.backdropFilter = 'blur(24px) saturate(200%)';
+                    navbar.style.webkitBackdropFilter = 'blur(24px) saturate(200%)';
+                    navbar.style.borderBottom = '1px solid rgba(0, 0, 0, 0.08)';
                 } else {
-                    navbar.classList.remove('bg-white/72', 'backdrop-blur-xl', 'border-b', 'border-black/[0.08]');
+                    navbar.classList.remove('scrolled');
                     navbar.classList.add('bg-transparent');
-                    navLinks.forEach(l => {
-                        if (l.classList.contains('font-semibold')) {
-                            l.classList.add('text-white');
-                            l.classList.remove('text-[#1d1d1f]', 'text-white/90', 'text-white/65', 'text-[#1d1d1f]/65');
-                        } else {
-                            l.classList.add('text-white/65');
-                            l.classList.remove('text-white', 'text-white/90', 'text-[#1d1d1f]', 'text-[#1d1d1f]/65');
-                        }
-                    });
+                    
+                    // Transition to near-invisible glass at top (using inline styles to guarantee specificity)
+                    navbar.style.background = 'rgba(255, 255, 255, 0.08)';
+                    navbar.style.backdropFilter = 'blur(24px) saturate(180%)';
+                    navbar.style.webkitBackdropFilter = 'blur(24px) saturate(180%)';
+                    navbar.style.borderBottom = '1px solid rgba(255, 255, 255, 0.15)';
                 }
+                
+                // Keep logo and links always in readable dark grey for docs page
+                if (logo) {
+                    logo.style.color = '#1d1d1f';
+                }
+                navLinks.forEach(l => {
+                    if (l.classList.contains('font-semibold')) {
+                        l.classList.add('text-[#1d1d1f]');
+                        l.classList.remove('text-white', 'text-white/90', 'text-[#1d1d1f]/65', 'text-white/65');
+                    } else {
+                        l.classList.add('text-[#1d1d1f]/65');
+                        l.classList.remove('text-white', 'text-white/90', 'text-[#1d1d1f]', 'text-white/65');
+                    }
+                });
             };
             window.addEventListener('scroll', handleScroll, { passive: true });
             handleScroll();

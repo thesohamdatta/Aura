@@ -15,9 +15,9 @@
 </head>
 <body class="bg-white text-on-surface font-body selection:bg-accent-blue/20 !pt-0">
 <!-- TOP NAVIGATION SHELL -->
-<nav id="navbar" class="fixed top-0 w-full h-[52px] z-[100] bg-transparent transition-all duration-300">
+<nav id="navbar" class="fixed top-0 w-full h-[52px] z-[100] bg-transparent">
 <div class="nav-inner flex justify-between items-center px-margin-base w-full max-w-[1200px] mx-auto h-full">
-<a href="index.html" class="font-display text-[21px] font-semibold tracking-[-0.3px] text-[#1d1d1f]">Aura</a>
+<a href="index.html" class="font-display text-[21px] font-semibold tracking-[-0.3px]" style="color: #ffffff;">Aura</a>
 <div id="mobileMenu" class="hidden absolute top-[52px] left-0 w-full bg-surface/95 backdrop-blur-md border-b border-black/10 flex-col p-4 gap-4 md:static md:w-auto md:bg-transparent md:border-none md:p-0 md:flex md:flex-row md:gap-8 items-center h-full">
 <a class="nav-link font-body text-[17px] font-semibold text-white hover:text-accent-blue transition-colors" href="index.html">Overview</a>
 <a class="nav-link font-body text-[17px] font-normal text-white/90 hover:text-accent-blue transition-colors" href="about.html">About</a>
@@ -41,18 +41,57 @@
   
   <div class="relative h-full flex flex-col justify-end p-margin-base md:p-section-v-padding max-w-[1200px] mx-auto w-full pb-16 md:pb-24">
     <div class="flex flex-col md:flex-row justify-between items-end w-full gap-8">
-      
       <!-- Left Title (Asymmetrical) -->
       <div class="text-left select-none">
         <span class="font-label text-overline text-white/60 uppercase tracking-[0.2em] block mb-2">Aura</span>
         <h1 class="font-hero-h1-mobile md:font-hero-h1 text-hero-h1-mobile md:text-hero-h1 text-white leading-[1.05] tracking-tight">Worn.<br>Screenless.<br>Aware.</h1>
       </div>
 
-      <!-- Right Capsule Card (Asymmetrical) -->
-      <div class="flex flex-col sm:flex-row items-center gap-4 bg-white/10 backdrop-blur-md border border-white/10 p-1.5 rounded-full w-full sm:w-auto">
-        <a href="docs.html#hardware" class="bg-accent-blue text-white font-label text-label px-6 py-2.5 rounded-full hover:opacity-90 transition-opacity flex items-center justify-center w-full sm:w-auto font-medium">Build & Contribute</a>
+      <!-- AirPods-Style Floating Pill Component (aligned to the right on desktop, full-width on mobile) -->
+      <div class="hero-pill-container w-full md:w-auto flex justify-center md:justify-end">
+        <div class="hero-pill flex items-center justify-between sm:justify-start bg-[rgba(255,255,255,0.18)] rounded-full p-0 gap-4 w-full sm:w-auto" style="
+          backdrop-filter: blur(40px) saturate(180%);
+          -webkit-backdrop-filter: blur(40px) saturate(180%);
+          border-top: 1px solid rgba(255, 255, 255, 0.35);
+          border-left: 1px solid rgba(255, 255, 255, 0.35);
+          border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+          border-right: 1px solid rgba(255, 255, 255, 0.08);
+        ">
+          <!-- Left Side - "Open Source" Text -->
+          <span class="select-none whitespace-nowrap" style="
+            color: rgba(255, 255, 255, 0.92);
+            font-family: var(--font-display);
+            font-size: 15px;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.15);
+            padding-left: 20px;
+            padding-right: 8px;
+          ">Open Source</span>
+          
+          <!-- Divider -->
+          <div style="
+            width: 1px;
+            height: 24px;
+            background-color: rgba(255,255,255,0.2);
+            align-self: center;
+          "></div>
+          
+          <!-- Right Side - "Build Yours" Action Button -->
+          <a href="docs.html#hardware" class="hero-pill-btn select-none whitespace-nowrap" style="
+            background: #0071e3;
+            color: #ffffff;
+            border-radius: 9999px;
+            padding: 8px 18px;
+            font-family: var(--font-display);
+            font-size: 15px;
+            font-weight: 500;
+            margin: 4px;
+            text-decoration: none;
+            transition: background 0.2s ease;
+          ">Build Yours</a>
+        </div>
       </div>
-
     </div>
   </div>
 </section>
@@ -168,6 +207,95 @@
 
 </div>
 </div>
+</section>
+
+<!-- AirPods 4-style "Seamless experience" Section -->
+<section id="app-demo-section" class="w-full bg-[#f5f5f7] overflow-hidden flex flex-col items-center">
+  <style>
+    #app-demo-section {
+      padding: 120px 0 80px 0;
+    }
+    #app-demo-section .demo-img-container {
+      width: 780px;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      margin-bottom: 60px;
+    }
+    #app-demo-section .demo-phone-img {
+      width: 340px;
+      display: block;
+      filter: drop-shadow(0 40px 60px rgba(0,0,0,0.18)) drop-shadow(0 8px 20px rgba(0,0,0,0.10));
+      opacity: 0;
+      transform: translateY(40px) translateX(-20px);
+      transition: opacity 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    #app-demo-section .demo-phone-img.animate-in {
+      opacity: 1;
+      transform: translateY(0) translateX(0);
+    }
+    #app-demo-section .demo-caption-label {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    #app-demo-section .demo-caption-label.animate-in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    #app-demo-section .demo-caption-body {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    #app-demo-section .demo-caption-body.animate-in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    @media (max-width: 767px) {
+      #app-demo-section {
+        padding: 60px 0 40px 0;
+      }
+      #app-demo-section .demo-headline {
+        font-size: 34px !important;
+      }
+      #app-demo-section .demo-img-container {
+        width: 100%;
+        padding: 0 16px;
+        margin-bottom: 40px;
+      }
+      #app-demo-section .demo-phone-img {
+        width: calc(100% - 32px);
+        margin: 0 auto;
+      }
+      #app-demo-section .demo-caption-container {
+        padding: 0 24px;
+      }
+    }
+  </style>
+
+  <!-- Headline Block -->
+  <div class="w-full text-center px-4">
+    <span class="block text-[17px] font-normal text-[#6e6e73] tracking-tight mb-2">Seamless experience</span>
+    <h2 class="demo-headline text-[48px] md:text-[56px] font-bold tracking-[-0.003em] text-[#1d1d1f] max-w-[700px] mx-auto mb-20 leading-[1.07]">
+      A completely different way to remember.
+    </h2>
+  </div>
+
+  <!-- Image Pair Layout -->
+  <div class="demo-img-container">
+    <img id="demoPhoneImage" alt="Aura Phone Mockup" class="demo-phone-img" src="assets/png/mobile%20and%20device.png">
+  </div>
+
+  <!-- Caption Block -->
+  <div class="demo-caption-container w-full text-center max-w-[600px] mx-auto">
+    <h3 id="demoCaptionLabel" class="demo-caption-label text-[21px] font-semibold text-[#1d1d1f] mb-3 leading-tight">
+      Aura remembers. So you don't have to.
+    </h3>
+    <p id="demoCaptionBody" class="demo-caption-body text-[17px] font-normal text-[#6e6e73] leading-[1.6] max-w-[480px] mx-auto">
+      Ask anything. Aura surfaces what you've heard, seen, and said — with full context, instantly.
+    </p>
+  </div>
 </section>
 
 <!-- 3. TAKE A CLOSER LOOK -->
@@ -522,10 +650,22 @@
         const navbar = document.getElementById('navbar');
         if (navbar && navbar.classList.contains('bg-transparent')) {
             const navLinks = document.querySelectorAll('.nav-link');
+            const logo = navbar.querySelector('a.font-display');
             const handleScroll = () => {
                 if (window.scrollY > 40) {
-                    navbar.classList.add('bg-white/72', 'backdrop-blur-xl', 'border-b', 'border-black/[0.08]');
+                    navbar.classList.add('scrolled');
                     navbar.classList.remove('bg-transparent');
+                    
+                    // Transition to frosted white glass (using inline styles to guarantee specificity)
+                    navbar.style.background = 'rgba(255, 255, 255, 0.65)';
+                    navbar.style.backdropFilter = 'blur(24px) saturate(200%)';
+                    navbar.style.webkitBackdropFilter = 'blur(24px) saturate(200%)';
+                    navbar.style.borderBottom = '1px solid rgba(0, 0, 0, 0.08)';
+                    
+                    if (logo) {
+                        logo.style.color = '#1d1d1f';
+                    }
+                    
                     navLinks.forEach(l => {
                         if (l.classList.contains('font-semibold')) {
                             l.classList.add('text-[#1d1d1f]');
@@ -536,8 +676,19 @@
                         }
                     });
                 } else {
-                    navbar.classList.remove('bg-white/72', 'backdrop-blur-xl', 'border-b', 'border-black/[0.08]');
+                    navbar.classList.remove('scrolled');
                     navbar.classList.add('bg-transparent');
+                    
+                    // Transition to near-invisible glass at top (using inline styles to guarantee specificity)
+                    navbar.style.background = 'rgba(255, 255, 255, 0.08)';
+                    navbar.style.backdropFilter = 'blur(24px) saturate(180%)';
+                    navbar.style.webkitBackdropFilter = 'blur(24px) saturate(180%)';
+                    navbar.style.borderBottom = '1px solid rgba(255, 255, 255, 0.15)';
+                    
+                    if (logo) {
+                        logo.style.color = '#ffffff';
+                    }
+                    
                     navLinks.forEach(l => {
                         if (l.classList.contains('font-semibold')) {
                             l.classList.add('text-white');
@@ -551,6 +702,40 @@
             };
             window.addEventListener('scroll', handleScroll, { passive: true });
             handleScroll();
+        }
+
+        // IntersectionObserver for App Demo Section (Seamless experience)
+        const appDemoSection = document.getElementById('app-demo-section');
+        if (appDemoSection && 'IntersectionObserver' in window) {
+            const phoneImg = document.getElementById('demoPhoneImage');
+            const captionLabel = document.getElementById('demoCaptionLabel');
+            const captionBody = document.getElementById('demoCaptionBody');
+
+            const demoObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // 1. Phone image fades up
+                        phoneImg.classList.add('animate-in');
+                        
+                        // 2. Caption label fades up after 300ms
+                        setTimeout(() => {
+                            captionLabel.classList.add('animate-in');
+                        }, 300);
+
+                        // 3. Caption body copy fades up after 500ms
+                        setTimeout(() => {
+                            captionBody.classList.add('animate-in');
+                        }, 500);
+
+                        // Fire once and stop observing
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.2
+            });
+
+            demoObserver.observe(appDemoSection);
         }
     </script>
 </body></html>
