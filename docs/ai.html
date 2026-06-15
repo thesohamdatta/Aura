@@ -1,0 +1,285 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta name="description" content="Discover the 4-layer cloud AI pipeline powering Aura: Deepgram STT, Groq LPU, GPT-4o Vision, and Pinecone RAG Memory.">
+<meta name="theme-color" content="#ffffff">
+<title>Aura Intelligence | Frontier Models</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="js/tailwind-config.js"></script>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/nav.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/liquid-glass.js" defer></script>
+<script src="js/sf-symbols.js" defer></script>
+</head>
+<body class="bg-surface text-on-surface font-body overflow-x-hidden">
+<!-- Primary Top Bar -->
+<nav id="navbar" class="fixed top-0 w-full h-[52px] z-[100] bg-white/72 backdrop-blur-xl border-b border-black/[0.08] transition-all duration-300">
+<div class="nav-inner flex justify-between items-center px-margin-base w-full max-w-[1200px] mx-auto h-full">
+<a href="index.html" class="font-display text-[21px] font-semibold tracking-[-0.3px] text-[#1d1d1f]">Aura</a>
+<div id="mobileMenu" class="hidden absolute top-[52px] left-0 w-full bg-surface/95 backdrop-blur-md border-b border-black/10 flex-col p-4 gap-4 md:static md:w-auto md:bg-transparent md:border-none md:p-0 md:flex md:flex-row md:gap-8 items-center">
+<a class="nav-link font-body text-[17px] font-normal text-[#1d1d1f]/65 hover:text-accent-blue transition-colors duration-200" href="index.html">Overview</a>
+<a class="nav-link font-body text-[17px] font-normal text-[#1d1d1f]/65 hover:text-accent-blue transition-colors duration-200" href="about.html">About</a>
+<a class="nav-link font-body text-[17px] font-semibold text-[#1d1d1f] hover:text-accent-blue transition-colors duration-200" href="ai.html">AI</a>
+<a class="nav-link font-body text-[17px] font-normal text-[#1d1d1f]/65 hover:text-accent-blue transition-colors duration-200" href="manifesto.html">Dilemma</a>
+<a class="nav-link font-body text-[17px] font-normal text-[#1d1d1f]/65 hover:text-accent-blue transition-colors duration-200" href="docs.html">Docs</a>
+</div>
+<div class="flex items-center gap-4">
+<a href="docs.html#hardware" class="bg-accent-blue text-white rounded-full px-[15px] py-[6px] text-[14px] font-medium hover:opacity-90 transition-opacity flex items-center justify-center">Build Yours</a>
+<button type="button" aria-label="Toggle navigation menu" onclick="document.getElementById('mobileMenu').classList.toggle('hidden'); document.getElementById('mobileMenu').classList.toggle('flex')" class="md:hidden flex items-center text-on-surface dark:text-surface-bright">
+  <span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Secondary Sub-Nav (Intelligence Specific) -->
+<nav class="sticky top-[52px] w-full h-[44px] z-[90] bg-surface/80 glass-nav border-none">
+<div class="flex justify-between items-center px-margin-base w-full max-w-[1200px] mx-auto h-full">
+<div class="font-hero-h1 text-[19px] font-semibold text-on-surface">Intelligence</div>
+<div class="flex gap-6 items-center">
+<a class="font-body text-label text-on-surface border-b border-on-surface" href="#transcription">Overview</a>
+<a class="font-body text-label text-text-secondary hover:text-accent-blue transition-colors" href="#speed">Speed</a>
+<a class="font-body text-label text-text-secondary hover:text-accent-blue transition-colors" href="#vision">Sight</a>
+<a class="font-body text-label text-text-secondary hover:text-accent-blue transition-colors" href="#memory">Memory</a>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Concept -->
+<header class="h-[60vh] flex flex-col justify-center items-center text-center px-margin-base bg-surface">
+<span class="font-overline text-overline text-accent-blue uppercase mb-4">Foundation</span>
+<h1 class="font-hero-h1 text-hero-h1-mobile md:text-hero-h1 max-w-headline-md mx-auto mb-6">Built on the frontiers of possible</h1>
+<p class="font-body text-body text-text-secondary max-w-prose-max-width mx-auto">Aura leverages a constellation of industry-leading models to provide seamless, human-grade interaction at the speed of thought.</p>
+</header>
+<!-- Section 1: Deepgram (Transcription) - White -->
+<section class="py-section-v-padding-mobile md:py-section-v-padding bg-surface" id="transcription">
+<div class="max-w-[1200px] mx-auto px-margin-base grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+<div class="order-2 md:order-1">
+<span class="font-overline text-overline text-text-secondary uppercase mb-2 block">Audio Intelligence</span>
+<h2 class="font-section-h2 text-section-h2-mobile md:text-section-h2 mb-6">Real-time listening with Deepgram</h2>
+<p class="font-body text-body text-text-secondary max-w-prose-max-width">Aura captures every nuance of human speech using state-of-the-art Nova-2 models. With sub-300ms latency and high-fidelity word accuracy, the boundary between machine and conversation dissolves.</p>
+</div>
+<div class="order-1 md:order-2 flex justify-center">
+<img alt="Audio waveform visualization" class="w-full h-auto max-w-[500px] rounded-xl object-contain" data-alt="A sophisticated digital rendering of a sleek, ethereal audio waveform visualization against a clean, light-mode background. The lines are thin and precise, pulsing with a soft cyan and silver glow, suggesting high-frequency data processing. The overall aesthetic is minimal, corporate, and technologically advanced, resembling high-end hardware documentation photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhbvPsXfGiHOc3vuEdkOzyhtqrp1Vw6p8pCi5u0AJr3lxCPHSZ1h_j5vu4V5I3KhLqqUAGz5f3tMIRBL_tyVHyQ8R868GuT22vtqSq1KK7tRO_k8qF0hpAK6wdDE4e25KCzpM0mhUmy59vfs9HqbyiqdmV-i3k7ei0OGzshgRqWHB9HArGHQguJxeb4jfFspVXWasmqn-EfPzLyPcC-fgetFZjnKWXrTA11qhacwf4PwQf9RpY8yhXqr6_bHDHUkzGU6hAGmlm60g">
+</div>
+</div>
+</section>
+<!-- Section 2: Groq (Speed) - Parchment -->
+<section class="py-section-v-padding-mobile md:py-section-v-padding bg-bg-parchment" id="speed">
+<div class="max-w-[1200px] mx-auto px-margin-base grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+<div class="flex justify-center">
+<div class="relative w-full max-w-[500px] aspect-square bg-surface rounded-[18px] flex flex-col items-center justify-center overflow-hidden p-8 border border-black/5">
+<span class="font-hero-h1 text-[120px] leading-none text-accent-blue tracking-tighter mb-2">0.5s</span>
+<span class="font-label text-label text-text-secondary uppercase tracking-widest">End-to-End Latency</span>
+</div>
+</div>
+<div>
+<span class="font-overline text-overline text-text-secondary uppercase mb-2 block">Inference Engine</span>
+<h2 class="font-section-h2 text-section-h2-mobile md:text-section-h2 mb-6">Latency at the limit of physics</h2>
+<p class="font-body text-body text-text-secondary max-w-prose-max-width">Powered by Groq's LPU technology, Aura processes language tokens at speeds that feel instantaneous. The typical delay of cloud-based AI is eliminated, replaced by a responsive fluidic exchange that keeps up with the fastest thinkers.</p>
+</div>
+</div>
+</section>
+<!-- Section 3: GPT-4o (Vision) - White -->
+<section class="py-section-v-padding-mobile md:py-section-v-padding bg-surface" id="vision">
+<div class="max-w-[1200px] mx-auto px-margin-base grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+<div class="order-2 md:order-1">
+<span class="font-overline text-overline text-text-secondary uppercase mb-2 block">Multimodal Sight</span>
+<h2 class="font-section-h2 text-section-h2-mobile md:text-section-h2 mb-6">See the world through GPT-4o</h2>
+<p class="font-body text-body text-text-secondary max-w-prose-max-width">Aura doesn't just hear you; it understands context. Integration with GPT-4o vision capabilities allows for complex spatial reasoning and object recognition, making Aura a true partner in physical environments.</p>
+</div>
+<div class="order-1 md:order-2 flex justify-center">
+<div class="w-full max-w-[500px] p-8 bg-bg-parchment rounded-[18px]">
+<img alt="Abstract Vision Diagram" class="w-full h-auto rounded-lg grayscale mix-blend-multiply" data-alt="A clean, minimalist architectural diagram showing interconnected nodes of visual data. The aesthetic uses a crisp white and soft grey palette with subtle blue accents. The lighting is even and soft, resembling a premium tech product manual. The focus is on clarity and structural elegance, avoiding all shadows for a perfectly flat, modern corporate look." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkV7YZ5k3pbgXjV35VbHQl2M2VTsxNN0hH_gAez57o-TO9RN1kCAmSOfn_CgQn0qFvym7OaHAJGbjvGJi79lezR6GnMAaObScDb3eyC-V4_obJN1-_3qjX6I4n86J-jBzfoVaAR8zMZWkeQpp8iec36OWrCrhw4c9yjt3QU47T4MQDwWZhwdP-mfx4oAA1YFBN2Ww6Vj6uEemLPYwPsu6Wjs3MPqszkSjuJJimtIBlBOZ60xKdv1TreKhTKfXqKesC7VO2FWEFs_E">
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Pinecone (Memory) - Parchment -->
+<section class="py-section-v-padding-mobile md:py-section-v-padding bg-bg-parchment" id="memory">
+<div class="max-w-[1200px] mx-auto px-margin-base grid grid-cols-1 md:grid-cols-2 gap-gutter items-center opacity-100">
+<div class="flex justify-center">
+<img alt="Vector node graph" class="w-full h-auto max-w-[500px] rounded-xl object-contain" data-alt="An intricate network of interconnected nodes and glowing pathways representing a vector database memory system. The background is a sophisticated dark parchment tone, with nodes appearing as soft white and blue orbs connected by gossamer-thin lines. The style is high-end digital design, emphasizing depth through layering and tonal shifts rather than traditional shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7EGS8s0Oawj0ILikrhgV1uHJI7uy4exOeDasl-zQF-CLOr3GUCLTS4RRNq_HRReVs-z8PQzSlH-VW0ZtbHRYcHej7Voje7ksf7aQDCm744C12z7XslgmZDCasVY0X2BhJzce_4lL8GVU3f4vjT7b-jTZg2BnojVeg-a-z9VUK9L82kmWdrwv8ZSdC6bRgsKLei08_NaIaCZYIHPgJJIY1SVESfbq2l1mGnoFM31zPBZdCIRSHx_Nr5hkjAGl80V9wUhKI0_uknuM">
+</div>
+<div>
+<span class="font-overline text-overline text-text-secondary uppercase mb-2 block">Long-term Memory</span>
+<h2 class="font-section-h2 text-section-h2-mobile md:text-section-h2 mb-6">Persistence with Pinecone</h2>
+<p class="font-body text-body text-text-secondary max-w-prose-max-width">Knowledge is preserved. Using Pinecone's serverless vector architecture, Aura maintains a semantic index of your interactions, ensuring that every session builds upon the last with perfect contextual recall.</p>
+</div>
+</div>
+</section>
+<!-- Bottom Section: Architecture Flow -->
+<section class="py-section-v-padding bg-surface">
+<div class="max-w-[1200px] mx-auto px-margin-base text-center">
+<span class="font-overline text-overline text-accent-blue uppercase mb-4 block">Unified Architecture</span>
+<h2 class="font-section-h2 text-section-h2-mobile md:text-section-h2 mb-16 mx-auto max-w-headline-max-width">A seamless orchestration of industry giants</h2>
+<div class="w-full overflow-x-auto pb-8">
+<div class="min-w-[800px] flex justify-between items-center relative py-12 px-8 bg-surface-container-low rounded-[18px]">
+<!-- Connector Line -->
+<div class="absolute h-[1px] bg-outline-variant left-24 right-24 top-1/2 -translate-y-1/2 z-0"></div>
+<!-- Flow Nodes -->
+<div class="relative z-10 flex flex-col items-center gap-4 bg-surface p-6 rounded-xl border border-surface-variant w-40">
+<span class="material-symbols-outlined text-accent-blue text-4xl">mic</span>
+<span class="font-label text-label">Deepgram</span>
+</div>
+<div class="relative z-10 flex flex-col items-center gap-4 bg-surface p-6 rounded-xl border border-surface-variant w-40">
+<span class="material-symbols-outlined text-accent-blue text-4xl">bolt</span>
+<span class="font-label text-label">Groq</span>
+</div>
+<div class="relative z-10 flex flex-col items-center gap-4 bg-surface p-6 rounded-xl border border-surface-variant w-40">
+<span class="material-symbols-outlined text-accent-blue text-4xl">psychology</span>
+<span class="font-label text-label">GPT-4o</span>
+</div>
+<div class="relative z-10 flex flex-col items-center gap-4 bg-surface p-6 rounded-xl border border-surface-variant w-40">
+<span class="material-symbols-outlined text-accent-blue text-4xl">database</span>
+<span class="font-label text-label">Pinecone</span>
+</div>
+</div>
+</div>
+<div class="mt-12">
+<p class="font-body text-body text-text-secondary max-w-prose-max-width mx-auto">
+                        Each component is selected for its best-in-class performance, integrated via a custom API mesh that minimizes overhead and maximizes creative potential.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Metrics Spotlight (Parchment) -->
+<section class="bg-bg-parchment py-12 md:py-20 border-t border-b border-surface-container-low">
+  <div class="max-w-[1200px] mx-auto px-margin-base">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-left">
+      <!-- Metric 1: Latency -->
+      <div class="flex flex-col justify-between min-h-[160px]">
+        <div>
+          <span class="text-[12px] font-bold text-text-secondary uppercase tracking-widest block mb-2">Response Latency</span>
+          <span class="text-[56px] md:text-[72px] font-extrabold text-on-surface leading-none tracking-tight block">0.5s*</span>
+        </div>
+        <p class="text-text-secondary text-sm mt-4 leading-relaxed">Average voice-to-text response loop powered by Groq LPUs, matching the speed of natural human conversation.</p>
+      </div>
+      <!-- Metric 2: Components -->
+      <div class="flex flex-col justify-between min-h-[160px]">
+        <div>
+          <span class="text-[12px] font-bold text-text-secondary uppercase tracking-widest block mb-2">Cloud AI Pipeline</span>
+          <span class="text-[56px] md:text-[72px] font-extrabold text-on-surface leading-none tracking-tight block">4-Layer</span>
+        </div>
+        <p class="text-text-secondary text-sm mt-4 leading-relaxed">Perception stack routing: Deepgram Voice input → Groq/GPT-4o LPU reasoning → Pinecone Vector RAG → Speech synthesis.</p>
+      </div>
+      <!-- Metric 3: BOM Cost -->
+      <div class="flex flex-col justify-between min-h-[160px]">
+        <div>
+          <span class="text-[12px] font-bold text-text-secondary uppercase tracking-widest block mb-2">Hardware cost</span>
+          <span class="text-[56px] md:text-[72px] font-extrabold text-on-surface leading-none tracking-tight block">~$50</span>
+        </div>
+        <p class="text-text-secondary text-sm mt-4 leading-relaxed">Built from standard off-the-shelf components. Zero markup, zero artificial gates, total developer freedom.</p>
+      </div>
+    </div>
+    <!-- Footnotes -->
+    <div class="mt-16 pt-8 border-t border-surface-container-low text-[11px] text-text-secondary max-w-[800px]">
+      <p class="mb-2">* Latency measurements based on wired client connection routing through Groq server API. Results may vary depending on local cellular connectivity and backend server load.</p>
+    </div>
+  </div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-inverse-surface dark:bg-on-background py-section-v-padding text-surface-bright">
+<div class="max-w-[1200px] mx-auto px-margin-base grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div>
+<div class="font-hero-h1 text-section-h3 text-surface-bright mb-4">Aura</div>
+<p class="text-outline-variant text-label">The open source wearable AI project.</p>
+</div>
+<div>
+<h4 class="font-label text-label font-semibold mb-4 uppercase opacity-50">Build</h4>
+<ul class="space-y-2">
+<li><a class="text-outline-variant hover:text-surface-bright transition-colors" href="docs.html#hardware">Components</a></li>
+<li><a class="text-outline-variant hover:text-surface-bright transition-colors" href="docs.html#firmware">Firmware</a></li>
+<li><a class="text-outline-variant hover:text-surface-bright transition-colors" href="docs.html#backend">Backend</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label text-label font-semibold mb-4 uppercase opacity-50">Learn</h4>
+<ul class="space-y-2">
+<li><a class="text-outline-variant hover:text-surface-bright transition-colors" href="docs.html">Documentation</a></li>
+<li><a class="text-outline-variant hover:text-surface-bright transition-colors" href="docs.html">Guides</a></li>
+<li><a class="text-outline-variant hover:text-surface-bright transition-colors" href="manifesto.html">Philosophy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label text-label font-semibold mb-4 uppercase opacity-50">Community</h4>
+<ul class="space-y-2">
+<li><a class="text-outline-variant hover:text-surface-bright transition-colors" href="https://github.com/thesohamdatta/aura" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+<li><a class="text-outline-variant hover:text-surface-bright transition-colors" aria-disabled="true" tabindex="-1" href="#">Discord</a></li>
+<li><a class="text-outline-variant hover:text-surface-bright transition-colors" aria-disabled="true" tabindex="-1" href="#">Twitter</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-[1200px] mx-auto px-margin-base mt-20 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between text-label text-outline-variant">
+<p>&copy; 2026 Aura Project. MIT Licensed.</p>
+<div class="flex gap-6 mt-4 md:mt-0">
+<a class="hover:text-surface-bright" aria-disabled="true" tabindex="-1" href="#">Privacy</a>
+<a class="hover:text-surface-bright" target="_blank" href="https://github.com/thesohamdatta/aura" rel="noopener noreferrer">GitHub</a>
+</div>
+</div>
+</footer>
+<script>
+        // Navbar Scroll Behavior
+        const navbar = document.getElementById('navbar');
+        if (navbar && navbar.classList.contains('bg-transparent')) {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const handleScroll = () => {
+                if (window.scrollY > 40) {
+                    navbar.classList.add('bg-white/72', 'backdrop-blur-xl', 'border-b', 'border-black/[0.08]');
+                    navbar.classList.remove('bg-transparent');
+                    navLinks.forEach(l => {
+                        if (l.classList.contains('font-semibold')) {
+                            l.classList.add('text-[#1d1d1f]');
+                            l.classList.remove('text-white', 'text-white/90', 'text-white/65', 'text-[#1d1d1f]/65');
+                        } else {
+                            l.classList.add('text-[#1d1d1f]/65');
+                            l.classList.remove('text-white', 'text-white/90', 'text-white/65', 'text-[#1d1d1f]');
+                        }
+                    });
+                } else {
+                    navbar.classList.remove('bg-white/72', 'backdrop-blur-xl', 'border-b', 'border-black/[0.08]');
+                    navbar.classList.add('bg-transparent');
+                    navLinks.forEach(l => {
+                        if (l.classList.contains('font-semibold')) {
+                            l.classList.add('text-white');
+                            l.classList.remove('text-[#1d1d1f]', 'text-white/90', 'text-white/65', 'text-[#1d1d1f]/65');
+                        } else {
+                            l.classList.add('text-white/65');
+                            l.classList.remove('text-white', 'text-white/90', 'text-[#1d1d1f]', 'text-[#1d1d1f]/65');
+                        }
+                    });
+                }
+            };
+            window.addEventListener('scroll', handleScroll, { passive: true });
+            handleScroll();
+        }
+
+        // Simple parallax or intersection effects for clean entries
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        if (!('IntersectionObserver' in window)) {
+            document.querySelectorAll('section > div').forEach(el => {
+                el.classList.remove('opacity-0', 'translate-y-10');
+                el.classList.add('opacity-100');
+            });
+        } else {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100');
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('section > div').forEach(el => {
+                el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+                observer.observe(el);
+            });
+        }
+    </script>
+</body></html>

@@ -1,0 +1,31 @@
+/* style.css */
+/* Core component patterns required by layout tests */
+
+.btn-primary {
+    background-color: var(--color-action-blue);
+    border-radius: var(--radius-pill);
+    color: var(--color-canvas-white);
+}
+
+.btn-ghost {
+    background: transparent;
+    color: var(--color-action-blue);
+}
+
+.spec-card {
+    border-radius: var(--radius-card);
+    background-color: var(--color-canvas-white);
+}
+
+.section-white {
+    background-color: var(--color-canvas-white);
+}
+
+.section-parchment {
+    background-color: var(--color-canvas-parchment);
+}
+
+.section-dark {
+    background-color: var(--color-canvas-dark);
+    color: var(--color-canvas-white);
+}
