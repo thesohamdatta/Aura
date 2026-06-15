@@ -170,6 +170,42 @@ runTest('Docs section headers, table headers, and mobile select do not use monos
   }
 });
 
+// ----------------------------------------------------
+// TEST CASE 6: Bento Grid Gallery Specs
+// ----------------------------------------------------
+runTest('Take a Closer Look gallery uses Bento Grid rounded cards and zoom hover transitions', () => {
+  const indexPath = path.join(websiteDir, 'index.html');
+  if (!fs.existsSync(indexPath)) {
+    throw new Error('index.html not found');
+  }
+  const html = fs.readFileSync(indexPath, 'utf-8');
+
+  // Extract content between "TAKE A CLOSER LOOK" and the next section (VOICE STORY)
+  const galleryStart = html.indexOf('<!-- 3. TAKE A CLOSER LOOK -->');
+  const galleryEnd = html.indexOf('<!-- 4. VOICE STORY -->');
+  if (galleryStart === -1 || galleryEnd === -1 || galleryStart >= galleryEnd) {
+    throw new Error('Could not isolate Take a Closer Look gallery section in index.html');
+  }
+  const sectionHtml = html.substring(galleryStart, galleryEnd);
+
+  // Count bento card wrappers with rounded-[28px] and group class
+  const cardCount = (sectionHtml.match(/rounded-\[28px\]/g) || []).length;
+  if (cardCount !== 5) {
+    throw new Error(`Expected exactly 5 rounded cards, found ${cardCount}`);
+  }
+
+  const groupCount = (sectionHtml.match(/\bgroup\b(?!-)/g) || []).length;
+  if (groupCount !== 5) {
+    throw new Error(`Expected exactly 5 bento card wrappers with 'group' class, found ${groupCount}`);
+  }
+
+  // Count image hover scales
+  const hoverCount = (sectionHtml.match(/group-hover:scale-\[1\.03\]/g) || []).length;
+  if (hoverCount !== 5) {
+    throw new Error(`Expected exactly 5 images with hover-scale transition, found ${hoverCount}`);
+  }
+});
+
 // Final check
 if (testFailures > 0) {
   console.error(`\nTest suite failed with ${testFailures} failure(s).`);
