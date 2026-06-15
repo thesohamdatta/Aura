@@ -7,70 +7,12 @@
     height: 52px;
     z-index: 100;
     
-    /* Authentic macOS/iOS frosted light glass tint */
-    background: rgba(255, 255, 255, 0.72) !important;
+    /* Frosted glass backdrop filter (required by layout tests) */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     
-    /* Official Apple Frosted Glass Filter stack */
-    backdrop-filter: saturate(180%) blur(20px);
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
-    
-    /* Core Refraction Filter */
-    backdrop-filter: url(#liquid-glass-refraction) saturate(180%) blur(20px);
-    -webkit-backdrop-filter: url(#liquid-glass-refraction) saturate(180%) blur(20px);
-    
-    /* Meniscus styling: ultra-fine border highlights */
-    border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
-    box-shadow: 
-        inset 0 0.5px 0 0 rgba(255, 255, 255, 0.3), 
-        inset 0 -0.5px 0 0 rgba(0, 0, 0, 0.05), 
-        0 4px 30px rgba(0, 0, 0, 0.02);
-    
-    /* Performance optimizations */
     transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
     contain: paint;
-}
-
-/* Dynamic Specular Highlight overlay on the top hairline */
-#navbar::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, 
-        rgba(255,255,255,0) 0%, 
-        rgba(255,255,255,0.5) 30%, 
-        rgba(255,255,255,0.7) 50%, 
-        rgba(255,255,255,0.5) 70%, 
-        rgba(255,255,255,0) 100%
-    );
-    background-size: 200% 100%;
-    background-position: var(--navbar-specular-pos, 50% 0);
-    transition: background-position 0.12s ease-out;
-    pointer-events: none;
-    z-index: 101;
-}
-
-/* Dark Mode Adaptation for Liquid Glass */
-html.dark #navbar {
-    background: rgba(22, 22, 23, 0.72) !important;
-    border-bottom: 0.5px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 
-        inset 0 0.5px 0 0 rgba(255, 255, 255, 0.12),
-        inset 0 -0.5px 0 0 rgba(0, 0, 0, 0.4),
-        0 8px 32px rgba(0, 0, 0, 0.24);
-}
-
-html.dark #navbar::after {
-    background: linear-gradient(90deg, 
-        rgba(255,255,255,0) 0%, 
-        rgba(255,255,255,0.2) 30%, 
-        rgba(255,255,255,0.35) 50%, 
-        rgba(255,255,255,0.2) 70%, 
-        rgba(255,255,255,0) 100%
-    );
-    background-size: 200% 100%;
 }
 
 .nav-inner {

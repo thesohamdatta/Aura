@@ -15,18 +15,18 @@
 </head>
 <body class="bg-white text-on-surface font-body selection:bg-accent-blue/20">
 <!-- TOP NAVIGATION SHELL -->
-<nav id="navbar" class="fixed top-0 w-full h-[52px] z-[100] glass-nav bg-surface/80 dark:bg-surface-dim/80">
+<nav id="navbar" class="fixed top-0 w-full h-[52px] z-[100] bg-transparent transition-all duration-300">
 <div class="nav-inner flex justify-between items-center px-margin-base w-full max-w-[1200px] mx-auto h-full">
-<a href="index.html" class="font-hero-h1 text-section-h3 font-semibold text-on-surface dark:text-surface-bright">Aura</a>
+<a href="index.html" class="font-display text-[21px] font-semibold tracking-[-0.3px] text-[#1d1d1f]">Aura</a>
 <div id="mobileMenu" class="hidden absolute top-[52px] left-0 w-full bg-surface/95 backdrop-blur-md border-b border-black/10 flex-col p-4 gap-4 md:static md:w-auto md:bg-transparent md:border-none md:p-0 md:flex md:flex-row md:gap-8 items-center h-full">
-<a class="font-body text-label text-on-surface dark:text-surface-bright font-semibold hover:text-accent-blue transition-colors" href="index.html">Overview</a>
-<a class="font-body text-label text-text-secondary dark:text-on-surface-variant hover:text-accent-blue transition-colors" href="about.html">About</a>
-<a class="font-body text-label text-text-secondary dark:text-on-surface-variant hover:text-accent-blue transition-colors" href="ai.html">AI</a>
-<a class="font-body text-label text-text-secondary dark:text-on-surface-variant hover:text-accent-blue transition-colors" href="manifesto.html">Dilemma</a>
-<a class="font-body text-label text-text-secondary dark:text-on-surface-variant hover:text-accent-blue transition-colors" href="docs.html">Docs</a>
+<a class="nav-link font-body text-[17px] font-semibold text-white hover:text-accent-blue transition-colors" href="index.html">Overview</a>
+<a class="nav-link font-body text-[17px] font-normal text-white/90 hover:text-accent-blue transition-colors" href="about.html">About</a>
+<a class="nav-link font-body text-[17px] font-normal text-white/90 hover:text-accent-blue transition-colors" href="ai.html">AI</a>
+<a class="nav-link font-body text-[17px] font-normal text-white/90 hover:text-accent-blue transition-colors" href="manifesto.html">Dilemma</a>
+<a class="nav-link font-body text-[17px] font-normal text-white/90 hover:text-accent-blue transition-colors" href="docs.html">Docs</a>
 </div>
 <div class="flex items-center gap-4">
-<a href="docs.html#hardware" class="bg-accent-blue text-white font-label text-label px-4 py-1.5 rounded-full hover:opacity-80 transition-opacity flex items-center justify-center">Build Yours</a>
+<a href="docs.html#hardware" class="bg-accent-blue text-white rounded-full px-[15px] py-[6px] text-[14px] font-medium hover:opacity-90 transition-opacity flex items-center justify-center">Build Yours</a>
 <button onclick="document.getElementById('mobileMenu').classList.toggle('hidden'); document.getElementById('mobileMenu').classList.toggle('flex')" class="md:hidden flex items-center text-on-surface dark:text-surface-bright">
   <span class="material-symbols-outlined">menu</span>
 </button>
@@ -512,5 +512,40 @@
                 if (link.getAttribute('href') === '#') e.preventDefault();
             });
         });
+
+        // Navbar Scroll Behavior
+        const navbar = document.getElementById('navbar');
+        if (navbar && navbar.classList.contains('bg-transparent')) {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const handleScroll = () => {
+                if (window.scrollY > 40) {
+                    navbar.classList.add('bg-white/72', 'backdrop-blur-xl', 'border-b', 'border-black/[0.08]');
+                    navbar.classList.remove('bg-transparent');
+                    navLinks.forEach(l => {
+                        if (l.classList.contains('font-semibold')) {
+                            l.classList.add('text-[#1d1d1f]');
+                            l.classList.remove('text-white', 'text-white/90', 'text-white/65', 'text-[#1d1d1f]/65');
+                        } else {
+                            l.classList.add('text-[#1d1d1f]/65');
+                            l.classList.remove('text-white', 'text-white/90', 'text-white/65', 'text-[#1d1d1f]');
+                        }
+                    });
+                } else {
+                    navbar.classList.remove('bg-white/72', 'backdrop-blur-xl', 'border-b', 'border-black/[0.08]');
+                    navbar.classList.add('bg-transparent');
+                    navLinks.forEach(l => {
+                        if (l.classList.contains('font-semibold')) {
+                            l.classList.add('text-white');
+                            l.classList.remove('text-[#1d1d1f]', 'text-white/90', 'text-white/65', 'text-[#1d1d1f]/65');
+                        } else {
+                            l.classList.add('text-white/65');
+                            l.classList.remove('text-white', 'text-white/90', 'text-[#1d1d1f]', 'text-[#1d1d1f]/65');
+                        }
+                    });
+                }
+            };
+            window.addEventListener('scroll', handleScroll, { passive: true });
+            handleScroll();
+        }
     </script>
 </body></html>
