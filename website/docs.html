@@ -1,174 +1,237 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Build Your Own Aura — Docs</title>
-  <meta name="description" content="Step-by-step guide to printing the case, flashing firmware, and running the backend for Aura, the open-source AI wearable pendant.">
-  <link rel="stylesheet" href="css/global.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/nav.css">
-  <link rel="stylesheet" href="css/footer.css">
-  <link rel="stylesheet" href="css/docs.css">
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta name="description" content="Technical documentation and build guides for the open-source Aura hardware, firmware, and backend.">
+<title>Aura Documentation | Open Source wearable AI</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="js/tailwind-config.js"></script>
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/nav.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/docs.css">
+<script src="js/liquid-glass.js" defer></script>
 </head>
-<body>
-
-<nav id="navbar">
-  <div class="nav-inner">
-    <a href="index.html" class="nav-logo">AURA</a>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="ai.html">AI</a></li>
-      <li><a href="docs.html" class="active">Docs</a></li>
-      <li><a href="manifesto.html">Manifesto</a></li>
-    </ul>
-    <div class="nav-cta">
-      <a href="https://github.com/thesohamdatta/aura" target="_blank" rel="noopener" class="btn-primary">Build Your Own ↗</a>
-    </div>
-    <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" onclick="toggleNav()">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
+<body class="bg-surface text-on-surface">
+<!-- Top Navigation Anchor (from JSON) -->
+<nav id="navbar" class="fixed top-0 w-full h-[52px] z-[100] bg-surface/80 backdrop-blur-md">
+<div class="nav-inner flex justify-between items-center px-margin-base w-full max-w-[1200px] mx-auto h-full">
+<a href="index.html" class="font-hero-h1 text-section-h3 font-semibold text-on-surface">Aura</a>
+<div class="hidden md:flex gap-8">
+<a class="font-body text-label text-text-secondary hover:text-accent-blue transition-colors duration-200" href="index.html">Overview</a>
+<a class="font-body text-label text-text-secondary hover:text-accent-blue transition-colors duration-200" href="about.html">About</a>
+<a class="font-body text-label text-text-secondary hover:text-accent-blue transition-colors duration-200" href="ai.html">AI</a>
+<a class="font-body text-label text-text-secondary hover:text-accent-blue transition-colors duration-200" href="manifesto.html">Dilemma</a>
+<a class="font-body text-label text-on-surface font-semibold hover:text-accent-blue transition-colors duration-200" href="docs.html">Docs</a>
+</div>
+<a href="docs.html#hardware" class="bg-accent-blue text-white px-4 py-1.5 rounded-full text-label font-medium hover:opacity-90 transition-opacity flex items-center justify-center">
+                Build Yours
+            </a>
+</div>
 </nav>
-<div class="nav-overlay" id="nav-overlay">
-  <button class="nav-overlay-close" onclick="toggleNav()" aria-label="Close menu">✕</button>
-  <ul class="nav-overlay-links">
-    <li><a href="index.html" onclick="toggleNav()">Home</a></li>
-    <li><a href="about.html" onclick="toggleNav()">About</a></li>
-    <li><a href="ai.html" onclick="toggleNav()">AI</a></li>
-    <li><a href="docs.html" onclick="toggleNav()">Docs</a></li>
-    <li><a href="manifesto.html" onclick="toggleNav()">Manifesto</a></li>
-  </ul>
-  <a href="https://github.com/thesohamdatta/aura" target="_blank" rel="noopener" class="btn-primary">Build Your Own ↗</a>
+<div class="max-w-[1200px] mx-auto flex pt-[52px]">
+<!-- Left Sidebar Documentation Tree (260px) -->
+<aside class="w-[260px] h-[calc(100vh-44px)] sticky top-[44px] hidden md:flex flex-col py-8 px-margin-base bg-surface-container-lowest border-r border-outline-variant/20 overflow-y-auto">
+<div class="mb-8">
+<h2 class="font-hero-h1 text-label font-bold text-on-surface mb-2 tracking-tight">Documentation</h2>
+<p class="font-body text-[12px] text-text-secondary">Technical Guides</p>
+</div>
+<nav class="flex flex-col gap-1">
+<div class="mb-4">
+<p class="text-[11px] font-bold text-text-secondary uppercase tracking-widest mb-3 px-2">Core Concepts</p>
+<a class="flex items-center gap-3 px-2 py-1.5 rounded-lg font-body text-label text-accent-blue font-semibold border-r-2 border-accent-blue bg-surface-container-low transition-transform active:translate-x-1" href="docs.html">
+<span class="material-symbols-outlined text-[18px]">book</span>
+                        Introduction
+                    </a>
+<a class="flex items-center gap-3 px-2 py-1.5 rounded-lg font-body text-label text-text-secondary hover:bg-surface-container-low transition-colors group" href="index.html#features">
+<span class="material-symbols-outlined text-[18px]">rocket_launch</span>
+                        Quick Start
+                    </a>
+</div>
+<div class="mb-4">
+<p class="text-[11px] font-bold text-text-secondary uppercase tracking-widest mb-3 px-2">Engineering</p>
+<a class="flex items-center gap-3 px-2 py-1.5 rounded-lg font-body text-label text-text-secondary hover:bg-surface-container-low transition-colors" href="#hardware">
+<span class="material-symbols-outlined text-[18px]">memory</span>
+                        Hardware
+                    </a>
+<a class="flex items-center gap-3 px-2 py-1.5 rounded-lg font-body text-label text-text-secondary hover:bg-surface-container-low transition-colors" href="#firmware">
+<span class="material-symbols-outlined text-[18px]">developer_board</span>
+                        Firmware
+                    </a>
+<a class="flex items-center gap-3 px-2 py-1.5 rounded-lg font-body text-label text-text-secondary hover:bg-surface-container-low transition-colors" href="#backend">
+<span class="material-symbols-outlined text-[18px]">storage</span>
+                        Backend
+                    </a>
+</div>
+<div class="mb-4">
+<p class="text-[11px] font-bold text-text-secondary uppercase tracking-widest mb-3 px-2">Resources</p>
+<a class="flex items-center gap-3 px-2 py-1.5 rounded-lg font-body text-label text-text-secondary hover:bg-surface-container-low transition-colors" href="https://github.com/thesohamdatta/aura" target="_blank">
+<span class="material-symbols-outlined text-[18px]">api</span>
+                        API Reference
+                    </a>
+<a class="flex items-center gap-3 px-2 py-1.5 rounded-lg font-body text-label text-text-secondary hover:bg-surface-container-low transition-colors" href="https://github.com/thesohamdatta/aura" target="_blank">
+<span class="material-symbols-outlined text-[18px]">cloud_upload</span>
+                        Deployment
+                    </a>
+</div>
+</nav>
+</aside>
+<!-- Right Content Area (760px centered) -->
+<main class="flex-1 min-w-0 pb-section-v-padding">
+<div class="max-w-[760px] mx-auto px-margin-base pt-12">
+<!-- Breadcrumbs -->
+<nav class="flex items-center gap-2 text-label text-text-secondary mb-8">
+<span>Aura</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-on-surface">Documentation</span>
+</nav>
+<article class="prose max-w-none">
+<h1 class="font-hero-h1 text-hero-h1-mobile md:text-[56px] leading-tight mb-6">System Architecture</h1>
+<p class="font-body text-body text-text-secondary mb-12 max-w-[680px]">
+                        The Aura project represents a shift toward modular open-source hardware. This documentation provides a technical foundation for building, deploying, and maintaining Aura systems.
+                    </p>
+<!-- Hardware Section -->
+<section class="mb-16 scroll-mt-24" id="hardware">
+<h2 class="font-section-h2 text-section-h2-mobile md:text-section-h2 mb-6 border-b border-outline-variant/30 pb-4">Hardware</h2>
+<p class="font-body text-body text-text-secondary mb-6 max-w-[680px]">
+                            Aura utilizes a custom-designed PCB centered around the ESP32-S3 microcontroller. The physical chassis is machined from high-grade 6061 aluminum to ensure thermal stability and structural integrity.
+                        </p>
+<div class="bg-bg-parchment border-l-4 border-accent-blue p-6 mb-8 rounded-r-xl">
+<h4 class="font-label text-on-surface font-bold mb-2">Technical Specification</h4>
+<p class="font-body text-label text-text-secondary">
+                                All schematics are available in the Aura repository under the CERN OHL-P license. Use only validated components for thermal compliance.
+                            </p>
+</div>
+<img alt="Aura Hardware" class="w-full aspect-video object-cover rounded-xl mb-6" data-alt="A macro photograph of a high-end custom circuit board with silver traces and black components set against a clean white backdrop. The lighting is crisp and modern, emphasizing the precision of the hardware engineering. The aesthetic is professional and minimalist, aligning with the corporate light-mode design of the Aura brand documentation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzodHDbhEk2xfUDzHRPAJjH9g3WxLHA7sOhsd6Sl8myJgvvR5FDuml2en7DApj9sn05VwpdTQmOSx2ZEuOpRtns9vpQUCSltlqQmHy7lIhEgEX6RE4SJ5hUlf6thuf1cxxPwvtnqWHQE35j7RzI3MXQ-nJwV9GfAPQvOeZjFkxrbLo955pQwHyJ5HTJ0ZV9QGgkVS00DAFHkQVrCyIExYHmX1L_KunUeGt9KwW4RDHNjh-GKOcJx9EiNwxyDA1VgK2ngCSM1nL_LQ">
+</section>
+<!-- Firmware Section -->
+<section class="mb-16 scroll-mt-24" id="firmware">
+<h2 class="font-section-h2 text-section-h2-mobile md:text-section-h2 mb-6 border-b border-outline-variant/30 pb-4">Firmware</h2>
+<p class="font-body text-body text-text-secondary mb-6 max-w-[680px]">
+                            The firmware is written in C++ using the ESP-IDF framework. It handles real-time sensor processing and encrypted communication with the Aura backend.
+                        </p>
+<div class="bg-[#1d1d1f] rounded-xl p-6 mb-8 overflow-x-auto">
+<div class="flex justify-between items-center mb-4">
+<span class="text-[12px] font-mono text-text-secondary">aura_init.cpp</span>
+<span class="material-symbols-outlined text-white text-[16px] cursor-pointer hover:text-accent-blue">content_copy</span>
+</div>
+<pre class="font-mono text-[14px] text-white leading-relaxed"><code>void aura_system_start() {
+    // Initialize secure element
+    if (crypto_chip.begin() == SUCCESS) {
+        system_log("Secure boot verified");
+    }
+    
+    // Start sensor mesh
+    mesh_network.initialize();
+    
+    // Begin main execution loop
+    xTaskCreate(aura_main_loop, "MAIN", 4096, NULL, 5, NULL);
+}</code></pre>
+</div>
+</section>
+<!-- Backend Section -->
+<section class="mb-16 scroll-mt-24" id="backend">
+<h2 class="font-section-h2 text-section-h2-mobile md:text-section-h2 mb-6 border-b border-outline-variant/30 pb-4">Backend</h2>
+<p class="font-body text-body text-text-secondary mb-6 max-w-[680px]">
+                            Aura utilizes a distributed microservices architecture built on Rust and PostgreSQL. The system is designed for high availability and low-latency data ingestion.
+                        </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter mb-12">
+<div class="bg-surface-container-low p-8 rounded-xl">
+<h3 class="font-section-h3 text-[20px] mb-4 font-semibold">Data Privacy</h3>
+<p class="font-body text-label text-text-secondary">
+                                    All telemetry is end-to-end encrypted before leaving the local hardware node. The backend never stores raw sensitive keys.
+                                </p>
+</div>
+<div class="bg-surface-container-low p-8 rounded-xl">
+<h3 class="font-section-h3 text-[20px] mb-4 font-semibold">Scalability</h3>
+<p class="font-body text-label text-text-secondary">
+                                    Horizontally scalable services allow the Aura network to grow dynamically as new nodes are activated globally.
+                                </p>
+</div>
+</div>
+<img alt="Network Infrastructure" class="w-full aspect-[21/9] object-cover rounded-xl" data-alt="A sophisticated abstract visualization of a data network with interconnected glowing lines in shades of blue and white. The background is a clean, bright space that gives a sense of deep digital infrastructure without being dark. The mood is highly technical, clean, and optimistic, perfect for illustrating a modern backend architecture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2hFKXB3hCGKsMdBD-SVeSiQHWtvvxVl4miIamKNp8aRVJJdsejaakLppyN9HxQeSb1nYMYqHgZVGjstMX-ys9vounjrfd1vi5-5onxAFM_5FyGSkfmV5PUF5KjX2E8XNpfquFqg9kob8dIdb9TfHcqyv2jgzqP9jS42wMsqf-8Ux9iBiCujiVCb4W2O4WM4MIrGhhFsEnyee3Gvyb0KkMBciTDokAllCf0cSqjSG_3iNPAXPQs4MDvaR-NYeiBsgSYTq3BB2-OhI">
+</section>
+</article>
+<footer class="mt-20 pt-12 border-t border-outline-variant/30 flex flex-col md:flex-row justify-between items-start gap-8">
+<div>
+<div class="font-hero-h1 text-section-h3 font-semibold text-on-surface mb-4">Aura</div>
+<p class="font-body text-label text-text-secondary">© 2024 Aura Project. All rights reserved.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-12 text-label">
+<div class="flex flex-col gap-2">
+<span class="font-label text-on-surface font-bold">Build</span>
+<a class="text-text-secondary hover:text-accent-blue transition-colors" href="#hardware">Hardware</a>
+<a class="text-text-secondary hover:text-accent-blue transition-colors" href="#firmware">SDK</a>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label text-on-surface font-bold">Learn</span>
+<a class="text-text-secondary hover:text-accent-blue transition-colors" href="ai.html">Tutorials</a>
+<a class="text-text-secondary hover:text-accent-blue transition-colors" href="manifesto.html">Concepts</a>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label text-on-surface font-bold">Community</span>
+<a class="text-text-secondary hover:text-accent-blue transition-colors" href="#" target="_blank">Discord</a>
+<a class="text-text-secondary hover:text-accent-blue transition-colors" href="#" target="_blank">Forum</a>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label text-on-surface font-bold">Project</span>
+<a class="text-text-secondary hover:text-accent-blue transition-colors" href="https://github.com/thesohamdatta/aura" target="_blank">GitHub</a>
+<a class="text-text-secondary hover:text-accent-blue transition-colors" href="#" target="_blank">License</a>
+</div>
+</div>
+</footer>
+</div>
+</main>
 </div>
 <script>
-function toggleNav() {
-  var overlay = document.getElementById('nav-overlay');
-  overlay.classList.toggle('open');
-}
-</script>
+        // Micro-interaction for smooth scrolling to sections
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // Update active state in sidebar
+                    document.querySelectorAll('aside nav a').forEach(a => {
+                        a.classList.remove('text-accent-blue', 'font-semibold', 'border-r-2', 'border-accent-blue', 'bg-surface-container-low');
+                        a.classList.add('text-text-secondary');
+                    });
+                    this.classList.add('text-accent-blue', 'font-semibold', 'border-r-2', 'border-accent-blue', 'bg-surface-container-low');
+                    this.classList.remove('text-text-secondary');
+                }
+            });
+        });
 
-<main>
-  <section class="section-white">
-    <div class="docs-page">
+        // Intersection Observer to highlight sidebar on scroll
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.5
+        };
 
-      <h1>Build Your Own Aura</h1>
-      <p class="docs-intro">Everything you need to build an Aura pendant. Hardware files, firmware, and backend are all open source under MIT license.</p>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    const sidebarLink = document.querySelector(`aside nav a[href="#${id}"]`);
+                    if (sidebarLink) {
+                        document.querySelectorAll('aside nav a').forEach(a => {
+                            a.classList.remove('text-accent-blue', 'font-semibold', 'border-r-2', 'border-accent-blue', 'bg-surface-container-low');
+                            a.classList.add('text-text-secondary');
+                        });
+                        sidebarLink.classList.add('text-accent-blue', 'font-semibold', 'border-r-2', 'border-accent-blue', 'bg-surface-container-low');
+                        sidebarLink.classList.remove('text-text-secondary');
+                    }
+                }
+            });
+        }, observerOptions);
 
-      <table class="docs-table">
-        <thead>
-          <tr>
-            <th>Component</th>
-            <th>Source</th>
-            <th>Cost</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>XIAO ESP32-S3 Sense</td>
-            <td>Seeed Studio / Amazon</td>
-            <td>$15–24</td>
-          </tr>
-          <tr>
-            <td>OV2640 Camera Module</td>
-            <td>Included with XIAO Sense</td>
-            <td>—</td>
-          </tr>
-          <tr>
-            <td>MEMS Microphone</td>
-            <td>Included with XIAO Sense</td>
-            <td>—</td>
-          </tr>
-          <tr>
-            <td>150mAh LiPo × 6</td>
-            <td>Amazon</td>
-            <td>$12</td>
-          </tr>
-          <tr>
-            <td>Wires &amp; connectors</td>
-            <td>Local electronics</td>
-            <td>$5</td>
-          </tr>
-          <tr>
-            <td>3D printed case</td>
-            <td>Print yourself or online</td>
-            <td>$5–10</td>
-          </tr>
-          <tr>
-            <td>USB-C cable</td>
-            <td>Anywhere</td>
-            <td>—</td>
-          </tr>
-          <tr>
-            <td><strong>Total</strong></td>
-            <td>—</td>
-            <td><strong>~$50–70</strong></td>
-          </tr>
-        </tbody>
-      </table>
-
-      <!-- Step 1 -->
-      <section class="docs-step">
-        <h2>1. Print the Case</h2>
-        <p>STL files are in the <code>hardware/</code> directory on GitHub.</p>
-        <p>Recommended: PLA, 0.2mm layer height, 15% infill.</p>
-        <a href="https://github.com/thesohamdatta/aura/tree/main/hardware" target="_blank" rel="noopener">View STL files on GitHub →</a>
-      </section>
-
-      <!-- Step 2 -->
-      <section class="docs-step">
-        <h2>2. Flash the Firmware</h2>
-        <p>Requires Arduino IDE 2.x with ESP32 board package version 2.9.0 (exact version).</p>
-        <pre class="code-block">Board: XIAO_ESP32S3
-PSRAM: OPI PSRAM  ← required for camera
-Upload Speed: 921600</pre>
-        <a href="https://github.com/thesohamdatta/aura/tree/main/firmware" target="_blank" rel="noopener">View firmware on GitHub →</a>
-      </section>
-
-      <!-- Step 3 -->
-      <section class="docs-step">
-        <h2>3. Run the Backend</h2>
-        <p>Python 3.11+, FastAPI.</p>
-        <pre class="code-block">git clone https://github.com/thesohamdatta/aura
-cd aura/backend
-pip install -r requirements.txt
-cp .env.example .env
-# Edit .env: add your API keys
-uvicorn main:app --reload</pre>
-        <a href="https://github.com/thesohamdatta/aura/tree/main/backend" target="_blank" rel="noopener">View backend on GitHub →</a>
-      </section>
-
-      <!-- Step 4 -->
-      <section class="docs-step">
-        <h2>4. Configure API Keys</h2>
-        <pre class="code-block">DEEPGRAM_API_KEY=your_key_here
-GROQ_API_KEY=your_key_here
-OPENAI_API_KEY=your_key_here  # for GPT-4o vision
-PINECONE_API_KEY=your_key_here
-PINECONE_ENV=your_environment</pre>
-        <p>Deepgram free tier at <a href="https://console.deepgram.com" target="_blank" rel="noopener">console.deepgram.com</a>. Groq free tier at <a href="https://console.groq.com" target="_blank" rel="noopener">console.groq.com</a>.</p>
-      </section>
-
-    </div>
-  </section>
-</main>
-
-<footer class="site-footer">
-  <div class="container">
-    <a href="index.html" class="footer-logo">AURA</a>
-    <p class="footer-tagline">A student project at AIML dept, PES Modern College of Engineering, Pune.</p>
-    <ul class="footer-links">
-      <li><a href="https://github.com/thesohamdatta/aura" target="_blank" rel="noopener">GitHub</a></li>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="docs.html">Docs</a></li>
-      <li><a href="manifesto.html">Manifesto</a></li>
-    </ul>
-    <hr class="footer-divider">
-    <p class="footer-copy">© 2026 Aura. MIT License. Built in Pune, India.</p>
-  </div>
-</footer>
-
-</body>
-</html>
+        document.querySelectorAll('section[id]').forEach((section) => {
+            observer.observe(section);
+        });
+    </script>
+</body></html>

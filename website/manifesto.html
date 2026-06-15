@@ -1,107 +1,135 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Third Device Hypothesis — Aura Manifesto</title>
-  <meta name="description" content="The intellectual argument for a third category of personal device: worn, screenless, ambient AI. Against the smartphone as the primary interface.">
-  <link rel="stylesheet" href="css/global.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/nav.css">
-  <link rel="stylesheet" href="css/footer.css">
-  <link rel="stylesheet" href="css/manifesto.css">
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta name="description" content="Read the Aura Manifesto: The Third Device Hypothesis. Decoupling utility from digital distraction.">
+<title>The Dilemma — Aura Manifesto</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="js/tailwind-config.js"></script>
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/nav.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/liquid-glass.js" defer></script>
 </head>
-<body>
-
-<nav id="navbar">
-  <div class="nav-inner">
-    <a href="index.html" class="nav-logo">AURA</a>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="ai.html">AI</a></li>
-      <li><a href="docs.html">Docs</a></li>
-      <li><a href="manifesto.html" class="active">Manifesto</a></li>
-    </ul>
-    <div class="nav-cta">
-      <a href="https://github.com/thesohamdatta/aura" target="_blank" rel="noopener" class="btn-primary">Build Your Own ↗</a>
-    </div>
-    <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" onclick="toggleNav()">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</nav>
-<div class="nav-overlay" id="nav-overlay">
-  <button class="nav-overlay-close" onclick="toggleNav()" aria-label="Close menu">✕</button>
-  <ul class="nav-overlay-links">
-    <li><a href="index.html" onclick="toggleNav()">Home</a></li>
-    <li><a href="about.html" onclick="toggleNav()">About</a></li>
-    <li><a href="ai.html" onclick="toggleNav()">AI</a></li>
-    <li><a href="docs.html" onclick="toggleNav()">Docs</a></li>
-    <li><a href="manifesto.html" onclick="toggleNav()">Manifesto</a></li>
-  </ul>
-  <a href="https://github.com/thesohamdatta/aura" target="_blank" rel="noopener" class="btn-primary">Build Your Own ↗</a>
+<body class="bg-surface-container-lowest text-on-surface selection:bg-accent-blue selection:text-white">
+<!-- TopNavBar (Global Anchor) -->
+<nav id="navbar" class="fixed top-0 w-full h-[52px] z-[100] bg-surface/80 backdrop-blur-md">
+<div class="nav-inner flex justify-between items-center px-margin-base w-full max-w-[1200px] mx-auto h-full">
+<a href="index.html" class="font-hero-h1 text-section-h3 font-semibold text-on-surface">Aura</a>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-body text-label text-text-secondary hover:text-accent-blue transition-colors duration-200" href="index.html">Overview</a>
+<a class="font-body text-label text-text-secondary hover:text-accent-blue transition-colors duration-200" href="about.html">About</a>
+<a class="font-body text-label text-text-secondary hover:text-accent-blue transition-colors duration-200" href="ai.html">AI</a>
+<a class="font-body text-label text-on-surface font-semibold hover:text-accent-blue transition-colors duration-200" href="manifesto.html">Dilemma</a>
+<a class="font-body text-label text-text-secondary hover:text-accent-blue transition-colors duration-200" href="docs.html">Docs</a>
 </div>
-<script>
-function toggleNav() {
-  var overlay = document.getElementById('nav-overlay');
-  overlay.classList.toggle('open');
-}
-</script>
-
-<main>
-  <section class="section-parchment">
-    <article class="manifesto-article">
-      <span class="overline">Essay</span>
-      <h1>The Third Device Hypothesis</h1>
-      <p class="manifesto-dateline">June 2026 — Pune, India</p>
-
-      <h2>I. The Device Problem</h2>
-
-      <p>The personal computer arrived and gave us a stationary interface — powerful, precise, anchored to a desk. It extended what we could do, but it required us to go to it. The smartphone came next. It was the first device that came with us, that fit in a pocket, that was always within reach. And for two decades, we called this progress.</p>
-
-      <p>But the smartphone was never neutral. It was designed to demand attention. Every notification, every glowing rectangle, every moment of friction between a thought and its execution — these were not bugs in the system. They were the system. The interface became the cage.</p>
-
-      <p>We have been so focused on what smartphones can do that we stopped asking what they cost. The cost is not money. It is attention. Every second you spend looking at a screen is a second you are not present in the world that surrounds you.</p>
-
-      <h2>II. The Third Device</h2>
-
-      <p>There is a third category. Not stationary. Not mobile-and-demanding. Worn. Ambient. Screenless. A device that gathers context without requiring your gaze. That answers questions without requiring your hands. That listens without waiting for a command.</p>
-
-      <p>Clark and Chalmers argued in 1998 that cognition extends beyond the skull — that a notebook, a map, a person who remembers for you can all be part of a cognitive system. They called this the Extended Mind. If cognition can extend into a notebook, it can extend into a pendant. The question is what kind of extension we want.</p>
-
-      <p>Tulving's work on episodic memory shows that the human capacity for recall is associative and contextual, not indexed. We remember by reliving. An AI that captures the ambient context of a day — not as surveillance, but as a prosthesis — can become part of how we recall and reason.</p>
-
-      <h2>III. The Hypothesis</h2>
-
-      <blockquote>"The third device is not a smarter phone. It is a different kind of thing entirely. It does not ask for your eyes. It does not ask for your hands. It asks only that you speak."</blockquote>
-
-      <p>Fogg's Behaviour Model tells us that behaviour changes when motivation, ability, and a prompt converge. The smartphone prompt is a notification — it interrupts. The wearable prompt is a word — you initiate. The difference is not technical. It is relational.</p>
-
-      <p>Aura does not solve this problem. It is a prototype. The battery lasts one to two hours. The case is printed plastic. The AI is cloud-hosted and costs real money to run. We state this plainly because honesty about limitations is the only way to understand where to go next.</p>
-
-      <p>But the question it raises is real: what would it mean to carry intelligence without staring at it? What would it mean to have a device that is present without being demanding? What would change if the interface stepped back?</p>
-
-      <p class="manifesto-close">"We were not like this before."</p>
-    </article>
-  </section>
-</main>
-
-<footer class="site-footer">
-  <div class="container">
-    <a href="index.html" class="footer-logo">AURA</a>
-    <p class="footer-tagline">A student project at AIML dept, PES Modern College of Engineering, Pune.</p>
-    <ul class="footer-links">
-      <li><a href="https://github.com/thesohamdatta/aura" target="_blank" rel="noopener">GitHub</a></li>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="docs.html">Docs</a></li>
-      <li><a href="manifesto.html">Manifesto</a></li>
-    </ul>
-    <hr class="footer-divider">
-    <p class="footer-copy">© 2026 Aura. MIT License. Built in Pune, India.</p>
-  </div>
+<a href="docs.html#hardware" class="bg-accent-blue text-white px-4 py-1.5 rounded-full text-label font-medium hover:opacity-90 transition-opacity flex items-center justify-center">
+            Build Yours
+        </a>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="pt-[52px]">
+<article class="max-w-[680px] mx-auto px-margin-base py-section-v-padding md:py-[200px] flex flex-col items-center">
+<!-- Pull Quote Section -->
+<header class="w-full text-center mb-24">
+<blockquote class="text-[32px] font-semibold leading-tight tracking-tight text-on-surface max-w-[580px] mx-auto">
+                    “The smartphone was supposed to free us. It became our most demanding employer.”
+                </blockquote>
+</header>
+<!-- Prose Content -->
+<div class="w-full font-body text-body text-on-surface-variant flex flex-col gap-8">
+<p>
+                    The promise was mobility. We were told that by carrying the internet in our pockets, we would gain the freedom to work from anywhere, to learn anything, and to remain connected to everyone. For a decade, we celebrated this convergence. We mistook access for agency. 
+                </p>
+<p>
+                    Slowly, the architecture of the interface shifted. The tools that were meant to serve our intentions began to harvest our attention. Notification systems, once utility-driven, evolved into sophisticated psychological levers designed to keep the glass glowing. We transitioned from being users of software to being the biological components of a global feedback loop.
+                </p>
+<p>
+                    Today, the average person checks their device hundreds of times a day. Not because of a conscious decision, but because of a reflexive twitch. The silence between thoughts has been filled with algorithmic noise. We have lost the ability to be alone with ourselves, and in doing so, we have lost the capacity for deep, sustained focus.
+                </p>
+<p>
+                    The dilemma is not the technology itself, but the incentive structure behind it. If the primary goal of an operating system is to maximize time-on-device, then the operating system is inherently hostile to the human experience. We are living through a crisis of presence. We are physically here, but cognitively elsewhere, perpetually tethered to a digital ghost of our real lives.
+                </p>
+<p>
+                    Aura began as an inquiry into the possibility of a post-distraction era. We asked if it was possible to build a high-performance computer that respects the boundaries of the mind. We sought to decouple utility from addiction.
+                </p>
+<p>
+                    This requires more than a software patch or a "Do Not Disturb" mode. It requires a fundamental rethinking of how hardware and intelligence interface with human biology. It requires a device that understands when to speak and, more importantly, when to remain silent.
+                </p>
+<p>
+                    We believe that the next era of personal computing will be defined not by how much information we can consume, but by how much clarity we can maintain. The most powerful feature of any modern tool should be its ability to disappear when the work is done.
+                </p>
+<p>
+                    We are building Aura not as a replacement for your life, but as a silent partner to it. A device that enables you to be more human, not more digital.
+                </p>
+<!-- Closing Statement -->
+<footer class="mt-20 w-full text-center">
+<p class="italic text-on-surface opacity-80">
+                        This is not a product launch. It is a working argument.
+                    </p>
 </footer>
+</div>
+</article>
+</main>
+<!-- Footer (Global Anchor) -->
+<footer class="w-full py-section-v-padding-mobile md:py-section-v-padding bg-inverse-surface text-surface-bright">
+<div class="max-w-[1200px] mx-auto px-margin-base grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="flex flex-col gap-4">
+<div class="font-hero-h1 text-section-h3 text-surface-bright mb-6">Aura</div>
+<p class="font-body text-label text-outline-variant">© 2024 Aura Project. All rights reserved.</p>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-body text-label text-surface-bright font-semibold uppercase opacity-50">Build</h4>
+<a class="font-body text-label text-outline-variant hover:text-surface-bright transition-colors" href="docs.html#hardware">Hardware</a>
+<a class="font-body text-label text-outline-variant hover:text-surface-bright transition-colors" href="docs.html#firmware">OS</a>
+<a class="font-body text-label text-outline-variant hover:text-surface-bright transition-colors" href="docs.html#backend">SDK</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-body text-label text-surface-bright font-semibold uppercase opacity-50">Learn</h4>
+<a class="font-body text-label text-outline-variant hover:text-surface-bright transition-colors" href="ai.html">Intelligence</a>
+<a class="font-body text-label text-outline-variant hover:text-surface-bright transition-colors" href="manifesto.html">Dilemma</a>
+<a class="font-body text-label text-outline-variant hover:text-surface-bright transition-colors" href="docs.html">Specs</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-body text-label text-surface-bright font-semibold uppercase opacity-50">Community</h4>
+<a class="font-body text-label text-outline-variant hover:text-surface-bright transition-colors" href="https://github.com/thesohamdatta/aura" target="_blank">GitHub</a>
+<a class="font-body text-label text-outline-variant hover:text-surface-bright transition-colors" href="#" target="_blank">Discord</a>
+<a class="font-body text-label text-outline-variant hover:text-surface-bright transition-colors" href="#" target="_blank">Ethics</a>
+</div>
+</div>
+</footer>
+<script>
+        // Smooth scroll implementation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
 
-</body>
-</html>
+        // Simple fade-in effect on scroll for prose paragraphs
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('article p').forEach(p => {
+            p.style.opacity = '0';
+            p.style.transform = 'translateY(10px)';
+            p.style.transition = 'opacity 1s ease-out, transform 1s ease-out';
+            observer.observe(p);
+        });
+    </script>
+</body></html>

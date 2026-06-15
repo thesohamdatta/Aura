@@ -1,172 +1,83 @@
-/* =============================================================
-   nav.css — Aura Navigation Bar
-   Frosted glass sticky nav. Mobile hamburger overlay.
-   ============================================================= */
+/* nav.css */
 
-/* ── Nav bar ────────────────────────────────────────────────── */
 #navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  height: 52px;
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  background: rgba(245, 245, 247, 0.72);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-  display: flex;
-  align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 52px;
+    z-index: 100;
+    
+    /* Tonal base overlay (highly translucent light glass tint) */
+    background: rgba(255, 255, 255, 0.38) !important;
+    
+    /* Fallback blur for non-supporting browsers */
+    backdrop-filter: blur(20px) saturate(220%);
+    -webkit-backdrop-filter: blur(20px) saturate(220%);
+    
+    /* Core Refraction Filter */
+    backdrop-filter: url(#liquid-glass-refraction);
+    -webkit-backdrop-filter: url(#liquid-glass-refraction);
+    
+    /* Meniscus Simulation: Physical glass thickness bevels */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.45);
+    box-shadow: 
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.55), 
+        inset 0 -1px 0 0 rgba(0, 0, 0, 0.04), 
+        0 4px 30px rgba(0, 0, 0, 0.02);
+    
+    /* Performance optimizations */
+    transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    contain: paint;
+}
+
+/* Dynamic Specular Highlight overlay on the top hairline */
+#navbar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, 
+        rgba(255,255,255,0) 0%, 
+        rgba(255,255,255,0.7) 30%, 
+        rgba(255,255,255,0.95) 50%, 
+        rgba(255,255,255,0.7) 70%, 
+        rgba(255,255,255,0) 100%
+    );
+    background-size: 200% 100%;
+    background-position: var(--navbar-specular-pos, 50% 0);
+    transition: background-position 0.12s ease-out;
+    pointer-events: none;
+    z-index: 101;
+}
+
+/* Dark Mode Adaptation for Liquid Glass */
+html.dark #navbar {
+    background: rgba(29, 29, 31, 0.45) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.15),
+        inset 0 -1px 0 0 rgba(0, 0, 0, 0.4),
+        0 8px 32px rgba(0, 0, 0, 0.32);
+}
+
+html.dark #navbar::after {
+    background: linear-gradient(90deg, 
+        rgba(255,255,255,0) 0%, 
+        rgba(255,255,255,0.2) 30%, 
+        rgba(255,255,255,0.4) 50%, 
+        rgba(255,255,255,0.2) 70%, 
+        rgba(255,255,255,0) 100%
+    );
+    background-size: 200% 100%;
 }
 
 .nav-inner {
-  width: 100%;
-  max-width: var(--max-width);
-  margin-inline: auto;
-  padding-inline: var(--space-lg);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-lg);
+    width: 100%;
 }
 
-/* ── Logo ───────────────────────────────────────────────────── */
-.nav-logo {
-  font-family: var(--font-display);
-  font-size: 17px;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  color: var(--color-ink);
-  text-decoration: none;
-  flex-shrink: 0;
-}
-
-.nav-logo:hover {
-  text-decoration: none;
-  opacity: 0.8;
-}
-
-/* ── Center links ───────────────────────────────────────────── */
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: var(--space-lg);
-  list-style: none;
-}
-
-.nav-links a {
-  font-family: var(--font-text);
-  font-size: var(--text-caption);
-  font-weight: 400;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--color-ink-secondary);
-  text-decoration: none;
-  transition: color var(--duration-fast) var(--ease-standard);
-}
-
-.nav-links a:hover,
-.nav-links a.active {
-  color: var(--color-ink);
-  text-decoration: none;
-}
-
-/* ── Right CTA ──────────────────────────────────────────────── */
-.nav-cta {
-  flex-shrink: 0;
-}
-
-/* ── Hamburger (mobile only) ────────────────────────────────── */
-.nav-hamburger {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: var(--space-xs);
-  color: var(--color-ink);
-  flex-direction: column;
-  gap: 5px;
-}
-
-.nav-hamburger span {
-  display: block;
-  width: 22px;
-  height: 1.5px;
-  background-color: var(--color-ink);
-  border-radius: 2px;
-  transition: transform var(--duration-fast) var(--ease-standard),
-              opacity var(--duration-fast) var(--ease-standard);
-}
-
-/* ── Mobile overlay ─────────────────────────────────────────── */
-.nav-overlay {
-  display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 999;
-  background: var(--color-canvas-parchment);
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-xl);
-  transform: translateX(100%);
-  transition: transform var(--duration-base) var(--ease-standard);
-}
-
-.nav-overlay.open {
-  display: flex;
-  transform: translateX(0);
-}
-
-.nav-overlay-links {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--space-lg);
-}
-
-.nav-overlay-links a {
-  font-family: var(--font-display);
-  font-size: var(--text-display);
-  font-weight: 600;
-  letter-spacing: var(--tracking-display);
-  color: var(--color-ink);
-  text-decoration: none;
-  transition: opacity var(--duration-fast) var(--ease-standard);
-}
-
-.nav-overlay-links a:hover {
-  opacity: 0.6;
-  text-decoration: none;
-}
-
-.nav-overlay-close {
-  position: absolute;
-  top: var(--space-lg);
-  right: var(--space-lg);
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 24px;
-  color: var(--color-ink);
-  padding: var(--space-xs);
-  line-height: 1;
-}
-
-/* ── Page body offset ───────────────────────────────────────── */
+/* Ensure body has padding at top to account for fixed header */
 body {
-  padding-top: 52px;
-}
-
-/* ── Responsive ─────────────────────────────────────────────── */
-@media (max-width: 768px) {
-  .nav-links,
-  .nav-cta {
-    display: none;
-  }
-
-  .nav-hamburger {
-    display: flex;
-  }
+    padding-top: 52px;
 }

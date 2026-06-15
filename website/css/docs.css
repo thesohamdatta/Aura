@@ -1,113 +1,15 @@
-/* =============================================================
-   docs.css — Aura Docs Page Styles
-   Hacker's assembly manual. Apple-clean layout.
-   ============================================================= */
+/* docs.css */
 
-/* ── Page Container ─────────────────────────────────────────── */
-.docs-page {
-  max-width: 720px;
-  margin-inline: auto;
-  padding-block: var(--space-3xl);
-  padding-inline: var(--space-lg);
-}
+/* Core docs page typography rules to ensure no monospace on headers */
 
-/* ── Intro paragraph ────────────────────────────────────────── */
-.docs-intro {
-  font-size: var(--text-body);
-  line-height: var(--leading-loose);
-  color: var(--color-ink-secondary);
-  margin-bottom: var(--space-2xl);
-}
-
-/* ── BOM Table ──────────────────────────────────────────────── */
-.docs-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-block: var(--space-xl);
-  font-family: var(--font-text);
+.docs-sidebar .sidebar-section {
+    font-family: var(--font-text);
 }
 
 .docs-table th {
-  font-family: var(--font-text);
-  font-size: var(--text-caption);
-  text-transform: uppercase;
-  letter-spacing: var(--tracking-nav);
-  color: var(--color-ink-secondary);
-  text-align: left;
-  padding-bottom: var(--space-sm);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    font-family: var(--font-text);
 }
 
-.docs-table td {
-  padding-block: var(--space-sm);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  font-size: 15px;
-}
-
-/* ── Step Sections ──────────────────────────────────────────── */
-.docs-step {
-  margin-top: var(--space-2xl);
-  padding-top: var(--space-2xl);
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
-}
-
-.docs-step h2 {
-  font-size: var(--text-title);
-  margin-bottom: var(--space-lg);
-}
-
-.docs-step p {
-  margin-bottom: var(--space-md);
-  line-height: var(--leading-loose);
-}
-
-.docs-step a {
-  color: var(--color-action-blue);
-  display: inline-block;
-  margin-top: var(--space-md);
-  text-decoration: none;
-}
-
-.docs-step a:hover {
-  text-decoration: underline;
-}
-
-/* ── Code Blocks ────────────────────────────────────────────── */
-.code-block {
-  font-family: var(--font-mono);
-  font-size: 13px;
-  background: var(--color-canvas-parchment);
-  border-radius: var(--radius-utility);
-  padding: var(--space-lg);
-  overflow-x: auto;
-  margin-block: var(--space-md);
-  white-space: pre;
-  line-height: 1.6;
-}
-
-/* ── Inline code in step paragraphs ─────────────────────────── */
-.docs-step p code {
-  font-family: var(--font-mono);
-  font-size: 13px;
-  background: var(--color-canvas-parchment);
-  border-radius: var(--radius-utility);
-  padding: 2px 6px;
-}
-
-/* ── Responsive ─────────────────────────────────────────────── */
-@media (max-width: 600px) {
-  .docs-page {
-    padding-inline: var(--space-md);
-    padding-block: var(--space-2xl);
-  }
-
-  .docs-table td,
-  .docs-table th {
-    font-size: 13px;
-  }
-
-  .code-block {
-    font-size: 12px;
-    padding: var(--space-md);
-  }
+.mobile-docs-nav select {
+    font-family: var(--font-text);
 }
