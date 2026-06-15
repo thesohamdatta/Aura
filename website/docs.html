@@ -40,7 +40,7 @@
 <nav class="flex flex-col gap-1">
 <div class="mb-4">
 <p class="text-[11px] font-bold text-text-secondary uppercase tracking-widest mb-3 px-2">Getting Started</p>
-<a class="flex items-center gap-3 px-2 py-1.5 rounded-lg font-body text-label text-accent-blue font-semibold border-r-2 border-accent-blue bg-surface-container-low transition-transform active:translate-x-1 animate-nav-item" href="#what-is-aura">
+<a class="flex items-center gap-3 px-2 py-1.5 rounded-lg font-body text-label text-accent-blue font-semibold bg-surface-container-low transition-transform active:translate-x-1 animate-nav-item" href="#what-is-aura">
 <span class="material-symbols-outlined text-[18px]">info</span>
     What Is Aura
 </a>
@@ -642,10 +642,10 @@
                     
                     // Update active state in sidebar
                     document.querySelectorAll('aside nav a').forEach(a => {
-                        a.classList.remove('text-accent-blue', 'font-semibold', 'border-r-2', 'border-accent-blue', 'bg-surface-container-low');
+                        a.classList.remove('text-accent-blue', 'font-semibold', 'bg-surface-container-low');
                         a.classList.add('text-text-secondary');
                     });
-                    this.classList.add('text-accent-blue', 'font-semibold', 'border-r-2', 'border-accent-blue', 'bg-surface-container-low');
+                    this.classList.add('text-accent-blue', 'font-semibold', 'bg-surface-container-low');
                     this.classList.remove('text-text-secondary');
                 }
             });
@@ -665,10 +665,10 @@
                     const sidebarLink = document.querySelector(`aside nav a[href="#${id}"]`);
                     if (sidebarLink) {
                         document.querySelectorAll('aside nav a').forEach(a => {
-                            a.classList.remove('text-accent-blue', 'font-semibold', 'border-r-2', 'border-accent-blue', 'bg-surface-container-low');
+                            a.classList.remove('text-accent-blue', 'font-semibold', 'bg-surface-container-low');
                             a.classList.add('text-text-secondary');
                         });
-                        sidebarLink.classList.add('text-accent-blue', 'font-semibold', 'border-r-2', 'border-accent-blue', 'bg-surface-container-low');
+                        sidebarLink.classList.add('text-accent-blue', 'font-semibold', 'bg-surface-container-low');
                         sidebarLink.classList.remove('text-text-secondary');
                     }
                 }
