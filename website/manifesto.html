@@ -2,10 +2,11 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <meta name="description" content="Read the Aura Manifesto: The Third Device Hypothesis. Decoupling utility from digital distraction.">
+<meta name="theme-color" content="#ffffff">
 <title>The Dilemma — Aura Manifesto</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 <script src="js/tailwind-config.js"></script>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="css/global.css">
 <link rel="stylesheet" href="css/nav.css">
 <link rel="stylesheet" href="css/style.css">
@@ -17,16 +18,21 @@
 <nav id="navbar" class="fixed top-0 w-full h-[52px] z-[100] bg-surface/80 backdrop-blur-md">
 <div class="nav-inner flex justify-between items-center px-margin-base w-full max-w-[1200px] mx-auto h-full">
 <a href="index.html" class="font-hero-h1 text-section-h3 font-semibold text-on-surface">Aura</a>
-<div class="hidden md:flex gap-8 items-center">
+<div id="mobileMenu" class="hidden absolute top-[52px] left-0 w-full bg-surface/95 backdrop-blur-md border-b border-black/10 flex-col p-4 gap-4 md:static md:w-auto md:bg-transparent md:border-none md:p-0 md:flex md:flex-row md:gap-8 items-center">
 <a class="font-body text-label text-text-secondary hover:text-accent-blue transition-colors duration-200" href="index.html">Overview</a>
 <a class="font-body text-label text-text-secondary hover:text-accent-blue transition-colors duration-200" href="about.html">About</a>
 <a class="font-body text-label text-text-secondary hover:text-accent-blue transition-colors duration-200" href="ai.html">AI</a>
 <a class="font-body text-label text-on-surface font-semibold hover:text-accent-blue transition-colors duration-200" href="manifesto.html">Dilemma</a>
 <a class="font-body text-label text-text-secondary hover:text-accent-blue transition-colors duration-200" href="docs.html">Docs</a>
 </div>
+<div class="flex items-center gap-4">
 <a href="docs.html#hardware" class="bg-accent-blue text-white px-4 py-1.5 rounded-full text-label font-medium hover:opacity-90 transition-opacity flex items-center justify-center">
             Build Yours
         </a>
+<button type="button" aria-label="Toggle navigation menu" onclick="document.getElementById('mobileMenu').classList.toggle('hidden'); document.getElementById('mobileMenu').classList.toggle('flex')" class="md:hidden flex items-center text-on-surface dark:text-surface-bright">
+  <span class="material-symbols-outlined">menu</span>
+</button>
+</div>
 </div>
 </nav>
 <!-- Main Content Canvas -->
@@ -57,7 +63,7 @@
     Less distraction. More done.
 </p>
 
-<h2 class="font-hero-h1 text-[28px] md:text-[34px] font-bold tracking-tight text-on-surface mt-12 mb-2">
+<h2 class="font-section-h2 text-[28px] md:text-[34px] font-bold tracking-tight text-on-surface mt-12 mb-2">
     Social Dilemma
 </h2>
 <p>
@@ -79,11 +85,11 @@
     No freedom. No freedom. No freedom.
 </p>
 
-<h2 class="font-hero-h1 text-[28px] md:text-[34px] font-bold tracking-tight text-on-surface mt-12 mb-2">
+<h2 class="font-section-h2 text-[28px] md:text-[34px] font-bold tracking-tight text-on-surface mt-12 mb-2">
     AI Dilemma
 </h2>
 <p>
-    AI is not going to make it good or help us live better in this socially fucked up world. Instead, AI can and will change how we live, what we see, and how we perceive things — things we never needed and never wanted. The Slop. Its impact on our brain is not reversible.
+    AI is not going to make it good or help us live better in this attention-hijacked world. Instead, AI can and will change how we live, what we see, and how we perceive things — things we never needed and never wanted. The Slop. Its impact on our brain is not reversible.
 </p>
 <p>
     AI is absolutely revolutionary and can change humanity. But humans are creating AI, AI is creating AI, and AI Dominate humans. We are in the Matrix.
@@ -92,7 +98,7 @@
     Hence, we believe AI is humanity's last invention.
 </p>
 
-<h2 class="font-hero-h1 text-[28px] md:text-[34px] font-bold tracking-tight text-on-surface mt-12 mb-2">
+<h2 class="font-section-h2 text-[28px] md:text-[34px] font-bold tracking-tight text-on-surface mt-12 mb-2">
     That's Why We Need Aura
 </h2>
 <p>
@@ -110,30 +116,43 @@
 </div>
 </article>
 </main>
-<!-- Footer (Global Anchor) -->
-<footer class="w-full py-section-v-padding-mobile md:py-section-v-padding bg-inverse-surface text-surface-bright">
+<!-- Footer -->
+<footer class="bg-inverse-surface dark:bg-on-background py-section-v-padding text-surface-bright">
 <div class="max-w-[1200px] mx-auto px-margin-base grid grid-cols-1 md:grid-cols-4 gap-gutter">
-<div class="flex flex-col gap-4">
-<div class="font-hero-h1 text-section-h3 text-surface-bright mb-6">Aura</div>
-<p class="font-body text-label text-outline-variant">© 2024 Aura Project. All rights reserved.</p>
+<div>
+<div class="font-hero-h1 text-section-h3 text-surface-bright mb-4">Aura</div>
+<p class="text-outline-variant text-label">The open source wearable AI project.</p>
 </div>
-<div class="flex flex-col gap-4">
-<h4 class="font-body text-label text-surface-bright font-semibold uppercase opacity-50">Build</h4>
-<a class="font-body text-label text-outline-variant hover:text-surface-bright transition-colors" href="docs.html#hardware">Hardware</a>
-<a class="font-body text-label text-outline-variant hover:text-surface-bright transition-colors" href="docs.html#firmware">OS</a>
-<a class="font-body text-label text-outline-variant hover:text-surface-bright transition-colors" href="docs.html#backend">SDK</a>
+<div>
+<h4 class="font-label text-label font-semibold mb-4 uppercase opacity-50">Build</h4>
+<ul class="space-y-2">
+<li><a class="text-outline-variant hover:text-surface-bright transition-colors" href="docs.html#hardware">Components</a></li>
+<li><a class="text-outline-variant hover:text-surface-bright transition-colors" href="docs.html#firmware">Firmware</a></li>
+<li><a class="text-outline-variant hover:text-surface-bright transition-colors" href="docs.html#backend">Backend</a></li>
+</ul>
 </div>
-<div class="flex flex-col gap-4">
-<h4 class="font-body text-label text-surface-bright font-semibold uppercase opacity-50">Learn</h4>
-<a class="font-body text-label text-outline-variant hover:text-surface-bright transition-colors" href="ai.html">Intelligence</a>
-<a class="font-body text-label text-outline-variant hover:text-surface-bright transition-colors" href="manifesto.html">Dilemma</a>
-<a class="font-body text-label text-outline-variant hover:text-surface-bright transition-colors" href="docs.html">Specs</a>
+<div>
+<h4 class="font-label text-label font-semibold mb-4 uppercase opacity-50">Learn</h4>
+<ul class="space-y-2">
+<li><a class="text-outline-variant hover:text-surface-bright transition-colors" href="docs.html">Documentation</a></li>
+<li><a class="text-outline-variant hover:text-surface-bright transition-colors" href="docs.html">Guides</a></li>
+<li><a class="text-outline-variant hover:text-surface-bright transition-colors" href="manifesto.html">Philosophy</a></li>
+</ul>
 </div>
-<div class="flex flex-col gap-4">
-<h4 class="font-body text-label text-surface-bright font-semibold uppercase opacity-50">Community</h4>
-<a class="font-body text-label text-outline-variant hover:text-surface-bright transition-colors" href="https://github.com/thesohamdatta/aura" target="_blank">GitHub</a>
-<a class="font-body text-label text-outline-variant hover:text-surface-bright transition-colors" href="#" target="_blank">Discord</a>
-<a class="font-body text-label text-outline-variant hover:text-surface-bright transition-colors" href="#" target="_blank">Ethics</a>
+<div>
+<h4 class="font-label text-label font-semibold mb-4 uppercase opacity-50">Community</h4>
+<ul class="space-y-2">
+<li><a class="text-outline-variant hover:text-surface-bright transition-colors" href="https://github.com/thesohamdatta/aura" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+<li><a class="text-outline-variant hover:text-surface-bright transition-colors" aria-disabled="true" tabindex="-1" href="#">Discord</a></li>
+<li><a class="text-outline-variant hover:text-surface-bright transition-colors" aria-disabled="true" tabindex="-1" href="#">Twitter</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-[1200px] mx-auto px-margin-base mt-20 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between text-label text-outline-variant">
+<p>&copy; 2026 Aura Project. MIT Licensed.</p>
+<div class="flex gap-6 mt-4 md:mt-0">
+<a class="hover:text-surface-bright" aria-disabled="true" tabindex="-1" href="#">Privacy</a>
+<a class="hover:text-surface-bright" target="_blank" href="https://github.com/thesohamdatta/aura" rel="noopener noreferrer">GitHub</a>
 </div>
 </div>
 </footer>
@@ -153,20 +172,27 @@
             threshold: 0.1
         };
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
+        if (!('IntersectionObserver' in window)) {
+            document.querySelectorAll('article p').forEach(p => {
+                p.style.opacity = '1';
+                p.style.transform = 'translateY(0)';
             });
-        }, observerOptions);
+        } else {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
 
-        document.querySelectorAll('article p').forEach(p => {
-            p.style.opacity = '0';
-            p.style.transform = 'translateY(10px)';
-            p.style.transition = 'opacity 1s ease-out, transform 1s ease-out';
-            observer.observe(p);
-        });
+            document.querySelectorAll('article p').forEach(p => {
+                p.style.opacity = '0';
+                p.style.transform = 'translateY(10px)';
+                p.style.transition = 'opacity 1s ease-out, transform 1s ease-out';
+                observer.observe(p);
+            });
+        }
     </script>
 </body></html>

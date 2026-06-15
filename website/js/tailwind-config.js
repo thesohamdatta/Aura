@@ -45,21 +45,36 @@ tailwind.config = {
                 "surface-container": "#f0edef",
                 "secondary": "#5d5e60",
                 "primary": "#5d5f5f",
-                "accent-blue": "#0066cc",
                 "on-secondary-fixed": "#1a1c1d",
                 "on-primary-fixed-variant": "#454747",
-                "text-secondary": "#6e6e73",
                 "on-secondary-container": "#616365",
                 "on-secondary": "#ffffff",
                 "on-primary": "#ffffff",
+                "outline-variant": "#c4c7c8",
+                /* ── Apple Design System Tokens ── */
+                "accent-blue":   "#0066cc",   /* Action Blue — universal interactive */
+                "focus-blue":    "#0071e3",   /* Focus rings */
+                "sky-blue":      "#2997ff",   /* In-copy links on dark surfaces */
+                "canvas-white":  "#ffffff",
+                "canvas-parchment": "#f5f5f7",
+                "canvas-dark":   "#272729",   /* Apple Near-Black Tile */
+                "canvas-black":  "#000000",
+                "canvas-pearl":  "#fafafc",   /* Ghost button bg */
+                "ink":           "#1d1d1f",   /* Body text on light */
+                "ink-secondary": "#6e6e73",  /* Captions, meta */
+                "ink-tertiary":  "#86868b",  /* Eyebrows, overlines */
+                /* legacy aliases kept for backward compat */
                 "bg-parchment": "#f5f5f7",
-                "outline-variant": "#c4c7c8"
+                "text-secondary": "#6e6e73"
             },
             "borderRadius": {
                 "DEFAULT": "0.25rem",
                 "lg": "0.5rem",
                 "xl": "0.75rem",
-                "full": "9999px"
+                "full": "9999px",
+                "utility": "8px",    /* Secondary buttons, thumbnail images */
+                "card": "18px",      /* Grid cards, spec tables */
+                "tile": "0px"        /* Full-bleed alternating tiles */
             },
             "spacing": {
                 "section-v-padding-mobile": "80px",
@@ -70,14 +85,17 @@ tailwind.config = {
                 "section-v-padding": "140px"
             },
             "fontFamily": {
-                "hero-h1": ["Inter"],
-                "overline": ["Inter"],
-                "section-h2": ["Inter"],
-                "section-h3": ["Inter"],
-                "body": ["Inter"],
-                "label": ["Inter"],
-                "hero-h1-mobile": ["Inter"],
-                "section-h2-mobile": ["Inter"]
+                "display": ["'SF Pro Display'", "Inter", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica", "Arial", "sans-serif"],
+                "body":    ["'SF Pro Text'",    "Inter", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica", "Arial", "sans-serif"],
+                "mono":    ["SFMono-Regular", "Consolas", "Monaco", "monospace"],
+                /* legacy aliases — keep for backward compat */
+                "hero-h1": ["'SF Pro Display'", "Inter"],
+                "overline": ["'SF Pro Text'", "Inter"],
+                "section-h2": ["'SF Pro Display'", "Inter"],
+                "section-h3": ["'SF Pro Display'", "Inter"],
+                "label": ["'SF Pro Text'", "Inter"],
+                "hero-h1-mobile": ["'SF Pro Display'", "Inter"],
+                "section-h2-mobile": ["'SF Pro Display'", "Inter"]
             },
             "fontSize": {
                 "hero-h1": ["80px", { "lineHeight": "1.1", "letterSpacing": "-0.028em", "fontWeight": "600" }],

@@ -36,7 +36,12 @@ document.addEventListener('DOMContentLoaded', () => {
     'language': `<svg class="sf-symbol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width: 1.1em; height: 1.1em; display: inline-block; vertical-align: middle;"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>`,
     'mail': `<svg class="sf-symbol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width: 1.1em; height: 1.1em; display: inline-block; vertical-align: middle;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>`,
     'account_tree': `<svg class="sf-symbol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width: 1.1em; height: 1.1em; display: inline-block; vertical-align: middle;"><rect x="9" y="17" width="6" height="5" rx="1"></rect><rect x="9" y="2" width="6" height="5" rx="1"></rect><rect x="1" y="9" width="6" height="5" rx="1"></rect><rect x="17" y="9" width="6" height="5" rx="1"></rect><path d="M12 7v10M4 11.5v-2.5h16v2.5"></path></svg>`,
-    'lock_reset': `<svg class="sf-symbol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width: 1.1em; height: 1.1em; display: inline-block; vertical-align: middle;"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path><rect x="9" y="12" width="6" height="5" rx="1"></rect><path d="M10 12V10a2 2 0 1 1 4 0v2"></path></svg>`
+    'lock_reset': `<svg class="sf-symbol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width: 1.1em; height: 1.1em; display: inline-block; vertical-align: middle;"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path><rect x="9" y="12" width="6" height="5" rx="1"></rect><path d="M10 12V10a2 2 0 1 1 4 0v2"></path></svg>`,
+    'system_update': `<svg class="sf-symbol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width: 1.1em; height: 1.1em; display: inline-block; vertical-align: middle;"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="7" x2="12" y2="14"></line><polyline points="9 11 12 14 15 11"></polyline><line x1="9" y1="18" x2="15" y2="18"></line></svg>`,
+    'neurology': `<svg class="sf-symbol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width: 1.1em; height: 1.1em; display: inline-block; vertical-align: middle;"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"></path><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"></path><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"></path><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"></path><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path><path d="M3.477 10.896a4 4 0 0 1 .585-.396"></path><path d="M19.938 10.5a4 4 0 0 1 .585.396"></path><path d="M6 18a4 4 0 0 1-1.967-.516"></path><path d="M19.967 17.484A4 4 0 0 1 18 18"></path></svg>`,
+    'schema': `<svg class="sf-symbol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width: 1.1em; height: 1.1em; display: inline-block; vertical-align: middle;"><path d="M3 3h6v6H3zM15 3h6v6h-6zM9 6h6M12 6v3M12 15v6M9 18h6"></path><rect x="9" y="12" width="6" height="6" rx="1"></rect></svg>`,
+    'code': `<svg class="sf-symbol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width: 1.1em; height: 1.1em; display: inline-block; vertical-align: middle;"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>`,
+    'menu': `<svg class="sf-symbol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width: 1.1em; height: 1.1em; display: inline-block; vertical-align: middle;"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>`
   };
 
   // Find all Material Icon placeholders
@@ -64,5 +69,11 @@ document.addEventListener('DOMContentLoaded', () => {
       wrapper.innerHTML = symbolMap[iconName];
       span.parentNode.replaceChild(wrapper, span);
     }
+  });
+
+  // Catch-all: hide any remaining material-symbols-outlined spans that were NOT
+  // replaced (their icon name had no mapping). Prevents raw text fallback.
+  document.querySelectorAll('.material-symbols-outlined').forEach(span => {
+    span.style.display = 'none';
   });
 });

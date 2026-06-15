@@ -2,10 +2,11 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <meta name="description" content="Learn about the founders, values, and build process behind the open-source Aura wearable pendant.">
+<meta name="theme-color" content="#ffffff">
 <title>About Aura | Open Source Intelligence</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 <script src="js/tailwind-config.js"></script>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="css/global.css">
 <link rel="stylesheet" href="css/nav.css">
 <link rel="stylesheet" href="css/style.css">
@@ -17,20 +18,25 @@
 <nav id="navbar" class="fixed top-0 w-full h-[52px] z-[100] bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md">
 <div class="nav-inner flex justify-between items-center px-margin-base w-full max-w-[1200px] mx-auto h-full">
 <a href="index.html" class="font-hero-h1 text-section-h3 font-semibold text-on-surface dark:text-surface-bright">Aura</a>
-<div class="hidden md:flex gap-8 items-center">
+<div id="mobileMenu" class="hidden absolute top-[52px] left-0 w-full bg-surface/95 backdrop-blur-md border-b border-black/10 flex-col p-4 gap-4 md:static md:w-auto md:bg-transparent md:border-none md:p-0 md:flex md:flex-row md:gap-8 items-center">
 <a class="text-text-secondary dark:text-on-surface-variant font-body text-label hover:text-accent-blue transition-colors duration-200" href="index.html">Overview</a>
 <a class="text-on-surface dark:text-surface-bright font-semibold font-body text-label hover:text-accent-blue transition-colors duration-200" href="about.html">About</a>
 <a class="text-text-secondary dark:text-on-surface-variant font-body text-label hover:text-accent-blue transition-colors duration-200" href="ai.html">AI</a>
 <a class="text-text-secondary dark:text-on-surface-variant font-body text-label hover:text-accent-blue transition-colors duration-200" href="manifesto.html">Dilemma</a>
 <a class="text-text-secondary dark:text-on-surface-variant font-body text-label hover:text-accent-blue transition-colors duration-200" href="docs.html">Docs</a>
+</div>
+<div class="flex items-center gap-4">
 <a href="docs.html#hardware" class="bg-accent-blue text-white px-4 py-1.5 rounded-full text-label font-medium hover:opacity-80 transition-opacity flex items-center justify-center">Build Yours</a>
+<button type="button" aria-label="Toggle navigation menu" onclick="document.getElementById('mobileMenu').classList.toggle('hidden'); document.getElementById('mobileMenu').classList.toggle('flex')" class="md:hidden flex items-center text-on-surface">
+  <span class="material-symbols-outlined">menu</span>
+</button>
 </div>
 </div>
 </nav>
 <!-- Hero Section -->
 <section class="relative h-screen min-h-[600px] w-full bg-black overflow-hidden">
 <div class="absolute inset-0 z-0">
-<img class="w-full h-full object-cover opacity-80" data-alt="A clean, high-end electronics workshop desk illuminated by soft natural light. The workspace is meticulously organized with high-precision tools, soldering stations, and intricate circuit board prototypes scattered across a wooden surface. The mood is focused and innovative, capturing a moment of engineering excellence in a minimalist, light-filled studio. Soft shadows and warm tones create a premium, corporate aesthetic characteristic of a top-tier technology research laboratory." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTPd7tgSX0RK3C9Ykx_L0IRmskLWYiBxPGn75oxUW5d3Bhve6fbBdMhApRGXJh5tBIx7bwWeg3KLACkKPEJ_G22FdsvEBlx98OWbBaaRbFgSdi2XWUoNZq82UIAFNeal2YNhWJvCUXMJU5ycUCVRXRBph6QTkbwROYMmZrGoZERrwBNJN7kd4MzafAaYE2n8VVMBe1aRb5aKFoAQ5GFp4qSFib58l0H1dhOye5u5aLikD26LYt8GZ7OBybFUDtNV9HeNdmXvL6QcQ">
+<img class="w-full h-full object-cover opacity-80" alt="A clean, high-end electronics workshop desk illuminated by soft natural light. The workspace is meticulously organized with high-precision tools, soldering stations, and intricate circuit board prototypes scattered across a wooden surface. The mood is focused and innovative, capturing a moment of engineering excellence in a minimalist, light-filled studio. Soft shadows and warm tones create a premium, corporate aesthetic characteristic of a top-tier technology research laboratory." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTPd7tgSX0RK3C9Ykx_L0IRmskLWYiBxPGn75oxUW5d3Bhve6fbBdMhApRGXJh5tBIx7bwWeg3KLACkKPEJ_G22FdsvEBlx98OWbBaaRbFgSdi2XWUoNZq82UIAFNeal2YNhWJvCUXMJU5ycUCVRXRBph6QTkbwROYMmZrGoZERrwBNJN7kd4MzafAaYE2n8VVMBe1aRb5aKFoAQ5GFp4qSFib58l0H1dhOye5u5aLikD26LYt8GZ7OBybFUDtNV9HeNdmXvL6QcQ">
 </div>
 <div class="relative z-10 h-full max-w-[1200px] mx-auto px-margin-base flex flex-col justify-end pb-section-v-padding">
 <div class="max-w-prose-max-width">
@@ -47,21 +53,45 @@
 <section class="bg-surface py-section-v-padding-mobile md:py-section-v-padding">
 <div class="max-w-[1200px] mx-auto px-margin-base">
 <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-<div class="flex flex-col items-center text-center p-8 bg-surface-container-lowest rounded-[18px]">
-<span class="material-symbols-outlined text-[48px] text-accent-blue mb-6">account_tree</span>
-<h3 class="font-section-h3 text-section-h3 text-on-surface mb-2">Open Hardware</h3>
-<p class="text-text-secondary font-body">Complete schematic transparency for a community-driven future.</p>
-</div>
-<div class="flex flex-col items-center text-center p-8 bg-surface-container-lowest rounded-[18px]">
-<span class="material-symbols-outlined text-[48px] text-accent-blue mb-6">security</span>
-<h3 class="font-section-h3 text-section-h3 text-on-surface mb-2">Privacy First</h3>
-<p class="text-text-secondary font-body">Local processing ensures your data never leaves your physical orbit.</p>
-</div>
-<div class="flex flex-col items-center text-center p-8 bg-surface-container-lowest rounded-[18px]">
-<span class="material-symbols-outlined text-[48px] text-accent-blue mb-6">lock_reset</span>
-<h3 class="font-section-h3 text-section-h3 text-on-surface mb-2">No Subscriptions</h3>
-<p class="text-text-secondary font-body">Owned by you. No recurring fees, no data harvesting, no barriers.</p>
-</div>
+  <!-- Card 1: Open Hardware -->
+  <div class="flex flex-col justify-between p-8 bg-surface-container-lowest rounded-[28px] min-h-[320px] transition-all hover:scale-[1.01]">
+    <div>
+      <span class="material-symbols-outlined text-accent-blue text-3xl mb-6 block">account_tree</span>
+      <h3 class="font-section-h3 text-section-h3 text-on-surface mb-3 font-semibold tracking-tight">Open Hardware. Built for all.</h3>
+      <p class="text-text-secondary font-body leading-relaxed text-sm">Complete schematic transparency for a community-driven future. Inspect, modify, and build with total freedom.</p>
+    </div>
+    <div class="mt-6">
+      <a class="text-accent-blue hover:underline font-semibold text-sm flex items-center gap-1 group" href="docs.html#hardware">
+        Learn about schematics <span class="material-symbols-outlined text-xs transition-transform group-hover:translate-x-0.5">chevron_right</span>
+      </a>
+    </div>
+  </div>
+  <!-- Card 2: Privacy First -->
+  <div class="flex flex-col justify-between p-8 bg-surface-container-lowest rounded-[28px] min-h-[320px] transition-all hover:scale-[1.01]">
+    <div>
+      <span class="material-symbols-outlined text-accent-blue text-3xl mb-6 block">security</span>
+      <h3 class="font-section-h3 text-section-h3 text-on-surface mb-3 font-semibold tracking-tight">Privacy. That's Aura.</h3>
+      <p class="text-text-secondary font-body leading-relaxed text-sm">Local processing ensures your voice and contextual data never leave your physical orbit. Zero cloud tracking.</p>
+    </div>
+    <div class="mt-6">
+      <a class="text-accent-blue hover:underline font-semibold text-sm flex items-center gap-1 group" href="manifesto.html">
+        Learn about privacy <span class="material-symbols-outlined text-xs transition-transform group-hover:translate-x-0.5">chevron_right</span>
+      </a>
+    </div>
+  </div>
+  <!-- Card 3: No Subscriptions -->
+  <div class="flex flex-col justify-between p-8 bg-surface-container-lowest rounded-[28px] min-h-[320px] transition-all hover:scale-[1.01]">
+    <div>
+      <span class="material-symbols-outlined text-accent-blue text-3xl mb-6 block">lock_reset</span>
+      <h3 class="font-section-h3 text-section-h3 text-on-surface mb-3 font-semibold tracking-tight">No Subscriptions. Ever.</h3>
+      <p class="text-text-secondary font-body leading-relaxed text-sm">Owned entirely by you. No recurring fees, no data harvesting gates, no software locks. Free forever.</p>
+    </div>
+    <div class="mt-6">
+      <a class="text-accent-blue hover:underline font-semibold text-sm flex items-center gap-1 group" href="docs.html#bom">
+        View assembly costs <span class="material-symbols-outlined text-xs transition-transform group-hover:translate-x-0.5">chevron_right</span>
+      </a>
+    </div>
+  </div>
 </div>
 </div>
 </section>
@@ -78,7 +108,7 @@
 <!-- Team Member 1 -->
 <div class="bg-surface-container-lowest p-6 rounded-[18px] text-center">
 <div class="w-full aspect-square bg-surface-container rounded-lg mb-6 overflow-hidden">
-<img class="w-full h-full object-cover" data-alt="A professional, minimalist headshot of a young male software engineer in a bright, modern studio. He is wearing a clean charcoal t-shirt against a light parchment-colored background. The lighting is soft and directional, emphasizing a thoughtful yet determined expression. The overall style is high-end corporate minimalist, maintaining a warm and approachable aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA85MZ7o9Xl3o2bOSK6nIhftCsy8k32xEYLGMmzTjvwfyvy9rZiA0k3VKqAg3Ay9PKgGTNJIeVEyTed3W4MU69cnyCxDvgo9aDjZqE9M_K2-EF3NustVWOL8VAlWrEj_C-H-YrbZGmBU_34b47wKOat-84Q24sh1LDg5-8BN9OirWZ7V2slMLDiUeqKNh_xtZVHrkSYS_FOE9zrdU7u0-EHYYPsDUabLMutX0vNLl0GwfjglvqkB-TILDAVG1fnCk1KkykcRUFuguo">
+<img class="w-full h-full object-cover" alt="A professional, minimalist headshot of a young male software engineer in a bright, modern studio. He is wearing a clean charcoal t-shirt against a light parchment-colored background. The lighting is soft and directional, emphasizing a thoughtful yet determined expression. The overall style is high-end corporate minimalist, maintaining a warm and approachable aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA85MZ7o9Xl3o2bOSK6nIhftCsy8k32xEYLGMmzTjvwfyvy9rZiA0k3VKqAg3Ay9PKgGTNJIeVEyTed3W4MU69cnyCxDvgo9aDjZqE9M_K2-EF3NustVWOL8VAlWrEj_C-H-YrbZGmBU_34b47wKOat-84Q24sh1LDg5-8BN9OirWZ7V2slMLDiUeqKNh_xtZVHrkSYS_FOE9zrdU7u0-EHYYPsDUabLMutX0vNLl0GwfjglvqkB-TILDAVG1fnCk1KkykcRUFuguo">
 </div>
 <h4 class="font-section-h3 text-[20px] text-on-surface font-semibold">Julian Chen</h4>
 <p class="text-accent-blue font-label mt-1">Embedded Systems</p>
@@ -86,7 +116,7 @@
 <!-- Team Member 2 -->
 <div class="bg-surface-container-lowest p-6 rounded-[18px] text-center">
 <div class="w-full aspect-square bg-surface-container rounded-lg mb-6 overflow-hidden">
-<img class="w-full h-full object-cover" data-alt="A high-key portrait of a young female industrial designer in a modern, white-walled creative space. She is looking slightly off-camera with a confident smile. The scene is illuminated by crisp daylight, creating a clean and professional aesthetic. Her attire is simple and high-quality, fitting the minimalist brand identity of a premium tech startup." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEAPCiGdfNas-WUNDA7zL94eDpJq5cvtUqPI_ETlNcHwkQFzSRNKpvC0_kXUzxzMZiwbNVt0UaMGND7EzxVsxbmtscfRCASndDwq3HJLq7tvfGzm1hce3g6K3sWBm5ZKKsVP-8YNCAI084i41WsOSbNHB3C4OI3HfHgxXVv5nJAmNDeX3MKs1IJnL0b0i1wtoN_25mjyBmlN69Ir4DEUrJGEZBCj_W5J9W9z9Pxct4fcfHyDlGNIOYzhfegnmFY4TIZgjigilurQg">
+<img class="w-full h-full object-cover" alt="A high-key portrait of a young female industrial designer in a modern, white-walled creative space. She is looking slightly off-camera with a confident smile. The scene is illuminated by crisp daylight, creating a clean and professional aesthetic. Her attire is simple and high-quality, fitting the minimalist brand identity of a premium tech startup." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEAPCiGdfNas-WUNDA7zL94eDpJq5cvtUqPI_ETlNcHwkQFzSRNKpvC0_kXUzxzMZiwbNVt0UaMGND7EzxVsxbmtscfRCASndDwq3HJLq7tvfGzm1hce3g6K3sWBm5ZKKsVP-8YNCAI084i41WsOSbNHB3C4OI3HfHgxXVv5nJAmNDeX3MKs1IJnL0b0i1wtoN_25mjyBmlN69Ir4DEUrJGEZBCj_W5J9W9z9Pxct4fcfHyDlGNIOYzhfegnmFY4TIZgjigilurQg">
 </div>
 <h4 class="font-section-h3 text-[20px] text-on-surface font-semibold">Maya Rodriguez</h4>
 <p class="text-accent-blue font-label mt-1">Product Design</p>
@@ -94,7 +124,7 @@
 <!-- Team Member 3 -->
 <div class="bg-surface-container-lowest p-6 rounded-[18px] text-center">
 <div class="w-full aspect-square bg-surface-container rounded-lg mb-6 overflow-hidden">
-<img class="w-full h-full object-cover" data-alt="Portrait of a young male AI researcher in a minimalist architectural setting. He has a calm and focused demeanor, positioned against a background of soft grey and white surfaces. The lighting is soft and flat, characteristic of premium hardware product photography. The composition is balanced and elegant, reflecting technical sophistication and openness." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbfrTPV2ywQOi9PZ23DVnX4xBTvNmx-SWpsZP3BwX6ofspyKnFm9bXHVuKSIDJt3wSxIgJGwOEMZq79eSfsrIDnJIyQHSLikcMFvUZcn_Sop5i7zZREK_uB_wEny9zMoQ6IyBssSBnZ9Gr3fgNwxMAMRH9_z2q1sumj3I4Wj0gcVMe-gLuf47KUc7BKrmPp-Gq3wZwjYT0Cwmnj9G_ackVI8BWMM2WDFD1COARu342g-dfAcH0WYCJWXExD6Dz0bOiaCY-s1amf50">
+<img class="w-full h-full object-cover" alt="Portrait of a young male AI researcher in a minimalist architectural setting. He has a calm and focused demeanor, positioned against a background of soft grey and white surfaces. The lighting is soft and flat, characteristic of premium hardware product photography. The composition is balanced and elegant, reflecting technical sophistication and openness." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbfrTPV2ywQOi9PZ23DVnX4xBTvNmx-SWpsZP3BwX6ofspyKnFm9bXHVuKSIDJt3wSxIgJGwOEMZq79eSfsrIDnJIyQHSLikcMFvUZcn_Sop5i7zZREK_uB_wEny9zMoQ6IyBssSBnZ9Gr3fgNwxMAMRH9_z2q1sumj3I4Wj0gcVMe-gLuf47KUc7BKrmPp-Gq3wZwjYT0Cwmnj9G_ackVI8BWMM2WDFD1COARu342g-dfAcH0WYCJWXExD6Dz0bOiaCY-s1amf50">
 </div>
 <h4 class="font-section-h3 text-[20px] text-on-surface font-semibold">Leo Tanaka</h4>
 <p class="text-accent-blue font-label mt-1">AI Architecture</p>
@@ -102,7 +132,7 @@
 <!-- Team Member 4 -->
 <div class="bg-surface-container-lowest p-6 rounded-[18px] text-center">
 <div class="w-full aspect-square bg-surface-container rounded-lg mb-6 overflow-hidden">
-<img class="w-full h-full object-cover" data-alt="A clean, minimalist portrait of a female operations lead in a bright tech office environment. She is smiling naturally, dressed in professional yet casual attire. The background is softly out of focus, showing glimpses of a high-end corporate workspace with glass and wood textures. The lighting is warm and inviting, aligning with the brand's sophisticated and open personality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAElc_YFOH2SkHu1oCW4G4tzA-LDvPFrdDzKYFIXx2A-6WidJYi_NQfOse2EdJPljPGQg5tznwJ21On_Td1wV_bI0zPJhtzbG7hhbSE9KHsNrgtn5fCrz-F8f8eNMCHm2qhRdB5Bq65h0ouhZqrG_Cip-ywnrLcPRlYwb73ho0xo7rSTZV80_1P6zOiSl8sd4Gw5KONOHI8awkvFEnRYGM0DOUYwIDBlQjkuJ8AuO7lJl2aRiHSEt7Eh25QMDfi_FS4o9SpFV9NfIE">
+<img class="w-full h-full object-cover" alt="A clean, minimalist portrait of a female operations lead in a bright tech office environment. She is smiling naturally, dressed in professional yet casual attire. The background is softly out of focus, showing glimpses of a high-end corporate workspace with glass and wood textures. The lighting is warm and inviting, aligning with the brand's sophisticated and open personality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAElc_YFOH2SkHu1oCW4G4tzA-LDvPFrdDzKYFIXx2A-6WidJYi_NQfOse2EdJPljPGQg5tznwJ21On_Td1wV_bI0zPJhtzbG7hhbSE9KHsNrgtn5fCrz-F8f8eNMCHm2qhRdB5Bq65h0ouhZqrG_Cip-ywnrLcPRlYwb73ho0xo7rSTZV80_1P6zOiSl8sd4Gw5KONOHI8awkvFEnRYGM0DOUYwIDBlQjkuJ8AuO7lJl2aRiHSEt7Eh25QMDfi_FS4o9SpFV9NfIE">
 </div>
 <h4 class="font-section-h3 text-[20px] text-on-surface font-semibold">Sarah Jenkins</h4>
 <p class="text-accent-blue font-label mt-1">Community Ops</p>
@@ -113,29 +143,29 @@
 <!-- Build Gallery (White Bento) -->
 <section class="bg-surface py-section-v-padding-mobile md:py-section-v-padding">
 <div class="max-w-[1200px] mx-auto px-margin-base">
-<h2 class="font-section-h2 text-section-h2-mobile md:text-section-h2 text-on-surface mb-16">The Build Process</h2>
+<h2 class="font-section-h2 text-section-h2-mobile md:text-section-h2 text-on-surface mb-16">The Build Process.</h2>
 <div class="bento-grid font-body text-label text-text-secondary">
 <!-- CAD Drawing -->
 <div class="col-span-12 md:col-span-7 h-[400px] rounded-[18px] overflow-hidden bg-bg-parchment relative group">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A high-resolution 3D CAD rendering of a complex mechanical assembly on a clean white background. The drawing shows intricate technical details with precision lines and subtle shading. The style is strictly minimalist and professional, suggesting advanced engineering and meticulous attention to detail. The palette is composed of cool greys and clean whites, reflecting a high-end hardware development process." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdBmvhvGVCpGmw5LdTVhqjSHeHdmX9Hxd8qNNv_eYfxxUAYwtmeNkWd4RkhRPDkEFA9eshnrzVoDKkYPUCR-W3rJXJ51JRl5ybrw3gBKaAzDUB7WXuz1ir1mm1BGGd7-mgyvfoRZ37F9UXOTxUcJxTdVseVFfdJWJ-8r_Vrhssg5i-ohn_AzghO5qh-GxRijtXW9x5I2PC8SYmurck8E2hw_JbB9ukHZP9ZItkA7_eBRYm_QoSJddLR0CSnoDOkcFaIgjsLy3ZGbI">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="A high-resolution 3D CAD rendering of a complex mechanical assembly on a clean white background. The drawing shows intricate technical details with precision lines and subtle shading. The style is strictly minimalist and professional, suggesting advanced engineering and meticulous attention to detail. The palette is composed of cool greys and clean whites, reflecting a high-end hardware development process." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdBmvhvGVCpGmw5LdTVhqjSHeHdmX9Hxd8qNNv_eYfxxUAYwtmeNkWd4RkhRPDkEFA9eshnrzVoDKkYPUCR-W3rJXJ51JRl5ybrw3gBKaAzDUB7WXuz1ir1mm1BGGd7-mgyvfoRZ37F9UXOTxUcJxTdVseVFfdJWJ-8r_Vrhssg5i-ohn_AzghO5qh-GxRijtXW9x5I2PC8SYmurck8E2hw_JbB9ukHZP9ZItkA7_eBRYm_QoSJddLR0CSnoDOkcFaIgjsLy3ZGbI">
 <div class="absolute bottom-6 left-6 text-on-surface font-label bg-surface/90 px-3 py-1 rounded-full">CAD Optimization</div>
 </div>
 <!-- ESP32 Board -->
 <div class="col-span-12 md:col-span-5 h-[400px] rounded-[18px] overflow-hidden bg-bg-parchment relative group">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A macro photograph of a custom ESP32 microcontroller board resting on a clean, light surface. The circuit board is detailed with gold-plated contacts and precisely placed surface-mount components. The lighting is professional and soft, highlighting the craftsmanship of the hardware. The color palette is minimal, focusing on the dark green of the PCB and the metallic accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1ie1oErnt6iof-92ogR-3VLPYrml-8TABumUuQcxr-NQGUjzVfk4EMMFFrQml46aHMt3J4fdnScKxLz9GM7IF0bjF1_EqHqQ1geZ8Lk-HjWxUYNbomA3prc3cNm7JTKEw91xCybcRZzGvG2Pr9zy0MkKPOWxm8AM4uJ6rlO21ixb51pDisaDvtpqDnwwp0FXKIgRV61TArn1uYdnGgGSAT7HLqJOBETSP6nkMabkLJvUnGZk_eIOJffeN7upbJ-s7JGGb9asVBng">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="A macro photograph of a custom ESP32 microcontroller board resting on a clean, light surface. The circuit board is detailed with gold-plated contacts and precisely placed surface-mount components. The lighting is professional and soft, highlighting the craftsmanship of the hardware. The color palette is minimal, focusing on the dark green of the PCB and the metallic accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1ie1oErnt6iof-92ogR-3VLPYrml-8TABumUuQcxr-NQGUjzVfk4EMMFFrQml46aHMt3J4fdnScKxLz9GM7IF0bjF1_EqHqQ1geZ8Lk-HjWxUYNbomA3prc3cNm7JTKEw91xCybcRZzGvG2Pr9zy0MkKPOWxm8AM4uJ6rlO21ixb51pDisaDvtpqDnwwp0FXKIgRV61TArn1uYdnGgGSAT7HLqJOBETSP6nkMabkLJvUnGZk_eIOJffeN7upbJ-s7JGGb9asVBng">
 <div class="absolute bottom-6 left-6 text-on-surface font-label bg-surface/90 px-3 py-1 rounded-full">Core Processing</div>
 </div>
 <!-- Prototype Assembly -->
 <div class="col-span-12 md:col-span-4 h-[300px] rounded-[18px] overflow-hidden bg-bg-parchment relative group">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Close-up of hands assembling a sophisticated hardware prototype in a clean, bright laboratory. The scene shows precision assembly with small components and delicate wiring. The mood is one of focused technical work, with high-key lighting and a minimalist workspace background. The overall aesthetic is professional, corporate, and emphasizes the human touch in high-tech manufacturing." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6VvJG3PaCf5K6TbshAwWxtHP79OCwXapJh_yJp5iCaRjd7Ib2fBi2nghjmSWJx2AACCf0ErF7KNFFkqRYXNfWdOYYDz5drQVCrgkS3CPPPbnVNaeX4zPyLLndBU56PGSfq-PtO9avtFvMYxhdIuD46jofI_wmpPj-JsfunwSb2VYAoOdOtmcDLb84x-smFfoz8KgAYzght8qKYO4WGpcptGWXM1OXWQGKibqqo1k4DvZ3IhhoGp2UXF7pcRSEOtDnPdLTghcKry0">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Close-up of hands assembling a sophisticated hardware prototype in a clean, bright laboratory. The scene shows precision assembly with small components and delicate wiring. The mood is one of focused technical work, with high-key lighting and a minimalist workspace background. The overall aesthetic is professional, corporate, and emphasizes the human touch in high-tech manufacturing." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6VvJG3PaCf5K6TbshAwWxtHP79OCwXapJh_yJp5iCaRjd7Ib2fBi2nghjmSWJx2AACCf0ErF7KNFFkqRYXNfWdOYYDz5drQVCrgkS3CPPPbnVNaeX4zPyLLndBU56PGSfq-PtO9avtFvMYxhdIuD46jofI_wmpPj-JsfunwSb2VYAoOdOtmcDLb84x-smFfoz8KgAYzght8qKYO4WGpcptGWXM1OXWQGKibqqo1k4DvZ3IhhoGp2UXF7pcRSEOtDnPdLTghcKry0">
 </div>
 <!-- Hand holding pendant -->
 <div class="col-span-12 md:col-span-4 h-[300px] rounded-[18px] overflow-hidden bg-bg-parchment relative group">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A hand holding a sleek, minimalist pendant-shaped device against a neutral parchment background. The device is smooth and metallic, reflecting a high-end consumer electronics aesthetic. The lighting is soft and even, highlighting the ergonomic curves and premium finish of the product. The style is inspired by modern technology product photography, clean and uncluttered." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC96KgayTmbX7923XvLz_U0y2F1RAqgV4sqm4Bj_Uk_aZvtwUi2yTPIpcqFORFnaUzS80j_hScm7BSATHWdX97S5aIDHRjen99N9q_ZeFMrUOvkOnpel05L9RhTw7MeRaSUcJDlTiaRx1eCtuU4GHyEp4HfKVLjEetHrtg8Pb51hGqAdqO5OSrZ-QTz6AHQ9sMCLFAyzKAkJymit38ZkD9WTy2ZE4IgGnxvjYMWcryXMIHCeynOzV80s9EwEKx-H6MYQ0CX9rpPCNs">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="A hand holding a sleek, minimalist pendant-shaped device against a neutral parchment background. The device is smooth and metallic, reflecting a high-end consumer electronics aesthetic. The lighting is soft and even, highlighting the ergonomic curves and premium finish of the product. The style is inspired by modern technology product photography, clean and uncluttered." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC96KgayTmbX7923XvLz_U0y2F1RAqgV4sqm4Bj_Uk_aZvtwUi2yTPIpcqFORFnaUzS80j_hScm7BSATHWdX97S5aIDHRjen99N9q_ZeFMrUOvkOnpel05L9RhTw7MeRaSUcJDlTiaRx1eCtuU4GHyEp4HfKVLjEetHrtg8Pb51hGqAdqO5OSrZ-QTz6AHQ9sMCLFAyzKAkJymit38ZkD9WTy2ZE4IgGnxvjYMWcryXMIHCeynOzV80s9EwEKx-H6MYQ0CX9rpPCNs">
 </div>
 <!-- Wiring Diagram -->
 <div class="col-span-12 md:col-span-4 h-[300px] rounded-[18px] overflow-hidden bg-bg-parchment relative group">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A detailed digital wiring diagram displayed on a high-resolution screen. The diagram features crisp white lines and blue accents on a dark grey interface. The technical layout is clean and organized, showing the logical flow of an advanced electronic system. The atmosphere is professional and analytical, reflecting the transparency of open-source hardware documentation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIdlzjIMSVF1jTAhZWYv02ivj_fu6fKCRK4ou60oKBK874OAdFf_5hxOBmL-zyDKUdogXe1-ypmp-4J9nuSlCoa6cjXRco2Ewt4rvoJKBX2mvwma_nhJpT9OsO153RDu-dGaufrWhtwzGh100f3Qf3CdcLqHh4uiqm1D_Ge0Ior-_pzJtHa03lnpRu-BHdgqm8QbTI2ljbH6A57mmFc09Pa10Bq6R5hq2Pdn3jVk5ziFEaenR4nZBYeVlh9rtfsoDUwJJdnMmgadY">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="A detailed digital wiring diagram displayed on a high-resolution screen. The diagram features crisp white lines and blue accents on a dark grey interface. The technical layout is clean and organized, showing the logical flow of an advanced electronic system. The atmosphere is professional and analytical, reflecting the transparency of open-source hardware documentation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIdlzjIMSVF1jTAhZWYv02ivj_fu6fKCRK4ou60oKBK874OAdFf_5hxOBmL-zyDKUdogXe1-ypmp-4J9nuSlCoa6cjXRco2Ewt4rvoJKBX2mvwma_nhJpT9OsO153RDu-dGaufrWhtwzGh100f3Qf3CdcLqHh4uiqm1D_Ge0Ior-_pzJtHa03lnpRu-BHdgqm8QbTI2ljbH6A57mmFc09Pa10Bq6R5hq2Pdn3jVk5ziFEaenR4nZBYeVlh9rtfsoDUwJJdnMmgadY">
 </div>
 </div>
 </div>
@@ -143,7 +173,7 @@
 <!-- Honest Timeline (Parchment) -->
 <section class="bg-bg-parchment py-section-v-padding-mobile md:py-section-v-padding">
 <div class="max-w-[1200px] mx-auto px-margin-base">
-<h2 class="font-section-h2 text-section-h2-mobile md:text-section-h2 text-on-surface mb-24 text-center">Honest Timeline</h2>
+<h2 class="font-section-h2 text-section-h2-mobile md:text-section-h2 text-on-surface mb-24 text-center">Honest Timeline.</h2>
 <div class="relative timeline-line">
 <!-- Item 1 -->
 <div class="flex flex-col md:flex-row items-center mb-24 relative z-10">
@@ -153,11 +183,11 @@
 <p class="text-text-secondary mt-2">Born from a late-night discussion on the erosion of personal privacy in the age of generative AI.</p>
 </div>
 <div class="w-4 h-4 rounded-full bg-accent-blue border-4 border-surface shadow-sm"></div>
-<div class="md:w-1/2 md:pl-16"></div>
+<div class="hidden md:block md:w-1/2 md:pl-16"></div>
 </div>
 <!-- Item 2 -->
 <div class="flex flex-col md:flex-row items-center mb-24 relative z-10">
-<div class="md:w-1/2 md:pr-16"></div>
+<div class="hidden md:block md:w-1/2 md:pr-16"></div>
 <div class="w-4 h-4 rounded-full bg-accent-blue border-4 border-surface shadow-sm"></div>
 <div class="md:w-1/2 md:pl-16 text-center md:text-left mt-8 md:mt-0">
 <div class="font-label text-accent-blue mb-2">Oct 2025</div>
@@ -173,11 +203,11 @@
 <p class="text-text-secondary mt-2">Transitioning from industrial electronics to something that feels natural to wear all day.</p>
 </div>
 <div class="w-4 h-4 rounded-full bg-accent-blue border-4 border-surface shadow-sm"></div>
-<div class="md:w-1/2 md:pl-16"></div>
+<div class="hidden md:block md:w-1/2 md:pl-16"></div>
 </div>
 <!-- Item 4 -->
 <div class="flex flex-col md:flex-row items-center relative z-10">
-<div class="md:w-1/2 md:pr-16"></div>
+<div class="hidden md:block md:w-1/2 md:pr-16"></div>
 <div class="w-4 h-4 rounded-full bg-accent-blue border-4 border-surface shadow-sm"></div>
 <div class="md:w-1/2 md:pl-16 text-center md:text-left mt-8 md:mt-0">
 <div class="font-label text-accent-blue mb-2">Mar 2026</div>
@@ -201,73 +231,71 @@
 </div>
 </section>
 <!-- Footer -->
-<footer class="bg-inverse-surface dark:bg-on-background py-section-v-padding-mobile md:py-section-v-padding text-surface-bright">
+<footer class="bg-inverse-surface dark:bg-on-background py-section-v-padding text-surface-bright">
 <div class="max-w-[1200px] mx-auto px-margin-base grid grid-cols-1 md:grid-cols-4 gap-gutter">
-<div class="md:col-span-1">
-<div class="font-hero-h1 text-section-h3 text-surface-bright mb-6">Aura</div>
-<p class="text-outline-variant font-body text-label leading-relaxed">
-                    Personalized intelligence, designed for autonomy.
-                </p>
+<div>
+<div class="font-hero-h1 text-section-h3 text-surface-bright mb-4">Aura</div>
+<p class="text-outline-variant text-label">The open source wearable AI project.</p>
 </div>
 <div>
-<h5 class="font-label text-surface-bright mb-4 font-semibold uppercase opacity-50">Build</h5>
-<ul class="flex flex-col gap-2">
-<li><a class="text-outline-variant hover:text-surface-bright transition-colors text-label" href="docs.html#hardware">Hardware Docs</a></li>
-<li><a class="text-outline-variant hover:text-surface-bright transition-colors text-label" href="docs.html#firmware">Firmware SDK</a></li>
-<li><a class="text-outline-variant hover:text-surface-bright transition-colors text-label" href="docs.html#backend">CAD Files</a></li>
+<h4 class="font-label text-label font-semibold mb-4 uppercase opacity-50">Build</h4>
+<ul class="space-y-2">
+<li><a class="text-outline-variant hover:text-surface-bright transition-colors" href="docs.html#hardware">Components</a></li>
+<li><a class="text-outline-variant hover:text-surface-bright transition-colors" href="docs.html#firmware">Firmware</a></li>
+<li><a class="text-outline-variant hover:text-surface-bright transition-colors" href="docs.html#backend">Backend</a></li>
 </ul>
 </div>
 <div>
-<h5 class="font-label text-surface-bright mb-4 font-semibold uppercase opacity-50">Learn</h5>
-<ul class="flex flex-col gap-2">
-<li><a class="text-outline-variant hover:text-surface-bright transition-colors text-label" href="docs.html">Privacy Model</a></li>
-<li><a class="text-outline-variant hover:text-surface-bright transition-colors text-label" href="manifesto.html">Philosophy</a></li>
-<li><a class="text-outline-variant hover:text-surface-bright transition-colors text-label" href="docs.html">AI Limits</a></li>
+<h4 class="font-label text-label font-semibold mb-4 uppercase opacity-50">Learn</h4>
+<ul class="space-y-2">
+<li><a class="text-outline-variant hover:text-surface-bright transition-colors" href="docs.html">Documentation</a></li>
+<li><a class="text-outline-variant hover:text-surface-bright transition-colors" href="docs.html">Guides</a></li>
+<li><a class="text-outline-variant hover:text-surface-bright transition-colors" href="manifesto.html">Philosophy</a></li>
 </ul>
 </div>
 <div>
-<h5 class="font-label text-surface-bright mb-4 font-semibold uppercase opacity-50">Community</h5>
-<ul class="flex flex-col gap-2">
-<li><a class="text-outline-variant hover:text-surface-bright transition-colors text-label" href="https://github.com/thesohamdatta/aura" target="_blank">GitHub</a></li>
-<li><a class="text-outline-variant hover:text-surface-bright transition-colors text-label" href="#" target="_blank">Discord</a></li>
-<li><a class="text-outline-variant hover:text-surface-bright transition-colors text-label" href="#" target="_blank">Twitter</a></li>
+<h4 class="font-label text-label font-semibold mb-4 uppercase opacity-50">Community</h4>
+<ul class="space-y-2">
+<li><a class="text-outline-variant hover:text-surface-bright transition-colors" href="https://github.com/thesohamdatta/aura" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+<li><a class="text-outline-variant hover:text-surface-bright transition-colors" aria-disabled="true" tabindex="-1" href="#">Discord</a></li>
+<li><a class="text-outline-variant hover:text-surface-bright transition-colors" aria-disabled="true" tabindex="-1" href="#">Twitter</a></li>
 </ul>
 </div>
 </div>
-<div class="max-w-[1200px] mx-auto px-margin-base mt-section-v-padding-mobile border-t border-outline/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-<p class="text-outline-variant text-label font-body">© 2024 Aura Project. All rights reserved.</p>
-<div class="flex gap-6">
-<a class="text-outline-variant hover:text-surface-bright text-label" href="#">Privacy Policy</a>
-<a class="text-outline-variant hover:text-surface-bright text-label" href="#">Terms of Use</a>
+<div class="max-w-[1200px] mx-auto px-margin-base mt-20 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between text-label text-outline-variant">
+<p>&copy; 2026 Aura Project. MIT Licensed.</p>
+<div class="flex gap-6 mt-4 md:mt-0">
+<a class="hover:text-surface-bright" aria-disabled="true" tabindex="-1" href="#">Privacy</a>
+<a class="hover:text-surface-bright" target="_blank" href="https://github.com/thesohamdatta/aura" rel="noopener noreferrer">GitHub</a>
 </div>
 </div>
 </footer>
 <script>
-        // Micro-interactions for bento items
-        document.querySelectorAll('.bento-grid > div').forEach(card => {
-            card.addEventListener('mouseenter', () => {
-                card.style.cursor = 'crosshair';
-            });
-        });
-
         // Simple scroll reveal
-        const revealElements = document.querySelectorAll('section');
+        const revealElements = document.querySelectorAll('section:not(:first-of-type)');
         const observerOptions = {
             threshold: 0.1
         };
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('opacity-100');
-                    entry.target.classList.remove('opacity-0', 'translate-y-4');
-                }
+        if (!('IntersectionObserver' in window)) {
+            revealElements.forEach(el => {
+                el.classList.remove('opacity-0', 'translate-y-4');
+                el.classList.add('opacity-100');
             });
-        }, observerOptions);
+        } else {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100');
+                        entry.target.classList.remove('opacity-0', 'translate-y-4');
+                    }
+                });
+            }, observerOptions);
 
-        revealElements.forEach(el => {
-            el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-4');
-            observer.observe(el);
-        });
+            revealElements.forEach(el => {
+                el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-4');
+                observer.observe(el);
+            });
+        }
     </script>
 </body></html>
