@@ -23,3 +23,7 @@
 body {
     padding-top: 52px;
 }
+
+.glass-nav {
+    background: transparent;
+}

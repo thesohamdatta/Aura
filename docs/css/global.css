@@ -127,8 +127,7 @@ select:focus-visible {
 
 /* Glassmorphism Navigation */
 .glass-nav {
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    background: transparent;
 }
 
 /* Hide scrollbars for sliders */
