@@ -462,55 +462,59 @@
 </section>
 
 <!-- 8. BATTERY & POWER -->
-<section class="w-full bg-white relative overflow-hidden">
+<section class="w-full bg-white relative flex flex-col items-center">
   
   <!-- Massive Green Hero Block -->
-  <div class="relative w-full flex flex-col items-center pt-24 md:pt-32 pb-48 md:pb-64" style="background: radial-gradient(120% 100% at 50% 0%, #e0faea 0%, #30d158 45%, #0f8b34 80%, #054817 100%);">
+  <div class="relative w-full flex flex-col items-center pt-24 md:pt-32 pb-48 md:pb-64" style="background: linear-gradient(to bottom, #11994e 0%, #032b16 100%);">
     
-    <span class="font-body text-[15px] md:text-[17px] font-semibold text-black/40 mb-4 block tracking-widest uppercase">Battery</span>
-    <h2 class="font-display text-[56px] md:text-[80px] lg:text-[96px] font-semibold text-white text-center leading-[1.05] tracking-[-0.03em] z-10 drop-shadow-xl">
+    <span class="font-body text-[14px] md:text-[16px] font-semibold text-white mb-4 block tracking-normal">Battery</span>
+    
+    <!-- Main Text -->
+    <h2 class="font-display text-[56px] md:text-[72px] lg:text-[88px] font-semibold text-white text-center leading-[1.05] tracking-[-0.03em] z-20">
       Charges fast.<br>And lasts.
     </h2>
     
-    <!-- Flipped Reflection -->
-    <div class="flex flex-col items-center select-none pointer-events-none mt-[4px] z-10" aria-hidden="true">
-      <span class="font-display text-[56px] md:text-[80px] lg:text-[96px] font-semibold text-white leading-[1.05] tracking-[-0.03em] opacity-[0.15] blur-[0.5px] block" style="transform: scaleY(-1); transform-origin: center;">And lasts.</span>
-      <span class="font-display text-[56px] md:text-[80px] lg:text-[96px] font-semibold text-white leading-[1.05] tracking-[-0.03em] opacity-[0.08] blur-[1px] block mt-[-40px] md:mt-[-60px]" style="transform: scaleY(-1); transform-origin: center;">And lasts.</span>
-      <span class="font-display text-[56px] md:text-[80px] lg:text-[96px] font-semibold text-white leading-[1.05] tracking-[-0.03em] opacity-[0.04] blur-[2px] block mt-[-40px] md:mt-[-60px]" style="transform: scaleY(-1); transform-origin: center;">And lasts.</span>
+    <!-- Cascading Echo Effect (Not flipped) -->
+    <div class="flex flex-col items-center select-none pointer-events-none z-10 w-full relative -top-4 md:-top-6" aria-hidden="true">
+      <span class="font-display text-[56px] md:text-[72px] lg:text-[88px] font-semibold text-white leading-[1.05] tracking-[-0.03em] opacity-[0.25] blur-[1px] transform scale-[0.97] -mt-10 md:-mt-14 block">And lasts.</span>
+      <span class="font-display text-[56px] md:text-[72px] lg:text-[88px] font-semibold text-white leading-[1.05] tracking-[-0.03em] opacity-[0.12] blur-[2px] transform scale-[0.93] -mt-12 md:-mt-16 block">And lasts.</span>
+      <span class="font-display text-[56px] md:text-[72px] lg:text-[88px] font-semibold text-white leading-[1.05] tracking-[-0.03em] opacity-[0.05] blur-[3px] transform scale-[0.88] -mt-12 md:-mt-16 block">And lasts.</span>
+      <span class="font-display text-[56px] md:text-[72px] lg:text-[88px] font-semibold text-white leading-[1.05] tracking-[-0.03em] opacity-[0.02] blur-[4px] transform scale-[0.82] -mt-12 md:-mt-16 block">And lasts.</span>
+      <span class="font-display text-[56px] md:text-[72px] lg:text-[88px] font-semibold text-white leading-[1.05] tracking-[-0.03em] opacity-[0.01] blur-[5px] transform scale-[0.75] -mt-12 md:-mt-16 block">And lasts.</span>
     </div>
 
   </div>
 
   <!-- White Area Content (Overlaps the green) -->
-  <div class="relative w-full max-w-[1200px] mx-auto px-margin-base flex flex-col items-center z-20" style="margin-top: -180px;">
+  <div class="relative w-full max-w-[1200px] mx-auto px-margin-base flex flex-col items-center z-20" style="margin-top: -120px;">
     
-    <!-- Pendant Image overlapping the boundary -->
-    <div class="w-[200px] md:w-[320px] aspect-square mb-16 md:mb-20 transform hover:-translate-y-4 transition-transform duration-700">
-      <img src="assets/product/pendant-front.png" alt="Aura Pendant" class="w-full h-full object-contain filter drop-shadow-[0_40px_80px_rgba(0,0,0,0.3)]">
+    <!-- Pendant Image exactly on the border -->
+    <div class="w-[200px] md:w-[280px] aspect-square mb-12 transform hover:-translate-y-2 transition-transform duration-700">
+      <img src="assets/product/pendant-front.png" alt="Aura Pendant" class="w-full h-full object-contain filter drop-shadow-[0_20px_40px_rgba(0,0,0,0.15)]">
     </div>
 
     <!-- Text Content -->
-    <p class="text-center max-w-[640px] font-body text-[19px] md:text-[21px] text-[#86868b] leading-[1.5] tracking-tight mb-20 md:mb-24">
+    <p class="text-center max-w-[640px] font-body text-[17px] md:text-[19px] text-[#424245] leading-[1.4] tracking-tight mb-20 md:mb-24">
       <strong class="text-[#1d1d1f] font-semibold">Power for hours in a radically smaller footprint.</strong><br>
       A high-density Li-Po cell optimized for minimal volume. Paired with our ultra-low-power ESP32-S3 architecture, it delivers all-day ambient awareness.
     </p>
 
-    <!-- Spec grid -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-20 text-center w-full max-w-[900px] pb-24 md:pb-32 border-b border-black/5">
+    <!-- Spec grid with Apple Green Numbers -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-20 text-center w-full max-w-[900px] pb-24 md:pb-32">
       <div class="flex flex-col items-center">
-        <p class="font-body text-[13px] font-semibold tracking-widest uppercase text-[#86868b] mb-3">Up to</p>
-        <p class="font-display text-[48px] md:text-[56px] font-semibold text-[#1d1d1f] leading-none mb-3 tracking-tight">4 hours</p>
-        <p class="font-body text-[15px] text-[#86868b] leading-snug">Of active listening time on a<br>single charge.</p>
+        <p class="font-body text-[13px] font-semibold text-[#1d1d1f] mb-1">Up to</p>
+        <p class="font-display text-[56px] md:text-[64px] font-semibold text-[#11994e] leading-[1.05] mb-2 tracking-[-0.03em]">4 hours</p>
+        <p class="font-body text-[14px] text-[#424245] leading-snug">of active listening time<br>on a single charge</p>
       </div>
       <div class="flex flex-col items-center">
-        <p class="font-body text-[13px] font-semibold tracking-widest uppercase text-[#86868b] mb-3">Capacity</p>
-        <p class="font-display text-[48px] md:text-[56px] font-semibold text-[#1d1d1f] leading-none mb-3 tracking-tight">350 mAh</p>
-        <p class="font-body text-[15px] text-[#86868b] leading-snug">High-density Li-Po<br>battery cell.</p>
+        <p class="font-body text-[13px] font-semibold text-[#1d1d1f] mb-1">Capacity</p>
+        <p class="font-display text-[56px] md:text-[64px] font-semibold text-[#11994e] leading-[1.05] mb-2 tracking-[-0.03em]">350 mAh</p>
+        <p class="font-body text-[14px] text-[#424245] leading-snug">High-density Li-Po<br>battery cell</p>
       </div>
       <div class="flex flex-col items-center">
-        <p class="font-body text-[13px] font-semibold tracking-widest uppercase text-[#86868b] mb-3">Charging</p>
-        <p class="font-display text-[48px] md:text-[56px] font-semibold text-[#1d1d1f] leading-none mb-3 tracking-tight">USB-C</p>
-        <p class="font-body text-[15px] text-[#86868b] leading-snug">Fast charging everywhere<br>you go.</p>
+        <p class="font-body text-[13px] font-semibold text-[#1d1d1f] mb-1">Charging</p>
+        <p class="font-display text-[56px] md:text-[64px] font-semibold text-[#11994e] leading-[1.05] mb-2 tracking-[-0.03em]">USB-C</p>
+        <p class="font-body text-[14px] text-[#424245] leading-snug">Fast charging everywhere<br>you go</p>
       </div>
     </div>
   </div>
