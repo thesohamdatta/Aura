@@ -16,27 +16,27 @@
 </head>
 <body class="bg-surface text-on-surface">
 <!-- Top Navigation Anchor (from JSON) -->
-<nav id="navbar" class="fixed top-0 w-full h-[52px] z-[100] bg-white/72 backdrop-blur-xl border-b border-black/[0.08] transition-all duration-300">
-<div class="nav-inner flex justify-between items-center px-margin-base w-full max-w-[1200px] mx-auto h-full">
-<a href="index.html" class="font-display text-[21px] font-semibold tracking-[-0.3px] text-[#1d1d1f]">Aura</a>
-<div id="mobileMenu" class="hidden absolute top-[52px] left-0 w-full bg-surface/95 backdrop-blur-md border-b border-black/10 flex-col p-4 gap-4 md:static md:w-auto md:bg-transparent md:border-none md:p-0 md:flex md:flex-row md:gap-8 items-center">
-<a class="nav-link font-body text-[17px] font-normal text-[#1d1d1f]/65 hover:text-accent-blue transition-colors duration-200" href="index.html">Overview</a>
-<a class="nav-link font-body text-[17px] font-normal text-[#1d1d1f]/65 hover:text-accent-blue transition-colors duration-200" href="about.html">About</a>
-<a class="nav-link font-body text-[17px] font-normal text-[#1d1d1f]/65 hover:text-accent-blue transition-colors duration-200" href="ai.html">AI</a>
-<a class="nav-link font-body text-[17px] font-normal text-[#1d1d1f]/65 hover:text-accent-blue transition-colors duration-200" href="manifesto.html">Dilemma</a>
-<a class="nav-link font-body text-[17px] font-semibold text-[#1d1d1f] hover:text-accent-blue transition-colors duration-200" href="docs.html">Docs</a>
+<nav id="navbar" class="fixed top-0 w-full z-[100] h-[48px] min-h-[48px] max-h-[48px] bg-white/72 backdrop-blur-xl border-b border-black/[0.08] transition-colors duration-300">
+<div class="nav-inner flex justify-between items-center px-6 md:px-[22px] w-full max-w-[1200px] mx-auto h-full">
+<a href="index.html" class="text-[21px] font-semibold tracking-[-0.3px] leading-none flex items-center text-[#1d1d1f]">Aura</a>
+<div id="mobileMenu" class="hidden absolute top-[48px] left-0 w-full bg-surface/95 backdrop-blur-md border-b border-black/10 flex-col p-4 gap-4 md:static md:w-auto md:bg-transparent md:border-none md:p-0 md:flex md:flex-row md:gap-8 items-center">
+<a class="nav-link text-[14px] font-normal leading-none flex items-center text-[#1d1d1f]/65 hover:text-[#0066cc] transition-colors duration-200" href="index.html">Overview</a>
+<a class="nav-link text-[14px] font-normal leading-none flex items-center text-[#1d1d1f]/65 hover:text-[#0066cc] transition-colors duration-200" href="about.html">About</a>
+<a class="nav-link text-[14px] font-normal leading-none flex items-center text-[#1d1d1f]/65 hover:text-[#0066cc] transition-colors duration-200" href="ai.html">AI</a>
+<a class="nav-link text-[14px] font-normal leading-none flex items-center text-[#1d1d1f]/65 hover:text-[#0066cc] transition-colors duration-200" href="manifesto.html">Dilemma</a>
+<a class="nav-link text-[14px] font-semibold leading-none flex items-center text-[#1d1d1f] hover:text-[#0066cc] transition-colors duration-200" href="docs.html">Docs</a>
 </div>
 <div class="flex items-center gap-4">
-<a href="docs.html#hardware" class="bg-accent-blue text-white rounded-full px-[15px] py-[6px] text-[14px] font-medium hover:opacity-90 transition-opacity flex items-center justify-center">Build Yours</a>
+<a href="docs.html#hardware" class="bg-[#0066cc] text-white hover:opacity-90 transition-opacity text-[13px] font-medium px-[15px] py-[6px] rounded-full whitespace-nowrap flex-shrink-0 leading-none flex items-center justify-center">Build Yours</a>
 <button type="button" aria-label="Toggle navigation menu" onclick="document.getElementById('mobileMenu').classList.toggle('hidden'); document.getElementById('mobileMenu').classList.toggle('flex')" class="md:hidden flex items-center text-on-surface dark:text-surface-bright">
   <span class="material-symbols-outlined">menu</span>
 </button>
 </div>
 </div>
 </nav>
-<div class="max-w-[1200px] mx-auto flex pt-[52px]">
+<div class="max-w-[1200px] mx-auto flex pt-[48px]">
 <!-- Left Sidebar Documentation Tree (260px) -->
-<aside class="w-[260px] h-[calc(100vh-52px)] sticky top-[52px] hidden md:flex flex-col py-8 px-4 bg-[#f5f5f7] border-r border-[#d2d2d7]/35 overflow-y-auto">
+<aside class="w-[260px] h-[calc(100vh-48px)] sticky top-[48px] hidden md:flex flex-col py-8 px-4 bg-[#f5f5f7] border-r border-[#d2d2d7]/35 overflow-y-auto">
 <div class="mb-6 px-3">
 <h2 class="font-hero-h1 text-[16px] font-bold text-[#1d1d1f] mb-1 tracking-tight">Documentation</h2>
 <p class="font-body text-[11px] text-[#86868b] uppercase tracking-wider font-semibold">Aura Reference</p>
