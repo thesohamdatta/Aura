@@ -13,7 +13,7 @@
 <script src="js/liquid-glass.js" defer></script>
 <script src="js/sf-symbols.js" defer></script>
 </head>
-<body class="bg-white text-on-surface font-body selection:bg-accent-blue/20">
+<body class="bg-white text-on-surface font-body selection:bg-accent-blue/20 !pt-0">
 <!-- TOP NAVIGATION SHELL -->
 <nav id="navbar" class="fixed top-0 w-full h-[52px] z-[100] bg-transparent transition-all duration-300">
 <div class="nav-inner flex justify-between items-center px-margin-base w-full max-w-[1200px] mx-auto h-full">
@@ -194,8 +194,13 @@
 </div>
 </section>
 <!-- 4. VOICE STORY -->
-<section class="relative h-screen w-full overflow-hidden">
-  <img alt="Aura — Active Noise Cancellation. The joy of quietude." class="absolute inset-0 w-full h-full object-cover object-center" src="assets/hero/ChatGPT Image Jun 15, 2026, 03_06_36 PM.png">
+<section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+  <img alt="Person wearing Aura" class="absolute inset-0 w-full h-full object-cover object-center" src="assets/hero/hero-silhouette.jpg">
+  <div class="absolute inset-0 bg-black/40"></div>
+  <div class="relative text-center px-margin-base max-w-prose-max-width z-10 select-none">
+    <span class="font-label text-overline text-white/60 uppercase tracking-[0.2em] mb-4 block">Voice capture</span>
+    <h2 class="font-display text-[48px] md:text-[80px] font-bold text-white leading-[1.05] tracking-tight">A completely different way to remember.</h2>
+  </div>
 </section>
 <!-- 5. VOICE FEATURE CARDS -->
 <section class="bg-[#f5f5f7] py-section-v-padding text-on-surface overflow-hidden relative border-b border-black/5">
