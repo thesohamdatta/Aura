@@ -206,6 +206,100 @@ runTest('Take a Closer Look gallery uses Bento Grid rounded cards and zoom hover
   }
 });
 
+// ----------------------------------------------------
+// TEST CASE 7: AI Page Bento Grid Specs
+// ----------------------------------------------------
+runTest('AI Page bento features section meets layout, accessibility, and styling specifications', () => {
+  const aiPath = path.join(websiteDir, 'ai.html');
+  if (!fs.existsSync(aiPath)) {
+    throw new Error('ai.html not found');
+  }
+  const html = fs.readFileSync(aiPath, 'utf-8');
+
+  // Verify no inline <style> blocks
+  if (html.includes('<style>') || html.includes('</style>')) {
+    throw new Error('ai.html contains inline <style> tags; all styles must be consolidated in CSS files');
+  }
+
+  // Verify bento-features container
+  if (!html.includes('id="bento-features"')) {
+    throw new Error('ai.html is missing the main bento grid wrapper section with id="bento-features"');
+  }
+
+  // Verify presence of the 4 core cards
+  const cards = [
+    { id: 'perception-card', colSpan: 'md:col-span-8' },
+    { id: 'speed-card', colSpan: 'md:col-span-4' },
+    { id: 'memory-card', colSpan: 'md:col-span-4' },
+    { id: 'integrations-card', colSpan: 'md:col-span-8' }
+  ];
+
+  cards.forEach(card => {
+    const idPattern = new RegExp(`id="${card.id}"`, 'g');
+    if (!idPattern.test(html)) {
+      throw new Error(`ai.html is missing bento card with id="${card.id}"`);
+    }
+
+    // Verify col span
+    const cardStartIndex = html.indexOf(`id="${card.id}"`);
+    // Find the opening tag of this card by searching backwards
+    const tagStartIndex = html.lastIndexOf('<', cardStartIndex);
+    const tagEndIndex = html.indexOf('>', cardStartIndex);
+    const tagMarkup = html.substring(tagStartIndex, tagEndIndex + 1);
+
+    if (!tagMarkup.includes(card.colSpan)) {
+      throw new Error(`Bento card "${card.id}" does not have the correct column span class "${card.colSpan}". Got: ${tagMarkup}`);
+    }
+
+    // Verify keyboard accessibility / focus target via tabindex
+    if (!tagMarkup.includes('tabindex="0"')) {
+      throw new Error(`Bento card "${card.id}" is missing tabindex="0" for keyboard focusability`);
+    }
+
+    // Verify transition and highlight classes
+    const requiredTransitions = [
+      'hover:-translate-y-2',
+      'hover:shadow-[0_12px_48px_rgba(0,0,0,0.08)]',
+      'focus-within:-translate-y-2',
+      'focus-within:shadow-[0_12px_48px_rgba(0,0,0,0.08)]'
+    ];
+    requiredTransitions.forEach(cls => {
+      if (!tagMarkup.includes(cls)) {
+        throw new Error(`Bento card "${card.id}" is missing required hover/focus transition class: "${cls}"`);
+      }
+    });
+  });
+
+  // Verify memory card's vector graph image preventing layout shift (CLS)
+  const memoryCardStart = html.indexOf('id="memory-card"');
+  const nextCardStart = html.indexOf('id="integrations-card"');
+  if (memoryCardStart === -1 || nextCardStart === -1) {
+    throw new Error('Could not find both memory-card and integrations-card to isolate memory card content');
+  }
+  const memoryCardHtml = html.substring(memoryCardStart, nextCardStart);
+
+  // Find the image inside memory card
+  const imgStart = memoryCardHtml.indexOf('<img');
+  if (imgStart === -1) {
+    throw new Error('Could not find vector graph image inside memory-card');
+  }
+  const imgEnd = memoryCardHtml.indexOf('>', imgStart);
+  const imgMarkup = memoryCardHtml.substring(imgStart, imgEnd + 1);
+
+  if (!imgMarkup.includes('width="1048"') || !imgMarkup.includes('height="637"')) {
+    throw new Error(`Memory vector graph image is missing explicit width/height attributes to prevent CLS. Got: ${imgMarkup}`);
+  }
+  if (!imgMarkup.includes('loading="lazy"')) {
+    throw new Error(`Memory vector graph image is missing loading="lazy" attribute. Got: ${imgMarkup}`);
+  }
+  
+  const hasCorrectSrc = imgMarkup.includes('assets/AI%20images%20and%20screenshots%20of%20website/abstract_vector_graph_visualization_of_memory_nodes._soft_glowing_points/screen.png') ||
+                        imgMarkup.includes('assets/AI images and screenshots of website/abstract_vector_graph_visualization_of_memory_nodes._soft_glowing_points/screen.png');
+  if (!hasCorrectSrc) {
+    throw new Error(`Memory vector graph image source does not point to the correct Pinecone memory visual. Got: ${imgMarkup}`);
+  }
+});
+
 // Final check
 if (testFailures > 0) {
   console.error(`\nTest suite failed with ${testFailures} failure(s).`);
