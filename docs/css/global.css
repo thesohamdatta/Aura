@@ -1,23 +1,6 @@
-/* global.css */
-
 /* ============================================================
-   GLOBAL CAPS OVERRIDE — Apple sentence case enforcement
-   Eliminates all uppercase text sitewide
-   Added: typography audit fix
+   SF Pro Display Font Declarations
    ============================================================ */
-
-*,
-*::before,
-*::after {
-  text-transform: none !important;
-  font-variant-caps: normal !important;
-  font-variant: normal !important;
-}
-
-/* Restore only what legitimately needs case control */
-/* (nothing on this site does — leave this block empty) */
-
-/* SF Pro Display Font Declarations */
 @font-face {
     font-family: 'SF Pro Display';
     src: local('SF Pro Display Regular'), local('SFProDisplay-Regular'), url('../fonts/SF-Pro-Display-Regular.otf') format('opentype');
