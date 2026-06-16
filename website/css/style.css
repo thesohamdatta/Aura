@@ -376,7 +376,7 @@ footer a {
 .footer-github-cta:hover {
     border-color: #86868b !important;
     color: #1d1d1f !important;
-    background-color: rgba(0, 0, 0, 0.02) !important;
+    background-color: rgba(0, 0, 0, 0.05) !important;
 }
 .footer-disabled-link {
     font-family: var(--font-text);
@@ -394,7 +394,7 @@ footer a {
 .footer-legal-link {
     font-family: var(--font-text);
     font-size: 12px;
-    color: #515154 !important;
+    color: #86868b !important;
     transition: color 0.15s ease !important;
     text-decoration: none !important;
     display: inline-block;
@@ -407,7 +407,7 @@ footer a {
 .footer-legal-disabled {
     font-family: var(--font-text);
     font-size: 12px;
-    color: #515154 !important;
+    color: #86868b !important;
     text-decoration: none !important;
     display: inline-block;
     padding: 0 !important;
