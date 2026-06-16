@@ -84,18 +84,37 @@ tailwind.config = {
                 "gutter": "24px",
                 "section-v-padding": "140px"
             },
-            "fontFamily": {
-                "display": ["'SF Pro Display'", "Inter", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica", "Arial", "sans-serif"],
-                "body":    ["'SF Pro Text'",    "Inter", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica", "Arial", "sans-serif"],
-                "mono":    ["SFMono-Regular", "Consolas", "Monaco", "monospace"],
-                /* legacy aliases — keep for backward compat */
-                "hero-h1": ["'SF Pro Display'", "Inter"],
-                "overline": ["'SF Pro Text'", "Inter"],
-                "section-h2": ["'SF Pro Display'", "Inter"],
-                "section-h3": ["'SF Pro Display'", "Inter"],
-                "label": ["'SF Pro Text'", "Inter"],
-                "hero-h1-mobile": ["'SF Pro Display'", "Inter"],
-                "section-h2-mobile": ["'SF Pro Display'", "Inter"]
+            fontFamily: {
+                "sans": [
+                    "SF Pro Text",
+                    "-apple-system",
+                    "BlinkMacSystemFont",
+                    "Helvetica Neue",
+                    "Arial",
+                    "sans-serif"
+                ],
+                "display": [
+                    "SF Pro Display",
+                    "-apple-system",
+                    "BlinkMacSystemFont",
+                    "Helvetica Neue",
+                    "Arial",
+                    "sans-serif"
+                ],
+                "rounded": [
+                    "SF Pro Rounded",
+                    "-apple-system",
+                    "BlinkMacSystemFont",
+                    "Helvetica Neue",
+                    "Arial",
+                    "sans-serif"
+                ],
+                "mono": [
+                    "SF Mono",
+                    "Fira Code",
+                    "Consolas",
+                    "monospace"
+                ]
             },
             "fontSize": {
                 "hero-h1": ["80px", { "lineHeight": "1.1", "letterSpacing": "-0.028em", "fontWeight": "600" }],
