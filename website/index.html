@@ -775,44 +775,88 @@
 </script>
 
 <!-- FOOTER -->
-<footer class="bg-inverse-surface dark:bg-on-background py-section-v-padding text-surface-bright">
-<div class="max-w-[1200px] mx-auto px-margin-base grid grid-cols-1 md:grid-cols-4 gap-gutter">
-<div>
-<div class="font-display text-lead text-surface-bright mb-4">Aura</div>
-<p class="text-outline-variant text-label">The open source wearable AI project.</p>
-</div>
-<div>
-<h4 class="font-body text-caption font-semibold mb-4 uppercase opacity-50">Build</h4>
-<ul class="space-y-2">
-<li><a class="text-outline-variant hover:text-surface-bright transition-colors" href="docs.html#hardware">Components</a></li>
-<li><a class="text-outline-variant hover:text-surface-bright transition-colors" href="docs.html#firmware">Firmware</a></li>
-<li><a class="text-outline-variant hover:text-surface-bright transition-colors" href="docs.html#backend">Backend</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-body text-caption font-semibold mb-4 uppercase opacity-50">Learn</h4>
-<ul class="space-y-2">
-<li><a class="text-outline-variant hover:text-surface-bright transition-colors" href="docs.html">Documentation</a></li>
-<li><a class="text-outline-variant hover:text-surface-bright transition-colors" href="docs.html">Guides</a></li>
-<li><a class="text-outline-variant hover:text-surface-bright transition-colors" href="manifesto.html">Philosophy</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-body text-caption font-semibold mb-4 uppercase opacity-50">Community</h4>
-<ul class="space-y-2">
-<li><a class="text-outline-variant hover:text-surface-bright transition-colors" href="https://github.com/thesohamdatta/aura" target="_blank">GitHub</a></li>
-<li><a class="text-outline-variant hover:text-surface-bright transition-colors" aria-disabled="true" href="#">Discord</a></li>
-<li><a class="text-outline-variant hover:text-surface-bright transition-colors" aria-disabled="true" href="#">Twitter</a></li>
-</ul>
-</div>
-</div>
-<div class="max-w-[1200px] mx-auto px-margin-base mt-20 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between text-label text-outline-variant">
-<p>&copy; 2026 Aura Project. MIT Licensed.</p>
-<div class="flex gap-6 mt-4 md:mt-0">
-<a class="hover:text-surface-bright" aria-disabled="true" href="#">Privacy</a>
-<a class="hover:text-surface-bright" target="_blank" href="https://github.com/thesohamdatta/aura">GitHub</a>
-</div>
-</div>
+<footer class="site-footer border-t border-[#d2d2d7]/50" style="padding: 64px 0 0 0;">
+  <div class="max-w-[1200px] mx-auto px-margin-base">
+    
+    <!-- Breadcrumb row -->
+    <div class="flex items-center text-[12px] text-[#86868b] pb-4 mb-6 border-b border-[#d2d2d7]/35 flex-wrap gap-y-2">
+      <a href="index.html" class="hover:text-[#1d1d1f] transition-colors">Aura</a>
+      <span class="mx-2 text-[10px] text-[#86868b]">›</span>
+      <span class="text-[#1d1d1f]">Overview</span>
+    </div>
+
+    <!-- Main grid -->
+    <div class="grid grid-cols-2 md:grid-cols-[1.5fr_1fr_1fr_1fr_1fr] gap-8 md:gap-gutter">
+      
+      <!-- Brand column -->
+      <div class="col-span-2 md:col-span-1 mb-10 md:mb-0">
+        <div class="font-display text-[21px] font-semibold text-[#1d1d1f] mb-2">Aura</div>
+        <p class="font-body text-[13px] font-normal text-[#515154] mb-6 leading-normal">The third device. Built in the open.</p>
+        <a href="https://github.com/thesohamdatta/aura" target="_blank" class="footer-github-cta">
+          <span>⭐</span> Star on GitHub
+        </a>
+      </div>
+
+      <!-- Build column -->
+      <div class="col-span-1">
+        <span class="font-body text-[11px] font-semibold tracking-[0.08em] uppercase text-[#1d1d1f]/60 mb-4 block">Build</span>
+        <ul class="space-y-0 flex flex-col">
+          <li><a href="docs.html#hardware" class="footer-link-item">Build Yours</a></li>
+          <li><a href="docs.html#firmware" class="footer-link-item">Firmware</a></li>
+          <li><a href="docs.html#backend" class="footer-link-item">SDK</a></li>
+        </ul>
+      </div>
+
+      <!-- Learn column -->
+      <div class="col-span-1">
+        <span class="font-body text-[11px] font-semibold tracking-[0.08em] uppercase text-[#1d1d1f]/60 mb-4 block">Learn</span>
+        <ul class="space-y-0 flex flex-col">
+          <li><a href="ai.html" class="footer-link-item">How It Works</a></li>
+          <li><a href="manifesto.html" class="footer-link-item">The Dilemma</a></li>
+          <li><a href="docs.html" class="footer-link-item">Docs</a></li>
+        </ul>
+      </div>
+
+      <!-- Community column -->
+      <div class="col-span-1">
+        <span class="font-body text-[11px] font-semibold tracking-[0.08em] uppercase text-[#1d1d1f]/60 mb-4 block">Community</span>
+        <ul class="space-y-0 flex flex-col">
+          <li><a href="https://github.com/thesohamdatta/aura" target="_blank" class="footer-link-item">GitHub</a></li>
+          <li><a href="#" aria-disabled="true" class="footer-disabled-link">Discord</a></li>
+          <li><a href="#" aria-disabled="true" class="footer-disabled-link">Ethics</a></li>
+        </ul>
+      </div>
+
+      <!-- Project column -->
+      <div class="col-span-1">
+        <span class="font-body text-[11px] font-semibold tracking-[0.08em] uppercase text-[#1d1d1f]/60 mb-4 block">Project</span>
+        <ul class="space-y-0 flex flex-col">
+          <li><a href="about.html" class="footer-link-item">About</a></li>
+          <li><a href="ai.html" class="footer-link-item">Intelligence</a></li>
+          <li><a href="manifesto.html" class="footer-link-item">Manifesto</a></li>
+          <li><a href="index.html" class="footer-link-item">Overview</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Retailer/Footnote row -->
+    <div class="pt-6 pb-4 border-t border-[#d2d2d7]/35 mt-8 text-[12px] text-[#86868b] leading-relaxed">
+      More ways to build: <a href="https://github.com/thesohamdatta/aura" target="_blank" class="text-[#0066cc] hover:underline">Fork the GitHub repo</a> or <a href="docs.html" class="text-[#0066cc] hover:underline">read our assembly guides</a>. Need help? Contact <a href="mailto:thesohamdatta@gmail.com" class="text-[#0066cc] hover:underline">thesohamdatta@gmail.com</a>.
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="border-t border-[#d2d2d7]/35 py-5 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+      <p class="font-body text-[12px] text-[#86868b]">&copy; 2026 Aura Project. MIT Licensed.</p>
+      <div class="flex gap-6 flex-row">
+        <a href="#" aria-disabled="true" class="footer-legal-disabled">MIT License</a>
+        <a href="#" aria-disabled="true" class="footer-legal-disabled">Privacy</a>
+        <a href="https://github.com/thesohamdatta/aura" target="_blank" class="footer-legal-link">GitHub</a>
+      </div>
+      <span class="font-body text-[12px] text-[#86868b]">Pune, India</span>
+    </div>
+
+  </div>
 </footer>
 <script>
         // Simple micro-interactions
