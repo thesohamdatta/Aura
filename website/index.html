@@ -18,7 +18,7 @@
 <!-- TOP NAVIGATION SHELL -->
 <nav id="navbar" class="fixed top-0 w-full h-[52px] z-[100] bg-transparent">
 <div class="nav-inner flex justify-between items-center px-margin-base w-full max-w-[1200px] mx-auto h-full">
-<a href="index.html" class="font-display text-tagline" style="color: #ffffff;">Aura</a>
+<a href="index.html" class="font-display text-tagline nav-wordmark" style="color: #ffffff;">Aura</a>
 <div id="mobileMenu" class="hidden absolute top-[52px] left-0 w-full bg-surface/95 backdrop-blur-md border-b border-black/10 flex-col p-4 gap-4 md:static md:w-auto md:bg-transparent md:border-none md:p-0 md:flex md:flex-row md:gap-8 items-center h-full">
 <a class="nav-link font-body text-body font-semibold text-white hover:text-accent-blue transition-colors" href="index.html">Overview</a>
 <a class="nav-link font-body text-body font-normal text-white/90 hover:text-accent-blue transition-colors" href="about.html">About</a>
@@ -867,62 +867,52 @@
         });
 
         // Navbar Scroll Behavior
-        const navbar = document.getElementById('navbar');
-        if (navbar && navbar.classList.contains('bg-transparent')) {
-            const navLinks = document.querySelectorAll('.nav-link');
-            const logo = navbar.querySelector('a.font-display');
-            const handleScroll = () => {
-                if (window.scrollY > 40) {
-                    navbar.classList.add('scrolled');
-                    navbar.classList.remove('bg-transparent');
-                    
-                    // Transition to frosted white glass (using inline styles to guarantee specificity)
-                    navbar.style.background = 'rgba(255, 255, 255, 0.65)';
-                    navbar.style.backdropFilter = 'blur(24px) saturate(200%)';
-                    navbar.style.webkitBackdropFilter = 'blur(24px) saturate(200%)';
-                    navbar.style.borderBottom = '1px solid rgba(0, 0, 0, 0.08)';
-                    
-                    if (logo) {
-                        logo.style.color = '#1d1d1f';
-                    }
-                    
-                    navLinks.forEach(l => {
-                        if (l.classList.contains('font-semibold')) {
-                            l.classList.add('text-[#1d1d1f]');
-                            l.classList.remove('text-white', 'text-white/90', 'text-white/65', 'text-[#1d1d1f]/65');
-                        } else {
-                            l.classList.add('text-[#1d1d1f]/65');
-                            l.classList.remove('text-white', 'text-white/90', 'text-white/65', 'text-[#1d1d1f]');
-                        }
-                    });
-                } else {
-                    navbar.classList.remove('scrolled');
-                    navbar.classList.add('bg-transparent');
-                    
-                    // Transition to near-invisible glass at top (using inline styles to guarantee specificity)
-                    navbar.style.background = 'rgba(255, 255, 255, 0.08)';
-                    navbar.style.backdropFilter = 'blur(24px) saturate(180%)';
-                    navbar.style.webkitBackdropFilter = 'blur(24px) saturate(180%)';
-                    navbar.style.borderBottom = '1px solid rgba(255, 255, 255, 0.15)';
-                    
-                    if (logo) {
-                        logo.style.color = '#ffffff';
-                    }
-                    
-                    navLinks.forEach(l => {
-                        if (l.classList.contains('font-semibold')) {
-                            l.classList.add('text-white');
-                            l.classList.remove('text-[#1d1d1f]', 'text-white/90', 'text-white/65', 'text-[#1d1d1f]/65');
-                        } else {
-                            l.classList.add('text-white/65');
-                            l.classList.remove('text-white', 'text-white/90', 'text-[#1d1d1f]', 'text-[#1d1d1f]/65');
-                        }
-                    });
-                }
-            };
-            window.addEventListener('scroll', handleScroll, { passive: true });
-            handleScroll();
-        }
+        (function() {
+          const navbar = document.getElementById('navbar');
+          const wordmark = document.querySelector('.nav-wordmark');
+          const navLinks = document.querySelectorAll('.nav-link');
+          const THRESHOLD = 50;
+
+          function updateNav() {
+            const atTop = window.scrollY < THRESHOLD;
+
+            // Background — transparent at top, frosted when scrolled
+            navbar.style.backgroundColor = atTop
+              ? 'transparent'
+              : 'rgba(255, 255, 255, 0.72)';
+
+            navbar.style.backdropFilter = atTop
+              ? 'none'
+              : 'blur(20px) saturate(180%)';
+
+            navbar.style.webkitBackdropFilter = atTop
+              ? 'none'
+              : 'blur(20px) saturate(180%)';
+
+            navbar.style.borderBottomColor = atTop
+              ? 'transparent'
+              : 'rgba(0, 0, 0, 0.08)';
+
+            // Nav link colors
+            navLinks.forEach(link => {
+              link.style.color = atTop
+                ? 'rgba(255, 255, 255, 0.9)'
+                : '#1d1d1f';
+            });
+
+            // Wordmark color
+            if (wordmark) {
+              wordmark.style.color = atTop ? '#ffffff' : '#1d1d1f';
+            }
+          }
+
+          // CRITICAL: passive:true prevents scroll blocking
+          window.addEventListener('scroll', updateNav, { passive: true });
+          
+          // CRITICAL: run immediately on load to set correct 
+          // initial state without waiting for first scroll event
+          updateNav();
+        })();
 
         // IntersectionObserver for App Demo Section (Seamless experience)
         const appDemoSection = document.getElementById('app-demo-section');
