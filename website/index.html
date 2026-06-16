@@ -28,7 +28,7 @@
 </div>
 <div class="flex items-center gap-4">
 <a href="docs.html#hardware" class="bg-accent-blue text-white rounded-full px-[15px] py-[6px] text-caption font-medium hover:opacity-90 transition-opacity flex items-center justify-center">Build Yours</a>
-<button onclick="document.getElementById('mobileMenu').classList.toggle('hidden'); document.getElementById('mobileMenu').classList.toggle('flex')" class="md:hidden flex items-center text-on-surface dark:text-surface-bright">
+<button type="button" aria-label="Toggle navigation menu" onclick="document.getElementById('mobileMenu').classList.toggle('hidden'); document.getElementById('mobileMenu').classList.toggle('flex')" class="md:hidden flex items-center text-on-surface dark:text-surface-bright min-w-[44px] min-h-[44px] justify-center">
   <span class="material-symbols-outlined">menu</span>
 </button>
 </div>
@@ -36,7 +36,7 @@
 </nav>
 <!-- 1. HERO -->
 <section class="relative h-screen w-full overflow-hidden bg-black">
-  <img alt="Aura Worn Hero" class="absolute inset-0 w-full h-full object-cover object-center" src="assets/hero/hero-purple.png">
+  <img width="1920" height="1080" alt="Aura Worn Hero" class="absolute inset-0 w-full h-full object-cover object-center" src="assets/hero/hero-purple.png">
   <!-- Dark gradient overlay at the bottom 25% for text legibility -->
   <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
   
@@ -97,21 +97,8 @@
   </div>
 </section>
 <!-- 2. GET THE HIGHLIGHTS -->
-<section class="bg-[#f5f5f7] py-section-v-padding border-t border-black/10">
 <!-- 2. GET THE HIGHLIGHTS -->
 <section class="bg-[#f5f5f7] py-section-v-padding border-t border-black/10 overflow-hidden">
-  <style>
-    @keyframes wavePulse {
-      0%, 100% { transform: scaleY(0.7); }
-      50% { transform: scaleY(1.1); }
-    }
-    .wave-bar { animation: wavePulse 1.5s ease-in-out infinite; transform-origin: bottom; }
-    .wave-bar:nth-child(1) { animation-delay: 0.0s; height: 35%; }
-    .wave-bar:nth-child(2) { animation-delay: 0.2s; height: 60%; }
-    .wave-bar:nth-child(3) { animation-delay: 0.4s; height: 100%; box-shadow: 0 0 15px rgba(0,102,204,0.5); }
-    .wave-bar:nth-child(4) { animation-delay: 0.2s; height: 75%; }
-    .wave-bar:nth-child(5) { animation-delay: 0.0s; height: 40%; }
-  </style>
 
 <div class="max-w-[1200px] mx-auto px-margin-base mb-16 md:mb-24 text-center">
   <p class="font-display text-[19px] md:text-[21px] font-semibold text-[#86868b] tracking-tight mb-2">Core capabilities</p>
@@ -126,7 +113,7 @@
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-[1200px] mx-auto w-full pb-16">
 
     <!-- Card 1: Voice -->
-    <div class="rounded-[32px] md:rounded-[40px] bg-[#ffffff] overflow-hidden flex flex-col relative shadow-[0_4px_24px_rgba(0,0,0,0.04)] h-[500px] md:h-[600px] group cursor-default transition-transform duration-500 hover:-translate-y-2 hover:shadow-[0_12px_48px_rgba(0,0,0,0.08)]">
+    <div tabindex="0" class="rounded-[32px] md:rounded-[40px] bg-[#ffffff] overflow-hidden flex flex-col relative shadow-[0_4px_24px_rgba(0,0,0,0.04)] h-[500px] md:h-[600px] group cursor-default transition-transform duration-500 hover:-translate-y-2 hover:shadow-[0_12px_48px_rgba(0,0,0,0.08)] focus-within:-translate-y-2 focus-within:shadow-[0_12px_48px_rgba(0,0,0,0.08)] outline-none focus-visible:ring-2 focus-visible:ring-accent-blue">
       <div class="p-8 md:p-12 z-10 text-center flex flex-col items-center">
         <p class="font-body text-[15px] font-semibold text-[#86868b] tracking-wide mb-3">Voice</p>
         <p class="font-display text-[32px] md:text-[40px] font-semibold text-[#1d1d1f] leading-tight tracking-tight">Captures every detail.</p>
@@ -134,25 +121,25 @@
       </div>
       <div class="flex-1 flex items-center justify-center relative overflow-hidden">
         <!-- Apple Siri-style glowing orb -->
-        <div class="w-48 h-48 rounded-full bg-gradient-to-tr from-[#0071e3] via-[#8a2be2] to-[#ff2a6d] blur-[40px] opacity-40 group-hover:opacity-60 transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-1000 ease-out"></div>
-        <div class="absolute w-32 h-32 rounded-full bg-white/30 backdrop-blur-xl border border-white/50 shadow-lg flex items-center justify-center transform group-hover:scale-105 transition-transform duration-1000">
+        <div class="w-48 h-48 rounded-full bg-gradient-to-tr from-[#0071e3] via-[#8a2be2] to-[#ff2a6d] blur-[40px] opacity-40 group-hover:opacity-60 group-focus-within:opacity-60 transform group-hover:scale-110 group-focus-within:scale-110 group-hover:rotate-12 group-focus-within:rotate-12 transition-all duration-1000 ease-out"></div>
+        <div class="absolute w-32 h-32 rounded-full bg-white/30 backdrop-blur-xl border border-white/50 shadow-lg flex items-center justify-center transform group-hover:scale-105 group-focus-within:scale-105 transition-transform duration-1000">
            <svg viewBox="0 0 24 24" fill="none" stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="32" height="32"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/></svg>
         </div>
       </div>
     </div>
 
     <!-- Card 2: Vision -->
-    <div class="rounded-[32px] md:rounded-[40px] bg-[#ffffff] overflow-hidden flex flex-col relative shadow-[0_4px_24px_rgba(0,0,0,0.04)] h-[500px] md:h-[600px] group cursor-default transition-transform duration-500 hover:-translate-y-2 hover:shadow-[0_12px_48px_rgba(0,0,0,0.08)]">
+    <div tabindex="0" class="rounded-[32px] md:rounded-[40px] bg-[#ffffff] overflow-hidden flex flex-col relative shadow-[0_4px_24px_rgba(0,0,0,0.04)] h-[500px] md:h-[600px] group cursor-default transition-transform duration-500 hover:-translate-y-2 hover:shadow-[0_12px_48px_rgba(0,0,0,0.08)] focus-within:-translate-y-2 focus-within:shadow-[0_12px_48px_rgba(0,0,0,0.08)] outline-none focus-visible:ring-2 focus-visible:ring-accent-blue">
       <div class="p-8 md:p-12 z-10 text-center flex flex-col items-center">
         <p class="font-body text-[15px] font-semibold text-[#86868b] tracking-wide mb-3">Vision</p>
         <p class="font-display text-[32px] md:text-[40px] font-semibold text-[#1d1d1f] leading-tight tracking-tight">Understands your world.</p>
         <p class="font-body text-[17px] md:text-[19px] text-[#86868b] leading-[1.4] mt-4 max-w-[280px]">2MP OV2640 with on-command capture. Processes scenes in under 2s.</p>
       </div>
       <div class="flex-1 flex items-center justify-center relative overflow-hidden">
-         <div class="w-56 h-56 rounded-full flex items-center justify-center relative transform transition-transform duration-[1.5s] ease-out group-hover:scale-[1.03]">
+         <div class="w-56 h-56 rounded-full flex items-center justify-center relative transform transition-transform duration-[1.5s] ease-out group-hover:scale-[1.03] group-focus-within:scale-[1.03]">
             <!-- Elegant, minimal Apple lens -->
             <div class="absolute inset-0 rounded-full border border-black/5 bg-gradient-to-b from-[#f5f5f7] to-[#ffffff] shadow-[0_10px_30px_rgba(0,0,0,0.04)]"></div>
-            <div class="w-40 h-40 rounded-full bg-[#1d1d1f] flex items-center justify-center shadow-[inset_0_4px_20px_rgba(0,0,0,1)] relative overflow-hidden">
+            <div class="w-40 h-40 rounded-full bg-[#1d1d1f] flex items-center justify-center shadow-[inset_0_4px_20px_rgba(0,0,0,0.3)] relative overflow-hidden">
                <div class="absolute w-[120%] h-[120%] bg-gradient-to-br from-white/10 via-transparent to-transparent rounded-full opacity-60 -top-[10%] -left-[10%] mix-blend-screen"></div>
                <div class="w-12 h-12 rounded-full bg-black border border-white/10 shadow-[inset_0_0_10px_rgba(0,0,0,1)] relative flex items-center justify-center">
                  <div class="w-4 h-4 rounded-full bg-gradient-to-br from-[#0071e3]/30 to-transparent blur-[1px]"></div>
@@ -163,7 +150,7 @@
     </div>
 
     <!-- Card 3: Memory -->
-    <div class="rounded-[32px] md:rounded-[40px] bg-[#ffffff] overflow-hidden flex flex-col relative shadow-[0_4px_24px_rgba(0,0,0,0.04)] h-[500px] md:h-[600px] group cursor-default transition-transform duration-500 hover:-translate-y-2 hover:shadow-[0_12px_48px_rgba(0,0,0,0.08)]">
+    <div tabindex="0" class="rounded-[32px] md:rounded-[40px] bg-[#ffffff] overflow-hidden flex flex-col relative shadow-[0_4px_24px_rgba(0,0,0,0.04)] h-[500px] md:h-[600px] group cursor-default transition-transform duration-500 hover:-translate-y-2 hover:shadow-[0_12px_48px_rgba(0,0,0,0.08)] focus-within:-translate-y-2 focus-within:shadow-[0_12px_48px_rgba(0,0,0,0.08)] outline-none focus-visible:ring-2 focus-visible:ring-accent-blue">
       <div class="p-8 md:p-12 z-10 text-center flex flex-col items-center">
         <p class="font-body text-[15px] font-semibold text-[#86868b] tracking-wide mb-3">Memory</p>
         <p class="font-display text-[32px] md:text-[40px] font-semibold text-[#1d1d1f] leading-tight tracking-tight">Never forgets.</p>
@@ -171,15 +158,15 @@
       </div>
       <div class="flex-1 flex items-center justify-center relative overflow-hidden">
         <!-- Clean, structured memory nodes -->
-        <div class="w-full h-full relative" style="background-image: radial-gradient(circle at center, #86868b 1px, transparent 1.5px); background-size: 24px 24px; opacity: 0.15; transform: perspective(1000px) rotateX(45deg) scale(2); transition: transform 2s ease-out;" class="group-hover:rotateX(30deg)"></div>
-        <div class="absolute w-32 h-32 rounded-full bg-[#f5f5f7] border border-[#1d1d1f]/5 shadow-xl flex items-center justify-center z-10 transform transition-transform duration-[1.5s] ease-out group-hover:scale-105">
+        <div class="w-full h-full relative group-hover:rotateX(30deg) group-focus-within:rotateX(30deg)" style="background-image: radial-gradient(circle at center, #86868b 1px, transparent 1.5px); background-size: 24px 24px; opacity: 0.15; transform: perspective(1000px) rotateX(45deg) scale(2); transition: transform 2s ease-out;"></div>
+        <div class="absolute w-32 h-32 rounded-full bg-[#f5f5f7] border border-[#1d1d1f]/5 shadow-xl flex items-center justify-center z-10 transform transition-transform duration-[1.5s] ease-out group-hover:scale-105 group-focus-within:scale-105">
           <svg viewBox="0 0 24 24" fill="none" stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="32" height="32"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
         </div>
       </div>
     </div>
 
     <!-- Card 4: Open Source (Hero Manifesto) -->
-    <div class="lg:col-span-3 rounded-[32px] md:rounded-[40px] bg-[#1d1d1f] overflow-hidden flex flex-col md:flex-row relative shadow-[0_20px_40px_rgba(0,0,0,0.08)] md:h-[600px] group cursor-default transition-transform duration-500 hover:-translate-y-2 hover:shadow-[0_30px_60px_rgba(0,0,0,0.15)]">
+    <div tabindex="0" class="lg:col-span-3 rounded-[32px] md:rounded-[40px] bg-[#1d1d1f] overflow-hidden flex flex-col md:flex-row relative shadow-[0_20px_40px_rgba(0,0,0,0.08)] md:h-[600px] group cursor-default transition-transform duration-500 hover:-translate-y-2 hover:shadow-[0_30px_60px_rgba(0,0,0,0.15)] focus-within:-translate-y-2 focus-within:shadow-[0_30px_60px_rgba(0,0,0,0.15)] outline-none focus-visible:ring-2 focus-visible:ring-accent-blue">
       
       <!-- Content Side -->
       <div class="p-10 md:p-16 lg:p-20 z-20 w-full md:w-[50%] flex flex-col justify-center relative">
@@ -200,7 +187,7 @@
         <!-- Gradient fade -->
         <div class="absolute left-0 top-0 bottom-0 w-48 bg-gradient-to-r from-[#1d1d1f] to-transparent z-20 hidden md:block"></div>
         
-        <div class="w-full md:w-[130%] h-full flex items-center justify-center transform transition-transform duration-[2s] ease-out group-hover:scale-[1.02] md:group-hover:-translate-x-4 opacity-90 md:opacity-100">
+        <div class="w-full md:w-[130%] h-full flex items-center justify-center transform transition-transform duration-[2s] ease-out group-hover:scale-[1.02] group-focus-within:scale-[1.02] md:group-hover:-translate-x-4 md:group-focus-within:-translate-x-4 opacity-90 md:opacity-100">
           
           <!-- Xcode/VSCode Dark Theme Window -->
           <div class="bg-[#28282b] rounded-2xl border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.5)] overflow-hidden w-full max-w-[600px] ml-auto">
@@ -240,71 +227,7 @@
 
 <!-- AirPods 4-style "Seamless experience" Section -->
 <section id="app-demo-section" class="w-full overflow-hidden flex flex-col items-center">
-  <style>
-    #app-demo-section {
-      padding: 120px 0 80px 0;
-      background: linear-gradient(to bottom, rgba(245, 245, 247, 0) 0%, rgba(245, 245, 247, 0) 30%, #f5f5f7 65%, #f5f5f7 100%),
-                  linear-gradient(to right, #f25134, #df307e);
-    }
-    #app-demo-section .demo-img-container {
-      width: 780px;
-      display: flex;
-      justify-content: center;
-      position: relative;
-      margin-bottom: 60px;
-    }
-    #app-demo-section .demo-phone-img {
-      width: 580px;
-      display: block;
-      filter: drop-shadow(0 40px 60px rgba(0,0,0,0.18)) drop-shadow(0 8px 20px rgba(0,0,0,0.10));
-      opacity: 0;
-      transform: translateY(40px) translateX(-20px);
-      transition: opacity 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    }
-    #app-demo-section .demo-phone-img.animate-in {
-      opacity: 1;
-      transform: translateY(0) translateX(0);
-    }
-    #app-demo-section .demo-caption-label {
-      opacity: 0;
-      transform: translateY(16px);
-      transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    }
-    #app-demo-section .demo-caption-label.animate-in {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    #app-demo-section .demo-caption-body {
-      opacity: 0;
-      transform: translateY(16px);
-      transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    }
-    #app-demo-section .demo-caption-body.animate-in {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    @media (max-width: 767px) {
-      #app-demo-section {
-        padding: 60px 0 40px 0;
-      }
-      #app-demo-section .demo-headline {
-        font-size: 34px !important;
-      }
-      #app-demo-section .demo-img-container {
-        width: 100%;
-        padding: 0 16px;
-        margin-bottom: 40px;
-      }
-      #app-demo-section .demo-phone-img {
-        width: 100%;
-        max-width: 360px;
-        margin: 0 auto;
-      }
-      #app-demo-section .demo-caption-container {
-        padding: 0 24px;
-      }
-    }
-  </style>
+
 
   <!-- Headline Block -->
   <div class="w-full text-center px-4">
@@ -316,7 +239,7 @@
 
   <!-- Image Pair Layout -->
   <div class="demo-img-container">
-    <img id="demoPhoneImage" alt="Aura Phone Mockup" class="demo-phone-img" src="assets/png/mobile%20and%20device.png">
+    <img id="demoPhoneImage" width="580" height="580" loading="lazy" alt="Aura Phone Mockup" class="demo-phone-img" src="assets/png/mobile%20and%20device.png">
   </div>
 
   <!-- Caption Block -->
@@ -336,31 +259,30 @@
 <h2 class="font-display text-display-md md:text-hero-display">A closer look.</h2>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-12 gap-2 w-full px-2">
-  <!-- Card 1: Wide Product Shot -->
   <div class="md:col-span-8 aspect-[16/9] overflow-hidden rounded-[28px] group relative bg-canvas-parchment">
-    <img alt="Product shot wide" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500" src="assets/png/three hero.png">
+    <img width="800" height="450" loading="lazy" alt="Product shot wide" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500" src="assets/png/three hero.png">
   </div>
   <!-- Card 2: ESP32-S3 Sense -->
   <div class="md:col-span-4 aspect-square md:aspect-auto h-full overflow-hidden rounded-[28px] group relative bg-canvas-parchment">
-    <img alt="ESP32-S3 Sense module" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500" src="assets/png/esp32 s3 sence.png">
+    <img width="400" height="400" loading="lazy" alt="ESP32-S3 Sense module" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500" src="assets/png/esp32 s3 sence.png">
   </div>
   <!-- Card 3: Motherboard internal components view -->
   <div class="md:col-span-4 aspect-square overflow-hidden rounded-[28px] group relative bg-canvas-parchment">
-    <img alt="Internal components view" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500" src="assets/png/internal view.png">
+    <img width="400" height="400" loading="lazy" alt="Internal components view" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500" src="assets/png/internal view.png">
   </div>
   <!-- Card 4: Mobile and device -->
   <div class="md:col-span-4 aspect-square overflow-hidden rounded-[28px] group relative bg-canvas-parchment">
-    <img alt="Aura with mobile device" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500" src="assets/png/mobile and device.png">
+    <img width="400" height="400" loading="lazy" alt="Aura with mobile device" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500" src="assets/png/mobile and device.png">
   </div>
   <!-- Card 5: Front and back -->
   <div class="md:col-span-4 aspect-square overflow-hidden rounded-[28px] group relative bg-canvas-parchment">
-    <img alt="Aura pendant front and back" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500" src="assets/png/front and back.png">
+    <img width="400" height="400" loading="lazy" alt="Aura pendant front and back" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500" src="assets/png/front and back.png">
   </div>
 </div>
 </section>
 <!-- 4. VOICE STORY -->
 <section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
-  <img alt="Person wearing Aura" class="absolute inset-0 w-full h-full object-cover object-center" src="assets/hero/hero-silhouette.jpg">
+  <img width="1920" height="1080" loading="lazy" alt="Person wearing Aura" class="absolute inset-0 w-full h-full object-cover object-center" src="assets/hero/hero-silhouette.jpg">
   <div class="absolute inset-0 bg-black/40"></div>
   <div class="relative text-center px-margin-base max-w-prose-max-width z-10 select-none">
     <span class="font-body text-overline text-white/60 uppercase tracking-[0.2em] mb-4 block">Voice capture</span>
@@ -375,7 +297,7 @@
 <div class="flex overflow-x-auto gap-8 no-scrollbar -mx-margin-base px-margin-base pt-8 md:pt-0">
 <div class="min-w-[400px] md:min-w-[600px] rounded-[28px] bg-white border border-black/5 shadow-sm overflow-hidden flex flex-col transition-all hover:scale-[1.01]">
 <div class="h-[360px]">
-<img alt="Mic grill detail" class="w-full h-full object-cover" src="assets/product/mic-macro.png">
+<img width="600" height="360" loading="lazy" alt="Mic grill detail" class="w-full h-full object-cover" src="assets/product/mic-macro.png">
 </div>
 <div class="p-8 h-[240px]">
 <h3 class="font-display text-lead mb-4 text-ink font-semibold">Spatial Listening</h3>
@@ -399,7 +321,7 @@
 <!-- 6. VISION STORY -->
 <section class="bg-white">
 <div class="relative h-[80vh] w-full flex items-center justify-center">
-<img alt="Aura camera view" class="absolute inset-0 w-full h-full object-cover" src="assets/hero/lifestyle-reading.png">
+<img width="1920" height="800" loading="lazy" alt="Aura camera view" class="absolute inset-0 w-full h-full object-cover" src="assets/hero/lifestyle-reading.png">
 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
 <div class="relative text-center px-margin-base max-w-prose-max-width">
 <span class="font-body text-overline text-white/80 uppercase mb-4 block">Visual understanding</span>
@@ -430,7 +352,7 @@
 <h2 class="font-display text-display-md md:text-hero-display mb-4">Built to disappear.</h2>
 <p class="font-body text-lead text-ink-secondary mb-12">80 grams. Worn all day.</p>
 <div class="relative inline-block my-20">
-<img alt="Aura device floating" class="w-full max-w-[800px] mx-auto" src="assets/png/pendant-front.png">
+<img width="800" height="600" loading="lazy" alt="Aura device floating" class="w-full max-w-[800px] mx-auto" src="assets/png/pendant-front.png">
 <!-- Annotations -->
 <div class="absolute top-[20%] right-[10%] flex items-center gap-4">
 <div class="h-px w-24 bg-[#1d1d1f]/20"></div>
@@ -491,7 +413,7 @@
     
     <!-- Pendant Image exactly on the border -->
     <div class="w-[280px] md:w-[400px] aspect-square mb-10 md:mb-16 transform hover:-translate-y-2 transition-transform duration-700">
-      <img src="assets/product/pendant-front.png" alt="Aura Pendant" class="w-full h-full object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.2)]">
+      <img width="400" height="400" loading="lazy" src="assets/product/pendant-front.png" alt="Aura Pendant" class="w-full h-full object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.2)]">
     </div>
 
     <!-- Text Content -->
@@ -533,7 +455,7 @@
   <div class="absolute inset-0 bg-gradient-to-t from-[#272729] via-transparent to-[#272729] z-0"></div>
   
   <!-- Massive responsive product shot -->
-  <img alt="Aura core" class="relative z-10 w-[90%] md:w-[75%] max-w-[1000px] object-contain filter drop-shadow-[0_40px_80px_rgba(0,0,0,0.6)] transform hover:scale-[1.02] transition-transform duration-[2s] ease-out" src="assets/png/three hero.png">
+  <img width="1000" height="428" loading="lazy" alt="Aura core" class="relative z-10 w-[90%] md:w-[75%] max-w-[1000px] object-contain filter drop-shadow-[0_40px_80px_rgba(0,0,0,0.6)] transform hover:scale-[1.02] transition-transform duration-[2s] ease-out" src="assets/png/three hero.png">
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 <div class="p-8 bg-white/5 rounded-[18px]">
@@ -563,7 +485,7 @@
 </div>
 </div>
 <div class="md:w-1/2 flex justify-center">
-<img alt="App UI screens" class="w-full max-w-[400px]" src="assets/png/software.png">
+<img width="400" height="600" loading="lazy" alt="App UI screens" class="w-full max-w-[400px]" src="assets/png/software.png">
 </div>
 </div>
 </section>
@@ -589,17 +511,17 @@
 </div>
 </div>
 <div class="md:w-1/2 -mr-margin-base flex justify-end">
-<img alt="Aura exploded view" class="w-full max-w-[600px] translate-x-12" src="assets/product/exploded-view.jpg">
+<img width="600" height="400" loading="lazy" alt="Aura exploded view" class="w-full max-w-[600px] translate-x-12" src="assets/product/exploded-view.jpg">
 </div>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
 <div class="bg-white rounded-[18px] p-8">
-<img alt="Board schematics" class="w-full h-64 object-contain mb-8" src="assets/product/mcu-board.png">
+<img width="500" height="256" loading="lazy" alt="Board schematics" class="w-full h-64 object-contain mb-8" src="assets/product/mcu-board.png">
 <h3 class="font-display text-lead mb-2">ESP32-S3 Board</h3>
 <p class="text-ink-secondary text-body">Low power architecture optimized for Wi-Fi and Bluetooth LE connectivity with integrated power management.</p>
 </div>
 <div class="bg-white rounded-[18px] p-8">
-<img alt="Battery module" class="w-full h-64 object-contain mb-8" src="assets/product/battery-render.png">
+<img width="500" height="256" loading="lazy" alt="Battery module" class="w-full h-64 object-contain mb-8" src="assets/product/battery-render.png">
 <h3 class="font-display text-lead mb-2">High-Density Li-Po</h3>
 <p class="text-ink-secondary text-body">3.7V 350mAh cell designed for maximum energy density in minimal physical footprint.</p>
 </div>
@@ -648,7 +570,7 @@
 </div>
 </div>
 <div class="md:w-1/2 p-12">
-<img alt="Aura finale" class="w-full h-auto object-contain" src="assets/product/all-components.png">
+<img width="600" height="400" loading="lazy" alt="Aura finale" class="w-full h-auto object-contain" src="assets/product/all-components.png">
 </div>
 </div>
 </div>
@@ -656,170 +578,7 @@
 
 <!-- FAQ Section -->
 <section id="faq-section" class="w-full overflow-hidden bg-[#f5f5f7]">
-  <style>
-    #faq-section {
-      padding-top: 80px;
-      padding-bottom: 80px;
-      position: relative;
-      background: #f5f5f7;
-    }
-    #faq-section .faq-header-row {
-      padding-left: max(24px, calc((100vw - 1200px) / 2));
-      padding-right: max(24px, calc((100vw - 1200px) / 2));
-      margin-bottom: 48px;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-    }
-    #faq-section .faq-headline {
-      font-size: 40px;
-      font-weight: 700;
-      color: #1d1d1f;
-      letter-spacing: -0.003em;
-      line-height: 1.07;
-      max-width: 480px;
-    }
-    @media (min-width: 768px) {
-      #faq-section .faq-headline {
-        font-size: 56px;
-      }
-    }
-    #faq-section .faq-docs-link {
-      font-size: 17px;
-      color: #0066cc;
-      font-weight: 400;
-      text-decoration: none;
-      padding-bottom: 8px;
-    }
-    #faq-section .faq-docs-link:hover {
-      text-decoration: underline;
-    }
-    #faq-section .cards-container {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      overflow-x: auto;
-      overflow-y: visible;
-      gap: 16px;
-      padding-left: max(24px, calc((100vw - 1200px) / 2));
-      padding-right: max(24px, calc((100vw - 1200px) / 2));
-      padding-top: 12px;
-      padding-bottom: 24px;
-      scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
-      scrollbar-width: none;
-      -ms-overflow-style: none;
-      cursor: grab;
-    }
-    #faq-section .cards-container::-webkit-scrollbar {
-      display: none;
-    }
-    #faq-section .faq-card {
-      background: #ffffff;
-      border-radius: 18px;
-      padding: 28px 24px 24px 24px;
-      width: 300px;
-      min-width: 300px;
-      max-width: 300px;
-      flex-shrink: 0;
-      min-height: 220px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-      transition: box-shadow 0.25s ease, transform 0.25s ease;
-      scroll-snap-align: start;
-    }
-    #faq-section .faq-card:hover {
-      box-shadow: 0 4px 20px rgba(0,0,0,0.10);
-      transform: translateY(-2px);
-    }
-    #faq-section .faq-answer {
-      max-height: 60px;
-      overflow: hidden;
-      transition: max-height 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    }
-    #faq-section .faq-card.expanded .faq-answer {
-      max-height: 400px;
-    }
-    #faq-section .faq-expand-btn {
-      width: 36px;
-      height: 36px;
-      background: #1d1d1f;
-      border-radius: 50%;
-      color: white;
-      font-size: 22px;
-      line-height: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      align-self: flex-end;
-      margin-top: 16px;
-      border: none;
-      cursor: pointer;
-      transition: transform 0.3s ease;
-      flex-shrink: 0;
-    }
-    #faq-section .faq-card.expanded .faq-expand-btn {
-      transform: rotate(45deg);
-    }
-    #faq-section .faq-controls {
-      position: absolute;
-      bottom: 24px;
-      right: max(24px, calc((100vw - 1200px) / 2));
-      display: flex;
-      gap: 8px;
-      z-index: 10;
-    }
-    #faq-section .faq-control-btn {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      background: rgba(0, 0, 0, 0.08);
-      color: #1d1d1f;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: none;
-      outline: none;
-      transition: background 0.2s ease, opacity 0.2s ease;
-    }
-    #faq-section .faq-control-btn:hover:not(:disabled) {
-      background: rgba(0, 0, 0, 0.12);
-    }
-    #faq-section .faq-control-btn:disabled {
-      opacity: 0.3;
-      cursor: default;
-    }
-    @media (max-width: 767px) {
-      #faq-section {
-        padding: 60px 0;
-      }
-      #faq-section .faq-header-row {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 16px;
-        padding-left: 24px;
-        padding-right: 24px;
-      }
-      #faq-section .faq-headline {
-        font-size: 32px;
-      }
-      #faq-section .faq-docs-link {
-        width: 100%;
-        display: block;
-        padding-bottom: 0;
-      }
-      #faq-section .faq-card {
-        width: 280px;
-        min-width: 280px;
-        max-width: 280px;
-      }
-      #faq-section .faq-controls {
-        display: none;
-      }
-    }
-  </style>
+
 
   <!-- Header Row -->
   <div class="faq-header-row">
