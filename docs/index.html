@@ -7,6 +7,7 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script src="js/tailwind-config.js"></script>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/fonts.css">
 <link rel="stylesheet" href="css/global.css">
 <link rel="stylesheet" href="css/nav.css">
 <link rel="stylesheet" href="css/style.css">
@@ -17,7 +18,7 @@
 <!-- TOP NAVIGATION SHELL -->
 <nav id="navbar" class="fixed top-0 w-full h-[52px] z-[100] bg-transparent">
 <div class="nav-inner flex justify-between items-center px-margin-base w-full max-w-[1200px] mx-auto h-full">
-<a href="index.html" class="font-display text-tagline" style="color: #ffffff;">Aura</a>
+<a href="index.html" class="font-display text-tagline nav-wordmark" style="color: #ffffff;">Aura</a>
 <div id="mobileMenu" class="hidden absolute top-[52px] left-0 w-full bg-surface/95 backdrop-blur-md border-b border-black/10 flex-col p-4 gap-4 md:static md:w-auto md:bg-transparent md:border-none md:p-0 md:flex md:flex-row md:gap-8 items-center h-full">
 <a class="nav-link font-body text-body font-semibold text-white hover:text-accent-blue transition-colors" href="index.html">Overview</a>
 <a class="nav-link font-body text-body font-normal text-white/90 hover:text-accent-blue transition-colors" href="about.html">About</a>
@@ -27,7 +28,7 @@
 </div>
 <div class="flex items-center gap-4">
 <a href="docs.html#hardware" class="bg-accent-blue text-white rounded-full px-[15px] py-[6px] text-caption font-medium hover:opacity-90 transition-opacity flex items-center justify-center">Build Yours</a>
-<button onclick="document.getElementById('mobileMenu').classList.toggle('hidden'); document.getElementById('mobileMenu').classList.toggle('flex')" class="md:hidden flex items-center text-on-surface dark:text-surface-bright">
+<button type="button" aria-label="Toggle navigation menu" onclick="document.getElementById('mobileMenu').classList.toggle('hidden'); document.getElementById('mobileMenu').classList.toggle('flex')" class="md:hidden flex items-center text-on-surface dark:text-surface-bright min-w-[44px] min-h-[44px] justify-center">
   <span class="material-symbols-outlined">menu</span>
 </button>
 </div>
@@ -35,7 +36,7 @@
 </nav>
 <!-- 1. HERO -->
 <section class="relative h-screen w-full overflow-hidden bg-black">
-  <img alt="Aura Worn Hero" class="absolute inset-0 w-full h-full object-cover object-center" src="assets/hero/hero-purple.png">
+  <img width="1920" height="1080" alt="Aura Worn Hero" class="absolute inset-0 w-full h-full object-cover object-center" src="assets/hero/hero-purple.png">
   <!-- Dark gradient overlay at the bottom 25% for text legibility -->
   <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
   
@@ -43,7 +44,7 @@
     <div class="flex flex-col md:flex-row justify-between items-end w-full gap-8">
       <!-- Left Title (Asymmetrical) -->
       <div class="text-left select-none">
-        <span class="font-body text-overline text-white/60 uppercase tracking-[0.2em] block mb-2">Aura</span>
+        <span class="font-body text-overline text-white/60 block mb-2">Aura</span>
         <h1 class="font-display text-display-lg md:text-hero-display text-white leading-[1.05] tracking-tight">Worn.<br>Screenless.<br>Aware.</h1>
       </div>
 
@@ -96,113 +97,128 @@
   </div>
 </section>
 <!-- 2. GET THE HIGHLIGHTS -->
-<section class="bg-[#f5f5f7] py-section-v-padding border-t border-black/10">
+<!-- 2. GET THE HIGHLIGHTS -->
+<section class="bg-[#f5f5f7] py-section-v-padding border-t border-black/10 overflow-hidden">
+
+<div class="max-w-[1200px] mx-auto px-margin-base mb-16 md:mb-24 text-center">
+  <p class="font-display text-[19px] md:text-[21px] font-semibold text-[#86868b] tracking-tight mb-2">Core capabilities</p>
+  <h2 class="font-display text-[56px] md:text-[80px] lg:text-[96px] font-semibold tracking-[-0.03em] leading-[1.02] text-[#1d1d1f]">
+    Intelligence,<br>
+    <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#0071e3] via-[#8a2be2] to-[#ff2a6d]">woven into life.</span>
+  </h2>
+</div>
+
 <div class="max-w-[1200px] mx-auto px-margin-base">
-<h2 class="font-display text-display-md md:text-hero-display mb-12">The highlights.</h2>
 
-<div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-[1200px] mx-auto w-full pb-16">
 
-  <!-- Card 1: Voice — parchment, mic + waveform visual -->
-  <div class="group cursor-default">
-    <div class="rounded-[18px] bg-white overflow-hidden aspect-[3/4] flex flex-col justify-between p-8 mb-4 hover:scale-[1.015] transition-transform duration-500 shadow-sm border border-black/5">
-      <div>
-        <p class="font-body text-micro-legal font-semibold text-ink-tertiary uppercase tracking-widest mb-3">Voice</p>
-        <p class="font-display text-lead font-semibold text-ink">0.5s<br>transcrip-<br>tion.</p>
+    <!-- Card 1: Voice -->
+    <div tabindex="0" class="rounded-[32px] md:rounded-[40px] bg-[#ffffff] overflow-hidden flex flex-col relative shadow-[0_4px_24px_rgba(0,0,0,0.04)] h-[500px] md:h-[600px] group cursor-default transition-transform duration-500 hover:-translate-y-2 hover:shadow-[0_12px_48px_rgba(0,0,0,0.08)] focus-within:-translate-y-2 focus-within:shadow-[0_12px_48px_rgba(0,0,0,0.08)] outline-none focus-visible:ring-2 focus-visible:ring-accent-blue">
+      <div class="p-8 md:p-12 z-10 text-center flex flex-col items-center">
+        <p class="font-body text-[15px] font-semibold text-[#86868b] tracking-wide mb-3">Voice</p>
+        <p class="font-display text-[32px] md:text-[40px] font-semibold text-[#1d1d1f] leading-tight tracking-tight">Captures every detail.</p>
+        <p class="font-body text-[17px] md:text-[19px] text-[#86868b] leading-[1.4] mt-4 max-w-[280px]">0.5s transcription. Every word stored as meaning, not just text.</p>
       </div>
-      <div class="flex-1 flex items-end justify-start pb-2">
-        <!-- Waveform bars -->
-        <div class="flex items-end gap-[3px] h-16">
-          <div class="w-[3px] rounded-full bg-[#0066cc]/30" style="height:20%"></div>
-          <div class="w-[3px] rounded-full bg-[#0066cc]/50" style="height:45%"></div>
-          <div class="w-[3px] rounded-full bg-[#0066cc]/70" style="height:80%"></div>
-          <div class="w-[3px] rounded-full bg-[#0066cc]" style="height:100%"></div>
-          <div class="w-[3px] rounded-full bg-[#0066cc]/80" style="height:65%"></div>
-          <div class="w-[3px] rounded-full bg-[#0066cc]/60" style="height:90%"></div>
-          <div class="w-[3px] rounded-full bg-[#0066cc]/40" style="height:50%"></div>
-          <div class="w-[3px] rounded-full bg-[#0066cc]/70" style="height:75%"></div>
-          <div class="w-[3px] rounded-full bg-[#0066cc]/50" style="height:40%"></div>
-          <div class="w-[3px] rounded-full bg-[#0066cc]/30" style="height:25%"></div>
+      <div class="flex-1 flex items-center justify-center relative overflow-hidden">
+        <!-- Apple Siri-style glowing orb -->
+        <div class="w-48 h-48 rounded-full bg-gradient-to-tr from-[#0071e3] via-[#8a2be2] to-[#ff2a6d] blur-[40px] opacity-40 group-hover:opacity-60 group-focus-within:opacity-60 transform group-hover:scale-110 group-focus-within:scale-110 group-hover:rotate-12 group-focus-within:rotate-12 transition-all duration-1000 ease-out"></div>
+        <div class="absolute w-32 h-32 rounded-full bg-white/30 backdrop-blur-xl border border-white/50 shadow-lg flex items-center justify-center transform group-hover:scale-105 group-focus-within:scale-105 transition-transform duration-1000">
+           <svg viewBox="0 0 24 24" fill="none" stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="32" height="32"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/></svg>
         </div>
       </div>
-      <div class="flex items-center gap-2 mt-4">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#0066cc" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
-        <span class="font-body text-fine-print font-medium text-accent-blue">Deepgram Nova-2</span>
-      </div>
     </div>
-    <p class="font-body text-caption text-ink leading-snug"><strong>0.5 second transcription.</strong> <span class="text-[#86868b]">Every word captured and stored as semantic meaning — not just raw text.</span></p>
-  </div>
 
-  <!-- Card 2: Vision — action blue, camera icon -->
-  <div class="group cursor-default">
-    <div class="rounded-[18px] bg-white overflow-hidden aspect-[3/4] flex flex-col justify-between p-8 mb-4 hover:scale-[1.015] transition-transform duration-500 shadow-sm border border-black/5">
-      <div>
-        <p class="font-body text-micro-legal font-semibold text-ink-tertiary uppercase tracking-widest mb-3">Vision</p>
-        <p class="font-display text-lead font-semibold text-ink">within<br>reach.</p>
+    <!-- Card 2: Vision -->
+    <div tabindex="0" class="rounded-[32px] md:rounded-[40px] bg-[#ffffff] overflow-hidden flex flex-col relative shadow-[0_4px_24px_rgba(0,0,0,0.04)] h-[500px] md:h-[600px] group cursor-default transition-transform duration-500 hover:-translate-y-2 hover:shadow-[0_12px_48px_rgba(0,0,0,0.08)] focus-within:-translate-y-2 focus-within:shadow-[0_12px_48px_rgba(0,0,0,0.08)] outline-none focus-visible:ring-2 focus-visible:ring-accent-blue">
+      <div class="p-8 md:p-12 z-10 text-center flex flex-col items-center">
+        <p class="font-body text-[15px] font-semibold text-[#86868b] tracking-wide mb-3">Vision</p>
+        <p class="font-display text-[32px] md:text-[40px] font-semibold text-[#1d1d1f] leading-tight tracking-tight">Understands your world.</p>
+        <p class="font-body text-[17px] md:text-[19px] text-[#86868b] leading-[1.4] mt-4 max-w-[280px]">2MP OV2640 with on-command capture. Processes scenes in under 2s.</p>
       </div>
-      <div class="flex-1 flex items-center justify-center">
-        <div class="w-20 h-20 rounded-full bg-[#0066cc]/10 flex items-center justify-center">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#0066cc" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="36" height="36"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
-        </div>
-      </div>
-      <p class="font-body text-ink-tertiary text-fine-print font-medium tracking-wide">capture what you see</p>
-    </div>
-    <p class="font-body text-caption text-ink leading-snug"><strong>It sees what you see.</strong> <span class="text-[#86868b]">2MP OV2640. On-command capture. GPT-4o Vision in under 2 seconds.</span></p>
-  </div>
-
-  <!-- Card 3: Memory — parchment, brain/search visual -->
-  <div class="group cursor-default">
-    <div class="rounded-[18px] bg-white overflow-hidden aspect-[3/4] flex flex-col justify-between p-8 mb-4 hover:scale-[1.015] transition-transform duration-500 shadow-sm border border-black/5">
-      <div>
-        <p class="font-body text-micro-legal font-semibold text-ink-tertiary uppercase tracking-widest mb-3">Memory</p>
-        <p class="font-display text-lead font-semibold text-ink">never<br>forgets.</p>
-      </div>
-      <div class="flex-1 flex items-center justify-center">
-        <div class="relative">
-          <!-- Concentric search rings -->
-          <div class="w-20 h-20 rounded-full border border-[#0066cc]/20 flex items-center justify-center">
-            <div class="w-14 h-14 rounded-full border border-[#0066cc]/35 flex items-center justify-center">
-              <div class="w-8 h-8 rounded-full bg-[#0066cc]/10 flex items-center justify-center">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#0066cc" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-              </div>
+      <div class="flex-1 flex items-center justify-center relative overflow-hidden">
+         <div class="w-56 h-56 rounded-full flex items-center justify-center relative transform transition-transform duration-[1.5s] ease-out group-hover:scale-[1.03] group-focus-within:scale-[1.03]">
+            <!-- Elegant, minimal Apple lens -->
+            <div class="absolute inset-0 rounded-full border border-black/5 bg-gradient-to-b from-[#f5f5f7] to-[#ffffff] shadow-[0_10px_30px_rgba(0,0,0,0.04)]"></div>
+            <div class="w-40 h-40 rounded-full bg-[#1d1d1f] flex items-center justify-center shadow-[inset_0_4px_20px_rgba(0,0,0,0.3)] relative overflow-hidden">
+               <div class="absolute w-[120%] h-[120%] bg-gradient-to-br from-white/10 via-transparent to-transparent rounded-full opacity-60 -top-[10%] -left-[10%] mix-blend-screen"></div>
+               <div class="w-12 h-12 rounded-full bg-black border border-white/10 shadow-[inset_0_0_10px_rgba(0,0,0,1)] relative flex items-center justify-center">
+                 <div class="w-4 h-4 rounded-full bg-gradient-to-br from-[#0071e3]/30 to-transparent blur-[1px]"></div>
+               </div>
             </div>
+         </div>
+      </div>
+    </div>
+
+    <!-- Card 3: Memory -->
+    <div tabindex="0" class="rounded-[32px] md:rounded-[40px] bg-[#ffffff] overflow-hidden flex flex-col relative shadow-[0_4px_24px_rgba(0,0,0,0.04)] h-[500px] md:h-[600px] group cursor-default transition-transform duration-500 hover:-translate-y-2 hover:shadow-[0_12px_48px_rgba(0,0,0,0.08)] focus-within:-translate-y-2 focus-within:shadow-[0_12px_48px_rgba(0,0,0,0.08)] outline-none focus-visible:ring-2 focus-visible:ring-accent-blue">
+      <div class="p-8 md:p-12 z-10 text-center flex flex-col items-center">
+        <p class="font-body text-[15px] font-semibold text-[#86868b] tracking-wide mb-3">Memory</p>
+        <p class="font-display text-[32px] md:text-[40px] font-semibold text-[#1d1d1f] leading-tight tracking-tight">Never forgets.</p>
+        <p class="font-body text-[17px] md:text-[19px] text-[#86868b] leading-[1.4] mt-4 max-w-[280px]">Vector-based retrieval. Search your life by context and meaning.</p>
+      </div>
+      <div class="flex-1 flex items-center justify-center relative overflow-hidden">
+        <!-- Clean, structured memory nodes -->
+        <div class="w-full h-full relative group-hover:rotateX(30deg) group-focus-within:rotateX(30deg)" style="background-image: radial-gradient(circle at center, #86868b 1px, transparent 1.5px); background-size: 24px 24px; opacity: 0.15; transform: perspective(1000px) rotateX(45deg) scale(2); transition: transform 2s ease-out;"></div>
+        <div class="absolute w-32 h-32 rounded-full bg-[#f5f5f7] border border-[#1d1d1f]/5 shadow-xl flex items-center justify-center z-10 transform transition-transform duration-[1.5s] ease-out group-hover:scale-105 group-focus-within:scale-105">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="32" height="32"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4: Open Source (Hero Manifesto) -->
+    <div tabindex="0" class="lg:col-span-3 rounded-[32px] md:rounded-[40px] bg-[#1d1d1f] overflow-hidden flex flex-col md:flex-row relative shadow-[0_20px_40px_rgba(0,0,0,0.08)] md:h-[600px] group cursor-default transition-transform duration-500 hover:-translate-y-2 hover:shadow-[0_30px_60px_rgba(0,0,0,0.15)] focus-within:-translate-y-2 focus-within:shadow-[0_30px_60px_rgba(0,0,0,0.15)] outline-none focus-visible:ring-2 focus-visible:ring-accent-blue">
+      
+      <!-- Content Side -->
+      <div class="p-10 md:p-16 lg:p-20 z-20 w-full md:w-[50%] flex flex-col justify-center relative">
+        <div class="relative z-10">
+          <p class="font-display text-[15px] font-semibold text-[#a1a1a6] tracking-wide mb-4">Open Architecture</p>
+          <h3 class="font-display text-[48px] md:text-[64px] font-semibold text-[#f5f5f7] leading-[1.05] tracking-tight mb-6">Built for builders.</h3>
+          <p class="font-body text-[19px] md:text-[21px] text-[#a1a1a6] leading-[1.5] max-w-[420px] mb-12">
+            Aura is a manifesto for the open-source hardware movement. Firmware, schematics, and the entire AI pipeline are completely public. MIT licensed.
+          </p>
+          <div class="flex flex-wrap items-center gap-6">
+            <a href="docs.html" class="inline-flex items-center justify-center bg-[#f5f5f7] text-[#1d1d1f] rounded-full px-8 py-4 font-display font-medium text-[17px] hover:scale-[1.03] transition-transform duration-300">View the repository</a>
           </div>
         </div>
       </div>
-      <p class="font-body text-fine-print font-medium text-ink-tertiary">Pinecone vector search</p>
-    </div>
-    <p class="font-body text-caption text-ink leading-snug"><strong>Never forgets.</strong> <span class="text-[#86868b]">Retrieve any conversation by meaning — not keyword. Works weeks later.</span></p>
-  </div>
 
-  <!-- Card 4: Open Source — dark canvas, file tree -->
-  <div class="group cursor-default">
-    <div class="rounded-[18px] bg-[#272729] overflow-hidden aspect-[3/4] flex flex-col justify-between p-8 mb-4 hover:scale-[1.015] transition-transform duration-500 shadow-sm">
-      <div>
-        <p class="font-body text-micro-legal font-semibold text-white/40 uppercase tracking-widest mb-3">Open Source</p>
-        <p class="font-display text-lead font-semibold text-white">every-<br>thing<br>public.</p>
-      </div>
-      <div class="flex-1 flex flex-col justify-center gap-2 py-3">
-        <div class="flex items-center gap-2.5">
-          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" style="opacity:0.5"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
-          <span class="text-white/60 text-fine-print font-mono">firmware/</span>
-          <span class="ml-auto text-micro-legal font-medium" style="color:#34d399">MIT</span>
+      <!-- Visual Side: Elegant Dark Mode Editor -->
+      <div class="absolute inset-0 md:left-[45%] flex items-center justify-end z-10 p-8 md:p-0">
+        <!-- Gradient fade -->
+        <div class="absolute left-0 top-0 bottom-0 w-48 bg-gradient-to-r from-[#1d1d1f] to-transparent z-20 hidden md:block"></div>
+        
+        <div class="w-full md:w-[130%] h-full flex items-center justify-center transform transition-transform duration-[2s] ease-out group-hover:scale-[1.02] group-focus-within:scale-[1.02] md:group-hover:-translate-x-4 md:group-focus-within:-translate-x-4 opacity-90 md:opacity-100">
+          
+          <!-- Xcode/VSCode Dark Theme Window -->
+          <div class="bg-[#28282b] rounded-2xl border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.5)] overflow-hidden w-full max-w-[600px] ml-auto">
+            <div class="flex items-center px-4 py-3 border-b border-white/5 bg-[#1e1e1f]">
+              <div class="flex gap-2">
+                <div class="w-3 h-3 rounded-full bg-[#ff5f56]"></div>
+                <div class="w-3 h-3 rounded-full bg-[#ffbd2e]"></div>
+                <div class="w-3 h-3 rounded-full bg-[#27c93f]"></div>
+              </div>
+            </div>
+            <div class="font-mono text-[14px] md:text-[15px] leading-loose text-[#e6e6e6] p-6 md:p-8">
+              <div><span class="text-[#a1a1a6]">1</span> <span class="text-[#ff7ab2]">import</span> <span class="text-[#5ac8fa]">AuraCore</span></div>
+              <div><span class="text-[#a1a1a6]">2</span></div>
+              <div><span class="text-[#a1a1a6]">3</span> <span class="text-[#ff7ab2]">let</span> device = <span class="text-[#d2a8ff]">Aura</span>(hardware: <span class="text-[#ffd659]">"ESP32-S3"</span>)</div>
+              <div><span class="text-[#a1a1a6]">4</span></div>
+              <div><span class="text-[#a1a1a6]">5</span> <span class="text-[#ff7ab2]">await</span> device.<span class="text-[#d2a8ff]">configure</span> { config <span class="text-[#ff7ab2]">in</span></div>
+              <div><span class="text-[#a1a1a6]">6</span>     config.wakeWord = <span class="text-[#ffd659]">"Hey Aura"</span></div>
+              <div><span class="text-[#a1a1a6]">7</span>     config.visionEnabled = <span class="text-[#ff7ab2]">true</span></div>
+              <div><span class="text-[#a1a1a6]">8</span> }</div>
+              <div><span class="text-[#a1a1a6]">9</span></div>
+              <div><span class="text-[#a1a1a6]">10</span> <span class="text-[#ff7ab2]">await</span> device.<span class="text-[#d2a8ff]">startListening</span>()</div>
+              <div class="mt-4 text-[#a1a1a6] text-[13px] flex items-center">
+                $ building... <span class="ml-2 w-2 h-3 bg-white/50 inline-block animate-pulse"></span>
+              </div>
+            </div>
+          </div>
+
         </div>
-        <div class="flex items-center gap-2.5">
-          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" style="opacity:0.5"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
-          <span class="text-white/60 text-fine-print font-mono">backend/</span>
-          <span class="ml-auto text-micro-legal font-medium" style="color:#34d399">MIT</span>
-        </div>
-        <div class="flex items-center gap-2.5">
-          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" style="opacity:0.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
-          <span class="text-white/60 text-fine-print font-mono">hardware/</span>
-          <span class="ml-auto text-micro-legal font-medium" style="color:#34d399">MIT</span>
-        </div>
-      </div>
-      <div class="flex items-center gap-2 border-t border-white/10 pt-3">
-        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" style="opacity:0.4"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-        <span class="text-white/40 text-micro-legal">github.com/thesohamdatta/aura</span>
       </div>
     </div>
-    <p class="font-body text-caption text-ink leading-snug"><strong>Everything public.</strong> <span class="text-[#86868b]">MIT licensed. Firmware, schematics, backend. Fork it. Build your own. ~$50 BOM.</span></p>
+
   </div>
 
 </div>
@@ -211,71 +227,7 @@
 
 <!-- AirPods 4-style "Seamless experience" Section -->
 <section id="app-demo-section" class="w-full overflow-hidden flex flex-col items-center">
-  <style>
-    #app-demo-section {
-      padding: 120px 0 80px 0;
-      background: linear-gradient(to bottom, rgba(245, 245, 247, 0) 0%, rgba(245, 245, 247, 0) 30%, #f5f5f7 65%, #f5f5f7 100%),
-                  linear-gradient(to right, #f25134, #df307e);
-    }
-    #app-demo-section .demo-img-container {
-      width: 780px;
-      display: flex;
-      justify-content: center;
-      position: relative;
-      margin-bottom: 60px;
-    }
-    #app-demo-section .demo-phone-img {
-      width: 580px;
-      display: block;
-      filter: drop-shadow(0 40px 60px rgba(0,0,0,0.18)) drop-shadow(0 8px 20px rgba(0,0,0,0.10));
-      opacity: 0;
-      transform: translateY(40px) translateX(-20px);
-      transition: opacity 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    }
-    #app-demo-section .demo-phone-img.animate-in {
-      opacity: 1;
-      transform: translateY(0) translateX(0);
-    }
-    #app-demo-section .demo-caption-label {
-      opacity: 0;
-      transform: translateY(16px);
-      transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    }
-    #app-demo-section .demo-caption-label.animate-in {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    #app-demo-section .demo-caption-body {
-      opacity: 0;
-      transform: translateY(16px);
-      transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    }
-    #app-demo-section .demo-caption-body.animate-in {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    @media (max-width: 767px) {
-      #app-demo-section {
-        padding: 60px 0 40px 0;
-      }
-      #app-demo-section .demo-headline {
-        font-size: 34px !important;
-      }
-      #app-demo-section .demo-img-container {
-        width: 100%;
-        padding: 0 16px;
-        margin-bottom: 40px;
-      }
-      #app-demo-section .demo-phone-img {
-        width: 100%;
-        max-width: 360px;
-        margin: 0 auto;
-      }
-      #app-demo-section .demo-caption-container {
-        padding: 0 24px;
-      }
-    }
-  </style>
+
 
   <!-- Headline Block -->
   <div class="w-full text-center px-4">
@@ -287,7 +239,7 @@
 
   <!-- Image Pair Layout -->
   <div class="demo-img-container">
-    <img id="demoPhoneImage" alt="Aura Phone Mockup" class="demo-phone-img" src="assets/png/mobile%20and%20device.png">
+    <img id="demoPhoneImage" width="580" height="580" loading="lazy" alt="Aura Phone Mockup" class="demo-phone-img" src="assets/png/mobile%20and%20device.png">
   </div>
 
   <!-- Caption Block -->
@@ -307,34 +259,33 @@
 <h2 class="font-display text-display-md md:text-hero-display">A closer look.</h2>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-12 gap-2 w-full px-2">
-  <!-- Card 1: Wide Product Shot -->
   <div class="md:col-span-8 aspect-[16/9] overflow-hidden rounded-[28px] group relative bg-canvas-parchment">
-    <img alt="Product shot wide" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500" src="assets/png/three hero.png">
+    <img width="800" height="450" loading="lazy" alt="Product shot wide" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500" src="assets/png/three hero.png">
   </div>
-  <!-- Card 2: Macro detail -->
+  <!-- Card 2: ESP32-S3 Sense -->
   <div class="md:col-span-4 aspect-square md:aspect-auto h-full overflow-hidden rounded-[28px] group relative bg-canvas-parchment">
-    <img alt="Product detail macro camera" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500" src="assets/product/lens-macro.png">
+    <img width="400" height="400" loading="lazy" alt="ESP32-S3 Sense module" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500" src="assets/png/esp32 s3 sence.png">
   </div>
   <!-- Card 3: Motherboard internal components view -->
   <div class="md:col-span-4 aspect-square overflow-hidden rounded-[28px] group relative bg-canvas-parchment">
-    <img alt="Internal components view" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500" src="assets/png/internal view.png">
+    <img width="400" height="400" loading="lazy" alt="Internal components view" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500" src="assets/png/internal view.png">
   </div>
-  <!-- Card 4: USB-C port -->
+  <!-- Card 4: Mobile and device -->
   <div class="md:col-span-4 aspect-square overflow-hidden rounded-[28px] group relative bg-canvas-parchment">
-    <img alt="USB-C port close-up" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500" src="assets/product/usbc-macro.png">
+    <img width="400" height="400" loading="lazy" alt="Aura with mobile device" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500" src="assets/png/mobile and device.png">
   </div>
-  <!-- Card 5: Lanyard flat lay -->
+  <!-- Card 5: Front and back -->
   <div class="md:col-span-4 aspect-square overflow-hidden rounded-[28px] group relative bg-canvas-parchment">
-    <img alt="Device flat lay with lanyard" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500" src="assets/product/pendant-flatlay.png">
+    <img width="400" height="400" loading="lazy" alt="Aura pendant front and back" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500" src="assets/png/front and back.png">
   </div>
 </div>
 </section>
 <!-- 4. VOICE STORY -->
 <section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
-  <img alt="Person wearing Aura" class="absolute inset-0 w-full h-full object-cover object-center" src="assets/hero/hero-silhouette.jpg">
+  <img width="1920" height="1080" loading="lazy" alt="Person wearing Aura" class="absolute inset-0 w-full h-full object-cover object-center" src="assets/hero/hero-silhouette.jpg">
   <div class="absolute inset-0 bg-black/40"></div>
   <div class="relative text-center px-margin-base max-w-prose-max-width z-10 select-none">
-    <span class="font-body text-overline text-white/60 uppercase tracking-[0.2em] mb-4 block">Voice capture</span>
+    <span class="font-body text-overline text-white/60 mb-4 block">Voice capture</span>
     <h2 class="font-display text-display-lg md:text-hero-display text-white leading-[1.05] tracking-tight">A completely different way to remember.</h2>
   </div>
 </section>
@@ -346,7 +297,7 @@
 <div class="flex overflow-x-auto gap-8 no-scrollbar -mx-margin-base px-margin-base pt-8 md:pt-0">
 <div class="min-w-[400px] md:min-w-[600px] rounded-[28px] bg-white border border-black/5 shadow-sm overflow-hidden flex flex-col transition-all hover:scale-[1.01]">
 <div class="h-[360px]">
-<img alt="Mic grill detail" class="w-full h-full object-cover" src="assets/product/mic-macro.png">
+<img width="600" height="360" loading="lazy" alt="Mic grill detail" class="w-full h-full object-cover" src="assets/product/mic-macro.png">
 </div>
 <div class="p-8 h-[240px]">
 <h3 class="font-display text-lead mb-4 text-ink font-semibold">Spatial Listening</h3>
@@ -370,10 +321,10 @@
 <!-- 6. VISION STORY -->
 <section class="bg-white">
 <div class="relative h-[80vh] w-full flex items-center justify-center">
-<img alt="Aura camera view" class="absolute inset-0 w-full h-full object-cover" src="assets/hero/lifestyle-reading.png">
+<img width="1920" height="800" loading="lazy" alt="Aura camera view" class="absolute inset-0 w-full h-full object-cover" src="assets/hero/lifestyle-reading.png">
 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
 <div class="relative text-center px-margin-base max-w-prose-max-width">
-<span class="font-body text-overline text-white/80 uppercase mb-4 block">Visual understanding</span>
+<span class="font-body text-overline text-white/80 mb-4 block">Visual understanding</span>
 <h2 class="font-display text-display-md md:text-hero-display text-white">It sees what you point it at.</h2>
 </div>
 </div>
@@ -401,7 +352,7 @@
 <h2 class="font-display text-display-md md:text-hero-display mb-4">Built to disappear.</h2>
 <p class="font-body text-lead text-ink-secondary mb-12">80 grams. Worn all day.</p>
 <div class="relative inline-block my-20">
-<img alt="Aura device floating" class="w-full max-w-[800px] mx-auto" src="assets/png/pendant-front.png">
+<img width="800" height="600" loading="lazy" alt="Aura device floating" class="w-full max-w-[800px] mx-auto" src="assets/png/pendant-front.png">
 <!-- Annotations -->
 <div class="absolute top-[20%] right-[10%] flex items-center gap-4">
 <div class="h-px w-24 bg-[#1d1d1f]/20"></div>
@@ -423,7 +374,7 @@
 </div>
 <div class="flex justify-between items-center py-4 border-b border-black/5">
 <span class="font-body text-caption text-ink-secondary">Battery Life</span>
-<span class="font-body text-body-strong text-ink">8 hours active</span>
+<span class="font-body text-body-strong text-ink">4 hours active</span>
 </div>
 <div class="flex justify-between items-center py-4 border-b border-black/5">
 <span class="font-body text-caption text-ink-secondary">Charging</span>
@@ -434,51 +385,59 @@
 </section>
 
 <!-- 8. BATTERY & POWER -->
-<section style="background: linear-gradient(to bottom, #f0f9f5 0px, #7be6af 90px, #25b670 180px, #10855b 270px, #086446 360px, #04543b 410px, #ffffff 410px, #ffffff 100%);" class="overflow-hidden relative bg-white">
-  <!-- Green Hero Area -->
-  <div class="relative h-[410px] w-full flex flex-col items-center pt-[110px] md:pt-[130px] select-none">
-    <span class="font-body text-[15px] md:text-[17px] font-medium text-white/95 mb-2 block tracking-normal">Battery</span>
-    <h2 class="font-display text-[38px] md:text-[48px] font-semibold text-white text-center leading-[1.08] tracking-[-0.02em] z-10">
+<section class="w-full bg-white relative flex flex-col items-center font-display">
+  
+  <!-- Massive Green Hero Block -->
+  <div class="relative w-full flex flex-col items-center pt-[100px] md:pt-[120px] pb-[160px] md:pb-[240px]" style="background: linear-gradient(180deg, #0e7a4b 0%, #022312 100%);">
+    
+    <span class="text-[14px] font-semibold text-white mb-3">Battery</span>
+    
+    <!-- Main Text -->
+    <h2 class="text-[64px] md:text-[88px] font-semibold text-white text-center leading-[1.0] tracking-[-0.03em] z-20">
       Charges fast.<br>And lasts
     </h2>
     
-    <!-- Flipped Reflection -->
-    <div class="flex flex-col items-center select-none pointer-events-none mt-[4px] z-10" aria-hidden="true">
-      <span class="font-display text-[38px] md:text-[48px] font-semibold text-white leading-[1.08] tracking-[-0.02em] opacity-[0.35] blur-[0.5px] block" style="transform: scaleY(-1); transform-origin: center;">and lasts</span>
-      <span class="font-display text-[38px] md:text-[48px] font-semibold text-white leading-[1.08] tracking-[-0.02em] opacity-[0.22] blur-[1px] block mt-[-28px] md:mt-[-36px]" style="transform: scaleY(-1); transform-origin: center;">and lasts</span>
-      <span class="font-display text-[38px] md:text-[48px] font-semibold text-white leading-[1.08] tracking-[-0.02em] opacity-[0.12] blur-[1.5px] block mt-[-28px] md:mt-[-36px]" style="transform: scaleY(-1); transform-origin: center;">and lasts</span>
-      <span class="font-display text-[38px] md:text-[48px] font-semibold text-white leading-[1.08] tracking-[-0.02em] opacity-[0.06] blur-[2px] block mt-[-28px] md:mt-[-36px]" style="transform: scaleY(-1); transform-origin: center;">and lasts</span>
-      <span class="font-display text-[38px] md:text-[48px] font-semibold text-white leading-[1.08] tracking-[-0.02em] opacity-[0.03] blur-[2.5px] block mt-[-28px] md:mt-[-36px]" style="transform: scaleY(-1); transform-origin: center;">and lasts</span>
+    <!-- Cascading Echo Effect -->
+    <div class="flex flex-col items-center select-none pointer-events-none z-10 w-full relative -top-3 md:-top-4" aria-hidden="true">
+      <span class="text-[64px] md:text-[88px] font-semibold text-white leading-[1.0] tracking-[-0.03em] opacity-[0.25] blur-[1px] transform scale-[0.98] -mt-10 md:-mt-14 block">And lasts</span>
+      <span class="text-[64px] md:text-[88px] font-semibold text-white leading-[1.0] tracking-[-0.03em] opacity-[0.15] blur-[2px] transform scale-[0.95] -mt-12 md:-mt-16 block">And lasts</span>
+      <span class="text-[64px] md:text-[88px] font-semibold text-white leading-[1.0] tracking-[-0.03em] opacity-[0.08] blur-[3px] transform scale-[0.91] -mt-12 md:-mt-16 block">And lasts</span>
+      <span class="text-[64px] md:text-[88px] font-semibold text-white leading-[1.0] tracking-[-0.03em] opacity-[0.04] blur-[4px] transform scale-[0.86] -mt-12 md:-mt-16 block">And lasts</span>
+      <span class="text-[64px] md:text-[88px] font-semibold text-white leading-[1.0] tracking-[-0.03em] opacity-[0.02] blur-[5px] transform scale-[0.80] -mt-12 md:-mt-16 block">And lasts</span>
     </div>
 
-    <!-- Centered Product Image sitting on the bottom boundary -->
-    <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 z-20 w-[120px] md:w-[150px] aspect-square">
-      <img src="assets/product/pendant-front.png" alt="Aura Pendant" class="w-full h-full object-contain filter drop-shadow-[0_10px_20px_rgba(0,0,0,0.12)] hover:scale-[1.02] transition-transform duration-700">
-    </div>
   </div>
 
-  <!-- White Area Content -->
-  <div class="max-w-[1200px] mx-auto px-margin-base pt-[100px] md:pt-[138px]">
-    <p class="text-center max-w-[560px] mx-auto font-body text-[17px] md:text-[19px] text-ink-secondary leading-[1.47] tracking-[-0.01em]">
-      <strong class="text-ink font-semibold">Power for hours with a smaller, more capable footprint.</strong><br>
-      The high-density Li-Po cell is optimized for minimal volume without sacrificing longevity. Coupled with our custom ultra-low-power ESP32-S3 architecture, it provides all-day ambient awareness.
+  <!-- White Area Content (Overlaps the green) -->
+  <div class="relative w-full max-w-[1200px] mx-auto px-margin-base flex flex-col items-center z-20 -mt-[140px] md:-mt-[200px]">
+    
+    <!-- Pendant Image exactly on the border -->
+    <div class="w-[280px] md:w-[400px] aspect-square mb-10 md:mb-16 transform hover:-translate-y-2 transition-transform duration-700">
+      <img width="400" height="400" loading="lazy" src="assets/product/pendant-front.png" alt="Aura Pendant" class="w-full h-full object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.2)]">
+    </div>
+
+    <!-- Text Content -->
+    <p class="text-center max-w-[580px] text-[15px] md:text-[16px] text-[#1d1d1f] leading-[1.4] tracking-tight mb-16 md:mb-24">
+      <strong class="font-semibold block mb-1">Power for hours in a radically smaller footprint.</strong>
+      A high-density Li-Po cell optimized for minimal volume. Paired with our ultra-low-power ESP32-S3 architecture, it delivers all-day ambient awareness.
     </p>
 
-    <div class="max-w-[800px] mx-auto mt-[80px] md:mt-[100px] grid grid-cols-1 md:grid-cols-3 gap-12 text-center pb-[80px] md:pb-[120px]">
-      <div>
-        <p class="font-body text-[13px] md:text-[14px] text-ink-secondary mb-1">Up to</p>
-        <p class="font-display text-[36px] md:text-[44px] font-semibold text-[#07b164] leading-none mb-3">8 hours</p>
-        <p class="font-body text-[13px] md:text-[14px] text-ink-secondary leading-snug">of active listening time on a<br>single charge</p>
+    <!-- Spec grid exactly like Apple layout -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 text-center w-full max-w-[900px] pb-24 md:pb-32">
+      <div class="flex flex-col items-center">
+        <p class="text-[12px] font-semibold text-[#1d1d1f] mb-0">Up to</p>
+        <p class="text-[48px] md:text-[56px] font-semibold text-[#00a854] leading-[1.05] mb-1 tracking-[-0.03em] whitespace-nowrap">4 hours</p>
+        <p class="text-[13px] text-[#1d1d1f] leading-snug">of active listening time<br>on a single charge</p>
       </div>
-      <div>
-        <p class="font-body text-[13px] md:text-[14px] text-ink-secondary mb-1">Capacity</p>
-        <p class="font-display text-[36px] md:text-[44px] font-semibold text-[#07b164] leading-none mb-3">350 mAh</p>
-        <p class="font-body text-[13px] md:text-[14px] text-ink-secondary leading-snug">high-density Li-Po<br>battery cell</p>
+      <div class="flex flex-col items-center">
+        <p class="text-[12px] font-semibold text-[#1d1d1f] mb-0">Capacity</p>
+        <p class="text-[48px] md:text-[56px] font-semibold text-[#00a854] leading-[1.05] mb-1 tracking-[-0.03em] whitespace-nowrap">350 mAh</p>
+        <p class="text-[13px] text-[#1d1d1f] leading-snug">high-density Li-Po<br>battery cell</p>
       </div>
-      <div>
-        <p class="font-body text-[13px] md:text-[14px] text-ink-secondary mb-1">Charging</p>
-        <p class="font-display text-[36px] md:text-[44px] font-semibold text-[#07b164] leading-none mb-3">USB-C</p>
-        <p class="font-body text-[13px] md:text-[14px] text-ink-secondary leading-snug">fast charging everywhere<br>you go</p>
+      <div class="flex flex-col items-center">
+        <p class="text-[12px] font-semibold text-[#1d1d1f] mb-0">Charging</p>
+        <p class="text-[48px] md:text-[56px] font-semibold text-[#00a854] leading-[1.05] mb-1 tracking-[-0.03em] whitespace-nowrap">USB-C</p>
+        <p class="text-[13px] text-[#1d1d1f] leading-snug">fast charging everywhere<br>you go</p>
       </div>
     </div>
   </div>
@@ -487,12 +446,16 @@
 <!-- 9. THESIS -->
 <section class="bg-[#272729] py-section-v-padding text-white text-center">
 <div class="max-w-[1200px] mx-auto px-margin-base">
-<span class="font-body text-overline text-white/40 uppercase mb-8 block">THE THESIS</span>
+<span class="font-body text-overline text-white/40 mb-8 block">The thesis</span>
 <h2 class="font-display text-display-md md:text-hero-display mb-4">The third device.</h2>
 <p class="font-body text-lead-airy md:text-lead text-white/70 mb-20">Beyond laptop. Beyond phone.</p>
-<div class="relative h-96 flex items-center justify-center mb-20">
-<div class="absolute inset-0 bg-[#2997ff]/20 rounded-full blur-[120px] scale-75"></div>
-<img alt="Aura core" class="relative z-10 w-64" src="assets/png/front and back.png">
+<div class="relative w-full aspect-square md:aspect-[21/9] flex items-center justify-center mt-16 mb-24 md:mb-32">
+  <!-- Deep ambient glow -->
+  <div class="absolute w-[80%] h-[80%] md:w-[50%] md:h-[50%] bg-[#2997ff]/20 rounded-full blur-[100px] md:blur-[150px]"></div>
+  <div class="absolute inset-0 bg-gradient-to-t from-[#272729] via-transparent to-[#272729] z-0"></div>
+  
+  <!-- Massive responsive product shot -->
+  <img width="1000" height="428" loading="lazy" alt="Aura core" class="relative z-10 w-[90%] md:w-[75%] max-w-[1000px] object-contain filter drop-shadow-[0_40px_80px_rgba(0,0,0,0.6)] transform hover:scale-[1.02] transition-transform duration-[2s] ease-out" src="assets/png/three hero.png">
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 <div class="p-8 bg-white/5 rounded-[18px]">
@@ -522,7 +485,7 @@
 </div>
 </div>
 <div class="md:w-1/2 flex justify-center">
-<img alt="App UI screens" class="w-full max-w-[400px]" src="assets/png/software.png">
+<img width="400" height="600" loading="lazy" alt="App UI screens" class="w-full max-w-[400px]" src="assets/png/software.png">
 </div>
 </div>
 </section>
@@ -548,17 +511,17 @@
 </div>
 </div>
 <div class="md:w-1/2 -mr-margin-base flex justify-end">
-<img alt="Aura exploded view" class="w-full max-w-[600px] translate-x-12" src="assets/product/exploded-view.jpg">
+<img width="600" height="400" loading="lazy" alt="Aura exploded view" class="w-full max-w-[600px] translate-x-12" src="assets/product/exploded-view.jpg">
 </div>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
 <div class="bg-white rounded-[18px] p-8">
-<img alt="Board schematics" class="w-full h-64 object-contain mb-8" src="assets/product/mcu-board.png">
-<h3 class="font-display text-lead mb-2">Custom ESP32-S3 Board</h3>
+<img width="500" height="256" loading="lazy" alt="Board schematics" class="w-full h-64 object-contain mb-8" src="assets/product/mcu-board.png">
+<h3 class="font-display text-lead mb-2">ESP32-S3 Board</h3>
 <p class="text-ink-secondary text-body">Low power architecture optimized for Wi-Fi and Bluetooth LE connectivity with integrated power management.</p>
 </div>
 <div class="bg-white rounded-[18px] p-8">
-<img alt="Battery module" class="w-full h-64 object-contain mb-8" src="assets/product/battery-render.png">
+<img width="500" height="256" loading="lazy" alt="Battery module" class="w-full h-64 object-contain mb-8" src="assets/product/battery-render.png">
 <h3 class="font-display text-lead mb-2">High-Density Li-Po</h3>
 <p class="text-ink-secondary text-body">3.7V 350mAh cell designed for maximum energy density in minimal physical footprint.</p>
 </div>
@@ -607,7 +570,7 @@
 </div>
 </div>
 <div class="md:w-1/2 p-12">
-<img alt="Aura finale" class="w-full h-auto object-contain" src="assets/product/all-components.png">
+<img width="600" height="400" loading="lazy" alt="Aura finale" class="w-full h-auto object-contain" src="assets/product/all-components.png">
 </div>
 </div>
 </div>
@@ -615,170 +578,7 @@
 
 <!-- FAQ Section -->
 <section id="faq-section" class="w-full overflow-hidden bg-[#f5f5f7]">
-  <style>
-    #faq-section {
-      padding-top: 80px;
-      padding-bottom: 80px;
-      position: relative;
-      background: #f5f5f7;
-    }
-    #faq-section .faq-header-row {
-      padding-left: max(24px, calc((100vw - 1200px) / 2));
-      padding-right: max(24px, calc((100vw - 1200px) / 2));
-      margin-bottom: 48px;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-    }
-    #faq-section .faq-headline {
-      font-size: 40px;
-      font-weight: 700;
-      color: #1d1d1f;
-      letter-spacing: -0.003em;
-      line-height: 1.07;
-      max-width: 480px;
-    }
-    @media (min-width: 768px) {
-      #faq-section .faq-headline {
-        font-size: 56px;
-      }
-    }
-    #faq-section .faq-docs-link {
-      font-size: 17px;
-      color: #0066cc;
-      font-weight: 400;
-      text-decoration: none;
-      padding-bottom: 8px;
-    }
-    #faq-section .faq-docs-link:hover {
-      text-decoration: underline;
-    }
-    #faq-section .cards-container {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      overflow-x: auto;
-      overflow-y: visible;
-      gap: 16px;
-      padding-left: max(24px, calc((100vw - 1200px) / 2));
-      padding-right: max(24px, calc((100vw - 1200px) / 2));
-      padding-top: 12px;
-      padding-bottom: 24px;
-      scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
-      scrollbar-width: none;
-      -ms-overflow-style: none;
-      cursor: grab;
-    }
-    #faq-section .cards-container::-webkit-scrollbar {
-      display: none;
-    }
-    #faq-section .faq-card {
-      background: #ffffff;
-      border-radius: 18px;
-      padding: 28px 24px 24px 24px;
-      width: 300px;
-      min-width: 300px;
-      max-width: 300px;
-      flex-shrink: 0;
-      min-height: 220px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-      transition: box-shadow 0.25s ease, transform 0.25s ease;
-      scroll-snap-align: start;
-    }
-    #faq-section .faq-card:hover {
-      box-shadow: 0 4px 20px rgba(0,0,0,0.10);
-      transform: translateY(-2px);
-    }
-    #faq-section .faq-answer {
-      max-height: 60px;
-      overflow: hidden;
-      transition: max-height 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    }
-    #faq-section .faq-card.expanded .faq-answer {
-      max-height: 400px;
-    }
-    #faq-section .faq-expand-btn {
-      width: 36px;
-      height: 36px;
-      background: #1d1d1f;
-      border-radius: 50%;
-      color: white;
-      font-size: 22px;
-      line-height: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      align-self: flex-end;
-      margin-top: 16px;
-      border: none;
-      cursor: pointer;
-      transition: transform 0.3s ease;
-      flex-shrink: 0;
-    }
-    #faq-section .faq-card.expanded .faq-expand-btn {
-      transform: rotate(45deg);
-    }
-    #faq-section .faq-controls {
-      position: absolute;
-      bottom: 24px;
-      right: max(24px, calc((100vw - 1200px) / 2));
-      display: flex;
-      gap: 8px;
-      z-index: 10;
-    }
-    #faq-section .faq-control-btn {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      background: rgba(0, 0, 0, 0.08);
-      color: #1d1d1f;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: none;
-      outline: none;
-      transition: background 0.2s ease, opacity 0.2s ease;
-    }
-    #faq-section .faq-control-btn:hover:not(:disabled) {
-      background: rgba(0, 0, 0, 0.12);
-    }
-    #faq-section .faq-control-btn:disabled {
-      opacity: 0.3;
-      cursor: default;
-    }
-    @media (max-width: 767px) {
-      #faq-section {
-        padding: 60px 0;
-      }
-      #faq-section .faq-header-row {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 16px;
-        padding-left: 24px;
-        padding-right: 24px;
-      }
-      #faq-section .faq-headline {
-        font-size: 32px;
-      }
-      #faq-section .faq-docs-link {
-        width: 100%;
-        display: block;
-        padding-bottom: 0;
-      }
-      #faq-section .faq-card {
-        width: 280px;
-        min-width: 280px;
-        max-width: 280px;
-      }
-      #faq-section .faq-controls {
-        display: none;
-      }
-    }
-  </style>
+
 
   <!-- Header Row -->
   <div class="faq-header-row">
@@ -975,44 +775,84 @@
 </script>
 
 <!-- FOOTER -->
-<footer class="bg-inverse-surface dark:bg-on-background py-section-v-padding text-surface-bright">
-<div class="max-w-[1200px] mx-auto px-margin-base grid grid-cols-1 md:grid-cols-4 gap-gutter">
-<div>
-<div class="font-display text-lead text-surface-bright mb-4">Aura</div>
-<p class="text-outline-variant text-label">The open source wearable AI project.</p>
-</div>
-<div>
-<h4 class="font-body text-caption font-semibold mb-4 uppercase opacity-50">Build</h4>
-<ul class="space-y-2">
-<li><a class="text-outline-variant hover:text-surface-bright transition-colors" href="docs.html#hardware">Components</a></li>
-<li><a class="text-outline-variant hover:text-surface-bright transition-colors" href="docs.html#firmware">Firmware</a></li>
-<li><a class="text-outline-variant hover:text-surface-bright transition-colors" href="docs.html#backend">Backend</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-body text-caption font-semibold mb-4 uppercase opacity-50">Learn</h4>
-<ul class="space-y-2">
-<li><a class="text-outline-variant hover:text-surface-bright transition-colors" href="docs.html">Documentation</a></li>
-<li><a class="text-outline-variant hover:text-surface-bright transition-colors" href="docs.html">Guides</a></li>
-<li><a class="text-outline-variant hover:text-surface-bright transition-colors" href="manifesto.html">Philosophy</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-body text-caption font-semibold mb-4 uppercase opacity-50">Community</h4>
-<ul class="space-y-2">
-<li><a class="text-outline-variant hover:text-surface-bright transition-colors" href="https://github.com/thesohamdatta/aura" target="_blank">GitHub</a></li>
-<li><a class="text-outline-variant hover:text-surface-bright transition-colors" aria-disabled="true" href="#">Discord</a></li>
-<li><a class="text-outline-variant hover:text-surface-bright transition-colors" aria-disabled="true" href="#">Twitter</a></li>
-</ul>
-</div>
-</div>
-<div class="max-w-[1200px] mx-auto px-margin-base mt-20 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between text-label text-outline-variant">
-<p>&copy; 2026 Aura Project. MIT Licensed.</p>
-<div class="flex gap-6 mt-4 md:mt-0">
-<a class="hover:text-surface-bright" aria-disabled="true" href="#">Privacy</a>
-<a class="hover:text-surface-bright" target="_blank" href="https://github.com/thesohamdatta/aura">GitHub</a>
-</div>
-</div>
+<footer class="site-footer border-t border-[#d2d2d7]/50" style="padding: 64px 0 0 0;">
+  <div class="max-w-[1200px] mx-auto px-margin-base">
+    
+    <!-- Breadcrumb row -->
+    <div class="flex items-center text-[12px] text-[#86868b] pb-4 mb-6 border-b border-[#d2d2d7]/35 flex-wrap gap-y-2">
+      <a href="index.html" class="hover:text-[#1d1d1f] transition-colors">Aura</a>
+      <span class="mx-2 text-[10px] text-[#86868b]">›</span>
+      <span class="text-[#1d1d1f]">Overview</span>
+    </div>
+
+    <!-- Main grid -->
+    <div class="grid grid-cols-2 md:grid-cols-[1.5fr_1fr_1fr_1fr_1fr] gap-8 md:gap-gutter">
+      
+      <!-- Brand column -->
+      <div class="col-span-2 md:col-span-1 mb-10 md:mb-0">
+        <div class="font-display text-[21px] font-semibold text-[#1d1d1f] mb-2">Aura</div>
+      </div>
+
+      <!-- Build column -->
+      <div class="col-span-1">
+        <span class="font-body text-[11px] font-medium text-[#1d1d1f]/60 mb-4 block">Build</span>
+        <ul class="space-y-0 flex flex-col">
+          <li><a href="docs.html#hardware" class="footer-link-item">Build Yours</a></li>
+          <li><a href="docs.html#firmware" class="footer-link-item">Firmware</a></li>
+          <li><a href="docs.html#backend" class="footer-link-item">SDK</a></li>
+        </ul>
+      </div>
+
+      <!-- Learn column -->
+      <div class="col-span-1">
+        <span class="font-body text-[11px] font-medium text-[#1d1d1f]/60 mb-4 block">Learn</span>
+        <ul class="space-y-0 flex flex-col">
+          <li><a href="ai.html" class="footer-link-item">How It Works</a></li>
+          <li><a href="manifesto.html" class="footer-link-item">The Dilemma</a></li>
+          <li><a href="docs.html" class="footer-link-item">Docs</a></li>
+        </ul>
+      </div>
+
+      <!-- Community column -->
+      <div class="col-span-1">
+        <span class="font-body text-[11px] font-medium text-[#1d1d1f]/60 mb-4 block">Community</span>
+        <ul class="space-y-0 flex flex-col">
+          <li><a href="https://github.com/thesohamdatta/aura" target="_blank" class="footer-link-item">GitHub</a></li>
+          <li><a href="#" aria-disabled="true" class="footer-disabled-link">Discord</a></li>
+          <li><a href="#" aria-disabled="true" class="footer-disabled-link">Ethics</a></li>
+        </ul>
+      </div>
+
+      <!-- Project column -->
+      <div class="col-span-1">
+        <span class="font-body text-[11px] font-medium text-[#1d1d1f]/60 mb-4 block">Project</span>
+        <ul class="space-y-0 flex flex-col">
+          <li><a href="about.html" class="footer-link-item">About</a></li>
+          <li><a href="ai.html" class="footer-link-item">Intelligence</a></li>
+          <li><a href="manifesto.html" class="footer-link-item">Manifesto</a></li>
+          <li><a href="index.html" class="footer-link-item">Overview</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Retailer/Footnote row -->
+    <div class="pt-6 pb-4 border-t border-[#d2d2d7]/35 mt-8 text-[12px] text-[#86868b] leading-relaxed">
+      More ways to build: <a href="https://github.com/thesohamdatta/aura" target="_blank" class="text-[#0066cc] hover:underline">Fork the GitHub repo</a> or <a href="docs.html" class="text-[#0066cc] hover:underline">read our assembly guides</a>. Need help? Contact <a href="mailto:thesohamdatta@gmail.com" class="text-[#0066cc] hover:underline">thesohamdatta@gmail.com</a>.
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="border-t border-[#d2d2d7]/35 py-5 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+      <p class="font-body text-[12px] text-[#86868b]">&copy; 2026 Aura Project. MIT Licensed.</p>
+      <div class="flex gap-6 flex-row">
+        <a href="#" aria-disabled="true" class="footer-legal-disabled">MIT License</a>
+        <a href="#" aria-disabled="true" class="footer-legal-disabled">Privacy</a>
+        <a href="https://github.com/thesohamdatta/aura" target="_blank" class="footer-legal-link">GitHub</a>
+      </div>
+      <span class="font-body text-[12px] text-[#86868b]">Pune, India</span>
+    </div>
+
+  </div>
 </footer>
 <script>
         // Simple micro-interactions
@@ -1023,62 +863,52 @@
         });
 
         // Navbar Scroll Behavior
-        const navbar = document.getElementById('navbar');
-        if (navbar && navbar.classList.contains('bg-transparent')) {
-            const navLinks = document.querySelectorAll('.nav-link');
-            const logo = navbar.querySelector('a.font-display');
-            const handleScroll = () => {
-                if (window.scrollY > 40) {
-                    navbar.classList.add('scrolled');
-                    navbar.classList.remove('bg-transparent');
-                    
-                    // Transition to frosted white glass (using inline styles to guarantee specificity)
-                    navbar.style.background = 'rgba(255, 255, 255, 0.65)';
-                    navbar.style.backdropFilter = 'blur(24px) saturate(200%)';
-                    navbar.style.webkitBackdropFilter = 'blur(24px) saturate(200%)';
-                    navbar.style.borderBottom = '1px solid rgba(0, 0, 0, 0.08)';
-                    
-                    if (logo) {
-                        logo.style.color = '#1d1d1f';
-                    }
-                    
-                    navLinks.forEach(l => {
-                        if (l.classList.contains('font-semibold')) {
-                            l.classList.add('text-[#1d1d1f]');
-                            l.classList.remove('text-white', 'text-white/90', 'text-white/65', 'text-[#1d1d1f]/65');
-                        } else {
-                            l.classList.add('text-[#1d1d1f]/65');
-                            l.classList.remove('text-white', 'text-white/90', 'text-white/65', 'text-[#1d1d1f]');
-                        }
-                    });
-                } else {
-                    navbar.classList.remove('scrolled');
-                    navbar.classList.add('bg-transparent');
-                    
-                    // Transition to near-invisible glass at top (using inline styles to guarantee specificity)
-                    navbar.style.background = 'rgba(255, 255, 255, 0.08)';
-                    navbar.style.backdropFilter = 'blur(24px) saturate(180%)';
-                    navbar.style.webkitBackdropFilter = 'blur(24px) saturate(180%)';
-                    navbar.style.borderBottom = '1px solid rgba(255, 255, 255, 0.15)';
-                    
-                    if (logo) {
-                        logo.style.color = '#ffffff';
-                    }
-                    
-                    navLinks.forEach(l => {
-                        if (l.classList.contains('font-semibold')) {
-                            l.classList.add('text-white');
-                            l.classList.remove('text-[#1d1d1f]', 'text-white/90', 'text-white/65', 'text-[#1d1d1f]/65');
-                        } else {
-                            l.classList.add('text-white/65');
-                            l.classList.remove('text-white', 'text-white/90', 'text-[#1d1d1f]', 'text-[#1d1d1f]/65');
-                        }
-                    });
-                }
-            };
-            window.addEventListener('scroll', handleScroll, { passive: true });
-            handleScroll();
-        }
+        (function() {
+          const navbar = document.getElementById('navbar');
+          const wordmark = document.querySelector('.nav-wordmark');
+          const navLinks = document.querySelectorAll('.nav-link');
+          const THRESHOLD = 50;
+
+          function updateNav() {
+            const atTop = window.scrollY < THRESHOLD;
+
+            // Background — transparent at top, frosted when scrolled
+            navbar.style.backgroundColor = atTop
+              ? 'transparent'
+              : 'rgba(255, 255, 255, 0.72)';
+
+            navbar.style.backdropFilter = atTop
+              ? 'none'
+              : 'blur(20px) saturate(180%)';
+
+            navbar.style.webkitBackdropFilter = atTop
+              ? 'none'
+              : 'blur(20px) saturate(180%)';
+
+            navbar.style.borderBottomColor = atTop
+              ? 'transparent'
+              : 'rgba(0, 0, 0, 0.08)';
+
+            // Nav link colors
+            navLinks.forEach(link => {
+              link.style.color = atTop
+                ? 'rgba(255, 255, 255, 0.9)'
+                : '#1d1d1f';
+            });
+
+            // Wordmark color
+            if (wordmark) {
+              wordmark.style.color = atTop ? '#ffffff' : '#1d1d1f';
+            }
+          }
+
+          // CRITICAL: passive:true prevents scroll blocking
+          window.addEventListener('scroll', updateNav, { passive: true });
+          
+          // CRITICAL: run immediately on load to set correct 
+          // initial state without waiting for first scroll event
+          updateNav();
+        })();
 
         // IntersectionObserver for App Demo Section (Seamless experience)
         const appDemoSection = document.getElementById('app-demo-section');

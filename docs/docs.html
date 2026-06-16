@@ -7,6 +7,7 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script src="js/tailwind-config.js"></script>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/fonts.css">
 <link rel="stylesheet" href="css/global.css">
 <link rel="stylesheet" href="css/nav.css">
 <link rel="stylesheet" href="css/style.css">
@@ -16,7 +17,7 @@
 </head>
 <body class="bg-surface text-on-surface !pt-0">
 <!-- Top Navigation Anchor (from JSON) -->
-<nav id="navbar" class="fixed top-0 w-full h-[52px] z-[100] bg-transparent transition-all duration-300">
+<nav id="navbar" class="fixed top-0 w-full h-[52px] z-[100] transition-all duration-300" style="background-color: rgba(255, 255, 255, 0.72); backdrop-filter: blur(20px) saturate(180%); -webkit-backdrop-filter: blur(20px) saturate(180%); border-bottom: 1px solid rgba(0, 0, 0, 0.08);">
 <div class="nav-inner flex justify-between items-center px-margin-base w-full max-w-[1200px] mx-auto h-full">
 <a href="index.html" class="font-display text-tagline text-ink">Aura</a>
 <div id="mobileMenu" class="hidden absolute top-[52px] left-0 w-full bg-surface/95 backdrop-blur-md border-b border-black/10 flex-col p-4 gap-4 md:static md:w-auto md:bg-transparent md:border-none md:p-0 md:flex md:flex-row md:gap-8 items-center">
@@ -39,11 +40,11 @@
 <aside class="w-[260px] h-[calc(100vh-52px)] sticky top-[52px] hidden md:flex flex-col py-8 px-4 bg-[#f5f5f7] border-r border-[#d2d2d7]/35 overflow-y-auto">
 <div class="mb-6 px-3">
 <h2 class="font-display text-body-strong font-bold text-ink mb-1 tracking-tight">Documentation</h2>
-<p class="font-body text-fine-print text-ink-tertiary uppercase tracking-wider font-semibold">Aura Reference</p>
+<p class="font-body text-fine-print text-ink-tertiary font-semibold">Aura Reference</p>
 </div>
 <nav class="flex flex-col gap-1">
 <div class="mb-4">
-<p class="font-body text-micro-legal font-bold text-ink-tertiary uppercase tracking-widest mb-2 px-3">Getting Started</p>
+<p class="font-body text-micro-legal font-bold text-ink-tertiary mb-2 px-3">Getting Started</p>
 <a class="flex items-center gap-2.5 px-3 py-1.5 rounded-md font-body text-fine-print text-accent-blue font-semibold bg-[#e8e8ed]/60 transition-colors" href="#what-is-aura">
 <span class="shrink-0 inline-flex items-center justify-center" style="width:16px;height:16px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg></span>
 <span class="truncate">What Is Aura</span>
@@ -62,7 +63,7 @@
 </a>
 </div>
 <div class="mb-4">
-<p class="font-body text-micro-legal font-bold text-ink-tertiary uppercase tracking-widest mb-2 px-3">Engineering</p>
+<p class="font-body text-micro-legal font-bold text-ink-tertiary mb-2 px-3">Engineering</p>
 <a class="flex items-center gap-2.5 px-3 py-1.5 rounded-md font-body text-fine-print text-ink-secondary hover:bg-[#e8e8ed]/45 hover:text-[#1d1d1f] transition-colors" href="#hardware">
 <span class="shrink-0 inline-flex items-center justify-center" style="width:16px;height:16px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="15" x2="23" y2="15"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="15" x2="4" y2="15"/></svg></span>
 <span class="truncate">Hardware Overview</span>
@@ -81,7 +82,7 @@
 </a>
 </div>
 <div class="mb-4">
-<p class="font-body text-micro-legal font-bold text-ink-tertiary uppercase tracking-widest mb-2 px-3">Configuration</p>
+<p class="font-body text-micro-legal font-bold text-ink-tertiary mb-2 px-3">Configuration</p>
 <a class="flex items-center gap-2.5 px-3 py-1.5 rounded-md font-body text-fine-print text-ink-secondary hover:bg-[#e8e8ed]/45 hover:text-[#1d1d1f] transition-colors" href="#ai-providers">
 <span class="shrink-0 inline-flex items-center justify-center" style="width:16px;height:16px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></span>
 <span class="truncate">AI Providers Setup</span>
@@ -104,14 +105,14 @@
 </a>
 </div>
 <div class="mb-4">
-<p class="font-body text-micro-legal font-bold text-ink-tertiary uppercase tracking-widest mb-2 px-3">Memory &amp; AI</p>
+<p class="font-body text-micro-legal font-bold text-ink-tertiary mb-2 px-3">Memory &amp; AI</p>
 <a class="flex items-center gap-2.5 px-3 py-1.5 rounded-md font-body text-fine-print text-ink-secondary hover:bg-[#e8e8ed]/45 hover:text-[#1d1d1f] transition-colors" href="#memory-rag">
 <span class="shrink-0 inline-flex items-center justify-center" style="width:16px;height:16px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/></svg></span>
 <span class="truncate">Memory &amp; RAG</span>
 </a>
 </div>
 <div class="mb-4">
-<p class="font-body text-micro-legal font-bold text-ink-tertiary uppercase tracking-widest mb-2 px-3">Privacy &amp; Support</p>
+<p class="font-body text-micro-legal font-bold text-ink-tertiary mb-2 px-3">Privacy &amp; Support</p>
 <a class="flex items-center gap-2.5 px-3 py-1.5 rounded-md font-body text-fine-print text-ink-secondary hover:bg-[#e8e8ed]/45 hover:text-[#1d1d1f] transition-colors" href="#privacy-data">
 <span class="shrink-0 inline-flex items-center justify-center" style="width:16px;height:16px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
 <span class="truncate">Privacy &amp; Data</span>
@@ -124,7 +125,7 @@
 </nav>
 </aside>
 <!-- Right Content Area (760px centered) -->
-<main class="flex-1 min-w-0 pb-section-v-padding">
+<main class="flex-1 min-w-0 pb-20">
 <div class="max-w-[760px] mx-auto px-margin-base pt-12">
 <!-- Breadcrumbs -->
 <nav class="flex items-center gap-2 text-label text-ink-secondary mb-8">
@@ -309,7 +310,7 @@
 </p>
 <ol class="list-decimal pl-6 mb-6 font-body text-body text-ink-secondary flex flex-col gap-2 max-w-[680px]">
     <li>Connect your XIAO ESP32-S3 Sense to your computer using a USB-C data cable.</li>
-    <li>Enter bootloader mode: Hold down the <strong>BOOT</strong> button on the board, press and release the <strong>RESET</strong> button, then release the <strong>BOOT</strong> button.</li>
+    <li>Enter bootloader mode: Hold down the <strong>Boot</strong> button on the board, press and release the <strong>Reset</strong> button, then release the <strong>Boot</strong> button.</li>
     <li>A new USB disk drive named <code>"ESP32S3"</code> will mount on your system.</li>
     <li>Copy the pre-compiled <code>.uf2</code> file from the <code>firmware/releases/</code> folder in the repo and drop it directly onto the mounted drive. The device will auto-flash and reboot.</li>
 </ol>
@@ -1109,81 +1110,91 @@ ssl._create_default_https_context = ssl._create_unverified_context</pre>
 </div>
 </section>
 </article>
-<footer class="mt-20 pt-12 border-t border-outline-variant/30 flex flex-col md:flex-row justify-between items-start gap-8">
-<div>
-<div class="font-display text-lead font-semibold text-ink mb-4">Aura</div>
-<p class="font-body text-label text-ink-secondary">© 2024 Aura Project. All rights reserved.</p>
-</div>
-<div class="grid grid-cols-2 md:grid-cols-4 gap-12 text-label">
-<div class="flex flex-col gap-2">
-<span class="font-body text-caption font-bold">Build</span>
-<a class="text-ink-secondary hover:text-accent-blue transition-colors" href="#hardware">Hardware</a>
-<a class="text-ink-secondary hover:text-accent-blue transition-colors" href="#firmware">SDK</a>
-</div>
-<div class="flex flex-col gap-2">
-<span class="font-body text-caption font-bold">Learn</span>
-<a class="text-ink-secondary hover:text-accent-blue transition-colors" href="ai.html">Tutorials</a>
-<a class="text-ink-secondary hover:text-accent-blue transition-colors" href="manifesto.html">Concepts</a>
-</div>
-<div class="flex flex-col gap-2">
-<span class="font-body text-caption font-bold">Community</span>
-<a class="text-ink-secondary hover:text-accent-blue transition-colors" href="#" target="_blank" rel="noopener noreferrer" aria-disabled="true" tabindex="-1">Discord</a>
-<a class="text-ink-secondary hover:text-accent-blue transition-colors" href="#" target="_blank" rel="noopener noreferrer" aria-disabled="true" tabindex="-1">Forum</a>
-</div>
-<div class="flex flex-col gap-2">
-<span class="font-body text-caption font-bold">Project</span>
-<a class="text-ink-secondary hover:text-accent-blue transition-colors" href="https://github.com/thesohamdatta/aura" target="_blank" rel="noopener noreferrer">GitHub</a>
-<a class="text-ink-secondary hover:text-accent-blue transition-colors" href="#" target="_blank" rel="noopener noreferrer" aria-disabled="true" tabindex="-1">License</a>
-</div>
-</div>
-</footer>
 </div>
 </main>
 </div>
+
+<!-- Footer -->
+<footer class="site-footer border-t border-[#d2d2d7]/50" style="padding: 64px 0 0 0;">
+  <div class="max-w-[1200px] mx-auto px-margin-base">
+    
+    <!-- Breadcrumb row -->
+    <div class="flex items-center text-[12px] text-[#86868b] pb-4 mb-6 border-b border-[#d2d2d7]/35 flex-wrap gap-y-2">
+      <a href="index.html" class="hover:text-[#1d1d1f] transition-colors">Aura</a>
+      <span class="mx-2 text-[10px] text-[#86868b]">›</span>
+      <span class="text-[#1d1d1f]">Docs</span>
+    </div>
+
+    <!-- Main grid -->
+    <div class="grid grid-cols-2 md:grid-cols-[1.5fr_1fr_1fr_1fr_1fr] gap-8 md:gap-gutter">
+      
+      <!-- Brand column -->
+      <div class="col-span-2 md:col-span-1 mb-10 md:mb-0">
+        <div class="font-display text-[21px] font-semibold text-[#1d1d1f] mb-2">Aura</div>
+      </div>
+
+      <!-- Build column -->
+      <div class="col-span-1">
+        <span class="font-body text-[11px] font-medium text-[#1d1d1f]/60 mb-4 block">Build</span>
+        <ul class="space-y-0 flex flex-col">
+          <li><a href="docs.html#hardware" class="footer-link-item">Build Yours</a></li>
+          <li><a href="docs.html#firmware" class="footer-link-item">Firmware</a></li>
+          <li><a href="docs.html#backend" class="footer-link-item">SDK</a></li>
+        </ul>
+      </div>
+
+      <!-- Learn column -->
+      <div class="col-span-1">
+        <span class="font-body text-[11px] font-medium text-[#1d1d1f]/60 mb-4 block">Learn</span>
+        <ul class="space-y-0 flex flex-col">
+          <li><a href="ai.html" class="footer-link-item">How It Works</a></li>
+          <li><a href="manifesto.html" class="footer-link-item">The Dilemma</a></li>
+          <li><a href="docs.html" class="footer-link-item">Docs</a></li>
+        </ul>
+      </div>
+
+      <!-- Community column -->
+      <div class="col-span-1">
+        <span class="font-body text-[11px] font-medium text-[#1d1d1f]/60 mb-4 block">Community</span>
+        <ul class="space-y-0 flex flex-col">
+          <li><a href="https://github.com/thesohamdatta/aura" target="_blank" class="footer-link-item">GitHub</a></li>
+          <li><a href="#" aria-disabled="true" class="footer-disabled-link">Discord</a></li>
+          <li><a href="#" aria-disabled="true" class="footer-disabled-link">Ethics</a></li>
+        </ul>
+      </div>
+
+      <!-- Project column -->
+      <div class="col-span-1">
+        <span class="font-body text-[11px] font-medium text-[#1d1d1f]/60 mb-4 block">Project</span>
+        <ul class="space-y-0 flex flex-col">
+          <li><a href="about.html" class="footer-link-item">About</a></li>
+          <li><a href="ai.html" class="footer-link-item">Intelligence</a></li>
+          <li><a href="manifesto.html" class="footer-link-item">Manifesto</a></li>
+          <li><a href="index.html" class="footer-link-item">Overview</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Retailer/Footnote row -->
+    <div class="pt-6 pb-4 border-t border-[#d2d2d7]/35 mt-8 text-[12px] text-[#86868b] leading-relaxed">
+      More ways to build: <a href="https://github.com/thesohamdatta/aura" target="_blank" class="text-[#0066cc] hover:underline">Fork the GitHub repo</a> or <a href="docs.html" class="text-[#0066cc] hover:underline">read our assembly guides</a>. Need help? Contact <a href="mailto:thesohamdatta@gmail.com" class="text-[#0066cc] hover:underline">thesohamdatta@gmail.com</a>.
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="border-t border-[#d2d2d7]/35 py-5 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+      <p class="font-body text-[12px] text-[#86868b]">&copy; 2026 Aura Project. MIT Licensed.</p>
+      <div class="flex gap-6 flex-row">
+        <a href="#" aria-disabled="true" class="footer-legal-disabled">MIT License</a>
+        <a href="#" aria-disabled="true" class="footer-legal-disabled">Privacy</a>
+        <a href="https://github.com/thesohamdatta/aura" target="_blank" class="footer-legal-link">GitHub</a>
+      </div>
+      <span class="font-body text-[12px] text-[#86868b]">Pune, India</span>
+    </div>
+
+  </div>
+</footer>
 <script>
-        // Navbar Scroll Behavior
-        const navbar = document.getElementById('navbar');
-        if (navbar && navbar.classList.contains('bg-transparent')) {
-            const navLinks = document.querySelectorAll('.nav-link');
-            const logo = navbar.querySelector('a.font-display');
-            const handleScroll = () => {
-                if (window.scrollY > 40) {
-                    navbar.classList.add('scrolled');
-                    navbar.classList.remove('bg-transparent');
-                    
-                    // Transition to frosted white glass (using inline styles to guarantee specificity)
-                    navbar.style.background = 'rgba(255, 255, 255, 0.65)';
-                    navbar.style.backdropFilter = 'blur(24px) saturate(200%)';
-                    navbar.style.webkitBackdropFilter = 'blur(24px) saturate(200%)';
-                    navbar.style.borderBottom = '1px solid rgba(0, 0, 0, 0.08)';
-                } else {
-                    navbar.classList.remove('scrolled');
-                    navbar.classList.add('bg-transparent');
-                    
-                    // Transition to near-invisible glass at top (using inline styles to guarantee specificity)
-                    navbar.style.background = 'rgba(255, 255, 255, 0.08)';
-                    navbar.style.backdropFilter = 'blur(24px) saturate(180%)';
-                    navbar.style.webkitBackdropFilter = 'blur(24px) saturate(180%)';
-                    navbar.style.borderBottom = '1px solid rgba(255, 255, 255, 0.15)';
-                }
-                
-                // Keep logo and links always in readable dark grey for docs page
-                if (logo) {
-                    logo.style.color = '#1d1d1f';
-                }
-                navLinks.forEach(l => {
-                    if (l.classList.contains('font-semibold')) {
-                        l.classList.add('text-[#1d1d1f]');
-                        l.classList.remove('text-white', 'text-white/90', 'text-[#1d1d1f]/65', 'text-white/65');
-                    } else {
-                        l.classList.add('text-[#1d1d1f]/65');
-                        l.classList.remove('text-white', 'text-white/90', 'text-[#1d1d1f]', 'text-white/65');
-                    }
-                });
-            };
-            window.addEventListener('scroll', handleScroll, { passive: true });
-            handleScroll();
-        }
 
         // Micro-interaction for smooth scrolling to sections
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {

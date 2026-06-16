@@ -1,5 +1,22 @@
 /* global.css */
 
+/* ============================================================
+   GLOBAL CAPS OVERRIDE — Apple sentence case enforcement
+   Eliminates all uppercase text sitewide
+   Added: typography audit fix
+   ============================================================ */
+
+*,
+*::before,
+*::after {
+  text-transform: none !important;
+  font-variant-caps: normal !important;
+  font-variant: normal !important;
+}
+
+/* Restore only what legitimately needs case control */
+/* (nothing on this site does — leave this block empty) */
+
 /* SF Pro Display Font Declarations */
 @font-face {
     font-family: 'SF Pro Display';
@@ -218,4 +235,18 @@ a:hover [data-icon] {
 [data-icon] svg {
   font-size: 0;
 }
+
+/* Accessibility: Support prefers-reduced-motion globally */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+  }
+}
+
 

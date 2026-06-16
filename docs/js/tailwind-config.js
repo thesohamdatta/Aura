@@ -84,22 +84,41 @@ tailwind.config = {
                 "gutter": "24px",
                 "section-v-padding": "140px"
             },
-            "fontFamily": {
-                "display": ["'SF Pro Display'", "Inter", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica", "Arial", "sans-serif"],
-                "body":    ["'SF Pro Text'",    "Inter", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica", "Arial", "sans-serif"],
-                "mono":    ["SFMono-Regular", "Consolas", "Monaco", "monospace"],
-                /* legacy aliases — keep for backward compat */
-                "hero-h1": ["'SF Pro Display'", "Inter"],
-                "overline": ["'SF Pro Text'", "Inter"],
-                "section-h2": ["'SF Pro Display'", "Inter"],
-                "section-h3": ["'SF Pro Display'", "Inter"],
-                "label": ["'SF Pro Text'", "Inter"],
-                "hero-h1-mobile": ["'SF Pro Display'", "Inter"],
-                "section-h2-mobile": ["'SF Pro Display'", "Inter"]
+            fontFamily: {
+                "sans": [
+                    "SF Pro Text",
+                    "-apple-system",
+                    "BlinkMacSystemFont",
+                    "Helvetica Neue",
+                    "Arial",
+                    "sans-serif"
+                ],
+                "display": [
+                    "SF Pro Display",
+                    "-apple-system",
+                    "BlinkMacSystemFont",
+                    "Helvetica Neue",
+                    "Arial",
+                    "sans-serif"
+                ],
+                "rounded": [
+                    "SF Pro Rounded",
+                    "-apple-system",
+                    "BlinkMacSystemFont",
+                    "Helvetica Neue",
+                    "Arial",
+                    "sans-serif"
+                ],
+                "mono": [
+                    "SF Mono",
+                    "Fira Code",
+                    "Consolas",
+                    "monospace"
+                ]
             },
             "fontSize": {
                 "hero-h1": ["80px", { "lineHeight": "1.1", "letterSpacing": "-0.028em", "fontWeight": "600" }],
-                "overline": ["12px", { "lineHeight": "1.5", "letterSpacing": "0.08em", "fontWeight": "600" }],
+                "overline": ["12px", { "lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "600" }],
                 "section-h2": ["56px", { "lineHeight": "1.1", "letterSpacing": "-0.028em", "fontWeight": "600" }],
                 "section-h3": ["28px", { "lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "400" }],
                 "body": ["17px", { "lineHeight": "1.47", "letterSpacing": "-0.374px", "fontWeight": "400" }],
