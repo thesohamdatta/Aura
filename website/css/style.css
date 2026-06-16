@@ -416,4 +416,47 @@ footer a {
     pointer-events: none !important;
 }
 
+/* Bento Inset Pocket styling */
+.bento-pocket {
+  background-color: var(--color-canvas-white);
+  border: 1px solid rgba(210, 210, 215, 0.4);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.015), 0 4px 24px rgba(0, 0, 0, 0.02);
+  border-radius: 28px;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease;
+}
+
+.bento-pocket-dark {
+  background-color: var(--color-ink);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 24px rgba(0, 0, 0, 0.1);
+  border-radius: 28px;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease;
+}
+
+.bento-pocket:hover, .bento-pocket:focus-within {
+  transform: translateY(-4px);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.01), 0 12px 32px rgba(0, 0, 0, 0.06);
+}
+
+.bento-pocket-dark:hover, .bento-pocket-dark:focus-within {
+  transform: translateY(-4px);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 12px 32px rgba(0, 0, 0, 0.25);
+}
+
+/* Pulse animation for Siri mic orb */
+@keyframes orb-pulse {
+  0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.45; }
+  50% { transform: scale(1.1) rotate(180deg); opacity: 0.65; }
+}
+
+.animate-orb {
+  animation: orb-pulse 8s infinite ease-in-out;
+}
+
+/* Rotating perspective nodes for memory */
+.perspective-nodes {
+  perspective: 1000px;
+}
+
+
 
