@@ -264,9 +264,15 @@
 #navbar button {
     min-width: 44px !important;
     min-height: 44px !important;
-    display: inline-flex !important;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
+}
+
+@media (min-width: 768px) {
+    #navbar button {
+        display: none !important;
+    }
 }
 
 /* Footer links expanded hit targets */
