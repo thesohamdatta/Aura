@@ -303,7 +303,7 @@ runTest('AI Page bento features section meets layout, accessibility, and styling
 // ----------------------------------------------------
 // TEST CASE 8: Bento Grid Layout Verification
 // ----------------------------------------------------
-runTest('Bento Grid capability section has correct responsive grid and 9 spec cards', () => {
+runTest('Bento Grid capability section has correct responsive grid and 3 spec cards', () => {
   const indexPath = path.join(websiteDir, 'index.html');
   if (!fs.existsSync(indexPath)) {
     throw new Error('index.html not found');
@@ -319,15 +319,25 @@ runTest('Bento Grid capability section has correct responsive grid and 9 spec ca
   const sectionHtml = html.substring(sectionStart, sectionEnd);
 
   // Verify bento responsive grid class is present
-  if (!sectionHtml.includes('grid-cols-1') || !sectionHtml.includes('lg:grid-cols-4')) {
-    throw new Error('index.html capability section is missing 4-column responsive grid classes');
+  if (!sectionHtml.includes('grid-cols-1') || !sectionHtml.includes('md:grid-cols-3')) {
+    throw new Error('index.html capability section is missing 3-column responsive grid classes');
   }
 
-  // Verify all 9 cards are present
+  // Verify all 3 cards are present
   const cardIdentifiers = [
     'Voice',
     'Vision',
-    'Memory',
+    'Memory'
+  ];
+
+  cardIdentifiers.forEach(id => {
+    if (!sectionHtml.includes(id)) {
+      throw new Error(`index.html Bento Grid is missing card or spec item: "${id}"`);
+    }
+  });
+
+  // Verify removed items are NOT present
+  const removedIdentifiers = [
     'ESP32-S3',
     '10-hour',
     '17g',
@@ -336,9 +346,9 @@ runTest('Bento Grid capability section has correct responsive grid and 9 spec ca
     'Built for builders'
   ];
 
-  cardIdentifiers.forEach(id => {
-    if (!sectionHtml.includes(id)) {
-      throw new Error(`index.html Bento Grid is missing card or spec item: "${id}"`);
+  removedIdentifiers.forEach(id => {
+    if (sectionHtml.includes(id)) {
+      throw new Error(`index.html Bento Grid contains removed card or spec item: "${id}"`);
     }
   });
 });

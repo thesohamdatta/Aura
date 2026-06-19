@@ -9,24 +9,90 @@
     height: 52px;
     z-index: 100;
     
-    /* Premium glassmorphism base styles (required by layout tests) */
-    background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(24px) saturate(180%);
-    -webkit-backdrop-filter: blur(24px) saturate(180%);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    /* Default: Frosted glass theme variables (Light Mode) */
+    --nav-bg: rgba(255, 255, 255, 0.72);
+    --nav-border: rgba(0, 0, 0, 0.08);
+    --nav-text-primary: #1d1d1f;
+    --nav-text-secondary: #6e6e73;
+    --nav-text-hover: #0066cc;
+    
+    background: var(--nav-bg);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border-bottom: 1px solid var(--nav-border);
     
     transition: background-color 0.3s ease,
                 backdrop-filter 0.3s ease,
                 border-color 0.3s ease;
 }
 
-/* Scrolled state or static subpage state */
-#navbar.scrolled,
-#navbar:not(.bg-transparent) {
-    background: rgba(255, 255, 255, 0.65);
-    backdrop-filter: blur(24px) saturate(200%);
-    -webkit-backdrop-filter: blur(24px) saturate(200%);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+/* Dark Mode Theme Support (System & HTML Class) */
+@media (prefers-color-scheme: dark) {
+    #navbar {
+        --nav-bg: rgba(39, 39, 41, 0.72);
+        --nav-border: rgba(255, 255, 255, 0.08);
+        --nav-text-primary: #ffffff;
+        --nav-text-secondary: #a1a1a6;
+        --nav-text-hover: #2997ff;
+    }
+}
+
+.dark #navbar {
+    --nav-bg: rgba(39, 39, 41, 0.72);
+    --nav-border: rgba(255, 255, 255, 0.08);
+    --nav-text-primary: #ffffff;
+    --nav-text-secondary: #a1a1a6;
+    --nav-text-hover: #2997ff;
+}
+
+/* Transparent state for index.html hero section (when NOT scrolled) */
+#navbar.bg-transparent:not(.scrolled) {
+    --nav-bg: transparent;
+    --nav-border: transparent;
+    --nav-text-primary: #ffffff;
+    --nav-text-secondary: rgba(255, 255, 255, 0.75);
+    --nav-text-hover: #2997ff;
+    
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border-bottom: 1px solid transparent !important;
+}
+
+/* Base transitions for wordmark and links */
+#navbar .nav-wordmark,
+#navbar .nav-link {
+    transition: color 0.25s ease, opacity 0.25s ease;
+}
+
+#navbar .nav-wordmark {
+    color: var(--nav-text-primary) !important;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+#navbar .nav-link {
+    color: var(--nav-text-secondary) !important;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+#navbar .nav-link:hover {
+    color: var(--nav-text-hover) !important;
+}
+
+#navbar .nav-link.active {
+    color: var(--nav-text-primary) !important;
+    font-weight: 600 !important;
+}
+
+/* Menu Toggle Button Style */
+#navbar button[aria-label="Toggle navigation menu"] {
+    color: var(--nav-text-primary) !important;
+    background: transparent;
+    border: none;
+    outline: none;
+    transition: color 0.25s ease;
 }
 
 .nav-inner {
@@ -40,6 +106,78 @@
         border: none !important;
         backdrop-filter: none !important;
         -webkit-backdrop-filter: none !important;
+    }
+}
+
+/* Mobile menu dropdown styles */
+@media (max-width: 767px) {
+    #navbar #mobileMenu {
+        position: absolute;
+        top: 52px;
+        left: 0;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        padding: 16px;
+        gap: 16px;
+        z-index: 99;
+        
+        /* Always frosted glass/solid background on mobile menu dropdown */
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(20px) saturate(180%);
+        -webkit-backdrop-filter: blur(20px) saturate(180%);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    }
+    
+    #navbar #mobileMenu.flex {
+        display: flex !important;
+    }
+    
+    /* Dark Mode mobile menu dropdown overrides */
+    @media (prefers-color-scheme: dark) {
+        #navbar #mobileMenu {
+            background: rgba(29, 29, 31, 0.95);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+    }
+    .dark #navbar #mobileMenu {
+        background: rgba(29, 29, 31, 0.95);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    /* Dynamic color overrides for mobile menu links */
+    #navbar #mobileMenu .nav-link {
+        color: #6e6e73 !important;
+        width: 100%;
+        padding: 4px 0;
+    }
+    #navbar #mobileMenu .nav-link.active {
+        color: #1d1d1f !important;
+    }
+    #navbar #mobileMenu .nav-link:hover {
+        color: #0066cc !important;
+    }
+    
+    /* Dark Mode mobile menu links overrides */
+    @media (prefers-color-scheme: dark) {
+        #navbar #mobileMenu .nav-link {
+            color: #a1a1a6 !important;
+        }
+        #navbar #mobileMenu .nav-link.active {
+            color: #ffffff !important;
+        }
+        #navbar #mobileMenu .nav-link:hover {
+            color: #2997ff !important;
+        }
+    }
+    .dark #navbar #mobileMenu .nav-link {
+        color: #a1a1a6 !important;
+    }
+    .dark #navbar #mobileMenu .nav-link.active {
+        color: #ffffff !important;
+    }
+    .dark #navbar #mobileMenu .nav-link:hover {
+        color: #2997ff !important;
     }
 }
 

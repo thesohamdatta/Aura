@@ -83,6 +83,8 @@ document.addEventListener('DOMContentLoaded', () => {
     requestAnimationFrame(updateVisuals);
   }
 
+  const navbar = document.getElementById('navbar');
+
   window.addEventListener('scroll', () => {
     const currentScrollY = window.scrollY;
     const dy = Math.abs(currentScrollY - lastScrollY);
@@ -102,5 +104,53 @@ document.addEventListener('DOMContentLoaded', () => {
       active = true;
       requestAnimationFrame(updateVisuals);
     }
+
+    // Toggle scrolled state class for transparent navbar
+    if (navbar && navbar.classList.contains('bg-transparent')) {
+      if (currentScrollY >= 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    }
   }, { passive: true });
+
+  // Initial call to set correct classes on load
+  if (navbar && navbar.classList.contains('bg-transparent')) {
+    if (window.scrollY >= 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  }
+
+  // 4. Dynamic Active Link Highlighting
+  const currentPath = window.location.pathname;
+  const links = document.querySelectorAll('#navbar .nav-link');
+  links.forEach(link => {
+    const href = link.getAttribute('href');
+    const isIndex = (currentPath === '/' || currentPath.endsWith('/') || currentPath.endsWith('index.html'));
+    const isMatch = href === 'index.html' ? isIndex : currentPath.endsWith(href);
+    
+    if (isMatch) {
+      link.classList.add('active');
+      link.setAttribute('aria-current', 'page');
+    } else {
+      link.classList.remove('active');
+      link.removeAttribute('aria-current');
+    }
+  });
+
+  // 5. Accessible Mobile Menu Toggle
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (menuToggle && mobileMenu) {
+    menuToggle.addEventListener('click', () => {
+      const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', !isExpanded);
+      
+      mobileMenu.classList.toggle('hidden');
+      mobileMenu.classList.toggle('flex');
+    });
+  }
 });
