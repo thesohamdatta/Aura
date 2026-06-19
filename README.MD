@@ -44,22 +44,7 @@ AURA is a wearable AI context engine designed to capture, process, and remember 
 
 <br/>
 
-## 1. Miniature Scale. Massive Intelligence.
 
-<div align="center">
-  <table border="0">
-    <tr>
-      <td width="50%" align="center">
-        <img src="Assets/hero/aura%203.png" width="90%" style="border-radius: 2rem;"/>
-        <p><i>Fits in the palm of your hand.</i></p>
-      </td>
-      <td width="50%" align="center">
-        <img src="Assets/hero/internal%20view%201.png" width="90%" style="border-radius: 2rem;"/>
-        <p><i> Packed with intelligence.</i></p>
-      </td>
-    </tr>
-  </table>
-</div>
 
 <br/>
 
