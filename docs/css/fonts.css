@@ -165,74 +165,6 @@
 }
 
 /* ============================================================
-   APPLE TYPOGRAPHY SYSTEM — Usage Rules
-   Matches apple.com exactly
-   ============================================================ */
-
-:root {
-  /* Font stacks */
-  --font-display:  'SF Pro Display', -apple-system, BlinkMacSystemFont, 
-                   'Helvetica Neue', Arial, sans-serif;
-  --font-text:     'SF Pro Text',    -apple-system, BlinkMacSystemFont, 
-                   'Helvetica Neue', Arial, sans-serif;
-  --font-rounded:  'SF Pro Rounded', -apple-system, BlinkMacSystemFont, 
-                   'Helvetica Neue', Arial, sans-serif;
-
-  /* Type scale — mirrors Apple.com exactly */
-  --type-hero:        80px;   /* Hero headlines (index.html H1) */
-  --type-display:     56px;   /* Section display headlines */
-  --type-title-xl:    48px;   /* Large section titles */
-  --type-title-lg:    40px;   /* Standard section titles */
-  --type-title-md:    28px;   /* Sub-section titles */
-  --type-title-sm:    21px;   /* Card titles, callouts */
-  --type-body-lg:     19px;   /* Large body, intro paragraphs */
-  --type-body:        17px;   /* Standard body copy */
-  --type-body-sm:     15px;   /* Secondary body, descriptions */
-  --type-label:       14px;   /* Nav links, tags, labels */
-  --type-caption:     13px;   /* Captions, footnotes, metadata */
-  --type-micro:       11px;   /* Legal, tiny labels */
-
-  /* Letter spacing — Apple's optical values */
-  --tracking-hero:     -0.005em;
-  --tracking-display:  -0.003em;
-  --tracking-title:    -0.002em;
-  --tracking-body:      0em;
-  --tracking-label:     0em;
-  --tracking-caps:      0;  /* For uppercase labels */
-
-  /* Line height */
-  --leading-tight:   1.05;   /* Hero, display */
-  --leading-snug:    1.2;    /* Titles */
-  --leading-normal:  1.47;   /* Body text — Apple's exact value */
-  --leading-relaxed: 1.6;    /* Long-form prose */
-}
-
-/* ============================================================
-   GLOBAL BASE — Applied to everything
-   ============================================================ */
-
-*,
-*::before,
-*::after {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-}
-
-html {
-  font-family: var(--font-text);
-  font-size: 17px;
-  font-weight: 400;
-  line-height: var(--leading-normal);
-  color: #1d1d1f;
-  -webkit-text-size-adjust: 100%;
-}
-
-body {
-  font-family: var(--font-text);
-}
-
-/* ============================================================
    APPLE TYPOGRAPHY RULES
    SF Pro Display for >= 20px
    SF Pro Text for < 20px
@@ -367,11 +299,4 @@ code, pre, .font-mono {
   font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
 }
 
-/* ============================================================
-   REMOVE INTER — CRITICAL
-   These rules override any remaining Inter references
-   ============================================================ */
 
-@import url('') ; /* This line intentionally blank — 
-                     remove the Google Fonts Inter import 
-                     from all HTML <head> tags instead */

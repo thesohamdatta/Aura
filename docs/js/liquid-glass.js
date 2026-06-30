@@ -144,13 +144,36 @@ document.addEventListener('DOMContentLoaded', () => {
   // 5. Accessible Mobile Menu Toggle
   const menuToggle = document.getElementById('menuToggle');
   const mobileMenu = document.getElementById('mobileMenu');
+  const menuIcon = document.getElementById('menuIcon');
   if (menuToggle && mobileMenu) {
+    const closeMenu = () => {
+      menuToggle.setAttribute('aria-expanded', 'false');
+      mobileMenu.classList.remove('flex', 'menu-open');
+      mobileMenu.classList.add('hidden');
+      if (menuIcon) menuIcon.textContent = 'menu';
+    };
+    const openMenu = () => {
+      menuToggle.setAttribute('aria-expanded', 'true');
+      mobileMenu.classList.remove('hidden');
+      mobileMenu.classList.add('flex', 'menu-open');
+      if (menuIcon) menuIcon.textContent = 'close';
+    };
     menuToggle.addEventListener('click', () => {
       const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
-      menuToggle.setAttribute('aria-expanded', !isExpanded);
-      
-      mobileMenu.classList.toggle('hidden');
-      mobileMenu.classList.toggle('flex');
+      isExpanded ? closeMenu() : openMenu();
+    });
+    document.addEventListener('click', (e) => {
+      if (menuToggle.getAttribute('aria-expanded') === 'true' &&
+          !mobileMenu.contains(e.target) &&
+          !menuToggle.contains(e.target)) {
+        closeMenu();
+      }
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && menuToggle.getAttribute('aria-expanded') === 'true') {
+        closeMenu();
+        menuToggle.focus();
+      }
     });
   }
 });

@@ -77,12 +77,12 @@ tailwind.config = {
                 "tile": "0px"        /* Full-bleed alternating tiles */
             },
             "spacing": {
-                "section-v-padding-mobile": "80px",
+                "section-v-padding-mobile": "60px",
                 "margin-base": "32px",
                 "headline-max-width": "800px",
                 "prose-max-width": "680px",
                 "gutter": "24px",
-                "section-v-padding": "140px"
+                "section-v-padding": "80px"
             },
             fontFamily: {
                 "sans": [

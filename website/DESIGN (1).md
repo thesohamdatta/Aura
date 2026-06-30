@@ -560,3 +560,20 @@ The structural breakpoints that matter for agents: 1440px (content lock), 1068px
 - Dark-mode counterparts for store and accessories utility cards were not surfaced on the analyzed pages; the system documented is the daytime/light-dominant variant Apple ships by default.
 - Atmospheric photography (environment page mountain vista) is a content asset, not a design token; the documented `{component.environment-quote-card}` describes the structural surface only.
 - The exact backdrop-filter blur radius on `{component.sub-nav-frosted}` and `{component.floating-sticky-bar}` is platform-dependent; production CSS uses `saturate(180%) blur(20px)` as a typical baseline but the value isn't formalized as a token.
+
+---
+
+## Implementation — CSS Custom Properties
+
+All design tokens are defined in `global.css`:root. `fonts.css` contains **only** `@font-face` declarations and typography rule blocks.
+
+### Layout Tokens
+
+| Variable | Value | Purpose |
+|---|---|---|
+| `--content-max` | `980px` | Max-width for text-heavy content sections |
+| `--hero-max` | `1200px` | Max-width for hero/media sections |
+| `--section-padding` | `80px` | Vertical padding inside product tiles |
+| `--section-padding-mobile` | `60px` | Section padding at mobile |
+| `--gutter` | `24px` | Gutters between cards |
+| `--prose-max` | `680px` | Max-width for long-form prose |

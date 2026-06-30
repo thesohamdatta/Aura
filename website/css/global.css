@@ -1,96 +1,83 @@
-/* ============================================================
-   SF Pro Display Font Declarations
-   ============================================================ */
-@font-face {
-    font-family: 'SF Pro Display';
-    src: local('SF Pro Display Regular'), local('SFProDisplay-Regular'), url('../fonts/SF-Pro-Display-Regular.otf') format('opentype');
-    font-weight: 400;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'SF Pro Display';
-    src: local('SF Pro Display Medium'), local('SFProDisplay-Medium'), url('../fonts/SF-Pro-Display-Medium.otf') format('opentype');
-    font-weight: 500;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'SF Pro Display';
-    src: local('SF Pro Display Semibold'), local('SFProDisplay-Semibold'), url('../fonts/SF-Pro-Display-Semibold.otf') format('opentype');
-    font-weight: 600;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'SF Pro Display';
-    src: local('SF Pro Display Bold'), local('SFProDisplay-Bold'), url('../fonts/SF-Pro-Display-Bold.otf') format('opentype');
-    font-weight: 700;
-    font-style: normal;
-}
-
-/* SF Pro Text Font Declarations */
-@font-face {
-    font-family: 'SF Pro Text';
-    src: local('SF Pro Text Regular'), local('SFProText-Regular'), url('../fonts/SF-Pro-Text-Regular.otf') format('opentype');
-    font-weight: 400;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'SF Pro Text';
-    src: local('SF Pro Text Medium'), local('SFProText-Medium'), url('../fonts/SF-Pro-Text-Medium.otf') format('opentype');
-    font-weight: 500;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'SF Pro Text';
-    src: local('SF Pro Text Semibold'), local('SFProText-Semibold'), url('../fonts/SF-Pro-Text-Semibold.otf') format('opentype');
-    font-weight: 600;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'SF Pro Text';
-    src: local('SF Pro Text Bold'), local('SFProText-Bold'), url('../fonts/SF-Pro-Text-Bold.otf') format('opentype');
-    font-weight: 700;
-    font-style: normal;
-}
-
 :root {
     /* ── Canvas Colors ──────────────────────────────── */
-    --color-canvas-white: #ffffff;          /* Primary clean body/card background */
-    --color-canvas-parchment: #f5f5f7;      /* Apple off-white alternating section */
-    --color-canvas-dark: #272729;           /* Apple Near-Black Tile — dark sections */
-    --color-canvas-black: #000000;          /* Pure black — nav bar, media frames */
-    --color-canvas-pearl: #fafafc;          /* Pearl — secondary ghost button bg */
+    --color-canvas-white: #ffffff;
+    --color-canvas-parchment: #f5f5f7;
+    --color-canvas-dark: #272729;
+    --color-canvas-black: #000000;
+    --color-canvas-pearl: #fafafc;
 
     /* ── Text Colors ────────────────────────────────── */
-    --color-ink: #1d1d1f;                   /* Text Ink — body on light surfaces */
-    --color-ink-secondary: #6e6e73;         /* Secondary text — captions, meta */
-    --color-ink-tertiary: #86868b;          /* Tertiary — eyebrows, overlines */
-    --color-ink-dark: #ffffff;              /* Text on dark surfaces */
+    --color-ink: #1d1d1f;
+    --color-ink-secondary: #6e6e73;
+    --color-ink-tertiary: #86868b;
+    --color-ink-dark: #ffffff;
 
     /* ── Interactive Colors ─────────────────────────── */
-    --color-action-blue: #0066cc;           /* Universal CTA blue — buttons, links */
-    --color-focus-blue: #0071e3;            /* Keyboard focus rings */
-    --color-sky-blue: #2997ff;              /* In-copy links on dark surfaces */
+    --color-action-blue: #0066cc;
+    --color-focus-blue: #0071e3;
+    --color-sky-blue: #2997ff;
 
-    /* ── Typography ─────────────────────────────────── */
-    --font-display: 'SF Pro Display', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-    --font-text:    'SF Pro Text',    'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-    --font-mono:    SFMono-Regular, Consolas, Monaco, monospace;
+    /* ── Font Families ──────────────────────────────── */
+    --font-display:  'SF Pro Display', -apple-system, BlinkMacSystemFont,
+                     'Helvetica Neue', Arial, sans-serif;
+    --font-text:     'SF Pro Text',    -apple-system, BlinkMacSystemFont,
+                     'Helvetica Neue', Arial, sans-serif;
+    --font-rounded:  'SF Pro Rounded', -apple-system, BlinkMacSystemFont,
+                     'Helvetica Neue', Arial, sans-serif;
+    --font-mono:     SFMono-Regular, Consolas, Monaco, monospace;
+
+    /* ── Type Scale ─────────────────────────────────── */
+    --type-hero:        80px;
+    --type-display:     56px;
+    --type-title-xl:    48px;
+    --type-title-lg:    40px;
+    --type-title-md:    28px;
+    --type-title-sm:    21px;
+    --type-body-lg:     19px;
+    --type-body:        17px;
+    --type-body-sm:     15px;
+    --type-label:       14px;
+    --type-caption:     13px;
+    --type-micro:       11px;
+
+    /* ── Letter-spacing ─────────────────────────────── */
+    --tracking-hero:     -0.005em;
+    --tracking-display:  -0.003em;
+    --tracking-title:    -0.002em;
+    --tracking-body:      0em;
+    --tracking-label:     0em;
+    --tracking-caps:      0;
+
+    /* ── Line Height ────────────────────────────────── */
+    --leading-tight:   1.05;
+    --leading-snug:    1.2;
+    --leading-normal:  1.47;
+    --leading-relaxed: 1.6;
+
+    /* ── Body Defaults ──────────────────────────────── */
     --body-size: 17px;
     --body-line-height: 1.47;
-    --heading-tracking: -0.02em;            /* Apple -0.02em tight heading feel */
+    --heading-tracking: -0.02em;
 
     /* ── Elevation ──────────────────────────────────── */
-    /* No shadows on buttons/cards/nav bars (Apple rule) */
-    --shadow-product: 3px 5px 30px rgba(0, 0, 0, 0.22);  /* Only for PNG product renders */
-    --blur-glass: blur(20px) saturate(180%);               /* Frosted glass nav */
-    --bg-glass: rgba(255, 255, 255, 0.72);                 /* Frosted glass nav bg */
-    --focus-ring: 0 0 0 4px rgba(0, 113, 227, 0.6);       /* Focus ring — Focus Blue */
+    --shadow-product: 3px 5px 30px rgba(0, 0, 0, 0.22);
+    --blur-glass: blur(20px) saturate(180%);
+    --bg-glass: rgba(255, 255, 255, 0.72);
+    --focus-ring: 0 0 0 4px rgba(0, 113, 227, 0.6);
 
     /* ── Shape / Border Radius ──────────────────────── */
-    --radius-pill: 9999px;   /* Primary CTA buttons, chips, search inputs */
-    --radius-card: 18px;     /* Grid cards, spec tables */
-    --radius-utility: 8px;   /* Secondary buttons, thumbnail images */
-    --radius-tile: 0px;      /* Full-bleed alternating home grid tiles */
+    --radius-pill: 9999px;
+    --radius-card: 18px;
+    --radius-utility: 8px;
+    --radius-tile: 0px;
+
+    /* ── Layout / Container ─────────────────────────── */
+    --content-max: 980px;
+    --hero-max: 1200px;
+    --section-padding: 80px;
+    --section-padding-mobile: 60px;
+    --gutter: 24px;
+    --prose-max: 680px;
 }
 
 

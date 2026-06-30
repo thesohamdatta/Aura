@@ -20,22 +20,31 @@
 <!-- TOP NAVIGATION SHELL -->
 <nav id="navbar" class="fixed top-0 w-full h-[52px] z-[100] transition-all duration-300">
 <div class="nav-inner flex justify-between items-center px-margin-base w-full max-w-[1200px] mx-auto h-full">
-<a href="index.html" class="font-display text-tagline nav-wordmark">Aura</a>
+<a href="index.html" class="nav-wordmark">Aura</a>
 <div id="mobileMenu" class="hidden absolute top-[52px] left-0 w-full bg-surface/95 dark:bg-[#1d1d1f]/95 backdrop-blur-md border-b border-black/10 dark:border-white/10 flex-col p-4 gap-4 md:static md:w-auto md:bg-transparent md:border-none md:p-0 md:flex md:flex-row md:gap-8 items-center">
-<a class="nav-link font-body text-body" href="index.html">Overview</a>
-<a class="nav-link font-body text-body" href="about.html">About</a>
-<a class="nav-link font-body text-body" href="ai.html">AI</a>
-<a class="nav-link font-body text-body" href="manifesto.html">Dilemma</a>
-<a class="nav-link font-body text-body" href="docs.html">Docs</a>
+<a class="nav-link" href="index.html">Overview</a>
+<a class="nav-link" href="about.html">About</a>
+<a class="nav-link" href="ai.html">AI</a>
+<a class="nav-link" href="manifesto.html">Dilemma</a>
+<a class="nav-link active" href="docs.html">Docs</a>
 </div>
 <div class="flex items-center gap-4">
-<a href="docs.html#hardware" class="bg-accent-blue text-white rounded-full px-[15px] py-[6px] text-caption font-medium hover:opacity-90 transition-opacity flex items-center justify-center">Build Yours</a>
+<a href="docs.html#hardware" class="nav-cta">Build Yours</a>
+<button id="menuToggle" class="md:hidden flex items-center justify-center w-11 h-11" aria-expanded="false" aria-controls="mobileMenu" aria-label="Toggle navigation menu">
+  <span id="menuIcon" class="material-symbols-outlined">menu</span>
+</button>
 </div>
 </div>
 </nav>
+<!-- Mobile TOC Toggle -->
+<button id="tocToggle" class="md:hidden fixed z-50 bottom-6 right-6 bg-[#1d1d1f] text-white rounded-full px-5 py-3 text-xs font-semibold shadow-lg flex items-center gap-2 transition-transform active:scale-95">
+  <span class="material-symbols-outlined text-sm">list</span> Contents
+</button>
+<!-- TOC Overlay -->
+<div id="tocOverlay" class="md:hidden fixed inset-0 bg-black/30 z-40 hidden transition-opacity duration-300" style="opacity:0"></div>
 <div class="max-w-[1200px] mx-auto flex pt-[52px]">
 <!-- Left Sidebar Documentation Tree (260px) -->
-<aside class="w-[260px] h-[calc(100vh-52px)] sticky top-[52px] hidden md:flex flex-col py-8 px-4 bg-[#f5f5f7] border-r border-[#d2d2d7]/35 overflow-y-auto">
+<aside id="docsSidebar" class="w-[260px] h-[calc(100vh-52px)] fixed md:sticky top-[52px] left-0 z-50 hidden md:flex flex-col py-8 px-4 bg-[#f5f5f7] border-r border-[#d2d2d7]/35 overflow-y-auto transition-transform duration-300 -translate-x-full md:translate-x-0">
 <div class="mb-6 px-3">
 <h2 class="font-display text-body-strong font-bold text-ink mb-1 tracking-tight">Documentation</h2>
 <p class="font-body text-fine-print text-ink-tertiary font-semibold">Aura Reference</p>
@@ -1114,7 +1123,7 @@ ssl._create_default_https_context = ssl._create_unverified_context</pre>
 
 <!-- Footer -->
 <footer class="site-footer border-t border-[#d2d2d7]/50" style="padding: 64px 0 0 0;">
-  <div class="max-w-[1200px] mx-auto px-margin-base">
+  <div class="max-w-[var(--content-max)] mx-auto px-margin-base">
     
     <!-- Breadcrumb row -->
     <div class="flex items-center text-[12px] text-[#86868b] pb-4 mb-6 border-b border-[#d2d2d7]/35 flex-wrap gap-y-2">
@@ -1206,7 +1215,7 @@ ssl._create_default_https_context = ssl._create_unverified_context</pre>
                     
                     // Update active state in sidebar
                     document.querySelectorAll('aside nav a').forEach(a => {
-                        a.className = "flex items-center gap-2.5 px-3 py-1.5 rounded-md font-body text-xs text-[#515154] hover:bg-[#e8e8ed]/45 hover:text-[#1d1d1f] transition-colors";
+                        a.className = "flex items-center gap-2.5 px-3 py-1.5 rounded-md font-body text-xs text-[#6e6e73] hover:bg-[#e8e8ed]/45 hover:text-[#1d1d1f] transition-colors";
                     });
                     this.className = "flex items-center gap-2.5 px-3 py-1.5 rounded-md font-body text-xs text-[#0066cc] font-semibold bg-[#e8e8ed]/60 transition-colors";
                 }
@@ -1228,7 +1237,7 @@ ssl._create_default_https_context = ssl._create_unverified_context</pre>
                         const sidebarLink = document.querySelector(`aside nav a[href="#${id}"]`);
                         if (sidebarLink) {
                             document.querySelectorAll('aside nav a').forEach(a => {
-                                a.className = "flex items-center gap-2.5 px-3 py-1.5 rounded-md font-body text-xs text-[#515154] hover:bg-[#e8e8ed]/45 hover:text-[#1d1d1f] transition-colors";
+                                a.className = "flex items-center gap-2.5 px-3 py-1.5 rounded-md font-body text-xs text-[#6e6e73] hover:bg-[#e8e8ed]/45 hover:text-[#1d1d1f] transition-colors";
                             });
                             sidebarLink.className = "flex items-center gap-2.5 px-3 py-1.5 rounded-md font-body text-xs text-[#0066cc] font-semibold bg-[#e8e8ed]/60 transition-colors";
                         }
@@ -1238,6 +1247,44 @@ ssl._create_default_https_context = ssl._create_unverified_context</pre>
 
             document.querySelectorAll('section[id]').forEach((section) => {
                 observer.observe(section);
+            });
+        }
+
+        // Mobile TOC Drawer Toggle
+        const tocToggle = document.getElementById('tocToggle');
+        const docsSidebar = document.getElementById('docsSidebar');
+        const tocOverlay = document.getElementById('tocOverlay');
+        if (tocToggle && docsSidebar && tocOverlay) {
+            const openToc = () => {
+                docsSidebar.classList.remove('hidden');
+                docsSidebar.classList.add('flex');
+                setTimeout(() => {
+                    docsSidebar.style.transform = 'translateX(0)';
+                    tocOverlay.classList.remove('hidden');
+                    setTimeout(() => tocOverlay.style.opacity = '1', 10);
+                }, 10);
+            };
+            const closeToc = () => {
+                docsSidebar.style.transform = '';
+                tocOverlay.style.opacity = '0';
+                setTimeout(() => {
+                    tocOverlay.classList.add('hidden');
+                    docsSidebar.classList.add('hidden');
+                    docsSidebar.classList.remove('flex');
+                }, 300);
+            };
+            tocToggle.addEventListener('click', () => {
+                if (docsSidebar.classList.contains('hidden') || !docsSidebar.classList.contains('flex')) {
+                    openToc();
+                } else {
+                    closeToc();
+                }
+            });
+            tocOverlay.addEventListener('click', closeToc);
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && !docsSidebar.classList.contains('hidden')) {
+                    closeToc();
+                }
             });
         }
     </script>
