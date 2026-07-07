@@ -60,7 +60,7 @@
     --heading-tracking: -0.02em;
 
     /* ── Elevation ──────────────────────────────────── */
-    --shadow-product: 3px 5px 30px rgba(0, 0, 0, 0.22);
+    
     --blur-glass: blur(20px) saturate(180%);
     --bg-glass: rgba(255, 255, 255, 0.72);
     --focus-ring: 0 0 0 4px rgba(0, 113, 227, 0.6);
@@ -107,9 +107,7 @@ select:focus-visible {
 }
 
 /* Product image shadow — only for PNG renders on canvas */
-.product-shadow {
-    box-shadow: var(--shadow-product);
-}
+
 
 
 /* Glassmorphism Navigation */
