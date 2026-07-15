@@ -150,13 +150,13 @@
 <section class="mb-16 scroll-mt-24" id="what-is-aura">
 <h2 class="font-display text-display-md md:text-hero-display tracking-tight text-on-surface text-left mb-6 border-b border-outline-variant/30 pb-4">What Is Aura</h2>
 <p class="font-body text-body text-ink-secondary mb-6 max-w-[680px]">
-    Aura is an open-source AI wearable pendant. You wear it around your neck. It listens, sees, and thinks — so you don't have to pause your day to take notes or remember things.
+    Aura is an open-source AI wearable pendant worn around your neck. It listens, sees, and transcribes so you do not have to pause your day to take notes.
 </p>
 <p class="font-body text-body text-ink-secondary mb-6 max-w-[680px]">
-    It captures audio and images, sends them to an AI, and turns everything into summaries, transcripts, and action items — all accessible from your phone.
+    It captures audio and images, routes them to a self-hosted or cloud backend, and generates summaries and transcripts accessible from your phone.
 </p>
 <p class="font-body text-body text-ink-secondary mb-6 max-w-[680px]">
-    Built on the Omi ecosystem. Fully open source. Around $50–70 to build yourself.
+    Built on the open Omi ecosystem. Sourced for under $50.
 </p>
 </section>
 
@@ -219,7 +219,7 @@
             <tr class="border-b border-outline-variant/10">
                 <td class="py-3">USB-C cable</td>
                 <td class="py-3">Anywhere</td>
-                <td class="py-3">—</td>
+                <td class="py-3">None</td>
             </tr>
             <tr class="border-b border-outline-variant/30 font-semibold text-on-surface">
                 <td class="py-3">Total Cost</td>
@@ -258,7 +258,7 @@
 <section class="mb-16 scroll-mt-24" id="hardware">
 <h2 class="font-display text-display-md md:text-hero-display tracking-tight text-on-surface text-left mb-6 border-b border-outline-variant/30 pb-4">Hardware Overview</h2>
 <p class="font-body text-body text-ink-secondary mb-6 max-w-[680px]">
-    The XIAO ESP32-S3 Sense is the core. Camera and microphone are already integrated on the board — no extra modules needed.
+    The XIAO ESP32-S3 Sense is the core. Camera and microphone are already integrated on the board, so no extra modules are needed.
 </p>
 <div class="overflow-x-auto mb-6 max-w-[680px]">
     <table class="w-full text-left font-body text-label text-ink-secondary border-collapse">
@@ -275,11 +275,11 @@
             </tr>
             <tr class="border-b border-outline-variant/10">
                 <td class="py-3">Camera</td>
-                <td class="py-3">OV2640 — built into ESP32-S3 Sense</td>
+                <td class="py-3">OV2640 (built into ESP32-S3 Sense)</td>
             </tr>
             <tr class="border-b border-outline-variant/10">
                 <td class="py-3">Microphone</td>
-                <td class="py-3">PDM — built into ESP32-S3 Sense</td>
+                <td class="py-3">PDM (built into ESP32-S3 Sense)</td>
             </tr>
             <tr class="border-b border-outline-variant/10">
                 <td class="py-3">Battery</td>
@@ -343,7 +343,7 @@ platformio device monitor --baud 115200
     <strong>Method 3: Arduino IDE</strong>
 </p>
 <p class="font-body text-body text-ink-secondary mb-4 max-w-[680px]">
-    If flashing via the Arduino IDE, follow these settings carefully — compilation may succeed but the camera will fail at runtime if PSRAM is not configured correctly:
+    If flashing via the Arduino IDE, follow these settings carefully. Compilation may succeed but the camera will fail at runtime if PSRAM is not configured correctly:
 </p>
 <ol class="list-decimal pl-6 mb-6 font-body text-body text-ink-secondary flex flex-col gap-2 max-w-[680px]">
     <li>Install <a href="https://www.arduino.cc/en/software" target="_blank" rel="noopener noreferrer" class="text-accent-blue hover:underline">Arduino IDE 2.x</a>.</li>
@@ -351,7 +351,7 @@ platformio device monitor --baud 115200
         <code class="block bg-canvas-parchment p-2 rounded mt-2 text-xs font-mono">https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json</code>
     </li>
     <li>Go to <code>Tools → Board → Boards Manager</code> → search <code>esp32</code> → Install version <strong>2.0.17</strong>.</li>
-    <li>Configure the board profile in the <strong>Tools</strong> menu — get these right or the camera won't work:
+    <li>Configure the board profile in the <strong>Tools</strong> menu. Get these right or the camera will not work:
         <pre class="bg-canvas-parchment p-3 rounded-lg mt-2 text-xs font-mono">Tools → Board  →  XIAO_ESP32S3
 Tools → PSRAM  →  OPI PSRAM        ← Required. Camera fails without this.
 Tools → Port   →  your COM port</pre>
@@ -546,7 +546,7 @@ ngrok http 8000
 </ul>
 
 <p class="font-body text-body text-ink-secondary mb-4 max-w-[680px]">
-    <strong>Option A — Android Studio (Recommended):</strong>
+    <strong>Option A: Android Studio (Recommended):</strong>
 </p>
 <ol class="list-decimal pl-6 mb-6 font-body text-body text-ink-secondary flex flex-col gap-2 max-w-[680px]">
     <li>Clone the repo and open <code>app/android/</code> in Android Studio.</li>
@@ -556,7 +556,7 @@ ngrok http 8000
 </ol>
 
 <p class="font-body text-body text-ink-secondary mb-4 max-w-[680px]">
-    <strong>Option B — Command Line:</strong>
+    <strong>Option B: Command Line:</strong>
 </p>
 <pre class="bg-canvas-parchment p-4 rounded-xl text-xs font-mono text-on-surface mb-6 max-w-[680px] overflow-x-auto">cd app/android
 
@@ -586,7 +586,7 @@ ngrok http 8000
     <li>Power on the Aura pendant.</li>
     <li>Open the app → go to <strong>Devices</strong>.</li>
     <li>Tap <strong>Pair new device</strong> → select <strong>AURA</strong> from the BLE scan list.</li>
-    <li>Connection established — the pendant LED confirms the pairing.</li>
+    <li>Connection established. The pendant LED confirms the pairing.</li>
 </ol>
 
 <div class="overflow-x-auto mb-6 max-w-[680px]">
@@ -719,13 +719,13 @@ ngrok http 8000
             <tr class="border-b border-outline-variant/10">
                 <td class="py-3">JPEG Quality</td>
                 <td class="py-3">12</td>
-                <td class="py-3">0 (best) – 63 (worst)</td>
+                <td class="py-3">0 (best) to 63 (worst)</td>
             </tr>
         </tbody>
     </table>
 </div>
 <p class="font-body text-body text-ink-secondary max-w-[680px]">
-    Lower resolution + higher interval = longer battery life. For vision AI, SVGA is the sweet spot — good enough for GPT-4o, small enough to transmit fast.
+    Lower resolution + higher interval = longer battery life. For vision AI, SVGA is the sweet spot: good enough for GPT-4o and small enough to transmit fast.
 </p>
 </section>
 
@@ -733,7 +733,7 @@ ngrok http 8000
 <section class="mb-16 scroll-mt-24" id="battery-power">
 <h2 class="font-display text-display-md md:text-hero-display tracking-tight text-on-surface text-left mb-6 border-b border-outline-variant/30 pb-4">Battery &amp; Power</h2>
 <p class="font-body text-body text-ink-secondary mb-6 max-w-[680px]">
-    Aura runs on 2× 250mAh Li-ion cells wired in parallel — 500mAh total at 3.7V nominal. Battery voltage is monitored via a resistor divider connected to <code>GPIO2 (A1)</code>.
+    Aura runs on two 250mAh Li-ion cells wired in parallel, providing 500mAh total at 3.7V nominal. Battery voltage is monitored via a resistor divider connected to <code>GPIO2 (A1)</code>.
 </p>
 <pre class="bg-canvas-parchment p-4 rounded-xl text-xs font-mono text-on-surface mb-6 max-w-[680px] overflow-x-auto">Battery + ──[R1: 169kΩ]──+──[R2: 110kΩ]── Battery -
                           |
@@ -780,15 +780,15 @@ ngrok http 8000
         </thead>
         <tbody>
             <tr class="border-b border-outline-variant/10">
-                <td class="py-3">Heavy — continuous capture</td>
+                <td class="py-3">Heavy: continuous capture</td>
                 <td class="py-3">6–7 hours</td>
             </tr>
             <tr class="border-b border-outline-variant/10">
-                <td class="py-3">Normal — mixed active/standby</td>
+                <td class="py-3">Normal: mixed active and standby</td>
                 <td class="py-3">8–10 hours</td>
             </tr>
             <tr class="border-b border-outline-variant/10">
-                <td class="py-3">Light — occasional captures</td>
+                <td class="py-3">Light: occasional captures</td>
                 <td class="py-3">12–15 hours</td>
             </tr>
         </tbody>
@@ -826,7 +826,7 @@ ngrok http 8000
             <tr class="border-b border-outline-variant/10">
                 <td class="py-3">3.7–3.8V</td>
                 <td class="py-3">0–20%</td>
-                <td class="py-3">Low — charge soon</td>
+                <td class="py-3">Low: charge soon</td>
             </tr>
             <tr class="border-b border-outline-variant/10">
                 <td class="py-3">&lt;3.5V</td>
@@ -880,8 +880,8 @@ ngrok http 8000
     <strong>Charging &amp; LED Status:</strong>
 </p>
 <ul class="list-disc pl-6 mb-6 font-body text-body text-ink-secondary flex flex-col gap-2 max-w-[680px]">
-    <li><strong>Red LED</strong> — Charging in progress</li>
-    <li><strong>Green LED</strong> — Fully charged</li>
+    <li><strong>Red LED</strong>: Charging in progress</li>
+    <li><strong>Green LED</strong>: Fully charged</li>
     <li>Typical charge time: 1–1.5 hours from a USB 2.0 port</li>
 </ul>
 
@@ -890,7 +890,7 @@ ngrok http 8000
 </p>
 <ul class="list-disc pl-6 mb-6 font-body text-body text-ink-secondary flex flex-col gap-2 max-w-[680px]">
     <li>Charge when battery voltage drops below 3.8V (20%)</li>
-    <li>Never let voltage drop below 3.5V — cell damage threshold</li>
+    <li>Never let voltage drop below 3.5V, which is the cell damage threshold</li>
     <li>Charge at 10°C–40°C ambient temperature range</li>
     <li>Store at ~50% charge if unused for more than a week</li>
     <li>Increase <code>PHOTO_CAPTURE_INTERVAL_MS</code> in firmware for all-day use</li>
@@ -902,7 +902,7 @@ ngrok http 8000
 <section class="mb-16 scroll-mt-24" id="ota-updates">
 <h2 class="font-display text-display-md md:text-hero-display tracking-tight text-on-surface text-left mb-6 border-b border-outline-variant/30 pb-4">OTA Firmware Updates</h2>
 <p class="font-body text-body text-ink-secondary mb-6 max-w-[680px]">
-    Aura supports over-the-air firmware updates via BLE + Wi-Fi, so you can update the pendant's firmware without connecting a USB cable. Wi-Fi credentials are delivered from the app over Bluetooth LE — the device only connects to Wi-Fi for the duration of the update, then returns to BLE-only mode.
+    Aura supports over-the-air firmware updates via BLE + Wi-Fi, so you can update the pendant's firmware without connecting a USB cable. Wi-Fi credentials are delivered from the app over Bluetooth LE. The device only connects to Wi-Fi for the duration of the update, then returns to BLE-only mode.
 </p>
 
 <p class="font-body text-body text-ink-secondary mb-4 max-w-[680px]">
@@ -927,7 +927,7 @@ ngrok http 8000
 <section class="mb-16 scroll-mt-24" id="memory-rag">
 <h2 class="font-display text-display-md md:text-hero-display tracking-tight text-on-surface text-left mb-6 border-b border-outline-variant/30 pb-4">Memory &amp; RAG</h2>
 <p class="font-body text-body text-ink-secondary mb-6 max-w-[680px]">
-    Aura's long-term memory system is built on a Retrieval-Augmented Generation (RAG) pipeline. Every conversation and captured moment is embedded as a high-dimensional vector and stored in Pinecone for semantic recall. When you ask Aura something, it retrieves the most relevant memories to ground the AI response — no hallucinations from a stale model snapshot.
+    Aura's long-term memory system is built on a Retrieval-Augmented Generation (RAG) pipeline. Every conversation and captured moment is embedded as a high-dimensional vector and stored in Pinecone for semantic recall. When you ask Aura something, it retrieves the most relevant memories to ground the AI response without hallucinations from a stale model snapshot.
 </p>
 
 <p class="font-body text-body text-ink-secondary mb-4 max-w-[680px]">
@@ -957,7 +957,7 @@ ngrok http 8000
     <strong>Redis Memory Cache:</strong>
 </p>
 <p class="font-body text-body text-ink-secondary mb-4 max-w-[680px]">
-    Redis is used as a fast ephemeral cache layer for recent conversation context — reducing redundant Pinecone queries and improving response latency. Use <a href="https://console.upstash.com" target="_blank" rel="noopener noreferrer" class="text-accent-blue hover:underline">Upstash</a> for a free, serverless Redis instance:
+    Redis is used as a fast ephemeral cache layer for recent conversation context, reducing redundant Pinecone queries and improving response latency. Use <a href="https://console.upstash.com" target="_blank" rel="noopener noreferrer" class="text-accent-blue hover:underline">Upstash</a> for a free, serverless Redis instance:
 </p>
 <pre class="bg-canvas-parchment p-4 rounded-xl text-xs font-mono text-on-surface mb-6 max-w-[680px] overflow-x-auto">REDIS_DB_HOST=your-upstash-endpoint
 REDIS_DB_PORT=6379
@@ -1075,7 +1075,7 @@ REDIS_DB_PASSWORD=your-upstash-password</pre>
             </tr>
             <tr class="border-b border-outline-variant/10">
                 <td class="py-3">Always shows 0% or 100% battery</td>
-                <td class="py-3">Check voltage divider wiring on GPIO2 — verify R1=169kΩ, R2=110kΩ</td>
+                <td class="py-3">Check voltage divider wiring on GPIO2, and verify R1=169kΩ, R2=110kΩ</td>
             </tr>
             <tr class="border-b border-outline-variant/10">
                 <td class="py-3">BLE not pairing</td>
@@ -1083,7 +1083,7 @@ REDIS_DB_PASSWORD=your-upstash-password</pre>
             </tr>
             <tr class="border-b border-outline-variant/10">
                 <td class="py-3">Wi-Fi not connecting</td>
-                <td class="py-3">Confirm 2.4GHz network — ESP32 does not support 5GHz</td>
+                <td class="py-3">Confirm 2.4GHz network, as the ESP32 does not support 5GHz</td>
             </tr>
         </tbody>
     </table>
