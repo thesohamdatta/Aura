@@ -1,57 +1,52 @@
 import {Link, useLocation} from 'react-router-dom';
-import {TopNav as AstryxTopNav, TopNavItem} from '@astryxdesign/core/TopNav';
+import {TopNav} from '@astryxdesign/core/TopNav';
+import {TopNavHeading} from '@astryxdesign/core/TopNav';
+import {TopNavItem} from '@astryxdesign/core/TopNav';
 
-// A wrapper that converts href to the to prop of Link
-const RouterLink = ({href, children, ...props}: any) => {
-  return (
-    <Link to={href} {...props}>
-      {children}
-    </Link>
-  );
-};
+const navItems = [
+  {label: 'Home', path: '/'},
+  {label: 'AI', path: '/ai'},
+  {label: 'Manifesto', path: '/manifesto'},
+  {label: 'About', path: '/about'},
+  {label: 'Docs', path: '/docs'},
+];
 
-export function TopNav() {
+export function SiteNav() {
   const location = useLocation();
 
   return (
-    <AstryxTopNav
+    <TopNav
       heading={
-        <Link to="/" style={{textDecoration: 'none', color: 'inherit'}}>
-          Aura
-        </Link>
+        <TopNavHeading
+          heading="Aura"
+          headingHref="/"
+        />
+      }
+      startContent={
+        <>
+          {navItems.map((item) => (
+            <TopNavItem
+              key={item.path}
+              label={item.label}
+              href={item.path}
+              isSelected={location.pathname === item.path}
+            />
+          ))}
+        </>
       }
       endContent={
-        <a
-          href="/docs#hardware"
-          style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            padding: '8px 18px',
-            background: 'var(--color-accent)',
-            color: '#ffffff',
-            borderRadius: '9999px',
-            textDecoration: 'none',
-            fontSize: '14px',
-            fontWeight: 500,
-          }}
-        >
+        <Link to="/docs#hardware" className="link-chip link-chip--primary" style={{padding: '0.5rem 1rem', fontSize: '0.875rem'}}>
           Build Yours
-        </a>
+        </Link>
       }
-    >
-      <TopNavItem
-        href="/"
-        label="Overview"
-        isSelected={location.pathname === '/'}
-        as={RouterLink}
-      />
-      <TopNavItem
-        href="/docs"
-        label="Docs"
-        isSelected={location.pathname === '/docs'}
-        as={RouterLink}
-      />
-    </AstryxTopNav>
+      style={{
+        position: 'sticky',
+        top: 0,
+        zIndex: 20,
+        backdropFilter: 'blur(16px)',
+        backgroundColor: 'color-mix(in srgb, var(--color-background-body) 85%, transparent)',
+        borderBottom: '1px solid var(--color-border)',
+      }}
+    />
   );
 }
-
