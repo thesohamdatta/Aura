@@ -15,12 +15,14 @@
 <link rel="stylesheet" href="css/global.css">
 <link rel="stylesheet" href="css/nav.css">
 <link rel="stylesheet" href="css/style.css">
+<script src="js/site-data.js" defer></script>
 <script src="js/nav.js" defer></script>
 <script src="js/footer.js" defer></script>
 <script src="js/glass-refraction.js" defer></script>
 <script src="js/liquid-glass.js" defer></script>
 <script src="js/reveal.js" defer></script>
 <script src="https://unpkg.com/lucide@latest" defer></script>
+<script src="js/icons.js" defer></script>
 
 </head>
 <body class="bg-surface text-on-surface font-body overflow-x-hidden !pt-0">
@@ -50,6 +52,10 @@
 </header>
 <!-- Section: Bento Grid (Parchment) -->
 <section class="py-section-v-padding-mobile md:py-section-v-padding bg-canvas-parchment" id="bento-features">
+  <div class="max-w-[var(--content-max)] mx-auto w-full px-margin-base mb-10 md:mb-14 text-center">
+    <h2 class="font-display text-display-md md:text-display-lg text-ink tracking-tight mb-3">Intelligence Overview</h2>
+    <p class="font-body text-body text-ink-secondary max-w-prose-max-width mx-auto">Four coordinated layers turn ambient audio, vision, memory, and integrations into one wearable AI system.</p>
+  </div>
   <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 max-w-[var(--content-max)] mx-auto w-full px-margin-base">
     
     <!-- Card 1: Perception -->
@@ -69,22 +75,11 @@
           <div class="relative w-full h-full flex items-center justify-center">
             <!-- Voice/Audio Module -->
             <div class="absolute w-36 h-36 rounded-full bg-white/40 backdrop-blur-xl border border-black/5 shadow-[0_8px_32px_rgba(0,0,0,0.02)] flex items-center justify-center -translate-x-12 translate-y-6 group-hover:-translate-x-16 group-hover:translate-y-8 group-focus-within:-translate-x-16 group-focus-within:translate-y-8 transition-all duration-700 ease-out">
-              <svg viewBox="0 0 100 100" class="w-14 h-14 text-ink" stroke="currentColor" stroke-width="1.5" fill="none" aria-hidden="true">
-                <rect x="42" y="25" width="16" height="30" rx="8" />
-                <path d="M30 45a20 20 0 0 0 40 0" />
-                <line x1="50" y1="65" x2="50" y2="75" />
-                <line x1="40" y1="75" x2="60" y2="75" />
-              </svg>
+              <i data-lucide="mic" class="w-14 h-14 text-ink" aria-hidden="true"></i>
             </div>
             <!-- Vision/Camera Module -->
             <div class="absolute w-36 h-36 rounded-full bg-white/40 backdrop-blur-xl border border-black/5 shadow-[0_8px_32px_rgba(0,0,0,0.02)] flex items-center justify-center translate-x-12 -translate-y-6 group-hover:translate-x-16 group-hover:-translate-y-8 group-focus-within:translate-x-16 group-focus-within:-translate-y-8 transition-all duration-700 ease-out z-10">
-              <svg viewBox="0 0 100 100" class="w-14 h-14 text-ink" stroke="currentColor" stroke-width="1.5" fill="none" aria-hidden="true">
-                <circle cx="50" cy="50" r="35" stroke-dasharray="3 3" />
-                <circle cx="50" cy="50" r="22" />
-                <circle cx="50" cy="50" r="12" fill="rgba(29,29,31,0.05)" />
-                <circle cx="50" cy="50" r="6" fill="#1d1d1f" />
-                <circle cx="46" cy="46" r="1.5" fill="white" stroke="none" />
-              </svg>
+              <i data-lucide="camera" class="w-14 h-14 text-ink" aria-hidden="true"></i>
             </div>
           </div>
         </div>
@@ -115,7 +110,7 @@
           <p class="font-body text-[16px] md:text-[17px] text-ink-tertiary leading-[1.4] mt-3">Uses Pinecone's serverless vector database to index conversation semantic embeddings, ensuring permanent contextual recall.</p>
         </div>
         <div class="flex-1 flex items-center justify-center overflow-hidden p-6 relative">
-          <img width="1048" height="637" loading="lazy" alt="Vector node graph" class="w-full h-auto max-w-[280px] rounded-xl object-contain group-hover:scale-105 group-focus-within:scale-105 transition-transform duration-700" src="assets/AI%20images%20and%20screenshots%20of%20website/abstract_vector_graph_visualization_of_memory_nodes._soft_glowing_points/screen.png">
+<img width="1048" height="637" loading="lazy" alt="Vector node graph" class="w-full h-auto max-w-[280px] rounded-xl object-contain group-hover:scale-105 group-focus-within:scale-105 transition-transform duration-700" src="assets/diagrams/memory-graph.png">
         </div>
       </div>
     </div>
@@ -178,19 +173,19 @@
 <div class="hidden md:block absolute h-[1px] bg-outline-variant left-24 right-24 top-1/2 -translate-y-1/2 z-0"></div>
 <!-- Flow Nodes -->
 <div class="relative z-10 flex flex-row md:flex-col items-center gap-4 bg-surface p-6 rounded-xl border border-surface-variant w-full md:w-40">
-<i data-lucide="mic" class="text-accent-blue text-4xl"></i>
+<i data-lucide="mic" class="text-accent-blue text-4xl" aria-hidden="true"></i>
 <span class="font-body text-caption">Deepgram</span>
 </div>
 <div class="relative z-10 flex flex-row md:flex-col items-center gap-4 bg-surface p-6 rounded-xl border border-surface-variant w-full md:w-40">
-<i data-lucide="zap" class="text-accent-blue text-4xl"></i>
+<i data-lucide="zap" class="text-accent-blue text-4xl" aria-hidden="true"></i>
 <span class="font-body text-caption">Groq</span>
 </div>
 <div class="relative z-10 flex flex-row md:flex-col items-center gap-4 bg-surface p-6 rounded-xl border border-surface-variant w-full md:w-40">
-<i data-lucide="brain" class="text-accent-blue text-4xl"></i>
+<i data-lucide="brain" class="text-accent-blue text-4xl" aria-hidden="true"></i>
 <span class="font-body text-caption">GPT-4o</span>
 </div>
 <div class="relative z-10 flex flex-row md:flex-col items-center gap-4 bg-surface p-6 rounded-xl border border-surface-variant w-full md:w-40">
-<i data-lucide="database" class="text-accent-blue text-4xl"></i>
+<i data-lucide="database" class="text-accent-blue text-4xl" aria-hidden="true"></i>
 <span class="font-body text-caption">Pinecone</span>
 </div>
 </div>

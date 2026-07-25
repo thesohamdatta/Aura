@@ -55,6 +55,7 @@ tailwind.config = {
                 "accent-blue":   "#0066cc",   /* Action Blue — universal interactive */
                 "focus-blue":    "#0071e3",   /* Focus rings */
                 "sky-blue":      "#2997ff",   /* In-copy links on dark surfaces */
+                "green":         "#00a854",   /* Battery metrics, positive indicators */
                 "canvas-white":  "#ffffff",
                 "canvas-parchment": "#f5f5f7",
                 "canvas-dark":   "#272729",   /* Apple Near-Black Tile */

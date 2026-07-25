@@ -26,13 +26,13 @@
 <script src="js/icons.js" defer></script>
 
 </head>
-<body class="bg-surface text-on-surface !pt-0">
+<body class="bg-surface text-on-surface font-body !pt-0">
 <a href="#main-content" class="skip-link">Skip to main content</a>
 <!-- NAV — rendered by js/nav.js -->
 <div id="nav-mount"></div>
 <!-- Mobile TOC Toggle -->
 <button id="tocToggle" class="md:hidden fixed z-50 bottom-6 right-6 bg-ink text-white rounded-full px-5 py-3 text-xs font-semibold shadow-lg flex items-center gap-2 transition-transform active:scale-95">
-  <i data-lucide="list" class="text-sm"></i> Contents
+  <i data-lucide="list" class="text-sm" aria-hidden="true"></i> Contents
 </button>
 <!-- TOC Overlay -->
 <div id="tocOverlay" class="md:hidden fixed inset-0 bg-black/30 z-40 hidden transition-opacity duration-300" style="opacity:0"></div>
@@ -131,7 +131,7 @@
 <!-- Breadcrumbs -->
 <nav class="flex items-center gap-2 text-label text-ink-secondary mb-8">
 <span>Aura</span>
-<i data-lucide="chevron-right" class="text-[14px]"></i>
+<i data-lucide="chevron-right" class="text-[14px]" aria-hidden="true"></i>
 <span class="text-on-surface">Documentation</span>
 </nav>
 <article class="prose max-w-none">
@@ -140,7 +140,7 @@
     A structured assembly and developer reference for sourcing the pendant, flashing firmware, running the backend, pairing the app, and operating Aura safely.
 </p>
 
-<section class="mb-16 scroll-mt-24" aria-labelledby="build-path-title">
+<section class="mb-20 scroll-mt-24" aria-labelledby="build-path-title">
 <h2 id="build-path-title" class="font-display text-display-md md:text-display-lg tracking-tight text-on-surface text-left mb-6 border-b border-outline-variant/30 pb-4">Build Path</h2>
 <ol class="font-body text-body text-ink-secondary max-w-[680px] space-y-3 list-decimal pl-6">
     <li><a href="#bom" class="text-accent-blue hover:underline">Source the bill of materials</a> and confirm the pendant case parts.</li>
@@ -152,7 +152,7 @@
 </section>
 
 <!-- What Is Aura -->
-<section class="mb-16 scroll-mt-24" id="what-is-aura">
+<section class="mb-20 scroll-mt-24" id="what-is-aura">
 <h2 class="font-display text-display-md md:text-display-lg tracking-tight text-on-surface text-left mb-6 border-b border-outline-variant/30 pb-4">What Is Aura</h2>
 <p class="font-body text-body text-ink-secondary mb-6 max-w-[680px]">
     Aura is an open-source AI wearable pendant worn around your neck. It listens, sees, and transcribes so you do not have to pause your day to take notes.
@@ -166,7 +166,7 @@
 </section>
 
 <!-- How Aura Works -->
-<section class="mb-16 scroll-mt-24" id="how-aura-works">
+<section class="mb-20 scroll-mt-24" id="how-aura-works">
 <h2 class="font-display text-display-md md:text-display-lg tracking-tight text-on-surface text-left mb-6 border-b border-outline-variant/30 pb-4">How Aura Works</h2>
 <p class="font-body text-body text-ink-secondary mb-6 max-w-[680px]">
     The execution pipeline flows simply:
@@ -186,7 +186,7 @@
 </section>
 
 <!-- Bill of Materials -->
-<section class="mb-16 scroll-mt-24" id="bom">
+<section class="mb-20 scroll-mt-24" id="bom">
 <h2 class="font-display text-display-md md:text-display-lg tracking-tight text-on-surface text-left mb-6 border-b border-outline-variant/30 pb-4">Bill of Materials</h2>
 <p class="font-body text-body text-ink-secondary mb-6 max-w-[680px]">
     What to buy and where to get it:
@@ -240,7 +240,7 @@
 </section>
 
 <!-- BOM Case -->
-<section class="mb-16 scroll-mt-24" id="bom-case">
+<section class="mb-20 scroll-mt-24" id="bom-case">
 <h2 class="font-display text-display-md md:text-display-lg tracking-tight text-on-surface text-left mb-6 border-b border-outline-variant/30 pb-4">BOM Case Assembly</h2>
 <p class="font-body text-body text-ink-secondary mb-6 max-w-[680px]">
     Download the STL files from the <a href="https://github.com/thesohamdatta/Aura-Wearable-AI/tree/main/hardware" target="_blank" rel="noopener noreferrer" class="text-accent-blue hover:underline">Aura Hardware folder on GitHub</a>.
@@ -260,7 +260,7 @@
 </section>
 
 <!-- Hardware Overview -->
-<section class="mb-16 scroll-mt-24" id="hardware">
+<section class="mb-20 scroll-mt-24" id="hardware">
 <h2 class="font-display text-display-md md:text-display-lg tracking-tight text-on-surface text-left mb-6 border-b border-outline-variant/30 pb-4">Hardware Overview</h2>
 <p class="font-body text-body text-ink-secondary mb-6 max-w-[680px]">
     The XIAO ESP32-S3 Sense is the core. Camera and microphone are already integrated on the board, so no extra modules are needed.
@@ -308,7 +308,7 @@
 </section>
 
 <!-- Flashing the Firmware -->
-<section class="mb-16 scroll-mt-24" id="firmware">
+<section class="mb-20 scroll-mt-24" id="firmware">
 <h2 class="font-display text-display-md md:text-display-lg tracking-tight text-on-surface text-left mb-6 border-b border-outline-variant/30 pb-4">Flashing the Firmware</h2>
 <p class="font-body text-body text-ink-secondary mb-6 max-w-[680px]">
     Aura firmware runs on the XIAO ESP32-S3 Sense. It coordinates audio streams, BLE advertisement, Wi-Fi connections, and camera frames. You can install it using several methods depending on your development environment.
@@ -432,7 +432,7 @@ git clone https://github.com/pschatzmann/arduino-audio-tools.git</pre>
 </section>
 
 <!-- Setting Up the Backend -->
-<section class="mb-16 scroll-mt-24" id="backend">
+<section class="mb-20 scroll-mt-24" id="backend">
 <h2 class="font-display text-display-md md:text-display-lg tracking-tight text-on-surface text-left mb-6 border-b border-outline-variant/30 pb-4">Setting Up the Backend</h2>
 <p class="font-body text-body text-ink-secondary mb-6 max-w-[680px]">
     The Aura backend powers all AI capabilities, transcription pipelines, conversation processing, and cloud integrations. It acts as the orchestration layer between the physical ESP32-S3 hardware and deep model APIs.
@@ -535,7 +535,7 @@ ngrok http 8000
 </section>
 
 <!-- Setting Up the App -->
-<section class="mb-16 scroll-mt-24" id="setup-app">
+<section class="mb-20 scroll-mt-24" id="setup-app">
 <h2 class="font-display text-display-md md:text-display-lg tracking-tight text-on-surface text-left mb-6 border-b border-outline-variant/30 pb-4">Setting Up the App</h2>
 <p class="font-body text-body text-ink-secondary mb-6 max-w-[680px]">
     Aura ships a native Android companion app built with Kotlin. It pairs with the pendant over Bluetooth LE, lets you configure the backend URL, browse transcription history, and monitor battery status in real time.
@@ -626,7 +626,7 @@ ngrok http 8000
 </section>
 
 <!-- AI Providers Setup -->
-<section class="mb-16 scroll-mt-24" id="ai-providers">
+<section class="mb-20 scroll-mt-24" id="ai-providers">
 <h2 class="font-display text-display-md md:text-display-lg tracking-tight text-on-surface text-left mb-6 border-b border-outline-variant/30 pb-4">AI Providers Setup</h2>
 <p class="font-body text-body text-ink-secondary mb-6 max-w-[680px]">
     Aura supports three distinct AI providers. Set your preferred choice in your environment (<code>.env</code>) file:
@@ -665,7 +665,7 @@ ngrok http 8000
 </section>
 
 <!-- Transcription Setup -->
-<section class="mb-16 scroll-mt-24" id="transcription">
+<section class="mb-20 scroll-mt-24" id="transcription">
 <h2 class="font-display text-display-md md:text-display-lg tracking-tight text-on-surface text-left mb-6 border-b border-outline-variant/30 pb-4">Transcription Setup</h2>
 <p class="font-body text-body text-ink-secondary mb-6 max-w-[680px]">
     Aura captures high-fidelity audio at 16kHz mono PDM from the built-in microphone on the ESP32-S3 Sense. Two transcription options are available:
@@ -696,7 +696,7 @@ ngrok http 8000
 </section>
 
 <!-- Camera Configuration -->
-<section class="mb-16 scroll-mt-24" id="camera-config">
+<section class="mb-20 scroll-mt-24" id="camera-config">
 <h2 class="font-display text-display-md md:text-display-lg tracking-tight text-on-surface text-left mb-6 border-b border-outline-variant/30 pb-4">Camera Configuration</h2>
 <p class="font-body text-body text-ink-secondary mb-6 max-w-[680px]">
     You can tune the camera resolution, capture intervals, and compression settings inside your device's <code>firmware.ino</code>:
@@ -735,7 +735,7 @@ ngrok http 8000
 </section>
 
 <!-- Battery & Power -->
-<section class="mb-16 scroll-mt-24" id="battery-power">
+<section class="mb-20 scroll-mt-24" id="battery-power">
 <h2 class="font-display text-display-md md:text-display-lg tracking-tight text-on-surface text-left mb-6 border-b border-outline-variant/30 pb-4">Battery &amp; Power</h2>
 <p class="font-body text-body text-ink-secondary mb-6 max-w-[680px]">
     Aura runs on two 250mAh Li-ion cells wired in parallel, providing 500mAh total at 3.7V nominal. Battery voltage is monitored via a resistor divider connected to <code>GPIO2 (A1)</code>.
@@ -904,7 +904,7 @@ ngrok http 8000
 </section>
 
 <!-- OTA Firmware Updates -->
-<section class="mb-16 scroll-mt-24" id="ota-updates">
+<section class="mb-20 scroll-mt-24" id="ota-updates">
 <h2 class="font-display text-display-md md:text-display-lg tracking-tight text-on-surface text-left mb-6 border-b border-outline-variant/30 pb-4">OTA Firmware Updates</h2>
 <p class="font-body text-body text-ink-secondary mb-6 max-w-[680px]">
     Aura supports over-the-air firmware updates via BLE + Wi-Fi, so you can update the pendant's firmware without connecting a USB cable. Wi-Fi credentials are delivered from the app over Bluetooth LE. The device only connects to Wi-Fi for the duration of the update, then returns to BLE-only mode.
@@ -929,7 +929,7 @@ ngrok http 8000
 </section>
 
 <!-- Memory & RAG -->
-<section class="mb-16 scroll-mt-24" id="memory-rag">
+<section class="mb-20 scroll-mt-24" id="memory-rag">
 <h2 class="font-display text-display-md md:text-display-lg tracking-tight text-on-surface text-left mb-6 border-b border-outline-variant/30 pb-4">Memory &amp; RAG</h2>
 <p class="font-body text-body text-ink-secondary mb-6 max-w-[680px]">
     Aura's long-term memory system is built on a Retrieval-Augmented Generation (RAG) pipeline. Every conversation and captured moment is embedded as a high-dimensional vector and stored in Pinecone for semantic recall. When you ask Aura something, it retrieves the most relevant memories to ground the AI response without hallucinations from a stale model snapshot.
@@ -1005,7 +1005,7 @@ REDIS_DB_PASSWORD=your-upstash-password</pre>
 </section>
 
 <!-- Privacy & Data -->
-<section class="mb-16 scroll-mt-24" id="privacy-data">
+<section class="mb-20 scroll-mt-24" id="privacy-data">
 <h2 class="font-display text-display-md md:text-display-lg tracking-tight text-on-surface text-left mb-6 border-b border-outline-variant/30 pb-4">Privacy & Data</h2>
 <p class="font-body text-body text-ink-secondary mb-6 max-w-[680px]">
     Aura is privacy-first by design. Nothing is sent anywhere by default without your explicit configuration. You control every API key and every endpoint.
@@ -1049,7 +1049,7 @@ REDIS_DB_PASSWORD=your-upstash-password</pre>
 </section>
 
 <!-- Troubleshooting -->
-<section class="mb-16 scroll-mt-24" id="troubleshooting">
+<section class="mb-20 scroll-mt-24" id="troubleshooting">
 <h2 class="font-display text-display-md md:text-display-lg tracking-tight text-on-surface text-left mb-6 border-b border-outline-variant/30 pb-4">Troubleshooting</h2>
 
 <h3 class="font-body text-body-strong text-on-surface mb-4">Firmware &amp; Hardware</h3>

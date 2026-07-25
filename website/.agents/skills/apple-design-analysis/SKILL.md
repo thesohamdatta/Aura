@@ -1,11 +1,11 @@
 ---
 name: apple-design-analysis
-description: Reference guidelines for the Apple web design system, detailing colors, typography, layout, shapes, and elevation rules. Use when applying design styles from DESIGN.md to any webpage on the site.
+description: Apple design tokens and rules. Use when applying Apple colors, typography, elevation, or shapes to any component or page.
 ---
 
-# Apple Design Analysis Skill
+# Apple Design Analysis
 
-Follow the strict branding, design tokens, and components as analyzed from Apple's official web presence.
+Follow strict Apple branding tokens and rules.
 
 ## Colors
 * **Action Blue:** `#0066cc` (universal interactive color)

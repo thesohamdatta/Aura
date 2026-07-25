@@ -1,6 +1,7 @@
 /* style.css */
-/* Core component patterns required by layout tests */
+/* Core component patterns */
 
+/* Buttons */
 .btn-primary {
     background-color: var(--color-action-blue);
     border-radius: var(--radius-pill);
@@ -12,11 +13,13 @@
     color: var(--color-action-blue);
 }
 
+/* Spec card */
 .spec-card {
     border-radius: var(--radius-card);
     background-color: var(--color-canvas-white);
 }
 
+/* Section backgrounds */
 .section-white {
     background-color: var(--color-canvas-white);
 }
@@ -30,11 +33,50 @@
     color: var(--color-canvas-white);
 }
 
-/* AirPods-style Floating Pill Component */
+/* ==========================================================================
+   Hero Pill (AirPods-style floating component)
+   ========================================================================== */
+
 .hero-pill {
     animation: float 4s ease-in-out infinite;
     transform-origin: center;
-    
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(40px) saturate(180%);
+    -webkit-backdrop-filter: blur(40px) saturate(180%);
+    border-top: 1px solid rgba(255, 255, 255, 0.35);
+    border-left: 1px solid rgba(255, 255, 255, 0.35);
+
+}
+
+.hero-pill-label {
+    color: rgba(255, 255, 255, 0.92);
+    font-family: var(--font-display);
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+    padding-left: 20px;
+    padding-right: 8px;
+}
+
+.hero-pill-divider {
+    width: 1px;
+    height: 24px;
+    background-color: rgba(255, 255, 255, 0.2);
+    align-self: center;
+}
+
+.hero-pill-btn {
+    background: var(--color-focus-blue);
+    color: #ffffff;
+    border-radius: var(--radius-pill);
+    padding: 8px 18px;
+    font-family: var(--font-display);
+    font-size: 15px;
+    font-weight: 500;
+    margin: 4px;
+    text-decoration: none;
+    transition: background 0.2s ease;
 }
 
 .hero-pill-btn:active {
@@ -51,420 +93,457 @@
 @keyframes float {
     0%, 100% {
         transform: translateY(0) rotate(-0.5deg);
-        
     }
     50% {
         transform: translateY(-6px) rotate(-0.5deg);
-        
     }
 }
 
 /* ==========================================================================
-   Extracted from index.html - Core Page Components
+   Wave Pulse Animation
    ========================================================================== */
 
-/* 1. Wave Pulse (Eyebrow Animations) */
 @keyframes wavePulse {
-  0%, 100% { transform: scaleY(0.7); }
-  50% { transform: scaleY(1.1); }
+    0%, 100% { transform: scaleY(0.7); }
+    50% { transform: scaleY(1.1); }
 }
-.wave-bar { animation: wavePulse 1.5s ease-in-out infinite; transform-origin: bottom; }
+
+.wave-bar {
+    animation: wavePulse 1.5s ease-in-out infinite;
+    transform-origin: bottom;
+}
+
 .wave-bar:nth-child(1) { animation-delay: 0.0s; height: 35%; }
 .wave-bar:nth-child(2) { animation-delay: 0.2s; height: 60%; }
-.wave-bar:nth-child(3) { animation-delay: 0.4s; height: 100%;  }
+.wave-bar:nth-child(3) { animation-delay: 0.4s; height: 100%; }
 .wave-bar:nth-child(4) { animation-delay: 0.2s; height: 75%; }
 .wave-bar:nth-child(5) { animation-delay: 0.0s; height: 40%; }
 
-/* 2. App Demo Section */
+/* ==========================================================================
+   App Demo Section
+   ========================================================================== */
+
 #app-demo-section {
-  padding: 120px 0 80px 0;
-  background: var(--color-canvas-parchment);
-}
-#app-demo-section .demo-img-container {
-  width: 780px;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  margin-bottom: 60px;
-}
-#app-demo-section .demo-phone-img {
-  width: 580px;
-  display: block;
-  
-  opacity: 0;
-  transform: translateY(40px) translateX(-20px);
-  transition: opacity 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-#app-demo-section .demo-phone-img.animate-in {
-  opacity: 1;
-  transform: translateY(0) translateX(0);
-}
-#app-demo-section .demo-caption-label {
-  opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-#app-demo-section .demo-caption-label.animate-in {
-  opacity: 1;
-  transform: translateY(0);
-}
-#app-demo-section .demo-caption-body {
-  opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-#app-demo-section .demo-caption-body.animate-in {
-  opacity: 1;
-  transform: translateY(0);
-}
-@media (max-width: 767px) {
-  #app-demo-section {
-    padding: 60px 0 40px 0;
-  }
-  #app-demo-section .demo-headline {
-    font-size: 34px !important;
-  }
-  #app-demo-section .demo-img-container {
-    width: 100%;
-    padding: 0 16px;
-    margin-bottom: 40px;
-  }
-  #app-demo-section .demo-phone-img {
-    width: 100%;
-    max-width: 360px;
-    margin: 0 auto;
-  }
-  #app-demo-section .demo-caption-container {
-    padding: 0 24px;
-  }
+    padding: 120px 0 80px 0;
+    background: var(--color-canvas-parchment);
 }
 
-/* 3. FAQ Section */
-#faq-section {
-  padding-top: 80px;
-  padding-bottom: 80px;
-  position: relative;
-  background: #f5f5f7;
+#app-demo-section .demo-img-container {
+    width: 780px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 60px;
 }
-#faq-section .faq-header-row {
-  padding-left: max(24px, calc((100vw - 1200px) / 2));
-  padding-right: max(24px, calc((100vw - 1200px) / 2));
-  margin-bottom: 48px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+
+#app-demo-section .demo-phone-img {
+    width: 580px;
+    display: block;
+    opacity: 0;
+    transform: translateY(40px) translateX(-20px);
+    transition: opacity 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
-#faq-section .faq-headline {
-  font-size: 40px;
-  font-weight: 700;
-  color: #1d1d1f;
-  letter-spacing: -0.003em;
-  line-height: 1.07;
-  max-width: 480px;
+
+#app-demo-section .demo-phone-img.animate-in {
+    opacity: 1;
+    transform: translateY(0) translateX(0);
 }
-@media (min-width: 768px) {
-  #faq-section .faq-headline {
-    font-size: 56px;
-  }
+
+#app-demo-section .demo-caption-label,
+#app-demo-section .demo-caption-body {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
-#faq-section .faq-docs-link {
-  font-size: 17px;
-  color: #0066cc;
-  font-weight: 400;
-  text-decoration: none;
-  padding-bottom: 8px;
+
+#app-demo-section .demo-caption-label.animate-in,
+#app-demo-section .demo-caption-body.animate-in {
+    opacity: 1;
+    transform: translateY(0);
 }
-#faq-section .faq-docs-link:hover {
-  text-decoration: underline;
-}
-#faq-section .cards-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  overflow-y: visible;
-  gap: 16px;
-  padding-left: max(24px, calc((100vw - 1200px) / 2));
-  padding-right: max(24px, calc((100vw - 1200px) / 2));
-  padding-top: 12px;
-  padding-bottom: 24px;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  cursor: grab;
-}
-#faq-section .cards-container::-webkit-scrollbar {
-  display: none;
-}
-#faq-section .faq-card {
-  background: #ffffff;
-  border-radius: 18px;
-  padding: 28px 24px 24px 24px;
-  width: 300px;
-  min-width: 300px;
-  max-width: 300px;
-  flex-shrink: 0;
-  min-height: 220px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  
-  transition: box-shadow 0.25s ease, transform 0.25s ease;
-  scroll-snap-align: start;
-}
-#faq-section .faq-card:hover {
-  
-  transform: translateY(-2px);
-}
-#faq-section .faq-answer {
-  max-height: 60px;
-  overflow: hidden;
-  transition: max-height 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-#faq-section .faq-card.expanded .faq-answer {
-  max-height: 400px;
-}
-#faq-section .faq-expand-btn {
-  width: 36px;
-  height: 36px;
-  background: #1d1d1f;
-  border-radius: 50%;
-  color: white;
-  font-size: 22px;
-  line-height: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  align-self: flex-end;
-  margin-top: 16px;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  flex-shrink: 0;
+
+@media (max-width: 767px) {
+    #app-demo-section {
+        padding: 60px 0 40px 0;
+    }
+
+    #app-demo-section .demo-headline {
+        font-size: 34px;
+    }
+
+    #app-demo-section .demo-img-container {
+        width: 100%;
+        padding: 0 16px;
+        margin-bottom: 40px;
+    }
+
+    #app-demo-section .demo-phone-img {
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+
+    #app-demo-section .demo-caption-container {
+        padding: 0 24px;
+    }
 }
 
 /* ==========================================================================
-   Apple HIG Compliance: Touch Targets (Minimum 44x44pt)
+   FAQ Section
    ========================================================================== */
 
-/* Navbar links expanded hit targets */
+#faq-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    position: relative;
+    background: var(--color-canvas-parchment);
+}
+
+#faq-section .faq-header-row {
+    padding-left: max(24px, calc((100vw - 1200px) / 2));
+    padding-right: max(24px, calc((100vw - 1200px) / 2));
+    margin-bottom: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+#faq-section .faq-headline {
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--color-ink);
+    letter-spacing: -0.003em;
+    line-height: 1.07;
+    max-width: 480px;
+}
+
+@media (min-width: 768px) {
+    #faq-section .faq-headline {
+        font-size: 56px;
+    }
+}
+
+#faq-section .faq-docs-link {
+    font-size: 17px;
+    color: var(--color-action-blue);
+    font-weight: 400;
+    text-decoration: none;
+    padding-bottom: 8px;
+}
+
+#faq-section .faq-docs-link:hover {
+    text-decoration: underline;
+}
+
+#faq-section .cards-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: visible;
+    gap: 16px;
+    padding-left: max(24px, calc((100vw - 1200px) / 2));
+    padding-right: max(24px, calc((100vw - 1200px) / 2));
+    padding-top: 12px;
+    padding-bottom: 24px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    cursor: grab;
+}
+
+#faq-section .cards-container::-webkit-scrollbar {
+    display: none;
+}
+
+#faq-section .faq-card {
+    background: var(--color-canvas-white);
+    border-radius: 18px;
+    padding: 28px 24px 24px 24px;
+    width: 300px;
+    min-width: 300px;
+    max-width: 300px;
+    flex-shrink: 0;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+    scroll-snap-align: start;
+}
+
+#faq-section .faq-card:hover {
+    transform: translateY(-2px);
+}
+
+#faq-section .faq-answer {
+    max-height: 60px;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+#faq-section .faq-card.expanded .faq-answer {
+    max-height: 400px;
+}
+
+#faq-section .faq-expand-btn {
+    width: 44px;
+    height: 44px;
+    background: var(--color-ink);
+    border-radius: 50%;
+    color: var(--color-canvas-white);
+    font-size: 22px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-end;
+    margin-top: 16px;
+    
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+#faq-section .faq-card.expanded .faq-expand-btn {
+    transform: rotate(45deg);
+}
+
+#faq-section .faq-controls {
+    position: absolute;
+    bottom: 24px;
+    right: max(24px, calc((100vw - 1200px) / 2));
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+#faq-section .faq-control-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.08);
+    color: var(--color-ink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    transition: background 0.2s ease, opacity 0.2s ease;
+}
+
+#faq-section .faq-control-btn:focus-visible {
+    outline: none;
+    
+}
+
+#faq-section .faq-control-btn:hover:not(:disabled) {
+    background: rgba(0, 0, 0, 0.12);
+}
+
+#faq-section .faq-control-btn:disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+
+@media (max-width: 767px) {
+    #faq-section {
+        padding: 60px 0;
+    }
+
+    #faq-section .faq-header-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    #faq-section .faq-headline {
+        font-size: 32px;
+    }
+
+    #faq-section .faq-docs-link {
+        width: 100%;
+        display: block;
+        padding-bottom: 0;
+    }
+
+    #faq-section .faq-card {
+        width: 280px;
+        min-width: 280px;
+        max-width: 280px;
+    }
+
+    #faq-section .faq-controls {
+        display: none;
+    }
+}
+
+/* ==========================================================================
+   Touch Targets (Apple HIG Compliance - Minimum 44x44pt)
+   ========================================================================== */
+
 .nav-link,
 #navbar a.font-display {
-    padding: 8px 12px !important;
-    margin: -8px -12px !important;
+    padding: 8px 12px;
+    margin: -8px -12px;
     display: inline-block;
 }
 
-/* Navbar hamburger menu button touch size */
 #navbar button {
-    min-width: 44px !important;
-    min-height: 44px !important;
-    display: inline-flex !important;
+    min-width: 44px;
+    min-height: 44px;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
 }
 
-/* Footer links expanded hit targets */
 footer a {
-    padding: 8px 0 !important;
-    margin: -8px 0 !important;
+    padding: 8px 0;
+    margin: -8px 0;
     display: inline-block;
 }
 
-#faq-section .faq-card.expanded .faq-expand-btn {
-  transform: rotate(45deg);
-}
-#faq-section .faq-controls {
-  position: absolute;
-  bottom: 24px;
-  right: max(24px, calc((100vw - 1200px) / 2));
-  display: flex;
-  gap: 8px;
-  z-index: 10;
-}
-#faq-section .faq-control-btn {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.08);
-  color: #1d1d1f;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  outline: none;
-  transition: background 0.2s ease, opacity 0.2s ease;
-}
-#faq-section .faq-control-btn:hover:not(:disabled) {
-  background: rgba(0, 0, 0, 0.12);
-}
-#faq-section .faq-control-btn:disabled {
-  opacity: 0.3;
-  cursor: default;
-}
-@media (max-width: 767px) {
-  #faq-section {
-    padding: 60px 0;
-  }
-  #faq-section .faq-header-row {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-    padding-left: 24px;
-    padding-right: 24px;
-  }
-  #faq-section .faq-headline {
-    font-size: 32px;
-  }
-  #faq-section .faq-docs-link {
-    width: 100%;
-    display: block;
-    padding-bottom: 0;
-  }
-  #faq-section .faq-card {
-    width: 280px;
-    min-width: 280px;
-    max-width: 280px;
-  }
-  #faq-section .faq-controls {
-    display: none;
-  }
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.site-footer {
+    background-color: var(--color-canvas-parchment);
+    color: var(--color-ink);
 }
 
-/* ==========================================================================
-   Apple-Style Footer Overrides
-   ========================================================================== */
-.site-footer {
-    background-color: #f5f5f7 !important;
-    color: #1d1d1f !important;
-}
 .footer-link-item {
     font-family: var(--font-text);
     font-size: 12px;
     font-weight: 400;
-    color: #86868b !important;
-    line-height: 2.2 !important;
-    transition: color 0.15s ease !important;
-    text-decoration: none !important;
+    color: var(--color-ink-tertiary);
+    line-height: 2.2;
+    transition: color 0.15s ease;
+    text-decoration: none;
     display: inline-block;
-    padding: 0 !important;
-    margin: 0 !important;
+    padding: 0;
+    margin: 0;
 }
+
 .footer-link-item:hover {
-    color: #1d1d1f !important;
+    color: var(--color-ink);
 }
+
 .footer-github-cta {
     font-family: var(--font-text);
     font-size: 13px;
-    color: #86868b !important;
-    
-    padding: 6px 14px !important;
-    border-radius: 20px !important;
-    display: inline-flex !important;
+    color: var(--color-ink-tertiary);
+    padding: 6px 14px;
+    border-radius: 20px;
+    display: inline-flex;
     align-items: center;
     gap: 6px;
-    transition: all 0.2s ease !important;
-    text-decoration: none !important;
-    margin: 0 !important;
-    background: transparent !important;
+    transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+    text-decoration: none;
+    margin: 0;
+    background: transparent;
 }
+
 .footer-github-cta:hover {
-    border-color: #86868b !important;
-    color: #1d1d1f !important;
-    background-color: rgba(0, 0, 0, 0.05) !important;
+    border-color: var(--color-ink-tertiary);
+    color: var(--color-ink);
+    background-color: rgba(0, 0, 0, 0.05);
 }
+
 .footer-disabled-link {
     font-family: var(--font-text);
     font-size: 12px;
     font-weight: 400;
-    color: #86868b !important;
-    line-height: 2.2 !important;
-    text-decoration: none !important;
+    color: var(--color-ink-tertiary);
+    line-height: 2.2;
+    text-decoration: none;
     display: inline-block;
-    padding: 0 !important;
-    margin: 0 !important;
-    opacity: 0.4 !important;
-    pointer-events: none !important;
+    padding: 0;
+    margin: 0;
+    opacity: 0.4;
+    pointer-events: none;
 }
+
 .footer-legal-link {
     font-family: var(--font-text);
     font-size: 12px;
-    color: #86868b !important;
-    transition: color 0.15s ease !important;
-    text-decoration: none !important;
+    color: var(--color-ink-tertiary);
+    transition: color 0.15s ease;
+    text-decoration: none;
     display: inline-block;
-    padding: 0 !important;
-    margin: 0 !important;
+    padding: 0;
+    margin: 0;
 }
+
 .footer-legal-link:hover {
-    color: #1d1d1f !important;
+    color: var(--color-ink);
 }
+
 .footer-legal-disabled {
     font-family: var(--font-text);
     font-size: 12px;
-    color: #86868b !important;
-    text-decoration: none !important;
+    color: var(--color-ink-tertiary);
+    text-decoration: none;
     display: inline-block;
-    padding: 0 !important;
-    margin: 0 !important;
-    opacity: 0.4 !important;
-    pointer-events: none !important;
+    padding: 0;
+    margin: 0;
+    opacity: 0.4;
+    pointer-events: none;
 }
 
-/* Bento Inset Pocket styling (Apple-inspired Liquid Glass & Border Gradient) */
-.bento-pocket {
-  position: relative;
-  background: rgba(255, 255, 255, 0.45);
-  backdrop-filter: blur(30px) saturate(190%);
-  -webkit-backdrop-filter: blur(30px) saturate(190%);
+/* ==========================================================================
+   Bento Cards (Apple-inspired Liquid Glass)
+   ========================================================================== */
 
-  border-radius: 18px;
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), 
-              box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1),
-              background-color 0.3s ease,
-              border-color 0.3s ease;
+.bento-pocket,
+.bento-pocket-dark {
+    position: relative;
+    backdrop-filter: blur(30px) saturate(190%);
+    -webkit-backdrop-filter: blur(30px) saturate(190%);
+    border-radius: 18px;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+                background-color 0.3s ease,
+                border-color 0.3s ease;
+}
+
+.bento-pocket {
+    background: rgba(255, 255, 255, 0.45);
 }
 
 .bento-pocket-dark {
-  position: relative;
-  background: rgba(22, 22, 23, 0.8);
-  backdrop-filter: blur(30px) saturate(190%);
-  -webkit-backdrop-filter: blur(30px) saturate(190%);
-
-  border-radius: 18px;
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), 
-              box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1),
-              background-color 0.3s ease,
-              border-color 0.3s ease;
+    background: rgba(22, 22, 23, 0.8);
 }
 
-/* Precise high-fidelity border gradient highlights */
-
-.bento-pocket:hover, .bento-pocket:focus-within {
-  transform: scale(1.015) translateY(-2px);
-  background: rgba(255, 255, 255, 0.55);
-  
+.bento-pocket:hover,
+.bento-pocket:focus-within {
+    transform: scale(1.015) translateY(-2px);
+    background: rgba(255, 255, 255, 0.55);
 }
 
-.bento-pocket-dark:hover, .bento-pocket-dark:focus-within {
-  transform: scale(1.015) translateY(-2px);
-  background: rgba(30, 30, 32, 0.85);
-  
+.bento-pocket-dark:hover,
+.bento-pocket-dark:focus-within {
+    transform: scale(1.015) translateY(-2px);
+    background: rgba(30, 30, 32, 0.85);
 }
 
-/* Pulse animation for Siri mic orb */
+/* ==========================================================================
+   Animations
+   ========================================================================== */
+
 @keyframes orb-pulse {
-  0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.45; }
-  50% { transform: scale(1.1) rotate(180deg); opacity: 0.65; }
+    0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.45; }
+    50% { transform: scale(1.1) rotate(180deg); opacity: 0.65; }
 }
 
 .animate-orb {
-  animation: orb-pulse 8s infinite ease-in-out;
+    animation: orb-pulse 8s infinite ease-in-out;
 }
 
-/* Rotating perspective nodes for memory */
 .perspective-nodes {
-  perspective: 1000px;
+    perspective: 1000px;
 }
-
