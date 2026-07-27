@@ -30,6 +30,13 @@ tailwind.config = {
             "focus-blue":    "#0071e3",
             "sky-blue":      "#2997ff",
             "green":         "#00a854",
+
+            /* ── Auxiliary canvas / brand tokens ────────────── */
+            "canvas-deep":   "#1c1c1e",
+            "canvas-fog":    "#ebebeb",
+            "outline-soft":  "#d2d2d7",
+            "ios-red":       "#ff2d55",
+            "search-teal":   "#00a389",
         },
         borderRadius: {
             "DEFAULT": "0.25rem",

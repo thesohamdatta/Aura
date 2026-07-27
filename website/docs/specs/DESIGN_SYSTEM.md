@@ -53,7 +53,21 @@ Recommended follow-up (not yet implemented): add `integrity` and `crossorigin` a
 
 **Rule:** A `#0066cc` link is always the **action-blue** token, never a raw hex. Action-blue is for CTAs; focus-blue is reserved for focus rings and hover-on-dark.
 
-### 1.4 Forbidden patterns (auto-stripped by `scratch/apply_apple_design.js`)
+### 1.4 Auxiliary canvas / brand tokens
+
+These tokens are used sparingly — surface layering, separators, and brand accents only. **They are still part of the token system**: every reference must go through the named utility (e.g. `bg-canvas-deep`) or `var(--color-...)`, never the raw hex.
+
+| Token | Hex | CSS var | Tailwind class | Usage |
+|---|---|---|---|---|
+| Canvas deep | `#1c1c1e` | `--color-canvas-deep` | `bg-canvas-deep` | Dark cards / elevated surfaces on dark sections |
+| Canvas fog | `#ebebeb` | `--color-canvas-fog` | `bg-canvas-fog` | Light surface tint between parchment and white |
+| Outline soft | `#d2d2d7` | `--color-outline-soft` | `border-outline-soft` | Hairline separators, footer borders |
+| iOS red | `#ff2d55` | `--color-ios-red` | `text-ios-red` | Apple Health icon, error accents |
+| Search teal | `#00a389` | `--color-search-teal` | `text-search-teal` | Web-search integration icon |
+
+**Rule:** `border-outline-soft/35` and `border-outline-soft/50` are the only accepted border tints for footer/dividers. Do not introduce new tints without a token.
+
+### 1.5 Forbidden patterns (auto-stripped by `scratch/apply_apple_design.js`)
 
 - `box-shadow` on any element except `var(--focus-ring)`
 - `filter: drop-shadow(...)` on images
