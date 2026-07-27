@@ -47,6 +47,11 @@ tailwind.config = {
             "card": "18px",      /* Grid cards, spec tables */
             "tile": "0px"        /* Full-bleed alternating tiles */
         },
+        transitionTimingFunction: {
+            "apple-spring": "cubic-bezier(0.16, 1, 0.3, 1)",
+            "apple-soft":  "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+            "apple-pill":  "cubic-bezier(0.32, 0.72, 0, 1)"
+        },
         spacing: {
             "section-v-padding-mobile": "60px",
             "margin-base": "32px",
