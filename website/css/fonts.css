@@ -232,13 +232,13 @@ h2.section-headline {
   line-height: 1;
 }
 
-/* Nav links */
+/* Nav links — canonical size is 12px, matching tailwind `text-nav-link`. */
 nav a,
 .nav-link {
   font-family: var(--font-text);
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
-  letter-spacing: var(--tracking-body);
+  letter-spacing: -0.12px;
 }
 
 /* CTA buttons (Build Yours, etc.) */

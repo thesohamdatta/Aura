@@ -78,9 +78,10 @@ Or the individual steps:
 
 ```bash
 node scratch/verify_static_site.js   # structural lint — mounts, scripts, headings, asset paths
-node scratch/verify_design_system.js # design-system lint — inline styles (more rules forthcoming)
+node scratch/verify_design_system.js # design-system lint — no-inline-style, token-parity (more rules forthcoming)
+node scratch/run-fixtures.js         # HTML fixture harness for rule dev (red → green)
+node scratch/test_parity.js          # parity-rule fixture harness
 node scratch/apply_apple_design.js   # only after editing style.css or global.css
-node scratch/run-fixtures.js         # run the design-system fixture harness during rule dev
 ```
 
 Then serve and curl:
