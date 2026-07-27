@@ -172,12 +172,7 @@
    ============================================================ */
 
 /* Everything 20px and above uses Display */
-h1, h2, h3,
-.text-hero, .text-display,
-[class*="text-[4"], [class*="text-[5"],
-[class*="text-[6"], [class*="text-[7"],
-[class*="text-[8"],
-.font-hero-h1, .font-section-h2 {
+h1, h2, h3 {
   font-family: var(--font-display);
   letter-spacing: var(--tracking-display);
 }
@@ -203,25 +198,6 @@ a.rounded-full,
 /* ============================================================
    SPECIFIC ELEMENT RULES — Matches Apple.com
    ============================================================ */
-
-/* Hero headline (index.html "Worn. Screenless. Aware.") */
-h1.hero-headline,
-.font-hero-h1 {
-  font-family: var(--font-display);
-  font-size: var(--type-hero);
-  font-weight: 700;
-  line-height: var(--leading-tight);
-  letter-spacing: var(--tracking-hero);
-}
-
-/* Section display headlines */
-h2.section-headline {
-  font-family: var(--font-display);
-  font-size: var(--type-display);
-  font-weight: 700;
-  line-height: var(--leading-tight);
-  letter-spacing: var(--tracking-display);
-}
 
 /* Nav wordmark "Aura" */
 .nav-wordmark {
@@ -261,7 +237,6 @@ article p,
 }
 
 /* Card titles */
-.card-title,
 h3 {
   font-family: var(--font-display);
   font-size: var(--type-title-sm);

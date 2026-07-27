@@ -80,9 +80,10 @@ Or the individual steps:
 
 ```bash
 node scratch/verify_static_site.js   # structural lint — mounts, scripts, headings, asset paths
-node scratch/verify_design_system.js # design-system lint — no-inline-style, token-parity, lucide-version-pinned, no-inline-script
+node scratch/verify_design_system.js # design-system lint — no-inline-style, token-parity, lucide-version-pinned, no-inline-script, dead-css
 node scratch/run-fixtures.js         # HTML fixture harness for rule dev (red → green)
 node scratch/test_parity.js          # parity-rule fixture harness
+node scratch/check_unused_css.js     # dead-CSS helper (--report for advisory, default enforce for CI)
 node scratch/apply_apple_design.js   # only after editing style.css or global.css
 ```
 

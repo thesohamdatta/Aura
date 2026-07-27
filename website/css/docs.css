@@ -1,15 +1,3 @@
-/* docs.css */
-
-/* Core docs page typography rules to ensure no monospace on headers */
-
-.docs-sidebar .sidebar-section {
-    font-family: var(--font-text);
-}
-
-.docs-table th {
-    font-family: var(--font-text);
-}
-
-.mobile-docs-nav select {
-    font-family: var(--font-text);
-}
+/* docs.css — intentionally empty. All docs-page styles live in js/docs.js or
+   inline on the docs page; no global overrides are needed. See #17 audit
+   follow-up for any future docs-specific tokens. */

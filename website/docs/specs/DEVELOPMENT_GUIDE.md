@@ -116,6 +116,12 @@ Both wrappers run `verify_static_site.js` followed by `verify_design_system.js`,
 
 **Fixture-driven TDD.** Linter rules are developed red → green under `scratch/fixtures/linter/`. Each fixture has a sidecar `*.expected.json` describing what the linter should do. The harness is `node scratch/run-fixtures.js`. To add a new rule, write a fixture that violates it (red), append the rule, watch the harness pass (green).
 
+**Dead-CSS helper.** `scratch/check_unused_css.js` lists class selectors in `css/*.css` that have zero references in any HTML/JS file. The `dead-css` rule in the design-system linter runs the same scan automatically. Reserved classes (currently `spec-card`) are allowlisted in the rule's `RESERVED_CLASSES` set. After editing `css/*.css`, run the helper in report mode to find drift:
+
+```bash
+node scratch/check_unused_css.js --report
+```
+
 ---
 
 ## 5. Contribution Workflow

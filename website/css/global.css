@@ -131,21 +131,6 @@ select:focus-visible,
     border-radius: var(--radius-utility);
 }
 
-/* Glassmorphism Navigation */
-.glass-nav {
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-}
-
-/* Hide scrollbars for sliders */
-.no-scrollbar::-webkit-scrollbar {
-    display: none;
-}
-.no-scrollbar {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-
 /* Docs Custom Scrollbar */
 ::-webkit-scrollbar {
     width: 6px;
@@ -158,12 +143,6 @@ select:focus-visible,
     border-radius: 10px;
 }
 
-/* About Page Specific Layout Helpers */
-.bento-grid {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 24px;
-}
 .timeline-line::after {
     content: '';
     position: absolute;
