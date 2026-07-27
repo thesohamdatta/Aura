@@ -90,7 +90,7 @@ After verification passes, do a manual browser pass for any change to:
 
 ### 4.4 `scratch/verify_design_system.js` and the chain wrapper
 
-The design-system linter catches audit findings that `verify_static_site.js` does not — primarily token and component drift. Today it enforces exactly one rule (`no-inline-style`). New rules are added by appending to the `rules` array in `verify_design_system.js`.
+The design-system linter catches audit findings that `verify_static_site.js` does not — primarily token and component drift. Today it enforces three rules: `no-inline-style`, `token-parity`, and `lucide-version-pinned` (plus `no-inline-script` which is allowlist-gated for `docs.html` pending extraction to `js/docs.js`). New rules are added by appending to the `rules` array in `verify_design_system.js`.
 
 **Run a single linter:**
 

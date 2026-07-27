@@ -41,10 +41,11 @@
 ## E. JavaScript Discipline
 
 23. **All JS is ES2020+, vanilla, defer-loaded.** No TypeScript, no JSX, no transpilation.
-24. **Reveal animation is handled by `js/reveal.js`.** Use the strategy pattern: add a new strategy in the `strategies` array with `match`, `setup`, `fallback`. Do not sprinkle reveal logic in inline `<script>` blocks (current inline smooth-scroll and link-prevent scripts are debt).
-25. **Lucide icons are initialized via `window.AuraIcons.refresh()`.** Call this after any DOM injection that adds `data-lucide` elements (e.g. mobile menu icon swap).
-26. **Reduced-motion users:** All three motion scripts (`reveal.js`, `glass-refraction.js`, `liquid-glass.js`) check `prefers-reduced-motion`. New motion code must too.
-27. **Avoid `style.opacity` / `style.transform` writes** — use Tailwind classes (`opacity-100`, `translate-y-0`) so the fallback path can run.
+24. **No inline `<script>` bodies.** All script logic lives in `js/*.js` files loaded via `<script src="..."></script>`. The `no-inline-script` rule in `scratch/verify_design_system.js` flags inline bodies.
+25. **Reveal animation is handled by `js/reveal.js`.** Use the strategy pattern: add a new strategy in the `strategies` array with `match`, `setup`, `fallback`. Do not sprinkle reveal logic in inline `<script>` blocks.
+26. **Lucide icons are initialized via `window.AuraIcons.refresh()`.** Call this after any DOM injection that adds `data-lucide` elements (e.g. mobile menu icon swap).
+27. **Reduced-motion users:** All three motion scripts (`reveal.js`, `glass-refraction.js`, `liquid-glass.js`) check `prefers-reduced-motion`. New motion code must too.
+28. **Avoid `style.opacity` / `style.transform` writes** — use Tailwind classes (`opacity-100`, `translate-y-0`) so the fallback path can run.
 
 ## F. Asset Discipline
 
@@ -79,7 +80,7 @@ Or the individual steps:
 
 ```bash
 node scratch/verify_static_site.js   # structural lint — mounts, scripts, headings, asset paths
-node scratch/verify_design_system.js # design-system lint — no-inline-style, token-parity, lucide-version-pinned (more rules forthcoming)
+node scratch/verify_design_system.js # design-system lint — no-inline-style, token-parity, lucide-version-pinned, no-inline-script
 node scratch/run-fixtures.js         # HTML fixture harness for rule dev (red → green)
 node scratch/test_parity.js          # parity-rule fixture harness
 node scratch/apply_apple_design.js   # only after editing style.css or global.css

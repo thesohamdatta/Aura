@@ -1,1 +1,7 @@
-[]
+[
+  {
+    "file": "docs.html",
+    "pattern": "no-inline-script",
+    "reason": "docs.html TOC drawer + scroll observer (~70 lines) needs extraction to js/docs.js. Out of scope for #14; tracked for follow-up."
+  }
+]
