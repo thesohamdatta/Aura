@@ -15,12 +15,14 @@
 <link rel="stylesheet" href="css/global.css">
 <link rel="stylesheet" href="css/nav.css">
 <link rel="stylesheet" href="css/style.css">
+<script src="js/site-data.js" defer></script>
 <script src="js/nav.js" defer></script>
 <script src="js/footer.js" defer></script>
 <script src="js/glass-refraction.js" defer></script>
 <script src="js/liquid-glass.js" defer></script>
 <script src="js/reveal.js" defer></script>
-<script src="https://unpkg.com/lucide@latest" defer></script>
+<script src="https://unpkg.com/lucide@1.27.0" defer></script>
+<script src="js/icons.js" defer></script>
 
 </head>
 <body class="bg-surface text-on-surface font-body overflow-x-hidden !pt-0">
@@ -67,7 +69,7 @@
 <div class="max-w-[var(--content-max)] mx-auto px-margin-base">
 <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
   <!-- Card 1: Open Hardware -->
-  <div class="p-[5px] bg-ink/5 rounded-[32px] border border-black/5 flex transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:scale-[1.02] active:scale-[0.95] group">
+  <div class="p-[5px] bg-ink/5 rounded-[32px] border border-black/5 flex transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:scale-[1.02] active:scale-[0.95] group">
     <div class="w-full bg-white p-8 rounded-[27px] flex flex-col justify-between min-h-0 md:min-h-[320px]">
       <div>
         <i data-lucide="git-branch" class="text-accent-blue text-3xl mb-6 block" aria-hidden="true"></i>
@@ -75,9 +77,9 @@
         <p class="text-ink-secondary font-body leading-relaxed text-sm">Complete schematic transparency for a community-driven future. Inspect, modify, and build with total freedom.</p>
       </div>
       <div class="mt-6">
-        <a class="inline-flex items-center gap-3 bg-accent-blue text-white rounded-full pl-5 pr-1.5 py-1.5 text-xs font-semibold transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] active:scale-[0.95] group select-none" href="docs.html#hardware">
+        <a class="inline-flex items-center gap-3 bg-accent-blue text-white rounded-full pl-5 pr-1.5 py-1.5 text-xs font-semibold transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] active:scale-[0.95] group select-none" href="docs.html#hardware">
           Learn about schematics
-          <span class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:translate-x-1 group-hover:-translate-y-[1px] group-hover:scale-105">
+          <span class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:translate-x-1 group-hover:-translate-y-[1px] group-hover:scale-105">
             <i data-lucide="chevron-right" class="text-[10px] text-white"></i>
           </span>
         </a>
@@ -85,7 +87,7 @@
     </div>
   </div>
   <!-- Card 2: Privacy First -->
-  <div class="p-[5px] bg-ink/5 rounded-[32px] border border-black/5 flex transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:scale-[1.02] active:scale-[0.95] group">
+  <div class="p-[5px] bg-ink/5 rounded-[32px] border border-black/5 flex transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:scale-[1.02] active:scale-[0.95] group">
     <div class="w-full bg-white p-8 rounded-[27px] flex flex-col justify-between min-h-0 md:min-h-[320px]">
       <div>
         <i data-lucide="shield" class="text-accent-blue text-3xl mb-6 block" aria-hidden="true"></i>
@@ -93,9 +95,9 @@
         <p class="text-ink-secondary font-body leading-relaxed text-sm">Local processing ensures your voice and contextual data never leave your physical orbit. Zero cloud tracking.</p>
       </div>
       <div class="mt-6">
-        <a class="inline-flex items-center gap-3 bg-accent-blue text-white rounded-full pl-5 pr-1.5 py-1.5 text-xs font-semibold transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] active:scale-[0.95] group select-none" href="manifesto.html">
+        <a class="inline-flex items-center gap-3 bg-accent-blue text-white rounded-full pl-5 pr-1.5 py-1.5 text-xs font-semibold transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] active:scale-[0.95] group select-none" href="manifesto.html">
           Learn about privacy
-          <span class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:translate-x-1 group-hover:-translate-y-[1px] group-hover:scale-105">
+          <span class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:translate-x-1 group-hover:-translate-y-[1px] group-hover:scale-105">
             <i data-lucide="chevron-right" class="text-[10px] text-white"></i>
           </span>
         </a>
@@ -103,7 +105,7 @@
     </div>
   </div>
   <!-- Card 3: No Subscriptions -->
-  <div class="p-[5px] bg-ink/5 rounded-[32px] border border-black/5 flex transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:scale-[1.02] active:scale-[0.95] group">
+  <div class="p-[5px] bg-ink/5 rounded-[32px] border border-black/5 flex transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:scale-[1.02] active:scale-[0.95] group">
     <div class="w-full bg-white p-8 rounded-[27px] flex flex-col justify-between min-h-0 md:min-h-[320px]">
       <div>
         <i data-lucide="unlock" class="text-accent-blue text-3xl mb-6 block" aria-hidden="true"></i>
@@ -111,9 +113,9 @@
         <p class="text-ink-secondary font-body leading-relaxed text-sm">Owned entirely by you. No recurring fees, no data harvesting gates, no software locks. Free forever.</p>
       </div>
       <div class="mt-6">
-        <a class="inline-flex items-center gap-3 bg-accent-blue text-white rounded-full pl-5 pr-1.5 py-1.5 text-xs font-semibold transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] active:scale-[0.95] group select-none" href="docs.html#bom">
+        <a class="inline-flex items-center gap-3 bg-accent-blue text-white rounded-full pl-5 pr-1.5 py-1.5 text-xs font-semibold transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] active:scale-[0.95] group select-none" href="docs.html#bom">
           View assembly costs
-          <span class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:translate-x-1 group-hover:-translate-y-[1px] group-hover:scale-105">
+          <span class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:translate-x-1 group-hover:-translate-y-[1px] group-hover:scale-105">
             <i data-lucide="chevron-right" class="text-[10px] text-white"></i>
           </span>
         </a>
@@ -260,28 +262,28 @@
   </div>
   <div class="lg:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-4">
     <!-- Card 1: Adeus Key -->
-    <div class="p-[5px] bg-ink/5 rounded-[22px] border border-black/5 flex transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:scale-105 active:scale-[0.95] group aspect-[3/4]">
+    <div class="p-[5px] bg-ink/5 rounded-[22px] border border-black/5 flex transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:scale-105 active:scale-[0.95] group aspect-[3/4]">
       <div class="w-full bg-[#ebebeb] p-6 rounded-[17px] flex flex-col justify-between">
         <i data-lucide="globe" class="text-[32px] text-ink" aria-hidden="true"></i>
         <span class="font-display text-caption-strong text-ink">Adeus Key</span>
       </div>
     </div>
     <!-- Card 2: Omi AI -->
-    <div class="p-[5px] bg-ink/5 rounded-[22px] border border-black/5 flex transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:scale-105 active:scale-[0.95] group aspect-[3/4]">
+    <div class="p-[5px] bg-ink/5 rounded-[22px] border border-black/5 flex transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:scale-105 active:scale-[0.95] group aspect-[3/4]">
       <div class="w-full bg-gradient-to-br from-[#a6baff] via-[#b6c7ff] to-[#ffcfb3] p-6 rounded-[17px] flex flex-col justify-between overflow-hidden relative">
         <i data-lucide="hexagon" class="text-[32px] text-ink relative z-10 font-light" aria-hidden="true"></i>
         <span class="font-display text-caption-strong text-ink relative z-10">Omi AI</span>
       </div>
     </div>
     <!-- Card 3: Cosmos OS -->
-    <div class="p-[5px] bg-ink/5 rounded-[22px] border border-black/5 flex transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:scale-105 active:scale-[0.95] group aspect-[3/4]">
+    <div class="p-[5px] bg-ink/5 rounded-[22px] border border-black/5 flex transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:scale-105 active:scale-[0.95] group aspect-[3/4]">
       <div class="w-full bg-[#ebebeb] p-6 rounded-[17px] flex flex-col justify-between">
         <i data-lucide="sparkles" class="text-[32px] text-ink" aria-hidden="true"></i>
         <span class="font-display text-caption-strong text-ink">Cosmos OS</span>
       </div>
     </div>
     <!-- Card 4: Ollama -->
-    <div class="p-[5px] bg-ink/5 rounded-[22px] border border-black/5 flex transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:scale-105 active:scale-[0.95] group aspect-[3/4]">
+    <div class="p-[5px] bg-ink/5 rounded-[22px] border border-black/5 flex transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:scale-105 active:scale-[0.95] group aspect-[3/4]">
       <div class="w-full bg-[#ebebeb] p-6 rounded-[17px] flex flex-col justify-between">
         <div class="bg-ink text-surface w-10 h-10 rounded-full flex items-center justify-center">
            <i data-lucide="zap" class="text-[22px] text-white" aria-hidden="true"></i>
@@ -297,15 +299,15 @@
 <div class="max-w-[var(--content-max)] mx-auto px-margin-base">
 <h2 class="font-display text-display-md md:text-hero-display mb-8">Join the collective.</h2>
 <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
-<a href="docs.html#hardware" class="inline-flex items-center gap-4 bg-accent-blue text-white rounded-full pl-8 pr-2.5 py-2.5 text-body font-medium transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] active:scale-[0.95] group select-none">
+<a href="docs.html#hardware" class="inline-flex items-center gap-4 bg-accent-blue text-white rounded-full pl-8 pr-2.5 py-2.5 text-body font-medium transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] active:scale-[0.95] group select-none">
   Build Yours
-  <span class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:translate-x-1 group-hover:-translate-y-[1px] group-hover:scale-105">
+  <span class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:translate-x-1 group-hover:-translate-y-[1px] group-hover:scale-105">
     <i data-lucide="chevron-right" class="text-sm text-white" aria-hidden="true"></i>
   </span>
 </a>
-<a href="docs.html" class="inline-flex items-center gap-4 bg-ink/5 text-accent-blue rounded-full pl-8 pr-2.5 py-2.5 text-body font-medium transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:bg-ink/10 active:scale-[0.95] group select-none">
+<a href="docs.html" class="inline-flex items-center gap-4 bg-ink/5 text-accent-blue rounded-full pl-8 pr-2.5 py-2.5 text-body font-medium transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:bg-ink/10 active:scale-[0.95] group select-none">
   Read the docs
-  <span class="w-8 h-8 rounded-full bg-ink/5 flex items-center justify-center transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:translate-x-1 group-hover:-translate-y-[1px] group-hover:scale-105">
+  <span class="w-8 h-8 rounded-full bg-ink/5 flex items-center justify-center transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:translate-x-1 group-hover:-translate-y-[1px] group-hover:scale-105">
     <i data-lucide="chevron-right" class="text-sm text-accent-blue" aria-hidden="true"></i>
   </span>
 </a>
