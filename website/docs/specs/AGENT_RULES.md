@@ -6,8 +6,8 @@
 
 ## A. Token Discipline
 
-1. **Never invent a color.** Every color used must be one of the 13 declared tokens in `DESIGN_SYSTEM.md` § 1.1–1.3. If a value is not in that table, you do not need it.
-2. **Never use a raw hex in HTML or component CSS.** All color values must reference `--color-*` CSS variables (via `var()`) or the corresponding Tailwind class (`bg-accent-blue`, `text-ink-secondary`).
+1. **Never invent a color.** Every color used must be one of the declared tokens in `DESIGN_SYSTEM.md` § 1.1–1.4 (canvas, ink, action, auxiliary). If a value is not in those tables, you do not need it.
+2. **Never use a raw hex in HTML or component CSS.** All color values must reference `--color-*` CSS variables (via `var()`) or the corresponding Tailwind class (`bg-accent-blue`, `text-ink-secondary`, `border-outline-soft/35`). The `no-raw-hex` rule in `scratch/verify_design_system.js` enforces this — raw hex literals inside Tailwind arbitrary values (e.g. `bg-[#1c1c1e]/60`) are forbidden. Exceptions: the brand-gradient stops in `ai.html` and `about.html` (`#8a2be2`, `#ff2a6d`, `#a6baff`, `#b6c7ff`, `#ffcfb3`) are allowlisted because they are locked to specific page sections per `DESIGN_SYSTEM.md` § 1.4.
 3. **Never invent typography.** Every font, weight, size, and line-height must come from the type scale in `DESIGN_SYSTEM.md` § 2.2.
 4. **Never invent spacing.** Every gap, padding, and margin must use the spacing tokens (margin-base 32px, gutter 24px, section-padding 80/60px) or Tailwind's standard 4/8px rhythm.
 5. **Never invent a radius.** Use the four declared radii: pill (9999px), card (18px), bento (28–40px), utility (8px).

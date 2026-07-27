@@ -37,6 +37,13 @@ canvas {
     --color-sky-blue: #2997ff;
     --color-green: #00a854;
 
+    /* ── Auxiliary canvas / brand tokens ────────────── */
+    --color-canvas-deep:   #1c1c1e;
+    --color-canvas-fog:    #ebebeb;
+    --color-outline-soft:  #d2d2d7;
+    --color-ios-red:       #ff2d55;
+    --color-search-teal:   #00a389;
+
     /* ── Font Families ──────────────────────────────── */
     --font-display:  'SF Pro Display', -apple-system, BlinkMacSystemFont,
                      'Helvetica Neue', Arial, sans-serif;

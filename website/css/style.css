@@ -1,6 +1,150 @@
 /* style.css */
 /* Core component patterns */
 
+/* ==========================================================================
+   Section Wrappers — alternating bg, consistent vertical rhythm
+   ========================================================================== */
+
+/* .section--parchment — light parchment bg, default vertical padding */
+.section--parchment {
+    background-color: var(--color-canvas-parchment);
+    padding-top: var(--section-padding-mobile);
+    padding-bottom: var(--section-padding-mobile);
+}
+@media (min-width: 768px) {
+    .section--parchment {
+        padding-top: var(--section-padding);
+        padding-bottom: var(--section-padding);
+    }
+}
+
+/* .section--surface — neutral surface bg (used on about.html timeline, etc.) */
+.section--surface {
+    background-color: var(--color-canvas-white);
+    padding-top: var(--section-padding-mobile);
+    padding-bottom: var(--section-padding-mobile);
+}
+@media (min-width: 768px) {
+    .section--surface {
+        padding-top: var(--section-padding);
+        padding-bottom: var(--section-padding);
+    }
+}
+
+/* ==========================================================================
+   Tile — iOS-style outlined container with lift-on-hover interaction
+   ==========================================================================
+   Use for "spec pocket" cards: a 5px inner halo wraps the actual card
+   content. Replaces the inline chain
+     class="p-[5px] bg-ink/5 rounded-[22px] border border-black/5 flex
+            transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)]
+            hover:scale-105 active:scale-[0.95] group"
+   which appeared 16+ times across index.html and about.html.
+   ========================================================================== */
+
+.tile {
+    padding: 5px;
+    background-color: rgba(29, 29, 31, 0.05); /* --color-ink @ 5% */
+    border-radius: 22px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    transition: transform 700ms cubic-bezier(0.32, 0.72, 0, 1);
+    outline: none;
+}
+.tile:hover,
+.tile:focus-visible {
+    transform: scale(1.05);
+}
+.tile:active {
+    transform: scale(0.95);
+}
+
+/* ==========================================================================
+   Primary CTA — iOS-style filled pill with arrow-circle affordance
+   ==========================================================================
+   Replaces the inline chain
+     class="inline-flex items-center gap-4 bg-accent-blue text-white rounded-full
+            pl-8 pr-2.5 py-2.5 text-body font-medium transition-transform
+            duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] active:scale-[0.95]
+            group select-none"
+   plus the inner arrow circle
+     class="w-8 h-8 rounded-full bg-white/20 ..."
+   Used at the bottom of every marketing page. The variant on dark sections
+   uses bg-ink/5 + text-accent-blue instead — handled by .cta-secondary.
+   ========================================================================== */
+
+.cta-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    background-color: var(--color-action-blue);
+    color: var(--color-canvas-white);
+    border-radius: 9999px;
+    padding: 10px 10px 10px 32px;
+    font-size: var(--type-body);
+    font-weight: 500;
+    transition: transform 700ms cubic-bezier(0.32, 0.72, 0, 1);
+    user-select: none;
+    text-decoration: none;
+}
+.cta-primary:active {
+    transform: scale(0.95);
+}
+.cta-primary:focus-visible {
+    box-shadow: var(--focus-ring);
+}
+.cta-primary__arrow {
+    width: 32px;
+    height: 32px;
+    border-radius: 9999px;
+    background-color: rgba(255, 255, 255, 0.20);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 700ms cubic-bezier(0.32, 0.72, 0, 1);
+}
+.cta-primary:hover .cta-primary__arrow {
+    transform: translate(2px, -2px) scale(1.05);
+}
+
+/* .cta-secondary — same shape, light surface, used on parchment sections */
+.cta-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    background-color: rgba(29, 29, 31, 0.05);
+    color: var(--color-action-blue);
+    border-radius: 9999px;
+    padding: 10px 10px 10px 32px;
+    font-size: var(--type-body);
+    font-weight: 500;
+    transition: transform 700ms cubic-bezier(0.32, 0.72, 0, 1);
+    user-select: none;
+    text-decoration: none;
+}
+.cta-secondary:hover {
+    background-color: rgba(29, 29, 31, 0.10);
+}
+.cta-secondary:active {
+    transform: scale(0.95);
+}
+.cta-secondary:focus-visible {
+    box-shadow: var(--focus-ring);
+}
+.cta-secondary__arrow {
+    width: 32px;
+    height: 32px;
+    border-radius: 9999px;
+    background-color: rgba(29, 29, 31, 0.05);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 700ms cubic-bezier(0.32, 0.72, 0, 1);
+}
+.cta-secondary:hover .cta-secondary__arrow {
+    transform: translate(2px, -2px) scale(1.05);
+}
+
 /* Spec card (reserved for future spec sections — see docs/specs/COMPONENT_LIBRARY.md § 8) */
 .spec-card {
     border-radius: var(--radius-card);
