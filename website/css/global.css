@@ -27,7 +27,7 @@ canvas {
 
     /* ── Text Colors ────────────────────────────────── */
     --color-ink: #1d1d1f;
-    --color-ink-secondary: #59595e;
+    --color-ink-secondary: #6e6e73;
     --color-ink-tertiary: #6e6e73;
     --color-ink-dark: #ffffff;
 
@@ -209,4 +209,17 @@ select:focus-visible,
     transition-duration: 0s !important;
     transition-delay: 0s !important;
   }
+}
+
+/* Brand gradient utilities — locked to specific page sections, do not reuse. */
+.bg-grad-battery {
+  background: linear-gradient(180deg, #0e7a4b 0%, #022312 100%);
+}
+.bg-grad-radial-soft {
+  background: radial-gradient(circle at center, #fcf8fb, #f5f5f7);
+}
+
+/* Mobile docs TOC overlay — start transparent so the JS fade-in has an opacity to tween. */
+.docs-toc-overlay {
+  opacity: 0;
 }
