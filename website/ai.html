@@ -21,7 +21,7 @@
 <script src="js/glass-refraction.js" defer></script>
 <script src="js/liquid-glass.js" defer></script>
 <script src="js/reveal.js" defer></script>
-<script src="https://unpkg.com/lucide@latest" defer></script>
+<script src="https://unpkg.com/lucide@1.27.0" defer></script>
 <script src="js/icons.js" defer></script>
 
 </head>
@@ -59,7 +59,7 @@
   <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 max-w-[var(--content-max)] mx-auto w-full px-margin-base">
     
     <!-- Card 1: Perception -->
-    <div id="perception-card" tabindex="0" class="md:col-span-8 rounded-[32px] md:rounded-[40px] bg-ink/5 p-[5px] border border-black/5 overflow-hidden flex flex-col md:flex-row relative shadow-[0_4px_24px_rgba(0,0,0,0.04)] h-auto md:h-[600px] group cursor-default transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-[0_12px_48px_rgba(0,0,0,0.08)] focus-within:-translate-y-2 focus-within:shadow-[0_12px_48px_rgba(0,0,0,0.08)] outline-none focus-visible:ring-2 focus-visible:ring-accent-blue">
+    <div id="perception-card" tabindex="0" class="md:col-span-8 rounded-[32px] md:rounded-[40px] bg-ink/5 p-[5px] border border-black/5 overflow-hidden flex flex-col md:flex-row relative shadow-[0_4px_24px_rgba(0,0,0,0.04)] h-auto md:h-[600px] group cursor-default transition-transform duration-500 ease-out hover:-translate-y-2 hover:shadow-[0_12px_48px_rgba(0,0,0,0.08)] focus-within:-translate-y-2 focus-within:shadow-[0_12px_48px_rgba(0,0,0,0.08)] outline-none focus-visible:ring-2 focus-visible:ring-accent-blue">
       <div class="w-full h-full bg-white rounded-[calc(32px-5px)] md:rounded-[calc(40px-5px)] overflow-hidden flex flex-col md:flex-row">
         <div class="p-8 md:p-12 z-20 w-full md:w-[50%] flex flex-col justify-center text-left">
           <p class="font-body text-[15px] font-semibold text-ink-tertiary tracking-wide mb-3">Perception</p>
@@ -69,16 +69,16 @@
         <!-- Visual container -->
         <div class="flex-1 flex items-center justify-center relative overflow-hidden h-[200px] md:h-full w-full md:w-[50%] p-8 bg-gradient-to-tr from-canvas-parchment to-white">
           <!-- Vibrant background glow -->
-          <div class="absolute w-64 h-64 rounded-full bg-gradient-to-tr from-focus-blue via-[#8a2be2] to-[#ff2a6d] blur-[50px] opacity-15 group-hover:opacity-30 group-focus-within:opacity-30 transform group-hover:scale-110 group-focus-within:scale-110 transition-all duration-1000 ease-out"></div>
+          <div class="absolute w-64 h-64 rounded-full bg-gradient-to-tr from-focus-blue via-[#8a2be2] to-[#ff2a6d] blur-[50px] opacity-15 group-hover:opacity-30 group-focus-within:opacity-30 transform group-hover:scale-110 group-focus-within:scale-110 transition-[transform,opacity] duration-1000 ease-out"></div>
           
           <!-- Overlapping modules representing multi-sensory processing -->
           <div class="relative w-full h-full flex items-center justify-center">
             <!-- Voice/Audio Module -->
-            <div class="absolute w-36 h-36 rounded-full bg-white/40 backdrop-blur-xl border border-black/5 shadow-[0_8px_32px_rgba(0,0,0,0.02)] flex items-center justify-center -translate-x-12 translate-y-6 group-hover:-translate-x-16 group-hover:translate-y-8 group-focus-within:-translate-x-16 group-focus-within:translate-y-8 transition-all duration-700 ease-out">
+            <div class="absolute w-36 h-36 rounded-full bg-white/40 backdrop-blur-xl border border-black/5 shadow-[0_8px_32px_rgba(0,0,0,0.02)] flex items-center justify-center -translate-x-12 translate-y-6 group-hover:-translate-x-16 group-hover:translate-y-8 group-focus-within:-translate-x-16 group-focus-within:translate-y-8 transition-transform duration-700 ease-out">
               <i data-lucide="mic" class="w-14 h-14 text-ink" aria-hidden="true"></i>
             </div>
             <!-- Vision/Camera Module -->
-            <div class="absolute w-36 h-36 rounded-full bg-white/40 backdrop-blur-xl border border-black/5 shadow-[0_8px_32px_rgba(0,0,0,0.02)] flex items-center justify-center translate-x-12 -translate-y-6 group-hover:translate-x-16 group-hover:-translate-y-8 group-focus-within:translate-x-16 group-focus-within:-translate-y-8 transition-all duration-700 ease-out z-10">
+            <div class="absolute w-36 h-36 rounded-full bg-white/40 backdrop-blur-xl border border-black/5 shadow-[0_8px_32px_rgba(0,0,0,0.02)] flex items-center justify-center translate-x-12 -translate-y-6 group-hover:translate-x-16 group-hover:-translate-y-8 group-focus-within:translate-x-16 group-focus-within:-translate-y-8 transition-transform duration-700 ease-out z-10">
               <i data-lucide="camera" class="w-14 h-14 text-ink" aria-hidden="true"></i>
             </div>
           </div>
@@ -87,7 +87,7 @@
     </div>
 
     <!-- Card 2: Speed -->
-    <div id="speed-card" tabindex="0" class="md:col-span-4 rounded-[32px] md:rounded-[40px] bg-ink/5 p-[5px] border border-black/5 overflow-hidden flex flex-col relative shadow-[0_4px_24px_rgba(0,0,0,0.04)] h-auto md:h-[600px] group cursor-default transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-[0_12px_48px_rgba(0,0,0,0.08)] focus-within:-translate-y-2 focus-within:shadow-[0_12px_48px_rgba(0,0,0,0.08)] outline-none focus-visible:ring-2 focus-visible:ring-accent-blue">
+    <div id="speed-card" tabindex="0" class="md:col-span-4 rounded-[32px] md:rounded-[40px] bg-ink/5 p-[5px] border border-black/5 overflow-hidden flex flex-col relative shadow-[0_4px_24px_rgba(0,0,0,0.04)] h-auto md:h-[600px] group cursor-default transition-transform duration-500 ease-out hover:-translate-y-2 hover:shadow-[0_12px_48px_rgba(0,0,0,0.08)] focus-within:-translate-y-2 focus-within:shadow-[0_12px_48px_rgba(0,0,0,0.08)] outline-none focus-visible:ring-2 focus-visible:ring-accent-blue">
       <div class="w-full h-full bg-white rounded-[calc(32px-5px)] md:rounded-[calc(40px-5px)] overflow-hidden flex flex-col">
         <div class="p-8 md:p-10 z-10 text-center flex flex-col items-center">
           <p class="font-body text-[15px] font-semibold text-ink-tertiary tracking-wide mb-3">Latency</p>
@@ -102,7 +102,7 @@
     </div>
 
     <!-- Card 3: Memory -->
-    <div id="memory-card" tabindex="0" class="md:col-span-4 rounded-[32px] md:rounded-[40px] bg-ink/5 p-[5px] border border-black/5 overflow-hidden flex flex-col relative shadow-[0_4px_24px_rgba(0,0,0,0.04)] h-auto md:h-[600px] group cursor-default transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-[0_12px_48px_rgba(0,0,0,0.08)] focus-within:-translate-y-2 focus-within:shadow-[0_12px_48px_rgba(0,0,0,0.08)] outline-none focus-visible:ring-2 focus-visible:ring-accent-blue">
+    <div id="memory-card" tabindex="0" class="md:col-span-4 rounded-[32px] md:rounded-[40px] bg-ink/5 p-[5px] border border-black/5 overflow-hidden flex flex-col relative shadow-[0_4px_24px_rgba(0,0,0,0.04)] h-auto md:h-[600px] group cursor-default transition-transform duration-500 ease-out hover:-translate-y-2 hover:shadow-[0_12px_48px_rgba(0,0,0,0.08)] focus-within:-translate-y-2 focus-within:shadow-[0_12px_48px_rgba(0,0,0,0.08)] outline-none focus-visible:ring-2 focus-visible:ring-accent-blue">
       <div class="w-full h-full bg-white rounded-[calc(32px-5px)] md:rounded-[calc(40px-5px)] overflow-hidden flex flex-col">
         <div class="p-8 md:p-10 z-10 text-center flex flex-col items-center">
           <p class="font-body text-[15px] font-semibold text-ink-tertiary tracking-wide mb-3">Recall</p>
@@ -116,7 +116,7 @@
     </div>
 
     <!-- Card 4: Integrations -->
-    <div id="integrations-card" tabindex="0" class="md:col-span-8 rounded-[32px] md:rounded-[40px] bg-ink/5 p-[5px] border border-black/5 overflow-hidden flex flex-col md:flex-row relative shadow-[0_4px_24px_rgba(0,0,0,0.04)] h-auto md:h-[600px] group cursor-default transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-[0_12px_48px_rgba(0,0,0,0.08)] focus-within:-translate-y-2 focus-within:shadow-[0_12px_48px_rgba(0,0,0,0.08)] outline-none focus-visible:ring-2 focus-visible:ring-accent-blue">
+    <div id="integrations-card" tabindex="0" class="md:col-span-8 rounded-[32px] md:rounded-[40px] bg-ink/5 p-[5px] border border-black/5 overflow-hidden flex flex-col md:flex-row relative shadow-[0_4px_24px_rgba(0,0,0,0.04)] h-auto md:h-[600px] group cursor-default transition-transform duration-500 ease-out hover:-translate-y-2 hover:shadow-[0_12px_48px_rgba(0,0,0,0.08)] focus-within:-translate-y-2 focus-within:shadow-[0_12px_48px_rgba(0,0,0,0.08)] outline-none focus-visible:ring-2 focus-visible:ring-accent-blue">
       <div class="w-full h-full bg-white rounded-[calc(32px-5px)] md:rounded-[calc(40px-5px)] overflow-hidden flex flex-col md:flex-row">
         <div class="p-8 md:p-12 z-20 w-full md:w-[50%] flex flex-col justify-center text-left">
           <p class="font-body text-[15px] font-semibold text-ink-tertiary tracking-wide mb-3">Agency</p>
@@ -128,28 +128,28 @@
           <!-- Interactive Icon Grid layout -->
           <div class="grid grid-cols-2 gap-4 max-w-[240px] w-full">
             <!-- Gmail -->
-            <div class="p-1 bg-ink/5 rounded-[24px] border border-black/5 flex aspect-square transition-all duration-500 hover:scale-105 hover:shadow-md group cursor-pointer">
+            <div class="p-1 bg-ink/5 rounded-[24px] border border-black/5 flex aspect-square transition-transform duration-500 hover:scale-105 hover:shadow-md group cursor-pointer">
               <div class="w-full bg-white rounded-[20px] flex flex-col items-center justify-center p-4">
                 <i data-lucide="mail" class="text-3xl text-accent-blue mb-2" aria-hidden="true"></i>
                 <span class="font-body text-[11px] font-medium text-ink-tertiary">Gmail</span>
               </div>
             </div>
             <!-- Calendar -->
-            <div class="p-1 bg-ink/5 rounded-[24px] border border-black/5 flex aspect-square transition-all duration-500 hover:scale-105 hover:shadow-md group cursor-pointer">
+            <div class="p-1 bg-ink/5 rounded-[24px] border border-black/5 flex aspect-square transition-transform duration-500 hover:scale-105 hover:shadow-md group cursor-pointer">
               <div class="w-full bg-white rounded-[20px] flex flex-col items-center justify-center p-4">
                 <i data-lucide="calendar" class="text-3xl text-accent-blue mb-2" aria-hidden="true"></i>
                 <span class="font-body text-[11px] font-medium text-ink-tertiary">Calendar</span>
               </div>
             </div>
             <!-- Health -->
-            <div class="p-1 bg-ink/5 rounded-[24px] border border-black/5 flex aspect-square transition-all duration-500 hover:scale-105 hover:shadow-md group cursor-pointer">
+            <div class="p-1 bg-ink/5 rounded-[24px] border border-black/5 flex aspect-square transition-transform duration-500 hover:scale-105 hover:shadow-md group cursor-pointer">
               <div class="w-full bg-white rounded-[20px] flex flex-col items-center justify-center p-4">
                 <i data-lucide="heart" class="text-3xl text-[#ff2d55] mb-2" aria-hidden="true"></i>
                 <span class="font-body text-[11px] font-medium text-ink-tertiary">Health</span>
               </div>
             </div>
             <!-- Perplexity -->
-            <div class="p-1 bg-ink/5 rounded-[24px] border border-black/5 flex aspect-square transition-all duration-500 hover:scale-105 hover:shadow-md group cursor-pointer">
+            <div class="p-1 bg-ink/5 rounded-[24px] border border-black/5 flex aspect-square transition-transform duration-500 hover:scale-105 hover:shadow-md group cursor-pointer">
               <div class="w-full bg-white rounded-[20px] flex flex-col items-center justify-center p-4">
                 <i data-lucide="search" class="text-3xl text-[#00a389] mb-2" aria-hidden="true"></i>
                 <span class="font-body text-[11px] font-medium text-ink-tertiary">Search</span>

@@ -55,6 +55,7 @@
 32. **All Lucide icons must be `aria-hidden="true"`** unless they are the only label for a control (in which case the parent `<button>` or `<a>` gets `aria-label`).
 33. **Fonts preloaded: 4 files** (`SF-Pro-Display-Regular`, `SF-Pro-Display-Semibold`, `SF-Pro-Text-Regular`, `SF-Pro-Text-Semibold`). Do not preload every weight; this is the performance budget.
 34. **No reference to the orphaned `fonts/` directory at the repo root.** All font URLs are `assets/fonts/sf-pro/`.
+35. **External CDN libraries must be pinned to a specific version.** `@latest` is forbidden. The pinned version lives in `docs/specs/DESIGN_SYSTEM.md` § External Dependencies. The `lucide-version-pinned` rule in `scratch/verify_design_system.js` rejects `@latest` and any version drift. Bump the spec first, then the HTML pages.
 
 ## G. Page Discipline
 
@@ -78,7 +79,7 @@ Or the individual steps:
 
 ```bash
 node scratch/verify_static_site.js   # structural lint — mounts, scripts, headings, asset paths
-node scratch/verify_design_system.js # design-system lint — no-inline-style, token-parity (more rules forthcoming)
+node scratch/verify_design_system.js # design-system lint — no-inline-style, token-parity, lucide-version-pinned (more rules forthcoming)
 node scratch/run-fixtures.js         # HTML fixture harness for rule dev (red → green)
 node scratch/test_parity.js          # parity-rule fixture harness
 node scratch/apply_apple_design.js   # only after editing style.css or global.css

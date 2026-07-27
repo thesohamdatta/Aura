@@ -5,6 +5,20 @@
 
 ---
 
+## External Dependencies
+
+External libraries that the site loads at runtime. Versions are pinned (never `@latest`) — see `lucide-version-pinned` in `scratch/verify_design_system.js`.
+
+| Library | Pinned version | Source |
+|---|---|---|
+| Lucide (icons) | `1.27.0` | `https://unpkg.com/lucide@1.27.0` (all 5 HTML pages) |
+
+If you need to upgrade, update this table first, then bump every `<script src="...">` in the HTML pages. The linter will reject any version mismatch.
+
+Recommended follow-up (not yet implemented): add `integrity` and `crossorigin` attributes to the Lucide `<script>` for Subresource Integrity (SRI). Trade-off: every version bump requires recomputing the hash.
+
+---
+
 ## 1. Color Tokens
 
 ### 1.1 Canvas (backgrounds)
