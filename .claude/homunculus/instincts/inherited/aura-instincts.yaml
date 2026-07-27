@@ -1,0 +1,371 @@
+# Instincts generated from https://github.com/thesohamdatta/aura
+# Generated: 2026-07-27T11:12:38.795Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: aura-commit-conventional
+trigger: "when writing a commit message"
+confidence: 0.85
+domain: git
+source: repo-analysis
+source_repo: https://github.com/thesohamdatta/aura
+---
+
+# Aura Commit Conventional
+
+## Action
+
+Use conventional commit format with prefixes: fix, feat
+
+## Evidence
+
+- 4 commits analyzed
+- Detected conventional commit pattern
+- Examples: fix(docs): resolve heading hierarchy skips in troubleshooting section, feat(frontend): apply Apple-inspired minimalist design system, liquid glass navigation, and responsive typography
+
+---
+id: aura-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/thesohamdatta/aura
+---
+
+# Aura Commit Length
+
+## Action
+
+Write moderate-length commit messages (~87 characters)
+
+## Evidence
+
+- Average commit message length: 87 chars
+- Based on 4 commits
+
+---
+id: aura-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/thesohamdatta/aura
+---
+
+# Aura Naming Files
+
+## Action
+
+Use PascalCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: PascalCase
+
+---
+id: aura-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/thesohamdatta/aura
+---
+
+# Aura Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: aura-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/thesohamdatta/aura
+---
+
+# Aura Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: aura-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/thesohamdatta/aura
+---
+
+# Aura Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: aura-workflow-design-system-update
+trigger: "when doing design system update"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/thesohamdatta/aura
+---
+
+# Aura Workflow Design System Update
+
+## Action
+
+Follow the design-system-update workflow:
+1. Edit or add CSS utility classes in website/css/global.css (or related CSS files).
+2. Update HTML files (e.g., index.html, docs.html) to use new or migrated classes.
+3. Optionally update or reference verification/linter rules in documentation (e.g., AGENT_RULES.md, DEVELOPMENT_GUIDE.md).
+4. Verify changes using local or documented linter/verification scripts.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: website/css/global.css, website/index.html, website/docs.html
+
+---
+id: aura-workflow-documentation-update
+trigger: "when doing documentation update"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/thesohamdatta/aura
+---
+
+# Aura Workflow Documentation Update
+
+## Action
+
+Follow the documentation-update workflow:
+1. Edit relevant documentation files (e.g., website/docs.html, AGENT_RULES.md, DEVELOPMENT_GUIDE.md).
+2. Commit with a message referencing the section or purpose of the doc change.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: website/docs.html, website/docs/specs/AGENT_RULES.md, website/docs/specs/DEVELOPMENT_GUIDE.md
+
+---
+id: aura-instinct-file-naming
+trigger: "When creating a new file in the codebase"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: thesohamdatta/aura
+---
+
+# Aura Instinct File Naming
+
+## Action
+
+Name the file using PascalCase (e.g., MyComponent.js)
+
+## Evidence
+
+- Pattern in namingConventions.files: PascalCase
+
+---
+id: aura-instinct-function-naming
+trigger: "When defining a new function"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: thesohamdatta/aura
+---
+
+# Aura Instinct Function Naming
+
+## Action
+
+Name the function using camelCase (e.g., fetchData)
+
+## Evidence
+
+- Pattern in namingConventions.functions: camelCase
+
+---
+id: aura-instinct-class-naming
+trigger: "When defining a new class"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: thesohamdatta/aura
+---
+
+# Aura Instinct Class Naming
+
+## Action
+
+Name the class using PascalCase (e.g., UserProfile)
+
+## Evidence
+
+- Pattern in namingConventions.classes: PascalCase
+
+---
+id: aura-instinct-constant-naming
+trigger: "When defining a constant value"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: thesohamdatta/aura
+---
+
+# Aura Instinct Constant Naming
+
+## Action
+
+Name the constant using SCREAMING_SNAKE_CASE (e.g., MAX_RETRIES)
+
+## Evidence
+
+- Pattern in namingConventions.constants: SCREAMING_SNAKE_CASE
+
+---
+id: aura-instinct-import-style
+trigger: "When importing modules in JavaScript files"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: thesohamdatta/aura
+---
+
+# Aura Instinct Import Style
+
+## Action
+
+Use relative import paths (e.g., import x from './x')
+
+## Evidence
+
+- Pattern in importStyle: relative
+
+---
+id: aura-instinct-export-style
+trigger: "When exporting modules or functions"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: thesohamdatta/aura
+---
+
+# Aura Instinct Export Style
+
+## Action
+
+Use named exports (e.g., export { MyComponent })
+
+## Evidence
+
+- Pattern in exportStyle: named
+
+---
+id: aura-instinct-test-location
+trigger: "When adding or updating tests"
+confidence: 0.7
+domain: testing
+source: repo-analysis
+source_repo: thesohamdatta/aura
+---
+
+# Aura Instinct Test Location
+
+## Action
+
+Place test files in the separate test directory as per architecture pattern
+
+## Evidence
+
+- Pattern in architecture.testLocation: separate
+
+---
+id: aura-instinct-git-commit-format
+trigger: "When making a git commit"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: thesohamdatta/aura
+---
+
+# Aura Instinct Git Commit Format
+
+## Action
+
+Format the commit message using Conventional Commits with a prefix (fix or feat), optional scope, and a concise description (e.g., feat(module): add new feature)
+
+## Evidence
+
+- Pattern in commits.type: conventional
+- Pattern in commits.prefixes: [fix, feat]
+- Seen in commit: fix(docs): resolve heading hierarchy skips in troubleshooting section
+
+---
+id: aura-instinct-design-system-update
+trigger: "When someone wants to add, migrate, or enforce design system utilities or patterns"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: thesohamdatta/aura
+---
+
+# Aura Instinct Design System Update
+
+## Action
+
+Edit or add CSS utility classes in website/css/global.css, update HTML files to use new/migrated classes, optionally update related documentation, and verify changes using linter/verification scripts
+
+## Evidence
+
+- Workflow: design-system-update
+- Files: website/css/global.css, website/index.html, website/docs.html, website/docs/specs/AGENT_RULES.md, website/docs/specs/DEVELOPMENT_GUIDE.md
+- Commit: fix(design-system): migrate 3 inline styles to named utility classes (closes #49)
+
+---
+id: aura-instinct-documentation-update
+trigger: "When someone wants to clarify, fix, or extend documentation for users or contributors"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: thesohamdatta/aura
+---
+
+# Aura Instinct Documentation Update
+
+## Action
+
+Edit relevant documentation files (website/docs.html, AGENT_RULES.md, DEVELOPMENT_GUIDE.md) and commit with a message referencing the section or purpose of the doc change
+
+## Evidence
+
+- Workflow: documentation-update
+- Files: website/docs.html, website/docs/specs/AGENT_RULES.md, website/docs/specs/DEVELOPMENT_GUIDE.md
+- Commit: fix(docs): resolve heading hierarchy skips in troubleshooting section
+
