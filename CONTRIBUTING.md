@@ -1,15 +1,15 @@
-# Contributing to AURA
+# Contributing to Aura
 
-Thank you for your interest in contributing to AURA! We welcome contributions from developers, researchers, and builders to help improve this open-source AI wearable.
+Thank you for your interest in contributing to Aura. We welcome contributions from developers, researchers, and builders.
 
 ## How to Contribute
 
 ### 1. Reporting Bugs
 - Check the [Issues](https://github.com/thesohamdatta/aura/issues) page to see if the bug has already been reported.
-- If not, open a new issue. Provide as much detail as possible, including steps to reproduce, hardware versions, and environment details (Arduino IDE version, Android version, etc.).
+- If not, open a new issue with steps to reproduce, hardware versions, and environment details (Arduino IDE version, Android version, etc.).
 
 ### 2. Feature Requests
-- We welcome ideas for new features! Please open an issue to discuss your proposal before starting implementation.
+- Open an issue to discuss your proposal before starting implementation.
 
 ### 3. Development Workflow
 To contribute code or hardware designs:
@@ -36,23 +36,31 @@ To contribute code or hardware designs:
 
 ## Contribution Guidelines
 
-- **Hardware:** If contributing new case designs or hardware modifications, please include high-quality photos or videos and updated STL/design files.
-- **Firmware:** Focus on power optimization, new sensor integrations, or improved audio/image compression.
-- **Mobile App:** New UI views, additional integrations, or offline support features are highly valued.
-- **AI/Backend:** We welcome better prompts, support for new LLMs/Vision models, and edge inference improvements.
-- **Documentation:** Help us improve clarity, fix errors, or provide translations.
+- **Hardware:** New case designs or hardware modifications should ship with photos or videos and updated STL/design files.
+- **Firmware:** Power optimization, new sensor integrations, or improved audio/image compression.
+- **Mobile App:** New UI views, additional integrations, offline support.
+- **AI/Backend:** Better prompts, support for new LLMs/vision models, edge inference.
+- **Documentation:** Clarity improvements, error fixes, translations.
 
 ## Module-Specific Setup Guides
 
-Before contributing to a specific part of the project, please review its dedicated documentation:
-- [Firmware Setup Guide](firmware/readme.md)
-- [Backend Setup Guide](backend/README.md)
-- [Mobile App Setup](README.MD#2--mobile-app-setup)
+Before contributing to a specific part of the project, read its dedicated documentation:
+- [Firmware Setup Guide](docs/guides/firmware-setup.md) · [Firmware README](firmware/readme.md)
+- [Backend Setup Guide](docs/guides/backend-setup.md) · [Backend README](backend/README.md)
+- [Mobile App Setup Guide](docs/guides/app-setup.md) · [App README](app/README.md)
+- [Hardware](hardware/README.md)
+- [Root README](README.MD)
 
 ## Code of Conduct
 
 By participating in this project, you agree to abide by our [Code of Conduct](CODE_OF_CONDUCT.md).
 
+## Maintainers
+
+- **Soham Datta** — AI Lead. GitHub: [@thesohamdatta](https://github.com/thesohamdatta).
+- **Laxman Pujari** — Hardware Lead. GitHub: [@laxmanpujari](https://github.com/laxmanpujari) (placeholder; update if username differs).
+
 ## Questions?
 
-If you have any questions, feel free to open an issue or reach out to the project maintainer.
+Open an issue or DM a maintainer on GitHub.
+

@@ -11,7 +11,7 @@
 
 <br/>
 
-FastAPI backend that powers AURA's transcription, vision analysis, memory storage, and AI chat pipeline.
+FastAPI backend that powers Aura's transcription, vision analysis, memory storage, and AI chat pipeline.
 
 ---
 

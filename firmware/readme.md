@@ -11,7 +11,7 @@
 
 <br/>
 
-Firmware for the AURA wearable AI pendant running on the **Seeed XIAO ESP32-S3 Sense**. Handles audio capture, image capture, BLE streaming, and OTA updates.
+Firmware for the Aura wearable AI pendant running on the **Seeed XIAO ESP32-S3 Sense**. Handles audio capture, image capture, BLE streaming, and OTA updates.
 
 ---
 

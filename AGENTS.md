@@ -1,23 +1,24 @@
-# Aura — Agent Configuration
+# Aura: Agent Configuration
 
 ## Project overview
 
-Aura is an open-source, screenless, voice-first AI pendant built on the XIAO ESP32-S3 Sense.
-Voice-first. No screen. Always ambient. Built by a 4-person undergrad team in Pune for ~$50 USD.
+Aura is an open-source, screenless, voice-first AI pendant built on the XIAO ESP32-S3 Sense. Voice-first, no screen, always ambient. Built by a 4-person undergrad team in Pune for around $50 USD.
 
 ## The Website
 
-5-page vanilla HTML/CSS/JS marketing site. No build step, no bundler, no framework.
+A 5-page vanilla HTML/CSS/JS marketing site. No build step, no bundler, no framework.
+
+Note: a parallel copy of the website HTML lives under `docs/index.html`, `docs/ai.html`, `docs/about.html`, `docs/docs.html`, and `docs/manifesto.html`. This duplication predates the agent configuration. Treat `website/` as the source of truth and `docs/` as legacy until a separate cleanup issue consolidates them.
 
 ### Pages
 
 | Page | File | Purpose |
 |---|---|---|
-| Home | `website/index.html` | Landing page — hero, capabilities, how it works, thesis, research, open source, team, FAQ |
-| About | `website/about.html` | Team, mission, values, timeline |
-| AI | `website/ai.html` | 4-layer pipeline architecture, provider comparison |
-| Docs | `website/docs.html` | Technical documentation with sidebar navigation |
-| Manifesto | `website/manifesto.html` | "The Third Device Hypothesis" essay |
+| Home | `website/index.html` | Landing page. Hero, capabilities, how it works, thesis, research, open source, team, FAQ. |
+| About | `website/about.html` | Team, mission, values, timeline. |
+| AI | `website/ai.html` | 4-layer pipeline architecture and provider comparison. |
+| Docs | `website/docs.html` | Technical documentation with sidebar navigation. |
+| Manifesto | `website/manifesto.html` | "The Third Device Hypothesis" essay. |
 
 ### File structure
 
@@ -64,18 +65,19 @@ Defined in `website/css/global.css`:
 
 ### Icon system
 
-**Decision:** Lucide vanilla JS is the single icon system.
+Lucide vanilla JS is the single icon system.
+
 - CDN: `https://unpkg.com/lucide@latest`
 - Usage: `<i data-lucide="icon-name"></i>`
 - Initialize: `lucide.createIcons()`
 
 ### CSS architecture
 
-- `global.css` — Design tokens, resets, accessibility utilities
-- `fonts.css` — Font-face declarations
-- `nav.css` — Navigation component styles
-- `style.css` — All other component patterns (being refactored)
-- `docs.css` — Docs-specific overrides
+- `global.css` holds design tokens, resets, and accessibility utilities.
+- `fonts.css` holds font-face declarations.
+- `nav.css` holds navigation component styles.
+- `style.css` holds all other component patterns (being refactored).
+- `docs.css` holds docs-specific overrides.
 
 ### Deployment
 
@@ -93,25 +95,26 @@ Five canonical labels, default names. See `docs/agents/triage-labels.md`.
 
 ### Domain docs
 
-Single-context layout — `CONTEXT.md` at repo root + `docs/adr/`. See `docs/agents/domain.md`.
+Single-context layout: `CONTEXT.md` at the repo root plus `docs/adr/`. See `docs/agents/domain.md`.
 
 ### Local Skills
-- **`apple-aura-frontend`** — Enforces strict Apple-style product-page aesthetics. Located at `.agents/skills/apple-aura-frontend/`.
-- **`apple-design-analysis`** — Governs color values, typography tracking/scaling, shape hierarchies, shadow/blur depth limits. Located at `.agents/skills/apple-design-analysis/`.
-- **`minimalist-ui`** — Minimalist UI principles: restraint, whitespace, calm aesthetics. Located at `website/.agents/skills/minimalist-ui/`.
+
+- `apple-aura-frontend`. Enforces strict Apple-style product-page aesthetics. Located at `.agents/skills/apple-aura-frontend/`.
+- `apple-design-analysis`. Governs color values, typography tracking and scaling, shape hierarchies, shadow and blur depth limits. Located at `.agents/skills/apple-design-analysis/`.
+- `minimalist-ui`. Minimalist UI principles: restraint, whitespace, calm aesthetics. Located at `website/.agents/skills/minimalist-ui/`.
 
 ## Key domain terms
 
 | Term | Meaning |
 |---|---|
-| Pendant | The physical Aura wearable hardware device |
-| AI Pipeline | The 4-layer cloud AI: Deepgram → Groq/GPT-4o → Pinecone |
-| BOM | Bill of Materials — the hardware component list and costs |
-| Overline | Small monospace label above section headings |
-| Section-black | Full-bleed `background: #000` section |
+| Pendant | The physical Aura wearable hardware device. |
+| AI Pipeline | The 4-layer cloud AI: Deepgram, Groq or GPT-4o, Pinecone. |
+| BOM | Bill of Materials. The hardware component list and costs. |
+| Overline | Small monospace label above section headings. |
+| Section-black | Full-bleed `background: #000` section. |
 
 ## Workflow
 
 `brainstorm → grill → prd → to-issues → tdd → ship`
 
-All issues are tagged `website` to distinguish from firmware/backend issues.
+All issues are tagged `website` to distinguish them from firmware and backend issues.

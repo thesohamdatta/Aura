@@ -1,177 +1,69 @@
 <div align="center">
 
-# AURA
-
-**The Open-Source Intelligence Frontier.**
+<img src="Assets/hero/123456l.png" alt="Aura pendant worn in the real world" width="360" />
 
 <br/>
 
-<img src="Assets/hero/123456l.png" alt="AURA â€” Worn in the real world" style="width: 100%; max-width: 400px; border-radius: 50%; aspect-ratio: 1 / 1; object-fit: cover;" />
+# Aura
+
+Aura is an open-source pendant you wear around your neck.
+Voice in. Memory out. No screen.
 
 <br/>
-
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-000000?style=flat-square)](LICENSE)
-[![GitHub Stars](https://img.shields.io/github/stars/thesohamdatta/aura?style=flat-square&color=000000)](https://github.com/thesohamdatta/aura)
-[![MCU](https://img.shields.io/badge/MCU-ESP32--S3%20Sense-000000?style=flat-square)](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/)
-[![Build Cost](https://img.shields.io/badge/Build%20Cost-~$30%20USD-000000?style=flat-square)](#-hardware-architecture)
-
-<br/>
-
-### "We have Personal Computers â€” to create, work, and produce things that matter. We have Tiny Supercomputers â€” Smartphones â€” to consume, but we are drawn into the Social Dilemma.
-
-But why have humans never built something different?
-
-They tried. Ten years before smartphones, they made wearables â€” but added a screen to it. A screen that demands attention. A screen that distracts. A screen we never needed.
-
-That is why we are building Aura.
-
-A device that combines the productive power of a computer and the connectivity of a smartphone â€” but with one fundamental difference. It does not pull you in. It works for you, quietly, in the background â€” transforming your intent into action, without ever asking for your attention.
-
-Less distraction. More done."
-
-AURA is a wearable AI context engine designed to capture, process, and remember environmental signals in real-time. It transforms your daily life into a searchable, semantic memoryâ€”controlled entirely by you.
-
-<br/>
-
-[**Deploy Backend**](backend/README.md) â€¢ [**Flash Firmware**](firmware/readme.md) â€¢ [**Get the App**](app/README.md) â€¢ [**Issues**](https://github.com/thesohamdatta/aura/issues)
 
 </div>
 
-<br/>
+## What works
+
+| Layer | Where |
+|---|---|
+| Pendant firmware (XIAO ESP32-S3 Sense) | [`firmware/`](firmware/) |
+| Backend (FastAPI, 4-layer AI) | [`backend/`](backend/) |
+| Android companion app | [`app/`](app/) |
+| Printable case | [`hardware/CASE.stl`](hardware/CASE.stl) |
+
+## Start here
+
+| You want to | Open |
+|---|---|
+| Flash the pendant | [`firmware/readme.md`](firmware/readme.md) |
+| Run the backend | [`backend/README.md`](backend/README.md) |
+| Build the Android app | [`app/README.md`](app/README.md) |
+| Print the case | [`hardware/README.md`](hardware/README.md) |
+
+## How the stack fits
+
+Pendant streams audio and frames over Wi-Fi. Backend turns them into searchable memory. The app is how you ask the memory a question.
+
+[Read the full argument](website/manifesto.html).
+
+## Hardware
+
+Off-the-shelf parts. Printable case. No proprietary enclosure.
+
+| Piece | Spec |
+|---|---|
+| MCU | XIAO ESP32-S3 Sense |
+| Mic | Digital PDM |
+| Camera | OV2640 |
+| Wireless | Wi-Fi 2.4GHz + BLE 5.0 |
+| Case | [`hardware/CASE.stl`](hardware/CASE.stl) |
+
+Total BOM: around \$50 USD. Component list and assembly notes live in [`hardware/README.md`](hardware/README.md).
+
+## Open source
+
+MIT licensed. Built by a four-person undergrad team in Pune.
+
+- [Contributing](CONTRIBUTING.md)
+- [Code of Conduct](CODE_OF_CONDUCT.md)
+- [Security](SECURITY.md)
+- [License](LICENSE)
 
 ---
-
-<br/>
-
-
-
-<br/>
-
-AURA leverages the compact power of the **XIAO ESP32-S3 Sense** to pack high-fidelity sensors into a form factor smaller than a coin. Unlike proprietary devices, AURA gives you the **Raw Stream**â€”no gatekeepers, no subscription fees.
-
-- **Continuous Context:** Passive capture of audio and visual frames.
-- **Privacy First:** Local streaming + self-hosted RAG backend.
-- **Extreme Portability:** 350mAh LiPo powered, 3D-printable enclosure.
-
-<br/>
-
----
-
-<br/>
-
-## 2. Intelligence Pipeline: Beyond Recording.
-
-<div align="center">
-  <img src="Assets/hero/circuit%20assemly.png" alt="AURA Component Assembly â€” ESP32-S3 Sense, LiPo Battery, WiFi Antenna" width="70%" style="border-radius: 2rem;"/>
-  <p><i>Every component is off-the-shelf. Total BOM cost: ~$60 USD.</i></p>
-</div>
-
-<br/>
-
-AURA doesn't just store files; it understands them. Our **Multi-Threaded RAG (Retrieval-Augmented Generation)** pipeline processes data through three distinct layers:
-
-### **A. Perception Layer**
-- **STT:** Deepgram Nova-3 for 98%+ transcription accuracy.
-- **Vision:** GPT-4o Vision analysis of environmental frames.
-- **Streaming:** Efficient MJPEG and PDM audio over WebSockets.
-
-### **B. Cognition Layer (RAG)**
-- **Vector DB:** Pinecone-backed semantic indexing.
-- **Person-Awareness:** Intelligent speaker identification and assignment.
-- **Contextual Chunking:** Multi-threaded extraction of relevant conversation segments.
-
-### **C. Interface Layer**
-- **Searchable Life:** Instantly recall "The meeting details from Tuesday."
-- **Agentic Chat:** A personal AI that knows your world as well as you do.
-
-<br/>
-
----
-
-<br/>
-
-## 3. The Experience: Your Life, Searchable.
-
-<div align="center">
-  <img src="Assets/hero/software_mockups.jpg" alt="AURA App â€” Summaries, Tasks, Memories with the Superpowers of AI" width="100%" style="border-radius: 2rem;"/>
-</div>
-
-<br/>
-
-| Use Case | How AURA Helps |
-| :--- | :--- |
-| **Professional** | Instant summaries of every meeting, searchable by speaker or topic. |
-| **Academic** | Never miss a lecture detail; ask questions to your class recordings. |
-| **Creative** | Capture "Eureka" moments as they happen, indexed by visual context. |
-| **Personal** | A searchable archive of family stories and shared memories. |
-
-<br/>
-
----
-
-<br/>
-
-## 4. Hardware Architecture
-
-<div align="center">
-  <table border="0">
-    <tr>
-      <td width="33%" align="center">
-        <img src="Assets/hero/aura%202.png" width="100%" style="border-radius: 1.5rem;"/>
-        <p><i>Front & back. Camera lens + magnetic clasp.</i></p>
-      </td>
-      <td width="33%" align="center">
-        <img src="Assets/hero/internal%20view%202.jpg" width="100%" style="border-radius: 1.5rem;"/>
-        <p><i>Open internals â€” ESP32-S3 Sense module + LiPo.</i></p>
-      </td>
-      <td width="33%" align="center">
-        <img src="Assets/hero/exploded%20view.jpg" width="100%" style="border-radius: 1.5rem;"/>
-        <p><i>Exploded CAD view â€” 3D-printable, fully open.</i></p>
-      </td>
-    </tr>
-  </table>
-</div>
-
-<br/>
-
-AURA is designed for **Assembly**. Every component is off-the-shelf, making it the most accessible AI wearable on the planet.
-
-| Component | Specification |
-| :--- | :--- |
-| **MCU** | Dual-core 32-bit LX7 @ 240MHz |
-| **RAM** | 8MB PSRAM + 384KB SRAM |
-| **Camera** | OV2640 2MP (1600x1200) |
-| **Mic** | Digital PDM Microphone |
-| **Wireless** | 2.4GHz WiFi + BLE 5.0 |
-
-<br/>
-
----
-
-<br/>
-
-## 5. Roadmap: The Path to AGI Wearables
-
-- [x] **Phase 1: Foundation** â€” Core streaming, transcription, and basic RAG.
-- [ ] **Phase 2: Vision 2.0** â€” Real-time object detection and spatial awareness.
-- [ ] **Phase 3: Multi-Modal Agents** â€” Proactive AI assistance based on current context.
-- [ ] **Phase 4: Swarm Intelligence** â€” Multi-device context sharing and collaborative memory.
-
-<br/>
-
----
-
-<br/>
 
 <div align="center">
 
-**AURA** â€” Open Hardware Â· Open Firmware Â· Open Intelligence
-
-[â­ Star on GitHub](https://github.com/thesohamdatta/aura) Â· [Issues](https://github.com/thesohamdatta/aura/issues) Â· [MIT License](LICENSE)
-
-<br/>
-
-<img src="Assets/hero/hero%20image%203.png" alt="AURA â€” The device." width="220px" style="border-radius: 2rem;"/>
+[Star on GitHub](https://github.com/thesohamdatta/aura) · [Report a vulnerability](SECURITY.md) · [MIT](LICENSE)
 
 </div>

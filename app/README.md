@@ -11,7 +11,7 @@
 
 <br/>
 
-Companion Android app for the AURA wearable AI pendant. Pairs over BLE, streams data, and displays searchable memories and AI chat.
+Companion Android app for the Aura wearable AI pendant. Pairs over BLE, streams data, and displays searchable memories and AI chat.
 
 ---
 
