@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta
+      name="description"
+      content="Learn about the founders, values, and build process behind the open-source Aura wearable pendant."
+    />
+    <meta name="theme-color" content="#000000" />
+    <title>About Aura | Open Source Intelligence</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://unpkg.com" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link
+      rel="preload"
+      href="assets/fonts/sf-pro/SF-Pro-Display-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/sf-pro/SF-Pro-Display-Semibold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/sf-pro/SF-Pro-Text-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/sf-pro/SF-Pro-Text-Semibold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/utils.css" />
+    <link rel="stylesheet" href="css/about.css" />
+    <script src="js/nav.js" defer></script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+  </head>
+  <body class="bg-white font-body">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <nav id="navbar" class="nav-transparent">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-wordmark">Aura</a>
+        <div id="mobileMenu" class="nav-links">
+          <a href="index.html" class="nav-link">Overview</a>
+          <a href="about.html" class="nav-link active" aria-current="page"
+            >About</a
+          >
+          <a href="manifesto.html" class="nav-link">Manifesto</a>
+          <a href="docs.html" class="nav-link">Docs</a>
+        </div>
+        <div class="nav-actions">
+          <button
+            id="navToggle"
+            class="nav-toggle"
+            aria-expanded="false"
+            aria-controls="mobileMenu"
+            aria-label="Toggle navigation menu"
+          >
+            <i data-lucide="menu" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <main id="main-content">
+      <!-- 1. ABOUT HERO -->
+      <section class="about-hero" aria-label="About Aura hero">
+        <div class="about-hero-media">
+          <img
+            src="assets/hero/about.png"
+            alt="Aura pendant resting on a dark surface"
+            width="1920"
+            height="1080"
+            fetchpriority="high"
+          />
+        </div>
+        <div class="about-hero-gradient" aria-hidden="true"></div>
+        <div class="about-hero-content">
+          <h1 class="about-hero-headline">About</h1>
+          <p class="about-hero-lead">
+            The journey of Aura began in a shared dorm room, driven by the
+            belief that intelligence should be personal, private, and accessible
+            to all.
+          </p>
+        </div>
+      </section>
+
+      <!-- 2. MISSION & VISION -->
+      <section class="section section-white" aria-labelledby="mission-heading">
+        <div class="section-inner">
+          <div class="about-mission-grid">
+            <div>
+              <span class="about-mission-label">Our Mission</span>
+              <h2 id="mission-heading" class="about-mission-text">
+                To create less socially disruptive technology. To change the
+                behaviors engineered by social media giants over the years, and
+                to change how we live and use the internet.
+              </h2>
+            </div>
+            <div>
+              <span class="about-mission-label">Our Vision</span>
+              <h2 class="about-mission-text">
+                To build an operating system for the connection between humans
+                and intelligence.
+              </h2>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. VALUES -->
+      <section
+        class="section section-parchment"
+        aria-labelledby="values-heading"
+      >
+        <div class="section-inner">
+          <header class="section-header">
+            <span class="eyebrow eyebrow-action">Values</span>
+            <h2 id="values-heading" class="section-headline">
+              What we believe.
+            </h2>
+          </header>
+          <div class="about-values-grid">
+            <article class="about-value-card">
+              <div class="about-value-card-inner">
+                <div>
+                  <i
+                    data-lucide="git-branch"
+                    class="about-value-icon"
+                    aria-hidden="true"
+                  ></i>
+                  <h3 class="about-value-title">
+                    Open Hardware. Built for all.
+                  </h3>
+                  <p class="about-value-body">
+                    Complete schematic transparency for a community-driven
+                    future. Inspect, modify, and build with total freedom.
+                  </p>
+                </div>
+                <div class="mt-4">
+                  <a href="docs.html#hardware" class="about-value-cta">
+                    <span>Learn about schematics</span>
+                    <span class="about-value-cta-arrow" aria-hidden="true">
+                      <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </article>
+            <article class="about-value-card">
+              <div class="about-value-card-inner">
+                <div>
+                  <i
+                    data-lucide="shield"
+                    class="about-value-icon"
+                    aria-hidden="true"
+                  ></i>
+                  <h3 class="about-value-title">Privacy. That's Aura.</h3>
+                  <p class="about-value-body">
+                    Local processing ensures your voice and contextual data
+                    never leave your physical orbit. Zero cloud tracking.
+                  </p>
+                </div>
+                <div class="mt-4">
+                  <a href="manifesto.html" class="about-value-cta">
+                    <span>Learn about privacy</span>
+                    <span class="about-value-cta-arrow" aria-hidden="true">
+                      <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </article>
+            <article class="about-value-card">
+              <div class="about-value-card-inner">
+                <div>
+                  <i
+                    data-lucide="unlock"
+                    class="about-value-icon"
+                    aria-hidden="true"
+                  ></i>
+                  <h3 class="about-value-title">No Subscriptions. Ever.</h3>
+                  <p class="about-value-body">
+                    Owned entirely by you. No recurring fees, no data harvesting
+                    gates, no software locks. Free forever.
+                  </p>
+                </div>
+                <div class="mt-4">
+                  <a href="docs.html#bom" class="about-value-cta">
+                    <span>View assembly costs</span>
+                    <span class="about-value-cta-arrow" aria-hidden="true">
+                      <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. TEAM -->
+      <section class="section section-parchment" aria-labelledby="team-heading">
+        <div class="section-inner">
+          <header class="section-header section-header-centered">
+            <h2 id="team-heading" class="section-headline">The Team</h2>
+            <p
+              class="section-lead"
+              style="margin-left: auto; margin-right: auto"
+            >
+              A collaborative effort between Computer, Human and Artificial
+              Intelligence researchers.
+            </p>
+          </header>
+          <div class="about-team-grid">
+            <article class="about-team-card">
+              <div class="about-team-image-wrap">
+                <img
+                  width="800"
+                  height="1000"
+                  loading="lazy"
+                  src="assets/team/soham%20(1).jpeg"
+                  alt="Soham Datta"
+                />
+              </div>
+              <h3 class="about-team-name">Soham Datta</h3>
+              <p class="about-team-role">Lead and head researcher</p>
+              <p class="about-team-quote">
+                &ldquo;for the love of personal intelligence&rdquo;
+              </p>
+            </article>
+            <article class="about-team-card">
+              <div class="about-team-image-wrap">
+                <img
+                  width="800"
+                  height="1000"
+                  loading="lazy"
+                  src="assets/team/laxman.jpeg"
+                  alt="Laxman Pajai"
+                />
+              </div>
+              <h3 class="about-team-name">Laxman Pajai</h3>
+              <p class="about-team-role">Design and hardware</p>
+              <p class="about-team-quote">
+                &ldquo;for the love of experience&rdquo;
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. HONEST TIMELINE -->
+      <section
+        class="section section-parchment"
+        aria-labelledby="timeline-heading"
+      >
+        <div class="section-inner">
+          <header class="section-header section-header-centered">
+            <h2 id="timeline-heading" class="section-headline">
+              Honest Timeline.
+            </h2>
+          </header>
+          <div class="about-timeline timeline-line">
+            <div class="about-timeline-item">
+              <div class="about-timeline-content">
+                <div class="about-timeline-date">June 2025</div>
+                <h3 class="about-timeline-title">Designing the Device</h3>
+                <p class="about-timeline-desc">
+                  Inspiration: <em>Her (2013)</em>.<br />Drew the first ever
+                  sketch of the Aura.
+                </p>
+              </div>
+              <div class="about-timeline-dot"></div>
+              <div class="about-timeline-spacer"></div>
+            </div>
+            <div class="about-timeline-item">
+              <div class="about-timeline-spacer"></div>
+              <div class="about-timeline-dot"></div>
+              <div class="about-timeline-content">
+                <div class="about-timeline-date">July 2025</div>
+                <h3 class="about-timeline-title">Raspberry PI Failure</h3>
+                <p class="about-timeline-desc">We chose the wrong one.</p>
+              </div>
+            </div>
+            <div class="about-timeline-item">
+              <div class="about-timeline-content">
+                <div class="about-timeline-date">Dec 2025</div>
+                <h3 class="about-timeline-title">
+                  Omi &amp; The Open Ecosystem
+                </h3>
+                <p class="about-timeline-desc">
+                  Discovered smartphones can compute faster.<br />Explored open
+                  ecosystems for AI wearables.
+                </p>
+              </div>
+              <div class="about-timeline-dot"></div>
+              <div class="about-timeline-spacer"></div>
+            </div>
+            <div class="about-timeline-item">
+              <div class="about-timeline-spacer"></div>
+              <div class="about-timeline-dot"></div>
+              <div class="about-timeline-content">
+                <div class="about-timeline-date">Feb 2026</div>
+                <h3 class="about-timeline-title">First Prototype</h3>
+                <p class="about-timeline-desc">
+                  The original Aura prototype. Failed, tried, failed again.
+                </p>
+              </div>
+            </div>
+            <div class="about-timeline-item">
+              <div class="about-timeline-content">
+                <div class="about-timeline-date">March 2026</div>
+                <h3 class="about-timeline-title">First Ever Recording</h3>
+                <p class="about-timeline-desc">
+                  Success! Then got too excited and shorted the module. Cost:
+                  $20.
+                </p>
+              </div>
+              <div class="about-timeline-dot"></div>
+              <div class="about-timeline-spacer"></div>
+            </div>
+            <div class="about-timeline-item">
+              <div class="about-timeline-spacer"></div>
+              <div class="about-timeline-dot"></div>
+              <div class="about-timeline-content">
+                <div class="about-timeline-date">April 2026</div>
+                <h3 class="about-timeline-title">
+                  The Final Hardware + Software
+                </h3>
+                <p class="about-timeline-desc">
+                  Memories, tasks, chats. It became my friend.
+                </p>
+              </div>
+            </div>
+            <div class="about-timeline-item">
+              <div class="about-timeline-content">
+                <div class="about-timeline-date">July 2026</div>
+                <h3 class="about-timeline-title">OS1 Research</h3>
+                <p class="about-timeline-desc">
+                  Connecting humans and AI.<br />Exploring what AI OS can bring
+                  to humanity with Edge AI.
+                </p>
+              </div>
+              <div class="about-timeline-dot"></div>
+              <div class="about-timeline-spacer"></div>
+            </div>
+            <div class="about-timeline-item">
+              <div class="about-timeline-spacer"></div>
+              <div class="about-timeline-dot"></div>
+              <div class="about-timeline-content">
+                <div class="about-timeline-date">2030</div>
+                <h3 class="about-timeline-title">Real Humans</h3>
+                <p class="about-timeline-desc">
+                  Aura helping people.<br />Getting shaped by experiences, not
+                  by tiny screens.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. THANKS TO OPEN SOURCE -->
+      <section class="section section-white" aria-labelledby="oss-heading">
+        <div class="section-inner">
+          <div class="about-mission-grid" style="align-items: center">
+            <div>
+              <h2
+                id="oss-heading"
+                class="about-mission-text"
+                style="font-size: var(--type-display-lg); margin-bottom: 16px"
+              >
+                Thanks to<br />Open Source
+              </h2>
+              <p
+                class="about-mission-text"
+                style="
+                  font-family: var(--font-text);
+                  font-weight: 400;
+                  font-size: var(--type-body-strong);
+                  color: var(--color-ink-tertiary);
+                "
+              >
+                Aura is built on the top of Omi AI ecosystem
+              </p>
+            </div>
+            <div class="about-oss-grid">
+              <div class="about-oss-card">
+                <div class="about-oss-card-inner about-oss-card-neutral">
+                  <i
+                    data-lucide="globe"
+                    class="about-oss-icon"
+                    style="font-size: 32px"
+                    aria-hidden="true"
+                  ></i>
+                  <span class="about-oss-label">Adeus Key</span>
+                </div>
+              </div>
+              <div class="about-oss-card">
+                <div class="about-oss-card-inner about-oss-card-gradient">
+                  <i
+                    data-lucide="hexagon"
+                    class="about-oss-icon"
+                    style="font-size: 32px"
+                    aria-hidden="true"
+                  ></i>
+                  <span class="about-oss-label">Omi AI</span>
+                </div>
+              </div>
+              <div class="about-oss-card">
+                <div class="about-oss-card-inner about-oss-card-neutral">
+                  <i
+                    data-lucide="sparkles"
+                    class="about-oss-icon"
+                    style="font-size: 32px"
+                    aria-hidden="true"
+                  ></i>
+                  <span class="about-oss-label">Cosmos OS</span>
+                </div>
+              </div>
+              <div class="about-oss-card">
+                <div class="about-oss-card-inner about-oss-card-neutral">
+                  <div
+                    style="
+                      width: 40px;
+                      height: 40px;
+                      border-radius: var(--radius-pill);
+                      background: var(--color-ink);
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                    "
+                  >
+                    <i
+                      data-lucide="zap"
+                      style="color: var(--color-canvas-white)"
+                      aria-hidden="true"
+                    ></i>
+                  </div>
+                  <span class="about-oss-label">Ollama</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. FINAL CTA -->
+      <section class="section section-white" aria-labelledby="cta-heading">
+        <div class="section-inner">
+          <div class="about-cta">
+            <h2 id="cta-heading" class="about-cta-headline">
+              Join the collective.
+            </h2>
+            <div class="about-cta-actions">
+              <a href="docs.html#hardware" class="about-cta-primary">
+                <span>Build Yours</span>
+                <i
+                  data-lucide="chevron-right"
+                  class="w-4 h-4"
+                  aria-hidden="true"
+                ></i>
+              </a>
+              <a href="docs.html" class="about-cta-secondary">
+                <span>Read the docs</span>
+                <i
+                  data-lucide="chevron-right"
+                  class="w-4 h-4"
+                  aria-hidden="true"
+                ></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="footer-mount"></div>
+
+    <script src="js/footer.js" defer></script>
+    <script>
+      window.addEventListener("DOMContentLoaded", function () {
+        if (window.lucide && typeof window.lucide.createIcons === "function") {
+          window.lucide.createIcons();
+        }
+      });
+    </script>
+  </body>
+</html>

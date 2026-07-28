@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta
+      name="description"
+      content="Discover the 4-layer cloud AI pipeline powering Aura: Deepgram STT, Groq LPU, GPT-4o Vision, and Pinecone RAG Memory."
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Aura Intelligence | Frontier Models</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://unpkg.com" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link
+      rel="preload"
+      href="assets/fonts/sf-pro/SF-Pro-Display-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/sf-pro/SF-Pro-Display-Semibold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/sf-pro/SF-Pro-Text-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/sf-pro/SF-Pro-Text-Semibold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/utils.css" />
+    <link rel="stylesheet" href="css/ai.css" />
+    <script src="js/nav.js" defer></script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+  </head>
+  <body class="bg-white font-body">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <nav id="navbar">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-wordmark">Aura</a>
+        <div id="mobileMenu" class="nav-links">
+          <a href="index.html" class="nav-link">Overview</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="manifesto.html" class="nav-link">Manifesto</a>
+          <a href="docs.html" class="nav-link">Docs</a>
+        </div>
+        <div class="nav-actions">
+          <button
+            id="navToggle"
+            class="nav-toggle"
+            aria-expanded="false"
+            aria-controls="mobileMenu"
+            aria-label="Toggle navigation menu"
+          >
+            <i data-lucide="menu" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <main id="main-content">
+      <!-- 1. HERO -->
+      <section class="ai-hero" aria-labelledby="ai-hero-heading">
+        <span class="ai-hero-eyebrow">Foundation</span>
+        <h1 id="ai-hero-heading" class="ai-hero-headline">
+          Built on the frontiers of possible
+        </h1>
+        <p class="ai-hero-lead">
+          Aura leverages a constellation of industry-leading models to provide
+          seamless, human-grade interaction at the speed of thought.
+        </p>
+      </section>
+
+      <!-- 2. BENTO GRID -->
+      <section
+        class="section section-parchment"
+        aria-labelledby="bento-heading"
+      >
+        <div class="section-inner">
+          <header class="section-header section-header-centered">
+            <h2 id="bento-heading" class="section-headline">
+              Intelligence Overview
+            </h2>
+            <p
+              class="section-lead"
+              style="margin-left: auto; margin-right: auto"
+            >
+              Four coordinated layers turn ambient audio, vision, memory, and
+              integrations into one wearable AI system.
+            </p>
+          </header>
+
+          <div class="ai-bento">
+            <!-- Perception -->
+            <article class="ai-bento-card ai-bento-card-col-8" tabindex="0">
+              <div class="ai-bento-card-inner ai-bento-card-row">
+                <div class="ai-bento-card-content ai-bento-card-content-half">
+                  <p class="ai-bento-card-label">Perception</p>
+                  <h3 class="ai-bento-card-title">
+                    Aware of what you hear and see.
+                  </h3>
+                  <p class="ai-bento-card-desc">
+                    Powered by Deepgram Nova-2 for real-time speech-to-text, and
+                    GPT-4o Vision for spatial context. Aura processes your
+                    conversations and visual world simultaneously.
+                  </p>
+                </div>
+                <div
+                  class="ai-bento-card-visual ai-bento-card-visual-light ai-bento-card-content-half"
+                >
+                  <div class="ai-perception-glow" aria-hidden="true"></div>
+                  <div class="ai-perception-orbs">
+                    <div
+                      class="ai-perception-orb ai-perception-orb-mic"
+                      aria-hidden="true"
+                    >
+                      <i data-lucide="mic" class="w-14 h-14"></i>
+                    </div>
+                    <div
+                      class="ai-perception-orb ai-perception-orb-cam"
+                      aria-hidden="true"
+                    >
+                      <i data-lucide="camera" class="w-14 h-14"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Speed -->
+            <article class="ai-bento-card ai-bento-card-col-4" tabindex="0">
+              <div class="ai-bento-card-inner">
+                <div class="ai-bento-card-content-center">
+                  <p class="ai-bento-card-label">Latency</p>
+                  <h3
+                    class="ai-bento-card-title"
+                    style="font-size: var(--type-display-md)"
+                  >
+                    Sub-second thoughts.
+                  </h3>
+                  <p class="ai-bento-card-desc" style="max-width: 280px">
+                    Built on Groq LPU hardware, running language models at the
+                    limit of physics. Sub-500ms end-to-end response time.
+                  </p>
+                </div>
+                <div
+                  style="
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    padding-bottom: 48px;
+                  "
+                >
+                  <span class="ai-bento-stat">0.5s</span>
+                  <span class="ai-bento-stat-label"
+                    >Inference engine speed</span
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- Memory -->
+            <article class="ai-bento-card ai-bento-card-col-4" tabindex="0">
+              <div class="ai-bento-card-inner">
+                <div class="ai-bento-card-content-center">
+                  <p class="ai-bento-card-label">Recall</p>
+                  <h3
+                    class="ai-bento-card-title"
+                    style="font-size: var(--type-display-md)"
+                  >
+                    Never forgets.
+                  </h3>
+                  <p class="ai-bento-card-desc" style="max-width: 280px">
+                    Uses Pinecone's serverless vector database to index
+                    conversation semantic embeddings, ensuring permanent
+                    contextual recall.
+                  </p>
+                </div>
+                <div class="ai-bento-image-wrap">
+                  <img
+                    width="1048"
+                    height="637"
+                    loading="lazy"
+                    src="assets/diagrams/memory-graph.png"
+                    alt="Vector node graph"
+                  />
+                </div>
+              </div>
+            </article>
+
+            <!-- Agency / Integrations -->
+            <article class="ai-bento-card ai-bento-card-col-8" tabindex="0">
+              <div class="ai-bento-card-inner ai-bento-card-row">
+                <div class="ai-bento-card-content ai-bento-card-content-half">
+                  <p class="ai-bento-card-label">Agency</p>
+                  <h3 class="ai-bento-card-title">Connected to your world.</h3>
+                  <p class="ai-bento-card-desc">
+                    FastAPI agentic endpoints powered by LangGraph. Aura
+                    securely connects to your Apple Health stats, manages your
+                    calendar, checks your Gmail, or searches the web.
+                  </p>
+                </div>
+                <div
+                  class="ai-bento-card-visual ai-bento-card-visual-light ai-bento-card-content-half"
+                >
+                  <div class="ai-integration-grid">
+                    <div class="ai-integration-tile">
+                      <div class="ai-integration-tile-inner">
+                        <i
+                          data-lucide="mail"
+                          style="color: var(--color-action-blue)"
+                          aria-hidden="true"
+                        ></i>
+                        <span class="ai-integration-tile-label">Gmail</span>
+                      </div>
+                    </div>
+                    <div class="ai-integration-tile">
+                      <div class="ai-integration-tile-inner">
+                        <i
+                          data-lucide="calendar"
+                          style="color: var(--color-action-blue)"
+                          aria-hidden="true"
+                        ></i>
+                        <span class="ai-integration-tile-label">Calendar</span>
+                      </div>
+                    </div>
+                    <div class="ai-integration-tile">
+                      <div class="ai-integration-tile-inner">
+                        <i
+                          data-lucide="heart"
+                          style="color: #ff3b30"
+                          aria-hidden="true"
+                        ></i>
+                        <span class="ai-integration-tile-label">Health</span>
+                      </div>
+                    </div>
+                    <div class="ai-integration-tile">
+                      <div class="ai-integration-tile-inner">
+                        <i
+                          data-lucide="search"
+                          style="color: #00b894"
+                          aria-hidden="true"
+                        ></i>
+                        <span class="ai-integration-tile-label">Search</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. ARCHITECTURE FLOW -->
+      <section class="section section-white" aria-labelledby="arch-heading">
+        <div class="section-inner">
+          <header class="section-header section-header-centered">
+            <span class="eyebrow eyebrow-action">Unified Architecture</span>
+            <h2 id="arch-heading" class="section-headline">
+              A seamless orchestration of industry giants
+            </h2>
+          </header>
+          <div style="overflow-x: auto; padding-bottom: 32px">
+            <div class="ai-flow">
+              <div class="ai-flow-connector" aria-hidden="true"></div>
+              <div class="ai-flow-node">
+                <i data-lucide="mic" class="w-8 h-8" aria-hidden="true"></i>
+                <span class="ai-flow-node-label">Deepgram</span>
+              </div>
+              <div class="ai-flow-node">
+                <i data-lucide="zap" class="w-8 h-8" aria-hidden="true"></i>
+                <span class="ai-flow-node-label">Groq</span>
+              </div>
+              <div class="ai-flow-node">
+                <i data-lucide="brain" class="w-8 h-8" aria-hidden="true"></i>
+                <span class="ai-flow-node-label">GPT-4o</span>
+              </div>
+              <div class="ai-flow-node">
+                <i
+                  data-lucide="database"
+                  class="w-8 h-8"
+                  aria-hidden="true"
+                ></i>
+                <span class="ai-flow-node-label">Pinecone</span>
+              </div>
+            </div>
+          </div>
+          <p
+            class="section-lead"
+            style="margin: 32px auto 0; text-align: center"
+          >
+            Each component is selected for its best-in-class performance,
+            integrated via a custom API mesh that minimizes overhead and
+            maximizes creative potential.
+          </p>
+        </div>
+      </section>
+
+      <!-- 4. METRICS SPOTLIGHT -->
+      <section
+        class="section section-parchment"
+        aria-labelledby="metrics-heading"
+      >
+        <div class="section-inner">
+          <div class="ai-metrics">
+            <div class="ai-metric">
+              <div>
+                <span class="ai-metric-label">Response Latency</span>
+                <span class="ai-metric-value">0.5s*</span>
+              </div>
+              <p class="ai-metric-desc">
+                Average voice-to-text response loop powered by Groq LPUs,
+                matching the speed of natural human conversation.
+              </p>
+            </div>
+            <div class="ai-metric">
+              <div>
+                <span class="ai-metric-label">Cloud AI Pipeline</span>
+                <span class="ai-metric-value">4-Layer</span>
+              </div>
+              <p class="ai-metric-desc">
+                Perception stack routing: Deepgram Voice input &rarr;
+                Groq/GPT-4o LPU reasoning &rarr; Pinecone Vector RAG &rarr;
+                Speech synthesis.
+              </p>
+            </div>
+            <div class="ai-metric">
+              <div>
+                <span class="ai-metric-label">Hardware cost</span>
+                <span class="ai-metric-value">~$50</span>
+              </div>
+              <p class="ai-metric-desc">
+                Built from standard off-the-shelf components. Zero markup, zero
+                artificial gates, total developer freedom.
+              </p>
+            </div>
+          </div>
+          <div class="ai-footnote">
+            <p style="margin: 0 0 8px">
+              * Latency measurements based on wired client connection routing
+              through Groq server API. Results may vary depending on local
+              cellular connectivity and backend server load.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="footer-mount"></div>
+
+    <script src="js/footer.js" defer></script>
+    <script>
+      window.addEventListener("DOMContentLoaded", function () {
+        if (window.lucide && typeof window.lucide.createIcons === "function") {
+          window.lucide.createIcons();
+        }
+      });
+    </script>
+  </body>
+</html>
