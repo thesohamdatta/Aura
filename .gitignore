@@ -31,3 +31,6 @@ firmware/.pio/
 vendor/omi/backend/_temp/
 .superpowers/
 .agnet/
+
+node_modules/
+.husky/_
