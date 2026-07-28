@@ -690,10 +690,6 @@
 .text-\[var\(--color-ink-tertiary\)\] {
   color: var(--color-ink-tertiary);
 }
-.text-\[var\(--type-body\)\] {
-  color: var(--type-body);
-}
-
 /* ── Variable Backgrounds ─────────────────────────────────────────── */
 .bg-\[var\(--color-action-blue\)\] {
   background-color: var(--color-action-blue);
