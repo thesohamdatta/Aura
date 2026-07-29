@@ -1,0 +1,3 @@
+[submodule "website/1.2"]
+	path = website/1.2
+	url = https://github.com/thesohamdatta/Harness.git
