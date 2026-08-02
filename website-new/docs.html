@@ -1,0 +1,613 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta
+      name="description"
+      content="Technical documentation and build guides for the open-source Aura hardware, firmware, and backend."
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <meta property="og:title" content="Aura Documentation | Build Manual" />
+    <meta
+      property="og:description"
+      content="Technical documentation and build guides for the open-source Aura hardware, firmware, and backend."
+    />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:image"
+      content="https://thesohamdatta.github.io/aura/assets/hero/hero-pendant-dark.webp"
+    />
+    <meta
+      property="og:url"
+      content="https://thesohamdatta.github.io/aura/docs.html"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Aura Documentation | Build Manual" />
+    <meta
+      name="twitter:description"
+      content="Technical documentation and build guides for the open-source Aura hardware, firmware, and backend."
+    />
+    <meta
+      name="twitter:image"
+      content="https://thesohamdatta.github.io/aura/assets/hero/hero-pendant-dark.webp"
+    />
+    <title>Aura Documentation | Build Manual</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link
+      rel="preload"
+      href="assets/fonts/sf-pro/woff2/SF-Pro-Display-Semibold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/docs.css" />
+    <link rel="stylesheet" href="css/utils.css" />
+    <script src="js/nav.js" defer></script>
+  </head>
+  <body class="bg-white font-body">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <nav id="navbar" class="nav-light">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-wordmark">Aura</a>
+        <div id="mobileMenu" class="nav-links">
+          <a href="index.html" class="nav-link">Overview</a>
+          <a href="manifesto.html" class="nav-link">Manifesto</a>
+          <a href="docs.html" class="nav-link active" aria-current="page"
+            >Docs</a
+          >
+        </div>
+        <div class="nav-actions">
+          <button
+            id="navToggle"
+            class="nav-toggle"
+            aria-expanded="false"
+            aria-controls="mobileMenu"
+            aria-label="Toggle navigation menu"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="w-5 h-5"
+              aria-hidden="true"
+            >
+              <line x1="4" x2="20" y1="12" y2="12" />
+              <line x1="4" x2="20" y1="6" y2="6" />
+              <line x1="4" x2="20" y1="18" y2="18" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <div class="docs-shell">
+      <div class="docs-frame">
+        <aside
+          id="docs-sidebar"
+          class="docs-sidebar"
+          aria-label="Documentation sections"
+        >
+          <div class="docs-sidebar-header">
+            <p class="docs-sidebar-title">Documentation</p>
+            <p class="docs-sidebar-subtitle">Aura Build Manual</p>
+          </div>
+          <div class="docs-sidebar-search">
+            <label class="docs-sidebar-search-label" for="docs-search"
+              >Filter sections</label
+            >
+            <input
+              id="docs-search"
+              class="docs-sidebar-search-input"
+              type="search"
+              placeholder="Filter sections…"
+              autocomplete="off"
+            />
+          </div>
+          <nav>
+            <div class="docs-sidebar-section">
+              <span class="docs-sidebar-section-title">Getting Started</span>
+              <a href="#build-path" class="docs-sidebar-link">Build Path</a>
+              <a href="#what-is-aura" class="docs-sidebar-link">What Is Aura</a>
+              <a href="#how-it-works" class="docs-sidebar-link">How It Works</a>
+              <a href="#bom" class="docs-sidebar-link">Bill of Materials</a>
+            </div>
+            <div class="docs-sidebar-section">
+              <span class="docs-sidebar-section-title">Engineering</span>
+              <a href="#hardware" class="docs-sidebar-link"
+                >Hardware Overview</a
+              >
+              <a href="#firmware" class="docs-sidebar-link"
+                >Flashing Firmware</a
+              >
+              <a href="#backend" class="docs-sidebar-link">Backend Setup</a>
+              <a href="#app" class="docs-sidebar-link">Companion App</a>
+            </div>
+            <div class="docs-sidebar-section">
+              <span class="docs-sidebar-section-title">Configuration</span>
+              <a href="#ai-providers" class="docs-sidebar-link">AI Providers</a>
+              <a href="#memory" class="docs-sidebar-link">Memory &amp; RAG</a>
+              <a href="#troubleshooting" class="docs-sidebar-link"
+                >Troubleshooting</a
+              >
+              <a href="#faq" class="docs-sidebar-link">FAQ</a>
+            </div>
+          </nav>
+        </aside>
+
+        <main id="main-content" class="docs-main">
+          <article class="docs-prose">
+            <nav class="docs-crumbs" aria-label="Breadcrumb">
+              <span>Aura</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="w-3.5 h-3.5"
+                aria-hidden="true"
+              >
+                <path d="m9 18 6-6-6-6" />
+              </svg>
+              <span>Documentation</span>
+            </nav>
+
+            <h1 class="docs-title">Aura Build Manual</h1>
+            <p class="docs-subtitle">
+              A structured reference for sourcing the pendant, flashing
+              firmware, running the backend, and pairing the app.
+            </p>
+
+            <section class="docs-section" id="build-path">
+              <h2 class="docs-section-heading">Build Path</h2>
+              <ol>
+                <li>
+                  <a href="#bom">Source the bill of materials</a>
+                  and confirm the pendant case parts.
+                </li>
+                <li>
+                  <a href="#hardware"
+                    >Assemble the XIAO ESP32-S3 Sense hardware</a
+                  >
+                  with camera, microphone, battery, and enclosure.
+                </li>
+                <li>
+                  <a href="#firmware">Flash the firmware</a>
+                  and verify serial, camera, BLE, and Wi-Fi.
+                </li>
+                <li>
+                  <a href="#backend">Deploy the backend</a>
+                  with transcription, model routing, storage, and retrieval
+                  configured.
+                </li>
+                <li>
+                  <a href="#app">Pair the companion app</a>, test capture, and
+                  review privacy controls.
+                </li>
+              </ol>
+            </section>
+
+            <section class="docs-section" id="what-is-aura">
+              <h2 class="docs-section-heading">What Is Aura</h2>
+              <p>
+                Aura is an open-source AI wearable you wear around your neck. It
+                listens, sees, and transcribes so you do not have to pause your
+                day to take notes.
+              </p>
+              <p>
+                Audio and images are captured and routed to a self-hosted or
+                cloud backend. Summaries and transcripts are accessible from
+                your phone.
+              </p>
+              <p>Built on the open Omi ecosystem. Parts cost ~$50.</p>
+            </section>
+
+            <section class="docs-section" id="how-it-works">
+              <h2 class="docs-section-heading">How It Works</h2>
+              <p>The pipeline is straightforward:</p>
+              <ul>
+                <li>The microphone captures audio continuously.</li>
+                <li>The camera captures images at set intervals.</li>
+                <li>Both are sent to the backend over Wi-Fi.</li>
+                <li>The backend transcribes audio via Deepgram or Whisper.</li>
+                <li>Images are analyzed via GPT-4o Vision or Moondream.</li>
+                <li>Everything is summarized and stored.</li>
+                <li>You see it all in the Omi app on your phone.</li>
+              </ul>
+              <p>
+                The ESP32-S3 handles capture and transmission. The backend
+                handles all AI processing. Your phone is the interface.
+              </p>
+            </section>
+
+            <section class="docs-section" id="bom">
+              <h2 class="docs-section-heading">Bill of Materials</h2>
+              <p>Parts list with estimated costs:</p>
+              <div class="overflow-x-auto">
+                <table class="docs-table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Item</th>
+                      <th scope="col">Where to Buy</th>
+                      <th scope="col">Approx Cost</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>XIAO ESP32-S3 Sense</td>
+                      <td>Seeed Studio / Amazon</td>
+                      <td>$15–24</td>
+                    </tr>
+                    <tr>
+                      <td>150mAh LiPo × 6</td>
+                      <td>Amazon</td>
+                      <td>$12</td>
+                    </tr>
+                    <tr>
+                      <td>Wires</td>
+                      <td>Amazon</td>
+                      <td>$5</td>
+                    </tr>
+                    <tr>
+                      <td>3D printed case</td>
+                      <td>Print yourself or order online</td>
+                      <td>$5–10</td>
+                    </tr>
+                    <tr>
+                      <td>USB-C cable</td>
+                      <td>Anywhere</td>
+                      <td>Free</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Total</strong></td>
+                      <td></td>
+                      <td><strong>~$50</strong></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p>Case STL files are in the Aura hardware folder on GitHub.</p>
+              <p class="docs-note">
+                <strong>Safety:</strong> Use only LiPo cells with protection
+                circuits. Never charge unattended. Follow the XIAO ESP32-S3
+                Sense charging current limits (500 mA default).
+              </p>
+            </section>
+
+            <section class="docs-section" id="hardware">
+              <h2 class="docs-section-heading">Hardware Overview</h2>
+              <p>
+                The XIAO ESP32-S3 Sense is the core. Camera and microphone are
+                integrated on the board, so no extra modules are needed.
+              </p>
+              <div class="overflow-x-auto">
+                <table class="docs-table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Component</th>
+                      <th scope="col">Details</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Microcontroller</td>
+                      <td>XIAO ESP32-S3 Sense</td>
+                    </tr>
+                    <tr>
+                      <td>Camera</td>
+                      <td>OV2640 (built into board)</td>
+                    </tr>
+                    <tr>
+                      <td>Microphone</td>
+                      <td>PDM (built into board)</td>
+                    </tr>
+                    <tr>
+                      <td>Battery</td>
+                      <td>6× 150mAh LiPo cells</td>
+                    </tr>
+                    <tr>
+                      <td>Enclosure</td>
+                      <td>Custom 3D printed case</td>
+                    </tr>
+                    <tr>
+                      <td>Connectivity</td>
+                      <td>Wi-Fi 2.4 GHz + Bluetooth LE</td>
+                    </tr>
+                    <tr>
+                      <td>Dimensions</td>
+                      <td>50 × 68 × 18 mm</td>
+                    </tr>
+                    <tr>
+                      <td>Weight</td>
+                      <td>80 g</td>
+                    </tr>
+                    <tr>
+                      <td>Battery Life</td>
+                      <td>4 h active / 45 min charge</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p>
+                Mount the board, route the battery wires, and snap the case
+                shut. The pendant loop is built into the design.
+              </p>
+            </section>
+
+            <section class="docs-section" id="firmware">
+              <h2 class="docs-section-heading">Flashing Firmware</h2>
+              <p>Clone the firmware repo and flash using PlatformIO:</p>
+              <div class="docs-code-block">
+                <pre>
+git clone https://github.com/thesohamdatta/aura.git
+cd aura/firmware
+pio run --target upload</pre>
+                <button
+                  class="docs-copy-btn"
+                  type="button"
+                  aria-label="Copy code block"
+                >
+                  Copy
+                </button>
+              </div>
+              <p>
+                Connect the board via USB-C, select the correct port, and
+                upload. Verify with the serial monitor:
+              </p>
+              <div class="docs-code-block">
+                <pre>pio device monitor --port COM3</pre>
+                <button
+                  class="docs-copy-btn"
+                  type="button"
+                  aria-label="Copy code block"
+                >
+                  Copy
+                </button>
+              </div>
+              <p>
+                You should see the boot log with Wi-Fi, camera, and BLE
+                initialization.
+              </p>
+            </section>
+
+            <section class="docs-section" id="backend">
+              <h2 class="docs-section-heading">Backend Setup</h2>
+              <p>
+                The backend handles transcription, image analysis, and memory
+                storage. Deploy with Docker:
+              </p>
+              <div class="docs-code-block">
+                <pre>
+git clone https://github.com/thesohamdatta/aura.git
+cd aura/backend
+cp .env.example .env
+# Edit .env with your API keys
+docker compose up -d</pre>
+                <button
+                  class="docs-copy-btn"
+                  type="button"
+                  aria-label="Copy code block"
+                >
+                  Copy
+                </button>
+              </div>
+              <p>Required services:</p>
+              <ul>
+                <li>
+                  <strong>Deepgram</strong> or <strong>Whisper</strong> for
+                  transcription
+                </li>
+                <li>
+                  <strong>Groq</strong> or <strong>OpenAI</strong> for LLM
+                  inference
+                </li>
+                <li><strong>Pinecone</strong> for vector memory storage</li>
+              </ul>
+            </section>
+
+            <section class="docs-section" id="app">
+              <h2 class="docs-section-heading">Companion App</h2>
+              <p>
+                The Omi app connects to Aura over Bluetooth LE. It shows your
+                conversation history, memory timeline, and device controls.
+              </p>
+              <p>
+                Download the app, create an account, and pair your device. The
+                setup wizard will guide you through the process.
+              </p>
+              <p>
+                Once paired, you can browse transcripts, search memories, and
+                adjust capture intervals.
+              </p>
+            </section>
+
+            <section class="docs-section" id="ai-providers">
+              <h2 class="docs-section-heading">AI Providers</h2>
+              <p>
+                Aura supports multiple AI backends. Configure your providers in
+                the <code>.env</code> file:
+              </p>
+              <div class="overflow-x-auto">
+                <table class="docs-table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Service</th>
+                      <th scope="col">Purpose</th>
+                      <th scope="col">API Key Required</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Deepgram Nova-2</td>
+                      <td>Speech-to-text</td>
+                      <td>Yes</td>
+                    </tr>
+                    <tr>
+                      <td>Groq LPU</td>
+                      <td>Fast LLM inference</td>
+                      <td>Yes</td>
+                    </tr>
+                    <tr>
+                      <td>GPT-4o Vision</td>
+                      <td>Image analysis</td>
+                      <td>Yes</td>
+                    </tr>
+                    <tr>
+                      <td>Pinecone</td>
+                      <td>Vector memory</td>
+                      <td>Yes</td>
+                    </tr>
+                    <tr>
+                      <td>Whisper (local)</td>
+                      <td>Self-hosted transcription</td>
+                      <td>No</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section class="docs-section" id="memory">
+              <h2 class="docs-section-heading">Memory &amp; RAG</h2>
+              <p>
+                Aura uses retrieval-augmented generation to make conversations
+                searchable:
+              </p>
+              <ul>
+                <li>
+                  Audio is transcribed, chunked, and embedded into Pinecone.
+                </li>
+                <li>
+                  When you ask a question, the query is matched against stored
+                  vectors.
+                </li>
+                <li>
+                  Matched context is fed to the LLM along with your query.
+                </li>
+              </ul>
+              <p>
+                All memory is private and stored on your own Pinecone index.
+              </p>
+            </section>
+
+            <section class="docs-section" id="troubleshooting">
+              <h2 class="docs-section-heading">Troubleshooting</h2>
+
+              <h3>Device not connecting to Wi-Fi</h3>
+              <p>
+                Verify SSID and password in the firmware config. Confirm 2.4 GHz
+                band is enabled; ESP32-S3 does not support 5 GHz.
+              </p>
+
+              <h3>Camera not capturing images</h3>
+              <p>
+                Ensure the camera ribbon cable is fully seated. Try re-flashing
+                the firmware. The OV2640 may need a power cycle.
+              </p>
+
+              <h3>Audio transcription failing</h3>
+              <p>
+                Check your Deepgram API key in <code>.env</code>. Verify network
+                connectivity from the backend to Deepgram's API endpoint.
+              </p>
+
+              <h3>Battery not charging</h3>
+              <p>
+                The ESP32-S3 charges at 500 mA max. Use a quality USB-C cable
+                and power supply. Check voltage with a multimeter.
+              </p>
+            </section>
+
+            <section class="docs-section" id="faq">
+              <h2 class="docs-section-heading">FAQ</h2>
+
+              <h3>How much does it cost to build?</h3>
+              <p>
+                The bill of materials runs roughly $50 for all parts, including
+                the XIAO ESP32-S3 Sense, six LiPo cells, wires, and a printed
+                case.
+              </p>
+
+              <h3>Do I need to buy a case?</h3>
+              <p>
+                The case is 3D printed. Print it yourself from the STL files in
+                the hardware folder, or order the print from an online service.
+              </p>
+
+              <h3>Can I run the backend without cloud services?</h3>
+              <p>
+                Yes. Use the local Whisper model for transcription and any
+                OpenAI-compatible server for inference. Pinecone is optional for
+                vector memory.
+              </p>
+
+              <h3 id="privacy">Is my data private?</h3>
+              <p>
+                You own your data and your device. Run the backend on your own
+                hardware. Audio and images never leave your network, or use the
+                cloud backend you deploy and control.
+              </p>
+
+              <h3>Is the Aura software open source?</h3>
+              <p>
+                Yes. Aura is MIT licensed. Firmware, backend, and app code live
+                in the public aura repository on GitHub.
+              </p>
+            </section>
+          </article>
+        </main>
+      </div>
+    </div>
+
+    <div id="footer-mount"></div>
+
+    <button
+      id="toc-mobile-btn"
+      class="toc-mobile-btn"
+      aria-expanded="false"
+      aria-controls="docs-sidebar"
+      aria-label="Open documentation contents"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="w-4 h-4"
+        aria-hidden="true"
+      >
+        <path d="M3 12h.01" />
+        <path d="M3 18h.01" />
+        <path d="M3 6h.01" />
+        <path d="M8 12h13" />
+        <path d="M8 18h13" />
+        <path d="M8 6h13" />
+      </svg>
+      Contents
+    </button>
+
+    <script src="js/footer.js" defer></script>
+    <script src="js/docs-sidebar.js" defer></script>
+  </body>
+</html>

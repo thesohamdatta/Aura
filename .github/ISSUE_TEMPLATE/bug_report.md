@@ -1,29 +1,53 @@
 ---
 name: Bug report
-about: Create a report to help us improve
-title: ''
+about: Report a reproducible Aura problem
+title: "fix: "
 labels: bug
-assignees: ''
+assignees: ""
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+## Problem
 
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+What is broken?
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+## Reproduction
 
-**Environment (please complete the following information):**
- - App Version: [e.g. 1.0.0]
- - Firmware Version: [e.g. v0.1.0]
- - OS: [e.g. iOS, Android]
- - Hardware: [e.g. Xiao ESP32-S3 Sense]
+1.
+2.
+3.
 
-**Additional context**
-Add any other context about the problem here.
+## Expected Behavior
+
+What should happen instead?
+
+## Observed Behavior
+
+What actually happens? Include the shortest decisive log line or screenshot.
+
+## Area
+
+- [ ] Firmware
+- [ ] Backend
+- [ ] Android app
+- [ ] Hardware
+- [ ] Website 1.2
+- [ ] Agent docs / workflow
+
+## Likely Files
+
+List files or directories if known.
+
+## Environment
+
+- OS:
+- Hardware:
+- Firmware version or commit:
+- Backend/app version or commit:
+
+## Acceptance Criteria
+
+- [ ]
+
+## Verification
+
+How should an agent or maintainer confirm the fix?

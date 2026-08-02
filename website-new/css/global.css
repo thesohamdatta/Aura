@@ -1,0 +1,617 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  margin: 0;
+  min-width: 0;
+  overflow-x: clip;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  overflow-x: clip;
+  font-family: var(--font-text);
+  font-size: var(--body-size);
+  line-height: var(--body-line-height);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+}
+
+:root {
+  /* ── Colors ───────────────────────────────────────────────────── */
+  --color-canvas: #ffffff;
+  --color-canvas-white: #ffffff;
+  --color-canvas-parchment: #f5f5f7;
+  --color-canvas-dark: #272729;
+  --color-canvas-black: #000000;
+  --color-canvas-pearl: #fafafc;
+  --color-surface-chip-translucent: #d2d2d7;
+
+  --color-ink: #1d1d1f;
+  --color-ink-secondary: #333333;
+  --color-ink-tertiary: #5c5c60;
+
+  --color-action-blue: #0066cc;
+  --color-focus-blue: #0071e3;
+  --color-sky-blue: #2997ff;
+
+  --color-ink-muted-53: #6e6e73;
+  --color-divider-soft: #f0f0f0;
+  --color-hairline: #e0e0e0;
+
+  /* ── Fonts ─────────────────────────────────────────────────────── */
+  --font-display:
+    "SF Pro Display", -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+    Arial, sans-serif;
+  --font-text:
+    "SF Pro Text", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial,
+    sans-serif;
+  --font-rounded:
+    "SF Pro Rounded", -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+    Arial, sans-serif;
+  --font-mono: SFMono-Regular, Consolas, Monaco, monospace;
+
+  /* ── Type tokens (DESIGN.md canonical) ─────────────────────────── */
+  --type-display-4xl: 120px;
+  --type-display-3xl: 72px;
+  --type-hero-display-lg: 80px;
+  --type-display-2xl: 64px;
+  --type-hero-display: 56px;
+  --type-display-xl: 48px;
+  --type-display-lg: 40px;
+  --type-display-md: 36px;
+  --type-display-sm: 32px;
+  --type-lead: 28px;
+  --type-lead-airy: 24px;
+  --type-tagline: 21px;
+  --type-body-lg: 19px;
+  --type-body-strong: 17px;
+  --type-body: 17px;
+  --type-body-sm: 15px;
+  --type-caption: 14px;
+  --type-caption-strong: 14px;
+  --type-eyebrow: 13px;
+  --type-button-large: 18px;
+  --type-button-utility: 14px;
+  --type-fine-print: 12px;
+  --type-micro: 11px;
+  --type-micro-legal: 10px;
+  --type-nav-link: 12px;
+
+  /* ── Tracking ──────────────────────────────────────────────────── */
+  --tracking-hero: -0.005em;
+  --tracking-display: -0.003em;
+  --tracking-title: -0.002em;
+  --tracking-body: 0em;
+  --tracking-label: 0em;
+
+  /* ── Body defaults ─────────────────────────────────────────────── */
+  --body-size: 17px;
+  --body-line-height: 1.47;
+  --heading-tracking: -0.02em;
+
+  /* ── Glass material system (Apple HIG hierarchy) ───────────────── */
+  /* Light materials */
+  --material-ultra-thin: blur(40px) saturate(180%);
+  --material-thin: blur(30px) saturate(180%);
+  --material-regular: blur(20px) saturate(180%);
+  --material-thick: blur(12px) saturate(180%);
+  --material-ultra-thick: blur(5px) saturate(180%);
+
+  --bg-ultra-thin: rgba(255, 255, 255, 0.3);
+  --bg-thin: rgba(255, 255, 255, 0.48);
+  --bg-regular: rgba(255, 255, 255, 0.72);
+  --bg-thick: rgba(255, 255, 255, 0.88);
+  --bg-ultra-thick: rgba(255, 255, 255, 0.95);
+
+  /* Dark materials */
+  --bg-dark-ultra-thin: rgba(0, 0, 0, 0.2);
+  --bg-dark-thin: rgba(0, 0, 0, 0.3);
+  --bg-dark-regular: rgba(0, 0, 0, 0.4);
+  --bg-dark-thick: rgba(0, 0, 0, 0.65);
+  --bg-dark-ultra-thick: rgba(0, 0, 0, 0.85);
+
+  --border-glass: rgba(255, 255, 255, 0.2);
+  --border-glass-dark: rgba(255, 255, 255, 0.1);
+
+  /* Legacy glass compat */
+  --blur-glass: blur(20px) saturate(180%);
+  --bg-glass: rgba(255, 255, 255, 0.72);
+  --bg-glass-dark: rgba(0, 0, 0, 0.4);
+
+  --focus-ring: 4px solid rgba(0, 113, 227, 0.6);
+
+  /* ── Radius (DESIGN.md canonical) ──────────────────────────────── */
+  --radius-none: 0px;
+  --radius-xs: 5px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 32px;
+  --radius-pill: 9999px;
+  --radius-full: 9999px;
+
+  /* Legacy radius aliases (referenced by components) */
+  --radius-card: 18px;
+  --radius-utility: 8px;
+
+  /* ── Motion (Apple HIG spring curves) ──────────────────────────── */
+  --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  --duration-fast: 0.15s;
+  --duration-normal: 0.3s;
+  --duration-slow: 0.6s;
+
+  /* Scroll orchestration output (set inline by scroll-orchestrator.js). */
+  --scroll-progress: 0;
+  --section-progress: 0;
+  --stagger-index: 0;
+
+  /* ── Spacing (DESIGN.md canonical) ─────────────────────────────── */
+  --spacing-xxs: 4px;
+  --spacing-xs: 8px;
+  --spacing-sm: 12px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 48px;
+  --spacing-section: 80px;
+
+  /* ── Layout ────────────────────────────────────────────────────── */
+  --content-max: 980px;
+  --hero-max: 1200px;
+  --section-padding: 80px;
+  --section-padding-mobile: 60px;
+  --gutter: 24px;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+.font-text {
+  font-family: var(--font-text);
+}
+.font-body {
+  font-family: var(--font-text);
+}
+.font-mono {
+  font-family: var(--font-mono);
+}
+.font-rounded {
+  font-family: var(--font-rounded);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: var(--heading-tracking);
+  scroll-margin-top: 80px;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+[tabindex="0"]:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: 2px;
+  border-radius: var(--radius-utility);
+}
+
+/* ── Glass material system (Apple HIG hierarchy) ──────────────────────── */
+
+/* Material hierarchy: ultra-thin → ultra-thick */
+.glass-ultra-thin {
+  background: var(--bg-ultra-thin);
+  backdrop-filter: var(--material-ultra-thin);
+  -webkit-backdrop-filter: var(--material-ultra-thin);
+}
+.glass-thin {
+  background: var(--bg-thin);
+  backdrop-filter: var(--material-thin);
+  -webkit-backdrop-filter: var(--material-thin);
+}
+.glass-regular {
+  background: var(--bg-regular);
+  backdrop-filter: var(--material-regular);
+  -webkit-backdrop-filter: var(--material-regular);
+}
+.glass-thick {
+  background: var(--bg-thick);
+  backdrop-filter: var(--material-thick);
+  -webkit-backdrop-filter: var(--material-thick);
+}
+.glass-ultra-thick {
+  background: var(--bg-ultra-thick);
+  backdrop-filter: var(--material-ultra-thick);
+  -webkit-backdrop-filter: var(--material-ultra-thick);
+}
+
+/* Dark material variants */
+.glass-dark-ultra-thin {
+  background: var(--bg-dark-ultra-thin);
+  backdrop-filter: var(--material-ultra-thin);
+  -webkit-backdrop-filter: var(--material-ultra-thin);
+}
+.glass-dark-thin {
+  background: var(--bg-dark-thin);
+  backdrop-filter: var(--material-thin);
+  -webkit-backdrop-filter: var(--material-thin);
+}
+.glass-dark-regular {
+  background: var(--bg-dark-regular);
+  backdrop-filter: var(--material-regular);
+  -webkit-backdrop-filter: var(--material-regular);
+}
+.glass-dark-thick {
+  background: var(--bg-dark-thick);
+  backdrop-filter: var(--material-thick);
+  -webkit-backdrop-filter: var(--material-thick);
+}
+.glass-dark-ultra-thick {
+  background: var(--bg-dark-ultra-thick);
+  backdrop-filter: var(--material-ultra-thick);
+  -webkit-backdrop-filter: var(--material-ultra-thick);
+}
+
+/* Legacy glass compat */
+.glass-nav {
+  backdrop-filter: var(--blur-glass);
+  -webkit-backdrop-filter: var(--blur-glass);
+}
+
+.glass-card {
+  background: var(--bg-glass);
+  backdrop-filter: var(--blur-glass);
+  -webkit-backdrop-filter: var(--blur-glass);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-card);
+}
+
+.glass-card-dark {
+  background: var(--bg-glass-dark);
+  backdrop-filter: var(--blur-glass);
+  -webkit-backdrop-filter: var(--blur-glass);
+  border: 1px solid var(--border-glass-dark);
+  border-radius: var(--radius-card);
+}
+
+.glass-icon {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(15px) saturate(180%);
+  -webkit-backdrop-filter: blur(15px) saturate(180%);
+  border: 1px solid var(--border-glass);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Scroll reveal (Apple-style fade + translate) ─────────────────────── */
+
+[data-anim-trigger~="reveal"],
+[data-anim-stagger-item] {
+  opacity: 0;
+  transform: translateY(12px);
+  transition:
+    opacity var(--duration-normal) var(--ease-out),
+    transform var(--duration-normal) var(--ease-spring);
+  transition-delay: calc(var(--stagger-index, 0) * 60ms);
+}
+
+.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Custom components ────────────────────────────────────────────────── */
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-hairline);
+  border-radius: var(--radius-pill);
+}
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+}
+.timeline-line::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: var(--color-hairline);
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  z-index: 9999;
+  padding: 12px 24px;
+  background: var(--color-action-blue);
+  color: var(--color-canvas-white);
+  font-family: var(--font-text);
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 0 0 var(--radius-utility) 0;
+  transition: top 0.2s ease;
+}
+.skip-link:focus-visible {
+  top: 0;
+  outline: var(--focus-ring);
+  outline-offset: 2px;
+}
+
+/* ── Reduced motion ───────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+  }
+}
+
+/* ─── Site footer (rendered by js/footer.js into #footer-mount) ───────────── */
+
+.site-footer {
+  background-color: var(--color-canvas-parchment);
+  color: var(--color-ink);
+  padding: var(--section-padding) 0 0;
+}
+
+.footer-inner {
+  max-width: var(--hero-max);
+  margin: 0 auto;
+  padding: 0 var(--gutter) 32px;
+}
+
+@media (min-width: 834px) {
+  .footer-inner {
+    padding: 0 32px 40px;
+  }
+}
+
+/* ─── Nav grid ───────────────────────────────────────────────────────────── */
+
+.footer-nav {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px 24px;
+}
+
+@media (min-width: 834px) {
+  .footer-nav {
+    grid-template-columns: 1.4fr repeat(4, 1fr);
+    gap: 32px;
+  }
+}
+
+.footer-col-brand {
+  grid-column: 1 / -1;
+}
+
+@media (min-width: 834px) {
+  .footer-col-brand {
+    grid-column: auto;
+  }
+}
+
+.footer-wordmark {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--type-tagline);
+  letter-spacing: var(--tracking-title);
+  color: var(--color-ink);
+  margin-bottom: 4px;
+}
+
+.footer-tagline {
+  font-family: var(--font-text);
+  font-size: var(--type-fine-print);
+  color: var(--color-ink-muted-53);
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* ─── Column styling ─────────────────────────────────────────────────────── */
+
+.footer-col-title {
+  font-family: var(--font-text);
+  font-weight: 600;
+  font-size: var(--type-caption-strong);
+  color: var(--color-ink-muted-53);
+  margin: 0 0 16px;
+  letter-spacing: normal;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin: 0;
+}
+
+.footer-col ul li a {
+  display: inline-block;
+  font-family: var(--font-text);
+  font-size: var(--type-body-sm);
+  color: var(--color-ink-secondary);
+  text-decoration: none;
+  line-height: 2.4;
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.footer-col ul li a:hover {
+  color: var(--color-ink);
+}
+
+/* ─── Disabled links (placeholder, aria-disabled) ────────────────────────── */
+
+.footer-disabled-link {
+  font-family: var(--font-text);
+  font-size: var(--type-body-sm);
+  color: var(--color-ink-tertiary);
+  text-decoration: none;
+  line-height: 2.4;
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ─── Secondary / metadata rows ──────────────────────────────────────────── */
+
+.footer-secondary {
+  font-family: var(--font-text);
+  font-size: var(--type-fine-print);
+  line-height: 1.6;
+  color: var(--color-ink-muted-53);
+  padding-top: 24px;
+  margin-top: 24px;
+  border-top: 1px solid var(--color-hairline);
+}
+
+.footer-secondary a {
+  color: var(--color-action-blue);
+  text-decoration: none;
+  transition: color var(--duration-normal) var(--ease-out);
+}
+
+.footer-secondary a:hover {
+  color: var(--color-focus-blue);
+  text-decoration: underline;
+}
+
+.footer-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding-top: 24px;
+  text-align: center;
+  font-family: var(--font-text);
+  font-size: var(--type-fine-print);
+  color: var(--color-ink-muted-53);
+}
+
+@media (min-width: 834px) {
+  .footer-meta {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+.footer-copy {
+  margin: 0;
+  color: var(--color-ink-muted-53);
+}
+
+.footer-meta-links {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-meta-links a {
+  font-size: var(--type-fine-print);
+  line-height: inherit;
+  color: var(--color-ink-muted-53);
+  text-decoration: none;
+  transition: color var(--duration-normal) var(--ease-out);
+}
+
+.footer-meta-links a:hover {
+  color: var(--color-ink);
+}
+
+.footer-locale {
+  font-family: var(--font-text);
+}
+
+/* Legacy footer classes (kept so any HTML referencing them does not break). */
+.footer-link-item {
+  font-family: var(--font-text);
+  font-size: var(--type-fine-print);
+  font-weight: 400;
+  color: var(--color-ink-tertiary);
+  line-height: 2.2;
+  transition: color var(--duration-normal) var(--ease-out);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.footer-link-item:hover {
+  color: var(--color-ink);
+}
+
+.footer-legal-link {
+  font-family: var(--font-text);
+  font-size: var(--type-fine-print);
+  color: var(--color-ink-muted-53);
+  transition: color var(--duration-normal) var(--ease-out);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.footer-legal-link:hover {
+  color: var(--color-ink);
+}
+
+.footer-legal-disabled {
+  font-family: var(--font-text);
+  font-size: var(--type-fine-print);
+  color: var(--color-ink-muted-53);
+  text-decoration: none;
+  display: inline-block;
+  opacity: 0.4;
+  pointer-events: none;
+  cursor: not-allowed;
+}
