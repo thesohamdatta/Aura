@@ -1,0 +1,171 @@
+.btn-primary {
+  background-color: var(--color-action-blue);
+  border-radius: var(--radius-pill);
+  color: var(--color-canvas-white);
+  font-size: var(--type-body);
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    background-color var(--duration-normal) var(--ease-out),
+    transform var(--duration-fast) var(--ease-spring);
+}
+.btn-primary:hover {
+  background-color: var(--color-focus-blue);
+}
+.btn-primary:active {
+  transform: scale(0.95);
+}
+
+/* Secondary button — transparent blue pill */
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  background: transparent;
+  color: var(--color-action-blue);
+  border: 1px solid var(--color-action-blue);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-text);
+  font-size: var(--type-body);
+  font-weight: 500;
+  text-decoration: none;
+  transition:
+    background-color var(--duration-normal) var(--ease-out),
+    color var(--duration-normal) var(--ease-out),
+    transform var(--duration-fast) var(--ease-spring);
+}
+.btn-secondary:hover {
+  background: var(--color-action-blue);
+  color: var(--color-canvas-white);
+}
+.btn-secondary:active {
+  transform: scale(0.95);
+}
+
+.section-white {
+  background-color: var(--color-canvas-white);
+}
+
+.section-parchment {
+  background-color: var(--color-canvas-parchment);
+}
+
+.section-dark {
+  background-color: var(--color-canvas-dark);
+  color: var(--color-canvas-white);
+}
+
+.font-numeric {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Manifesto — editorial page using DESIGN.md tokens only ── */
+
+.manifesto-header {
+  padding-top: calc(var(--section-padding) * 2);
+  padding-bottom: var(--section-padding);
+  background-color: var(--color-canvas-white);
+}
+
+.manifesto-container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+}
+
+.manifesto-eyebrow {
+  display: block;
+  font-family: var(--font-text);
+  font-size: var(--type-eyebrow);
+  font-weight: 600;
+  letter-spacing: var(--tracking-label);
+  color: var(--color-action-blue);
+  margin-bottom: var(--spacing-md);
+}
+
+.manifesto-title {
+  font-family: var(--font-display);
+  font-size: var(--type-display-3xl);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: var(--tracking-display);
+  color: var(--color-ink);
+  margin-bottom: var(--spacing-lg);
+}
+
+.manifesto-section {
+  padding: 0 0 var(--spacing-xxl);
+}
+
+.manifesto-prose {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.manifesto-prose p {
+  font-family: var(--font-text);
+  font-size: var(--type-body-lg);
+  font-weight: 400;
+  line-height: 1.47;
+  letter-spacing: var(--tracking-body);
+  color: var(--color-ink-secondary);
+  margin: 0;
+}
+
+.manifesto-prose .manifesto-emphasis {
+  color: var(--color-ink);
+  font-weight: 600;
+  font-size: var(--type-body-strong);
+  line-height: 1.24;
+  margin-top: var(--spacing-xl);
+}
+
+/* Closing */
+.manifesto-closing {
+  padding-top: var(--spacing-xxl);
+  padding-bottom: calc(var(--section-padding) * 2);
+}
+
+.manifesto-closing-text {
+  font-family: var(--font-text);
+  font-size: var(--type-body);
+  font-weight: 400;
+  line-height: 1.47;
+  letter-spacing: var(--tracking-body);
+  color: var(--color-ink-muted-53);
+  margin: 0 0 var(--spacing-sm);
+}
+
+.manifesto-closing-link {
+  margin: 0;
+}
+
+.manifesto-cta {
+  color: var(--color-action-blue);
+  font-family: var(--font-text);
+  font-size: var(--type-body);
+  font-weight: 400;
+  line-height: 1.47;
+  letter-spacing: var(--tracking-body);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-action-blue);
+  padding-bottom: 1px;
+  transition: opacity var(--duration-fast) var(--ease-out);
+}
+
+.manifesto-cta:hover {
+  opacity: 0.8;
+}
+
+@media (min-width: 834px) {
+  .manifesto-header {
+    padding-top: calc(var(--section-padding) * 2);
+    padding-bottom: var(--section-padding);
+  }
+  .manifesto-title {
+    font-size: var(--type-display-3xl);
+  }
+}

@@ -1,19 +1,49 @@
 ---
-name: Feature request
-about: Suggest an idea for this project
-title: ''
+name: Feature or task
+about: Propose scoped work for a maintainer or coding agent
+title: "feat: "
 labels: enhancement
-assignees: ''
+assignees: ""
 ---
 
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+## Goal
 
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
+What should be true when this is done?
 
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
+## User
 
-**Additional context**
-Add any other context or screenshots about the feature request here.
+Who benefits?
+
+- [ ] Maintainer
+- [ ] Builder / developer
+- [ ] End user
+- [ ] Future contributor
+
+## Context
+
+What should the agent read first?
+
+- [ ] `AGENTS.md`
+- [ ] `REPO_MAP.md`
+- [ ] Relevant `CONTEXT.md`
+- [ ] Area README or design doc:
+
+## Proposed Scope
+
+Files or areas likely involved.
+
+## Non-goals
+
+What should not change?
+
+## Acceptance Criteria
+
+- [ ]
+
+## Verification
+
+Command, visual check, or manual flow.
+
+## Decision Needed
+
+What maintainer decision is needed before implementation, if any?

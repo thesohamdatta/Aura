@@ -1,21 +1,37 @@
-## Description
-Describe your changes in detail.
+## Problem
 
-## Related Issues
-Fixes #[issue_number]
+What user, developer, or maintainer problem does this solve?
 
-## Type of Change
-- [ ] Bug fix (non-breaking change which fixes an issue)
-- [ ] New feature (non-breaking change which adds functionality)
-- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
-- [ ] Documentation update
+## Change
 
-## Checklist
-- [ ] My code follows the style guidelines of this project
-- [ ] I have performed a self-review of my own code
-- [ ] I have commented my code, particularly in hard-to-understand areas
-- [ ] I have made corresponding changes to the documentation
-- [ ] My changes generate no new warnings
-- [ ] I have added tests that prove my fix is effective or that my feature works
-- [ ] New and existing unit tests pass locally with my changes
-- [ ] Any dependent changes have been merged and published in downstream modules
+What changed, and where?
+
+## Scope
+
+- [ ] Firmware
+- [ ] Backend
+- [ ] Android app
+- [ ] Hardware
+- [ ] Website 1.2
+- [ ] Agent docs / workflow
+
+## Verification
+
+List commands run or manual checks performed.
+
+```text
+
+```
+
+## Agentic Checklist
+
+- [ ] I read the relevant `AGENTS.md` and `REPO_MAP.md`.
+- [ ] I confirmed the git root before staging or committing.
+- [ ] I kept the change scoped to the stated problem.
+- [ ] I updated durable docs if project knowledge changed.
+- [ ] I recorded an ADR if this is hard to reverse and non-obvious.
+- [ ] I noted test gaps or manual verification limits.
+
+## Screenshots
+
+Required for website visual changes.

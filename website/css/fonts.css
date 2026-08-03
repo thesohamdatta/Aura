@@ -1,0 +1,101 @@
+/* SF Pro Display — subsetted WOFF2, Latin + punctuation + arrows */
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("../assets/fonts/sf-pro/woff2/SF-Pro-Display-Regular.woff2")
+    format("woff2");
+  font-weight: 100 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("../assets/fonts/sf-pro/woff2/SF-Pro-Display-Regular.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("../assets/fonts/sf-pro/woff2/SF-Pro-Display-Medium.woff2")
+    format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("../assets/fonts/sf-pro/woff2/SF-Pro-Display-Semibold.woff2")
+    format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("../assets/fonts/sf-pro/woff2/SF-Pro-Display-Bold.woff2")
+    format("woff2");
+  font-weight: 700 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* SF Pro Text — subsetted WOFF2 */
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("../assets/fonts/sf-pro/woff2/SF-Pro-Text-Regular.woff2")
+    format("woff2");
+  font-weight: 300 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("../assets/fonts/sf-pro/woff2/SF-Pro-Text-Medium.woff2")
+    format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("../assets/fonts/sf-pro/woff2/SF-Pro-Text-Semibold.woff2")
+    format("woff2");
+  font-weight: 600 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* SF Pro Rounded — subsetted WOFF2 */
+@font-face {
+  font-family: "SF Pro Rounded";
+  src: url("../assets/fonts/sf-pro/woff2/SF-Pro-Rounded-Regular.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SF Pro Rounded";
+  src: url("../assets/fonts/sf-pro/woff2/SF-Pro-Rounded-Medium.woff2")
+    format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SF Pro Rounded";
+  src: url("../assets/fonts/sf-pro/woff2/SF-Pro-Rounded-Semibold.woff2")
+    format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SF Pro Rounded";
+  src: url("../assets/fonts/sf-pro/woff2/SF-Pro-Rounded-Bold.woff2")
+    format("woff2");
+  font-weight: 700 800;
+  font-style: normal;
+  font-display: swap;
+}

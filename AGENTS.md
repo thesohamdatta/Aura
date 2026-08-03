@@ -1,120 +1,93 @@
-# Aura: Agent Configuration
+# Aura Agent Guide
 
-## Project overview
+## Project
 
-Aura is an open-source, screenless, voice-first AI pendant built on the XIAO ESP32-S3 Sense. Voice-first, no screen, always ambient. Built by a 4-person undergrad team in Pune for around $50 USD.
+Aura is an open-source, screenless, voice-first AI pendant. It combines:
 
-## The Website
+- `firmware/`: XIAO ESP32-S3 Sense firmware.
+- `backend/`: FastAPI AI backend.
+- `app/`: Android companion app.
+- `hardware/`: printable case and hardware notes.
+- `website/1.2/website/`: production website.
 
-A 5-page vanilla HTML/CSS/JS marketing site. No build step, no bundler, no framework.
+The current maintainer is solo. Optimize workflows for one strong maintainer assisted by coding agents, while keeping the repo understandable for future contributors.
 
-Note: a parallel copy of the website HTML lives under `docs/index.html`, `docs/ai.html`, `docs/about.html`, `docs/docs.html`, and `docs/manifesto.html`. This duplication predates the agent configuration. Treat `website/` as the source of truth and `docs/` as legacy until a separate cleanup issue consolidates them.
+## Source Of Truth
 
-### Pages
+Read [REPO_MAP.md](REPO_MAP.md) before structural work.
 
-| Page | File | Purpose |
-|---|---|---|
-| Home | `website/index.html` | Landing page. Hero, capabilities, how it works, thesis, research, open source, team, FAQ. |
-| About | `website/about.html` | Team, mission, values, timeline. |
-| AI | `website/ai.html` | 4-layer pipeline architecture and provider comparison. |
-| Docs | `website/docs.html` | Technical documentation with sidebar navigation. |
-| Manifesto | `website/manifesto.html` | "The Third Device Hypothesis" essay. |
+The production website is `website/1.2/website/`. Do not restore the old 5-page website. The current website contract is:
 
-### File structure
+- `index.html`
+- `manifesto.html`
+- `docs.html`
+- `404.html`
 
-```
-website/
-├── index.html
-├── about.html
-├── ai.html
-├── docs.html
-├── manifesto.html
-├── css/
-│   ├── global.css          — Design tokens, resets, accessibility
-│   ├── fonts.css           — Font declarations
-│   ├── nav.css             — Navigation, mobile menu
-│   ├── style.css           — Component patterns (to be refactored)
-│   └── docs.css            — Docs sidebar overrides
-├── js/
-│   ├── reveal.js           — Scroll-reveal animations
-│   ├── liquid-glass.js     — SVG refraction filter + nav behavior
-│   └── tailwind-config.js  — Tailwind theme configuration
-├── assets/
-│   ├── hero/               — Hero images
-│   ├── product/            — Product photos
-│   ├── team/               — Team photos
-│   └── fonts/              — Font files
-└── favicon.svg
-```
+The old `docs/` website copy and `website/1.1/` are legacy/deleted state. Do not treat them as canonical.
 
-### Design tokens
+## Git Boundaries
 
-Defined in `website/css/global.css`:
+This workspace contains a nested git repo:
 
-| Token | Value | Usage |
-|---|---|---|
-| `--color-canvas-white` | `#ffffff` | Primary canvas |
-| `--color-canvas-parchment` | `#f5f5f7` | Alternating canvas |
-| `--color-canvas-dark` | `#272729` | Dark sections |
-| `--color-ink` | `#1d1d1f` | Text on light |
-| `--color-ink-secondary` | `#6e6e73` | Secondary text |
-| `--color-ink-tertiary` | `#86868b` | Tertiary text |
-| `--color-action-blue` | `#0066cc` | Interactive elements |
-| `--color-focus-blue` | `#0071e3` | Keyboard focus |
-| `--color-sky-blue` | `#2997ff` | Links on dark |
+- Parent repo: `D:\PROJECTS\AURA`
+- Website repo: `D:\PROJECTS\AURA\website\1.2`
 
-### Icon system
+Before commits, run `git rev-parse --show-toplevel`. Website work belongs in `website/1.2`. Parent work belongs in `D:\PROJECTS\AURA`.
 
-Lucide vanilla JS is the single icon system.
+Never run broad staging from the parent repo unless the goal is explicitly parent-level repo management.
 
-- CDN: `https://unpkg.com/lucide@latest`
-- Usage: `<i data-lucide="icon-name"></i>`
-- Initialize: `lucide.createIcons()`
+## Agentic SDLC
 
-### CSS architecture
+Use [docs/agentic-sdlc.md](docs/agentic-sdlc.md) for the workflow.
 
-- `global.css` holds design tokens, resets, and accessibility utilities.
-- `fonts.css` holds font-face declarations.
-- `nav.css` holds navigation component styles.
-- `style.css` holds all other component patterns (being refactored).
-- `docs.css` holds docs-specific overrides.
+Default loop:
 
-### Deployment
+`context -> grill -> plan -> issue/spec -> implement -> verify -> review -> document -> ship`
 
-GitHub Pages via `.github/workflows/deploy-website.yml`. All paths must be relative.
+Rules:
 
-## Agent skills
+- Context first. Read repo map, relevant README, `CONTEXT.md`, and local `AGENTS.md`.
+- Ask decisions, not facts. Look up facts in the repo.
+- Keep `AGENTS.md` short. Put longer workflows in docs or skills.
+- Use skills for repeatable procedures.
+- Use hooks or CI for deterministic guardrails when available.
+- Record hard-to-reverse decisions as ADRs in `docs/adr/`.
+- Update context docs when a durable project term or boundary changes.
 
-### Issue tracker
+## Website Design Contract
 
-Issues live in GitHub Issues on `thesohamdatta/aura`. See `docs/agents/issue-tracker.md`.
+For website edits, read these in order:
 
-### Triage labels
+1. `website/1.2/BRAND_BRIEF.md`
+2. `website/1.2/DESIGN.md`
+3. `website/1.2/PRODUCT.md`
+4. `website/1.2/CONTEXT.md`
 
-Five canonical labels, default names. See `docs/agents/triage-labels.md`.
+Website principles:
 
-### Domain docs
+- Apple-like product page discipline.
+- Photography first.
+- One accent color: Action Blue.
+- No hype, no fake claims, no exclamation marks.
+- CSS literals belong in design tokens, not component styles.
+- Keep pages static HTML/CSS/JS. No framework or build step.
 
-Single-context layout: `CONTEXT.md` at the repo root plus `docs/adr/`. See `docs/agents/domain.md`.
+## Local Skills
 
-### Local Skills
+Use these project skills when relevant:
 
-- `apple-aura-frontend`. Enforces strict Apple-style product-page aesthetics. Located at `.agents/skills/apple-aura-frontend/`.
-- `apple-design-analysis`. Governs color values, typography tracking and scaling, shape hierarchies, shadow and blur depth limits. Located at `.agents/skills/apple-design-analysis/`.
-- `minimalist-ui`. Minimalist UI principles: restraint, whitespace, calm aesthetics. Located at `website/.agents/skills/minimalist-ui/`.
+- `.agents/skills/aura-agentic-sdlc/`: repo workflow and AI SDLC.
+- `.agents/skills/apple-aura-frontend/`: Aura website design.
+- `.agents/skills/apple-design-analysis/`: Apple-style visual rules.
+- `.agents/skills/karpathy-guidelines/`: small, careful engineering changes.
 
-## Key domain terms
+## Verification
 
-| Term | Meaning |
-|---|---|
-| Pendant | The physical Aura wearable hardware device. |
-| AI Pipeline | The 4-layer cloud AI: Deepgram, Groq or GPT-4o, Pinecone. |
-| BOM | Bill of Materials. The hardware component list and costs. |
-| Overline | Small monospace label above section headings. |
-| Section-black | Full-bleed `background: #000` section. |
+Prefer the smallest verification that matches the change:
 
-## Workflow
+- Website static check: inspect HTML/CSS and run a local browser/server when visual changes matter.
+- Harness check in `website/1.2`: `python -c "from google.antigravity import Agent"` if changing harness code.
+- GitHub Pages deploy path check: `.github/workflows/deploy-website.yml` uploads `website/1.2/website`.
 
-`brainstorm → grill → prd → to-issues → tdd → ship`
-
-All issues are tagged `website` to distinguish them from firmware and backend issues.
+If no automated test exists for a touched area, say that in the final response.
+this file is source of the truth for the entire aura project make sure this is well maintained . without context burn

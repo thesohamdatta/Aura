@@ -1,0 +1,106 @@
+﻿| FILE | LINE | ELEMENT / CONTEXT | CURRENT VALUE | WHAT IT AFFECTS |
+| --- | --- | --- | --- | --- |
+| index.html | 47 | Tailwind class | uppercase (in class list: "font-body text-overline text-white/60 uppercase tracking-[0.2em] block mb-2") | Casing classes on element |
+| index.html | 288 | Tailwind class | uppercase (in class list: "font-body text-overline text-white/60 uppercase tracking-[0.2em] mb-4 block") | Casing classes on element |
+| index.html | 304 | Hardcoded HTML Text | "MEMS" in "Advanced digital MEMS microphones focus on the voice in front of you, filtering out background noise for crystal clear semantic extraction." | Visual uppercase text |
+| index.html | 327 | Tailwind class | uppercase (in class list: "font-body text-overline text-white/80 uppercase mb-4 block") | Casing classes on element |
+| index.html | 339 | Hardcoded HTML Text | "GPT" in "GPT-4o Vision" | Visual uppercase text |
+| index.html | 362 | Hardcoded HTML Text | "MEMS" in "MEMS Microphones" | Visual uppercase text |
+| index.html | 381 | Hardcoded HTML Text | "USB" in "USB-C" | Visual uppercase text |
+| index.html | 439 | Hardcoded HTML Text | "USB" in "USB-C" | Visual uppercase text |
+| index.html | 449 | Tailwind class | uppercase (in class list: "font-body text-overline text-white/40 uppercase mb-8 block") | Casing classes on element |
+| index.html | 449 | Hardcoded HTML Text | "THE" in "THE THESIS" | Visual uppercase text |
+| index.html | 449 | Hardcoded HTML Text | "THESIS" in "THE THESIS" | Visual uppercase text |
+| index.html | 802 | Tailwind class | uppercase (in class list: "font-body text-[11px] font-semibold tracking-[0.08em] uppercase text-[#1d1d1f]/60 mb-4 block") | Casing classes on element |
+| index.html | 812 | Tailwind class | uppercase (in class list: "font-body text-[11px] font-semibold tracking-[0.08em] uppercase text-[#1d1d1f]/60 mb-4 block") | Casing classes on element |
+| index.html | 822 | Tailwind class | uppercase (in class list: "font-body text-[11px] font-semibold tracking-[0.08em] uppercase text-[#1d1d1f]/60 mb-4 block") | Casing classes on element |
+| index.html | 832 | Tailwind class | uppercase (in class list: "font-body text-[11px] font-semibold tracking-[0.08em] uppercase text-[#1d1d1f]/60 mb-4 block") | Casing classes on element |
+| about.html | 58 | Tailwind class | uppercase (in class list: "font-display text-caption font-semibold uppercase tracking-wider text-ink-secondary mb-6") | Casing classes on element |
+| about.html | 64 | Tailwind class | uppercase (in class list: "font-display text-caption font-semibold uppercase tracking-wider text-ink-secondary mb-6") | Casing classes on element |
+| about.html | 158 | Tailwind class | uppercase (in class list: "font-body text-caption text-accent-blue font-semibold mb-2 uppercase tracking-wider") | Casing classes on element |
+| about.html | 171 | Tailwind class | uppercase (in class list: "font-body text-caption text-accent-blue font-semibold mb-2 uppercase tracking-wider") | Casing classes on element |
+| about.html | 180 | Tailwind class | uppercase (in class list: "font-body text-caption text-accent-blue font-semibold mb-2 uppercase tracking-wider") | Casing classes on element |
+| about.html | 193 | Tailwind class | uppercase (in class list: "font-body text-caption text-accent-blue font-semibold mb-2 uppercase tracking-wider") | Casing classes on element |
+| about.html | 202 | Tailwind class | uppercase (in class list: "font-body text-caption text-accent-blue font-semibold mb-2 uppercase tracking-wider") | Casing classes on element |
+| about.html | 215 | Tailwind class | uppercase (in class list: "font-body text-caption text-accent-blue font-semibold mb-2 uppercase tracking-wider") | Casing classes on element |
+| about.html | 224 | Tailwind class | uppercase (in class list: "font-body text-caption text-accent-blue font-semibold mb-2 uppercase tracking-wider") | Casing classes on element |
+| about.html | 237 | Tailwind class | uppercase (in class list: "font-body text-caption text-accent-blue font-semibold mb-2 uppercase tracking-wider") | Casing classes on element |
+| about.html | 316 | Tailwind class | uppercase (in class list: "font-body text-[11px] font-semibold tracking-[0.08em] uppercase text-[#1d1d1f]/60 mb-4 block") | Casing classes on element |
+| about.html | 326 | Tailwind class | uppercase (in class list: "font-body text-[11px] font-semibold tracking-[0.08em] uppercase text-[#1d1d1f]/60 mb-4 block") | Casing classes on element |
+| about.html | 336 | Tailwind class | uppercase (in class list: "font-body text-[11px] font-semibold tracking-[0.08em] uppercase text-[#1d1d1f]/60 mb-4 block") | Casing classes on element |
+| about.html | 346 | Tailwind class | uppercase (in class list: "font-body text-[11px] font-semibold tracking-[0.08em] uppercase text-[#1d1d1f]/60 mb-4 block") | Casing classes on element |
+| ai.html | 57 | Tailwind class | uppercase (in class list: "font-body text-overline text-accent-blue uppercase mb-4 block font-semibold") | Casing classes on element |
+| ai.html | 71 | Hardcoded HTML Text | "GPT" in "Powered by Deepgram Nova-2 for real-time speech-to-text, and GPT-4o Vision for spatial context. Aura processes your conversations and visual world simultaneously." | Visual uppercase text |
+| ai.html | 112 | Tailwind class | uppercase (in class list: "font-body text-[13px] font-semibold text-[#86868b] uppercase tracking-widest") | Casing classes on element |
+| ai.html | 142 | Tailwind class | uppercase (in class list: "font-body text-[11px] font-medium text-[#86868b] uppercase tracking-wider") | Casing classes on element |
+| ai.html | 147 | Tailwind class | uppercase (in class list: "font-body text-[11px] font-medium text-[#86868b] uppercase tracking-wider") | Casing classes on element |
+| ai.html | 152 | Tailwind class | uppercase (in class list: "font-body text-[11px] font-medium text-[#86868b] uppercase tracking-wider") | Casing classes on element |
+| ai.html | 157 | Tailwind class | uppercase (in class list: "font-body text-[11px] font-medium text-[#86868b] uppercase tracking-wider") | Casing classes on element |
+| ai.html | 168 | Tailwind class | uppercase (in class list: "font-body text-overline text-accent-blue uppercase mb-4 block") | Casing classes on element |
+| ai.html | 185 | Hardcoded HTML Text | "GPT" in "GPT-4o" | Visual uppercase text |
+| ai.html | 207 | Tailwind class | uppercase (in class list: "font-body text-fine-print font-bold text-ink-secondary uppercase tracking-widest block mb-2") | Casing classes on element |
+| ai.html | 215 | Tailwind class | uppercase (in class list: "font-body text-fine-print font-bold text-ink-secondary uppercase tracking-widest block mb-2") | Casing classes on element |
+| ai.html | 218 | Hardcoded HTML Text | "GPT" in "Perception stack routing: Deepgram Voice input ΓåÆ Groq/GPT-4o LPU reasoning ΓåÆ Pinecone Vector RAG ΓåÆ Speech synthesis." | Visual uppercase text |
+| ai.html | 223 | Tailwind class | uppercase (in class list: "font-body text-fine-print font-bold text-ink-secondary uppercase tracking-widest block mb-2") | Casing classes on element |
+| ai.html | 261 | Tailwind class | uppercase (in class list: "font-body text-[11px] font-semibold tracking-[0.08em] uppercase text-[#1d1d1f]/60 mb-4 block") | Casing classes on element |
+| ai.html | 271 | Tailwind class | uppercase (in class list: "font-body text-[11px] font-semibold tracking-[0.08em] uppercase text-[#1d1d1f]/60 mb-4 block") | Casing classes on element |
+| ai.html | 281 | Tailwind class | uppercase (in class list: "font-body text-[11px] font-semibold tracking-[0.08em] uppercase text-[#1d1d1f]/60 mb-4 block") | Casing classes on element |
+| ai.html | 291 | Tailwind class | uppercase (in class list: "font-body text-[11px] font-semibold tracking-[0.08em] uppercase text-[#1d1d1f]/60 mb-4 block") | Casing classes on element |
+| manifesto.html | 46 | Tailwind class | uppercase (in class list: "font-body text-overline text-accent-blue uppercase tracking-[0.2em] block mb-2 font-semibold") | Casing classes on element |
+| manifesto.html | 147 | Tailwind class | uppercase (in class list: "font-body text-[11px] font-semibold tracking-[0.08em] uppercase text-[#1d1d1f]/60 mb-4 block") | Casing classes on element |
+| manifesto.html | 157 | Tailwind class | uppercase (in class list: "font-body text-[11px] font-semibold tracking-[0.08em] uppercase text-[#1d1d1f]/60 mb-4 block") | Casing classes on element |
+| manifesto.html | 167 | Tailwind class | uppercase (in class list: "font-body text-[11px] font-semibold tracking-[0.08em] uppercase text-[#1d1d1f]/60 mb-4 block") | Casing classes on element |
+| manifesto.html | 177 | Tailwind class | uppercase (in class list: "font-body text-[11px] font-semibold tracking-[0.08em] uppercase text-[#1d1d1f]/60 mb-4 block") | Casing classes on element |
+| docs.html | 43 | Tailwind class | uppercase (in class list: "font-body text-fine-print text-ink-tertiary uppercase tracking-wider font-semibold") | Casing classes on element |
+| docs.html | 47 | Tailwind class | uppercase (in class list: "font-body text-micro-legal font-bold text-ink-tertiary uppercase tracking-widest mb-2 px-3") | Casing classes on element |
+| docs.html | 62 | Hardcoded HTML Text | "BOM" in "BOM Case" | Visual uppercase text |
+| docs.html | 66 | Tailwind class | uppercase (in class list: "font-body text-micro-legal font-bold text-ink-tertiary uppercase tracking-widest mb-2 px-3") | Casing classes on element |
+| docs.html | 85 | Tailwind class | uppercase (in class list: "font-body text-micro-legal font-bold text-ink-tertiary uppercase tracking-widest mb-2 px-3") | Casing classes on element |
+| docs.html | 104 | Hardcoded HTML Text | "OTA" in "OTA Updates" | Visual uppercase text |
+| docs.html | 108 | Tailwind class | uppercase (in class list: "font-body text-micro-legal font-bold text-ink-tertiary uppercase tracking-widest mb-2 px-3") | Casing classes on element |
+| docs.html | 115 | Tailwind class | uppercase (in class list: "font-body text-micro-legal font-bold text-ink-tertiary uppercase tracking-widest mb-2 px-3") | Casing classes on element |
+| docs.html | 167 | Hardcoded HTML Text | "GPT" in "Images are understood via GPT-4o Vision or Moondream." | Visual uppercase text |
+| docs.html | 213 | Hardcoded HTML Text | "USB" in "USB-C cable" | Visual uppercase text |
+| docs.html | 232 | Hardcoded HTML Text | "BOM" in "BOM Case Assembly" | Visual uppercase text |
+| docs.html | 240 | Hardcoded HTML Text | "PLA" in "Material: PLA or PETG" | Visual uppercase text |
+| docs.html | 240 | Hardcoded HTML Text | "PETG" in "Material: PLA or PETG" | Visual uppercase text |
+| docs.html | 275 | Hardcoded HTML Text | "PDM" in "PDM ΓÇö built into ESP32-S3 Sense" | Visual uppercase text |
+| docs.html | 291 | Hardcoded HTML Text | "USB" in "USB-C" | Visual uppercase text |
+| docs.html | 312 | Hardcoded HTML Text | "USB" in "Connect your XIAO ESP32-S3 Sense to your computer using a USB-C data cable." | Visual uppercase text |
+| docs.html | 313 | Hardcoded HTML Text | "BOOT" in "BOOT" | Visual uppercase text |
+| docs.html | 313 | Hardcoded HTML Text | "RESET" in "RESET" | Visual uppercase text |
+| docs.html | 313 | Hardcoded HTML Text | "BOOT" in "BOOT" | Visual uppercase text |
+| docs.html | 314 | Hardcoded HTML Text | "USB" in "A new USB disk drive named" | Visual uppercase text |
+| docs.html | 336 | Hardcoded HTML Text | "IDE" in "Method 3: Arduino IDE" | Visual uppercase text |
+| docs.html | 342 | Hardcoded HTML Text | "IDE" in "Arduino IDE 2.x" | Visual uppercase text |
+| docs.html | 343 | Hardcoded HTML Text | "URL" in "Add the ESP32 board manager URL in" | Visual uppercase text |
+| docs.html | 351 | Hardcoded HTML Text | "COM" in "On Windows, if the COM port doesn't appear, install the" | Visual uppercase text |
+| docs.html | 363 | Hardcoded HTML Text | "CLI" in "Method 4: Arduino CLI" | Visual uppercase text |
+| docs.html | 547 | Hardcoded HTML Text | "USB" in "Connect your Android device via USB and enable" | Visual uppercase text |
+| docs.html | 547 | Hardcoded HTML Text | "USB" in "USB Debugging" | Visual uppercase text |
+| docs.html | 582 | Hardcoded HTML Text | "LED" in "Connection established ΓÇö the pendant LED confirms the pairing." | Visual uppercase text |
+| docs.html | 604 | Hardcoded HTML Text | "APK" in "APK installs but crashes" | Visual uppercase text |
+| docs.html | 704 | Hardcoded HTML Text | "SVGA" in "SVGA (800├ù600)" | Visual uppercase text |
+| docs.html | 705 | Hardcoded HTML Text | "QQVGA" in "QQVGA ΓåÆ UXGA" | Visual uppercase text |
+| docs.html | 705 | Hardcoded HTML Text | "UXGA" in "QQVGA ΓåÆ UXGA" | Visual uppercase text |
+| docs.html | 713 | Hardcoded HTML Text | "JPEG" in "JPEG Quality" | Visual uppercase text |
+| docs.html | 873 | Hardcoded HTML Text | "LED" in "Charging &amp; LED Status:" | Visual uppercase text |
+| docs.html | 876 | Hardcoded HTML Text | "LED" in "Red LED" | Visual uppercase text |
+| docs.html | 877 | Hardcoded HTML Text | "LED" in "Green LED" | Visual uppercase text |
+| docs.html | 878 | Hardcoded HTML Text | "USB" in "Typical charge time: 1ΓÇô1.5 hours from a USB 2.0 port" | Visual uppercase text |
+| docs.html | 896 | Hardcoded HTML Text | "OTA" in "OTA Firmware Updates" | Visual uppercase text |
+| docs.html | 902 | Hardcoded HTML Text | "OTA" in "OTA Update Flow:" | Visual uppercase text |
+| docs.html | 908 | Hardcoded HTML Text | "URL" in "App transmits the firmware download URL to the pendant." | Visual uppercase text |
+| docs.html | 915 | Hardcoded HTML Text | "OTA" in "Wi-Fi credentials sent during OTA are not stored permanently on the device. After the update completes and the device reboots, it returns to BLE-only advertising mode. Your credentials are never persisted on flash storage." | Visual uppercase text |
+| docs.html | 935 | Hardcoded HTML Text | "LLM" in "Retrieved chunks are injected into the system prompt context window before the LLM call (Groq or GPT-4o)." | Visual uppercase text |
+| docs.html | 935 | Hardcoded HTML Text | "GPT" in "Retrieved chunks are injected into the system prompt context window before the LLM call (Groq or GPT-4o)." | Visual uppercase text |
+| docs.html | 1055 | Hardcoded HTML Text | "PSRAM" in "Tools ΓåÆ PSRAM ΓåÆ OPI PSRAM" | Visual uppercase text |
+| docs.html | 1055 | Hardcoded HTML Text | "OPI" in "Tools ΓåÆ PSRAM ΓåÆ OPI PSRAM" | Visual uppercase text |
+| docs.html | 1055 | Hardcoded HTML Text | "PSRAM" in "Tools ΓåÆ PSRAM ΓåÆ OPI PSRAM" | Visual uppercase text |
+| docs.html | 1058 | Hardcoded HTML Text | "COM" in "COM port missing (Windows)" | Visual uppercase text |
+| docs.html | 1062 | Hardcoded HTML Text | "USB" in "Device not appearing as USB drive" | Visual uppercase text |
+| docs.html | 1063 | Hardcoded HTML Text | "USB" in "Re-enter bootloader mode, try a different USB cable (data cable required)" | Visual uppercase text |
+| docs.html | 1142 | Tailwind class | uppercase (in class list: "font-body text-[11px] font-semibold tracking-[0.08em] uppercase text-[#1d1d1f]/60 mb-4 block") | Casing classes on element |
+| docs.html | 1152 | Tailwind class | uppercase (in class list: "font-body text-[11px] font-semibold tracking-[0.08em] uppercase text-[#1d1d1f]/60 mb-4 block") | Casing classes on element |
+| docs.html | 1162 | Tailwind class | uppercase (in class list: "font-body text-[11px] font-semibold tracking-[0.08em] uppercase text-[#1d1d1f]/60 mb-4 block") | Casing classes on element |
+| docs.html | 1172 | Tailwind class | uppercase (in class list: "font-body text-[11px] font-semibold tracking-[0.08em] uppercase text-[#1d1d1f]/60 mb-4 block") | Casing classes on element |
